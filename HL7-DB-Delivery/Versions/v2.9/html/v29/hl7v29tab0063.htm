@@ -1,0 +1,467 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Table 0063:
+Relationship
+</H2>
+<TABLE class=info>
+<TR>
+<TD class=>Interpretation:</TD>
+<TD class=>Beziehung von Personen</TD>
+</TR>
+<TR>
+<TD class=>OID Table:</TD>
+<TD class=>2.16.840.1.113883.12.63</TD>
+</TR>
+<TR>
+<TD class=>Codesystem OID: </TD>
+<TD class=>2.16.840.1.113883.18.24 Version 1</TD>
+</TR>
+<TR>
+<TD class=>Value Set OID:</TD>
+<TD class=>2.16.840.1.113883.21.27</TD>
+</TR>
+<TR>
+<TD class=>Binding:</TD>
+<TD class=>example</TD>
+</TR>
+<TR>
+<TD class=>Expansion:</TD>
+<TD class=>all codes from codesystem</TD>
+</TR>
+<TR>
+<TD class=>Vocabulary Domain:</TD>
+<TD class=>tbd</TD>
+</TR>
+<TR>
+<TD class=>Table Type:</TD>
+<TD class=>User</TD>
+</TR>
+<TR>
+<TD class=>Case insensitive:</TD>
+<TD class=>Falsch</TD>
+</TR>
+<TR>
+<TD class=>Steward:</TD>
+<TD class=>PA</TD>
+</TR>
+<TR>
+<TD class=>Section</TD>
+<TD class=>2.C.2.35</TD>
+</TR>
+</TABLE>
+<p>
+<TABLE class=info>
+<TR>
+<TH class=table>Value</TH>
+<TH class=table>Description</TH>
+<TH class=table>German Interpretation</TH>
+<TH class=table>Comment</TH>
+<TH class=table>Chapter</TH>
+</TR>
+<TR class=table-odd>
+<TD class=table>SEL</TD>
+<TD class=table>Self</TD>
+<TD class=table>selbst</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SPO</TD>
+<TD class=table>Spouse</TD>
+<TD class=table>Partner</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DOM</TD>
+<TD class=table>Life partner</TD>
+<TD class=table>Lebenspartner</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CHD</TD>
+<TD class=table>Child</TD>
+<TD class=table>Kind</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GCH</TD>
+<TD class=table>Grandchild</TD>
+<TD class=table>Enkel</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NCH</TD>
+<TD class=table>Natural child</TD>
+<TD class=table>eigenes Kind</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SCH</TD>
+<TD class=table>Stepchild</TD>
+<TD class=table>Stiefkind</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>FCH</TD>
+<TD class=table>Foster child</TD>
+<TD class=table>Pflegekind</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DEP</TD>
+<TD class=table>Handicapped dependent</TD>
+<TD class=table>Begleitperson f&uuml;r Hilfsbed&uuml;rftige</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WRD</TD>
+<TD class=table>Ward of court</TD>
+<TD class=table>Vormund</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PAR</TD>
+<TD class=table>Parent</TD>
+<TD class=table>Eltern</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MTH</TD>
+<TD class=table>Mother</TD>
+<TD class=table>Mutter</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FTH</TD>
+<TD class=table>Father</TD>
+<TD class=table>Vater</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CGV</TD>
+<TD class=table>Care giver</TD>
+<TD class=table>Pflegeeltern</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GRD</TD>
+<TD class=table>Guardian</TD>
+<TD class=table>Pate</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GRP</TD>
+<TD class=table>Grandparent</TD>
+<TD class=table>Groﬂeltern</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EXF</TD>
+<TD class=table>Extended family</TD>
+<TD class=table>erweiterter Familienkreis</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SIB</TD>
+<TD class=table>Sibling</TD>
+<TD class=table>Geschwister</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BRO</TD>
+<TD class=table>Brother</TD>
+<TD class=table>Bruder</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SIS</TD>
+<TD class=table>Sister</TD>
+<TD class=table>Schwester</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FND</TD>
+<TD class=table>Friend</TD>
+<TD class=table>Freund</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OAD</TD>
+<TD class=table>Other adult</TD>
+<TD class=table>anderer Erwachsener</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EME</TD>
+<TD class=table>Employee</TD>
+<TD class=table>Angestellter</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EMR</TD>
+<TD class=table>Employer</TD>
+<TD class=table>Arbeitgeber</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ASC</TD>
+<TD class=table>Associate</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EMC</TD>
+<TD class=table>Emergency contact</TD>
+<TD class=table>Ansprechpartner in Notf&auml;llen</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OWN</TD>
+<TD class=table>Owner</TD>
+<TD class=table>Eigent&uuml;mer</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>TRA</TD>
+<TD class=table>Trainer</TD>
+<TD class=table>Trainer</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MGR</TD>
+<TD class=table>Manager</TD>
+<TD class=table>Manager</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NON</TD>
+<TD class=table>None</TD>
+<TD class=table>keine</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>UNK</TD>
+<TD class=table>Unknown</TD>
+<TD class=table>unbekannt</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OTH</TD>
+<TD class=table>Other</TD>
+<TD class=table>andere</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.35</TD>
+</TR>
+</TABLE>
+<H3>Comments made by the German HL7 User Group:</H3>
+<dd>Beziehung von Personen</DD>
+<P>
+<H3>Used Within the following Data Elements</H3>
+<DD><A HREF = "hl7v29datel.htm#00192">00192</A> Relationship / Beziehung der Kontaktperson zum Patienten (<A HREF = "std29/ch03.html#Heading1164">3.4.5.3</A>)</DD>
+<DD><A HREF = "hl7v29datel.htm#00415">00415</A> Guarantor Relationship / Beziehung des Zahlungspflichtigen zum Patienten (<A HREF = "std29/ch06.html#Heading2475">6.5.5.11</A>)</DD>
+<DD><A HREF = "hl7v29datel.htm#00442">00442</A> Insured's Relationship To Patient / Beziehung des Versicherungsnehmers zum Patienten (<A HREF = "std29/ch06.html#Heading2534">6.5.6.17</A>)</DD>
+<DD><A HREF = "hl7v29datel.htm#00784">00784</A> Contact Relationship / Beziehung des Zahlungspflichtigen zur Kontaktperson (<A HREF = "std29/ch06.html#Heading2475">6.5.5.48</A>)</DD>
+<DD><A HREF = "hl7v29datel.htm#00802">00802</A> Guarantor's Relationship to Insured / Beziehung Zahlungspflichtiger zum Versicherten (<A HREF = "std29/ch06.html#Heading2591">6.5.7.62</A>)</DD>
+<DD><A HREF = "hl7v29datel.htm#01560">01560</A> Relationship to Patient Code / Beziehung des Meldenden zum Patienten (<A HREF = "std29/ch03.html#Heading1215">3.4.7.15</A>)</DD>
+<P>
+<P>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

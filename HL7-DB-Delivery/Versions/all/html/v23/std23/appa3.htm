@@ -1,0 +1,564 @@
+<HTML><HEAD>
+<!-- This document was created from RTF source by rtftohtml version 3.8 -->
+<TITLE>A.3 SEGMENTS</TITLE></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>
+References to other Chapters
+</H1>
+<A HREF="hl7.htm">Index HL7</A><br>
+<A HREF="ch1.htm">Chapter 1: Introduction</A><br>
+<A HREF="ch2.htm">Chapter 2: Control Query</A><br>
+<A HREF="ch3.htm">Chapter 3: Patient Administration</A><br>
+<A HREF="ch4.htm">Chapter 4: Order Entry</A><br>
+<A HREF="ch5.htm">Chapter 5: Query</A><br>
+<A HREF="ch6.htm">Chapter 6: Financial Management</A><br>
+<A HREF="ch7.htm">Chapter 7: Observation Reporting</A><br>
+<A HREF="ch8.htm">Chapter 8: Master Files</A><br>
+<A HREF="ch9.htm">Chapter 9: Medical Records/Information Management</A><br>
+<A HREF="ch10.htm">Chapter 10: Scheduling</A><br>
+<A HREF="ch11.htm">Chapter 11: Patient Referral</A><br>
+<A HREF="ch12.htm">Chapter 12: Patient Care</A><br>
+<A HREF="appb.htm">Appendix B: Lower Layer Protocols</A><br>
+<A HREF="appc.htm">Appendix C: Network Management</A><br>
+<A HREF="appd.htm">Appendix D: Version 2.2 BNF Message Descriptions</A><br>
+<A HREF="appe.htm">Appendix E: Glossary</A><br>
+
+
+<hr>
+
+
+<H1>
+Data Definition Tables</H1>
+<UL>
+<LI><A HREF="#Heading2">A.1 INTRODUCTION</A>
+<LI><A HREF="#Heading3">A.2 MESSAGE TYPES</A>
+<LI><A HREF="#Heading4">A.3 SEGMENTS</A>
+<LI><A HREF="#Heading5">A.4 HL7 AND USER-DEFINED TABLES - ALPHABETIC SORT</A>
+<LI><A HREF="#Heading6">A.5 HL7 AND USER-DEFINED TABLES - NUMERIC SORT</A>
+<LI><A HREF="#Heading7">A.6 DATA ELEMENT NAMES</A>
+</UL>
+
+<hr>
+
+<h2>
+<A NAME="Heading4">A.3 SEGMENTS</A></h2>
+
+<TABLE BORDER><TR>
+<TH>Segment</TH>
+<TH>Description</TH>
+<TH><b>Chapter</TH></TR>
+
+<TR>
+<TD>ACC</TD>
+<TD>Accident segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>ADD</TD>
+<TD>Addendum segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>AIG</TD>
+<TD>Appointment information - general resource</TD>
+<TD>10</TD></TR>
+
+<TR>
+<TD>AIL</TD>
+<TD>Appointment information - location resource segment</TD>
+<TD>10</TD></TR>
+
+<TR>
+<TD>AIP</TD>
+<TD>Appointment information - personnel resource segment</TD>
+<TD>10</TD></TR>
+
+<TR>
+<TD>AIS</TD>
+<TD>Appointment information - service segment</TD>
+<TD>10</TD></TR>
+
+<TR>
+<TD>AL1</TD>
+<TD>Patient allergy information segment</TD>
+<TD>3</TD></TR>
+
+<TR>
+<TD>APR</TD>
+<TD>Appointment preferences segment</TD>
+<TD>10</TD></TR>
+
+<TR>
+<TD>ARQ</TD>
+<TD>Appointment request segment</TD>
+<TD>10</TD></TR>
+
+<TR>
+<TD>AUT</TD>
+<TD>Authorization information segment</TD>
+<TD>11</TD></TR>
+
+<TR>
+<TD>BHS</TD>
+<TD>Batch header segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>BLG</TD>
+<TD>Billing segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>BTS</TD>
+<TD>Batch trailer segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>CDM</TD>
+<TD>Charge description segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>CM0</TD>
+<TD>Clinical study master segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>CM1</TD>
+<TD>Clinical
+study phase master segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>CM2</TD>
+<TD>Clinical study schedule master segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>CSP</TD>
+<TD>Clinical study phase segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>CSR</TD>
+<TD>Clinical study registration segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>CSS</TD>
+<TD>Clinical study data schedule segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>CTD</TD>
+<TD>Contact data segment</TD>
+<TD>11</TD></TR>
+
+<TR>
+<TD>CTI</TD>
+<TD>Clinical trial information segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>DG1</TD>
+<TD>Diagnosis segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>DRG</TD>
+<TD>Diagnosis related group segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>DSC</TD>
+<TD>Continuation pointer segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>DSP</TD>
+<TD>Display data segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>EQL</TD>
+<TD>Embedded query language segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>ERQ</TD>
+<TD>Event replay query segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>ERR</TD>
+<TD>Error segment </TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>EVN</TD>
+<TD>Event type segment</TD>
+<TD>3</TD></TR>
+
+<TR>
+<TD>FAC</TD>
+<TD>Facility segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>FHS</TD>
+<TD>File header segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>FT1</TD>
+<TD>Financial transaction segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>FTS</TD>
+<TD>File trailer segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>GT1</TD>
+<TD>Guarantor segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>IN1</TD>
+<TD>Insurance segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>IN2</TD>
+<TD>Insurance additional information segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>IN3</TD>
+<TD>Insurance additional information - certification segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>LCC</TD>
+<TD>Location charge code segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>LCH</TD>
+<TD>Location characteristic segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>LDP</TD>
+<TD>Location department segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>LOC</TD>
+<TD>Location identification segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>LRL</TD>
+<TD>Location relationship segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>MFA</TD>
+<TD>Master file acknowledgment segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>MFE</TD>
+<TD>Master file entry segment </TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>MFI</TD>
+<TD>Master file identification segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>MRG</TD>
+<TD>Merge patient information segment</TD>
+<TD>3</TD></TR>
+
+<TR>
+<TD>MSA</TD>
+<TD>Message
+acknowledgment segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>MSH</TD>
+<TD>Message header segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>NK1</TD>
+<TD>Next of kin / associated parties segment</TD>
+<TD>3</TD></TR>
+
+<TR>
+<TD>NPU</TD>
+<TD>Bed
+status update segment</TD>
+<TD>3</TD></TR>
+
+<TR>
+<TD>NTE</TD>
+<TD>Notes
+and comments segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>OBR</TD>
+<TD>Observation
+request segment </TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>OBX</TD>
+<TD>Observation/result
+segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>ODS</TD>
+<TD>Dietary orders, supplements, and preferences segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>ODT</TD>
+<TD>Diet
+tray instructions segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>OM1</TD>
+<TD>General segment - fields that apply to most observations</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>OM2</TD>
+<TD>Numeric observation segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>OM3</TD>
+<TD>Categorical test/observation segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>OM4</TD>
+<TD>Observations that require specimens segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>OM5</TD>
+<TD>Observation batteries (sets) segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>OM6</TD>
+<TD>Observations that are calculated from other observations segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>ORC</TD>
+<TD>Common order segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>PCR</TD>
+<TD>Possible causal relationship segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>PD1</TD>
+<TD>Patient demographic segment</TD>
+<TD>3</TD></TR>
+
+<TR>
+<TD>PDC</TD>
+<TD>Product detail country segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>PEO</TD>
+<TD>Product
+experience observation segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>PES</TD>
+<TD>Product experience sender segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>PID</TD>
+<TD>Patient identification segment</TD>
+<TD>3</TD></TR>
+
+<TR>
+<TD>PR1</TD>
+<TD>Procedures segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>PRA</TD>
+<TD>Practitioner detail segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>PRC</TD>
+<TD>Pricing segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>PRD</TD>
+<TD>Provider data segment</TD>
+<TD>11</TD></TR>
+
+<TR>
+<TD>PSR</TD>
+<TD>Product summary header segment</TD>
+<TD>7</TD></TR>
+
+<TR>
+<TD>PV1</TD>
+<TD>Patient visit segment</TD>
+<TD>3</TD></TR>
+
+<TR>
+<TD>PV2</TD>
+<TD>Patient visit - additional information segment</TD>
+<TD>3</TD></TR>
+
+<TR>
+<TD>QAK</TD>
+<TD>Query acknowledgment segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>QRD</TD>
+<TD>Original-style query definition segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>QRF</TD>
+<TD>Original-style query filter segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>RDF</TD>
+<TD>Table
+row definition segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>RDT</TD>
+<TD>Table row data segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>RF1</TD>
+<TD>Referral information segment</TD>
+<TD>11</TD></TR>
+
+<TR>
+<TD>RQ1</TD>
+<TD>Requisition detail-1 segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>RQD</TD>
+<TD>Requisition detail segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>RXA</TD>
+<TD>Pharmacy/treatment administration segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>RXC</TD>
+<TD>Pharmacy/treatment component order segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>RXD</TD>
+<TD>Pharmacy/treatment dispense segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>RXE</TD>
+<TD>Pharmacy/treatment encoded order segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>RXG</TD>
+<TD>Pharmacy/treatment give segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>RXO</TD>
+<TD>Pharmacy/treatment prescription order segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>RXR</TD>
+<TD>Pharmacy/treatment
+route segment</TD>
+<TD>4</TD></TR>
+
+<TR>
+<TD>SCH</TD>
+<TD>Schedule activity information segment</TD>
+<TD>10</TD></TR>
+
+<TR>
+<TD>STF</TD>
+<TD>Staff identification segment</TD>
+<TD>8</TD></TR>
+
+<TR>
+<TD>SPR</TD>
+<TD>Stored procedure request definition segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>TXA</TD>
+<TD>Document notification segment</TD>
+<TD>9</TD></TR>
+
+<TR>
+<TD>UB1</TD>
+<TD>UB82 data segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>UB2</TD>
+<TD>UB92 data segment</TD>
+<TD>6</TD></TR>
+
+<TR>
+<TD>URD</TD>
+<TD>Results/update definition segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>URS</TD>
+<TD>Unsolicited selection segment</TD>
+<TD>2</TD></TR>
+
+<TR>
+<TD>VTQ</TD>
+<TD>Virtual table query request segment</TD>
+<TD>2</TD></TR></TABLE><p></p>
+
+<p>
+</body>
+</html>

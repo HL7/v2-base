@@ -1,0 +1,1092 @@
+<HTML><HEAD>
+<!-- This document was created from RTF source by rtftohtml version 3.8 -->
+<TITLE>HL7 V2.1 Chapter 5</TITLE></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>
+References to other Chapters
+</H1>
+<A HREF="hl7.html">Index HL7</A><br>
+<A HREF="kap1.html">Chapter 1</A><br>
+<A HREF="kap2.html">Chapter 2</A><br>
+<A HREF="kap3.html">Chapter 3</A><br>
+<A HREF="kap4.html">Chapter 4</A><br>
+<A HREF="kap6.html">Chapter 6</A><br>
+<A HREF="kap7.html">Chapter 7</A><br>
+
+<hr>
+
+<p>
+
+<H1>
+5</H1>
+<UL>
+<LI><A HREF="#Heading1">5 <BR>Chapter 5</A>
+<UL>
+<LI><A HREF="#Heading2">5.1 PURPOSE</A>
+<UL>
+<LI><A HREF="#Heading3">5.1.1 Display vs. Record-Oriented Response</A>
+<LI><A HREF="#Heading4">5.1.2 Immediate vs. Deferred Response</A>
+<LI><A HREF="#Heading5">5.1.3 Continuation Queries</A>
+<LI><A HREF="#Heading6">5.1.4 Logical Data Groups</A>
+</UL>
+<LI><A HREF="#Heading7">5.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A>
+<UL>
+<LI><A HREF="#Heading8">5.2.1 A Query is Made for Immediate Response (Trigger Event Q01)</A>
+<LI><A HREF="#Heading9">5.2.2 Deferred Access</A>
+<UL>
+<LI><A HREF="#Heading10">5.2.2.1 A Query is Sent for Deferred Response (Trigger Event Q03)</A>
+<LI><A HREF="#Heading11">5.2.2.2 A Query is Sent for Deferred Response (Trigger Event Q03).  Later, perhaps more than once.</A>
+</UL>
+<LI><A HREF="#Heading12">5.2.3 Unsolicited Updates, ODM Message, Trigger Event Q05.</A>
+<LI><A HREF="#Heading13">5.2.4 Batch Query</A>
+</UL>
+<LI><A HREF="#Heading14">5.3 5.3. MESSAGE SEGMENTS </A>
+<UL>
+<LI><A HREF="#Heading15">5.3.1 DSC - CONTINUATION POINTER-</A>
+<LI><A HREF="#Heading16">5.3.2 DSP - DISPLAY DATA-</A>
+<LI><A HREF="#Heading17">5.3.3 QRD - QUERY DEFINITION-</A>
+<LI><A HREF="#Heading18">5.3.4 QRF - QUERY FILTER-</A>
+<LI><A HREF="#Heading19">5.3.5 URD - RESULTS/UPDATE DEFINITION-</A>
+<LI><A HREF="#Heading20">5.3.6 URS - UNSOLICITED SELECTION-</A>
+</UL>
+<LI><A HREF="#Heading21">5.4 EXAMPLE TRANSACTIONS </A>
+<UL>
+<LI><A HREF="#Heading22">5.4.1 Query with Display-Oriented Response</A>
+</UL>
+<LI><A HREF="#Heading23">5.5 IMPLEMENTATION CONSIDERATIONS</A>
+<LI><A HREF="#Heading24">5.6 OUTSTANDING ISSUES</A>
+</UL>
+</UL>
+<hr size=4>
+
+<h1>
+<A NAME="Heading1">5 <BR>Chapter 5</A></h1>
+
+
+<h2>
+<A NAME="Heading2">5.1 PURPOSE</A></h2>
+
+<p><br>
+This chapter defines three messages.  The first is a generalized Query Message
+intended to support most types of queries between two systems.  The second is a
+generalized Response Display Message where the responding system formats the
+data for direct output to a display. The third is the unsolicited version of
+the generalized Response display message. (It is acknowledged by a generic ACK
+message.)<br>
+The following represents typical examples of queries supported by the
+Standard:<br>
+For data regarding a single patient, e.g., send all lab results for patient
+#123456.<br>
+For data regarding multiple patients, e.g., send the list of patients whose
+attending physician is Dr. #123.<br>
+For data that is not patient related, e.g., send the age specific normal values
+for serum protein.<br>
+The variety of potential queries is almost unlimited.  There was no attempt
+here to define a Standard that would cover every possible query.  Instead, the
+Standard embraces the most common queries that are likely to occur in a
+hospital.  For each common query there is a corresponding unsolicited
+update.<br>
+In particular, there is no implication that a specific system must support
+generalized queries to comply with the Standard. Rather, these transactions
+provide a format, or a set of tools to support queries to the extent desired by
+the institution. The resources available and local policies will influence the
+type of queries that are implemented.<br>
+It is anticipated that there will be a future message segment that will
+accommodate a much more powerful query language-type query, probably based on
+SQL.  See discussion on this topic under "Outstanding Issues."</p>
+
+<h3>
+<A NAME="Heading3">5.1.1 Display vs. Record-Oriented Response</A></h3>
+
+<p><br>
+The response to queries can be:<br>
+-	Data in a format suitable for display purposes ("display oriented data"),
+or<br>
+-	Data in a format which explicitly denotes field content ("record
+oriented").<br>
+The Display Response Message below describes the display oriented type of
+response.  The content and format of record oriented responses to queries
+require functionally specific capabilities.  The committees responsible for
+functionally specific chapters define them within those chapters.</p>
+
+<h3>
+<A NAME="Heading4">5.1.2 Immediate vs. Deferred Response</A></h3>
+
+<p><br>
+Responses to queries can be either immediate or deferred.  The query describes
+this as the expected response time.  In the immediate mode, the responding
+process gives the response immediately or in a short period during which the
+requesting process will wait for the response.</p>
+
+<h3>
+<A NAME="Heading5">5.1.3 Continuation Queries</A></h3>
+
+<p><br>
+One use of queries is to retrieve data from one application for presentation to
+users of another.  This approach might be used for users of a patient care
+system retrieving data from lab or other ancillaries.  It also might permit
+users of a pharmacy system to retrieve a patient's lab results from the lab
+system or non-pharmacy order data from the patient care system.  Almost any
+other application system could be the source of data or the system initiating
+the query for its users.<br>
+Of particular interest is the case where the enquiring user formulates the
+query on-line at the terminal of one system and waits while that system sends
+the query to another.  He gets the response and displays it at their terminal.
+When the user is formulating such a query she may only have limited
+understanding of what data is available for a given patient.  Sometimes the
+user's preference would be to make a simple query such as "give me recent data
+in reverse chronological sequence" rather than "give me data for yesterday,"
+since there may be some data available for today, or there may be data from two
+days ago that is of interest.  The user will look at the data returned and
+simply quit looking at it after he or she has found the part that is of
+interest.  (The time frames or the sort sequence may differ, or the user may
+wish to impose some selectivity on the response, but the general principle
+remains the same.  The user would prefer to make a vague statement of the
+interest, have the data presented in order of decreasing likelihood of
+interest, and quit when he or she has seen enough.)<br>
+While beneficial to the user, this way of requesting data could be very
+burdensome when the resulting query takes place over an inter-application
+interface.  If the responding system were to retrieve, format, and send all the
+data the user might like to see, the processing load would be extremely high
+and the response time unacceptable.<br>
+The continuation query provides a way to permit the users to formulate queries
+loosely while limiting the processing burden on the responding system.  The
+initial query specifies the general constraints of the query and an amount of
+data to be returned.  (For example, the query might be for lab results for
+patient #12379 and 44 lines would be requested.)  The responding system
+retrieves and formats the specified amount of data and returns it with a
+special key field called the <u>continuation pointer</u>.  The initiating
+system presents the requested data to the user and retains the continuation
+pointer field. The internal structure of the value is not known to the
+initiating system.  <br>
+If, after viewing the data, the user requests more, the initiating system sends
+the query again in a format that is identical with the first, except that the
+continuation pointer field value is included and the requested amount of data
+may be changed.  The responding system uses the continuation pointer field as a
+key into its database to continue retrieval and formatting of the results.  If
+the user does not request more data, no further messages are exchanged.</p>
+
+<h3>
+<A NAME="Heading6">5.1.4 Logical Data Groups</A></h3>
+
+<p><br>
+Often the lines of display text will fall into logical groups that differ from
+the physical size of screen or printer page.  For example, a complete battery
+or an entire radiology report might be thought of as comprising a logical
+group, though they might have as few as six or as many as 120 lines.  Knowledge
+of the logical break points in the display data can be useful to the
+application system that is displaying or printing data.  For this reason the
+Logical Break Point data field is included in the Display Data (DSP) segment.
+The sending application (the one that formats the data) places the logical
+break points where appropriate. If there is a particular ancillary result ID
+associated with the data delineated by the Logical Break Point, the value of
+this ID also can be returned inthe DSP segment. Then if the user selects the
+area of the display delineated by the logical break point, the displaying
+system can query for the associated result ID.</p>
+
+<h2>
+<A NAME="Heading7">5.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A></h2>
+
+<p><br>
+These are the trigger events associated with queries:<br>
+(1)	a need occurs for immediate access to data that may be available from
+another application, this may be an initial request for data or a
+continuation<br>
+(2)	a need occurs for deferred access to data that may be available from
+another application<br>
+When display data is involved, these trigger events are served by the Query
+(QRY) and Display Response (DSR) and ACK messages.   When the query is for
+record oriented data, the QRY message is used, but the response message is
+specific to a functional area.  Record oriented queries are described in other
+chapters.  Display oriented queries are described here.<br>
+Each triggering event is listed below, with the applicable form of the message
+exchange.  The notation used to describe the sequence, optionality, and
+repeating of segments is described in Chapter II, "Format for Defining Abstract
+Messages."</p>
+
+<h3>
+<A NAME="Heading8">5.2.1 A Query is Made for Immediate Response (Trigger Event Q01)</A></h3>
+
+<p><br>
+<tt><u>QRY            Query Message                  Chapter</u></tt><br>
+<tt>MSH            Message Header                   II</tt><br>
+<tt>QRD            Query Definition                 V</tt><br>
+<tt>[ QRF ]        Query Filter                     V</tt><br>
+<tt>DSC            Continuation Pointer             V</tt><br>
+<tt><u>DSR            Display Response Message       Chapter</u></tt><br>
+<tt>MSH            Message Header                   II</tt><br>
+<tt>MSA            Message Acknowledgement          II</tt><br>
+<tt>QRD            Query Definition                 V</tt><br>
+<tt>[ QRF ]        Query Filter                     V</tt><br>
+<tt>{ DSP }        Display Data                     V</tt><br>
+<tt>DSC            Continuation Pointer             V</tt><br>
+The QRF and QRD segments from the QRY are echoed back in the response.  The DSC
+segment contains the Continuation Pointer (if any).<br>
+ </p>
+
+<h3>
+<A NAME="Heading9">5.2.2 Deferred Access</A></h3>
+
+<p><br>
+For clarity, A is the system initiating the query and B is the system sending
+the responses.  Multiple queries and responses are permitted within single
+messages.  The responses to a given query may be broken into several separate
+DSR messages.  A single DSR message may contain responses to more than one QRY.</p>
+
+<h4>
+<A NAME="Heading10">5.2.2.1 A Query is Sent for Deferred Response (Trigger Event Q03)</A></h4>
+
+<p><br>
+<tt><u>QRY (A to B)   Query Message                  Chapter</u></tt><br>
+<tt>MSH            Message Header                   II</tt><br>
+<tt>QRD            Query Definition                 V</tt><br>
+<tt>[ QRF ]        Query Filter                     V</tt><br>
+<tt>DSC            Continuation Pointer             V</tt><br>
+<tt><u>MCF (B to A)  General Acknowledgement         Chapter</u></tt><br>
+<tt>MSH           Message Header                    II</tt><br>
+<tt>MSA           Message Acknowledgement           II</tt></p>
+
+<h4>
+<A NAME="Heading11">5.2.2.2 A Query is Sent for Deferred Response (Trigger Event Q03).  Later, perhaps more than once.</A></h4>
+
+<p><br>
+<tt><u>DSR (B to A)  Display Response Message        Chapter</u></tt><br>
+<tt>MSH           Message Header                    II</tt><br>
+<tt>QRD           Query Definition                  V</tt><br>
+<tt>[ QRF ]       Query Filter                      V</tt><br>
+<tt>{ DSP }       Display Data                      V</tt><br>
+<tt>DSC           Continuation Pointer              V</tt><br>
+<tt><u>ACK (A to B)  General Acknowledgement         Chapter</u></tt><br>
+<tt>MSH           Message Header                    II</tt><br>
+<tt>MSA           Message Acknowledgement           II</tt></p>
+
+<h3>
+<A NAME="Heading12">5.2.3 Unsolicited Updates, ODM Message, Trigger Event Q05.</A></h3>
+
+<p><br>
+There is simple extension to the DSR message usage that allows for unsolicited
+update display messages to be sent in HL7 format from one system to another.<br>
+Trigger events for the unsolicited update are generally the completion of a
+particular action (concerning a given patient).  For example, a lab test might
+be completed, generating a STAT unsolicited display message to be sent to the
+appropriate location.<br>
+The display message can be generated to fit a variety of needs for unsolicited
+updates between systems. These are situations  where the update information
+does not need to be captured by the receiving system's database, but only
+displayed, either on a visual medium (such as a pc or a crt) or on printed
+medium. <br>
+The extension consists of:<br>
+<tt><u>UDM            Unsolicited Display Message    Chapter</u></tt><br>
+<tt>MSH            Message Header                   II</tt><br>
+<tt>URD            Results/update definition        V</tt><br>
+<tt>[ URS ]        Results/update selection criteria V</tt><br>
+<tt> {  DSP  }     Display data                     V</tt><br>
+<tt>DSC            Continuation Pointer             V</tt><br>
+<tt><u>ACK            General Acknowledgement        Chapter</u></tt><br>
+<tt>MSH            Message Header                   II</tt><br>
+<tt>MSA            Message Acknowledgement          II</tt><br>
+Note that the UDM message can be continued in a manner analogous to that of the
+DSR message, by use of the DSC segment and the continuation pointer field in
+the MSH.  Thus if a UDM needed to be continued as 3 separate UDM messages, the
+first message would contain:<br>
+<tt>MSH    (no continuation pointer)</tt><br>
+<tt>...</tt><br>
+<tt>...	</tt><br>
+<tt>  ...</tt><br>
+<tt>  ...</tt><br>
+<tt>DSC    (with continuation pointer)</tt><br>
+The second message would contain:<br>
+<tt>MSH    (continuation pointer (to first message))</tt><br>
+<tt>...</tt><br>
+<tt>...	</tt><br>
+<tt>  ...</tt><br>
+<tt>  ...</tt><br>
+<tt>DSC    (with continuation pointer)</tt><br>
+The last message would then contain:<br>
+<tt>MSH    (continuation pointer (to second message))</tt><br>
+<tt>...</tt><br>
+<tt>...	</tt><br>
+<tt>  ...</tt><br>
+<tt>  ...</tt><br>
+<tt>(no DSC, since last)</tt><br>
+Note that this scheme works equally well with non-display messages, such as the
+Unsolicited Update ORU message (see chapter 7).<br>
+Since these are unsolicited messages, intervening messages (from other systems)
+may be sent to the receiving application while the sections of the particular
+message are being continued.  The continuation pointer field in the MSH segment
+enables the receiving system to keep track of extraneous intervening messages.</p>
+
+<h3>
+<A NAME="Heading13">5.2.4 Batch Query</A></h3>
+
+<p><br>
+The HL7 query also can be used to query for a batch in the following manner:<br>
+a.	Use the value BB or BL of the "Deferred Response Type" (field 5) of the QRD
+segment to specify a batch response.  The query will be acknowledged with a
+general acknowledgement as in the "Deferred Access" example above.<br>
+b.	In addition, insert into the batch file the QRD and QRF segments as
+follows:<br>
+	<br>
+<tt>[FHS]				(file header segment)</tt><br>
+<tt>      { [BHS]			(batch header segment)</tt><br>
+<tt><b>   [QRD]			(the QRD and QRF define the</b></tt><br>
+<tt><b>   [QRF]				query that this batch </b></tt><br>
+<tt><b>is a response to)</b></tt><br>
+<tt>{ MSH		(one or more HL7 messages)</tt><br>
+<tt>....</tt><br>
+<tt>....	</tt><br>
+<tt>....</tt><br>
+<tt>}</tt><br>
+<tt>  [BTS]			(batch trailer segment)</tt><br>
+<tt>}</tt><br>
+<tt>[FTS]				(file trailer segment)</tt><br>
+c.	The acknowledgement of a batch is described in Chapter II.</p>
+
+<h2>
+<A NAME="Heading14">5.3 5.3. MESSAGE SEGMENTS </A></h2>
+
+<p></p>
+
+<h3>
+<A NAME="Heading15">5.3.1 DSC - CONTINUATION POINTER-</A></h3>
+
+<p>
+<br>
+The DSC segment is used in the continuation protocol. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00167</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CONTINUATION
+POINTER 
+</p>
+<BR></TD></TR></TABLE><p><br>
+FIELD NOTES: DSC CONTINUATION POINTER <br>
+ <br>
+1.	00167 CONTINUATION POINTER.  See description of "Continuation Fields" in
+Chapter V. In an initial query, this field is null. If the responder returns a
+value of null or "not present", then there is no more data to fulfill any
+future continuation requests. <br>
+ </p>
+
+<h3>
+<A NAME="Heading16">5.3.2 DSP - DISPLAY DATA-</A></h3>
+
+<p>
+<br>
+The DSP segment is used to contain data that has been preformatted by the
+sender for display. The semantic content of the data is lost; the data is
+simply treated as lines of text. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SI</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00570</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SET
+ID - DISPLAY DATA
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SI</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00571</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DISPLAY
+LEVEL
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>300</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TX</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00153</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DATA
+LINE
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00154</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>LOGICAL
+BREAK POINT
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TX</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00599</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RESULT
+ID
+</p>
+<BR></TD></TR></TABLE><p><br>
+FIELD NOTES: DSP DISPLAY DATA <br>
+ <br>
+1.	00570 SET ID - DISPLAY DATA.  Used optionally to number multiple display
+segments.  See comments in text on relationship of SET ID and DISPLAY LEVEL.
+<br>
+ <br>
+2.	00571 DISPLAY LEVEL.  Individual sites or applications may assign numbering
+to define groups of data elements. <br>
+ <br>
+3.	00153 DATA LINE.  This field contains an actual line as it should be
+displayed.  As described for the TX data type, highlighting and other special
+display characteristics may be included. <br>
+ <br>
+4.	00154 LOGICAL BREAK POINT.  Non-null if this line is the last line of a
+logical break point in the response as defined by the responding system. See
+discussion of "Logical Data Groups" in the text. <br>
+ <br>
+5.	00599 RESULT ID.  If the user selects a result (defined by the logical break
+point field) from the screen display corresponding to a record in which the
+RESULT ID field is non-null, the application can initiate a second query (a
+separate session) to the ancillary with the "What department data code" filled
+in with this non-null value (e.g., the ancillary accession number or its
+equivalent). The ancillary response will contain the report referenced by this
+accession number. The ancillary should correlate the RESULT ID with the
+"LOGICAL BREAK POINT" field as follows: If more than one line of text is sent
+per result, theRESULT ID field should be only non-null for a DSP segment that
+contains a non-null LOGICAL BREAK POINT. This field may be broken into
+components by local agreement.  A common example might be to include ORDER
+NUMBER, FILLER ORDER NUMBER, and UNIVERSAL SOURCE IDENTIFIER.  Whenever such
+fields are used as components of the RESULT ID, their components will be sent
+as subcomponents.</p>
+
+<h3>
+<A NAME="Heading17">5.3.3 QRD - QUERY DEFINITION-</A></h3>
+
+<p>
+<br>
+The QRD segment is used to define a query. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TS</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00156</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>QUERY
+DATE/TIME
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0106</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00158</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>QUERY
+FORMAT CODE
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0091</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00159</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>QUERY
+PRIORITY
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00160</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>QUERY
+ID
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0107</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00161</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DEFERRED
+RESPONSE TYPE
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TS</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00162</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DEFERRED
+RESPONSE DATE/TIME
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CQ</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0126</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00164</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>QUANTITY
+LIMITED REQUEST
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00168</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>WHO
+SUBJECT FILTER
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>0048</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00169</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>WHAT
+SUBJECT FILTER
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00170</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>WHAT
+DEPARTMENT DATA CODE
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00171</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>WHAT
+DATA CODE VALUE QUAL.
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0108</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00701</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>QUERY
+RESULTS LEVEL
+</p>
+<BR></TD></TR></TABLE><p><br>
+FIELD NOTES: QRD QUERY DEFINITION <br>
+ <br>
+1.	00156 QUERY DATE/TIME.  Date the query was generated by the application
+program. <br>
+ <br>
+2.	00158 QUERY FORMAT CODE.  Refer to table 0106 for valid codes. <br>
+<tt>     TABLE 0106   QUERY FORMAT CODE </tt><br>
+<tt>     ------------------------------------------------------------
+</tt><br>
+<tt>     VALUE     DESCRIPTION       </tt><br>
+<tt>         D     Response in display format        </tt><br>
+<tt>         R     Response in Record-oriented format </tt><br>
+ <br>
+3.	00159 QUERY PRIORITY.  The time frame in which the response is expected.
+Refer to table 0091 for valid codes. Table values and subsequent fields specify
+time frames for response. <br>
+<tt>     TABLE 0091   QUERY PRIORITY </tt><br>
+<tt>     ------------------------------------------------------------
+</tt><br>
+<tt>      VALUE     DESCRIPTION   </tt><br>
+<tt>          D     Deferred        </tt><br>
+<tt>          I     Immediate </tt><br>
+ <br>
+4.	00160 QUERY ID.  Unique identifier for the query. Assigned by the querying
+application.  Returned intact by the responding application.<br>
+ <br>
+5.	00161 DEFERRED RESPONSE TYPE.  Refer to table 0107 for valid entries. <br>
+<tt>      TABLE 0107   DEFERRED RESPONSE TYPE </tt><br>
+<tt>      ------------------------------------------------------------
+</tt><br>
+<tt>      VALUE     DESCRIPTION</tt><br>
+<tt>          B     Before the DATE/TIME specified </tt><br>
+<tt>          L     Later than the DATE/TIME specified </tt><br>
+ <br>
+6.	00162 DEFERRED RESPONSE DATE/TIME. The date/time before or after which to
+send a deferred response.  If not present, the response can be sent when its
+available.  (See Deferred Response Type above). <br>
+ <br>
+7.	00164 QUANTITY LIMITED REQUEST.  The maximum length of the response that can
+be accepted by the requesting system. Valid responses are numerical values
+given in the units specified in the second component.  Refer to table 0126 for
+valid entries. Default is LI lines. <br>
+<tt>      TABLE 0126   QUANTITY LIMITED REQUEST </tt><br>
+<tt>      ------------------------------------------------------------
+</tt><br>
+<tt>      VALUE     DESCRIPTION</tt><br>
+<tt>         CH     Characters</tt><br>
+<tt>         LI     Lines</tt><br>
+<tt>         PG     Pages</tt><br>
+<tt>         RD     Records</tt><br>
+<tt>         ZO     Locally defined. </tt><br>
+ <br>
+8.	00168 WHO SUBJECT FILTER.  Identifies the subject, or who the inquiry is
+about. <br>
+ <br>
+9.	00169 WHAT SUBJECT FILTER.  Describes the kind of information that is
+required to satisfy the request. Valid codes are the type of transaction
+inquiry. <br>
+<tt>      TABLE 0048   WHAT SUBJECT FILTER </tt><br>
+<tt>      ------------------------------------------------------------
+</tt><br>
+<tt>      VALUE     DESCRIPTION      </tt><br>
+<tt>        ADV     Advice/Diagnosis      </tt><br>
+<tt>        ANU     Nursing Unit Lookup      </tt><br>
+<tt>        APN     Patient name lookup      </tt><br>
+<tt>        APP     Physician Lookup      </tt><br>
+<tt>        CAN     Cancel. Used to cancel a query      </tt><br>
+<tt>        DEM     Demographics      </tt><br>
+<tt>        FIN     Financial      </tt><br>
+<tt>        MRI     Most recent inpatient      </tt><br>
+<tt>        MRO     Most recent outpatient      </tt><br>
+<tt>        ORD     Order      </tt><br>
+<tt>        OTH     Other      </tt><br>
+<tt>        PRO     Procedure      </tt><br>
+<tt>        RES     Result      </tt><br>
+<tt>        STA     Status </tt><br>
+ <br>
+10.	00170 WHAT DEPARTMENT DATA CODE.  Possible contents include test number,
+procedure number, drug code, item number, order number, etc. The contents of
+this field are determined by the contents of the previous field. This field
+could contain multiple occurrences separated by repetition delimiters. <br>
+ <br>
+11.	00171 WHAT DATA CODE VALUE QUAL. What data code value qualifier. A window
+or range to further refine the inquiry.  This field would contain start/stop
+separated by component separators. <br>
+ <br>
+12.	00701 QUERY RESULTS LEVEL.   Used to control level of detail in results.
+Refer to table 0108 for valid codes. See chapters IV and VII.<br>
+ <br>
+<tt>      TABLE 0108   QUERY RESULTS LEVEL </tt><br>
+<tt>      ------------------------------------------------------------
+</tt><br>
+<tt>      VALUE     DESCRIPTION        </tt><br>
+<tt>          O     Order plus order status        </tt><br>
+<tt>          R     Results without bulk text        </tt><br>
+<tt>          S     Status only        </tt><br>
+<tt>          T     Full Results </tt><br>
+ </p>
+
+<h3>
+<A NAME="Heading18">5.3.4 QRF - QUERY FILTER-</A></h3>
+
+<p>
+<br>
+The QRF segment is used with the QRD segment to refine the content of a query
+further. <br>
+ <br>
+<tt>SEQ LEN DT R/O RP/# TBL# ITEM#  ELEMENT NAME </tt><br>
+<tt>--- --- -- --- ---- ---- -----  --------------------------------</tt><br>
+<tt>  1  20 ST  R  Y         00173  WHERE SUBJECT FILTER </tt><br>
+<tt>  2  19 TS               00174  WHEN DATA START DATE/TIME </tt><br>
+<tt>  3  19 TS               00176  WHEN DATA END DATE/TIME </tt><br>
+<tt>  4  20 ST     Y         00178  WHAT USER QUALIFIER </tt><br>
+<tt>  5  20 ST     Y         00179  OTHER QRY SUBJECT FILTER </tt><br>
+ <br>
+FIELD NOTES: QRF QUERY FILTER <br>
+ <br>
+1.	00173 WHERE SUBJECT FILTER.  Identifies the department, system, or subsystem
+to which the query  pertains. This field may repeat as in "LAB^HEMO", etc.<br>
+ <br>
+2.	00174 WHEN DATA START DATE/TIME.  Data representing dates and times equal or
+after this value should be included. <br>
+ <br>
+3.	00176 WHEN DATA END DATE/TIME. Data representing dates and times the same as
+or before this date should be included. <br>
+ <br>
+4.	00178 WHAT USER QUALIFIER.  An identifier to further define characteristics
+of the data of interest. <br>
+ <br>
+5.	00179 OTHER QRY SUBJECT FILTER.  A filter defined locally for use between
+two systems. This filter uses codes and field definitions which have specific
+meaning only to the applications and/or site involved. </p>
+
+<h3>
+<A NAME="Heading19">5.3.5 URD - RESULTS/UPDATE DEFINITION-</A></h3>
+
+<p>
+<br>
+The URD segment is used in sending unsolicited updates about orders and
+results. It is almost identical with the QRD segment.<br>
+ <br>
+<tt>SEQ LEN DT R/O RP/# TBL# ITEM#  ELEMENT NAME </tt><br>
+<tt>--- --- -- --- ---- ---- -----  --------------------------------</tt><br>
+<tt>  1  19 TS               00600  R/U DATE/TIME </tt><br>
+<tt>  2   1 ID          0109 00601  REPORT PRIORITY </tt><br>
+<tt>  3  20 ST  R  Y         00602  R/U WHO SUBJECT DEFINITION </tt><br>
+<tt>  4   3 ID     Y    0048 00603  R/U WHAT SUBJECT DEFINITION </tt><br>
+<tt>  5  20 ST     Y         00605  R/U WHAT DEPARTMENT CODE </tt><br>
+<tt>  6  20 ST     Y         00607  R/U DISPLAY/PRINT LOCATIONS </tt><br>
+<tt>  7   1 ID          0108 00702  R/U RESULTS LEVEL </tt><br>
+ <br>
+FIELD NOTES: URD RESULTS/UPDATE DEFINITION <br>
+ <br>
+1.	00600 R/U DATE/TIME.  Date the update was generated by the application
+program. <br>
+ <br>
+2.	00601 REPORT PRIORITY.  The priority associated with this report or update.
+Refer to table 0109 for valid codes. <br>
+ <br>
+<tt>     TABLE 0109   REPORT PRIORITY </tt><br>
+<tt>     ------------------------------------------------------------</tt><br>
+<tt>        VALUE     DESCRIPTION </tt><br>
+<tt>            R     Routine </tt><br>
+<tt>            S     Stat </tt><br>
+ <br>
+3.	00602 R/U WHO SUBJECT DEFINITION.  Definition of the subject, or who the
+report is about. <br>
+ <br>
+4.	00603 R/U WHAT SUBJECT DEFINITION.  Describes the kind of information that
+is provided in the report. Valid codes are the type of transaction inquiry.
+Refer to table 0048 for valid codes. <br>
+ <br>
+<tt>     TABLE 0048   WHAT SUBJECT FILTER </tt><br>
+<tt>     ------------------------------------------------------------</tt><br>
+<tt>        VALUE     DESCRIPTION </tt><br>
+<tt>          ADV     Advice/Diagnosis </tt><br>
+<tt>          ANU     Nursing Unit Lookup </tt><br>
+<tt>          APN     Patient name lookup </tt><br>
+<tt>          APP     Physician Lookup </tt><br>
+<tt>          CAN     Cancel. Used to cancel a query </tt><br>
+<tt>          DEM     Demographics </tt><br>
+<tt>          FIN     Financial </tt><br>
+<tt>          MRI     Most recent inpatient </tt><br>
+<tt>          MRO     Most recent outpatient </tt><br>
+<tt>          ORD     Order </tt><br>
+<tt>          OTH     Other </tt><br>
+<tt>          PRO     Procedure </tt><br>
+<tt>          RES     Result </tt><br>
+<tt>          STA     Status </tt><br>
+ <br>
+5.	00605 R/U WHAT DEPARTMENT CODE.  Possible contents include test number,
+procedure number, drug code, item number, order number, etc. The contents of
+this field are determined by the contents of the previous field. This field
+could contain multiple occurrences separated by repetition delimiters. <br>
+ <br>
+6.	00607 R/U DISPLAY/PRINT LOCATIONS.  A list of the locations to which the
+report should be distributed. <br>
+ <br>
+7.	00702 R/U RESULTS LEVEL.  Used to control level of detail in results. Refer
+to table 0108 for valid codes. Default level is T for full results. See
+Chapters IV and VII. <br>
+ <br>
+<tt>     TABLE 0108   QUERY RESULTS LEVEL </tt><br>
+<tt>     ------------------------------------------------------------</tt><br>
+<tt>        VALUE     DESCRIPTION </tt><br>
+<tt>            O     Order plus order status </tt><br>
+<tt>            R     Results without bulk text </tt><br>
+<tt>            S     Status only </tt><br>
+<tt>            T     Full Results</tt></p>
+
+<h3>
+<A NAME="Heading20">5.3.6 URS - UNSOLICITED SELECTION-</A></h3>
+
+<p>
+<br>
+The URS segment is identical with the QRF segment, except that, if the name of
+any field contains "Query" (of "QRY"), this word has been changed to "Results"
+(See field 5). <br>
+ <br>
+<tt>SEQ LEN DT R/O RP/# TBL# ITEM#  ELEMENT NAME </tt><br>
+<tt>--- --- -- --- ---- ---- -----  --------------------------------</tt><br>
+<tt>  1  20 ST  R  Y         00608  R/U WHERE SUBJECT DEFINITION </tt><br>
+<tt>  2  19 TS               00609  R/U WHEN DATA START DATE/TIME </tt><br>
+<tt>  3  19 TS               00610  R/U WHEN DATA END DATE/TIME </tt><br>
+<tt>  4  20 ST     Y         00611  R/U WHAT USER QUALIFIER </tt><br>
+<tt>  5  20 ST     Y         00612  R/U OTHER RESULTS SUBJECT DEFINI</tt><br>
+ <br>
+FIELD NOTES: URS UNSOLICITED SELECTION <br>
+ <br>
+1.	00608 R/U WHERE SUBJECT DEFINITION.  Identifies the department, system, or
+subsystem to which the result pertains. This field may repeat as in "LAB^HEMO",
+etc. <br>
+ <br>
+2.	00609 R/U WHEN DATA START DATE/TIME.  Date/time the result starts. (if
+applicable). <br>
+ <br>
+3.	00610 R/U WHEN DATA END DATE/TIME.  Date/time the result ends. (if
+applicable). <br>
+ <br>
+4.	00611 R/U WHAT USER QUALIFIER.  An identifier to define further the
+characteristics of the data that are of interest. <br>
+ <br>
+5.	00612 R/U OTHER RESULTS SUBJECT DEFINITION.  A further qualifier defined
+locally for use between two systems. This filter uses codes and field
+definitions that have specific meaning only to the application and/or site
+involved.  </p>
+
+<h2>
+<A NAME="Heading21">5.4 EXAMPLE TRANSACTIONS </A></h2>
+
+<p></p>
+
+<h3>
+<A NAME="Heading22">5.4.1 Query with Display-Oriented Response</A></h3>
+
+<p><br>
+Query for all lab results on patient #12233.  The query is made at 11:00 a.m.,
+9/11/87.  The Query anticipates an immediate display-oriented response.<br>
+<tt>MSH|^~\|ICU||LAB01|||QRY|MSG00001|P|2.1&lt;CR&gt;</tt><br>
+<tt>QRD|198709111012|D|I|4387|^Q0I||20^LI|12233|RES|ALL&lt;CR&gt;</tt><br>
+The response to the above query might look like the following:<br>
+<tt>MSH|^~\|LAB01||ICU|||DSR|ZXT23461|P|2.1&lt;CR&gt;</tt><br>
+<tt>MSA|AA|MSG00001P&lt;CR&gt;</tt><br>
+<tt>QRD|198709111012|D|I|4387|||20|^LI|12233|RES|ALL&lt;CR&gt;</tt><br>
+<tt>DSP|||RESULTS FOR PATIENT#12233   SMITH, JOHN H. 09/11/87&lt;CR&gt;</tt><br>
+<tt>DSP|||SPECIMEN#H85 COLLECTED 09/11/87 /07/0/0&lt;CR&gt;</tt><br>
+<tt>DSP&lt;CR&gt;</tt><br>
+<tt>DSP|||ELECTROLYTES&lt;CR&gt;</tt><br>
+<tt>DSP|||	SODIUM		140	[135-148]	MEQ/L	STAT&lt;CR&gt;</tt><br>
+<tt>DSP|||	POTASSIUM		4.0	[3.5-5.0]	MEQ/L	STAT&lt;CR&gt;</tt><br>
+<tt>DSP|||	CHLORIDE		89	[95-111]	MEQ/L	STAT&lt;CR&gt;</tt><br>
+<tt>DSP|||	CO2			20	[20-30]		MEQ/L	STAT&lt;CR&gt;</tt><br>
+<tt>DSP||||LB&lt;CR&gt;</tt><br>
+<tt>DSP|||CBC&lt;CR&gt;</tt><br>
+<tt>DSP|||	HEMOGLOBIN		[13.5-18.0]&lt;CR&gt;</tt><br>
+<tt>DSP|||	HEMATOCRIT	45	[40-54]		%&lt;CR&gt;	</tt><br>
+<tt>DSP|||	RED CELL COUNT	5.0	[4.6-6.2]	M/MM3&lt;CR&gt;</tt><br>
+<tt>DSP|||	MCHC			32	[32-36]		G/DL&lt;CR&gt;</tt><br>
+<tt>DSP|||	MCH			28	[26-32]		PG&lt;CR&gt;</tt><br>
+<tt>DSP|||	MCV			85	[81-101]	FL&lt;CR&gt;</tt><br>
+<tt>DSP|||	WHITE CELL CNT	7.5	[5.0-10.0]	K/MM3&lt;CR&gt;</tt><br>
+<tt>DSP||||LB&lt;CR&gt;	</tt><br>
+<tt>DSP|||SPECIMEN#B24   COLLECTED 9/10/87&lt;CR&gt;</tt><br>
+<tt>DSC|12333H85;12&lt;CR&gt;</tt><br>
+A continuation query would echo back the contents of the Continuation Pointer
+in the DSC segment:<br>
+<tt>MSH|^~\|ICU||LAB01|||QRY^Q01|MSG00003|P|2.1&lt;CR&gt;</tt><br>
+<tt>QRD|198709111012|D|I|4387|||20^LI|12233|RES|ALL&lt;CR&gt;</tt><br>
+<tt>DSC|12333H85;12&lt;CR&gt;</tt><br>
+This response shows that there is no further data by leaving the Continuation
+Pointer not present.  This could be done by sending the DSC segment id with no
+data, but the example does the same thing by totally omitting the DSC
+segment.<br>
+<tt>MSH|^~\|LAB01||ICU|||DSR|ZXT23469|P|2.1&lt;CR&gt;</tt><br>
+<tt>MSA|AA|MSG00003|&lt;CR&gt;</tt><br>
+<tt>QRD|198709111012|D|I|4387|||20|^LI|12233|RES|ALL&lt;CR&gt;</tt><br>
+<tt>DSP|||RESULTS FOR PATIENT#12233   SMITH, JOHN H. 09/11/87&lt;CR&gt;</tt><br>
+<tt>DSP|||SPECIMEN#H85 COLLECTED 09/10/87 /07/0/0&lt;CR&gt;</tt><br>
+<tt>DSP&lt;CR&gt;</tt><br>
+<tt>DSP|||ELECTROLYTES&lt;CR&gt;</tt><br>
+<tt>DSP|||	SODIUM		136	[135-148]	MEQ/L	STAT&lt;CR&gt;</tt><br>
+<tt>DSP|||	POTASSIUM		4.2	[3.5-5.0]	MEQ/L	STAT&lt;CR&gt;</tt><br>
+<tt>DSP|||	CHLORIDE		91	[95-111]	MEQ/L	STAT&lt;CR&gt;</tt><br>
+<tt>DSP|||	CO2			25	[20-30]		MEQ/L	STAT&lt;CR&gt;</tt><br>
+<tt>DSP||||LB&lt;CR&gt;</tt></p>
+
+<h2>
+<A NAME="Heading23">5.5 IMPLEMENTATION CONSIDERATIONS</A></h2>
+
+<p><br>
+1.	The particular allowable values for the filters in the QRD and QRF segments
+are determined among cooperating applications during implementation.<br>
+2.	The format chosen for the query segments are very general.  This might be
+read by prospective implementors to imply that the requirement for using the
+Standard is the ability to respond to a wide variety of inquiries.  This is not
+the intent.  The format here can be used with specific restrictions in any
+interface.</p>
+
+<h2>
+<A NAME="Heading24">5.6 OUTSTANDING ISSUES</A></h2>
+
+<p><br>
+1.	SQL is an emerging Standard for formulating general purpose queries.  It may
+serve as a replacement for the "Who/What Filter" approach used herein.  There
+are considerable theoretical and practical obstacles that must be overcome,
+however.  The benefits of SQL may be realized by forming a conceptual model of
+the data structure of applications and using this model as a basis for SQL
+queries.  Members of the Query/Response committee will explore this approach.
+</p>
+</body></html>

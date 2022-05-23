@@ -1,0 +1,857 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment SAC:
+Specimen Container detail
+(Probengef&auml;ß)
+</H2>
+<TABLE class=segm>
+<TR class=segm-even>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>External Accession Identifier</TD>
+<TD class=segm>Auftrags-ID des externen Labors</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01329">01329</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4388">13.4.3.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>Accession Identifier</TD>
+<TD class=segm>Auftrags-ID des Labors</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01330">01330</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4389">13.4.3.2</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>Container Identifier</TD>
+<TD class=segm>ID des Probengef&auml;sses</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>C</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01331">01331</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4390">13.4.3.3</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>Primary (Parent) Container Identifier</TD>
+<TD class=segm>ID des Primarprobengef&auml;sses</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>C</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01332">01332</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4391">13.4.3.4</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm>Equipment Container Identifier</TD>
+<TD class=segm>Ger&auml;tespezifische ID des Probengef&auml;sses</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01333">01333</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4392">13.4.3.5</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm>Specimen Source</TD>
+<TD class=segm>Art des Materials / Entnahmeart</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>W</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00249">00249</A></TD>
+<TD class=segm><A HREF = "hl7v29typ-.htm#-">-</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4393">13.4.3.6</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm>Registration Date/Time</TD>
+<TD class=segm>Zeitpunkt der Registrierung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01334">01334</A></TD>
+<TD class=segm><A HREF = "hl7v29typDTM.htm#DTM">DTM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4394">13.4.3.7</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm>Container Status</TD>
+<TD class=segm>Status des Probengef&auml;sses</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0370.htm">0370</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01335">01335</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4395">13.4.3.8</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm>Carrier Type</TD>
+<TD class=segm>Art des Tr&auml;gers</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0378.htm">0378</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01336">01336</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4396">13.4.3.9</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm>Carrier Identifier</TD>
+<TD class=segm>ID des Tr&auml;gers</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01337">01337</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4397">13.4.3.10</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>11</TD>
+<TD class=segm>Position in Carrier </TD>
+<TD class=segm>Probenposition im Tr&auml;ger</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01338">01338</A></TD>
+<TD class=segm><A HREF = "hl7v29typNA.htm#NA">NA</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4398">13.4.3.11</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>12</TD>
+<TD class=segm>Tray Type - SAC</TD>
+<TD class=segm>Art des Trays</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0379.htm">0379</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01339">01339</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4399">13.4.3.12</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>13</TD>
+<TD class=segm>Tray Identifier</TD>
+<TD class=segm>ID des Trays</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01340">01340</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4400">13.4.3.13</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>14</TD>
+<TD class=segm>Position in Tray </TD>
+<TD class=segm>Position des Tr&auml;gers im Tray</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01341">01341</A></TD>
+<TD class=segm><A HREF = "hl7v29typNA.htm#NA">NA</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4401">13.4.3.14</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>15</TD>
+<TD class=segm>Location</TD>
+<TD class=segm>Aufenthaltsort der Probe</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0774.htm">0774</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01342">01342</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4402">13.4.3.15</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>16</TD>
+<TD class=segm>Container Height</TD>
+<TD class=segm>H&ouml;he des Probengef&auml;sses</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01343">01343</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4403">13.4.3.16</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>17</TD>
+<TD class=segm>Container Diameter</TD>
+<TD class=segm>Durchmesser des Probengef&auml;sses</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01344">01344</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4404">13.4.3.17</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>18</TD>
+<TD class=segm>Barrier Delta</TD>
+<TD class=segm>Abstand des Probenseparators</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01345">01345</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4405">13.4.3.18</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>19</TD>
+<TD class=segm>Bottom Delta</TD>
+<TD class=segm>Abstand zum Boden des Probengef&auml;sses</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01346">01346</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4406">13.4.3.19</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>20</TD>
+<TD class=segm>Container Height/Diameter/Delta Units</TD>
+<TD class=segm>Einheiten der Probengef&auml;ssabmessungen</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0775.htm">0775</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01347">01347</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4407">13.4.3.20</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>21</TD>
+<TD class=segm>Container Volume</TD>
+<TD class=segm>Probengef&auml;ßvolumen</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00644">00644</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4408">13.4.3.21</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>22</TD>
+<TD class=segm>Available Specimen Volume</TD>
+<TD class=segm>verf&uuml;gbares Probenvolumen</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01349">01349</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4409">13.4.3.22</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>23</TD>
+<TD class=segm>Initial Specimen Volume</TD>
+<TD class=segm>Urspr&uuml;ngliches Probenvolumen</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01350">01350</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4410">13.4.3.23</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>24</TD>
+<TD class=segm>Volume Units</TD>
+<TD class=segm>Einheit der Volumenangabe</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0777.htm">0777</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01351">01351</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4411">13.4.3.24</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>25</TD>
+<TD class=segm>Separator Type</TD>
+<TD class=segm>Art des Separators</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0380.htm">0380</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01352">01352</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4412">13.4.3.25</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>26</TD>
+<TD class=segm>Cap Type</TD>
+<TD class=segm>Verschlusstyp</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0381.htm">0381</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01353">01353</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4413">13.4.3.26</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>27</TD>
+<TD class=segm>Additive</TD>
+<TD class=segm>Zus&auml;tze</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0371.htm">0371</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00647">00647</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4414">13.4.3.27</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>28</TD>
+<TD class=segm>Specimen Component</TD>
+<TD class=segm>Probenbestandteil</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0372.htm">0372</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01355">01355</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4415">13.4.3.28</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>29</TD>
+<TD class=segm>Dilution Factor</TD>
+<TD class=segm>Verd&uuml;nnungsfaktor</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01356">01356</A></TD>
+<TD class=segm><A HREF = "hl7v29typSN.htm#SN">SN</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4416">13.4.3.29</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>30</TD>
+<TD class=segm>Treatment</TD>
+<TD class=segm>Probenvorbehandlung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0373.htm">0373</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01357">01357</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4417">13.4.3.30</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>31</TD>
+<TD class=segm>Temperature</TD>
+<TD class=segm>Probentemperatur</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01358">01358</A></TD>
+<TD class=segm><A HREF = "hl7v29typSN.htm#SN">SN</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4418">13.4.3.31</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>32</TD>
+<TD class=segm>Hemolysis Index</TD>
+<TD class=segm>H&auml;molyseindex</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01359">01359</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4419">13.4.3.32</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>33</TD>
+<TD class=segm>Hemolysis Index Units</TD>
+<TD class=segm>Einheit des H&auml;molyseindexes</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0779.htm">0779</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01360">01360</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4420">13.4.3.33</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>34</TD>
+<TD class=segm>Lipemia Index</TD>
+<TD class=segm>Lip&auml;mischer Index</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01361">01361</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4421">13.4.3.34</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>35</TD>
+<TD class=segm>Lipemia Index Units</TD>
+<TD class=segm>Einheit des lip&auml;mischen Indexes</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0780.htm">0780</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01362">01362</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4422">13.4.3.35</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>36</TD>
+<TD class=segm>Icterus Index</TD>
+<TD class=segm>Ikterischer Index</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01363">01363</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4423">13.4.3.36</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>37</TD>
+<TD class=segm>Icterus Index Units</TD>
+<TD class=segm>Einheit des ikterischen Indexes</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0781.htm">0781</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01364">01364</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4424">13.4.3.37</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>38</TD>
+<TD class=segm>Fibrin Index</TD>
+<TD class=segm>Fibrin Index</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>10#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01365">01365</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4425">13.4.3.38</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>39</TD>
+<TD class=segm>Fibrin Index Units</TD>
+<TD class=segm>Einheit des Fibrin Indexes</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0782.htm">0782</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01366">01366</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4426">13.4.3.39</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>40</TD>
+<TD class=segm>System Induced Contaminants</TD>
+<TD class=segm>Systembedingte Probenverunreinigung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0374.htm">0374</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01367">01367</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4427">13.4.3.40</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>41</TD>
+<TD class=segm>Drug Interference</TD>
+<TD class=segm>Medikamentenbedingte Einfl&uuml;sse auf die Probe</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0382.htm">0382</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01368">01368</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4428">13.4.3.41</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>42</TD>
+<TD class=segm>Artificial Blood</TD>
+<TD class=segm>Blutersatz</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0375.htm">0375</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01369">01369</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4429">13.4.3.42</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>43</TD>
+<TD class=segm>Special Handling Code</TD>
+<TD class=segm>Hinweise zur Vorbehandlung der Probe</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0376.htm">0376</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01370">01370</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4430">13.4.3.43</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>44</TD>
+<TD class=segm>Other Environmental Factors</TD>
+<TD class=segm>Sonstige Umgebungsbedingungen</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0377.htm">0377</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01371">01371</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4431">13.4.3.44</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>45</TD>
+<TD class=segm>Container Length</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02496">02496</A></TD>
+<TD class=segm><A HREF = "hl7v29typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4432">13.4.3.45</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>46</TD>
+<TD class=segm>Container Width</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02497">02497</A></TD>
+<TD class=segm><A HREF = "hl7v29typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4433">13.4.3.46</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>47</TD>
+<TD class=segm>Container Form</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0967.htm">0967</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02498">02498</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4434">13.4.3.47</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>48</TD>
+<TD class=segm>Container Material</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0968.htm">0968</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02499">02499</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4435">13.4.3.48</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>49</TD>
+<TD class=segm>Container Common Name</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0969.htm">0969</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02500">02500</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch13.html#Heading4436">13.4.3.49</A></TD>
+</TR>
+</TABLE>
+<P>
+<P>
+<H3>Used within following Message Structures:</H3>
+<dd><A HREF = "hl7v29msgstruct.htm#EAC_U07">EAC_U07</A> Equipment Command Message (<A HREF = "std29/ch13.html#Heading4364">13.3.7</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EAR_U08">EAR_U08</A> Equipment Command Message (<A HREF = "std29/ch13.html#Heading4365">13.3.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMG_O19">OMG_O19</A> General Clinical Order Message (<A HREF = "std29/ch04.html#Heading1453">4.4.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O21">OML_O21</A> Laboratory Order Message (<A HREF = "std29/ch04.html#Heading1455">4.4.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O33">OML_O33</A> Laboratory Order - Multiple Order Per Specimen Mes (<A HREF = "std29/ch04.html#Heading1459">4.4.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O35">OML_O35</A> Laboratory Order - Multiple Order Per Container of (<A HREF = "std29/ch04.html#Heading1463">4.4.10</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O39">OML_O39</A> Specimen Shipment Centric Laboratory Order Message (<A HREF = "std29/ch04.html#Heading1467">4.4.12</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O59">OML_O59</A> Non-Stock Supply Order Message (<A HREF = "std29/ch04.html#Heading1479">4.4.22</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OPL_O37">OPL_O37</A> Population/Location-Based Laboratory Order Message (<A HREF = "std29/ch04.html#Heading1473">4.4.16</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OPR_O38">OPR_O38</A> Population/Location-Based Laboratory Order Acknowl (<A HREF = "std29/ch04.html#Heading1474">4.4.17</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OPU_R25">OPU_R25</A> Observation Message (<A HREF = "std29/ch07.html#Heading2837">7.3.11</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORG_O20">ORG_O20</A> General Clinical Order Acknowledgment Message (<A HREF = "std29/ch04.html#Heading1454">4.4.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O22">ORL_O22</A> General Laboratory Order Acknowledgment Message (<A HREF = "std29/ch04.html#Heading1457">4.4.7.0</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O34">ORL_O34</A> Laboratory Order Acknowledgment Message  - Multipl (<A HREF = "std29/ch04.html#Heading1461">4.4.9.0</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O36">ORL_O36</A> Laboratory Order Acknowledgment Message  - Multipl (<A HREF = "std29/ch04.html#Heading1465">4.4.11.0</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O40">ORL_O40</A> Specimen Shipment Centric Laboratory Order Acknowl (<A HREF = "std29/ch04.html#Heading1469">4.4.13.0</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O53">ORL_O53</A>  (<A HREF = "std29/ch04.html#Heading1458">4.4.7.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O54">ORL_O54</A>  (<A HREF = "std29/ch04.html#Heading1462">4.4.9.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O55">ORL_O55</A>  (<A HREF = "std29/ch04.html#Heading1466">4.4.11.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O56">ORL_O56</A>  (<A HREF = "std29/ch04.html#Heading1470">4.4.13.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OSM_R26">OSM_R26</A> Specimen Shipment Message (<A HREF = "std29/ch07.html#Heading3208">7.16.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OUL_R22">OUL_R22</A> Observation Message (<A HREF = "std29/ch07.html#Heading2834">7.3.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OUL_R23">OUL_R23</A> Observation Message (<A HREF = "std29/ch07.html#Heading2835">7.3.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OUL_R24">OUL_R24</A> Observation Message (<A HREF = "std29/ch07.html#Heading2836">7.3.10</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#SSR_U04">SSR_U04</A> Specimen Status Message (<A HREF = "std29/ch13.html#Heading4361">13.3.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#SSU_U03">SSU_U03</A> Specimen Status Message (<A HREF = "std29/ch13.html#Heading4360">13.3.3</A>)</dd>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

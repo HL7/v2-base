@@ -1,0 +1,3233 @@
+<HTML><HEAD>
+<!-- This document was created from RTF source by rtftohtml version 3.8 -->
+<TITLE>HL7 V2.1 Chapter 2</TITLE></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>
+References to other Chapters
+</H1>
+<A HREF="hl7.html">Index HL7</A><br>
+<A HREF="kap1.html">Chapter 1</A><br>
+<A HREF="kap3.html">Chapter 3</A><br>
+<A HREF="kap4.html">Chapter 4</A><br>
+<A HREF="kap5.html">Chapter 5</A><br>
+<A HREF="kap6.html">Chapter 6</A><br>
+<A HREF="kap7.html">Chapter 7</A><br>
+
+<hr>
+
+<p>
+
+<H1>
+2</H1>
+<UL>
+<LI><A HREF="#Heading1">2. <BR>Chapter 2</A>
+<UL>
+<LI><A HREF="#Heading2">2.1 INTRODUCTION </A>
+<LI><A HREF="#Heading3">2.2 ABSTRACT MESSAGE DEFINITION </A>
+<UL>
+<LI><A HREF="#Heading4">2.2.1 Definitions</A>
+<UL>
+<LI><A HREF="#Heading5">2.2.1.1 Message.  </A>
+<LI><A HREF="#Heading6">2.2.1.2 Segments.  </A>
+<LI><A HREF="#Heading7">2.2.1.3 Data Fields.  </A>
+</UL>
+<LI><A HREF="#Heading8">2.2.2 Characteristics of Data Fields</A>
+<LI><A HREF="#Heading9">2.2.3 The Null Value.</A>
+<LI><A HREF="#Heading10">2.2.4 Format for Defining Abstract Messages</A>
+<LI><A HREF="#Heading11">2.2.5 Application (Level 7) Processing Rules, Immediate Processing</A>
+<UL>
+<LI><A HREF="#Heading12">2.2.5.1 Initiation. </A>
+<LI><A HREF="#Heading13">2.2.5.2 Response.  </A>
+</UL>
+<LI><A HREF="#Heading14">2.2.6 Application (Level 7) Processing Rules, Deferred Processing</A>
+<UL>
+<LI><A HREF="#Heading15">2.2.6.1 Initiation.  </A>
+<LI><A HREF="#Heading16">2.2.6.2 Response:  </A>
+</UL>
+</UL>
+<LI><A HREF="#Heading17">2.3 MESSAGE ENCODING RULES </A>
+<UL>
+<LI><A HREF="#Heading18">2.3.1 Definitions</A>
+<LI><A HREF="#Heading19">2.3.2 Segment Terminator.  </A>
+<UL>
+<LI><A HREF="#Heading20">2.3.2.1 Field Separator. </A>
+<LI><A HREF="#Heading21">2.3.2.2 Component Separator. </A>
+<LI><A HREF="#Heading22">2.3.2.3 Sub-Component Separator.  </A>
+<LI><A HREF="#Heading23">2.3.2.4 Repetition Separator.  </A>
+<LI><A HREF="#Heading24">2.3.2.5 Escape Character.  </A>
+</UL>
+<LI><A HREF="#Heading25">2.3.3 Encoding HL7 Data Types</A>
+<UL>
+<LI><A HREF="#Heading26">2.3.3.1 ST  String data.  </A>
+<LI><A HREF="#Heading27">2.3.3.2 NM  Numeric.  </A>
+<LI><A HREF="#Heading28">2.3.3.3 DT  Date.  </A>
+<LI><A HREF="#Heading29">2.3.3.4 TM  Time.  </A>
+<LI><A HREF="#Heading30">2.3.3.5 TS  Time stamp.  </A>
+<LI><A HREF="#Heading31">2.3.3.6 PN  Person Name.  </A>
+<LI><A HREF="#Heading32">2.3.3.7 TN  Telephone Number. </A>
+<LI><A HREF="#Heading33">2.3.3.8 AD  Address.  </A>
+<LI><A HREF="#Heading34">2.3.3.9 ID  Coded Value.  </A>
+</UL>
+<LI><A HREF="#Heading35">2.3.4 Use of Escape Sequences in Text Fields</A>
+<UL>
+<LI><A HREF="#Heading36">2.3.4.1 Formatting Codes.  </A>
+<LI><A HREF="#Heading37">2.3.4.2 Highlighting.  </A>
+<LI><A HREF="#Heading38">2.3.4.3 Special Character.  </A>
+<LI><A HREF="#Heading39">2.3.4.4 Hexadecimal.  </A>
+<LI><A HREF="#Heading40">2.3.4.5 Formatted Text.  </A>
+<LI><A HREF="#Heading41">2.3.4.6 Local.  </A>
+</UL>
+<LI><A HREF="#Heading42">2.3.5 HL7 Protocol Variants</A>
+<UL>
+<LI><A HREF="#Heading43">2.3.5.1 Sequence Number Protocol.  </A>
+<LI><A HREF="#Heading44">2.3.5.2 Continuation messages and segments.  </A>
+</UL>
+<LI><A HREF="#Heading45">2.3.6 HL7 Batch Protocol</A>
+<UL>
+<LI><A HREF="#Heading46">2.3.6.1 Structure of an HL7 batch file.</A>
+<LI><A HREF="#Heading47">2.3.6.2 Related Segments and Data Usage.  </A>
+<LI><A HREF="#Heading48">2.3.6.3 Acknowledging Batches.  </A>
+</UL>
+</UL>
+<LI><A HREF="#Heading49">2.4 CONTROL MESSAGES</A>
+<UL>
+<LI><A HREF="#Heading50">2.4.1 ACK: General Acknowledgement</A>
+<LI><A HREF="#Heading51">2.4.2 MCF: Delayed acknowledgement</A>
+</UL>
+<LI><A HREF="#Heading52">2.5 MESSAGE CONTROL SEGMENTS</A>
+<UL>
+<LI><A HREF="#Heading53">2.5.1 ADD - ADDENDUM</A>
+<LI><A HREF="#Heading54">2.5.2 BHS - BATCH HEADER -    Stapeldatei - Kopfsegment</A>
+<LI><A HREF="#Heading55">2.5.3 BTS - BATCH TRAILER - Stapeldatei Folgesegment</A>
+<LI><A HREF="#Heading56">2.5.4 ERR - ERROR -Fehler</A>
+<LI><A HREF="#Heading57">2.5.5 FHS - FILE HEADER -File-Kopfsegment</A>
+<LI><A HREF="#Heading58">2.5.6 FTS - FILE TRAILER -File-Folgesegment</A>
+<LI><A HREF="#Heading59">2.5.7 MSA - MESSAGE ACKNOWLEDGMENT -Best&auml;tigung einer Nachricht</A>
+<LI><A HREF="#Heading60">2.5.8 MSH - MESSAGE HEADER- Nachrichtenkopf</A>
+<LI><A HREF="#Heading61">2.5.9 NTE - NOTES AND COMMENTS -Bemerkungen und Kommentare</A>
+</UL>
+<LI><A HREF="#Heading62">2.6 SAMPLE CONTROL MESSAGES</A>
+<UL>
+<LI><A HREF="#Heading63">2.6.1 Simple Acknowledgement</A>
+<LI><A HREF="#Heading64">2.6.2 Error Return</A>
+<LI><A HREF="#Heading65">2.6.3 Sequence Number:  Initial Message</A>
+</UL>
+</UL>
+</UL>
+<hr size=4>
+
+<h1>
+<A NAME="Heading1">2. <BR>Chapter 2</A></h1>
+
+
+<h2>
+<A NAME="Heading2">2.1 INTRODUCTION </A></h2>
+
+<p><br>
+The Control chapter of this Standard defines the generic rules that apply to
+all messages.  Subsequent sections define functionally specific messages to be
+exchanged among certain applications. The specific aspects of message
+definition that are addressed herein are:<br>
+-	The form to be used in functional chapters for describing messages.  This
+includes their purpose, their contents, and the inter-relationships among them.
+This form is called an abstract message definition because it is purely a
+"level 7" (application definition).<br>
+- 	The HL7 encoding rules for converting an abstract message into a string of
+characters that comprise an actual message.<br>
+-	The programming procedures required to exchange messages using the HL7
+specifications.<br>
+-	The anticipated relationship with lower level protocols.<br>
+-	Certain message segments that are components of all messages.<br>
+-	A single message, the Acknowledgement message, that may be used unchanged in
+multiple applications.</p>
+
+<h2>
+<A NAME="Heading3">2.2 ABSTRACT MESSAGE DEFINITION </A></h2>
+
+<p><br>
+The Standard defines messages at a level of abstraction appropriate to layer 7.
+This defines the data content and certain procedures that are relevant to the
+application. This section defines the format used to define the abstract
+message in all the functionally specific chapters. Section C of this chapter
+gives the rules for generating the actual Standard character string to
+correspond to any abstract message.<br>
+Although subsequent chapters define the messages abstractly, the examples in
+those chapters assume the encoding rules defined in this chapter.</p>
+
+<h3>
+<A NAME="Heading4">2.2.1 Definitions</A></h3>
+
+<p></p>
+
+<h4>
+<A NAME="Heading5">2.2.1.1 Message.  </A></h4>
+
+<p>A
+<u>message</u> is the atomic unit of data transferred between systems.  It is
+comprised of a group of segments in a defined sequence.  Each message has a
+<u>message type</u> that defines its purpose.  For example the ADT Message type
+is used to transmit portions of a patient's ADT data from one system to
+another.  A 3 character code contained within each message identifies its type.
+These are listed in the Message Type list, Appendix A, page 2.<br>
+The event that initiates an exchange of messages is called a "trigger event."
+Table 3 (Appendix A) contains the codes that represent all defined trigger
+events.  These codes represent values such as "A Patient is Admitted" or "An
+order is cancelled."  There is a one-to-many relationship between message types
+and trigger event codes. The same trigger event code may not be associated with
+more than one message type.<br>
+All message type and trigger event codes beginning with Z are reserved for
+locally defined messages.  No such codes will be defined within the HL7 Standard.</p>
+
+<h4>
+<A NAME="Heading6">2.2.1.2 Segments.  </A></h4>
+
+<p>A
+<u>segment</u> is a logical grouping of <u>data fields</u>.  Segments of a
+message may be required or optional.  They may occur only once in a message or
+they may be allowed to repeat.  Each segment is given a name.  For example, the
+ADT message may contain the following segments: Message Header, Event Type
+Patient ID, and Patient Visit. <br>
+Each segment is identified by a unique 3 character code known as the Segment
+ID.  Although the actual segments are defined in various chapters the ID codes
+assigned to all segments are listed in a Segment Table, Appendix A, page 3.<br>
+All segment id codes beginning with Z are reserved for locally defined
+messages.  No such codes will be defined within the HL7 Standard.</p>
+
+<h4>
+<A NAME="Heading7">2.2.1.3 Data Fields.  </A></h4>
+
+<p>The
+chapters listed above contain segment definition tables.  These tables list and
+describe the data fields in the segment and characteristics of their usage.
+Appendix A, the data dictionary, provides an alphabetical listing of data
+elements, listings of recommended coded values, and a cross reference from data
+elements to segments.  </p>
+
+<h3>
+<A NAME="Heading8">2.2.2 Characteristics of Data Fields</A></h3>
+
+<p><br>
+The following information is specified about each data field: <br>
+<u>position</u> - the ordinal position of the data field within the segment.
+This number is used to refer to the data field in the text comments that follow
+the segment definition table.  It is also significant in the HL7 message
+encoding rules.<br>
+<u>name</u> - a globally unique descriptive name for the field.<br>
+<u>id number</u> - a small integer that uniquely identifies the data field
+throughout the Standard.  The id number is not significant under the HL7
+message encoding rules, but is included as a convenience for those who would
+apply the HL7 Standard using other message encoding rules. <br>
+<u>maximum length</u> - the maximum number of characters that one occurrence of
+the data field may occupy in any message. The maximum length is not of
+conceptual importance in the abstract message or the HL7 coding rules. It is
+included because it helps readers understand the purpose of the field and it
+may have pragmatic importance in specific implementations.  It is calculated
+assuming that the HL7 encoding rules are applied.  As such, it includes the
+component and sub-component separators that are defined below.  Because the
+maximum length is that of a single occurrence, the repetition separator is not
+included in calculating the maximum length.<br>
+<u>optionality</u> - whether the data field is required in a segment or is
+optional.  The designations are<br>
+		R	-	required<br>
+		O	-	optional<br>
+<u>repetition</u> - whether the field may repeat.  The designations are: <br>
+	N	-		no repetition<br>
+	Y	-		the field may repeat an indefinite or site determined number of times<br>
+	(integer) -	the field may repeat up to the number of times specified in the
+integer.<br>
+<u>table</u> - HL7 publishes a table of values for this field. See the
+discussions for data type ID, below. <br>
+<u>type</u> - restrictions on the contents of the data field.  The following
+types are defined:<br>
+ST	<u>String.</u>  Any display characters are allowed.  String data is left
+justified with trailing blanks optional.  <br>
+TX	<u>Text.</u> String data meant for user display (on a terminal or printer).
+Such data would not necessarily be left justified since leading spaces may
+contribute greatly to the clarity of the presentation to the user.  <br>
+Because this type of data is intended for display, it may contain certain
+special character sequences designed to control the display.  These are defined
+specifically in the HL7 encoding rules.<br>
+FT	<u>Formatted Text.</u>  This is a text string with embedded formatting
+instructions. These instructions are limited to those that are intrinsic and
+independent of the circumstances under which the field is being used.  The
+actual instructions and their representation are described below where the
+encoding rules for the FT data type are given.<br>
+NM	<u>Numeric.</u>  A leading "+" or "-" sign may be included.  In the absence
+of a sign, the number is assumed to be positive.  A decimal point may be
+included.  If there is no decimal point the number is assumed to be an
+integer.<br>
+DT	<u>Date.</u>  Always includes 4-digit year. <br>
+TM	<u>Time.</u>  24 hour clock notation.  The optional time is local time of
+the sender.  Seconds are optional.  <br>
+TS	<u>Time stamp.</u>  Contains the exact time of an event, including the date
+and time. The time zone of the sender may be sent optionally as an offset from
+the coordinated universal time (previously known as Greenwich Mean Time.)
+Where the time zone is not sent, the time is understood to refer to the local
+time of the sender.  All HL7 systems operating in a domain that crosses time
+zones are required to send the time zone offset.  The HL7 committee strongly
+recommends that all systems routinely send the time zone offset but does not
+require it.<br>
+	All HL7 systems are required to accept the time zone offset, but its
+interpretation is application specific. For many applications the time of
+interest is the local time of the sender.  For example, an application in the
+Eastern Standard Time zone receiving notification of an admission that takes
+place at 11:00 PM in San Francisco on December 11 would prefer to treat the
+admission as having occurred on December 11 rather than advancing the date to
+December 12.<br>
+	One exception to this rule would be a clinical system that processed patient
+data collected in a clinic and a nearby hospital that happens to be in a
+different time zone.  Such applications may choose to convert the data to a
+common representation.  Similar concerns apply to the transitions to and from
+daylight saving time.  HL7 supports such requirements by requiring that the
+time zone information be present when the information is sent. It does not,
+however, specify which of the treatments discussed here will be applied by the
+receiving system. <br>
+	The specific data representations used in the HL7 encoding rules are
+compatible with ISO 8824-1987(E). They are defined in the Encoding Rules
+section of this chapter (Section 19).<br>
+PN	<u>Person Name.</u>  A person's name including given name, middle name,
+family name, prefix (e.g., DR), suffix (e.g., JR or III), and degree (e.g.,
+MD).<br>
+TN	<u>Telephone number.</u>  <br>
+AD	<u>Address.</u>  The street or mailing address of a person or
+institution.<br>
+ID	<u>Coded value.</u>  The value of such a field follows the formatting rules
+for an ST field except that it is drawn from a table of legal values.  Examples
+of ID fields include physician ID, religion and sex.  <br>
+	The manner in which the valid values are defined for ID fields will vary.
+Certain fields like Physician ID or Patient Location will have values that vary
+from institution to institution.  <br>
+	Others, like Event Type, are a part of the HL7 Standard because they affect
+the interpretation of the messages that contain them.  These are limited to the
+values established by the HL7 Standard.  These values are listed in Appendix A.
+Additions may be included on a site-specific basis.<br>
+	Still other ID fields contain values that are encoded by reference to other
+Standards documents.  For example, the encoding for Lab procedures is defined
+by ASTM 1238-88.<br>
+	Finally, some ID data fields will contain values that might be standardized
+across institutions, but for which no applicable official Standard exists.  For
+these a set of <u>suggested</u> values may be listed in Appendix A.  It is
+expected that these values will be used where applicable within an institution
+and serve as a basis for extensions as required.  The appropriate functional
+committee within HL7 solicits suggestions for additional values from
+institutions that are applying the Standard.<br>
+SI	<u>Sequence ID.</u>  A positive, non-zero integer. <br>
+CM	<u>Composite.</u>  A field that is a combination of other meaningful data
+fields.  Each portion is called a <u>component.</u>  Certain composites have
+been separately identified and are described below.<br>
+CK	Composite ID with check digit.  A composite consisting of three components:
+an id number, a check digit, and a code showing the check digit scheme
+employed.  The codes are defined in Table 60 (appendix A.)<br>
+CN	<u>Composite ID and Name.</u>  A field identifying a person both as a coded
+value and with a text name.  The first component is the coded id according to a
+site-specific table.  The second and subsequent components are the person's
+name as a PN field.  For specific fields individual sites may elect to omit the
+id or the name.<br>
+CQ	<u>Composite quantity with units.</u>  The first component is a quantity and
+the second is the units in which the quantity is expressed.  Field by field,
+default units may be defined within the specifications.<br>
+CE	<u>Coded Element.</u>  This data type transmits codes and the text
+associated with the code. This type has six components arranged in two groups
+as follows:<br>
+<tt>&lt;identifier&gt;^&lt;text&gt;^&lt;name of coding system&gt;^&lt;alternate
+identifier&gt;^&lt;alternate text&gt;^&lt;name of alternate coding
+system&gt;</tt><br>
+These are defined as follows:<br>
+Identifier.  This is the sequence of characters (the "code") that uniquely
+identifies the item being referenced by the &lt;text&gt;.  Different coding
+schemes will have different elements here.<br>
+<u>Text.</u>  This is the name or description of the item in question.  E.g.,
+"myocardial infarction" or "x-ray impression."<br>
+		<u>Coding system.</u>   Each coding system will be assigned a unique
+identifier. This field will serve to identify the coding scheme being used in
+the identifier field.  For backward compatibility, if this field is absent, it
+will be taken to mean the CPT-4 with ASTM extensions, i.e., AS4.<br>
+Other coding systems that might appear here are ICD-9, ICD-10, SNOMED, etc.
+Each system will be given a unique identifying string.  <br>
+The ASTM 1238-88 proposed codes are:<br>
+ACR	American College of Radiology Finding Codes<br>
+AS4	astm universal code<br>
+FDK	FDA k10  Food &amp; Drug Administration<br>
+FDT	FDA test types<br>
+I9		ICD-9<br>
+I9C		ICD-9 CM Commission of Professional Hospital Activities<br>
+I10		ICD-10 World Heath Organization<br>
+L		Locally-defined codes<br>
+RC		Read Classification proposed for usage in England<br>
+SNM	Systematized Nomenclature of Medicine (SNOMED)<br>
+		Others may be added as needed.<br>
+The combination of the <u>identifier</u> and <u>coding system</u> fields will
+be a unique code for a data item.<br>
+Alternate fields: these three fields are defined analogously to the above for
+the alternate or local coding system.  <br>
+If the <u>Alternate Text</u> field is absent, and the <u>Alternate
+Identifier</u> is present, the <u>Alternate Text</u> will be taken to be the
+same as the <u>Text</u> field.<br>
+If the <u>Alternate Coding System</u> field is absent, it will be taken to mean
+the locally defined system.</p>
+
+<h3>
+<A NAME="Heading9">2.2.3 The Null Value.</A></h3>
+
+<p><br>
+Except where noted, HL7 data fields may take on the null value.  Sending the
+null value is different from omitting an optional data field.  The difference
+appears when the contents of a message will be used to update a record in a
+database rather than create a new one.  If no value is sent, (i.e., it is
+omitted) the old value should remain unchanged.  If the null value is sent, the
+old value should be changed to null.</p>
+
+<h3>
+<A NAME="Heading10">2.2.4 Format for Defining Abstract Messages</A></h3>
+
+<p><br>
+Subsequent chapters of this document describe messages that are exchanged among
+applications in functionally specific situations.  Each chapter is organized as
+follows.<br>
+1.<u>Purpose.</u>  This is an overview describing the purpose of the chapter,
+general information and concepts.<br>
+2.<u>Trigger Events and Messages.</u>  There is a list of the trigger events.
+For each trigger event is listed the messages that are exchanged when the
+trigger even occurs.<br>
+Each message is defined in special notation that lists the segment ids in the
+order they would appear in the message.  Braces, "{ . . . }," indicate one or
+more repetitions of the enclosed group of segments.  (Of course, the "group"
+may contain only a single segment.)  Brackets, "[  . . . ]," show that the
+enclosed group of segments is optional.  If a group of segments is optional and
+may repeat it should be enclosed in brackets and braces, "{ [ . . . ] }." <br>
+Whenever braces enclose more than one segment id a special stylistic convention
+is used to help the reader understand the hierarchy of repetition.  The first
+segment id appears on the same line as the brace, two columns to the right.
+The subsequent segment ids appear under the first.  The closing brace appears
+on a line of its own in the same column as the opening brace.  This convention
+is an optional convenience to the user.  If there is conflict between its use
+and the braces that appear in a message schematic, the braces define the actual
+grouping of segments that is permitted.<br>
+3.<u>Message Segments.</u>  The segments defined in a chapter are then listed
+in alphabetical order by segment id.<br>
+4.<u>Examples.</u> Complete messages are included.<br>
+5.<u>Implementation Considerations.</u>  Special supplementary information is
+presented here.  This includes issues that must be addressed in planning an
+implementation. <br>
+6.<u>Outstanding Issues.</u>  Issues still under consideration or requiring
+consideration are listed here.<br>
+	<br>
+Consider the hypothetical triggering event "a widget report is requested."  It
+might be served by the Widget Request (WRQ) and Widget Report (WRP) messages.
+These would be defined in the Widget chapter (say Chapter XX).  The Widget
+Request message might consist of the following segments: Message Header (MSH),
+Widget ID (WID).  The Widget Report message might consist of the following
+segments: Message Header (MSH),  Message Acknowledgement (MSA), one or more
+Widget Description (WDN) Segments each of whichis followed by a single Widget
+Portion segment (WPN) followed by zero or more Widget Portion Detail (WPD)
+segments.  <br>
+The schematic form for this hypothetical exchange of messages is shown if
+Figure II-1:<br>
+		  <u>Trigger Event: WIDGET REPORT IS REQUESTED</u><br>
+<tt><u>WRO	Widget Request	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>WID	Widget ID	XX</tt><br>
+<tt><u>WRP	Widget Report	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgement	II</tt><br>
+<tt>{ WDN	Widget Description	XX</tt><br>
+<tt>  WPN	Widget Portion	XX</tt><br>
+<tt>  { [WPD] }	Widget Portion Detail	XX</tt><br>
+<tt>}</tt><br>
+		  <b>Figure II-1.  Hypothetical schematic message.</b><br>
+The WID, WDN, WPN, and WPD segments would be defined by the widget committee in
+the widget chapter, as designated by the roman numeral XX in the right column.
+The MSH and MSA segments, although included in the widget messages, are defined
+in another chapter.  They are incorporated by reference into the widget chapter
+by the roman numeral II.<br>
+On the other hand, the widget committee might decide that the WPN and WPD
+segments should appear in pairs, but the pairs are optional and can repeat.
+Then the schematic for the WRP message would be as shown in Figure II-2.<br>
+<u>WRP	Widget Report	Chapter</u><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgement	XX</tt><br>
+<tt>{ WDN	Widget Description	XX</tt><br>
+<tt>  [ { WPN	Widget Portion	XX</tt><br>
+<tt>      WPD	Widget Portion Detail	XX</tt><br>
+<tt>    } ]</tt><br>
+<tt>}</tt><br>
+			    	<b>Figure II-2. WPN and WPD segments in pairs.</b><br>
+If the widget committee determined that at least one pair of WPN and WPD
+segments must follow a WDN, then the notation would be as shown in Figure
+II-3.<br>
+<u>WRP	Widget Report	Chapter</u><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgement	XX</tt><br>
+<tt>{ WDN	Widget Description	XX</tt><br>
+<tt>  {  WPN	Widget Portion	XX</tt><br>
+<tt>     WPD	Widget Portion Detail	XX</tt><br>
+<tt>  }</tt><br>
+<tt>} </tt><br>
+		<b>Figure II-3.  At least one pair of WPN and WPD.</b></p>
+
+<h3>
+<A NAME="Heading11">2.2.5 Application (Level 7) Processing Rules, Immediate Processing</A></h3>
+
+<p><br>
+The processing rules described here apply to all exchanges of messages, whether
+or not the HL7 encoding rules or Lower Layer Protocols are used.  They
+represent the primary message processing mode.  Certain variants are documented
+elsewhere in the next section.  These include:<br>
+-	the Application processing rules for a special processing mode, deferred
+processing.<br>
+-	an optional sequence number protocol.<br>
+-	An optional protocol for continuing a very long message. <br>
+Because the protocol describes an exchange of messages, it is described in
+terms of two entities, the <u>initiating</u> and <u>responding</u> systems.
+Each is both a sender and receiver of messages.  The initiating system sends
+first and then receives, while the responding system receives and then
+sends.<br>
+In overview this exchange proceeds as follows:Initiator receives message from
+sending application and sends it to the responding system.<br>
+Responder receives message and<br>
+	(a)		validates it syntactically and against the detailed rules described on
+page II-16; if it fails, a reject message is constructed by the protocol
+software and returned to the initiator<br>
+		(b)		passes it to the application, which:<br>
+			(1)		creates a response message, or<br>
+			(2)		creates an error message, or<br>
+			(3)		creates a reject message<br>
+		(c)		sends the response, error, or reject message<br>
+Initiator passes the message to the initiating application.<br>
+The details follow.</p>
+
+<h4>
+<A NAME="Heading12">2.2.5.1 Initiation. </A></h4>
+
+<p>
+The initiating application process creates a message with data values as
+defined in the appropriate chapter of this Standard.  <br>
+The data values shown below should be provided in the MSH segment (as defined
+under the MSH segment in section E of this chapter).  The message is encoded
+according to the applicable rules and sent to the lower level protocols, which
+will attempt to deliver it to the responding application.<br>
+Special tab stops for following table.  Restored with Normal Style at end.<br>
+       <u>Field</u>	<u>Contents</u>	<br>
+Message Time Stamp	The date and time the data values are combined into the
+message. This field is not used in the processing logic of the HL7 protocol.
+It is optional.<br>
+Message Type	A two-component field. The first component is a 3-letter code
+identifying this message (as defined above). The second component is a 3-digit
+trigger event code as listed in Table 3, Appendix A.<br>
+Receiving Application	A code defined for the communication environment to
+identify the application to which the message should be sent.<br>
+Sending Application	A code similar to Receiving Application used to identify
+the source of the message.<br>
+Receiving Facility	A code defined for the communication environment to identify
+which instance of the application should receive the message.<br>
+Sending Facility	A code similar to Receiving Application used to identify the
+source of the message.<br>
+Message Control ID	Unique identifier used to relate the response to the initial
+message.<br>
+Processing ID	A code that show whether this transaction is to be used for
+production, training, debugging. <br>
+Version ID	The version number of the HL7 spec for which the software was
+defined.<br>
+Sequence Number	Sequence number: used in implementation of sequence number
+protocol.  See "Control Protocol Variants."<br>
+Continuation Pointer	Used in implementation of message continuation protocol.
+See "HL7 Protocol Variants," and Chapter V.<br>
+Certain other fields in the MSH segment are required for the operation of the
+HL7 encoding rules; they will not be relevant if other encoding rules are
+employed.<br>
+The event code in the second component of the Message Type field is redundantly
+shown elsewhere in some messages.  For example, the same information is in the
+EVN segment of the ADT message.  This is for compatibility with prior versions
+of the HL7 protocol.  Newly defined messages should only show the event code in
+the Message Type field of the MSH segment.</p>
+
+<h4>
+<A NAME="Heading13">2.2.5.2 Response.  </A></h4>
+
+<p>The
+protocol software in the responding system:(a)	accepts the message<br>
+(b)	validates it against at least the following criteria:<br>
+	1.	The Message Type in the MSH segment is one that is acceptable to the
+receiver<br>
+	2.		The Version ID in the MSH segment is acceptable to the receiver.<br>
+	3.		The Processing ID in the MSH segment is appropriate for the application
+process handling the message.<br>
+If any of these edits fail, the protocol software rejects the message.  That
+is, it creates an ACK message with 'AR' in the Acknowledgement Code.<br>
+(c)	if the message passes the edits, the message is passed to the receiving
+application, which performs one of these functions:<br>
+	1.		Process the message successfully, generating the functional response
+message.  The MSA segment of the response message should contain AA in the
+Acknowledgement Code. <br>
+			- OR -<br>
+	2.		Send an error response, providing error information in functional segments
+to be included in the response message.  The MSA segment of the response should
+contain AE in the Acknowledgement Code. <br>
+			- OR -<br>
+	3.		Fail to process (reject) the message for reasons unrelated to its content
+or format (system down, internal error, etc.)  For most such problems it is
+likely that the responding system will be able to accept the same message at a
+later time.  The implementors must decide on an application-specific basis
+whether the message should be automatically sent again. The MSA segment of the
+response message should contain AR in the Acknowledgement Code.  <br>
+(d)	passes the message to the initiating system.<br>
+(e)	the protocol software in the initiating system passes the response message
+to the initiating application.<br>
+In all the responses described above the following values are put in the MSA
+segment:<br>
+Special tab stops for this table.<br>
+<u>Field	Contents			</u><br>
+Message Control ID	Message Control ID from MSH segment of incoming message<br>
+Acknowledgement Code	(as described above)<br>
+	<br>
+Acknowledgement Message	Text description of error<br>
+Expected Sequence Number	As described in "Sequence Number Protocol," below, (if
+the sequence number protocol is being used).<br>
+Delayed Acknowledgement Type	For immediate processing this field should not be
+present.  <br>
+The MSH segment in the response is constructed anew following the rules used to
+create the initial message described above.  In particular, the date, time, and
+message control id refer to the response message; they are not echoes of the
+fields in the initial message.  The Receiving Application and Receiving
+Facility, and Processing ID fields contain codes that are copied from the
+Sending Application, Sending Facility and Processing ID fields in the
+initiating message.</p>
+
+<h3>
+<A NAME="Heading14">2.2.6 Application (Level 7) Processing Rules, Deferred Processing</A></h3>
+
+<p><br>
+The Application processing rules for deferred processing are described here.
+In this mode the responding system sends an acknowledgement to the initiating
+system that means the message has been placed in some type of secure
+environment (e.g., disk storage), and the receiving system commits to
+processing it within a "reasonable" amount of time, if a) the message contains
+the necessary information, and b) nothing causes the message's request for
+action to be cancelled before the responding system processes the request.
+Note that neither of these two conditions is completely checked at the time of
+the first acknowledgement.  They are both checked at the time of processing.
+<br>
+The receipt of the first delayed acknowledgment by the initiating system means
+that the responding system has taken responsibility for the subsequent
+processing of the message. This also implies that the initiating system no
+longer needs to keep the particular message in its current form to send out
+later. For example, if the sending system were maintaining a queue of outgoing
+messages, the particular message could be deleted from the output queue at this
+point.<br>
+The receipt of the second delayed acknowledgement message informs the
+initiating application of either (a) the application's successful processing of
+the initial message, or (b) an error that prevented its processing. If the
+receiving application needs to return detailed change of status information, an
+application-specific message will be used. An example of the latter is the
+order confirmation message (ORM) described in Chapter IV.<br>
+The general delayed acknowledgement protocol is implemented on a site-specific
+and application-specific basis as needed.  At a particular site, for a given
+transaction type the choices are:<br>
+i.	Don't allow deferred acknowledgements.<br>
+ii.	All messages will have a deferred acknowledgement.<br>
+iii.	Only exceptional cases (errors) will receive the deferred
+acknowledgement.<br>
+In overview the processing for options (ii) and (iii) proceeds as follows:<br>
+Initiator receives message from sending application and sends it to the
+responding system.<br>
+The responding system receives the message from the initiating system and<br>
+	(a)		partially validates it syntactically and against the detailed rules
+described on page II-16. This validation need not be complete but should be
+sufficient to determine the application that will ultimately respond to the
+message.  If this validation fails, a reject message is constructed by the
+protocol software and returned to the initiator.<br>
+	<br>
+	(b)		(if the message passes this validation) stores it and constructs a
+response message that simply acknowledges receipt.<br>
+	(c)		subsequently passes the message to the application, which:<br>
+		(1)		creates a response message, or<br>
+		(2)		creates an error message, or<br>
+		(3)		creates a reject message<br>
+	(d)		The protocol software sends the response, error, or reject message to the
+initiating system as an unsolicited update with no value present in the Delayed
+Acknowledgement Type field. <br>
+The protocol software of the initiating system responds to the response, error,
+or reject message with simple acknowledgement and passes it to the initiating
+application.<br>
+The details follow.</p>
+
+<h4>
+<A NAME="Heading15">2.2.6.1 Initiation.  </A></h4>
+
+<p>The
+rules for creating the initial message are exactly as defined under
+"Application (Level 7) Processing Rules, Immediate Processing" on page
+II-<b>Fehler! Textmarke nicht definiert.</b>.</p>
+
+<h4>
+<A NAME="Heading16">2.2.6.2 Response:  </A></h4>
+
+<p>The
+processing in the responding system follows this pattern:<br>
+(a)	The protocol software accepts the message and 
+<a name="VALIDATE_RULES"></a>validates
+it against at least the following criteria:<br>
+<b>	1.</b>		The Message Type in the MSH segment is one that is acceptable to
+the receiver.<br>
+	2.		The Version ID in the MSH segment is acceptable to the receiver.<br>
+	3.		The Processing ID in the MSH segment is appropriate for the application
+process handling the message.<br>
+If any of these edits fail, the protocol software rejects the message.  That
+is, it creates an ACK message with 'AR' in the Acknowledgement Code.<br>
+(b)	If the message passes the edits, the protocol software stores it and a
+generates a response message of type ACK.  The MSA segment of the response
+message should contain "AA" in the Acknowledgement Code field and "D" in the
+Delayed Acknowledgement Type field.<br>
+(c)	Subsequently the protocol software passes the message to the application,
+which performs one of these functions:<br>
+	1.		Processes the message successfully, generating the functional response
+message (message type MCF).  The MSA segment of the response message should
+contain AA in the Acknowledgement Code.  <br>
+	- OR -<br>
+	2.		Creates an error response, providing error information in functional
+segments to be included in the response message.  The MSA segment of the
+response should contain AE in the Acknowledgement Code. <br>
+-	OR -<br>
+	3.		Fails to process (rejects) the message for reasons unrelated to its
+content or format (system down, internal error, etc.)  For most such problems
+it is likely that the responding system will be able to accept the same message
+at a later time.  The implementors must decide on an application-specific basis
+whether the message should be automatically sent again. The MSA segment of the
+response message should contain AR in the Acknowledgement Code.  <br>
+(d)	The application passes the message to the protocol software, which
+constructs a message of type MCF with "F" in the Delayed Acknowledgement Type
+field.<br>
+(e)	the protocol software passes the message to the initiating system as an
+unsolicited update<br>
+(f)	the protocol software in the initiating system passes the response message
+to the initiating application and generates a simple ACK message.  No value is
+present in the Delayed Acknowledgement Type field.<br>
+All other values are put in the MSA segment as described in "Application (Level
+7) Processing Rules, Immediate Processing" on Page II-<b>Fehler! Textmarke
+nicht definiert.</b>.
+<a name="ENCOD_RULE_SEC"></a></p>
+
+<h2>
+<A NAME="Heading17">2.3 MESSAGE ENCODING RULES </A></h2>
+
+<p><br>
+In previous sections HL7 messages were defined as abstract sequences of
+segments.  To construct the actual sequence of bytes that represents an
+abstract message one must apply encoding rules.  Any set of rules may be used
+by site agreement and the systems at the site will be considered in conformance
+with HL7 at the level of the abstract message.  This section describes one
+particular set, the HL7 encoding rules.  Systems that follow these rules are
+compatible with HL7 at the Encoding Rules level.  <br>
+The encoding rules describe how each segment is constructed and some related
+processing logic.  Constructing the segments in sequence creates a complete HL7
+message.</p>
+
+<h3>
+<A NAME="Heading18">2.3.1 Definitions</A></h3>
+
+<p><br>
+In constructing a message certain special characters are used.  They are the
+segment terminator, the field separator, the component separator, subcomponent
+separator and the repetition separator.</p>
+
+<h3>
+<A NAME="Heading19">2.3.2 Segment Terminator.  </A></h3>
+
+<p>The
+segment terminator is the last character of every segment. It is always the
+ASCII CR character (hex 0D).</p>
+
+<h4>
+<A NAME="Heading20">2.3.2.1 Field Separator. </A></h4>
+
+<p>
+The field separator separates two adjacent data fields within a segment. It
+also separates the segment ID from the first data field in the segment.  The
+value that represents the field separator may be defined differently for each
+message.  Whatever character is the fourth character of the MSH segment serves
+as the field separator for all segments in the message.  Absent other
+considerations, it is recommended that all sending applications use '|' as the
+field separator.  However, all receiving applications are required to accept
+whatever character is included in this position and use it to parse the message.</p>
+
+<h4>
+<A NAME="Heading21">2.3.2.2 Component Separator. </A></h4>
+
+<p>The
+component separator is used to separate adjacent components of some data
+fields.  Its use is described in the descriptions of the relevant data fields.
+The character that represents the component separator is specified for each
+message as the first character in the Encoding Characters data field of the MSH
+segment.  Absent other considerations it is recommended that all sending
+applications use '^' as the component separator.  However, all applications are
+required to accept whatever character is included in the Message Header and use
+it to parse the message.</p>
+
+<h4>
+<A NAME="Heading22">2.3.2.3 Sub-Component Separator.  </A></h4>
+
+<p>The
+sub-component separator is used to separate adjacent sub-components of some
+data fields.  Its use is described in the descriptions of the relevant data
+fields.  The character that represents the sub-component separator is specified
+for each message as the fourth character in the Encoding Characters data field
+of the MSH segment.  Absent other considerations it is recommended that all
+sending applications use '&amp;' as the sub-component separator.  However, all
+applications are required to accept whatever character is included in the
+Message Header and use it to parse the message.</p>
+
+<h4>
+<A NAME="Heading23">2.3.2.4 Repetition Separator.  </A></h4>
+
+<p>The
+repetition separator is used in some data fields to separate multiple
+occurrences of a field.  It is used only where specifically authorized in the
+descriptions of the relevant data fields. The character that represents the
+repetition separator is specified for each message as the second character in
+the Encoding Characters data field of the MSH segment.  Absent other
+considerations it is recommended that all sending applications use '~' as the
+repetition separator.  However, all applications are required to accept
+whatever character is included in the Message Header and use it to parse the
+message.</p>
+
+<h4>
+<A NAME="Heading24">2.3.2.5 Escape Character.  </A></h4>
+
+<p>In
+text fields (Type TX or FT) another special character is allowed, the escape
+character.  Any character allowed in a TX or FT field may serve as the escape
+character.  Its use is described in the discussion on coding text fields,
+below.  The single character that represents the escape character is specified
+differently for each message as the third character in the Encoding Characters
+data field of the MSH segment.  This field is optional.  Applications that do
+not need to use an escape character may omit this character.  Absent other
+considerations it is recommended that all sending applications use '\' as the
+escape character.  However, all applications are required to accept whatever
+character is included in this field and use it to parse text fields within the
+message.<br>
+<b>2.3.2.  <u>Message Construction Rules</u></b><br>
+1)	Construct the segments in the order defined for the message.  Each message
+is constructed as follows:<br>
+	a)		The first 3 characters are the segment id code.<br>
+	b)		Each data field in sequence is inserted in the segment in the following
+manner:<br>
+		i)		A field separator is placed in the segment.<br>
+		ii)		If the value is 'not present', no further characters are required.<br>
+		iii)		If the value is present, but null, the characters '""' (two consecutive
+double quotation marks) are placed in the field.<br>
+		iv)		Otherwise, place the characters of the value in the segment.  As many
+characters can be included as the maximum defined for data field.  It is not
+necessary, and is undesirable, to pad fields to fixed lengths.  Padding to
+fixed lengths is permitted.<br>
+				Encode the individual data fields as shown in "Encoding HL7 Data Types,"
+below.<br>
+		v)		If the field definition calls for a field to be broken into components,
+the following rules are used:<br>
+			(a)		If more than one component is included they are separated by the
+component separator.  <br>
+			(b)		components that are present but null are represented by the characters
+"".<br>
+			(c)		components that are not present are treated by including no characters
+in the component.<br>
+			(d)		components that are not present at the end of a field need not be
+represented by component separators.  For example, the two data fields are
+equivalent:<br>
+						|ABC^DEF^^| and |ABC^DEF|.<br>
+		vi)		If the component definition calls for a component to be broken into
+sub-components, the following rules are used:<br>
+			(a)		If more than one sub-component is included they are separated by the
+sub-component separator.  <br>
+			(b)		sub-components that are present but null are represented by the
+characters "".<br>
+			(c)		sub-components that are not present are treated by including no
+characters in the sub-component.<br>
+			(d)		sub-components that are not present at the end of a component need not
+be represented by sub-component separators.  For example, the two data
+components are equivalent:<br>
+						^XXX&amp;YYY&amp;&amp;^ and ^XXX&amp;YYY^.<br>
+		vii)		If the field definition permits repetition of a field, the following
+rules are used, the repetition separator is used only if more than one
+occurrence is transmitted and is placed <u>between</u> occurrences.  (If three
+occurrences are transmitted, two repetition separators are used.)  In the
+example below, two occurrences of telephone number are being sent:<br>
+					|234-7120~599-1288B1234|			<br>
+	c)		Repeat step (b) while there are any data elements 'present' to be sent.
+If all the data fields remaining in the segment definition are "not present"
+there is no requirement to include any more delimiters.<br>
+	d)		End each segment with an ASCII carriage return character.<br>
+2)	Repeat step (1) until all segments have been generated.<br>
+The following rules apply to receiving HL7 messages and converting their
+contents to data values:<br>
+1)	Ignore segments, fields, components, and extra repetitions of a field that
+are present but were not expected.<br>
+2)	Treat segments that were expected but are not present as consisting entirely
+of fields that are "not present."<br>
+3)	Treat fields and components that are expected but were not included in a
+segment as "not present."<br>
+4)	In applications that cannot deal with the distinction between data fields
+that are not present and those that are null, treat data fields that are not
+present as null.<br>
+Encoding rules notes:<br>
+If a segment is to be continued across messages, use the extended encoding
+rules given below. These rules are defined in terms of the more general message
+continuation protocol (described below and in Chapter V).</p>
+
+<h3>
+<A NAME="Heading25">2.3.3 Encoding HL7 Data Types</A></h3>
+
+<p></p>
+
+<h4>
+<A NAME="Heading26">2.3.3.1 ST  String data.  </A></h4>
+
+<p>String
+data is left justified with trailing blanks optional.  Example:		|almost any
+data at all|TX  Text data.  <br>
+Leading spaces should be included.  Trailing spaces should be removed.  See the
+discussion below on the use of escape sequences in text fields.  Example:		|
+leading spaces are allowed.|<br>
+FT  Formatted text data. <br>
+Differences from text data are: field is of arbitrary length, and contains
+formatting commands enclosed in escape characters.  Example:<br>
+		|\.sp\(skip one vertical line)|<br>
+For additional examples of formatting commands see "Escape Sequences in Text
+Fields," below.</p>
+
+<h4>
+<A NAME="Heading27">2.3.3.2 NM  Numeric.  </A></h4>
+
+<p>Represent
+as a series of ASCII characters consisting of an optional leading sign ("+" or
+"-"), the digits and 0 or 1 decimal point.  Examples:<br>
+		|999|<br>
+		|-123.792|<br>
+Leading zeros, or trailing zeros after a decimal point, are not significant.
+The two values "01.20" and "1.2" are identical.</p>
+
+<h4>
+<A NAME="Heading28">2.3.3.3 DT  Date.  </A></h4>
+
+<p>Always
+in the format YYYYMMDD.  Example:<br>
+		|19880704|</p>
+
+<h4>
+<A NAME="Heading29">2.3.3.4 TM  Time.  </A></h4>
+
+<p>Always
+in the format HHMM[SS][+/-ZZZZ] using a 24 hour clock notation.  The seconds
+designation (SS) is optional.  If not present it will be interpreted as 00.
+The time zone (+/-ZZZZ) is optional. If not otherwise specified it is local
+time zone of the sender.  Midnight is represented as 0000.  Examples:<br>
+|235959+1130|	1 second before midnight in a time zone eleven and half hours
+ahead of Universal Coordinated Time (i.e., east of Greenwich).<br>
+|0800|	eight AM, local time of the sender.</p>
+
+<h4>
+<A NAME="Heading30">2.3.3.5 TS  Time stamp.  </A></h4>
+
+<p>Always
+in the format<br>
+		YYYYMMDDHHMM[SS][+/ZZZZ].  <br>
+The seconds designation (SS) is optional.   If not present it will be
+interpreted as 00.  The time zone (+/-ZZZZ) is optional. If it is present
+either the "+" or the "-" sign must be included, but not both.  Midnight is
+represented as the time 0000 combined with the date of the day that is just
+beginning.  The maximum length of a TS field is 19 characters.<br>
+Examples:<br>
+|17760704010159-0600|	1:01:59 on July 4, 1776 in the Eastern Standard Time
+zone.<br>
+|17760704010159-0500|	1:01:59 on July 4, 1776 in the Eastern Daylight Saving
+Time zone.<br>
+|198807050000|	Midnight of the night extending from July 4 to July 5, 1988 in
+the local time zone of the sender. </p>
+
+<h4>
+<A NAME="Heading31">2.3.3.6 PN  Person Name.  </A></h4>
+
+<p>Specified
+as multiple free text components: family name, given name, middle initial or
+name, suffix (e.g., JR or III), prefix (e.g., DR), and degree (e.g., MD).  The
+maximum length of a PN field is 48 characters including component separators.
+<br>
+The sending system may send upper and lower case or all upper case.  The
+receiving system may convert to all upper case if required.  Example:<br>
+|SMITH^JOHN^J^""^DR^PHD|	(note that the suffix is explicitly null rather than
+"not present.")</p>
+
+<h4>
+<A NAME="Heading32">2.3.3.7 TN  Telephone Number. </A></h4>
+
+<p>For
+use in the United States and conforming countries, the telephone number is
+always in the form:		[NN] [(999)]999-9999[X99999][B99999][C any text]<br>
+The optional first two digits are the country code.  The optional 'X' portion
+gives an extension.  The optional 'B' portion gives a beeper code.  The
+optional 'C' portion may be used for comments like "After 6:00."  While no
+explicit limit is placed on the text field, receiving systems may be expected
+to truncate values that are more than 10 characters long.  Examples: <br>
+		|(415)925-0121X305|<br>
+		|234-4532CWEEKENDS|</p>
+
+<h4>
+<A NAME="Heading33">2.3.3.8 AD  Address.  </A></h4>
+
+<p>Has
+the following components separated by the component separator: street address,
+other designation, city, state or province, zip, country.  For use within the
+United States, state or province should be represented by the official US
+Postal service two-letter codes.  For use within the United States, zip takes
+the form 99999[-9999].  For use within the United States, the country code is
+assumed to be USA if null.  Example:<br>
+		|10 ASH LN^#3^LIMA^OH^48132^""^|</p>
+
+<h4>
+<A NAME="Heading34">2.3.3.9 ID  Coded Value.  </A></h4>
+
+<p>In
+the form of an ST field.SI  Sequence ID.  <br>
+In the form of an NM field.Composite fields. <br>
+Composite fields are encoded as described in step (v), above.  The following
+examples of specifically defined composite types are included.<br>
+CK	Composite ID with check digit: |128952^6^M11|<br>
+CN	Composite ID number and name:<br>
+		|12372^RIGGINS^JOHN^""^MD|<br>
+		|12372|<br>
+		|^RIGGINS^JOHN^""^MD|<br>
+CQ	Composite quantity with units: |123.7^ML|<br>
+CE	Coded element <br>
+		|54.21^Laparoscopy^I9C^42112^^AS4|</p>
+
+<h3>
+<A NAME="Heading35">2.3.4 Use of Escape Sequences in Text Fields</A></h3>
+
+<p></p>
+
+<h4>
+<A NAME="Heading36">2.3.4.1 Formatting Codes.  </A></h4>
+
+<p>When
+a field of type TX is being encoded, the escape character may be used to signal
+certain special characteristics of portions of the text field.  The escape
+character is whatever display ASCII character is specified in the Escape
+Character Field in the MSH segment.  For purposes of this section, the
+character '\' will be used to represent the character so designated in a
+message.  An <u>escape sequence</u> consists of the escape character followed
+by an escape code id of one character followed by 0 or more data characters
+followed by another occurrence of the escape character.  The following escape
+sequences are defined:<br>
+\H\	start highlighting<br>
+\N\	normal text (end highlighting)<br>
+\F\	field separator<br>
+\S\	component separator<br>
+\T\	subcomponent separator<br>
+\R\	repetition separator<br>
+\E\	escape character<br>
+\Xdddd\	hexadecimal data<br>
+\Zdddd\	locally defined escape sequence</p>
+
+<h4>
+<A NAME="Heading37">2.3.4.2 Highlighting.  </A></h4>
+
+<p>In
+designating highlighting, the sending application is indicating that the
+characters that follow somehow should be made to standout, but leaving the
+method of doing so to the receiving application. Depending on device
+characteristics and application style considerations, the receiving application
+may choose reverse video, boldface, underlining, blink, an alternate color or
+another means of highlighting the displayed data. For example the message
+fragment:<br>
+DSP|     TOTAL CHOLESTEROL    \H\240*\N\   [90 - 200]<br>
+might cause the following data to appear on a screen or report:<br>
+        TOTAL CHOLESTEROL        <b>240*</b>    [90 - 200]<br>
+whereas another system may choose to show the "240*" in red.</p>
+
+<h4>
+<A NAME="Heading38">2.3.4.3 Special Character.  </A></h4>
+
+<p>The
+special character escape sequences (\F\, \S\, \R\, \T\, and \E\) allow the
+corresponding characters to be included in the data in a text field, though the
+actual characters are reserved. For example, the message fragment<br>
+DSP|	TOTAL CHOLESTEROL     180  \F\90 - 200\F\<br>
+DSP|	\S\----------------\S\<br>
+would cause the following information to be displayed, given suitable
+assignment of separators:<br>
+TOTAL CHOLESTEROL     180  |90 - 200|<br>
+^---------------^</p>
+
+<h4>
+<A NAME="Heading39">2.3.4.4 Hexadecimal.  </A></h4>
+
+<p>When
+the hexadecimal escape sequence (\Xdddd\) is used the "X" should be followed by
+1 or more pairs of hexadecimal digits (0, 1,  . . . , 9, A,  . . . , F).
+Consecutive pairs of the hexadecimal digits represent 8-bit binary values.  The
+interpretation of the data is entirely left to an agreement between the sending
+and receiving applications that is beyond the scope of this Standard.</p>
+
+<h4>
+<A NAME="Heading40">2.3.4.5 Formatted Text.  </A></h4>
+
+<p>If
+the field is of the formatted text (FT) data type, formatting commands also may
+be surrounded by the escape character. Each command begins with the "."
+character. The following formatting commands are available:<br>
+.sp &lt;number&gt;	End current output line and skip &lt;number&gt; vertical
+spaces. &lt;number&gt; is a positive integer or absent. If &lt;number&gt; is
+absent, skip one space.<br>
+.br	Begin new output line.<br>
+.fi	Begin word wrap or fill mode. This is the default state.  It can be changed
+to a no-wrap mode using the ".nf" command.<br>
+.nf	Begin no-wrap mode.<br>
+.in &lt;number&gt;	Indent &lt;number&gt; of spaces, where &lt;number&gt; is a
+positive or negative integer.<br>
+.ti &lt;number&gt;	Temporarily indent &lt;number&gt; of spaces where number is
+a positive or negative integer.<br>
+.ce			End current output line and center the next line.<br>
+The component separator that marks each line defines the extent of the
+temporary indent command (.ti), and the beginning of each line in the no-wrap
+mode (.nf).  Examples of formatting instructions that are NOT included in this
+data type include:  width of display, position on page or screen, and type of
+output devices.<br>
+Figure II-4 is an example of the FT data type from a radiology impression
+section of a radiology report:<br>
+|\.in+4\\.ti-4\ 1. The cardio mediastinal silhouette<br>
+is now within normal limits.^\.sp\\.ti-4\ 2. Lung<br>
+fields show minimal ground gl<tt>a</tt>ss appearance.^<br>
+\.sp\\.ti-4\ 3. A loop of colon visible in the left<br>
+upper quadrant is distinctly abnormal with the<br>
+appearance of mucosal effacement suggesting colitis.<br>
+\.in-4\|<br>
+	<b>Figure II-4.  Formatted Text as transmitted.</b><br>
+Figure II-5 shows one way of presenting the data in Figure II-4.  The receiving
+system can create many other interpretations by varying the right margin.  <br>
+1.The cardio mediastinal silhouette is now within normal limits.<br>
+2.Lung fields show minimal ground glass appearance.<br>
+3.A loop of colon visible in the left upper quadrant is distinctly abnormal
+with the appearance of mucosal effacement suggesting colitis.<br>
+			<b>Figure II-5.  Formatted text in one possible presentation.</b></p>
+
+<h4>
+<A NAME="Heading41">2.3.4.6 Local.  </A></h4>
+
+<p>When
+the local escape sequence (\Zdddd\) is used the "Z" should be followed by
+characters that are valid in a TX field.  The interpretation of the data is
+entirely left to an agreement between the sending and receiving applications
+that is beyond the scope of this Standard.  <br>
+No escape sequence may contain a nested escape sequence. </p>
+
+<h3>
+<A NAME="Heading42">2.3.5 HL7 Protocol Variants</A></h3>
+
+<p><br>
+This section contains several extensions to the basic HL7 message protocol.
+These extensions represent implementation choices, and are to be used on a
+site-specific and application-specific basis as needed.</p>
+
+<h4>
+<A NAME="Heading43">2.3.5.1 Sequence Number Protocol.  </A></h4>
+
+<p>For
+certain types of data transactions between systems the issue of keeping
+databases synchronized is critical.  An example is an ancillary system such as
+lab, which needs to know the locations of all inpatients to route stat results
+correctly.  If the lab receives an ADT transaction out of sequence, the
+census/location information may be incorrect.  Although it is true that a
+simple one-to-one acknowledgement scheme can prevent out-of-sequence
+transactions between any two systems, only the use of sequence numbers can
+prevent duplicate transactions.  Note that although this sequence number
+protocol is limited to the use of sequence numbers on a single transaction
+stream between two applications, this sequencing protocol is sufficiently
+robust to allow the design of HL7-compatible store-and-forward applications.<br>
+a.	Definitions, initial conditions:<br>
+	i.		The system receiving the data stream is expected to store the sequence
+number of the most recently accepted transaction in a secure fashion before
+acknowledging that transaction. This stored sequence number allows comparison
+with the next transaction's sequence number, and the implementation of
+fault-tolerant restart capabilities.<br>
+	ii.		The initiating system keeps a queue of outgoing transactions indexed by
+the sequence number.  The length of this queue must be negotiated as part of
+the design process for a given link. The minimum length for this queue is
+one.<br>
+	iii.		The sequence number is a positive (non-zero) integer; and it is
+incremented by one (by the initiating system) for each successive transaction.
+<br>
+b.	Starting the link:<br>
+	i.		The value of 0 (zero) for a sequence number is reserved: it is allowed
+only when the initiating system (re-)starts the link.<br>
+	ii.		If the receiving system gets a transaction with a 0 in the sequence
+number field, it should respond with a general acknowledgement message whose
+MSA contains a sequence number one greater than the sequence number of the last
+transaction it accepted in the Expected Sequence Number field. If this value
+does not exist (as on the first startup of a given link), the MSA should
+contain a sequence number of -1, meaning that the receiving system will use the
+positive, non-zero sequence number of the first transaction it accepts as its
+initial sequence number (see resynching the link, item 'e' below). <br>
+	iii.		The initiating system then sends the transaction indexed by the expected
+sequence number (if that expected transaction is still on its queue).
+Otherwise the link is frozen until an operator intervenes.<br>
+c.	Normal operation of the link:<br>
+As it accepts each transaction, the receiving system securely stores the
+sequence number (which agrees with its Expected Sequence Number), and then
+acknowledges the message by echoing the sequence number in the Expected
+Sequence Number field of the MSA.<br>
+d.	Error conditions (from point of view of initiating system). These are
+generated by the receiving system, by its comparison of the Sequence Number
+(sent out with the MSH) with the Expected Sequence Number (received with the
+MSA).<br>
+	i.		Expected sequence number is one greater than current value.<br>
+The previous acknowledgement was lost. That transaction was sent again.
+Correct by sending next transaction.<br>
+	ii.		Expected sequence number less than current value. <br>
+Initiating system can try starting again by issuing a transaction with a
+sequence number of zero; or freeze the link for operator intervention.<br>
+	iii.		Other errors: freeze the link for operator intervention.<br>
+e.	Forcing resynchronization of sequence numbers across the link.  The value of
+-1 for a sequence number is reserved: it is allowed only when the initiating
+system is resynching the link.  Thus if the receiving system gets a value of -1
+in the sequence number field, it should return a general acknowledgement
+message with a  -1 in the expected sequence number field.  The receiving system
+then resets its sequence number, using the non-zero positive sequence number of
+the next transaction it accepts.<br>
+f.	Notes.<br>
+When the initiating system sends a message with a sequence number of <b>0</b>
+or <b>-1</b> (see b or e above), the segments beyond the MSH need not be
+present in the message, or, if present, all fields can be null.  In terms of
+the responding system, for these two cases, only a General Acknowledgement
+message is needed.</p>
+
+<h4>
+<A NAME="Heading44">2.3.5.2 Continuation messages and segments.  </A></h4>
+
+<p>See
+Chapter V for a discussion of the continuation pointer segment and the
+continuation pointer field, and their use in the continuation of responses to
+queries and in the continuation of unsolicited update messages.<br>
+Besides the need to continue a message, there are occasional implementation
+conditions that force the continuation of a segment across messages.  Such
+continued segments require the use of the ADD segment as follows:<br>
+a.	The segment being continued (call it "ANY" for this example) is ended at an
+arbitrary character position and terminated with the Standard segment
+terminator (carriage return).<br>
+b.	The following segment is the ADD segment.  When it follows a segment being
+continued, the ADD segment contains no fields.  Whether the message being
+continued is a response to a query, or an unsolicited update, the receiving
+system will use the continuation pointer (with the ADD segment) to continue the
+message.<br>
+c.	When a response (to a query) is continued, the first segment after the QRD
+and QRF (on a continued query) will be the ADD segment.  All the fields after
+the ADD segment identifier (fields 1-N) will be the continuation of the "ANY"
+segment.  The receiving system will then use the continuation pointer to join
+the two parts of the "ANY" segment and continue processing the message.<br>
+d.	For the continuation of an unsolicited update message, the ADD segment will
+be the first segment after the MSH segment.  The receiving system will use the
+continuation pointer field in the MSH segment to identify the message being
+continued, and then use the ADD segment as described in (c) to join the two
+parts of the "ANY" segment.<br>
+e.	Limitations: MSH, MSA, DSC, PID, QRD, QRF, URD and URS segments cannot be
+continued. <br>
+f.	Although the UU example given below is for a display message, there is
+nothing in the protocol to prevent a record-oriented UU from being continued in
+this fashion.  In the unsolicited display message, the ADD record on the
+continuation comes just after the URD/[URS] pair instead of directly after the
+MSH.<br>
+g.	Transaction flow for a continued query-response pair with an ADD segment:<br>
+	i)		First query, response:<br>
+MSH<br>
+QRD<br>
+[QRF]<br>
+MSH<br>
+MSA<br>
+QRD<br>
+[QRF]<br>
+    {  DSP  }	last DSP segment is<br>
+.	incomplete; it is<br>
+ADD	followed by the ADD<br>
+.	segment, which contains<br>
+.	no fields.<br>
+DSC<br>
+	ii)		Second query, response:<br>
+MSH<br>
+QRD<br>
+[QRF]<br>
+DSC<br>
+MSH<br>
+MSA<br>
+QRD<br>
+[QRF]<br>
+ADD	ADD contains remainder of<br>
+.	last DSP segment of<br>
+.	previous response.<br>
+   {DSP}	Remaining DSP segments are complete.<br>
+Note that this second response could itself be continued with a second DSC and
+(if needed) a second ADD segment prior to it.<br>
+f. 	Transaction flow for a continued unsolicited message with a continued
+segment.<br>
+	i)		First unsolicited message, acknowledgement:<br>
+MSH<br>
+URD<br>
+[ URS ]<br>
+   {DSP}	Last DSP is incomplete.<br>
+ADD	It is followed by the ADD<br>
+	segment, which contains<br>
+.	no fields.<br>
+.<br>
+DSC	Continuation segment<br>
+MSH	General Acknowledgement<br>
+MSA<br>
+	ii)		Second unsolicited message, acknowledgement: <br>
+MSH	Contains continuation<br>
+.	pointer from DSC segment<br>
+.	of prior message.<br>
+ADD	ADD contains remainder of<br>
+ .	data from continued DSP<br>
+.	segment from prior<br>
+.	message.<br>
+   {DSP}<br>
+DSC<br>
+Note that this second message could itself be continued with a second DSC and
+(if needed) a second ADD segment prior to it.<br>
+MSH	General Acknowledgement<br>
+MSA			
+<a name="BATCH_PROTOCOL"></a></p>
+
+<h3>
+<A NAME="Heading45">2.3.6 HL7 Batch Protocol</A></h3>
+
+<p><br>
+There are instances when it is convenient to transfer a batch of HL7 messages.
+Common examples would be a batch of financial posting detail transactions
+(DFT's) sent from an ancillary to a financial system. Such a batch could be
+sent online using a common file transfer protocol, or offline via tape or
+diskette.</p>
+
+<h4>
+<A NAME="Heading46">2.3.6.1 Structure of an HL7 batch file.</A></h4>
+
+<p><br>
+	[FHS]				(file header segment)<br>
+		{ [BHS]			(batch header segment)<br>
+			{ MSH		(one or more HL7 messages)<br>
+			....<br>
+			....	<br>
+			....<br>
+			}<br>
+		[BTS]			(batch trailer segment)<br>
+		}<br>
+	[FTS]				(file trailer segment)<br>
+Notes:<br>
+The sequence numbering protocol has a natural application in batch transfers.
+See the discussion of batch acknowledgements that follows.<br>
+Although a batch will usually consist of a single type of message, there is
+nothing in the definition that restricts a batch to only one message type.</p>
+
+<h4>
+<A NAME="Heading47">2.3.6.2 Related Segments and Data Usage.  </A></h4>
+
+<p>The
+following segments defined in Section 38 relate to the HL7 Batch Protocol:	BHS
+Batch Header<br>
+	BTS		Batch Trailer<br>
+	FHS		File Header<br>
+	FTS		File Trailer<br>
+The BTS segment contains a field, Batch Totals, which may have one or more
+totals drawn from fields within the individual messages.  The method for
+computing such totals will be determined on a site or application basis unless
+explicitly stated in a functional chapter.</p>
+
+<h4>
+<A NAME="Heading48">2.3.6.3 Acknowledging Batches.  </A></h4>
+
+<p>In
+general, the utility of sending batches of data is that the data is accepted
+all-at-once, with errors processed on an exception basis.  However, it is a
+permissible application of HL7 to acknowledge all messages.  Several options
+for acknowledgement are given and will be chosen on an application basis. In
+these cases, the sequence numbering protocol can be useful to the applications
+processing the batch.<br>
+The options are:<br>
+a.	All messages are acknowledged in the response batch.<br>
+b.	The receiving system prints some form of batch control report, which is then
+dealt with manually by personnel at the sending system.  No acknowledgements
+are performed by the protocol software.<br>
+c.	an automated acknowledgement batch is created containing acknowledgement
+messages only for those messages containing errors.<br>
+In each case where there is a response batch, its format is a batch of
+individual messages.  Each individual message is in the format defined for an
+on-line response in the chapters.  Consider, for example, a batch that might be
+constructed to respond to a batch of Detailed Financial Transactions (Chapter
+VI).  The messages in the response batch would consist entirely of ACK
+messages, since ACK is the response shown in Chapter VI.<br>
+When batches are retransmitted after the correction of errors, the Ref Batch
+Control Id field should contain the Batch Control Id of the original batch.</p>
+
+<h2>
+<A NAME="Heading49">2.4 CONTROL MESSAGES</A></h2>
+
+
+<h3>
+<A NAME="Heading50">2.4.1 ACK: General Acknowledgement</A></h3>
+
+<p><br>
+The ACK message is used to respond to a message where there has been an error
+that precludes application processing or where the application does not define
+a special message type for the response.  Its structure is normally given in
+the chapters that use it. <br>
+Where a simple ACK message is required it has the following structure:<br>
+<tt><u>ACK	General Acknowledgement	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgement	II</tt><br>
+<tt>[ ERR ]	Error		II</tt></p>
+
+<h3>
+<A NAME="Heading51">2.4.2 MCF: Delayed acknowledgement</A></h3>
+
+<p><br>
+The first MCF message, sent after the initial receipt has the following
+structure.<br>
+<tt><u>MCF	General Acknowledgement	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgement	II</tt><br>
+The second MCF message, sent after application processing, has this
+structure:<br>
+<tt><u>MCF	General Acknowledgement	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgent	II</tt><br>
+<tt>[ ERR ]	Error		II
+<a name="MESSAGE_SEGMENTS"></a></tt></p>
+
+<h2>
+<A NAME="Heading52">2.5 MESSAGE CONTROL SEGMENTS</A></h2>
+
+<p></p>
+
+<h3>
+<A NAME="Heading53">2.5.1 ADD - ADDENDUM</A></h3>
+
+<p>
+<br>
+The ADD segment is used to define the continuation of the prior segment in a
+continuation message. See section C for details. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00641</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ADDENDUM
+CONTINUATION POINTER
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Fortsetzungszeiger</p>
+<BR></TD></TR></TABLE><p><br>
+ <br>
+FIELD NOTES: ADD ADDENDUM <br>
+ <br>
+1.	00641 ADDENDUM CONTINUATION POINTER  This segment is used to define the
+continuation of the prior segment in a continuation message. See text for
+details When the ADD is sent after the segment being continued, it  contains no
+fields. It is only a "marker" that the previous  segment is being continued in
+a subsequent message.  Thus  fields "1-N" are not present.  The sequence
+designation, "1-N", means "the remainder of the fields in the segment being
+continued".  These "remainder-of-the-segment-being-continued" fields are
+present only when the ADD is sent with a continuation message. </p>
+
+<h3>
+<A NAME="Heading54">2.5.2 BHS - BATCH HEADER -    Stapeldatei - Kopfsegment</A></h3>
+
+<p>
+<br>
+The BHS segment defines the start of a batch. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00685</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+FIELD SEPARATOR 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Feldtrennzeichen</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00686</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+ENCODING CHARACTERS
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Weitere
+Trennzeichen
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00687</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+SENDING APPLICATION
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Sendender
+Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00688</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+SENDING FACILITY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Sendende
+Einrichtung innerh. Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00689</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+RECEIVING APPLICATION
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Empfangender
+Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00690</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+RECEIVING FACILITY
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Empfangende
+Einrichtung innerhalb Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TS</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00655</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+CREATION DATE/TIME
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Zeitpunkt-
+Batcherstellung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00691</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+SECURITY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Sicherheitsspezifikationen</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00656</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+NAME/ID/TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Name/ID/Type</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00657</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+COMMENT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kommentar</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00658</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+CONTROL ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kontrollnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00659</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>REFERENCE
+BATCH CONTROL ID
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Referenzkontrollnummer</p>
+<BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: BHS BATCH HEADER <br>
+ <br>
+1.	00685 BATCH FIELD SEPARATOR. This field has the same definition as the
+corresponding field in the MSH segment. <br>
+2.	00686 BATCH ENCODING CHARACTERS. This field has the same definition as the
+corresponding field in the MSH segment. <br>
+3.	00687 BATCH SENDING APPLICATION.  This field has the same definition as the
+corresponding field in the MSH segment. <br>
+4.	00688 BATCH SENDING FACILITY. This field has the same definition as the
+corresponding field in the MSH segment. <br>
+5.	00689 BATCH RECEIVING APPLICATION. This field has the same definition as the
+corresponding field in the MSH segment. <br>
+6.	00690 BATCH RECEIVING FACILITY.  This field has the same definition as the
+corresponding field in the MSH segment. <br>
+7.	00655 BATCH CREATION DATE/TIME <br>
+8.	00691 BATCH SECURITY.  This field has the same definition as the
+corresponding field in the MSH segment. <br>
+9.	00656 BATCH NAME/ID/TYPE.  This field can be used by the application
+processing the batch. It can have extra components if needed. <br>
+10.	00657 BATCH COMMENT.  A comment field that is not further defined in the
+HL7 protocol. <br>
+11.	00658 BATCH CONTROL ID. This field can be used to uniquely identify a
+particular Batch. It can be echoed back in the REF BATCH CONTROL ID field if an
+answering batch is needed. <br>
+12.	00659 REFERENCE BATCH CONTROL ID.  The value of BATCH CONTROL ID when this
+batch was originally transmitted. Not present if this batch is being sent for
+the first time. See note for BATCH CONTROL ID.</p>
+
+<h3>
+<A NAME="Heading55">2.5.3 BTS - BATCH TRAILER - Stapeldatei Folgesegment</A></h3>
+
+<p>
+<br>
+The BTS segment defines the end of a batch. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00664</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+MESSAGE COUNT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Anzahl
+gesendeter Nachrichten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00665</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+COMMENT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kommentar</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>100</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00666</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BATCH
+TOTALS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Gesamtzahl</p>
+<BR></TD></TR></TABLE><p><br>
+FIELD NOTES: BTS BATCH TRAILER <br>
+ <br>
+1.	00664 BATCH MESSAGE COUNT.  A count of the individual messages contained
+within the batch. <br>
+ <br>
+2.	00665 BATCH COMMENT.  A comment field that is not further defined in the HL7
+protocol. <br>
+ <br>
+3.	00666 BATCH TOTALS.  As many types of totals as needed for the batch may be
+carried by this field as separate components. </p>
+
+<h3>
+<A NAME="Heading56">2.5.4 ERR - ERROR -Fehler</A></h3>
+
+<p>
+<br>
+The ERR segment is used to add error comments to acknowledgment messages. <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>0060</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00080</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ERROR
+CODE AND LOCATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Fehlernummer
+und -ort
+</p>
+<BR></TD></TR></TABLE><p><tt>
+</tt><br>
+FIELD NOTES: ERR ERROR <br>
+ <br>
+1.	00080 ERROR CODE AND LOCATION.  Used to identify an erroneous segment in
+another message. Four components: the segment ID, the SEQUENCE ID the field
+position, and a code identifying the error.  For systems that do not use the
+HL7 Encoding Rules, the data item number may be used for the third component. </p>
+
+<h3>
+<A NAME="Heading57">2.5.5 FHS - FILE HEADER -File-Kopfsegment</A></h3>
+
+<p>
+<br>
+The FHS segment is used to head a file (group of batches) as defined in Section
+36. <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00692</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+FIELD SEPARATOR 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Feldtrennzeichen</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00693</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+ENCODING CHARACTERS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Weitere
+Trennzeichen
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00694</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+SENDING APPLICATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Sendender
+Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00695</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+SENDING FACILITY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Sendende
+Einrichtung innerhalb Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00696</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+RECEIVING APPLICATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Empfangender
+Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00697</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+RECEIVING FACILITY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Empfangende
+Einrichtung innerhalb Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TS</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00660</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DATE/TIME
+OF FILE CREATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Zeitpunkt
+Fileerstellung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00698</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+SECURITY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Sicherheitsspezifikation</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00661</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+NAME/ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Name/ID</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00662</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+HEADER COMMENT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kommentar</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00663</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+CONTROL ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kontrollnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00768</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>REFERENCE
+FILE CONTROL ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Referenzkontrollnummer</p>
+<BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: FHS FILE HEADER <br>
+ <br>
+1.	00692 FILE FIELD SEPARATOR. This field has the same definition as the
+corresponding field in the MSH segment. <br>
+ <br>
+2.	00693 FILE ENCODING CHARACTERS.  This field has the same definition as the
+corresponding field in the MSH segment. <br>
+ <br>
+3.	00694 FILE SENDING APPLICATION.  This field has the same definition as the
+corresponding field in the MSH segment. <br>
+ <br>
+4.	00695 FILE SENDING FACILITY.  This field has the same definition as the
+corresponding field in the MSH segment. <br>
+ <br>
+5.	00696 FILE RECEIVING APPLICATION.  This field has the same definition as the
+corresponding field in the MSH segment. <br>
+ <br>
+6.	00697 FILE RECEIVING FACILITY.  This field has the same definition as the
+corresponding field in the MSH segment. <br>
+ <br>
+7.	00660 DATE/TIME OF FILE CREATION.  This field has the same definition as the
+corresponding field in the MSH segment. <br>
+ <br>
+8.	00698 FILE SECURITY.  This field has the same definition as the
+corresponding field in the MSH segment. <br>
+ <br>
+9.	00661 FILE NAME/ID.  This field can be user by the application processing
+file. Its use is not further specified. <br>
+ <br>
+10.	00662 FILE HEADER COMMENT.  A free text field, the use of which is not
+further specified. <br>
+ <br>
+11.	00663 FILE CONTROL ID.  This field is used to identify a particular file
+uniquely. It can be echoed back in the REFERENCE FILE CONTROL ID field of the
+FTS segment. <br>
+ <br>
+12.	00768 REFERENCE FILE CONTROL ID.  The value of FILE CONTROL ID when this
+file was originally transmitted. Not present if this file is being transmitted
+for the first time. </p>
+
+<h3>
+<A NAME="Heading58">2.5.6 FTS - FILE TRAILER -File-Folgesegment</A></h3>
+
+<p>
+<br>
+The FTS segment defines the end of a file. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00667</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+BATCH COUNT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Anzahl
+gesendeter Stapeldateien
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00668</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILE
+TRAILER COMMENT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kommentar</p>
+<BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: FTS FILE TRAILER <br>
+ <br>
+1.	00667 FILE BATCH COUNT.  This field contains the number of batches contained
+in this file. <br>
+ <br>
+2.	00668 FILE TRAILER COMMENT </p>
+
+<h3>
+<A NAME="Heading59">2.5.7 MSA - MESSAGE ACKNOWLEDGMENT -Best&auml;tigung einer Nachricht</A></h3>
+
+<p>The
+MSA segment contains information sent while acknowledging another message. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0008</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00002</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ACKNOWLEDGMENT
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Best&auml;tigungscode</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00003</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>MESSAGE
+CONTROL ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Nachrichtenkontrollnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00004</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TEXT
+MESSAGE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Text
+f&uuml;r Fehlermeldung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00598</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>EXPECTED
+SEQUENCE NUMBER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Erwartete
+Folgenummer
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0102</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00632</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DELAYED
+ACKNOWLEDGMENT TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Best&auml;tigung
+mit Zeitversatz
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: MSA MESSAGE ACKNOWLEDGMENT <br>
+ <br>
+1.	00002 ACKNOWLEDGMENT CODE.  See message processing rules. <br>
+<center>TABLE 0008	ACKNOWLEDGMENT CODE </center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>AA</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Application
+Accept 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>akzeptiert
+durch Anwendung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>AE</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Application
+Error 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Fehler
+bei &Uuml;bertragung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>AR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Application
+Reject 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Abgelehnt
+durch Anwendung
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+2.	00003 MESSAGE CONTROL ID.  This is the ID of the message sent by the sending
+system. It allows the sending system to associate this response with the
+message for which it is intended. <br>
+ <br>
+3.	00004 TEXT MESSAGE.  An optional text field that further describes an error
+condition. This text may be printed in error logs or presented to an end user.
+<br>
+ <br>
+4.	00598 EXPECTED SEQUENCE NUMBER.  An optional numeric field used in the
+sequence number. <br>
+ <br>
+5.	00632 DELAYED ACKNOWLEDGMENT TYPE.  Used only in the MCF messages as
+described above, under "Application (Level 7) Processing Rules, Deferred
+response".  Otherwise this field is not present. <br>
+<center>TABLE 0102   DELAYED ACKNOWLEDGMENT TYPE </center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>D</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Message
+Received, stored for later processing 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Nachricht
+erhalten,zur Bearb. gespeichert
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Acknowledgment
+after processing 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Best&auml;tigung
+nach der Bearbeitung
+</p>
+<BR></TD></TR></TABLE>
+<h3>
+<A NAME="Heading60">2.5.8 MSH - MESSAGE HEADER- Nachrichtenkopf</A></h3>
+
+<p>
+<br>
+The MSH segment defines the intent, source, destination, and some specifics of
+the syntax of a message. <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00005</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FIELD
+SEPARATOR 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Feldtrennzeichen</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00509</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ENCODING
+CHARACTERS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Weitere
+Trennzeichen
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00006</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SENDING
+APPLICATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Sendender
+Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00512</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SENDING
+FACILITY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Sendende
+Einrichtung innerhalb Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00009</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RECEIVING
+APPLICATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Empfangender
+Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>30</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00513</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RECEIVING
+FACILITY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Empfangende
+Einrichtung innerhalb Bereich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TS</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00010</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DATE/TIME
+OF MESSAGE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Zeitpunkt
+Nachrichtenerstellung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00008</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SECURITY
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Sicherheitsspezifikation</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0076</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00012</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>MESSAGE
+TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Nachrichtentyp</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00013</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>MESSAGE
+CONTROL ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Nachrichtenkontrollnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0103</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00014</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PROCESSING
+ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Verarbeitungsstatus</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0104</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00015</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>VERSION
+ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Versionsnummer
+von HL7
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>13</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00633</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SEQUENCE
+NUMBER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Folgenummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>14</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>180</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00699</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CONTINUATION
+POINTER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Fortsetzungszeiger</p>
+<BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: MSH MESSAGE HEADER <br>
+ <br>
+1.	00005 FIELD SEPARATOR.  This is actually the separator between the segment
+ID and the first real field, the ENCODING CHARACTERS.  As such it serves as the
+separator and defines the character to be used as a separator for the rest of
+the message.  Recommended value is "|". <br>
+ <br>
+2.	00509 ENCODING CHARACTERS.  The four characters are the component separator,
+the repetition separator and the escape character, and sub- component
+separator. Recommended values are "^~\&amp;". See HL7 Encoding Rules, above.
+<br>
+ <br>
+3.	00006 SENDING APPLICATION.  This field is available for interface with lower
+level protocols. <br>
+ <br>
+4.	00512 SENDING FACILITY.  Used to address one of several occurrences of the
+same application within the sending system.  Absent other considerations, the
+Medicare Provider ID might be used with an appropriate sub-identifier in the
+second component. Entirely site-defined. <br>
+ <br>
+5.	00009 RECEIVING APPLICATION.  This field is available for interface with
+lower level protocols. <br>
+ <br>
+6.	00513 RECEIVING FACILITY.  Used to identify the receiving application among
+multiple identical instances of the application running on behalf of different
+organizations. See comments: SENDING FACILITY.<br>
+ <br>
+7.	00010 DATE/TIME OF MESSAGE.  The date/time that the sending system created
+the message. <br>
+ <br>
+8.	00008 SECURITY.  In some applications of HL-7 this field will be used to
+implement security features. Its use is not yet further specified. <br>
+ <br>
+9.	00012 MESSAGE TYPE.  First component is the message type edited by table
+0076; second is the trigger event code edited by table 0003. Receiving system
+uses this field to know the data segments to recognize, and, possibly, the
+application to which to route this message. <br>
+<center>TABLE 0076   MESSAGE TYPE - Nachrichtentyp</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>OWNER</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>CHAPTER</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>ACK</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>General
+Acknowledgment
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>CNT</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>II
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Empfangsbest&auml;tigung</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>ADT</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>ADT
+Message
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>ADT</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>III</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Aufnahme/Entlassung/Verlegung</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>ARD</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Ancillary
+RPT (display)
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>ANR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>VII
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Befundbericht</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>BAR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Add/change
+billing account
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>BLN</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>VI
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Rechnungs&auml;nderung</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>DFT</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Detail
+financial transaction
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>BLN</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>VI
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Detaillierte
+Leistungs&uuml;bermittlung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>DSR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Display
+response
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>QRY</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>V</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Angezeigte
+Antwort
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>MCF</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Delayed
+acknowledgment
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>CNT</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>II
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Verz&ouml;gerte
+Empfangsbest&auml;tigung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>OCF</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+confirmation
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>ORD</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>IV</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftragsbest&auml;tigung</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>ORF</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Observ.
+Result/record resp.
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>ANR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>VII
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Untersuchungsergebnisse</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>ORM</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>ORD</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>IV</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>ORR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+response message
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>ORD</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>IV
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftragsantwort</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>ORU</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Observ.
+result/unsolicited
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>ANR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>VII
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Nicht
+angeforderte Beobachtungsergebnisse
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>OSQ</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+status query
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>ORD</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>IV</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Anfrage
+nach Auftragsstatus
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>QRY</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Query</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>QRY</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>V</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Anfrage</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>UDM</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unsolicited
+display
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>QRY</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>V</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Nicht
+angeforderte Anzeige
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+10.	00013 MESSAGE CONTROL ID.  A number or other identifier that uniquely
+identifies the message. The receiving system echoes this ID back to the sending
+system in the MESSAGE ACKNOWLEDGMENT. <br>
+ <br>
+11.	00014 PROCESSING ID.  Used to decide whether to process the message as
+defined in HL7 "Application (LEVEL 7) Processing rules," above. <br>
+<center>TABLE 0103   PROCESSING ID - Verarbeitungsstatus</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>D</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Debugging
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Test</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>P</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Production
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Routine</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Training
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Schulung</p>
+<BR></TD></TR></TABLE><p>
+<br>
+12.	00015 VERSION ID.  Matched by the receiving system to its own version to be
+sure the message will be interpreted correctly. <br>
+<center>TABLE 0104   VERSION CONTROL TABLE - Versionstabelle </center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>2.0</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Release
+2.0  September 1988 
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>2.0D</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Demo
+   2.0  October 1988 
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>2.1</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Release
+2.1  March 1990 
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+13.	00633 SEQUENCE NUMBER.  A non-null value in this field implies that the
+sequence number protocol is in use. This numeric field incremented by one for
+each subsequent value. <br>
+ <br>
+14.	00699 CONTINUATION POINTER.  Used to define continuations in
+application-specific ways.  </p>
+
+<h3>
+<A NAME="Heading61">2.5.9 NTE - NOTES AND COMMENTS -Bemerkungen und Kommentare</A></h3>
+
+<p>
+<br>
+The NTE segment is defined here for inclusion in messages <br>
+defined in other chapters. It is a common format for sending <br>
+notes and comments. <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SI</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00573</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SET
+ID &Auml; NOTES AND COMMENTS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Transaktionsnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0105</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00574</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SOURCE
+OF COMMENT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Herkunft
+des Kommmentares
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>120</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TX</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00575</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>COMMENT
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kommentar</p>
+<BR></TD></TR></TABLE><p><br>
+<tt> </tt><br>
+1.	00573 SET ID - NOTES AND COMMENTS.  May be used where multiple NTE segments
+are included in a message. Their numbering must be described in the application
+message definition. <br>
+ <br>
+2.	00574 SOURCE OF COMMENT.  Used when source of comment must be identified.
+<br>
+<center>TABLE 0105   SOURCE OF COMMENT - 	Herkunft des Kommentars</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>L</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Ancillary
+department is source of comment 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Leistungsstelle</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>P</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Orderer
+is source of comment 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Anfordernde
+Stelle
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+3.	00575 COMMENT.  The comment contained in the segment. </p>
+
+<h2>
+<A NAME="Heading62">2.6 SAMPLE CONTROL MESSAGES</A></h2>
+
+<p></p>
+
+<h3>
+<A NAME="Heading63">2.6.1 Simple Acknowledgement</A></h3>
+
+<p><br>
+LAB acknowledges the message that ADT sent identified as ZZ9380.  (LAB and ADT,
+the sending and receiving system ids, are site-defined.)  Both systems are
+associated with the same FACILITY, 767543.  There is no trigger event for an
+acknowledgement, so the second component of the MESSAGE TYPE field is not
+present.  The component separator may be present there, but need not be.  The
+AA code in the MSA segment indicates that the message was accepted by the
+application.<br>
+<tt>MSH|^~\&amp;|LAB|767543|ADT|767543|19900314130405</tt><br>
+<tt>	||ACK^|XX3657|P|2.1&lt;CR&gt;</tt><br>
+<tt>MSA|AA|ZZ9380&lt;CR&gt;</tt></p>
+
+<h3>
+<A NAME="Heading64">2.6.2 Error Return</A></h3>
+
+<p><br>
+The AR code in MSA indicates that the application rejected the message for
+functional reasons.  The optional ERR segment includes here that the 16th field
+of the PID segment with the SET ID value of 1 had an error which was defined by
+the locally-established code X3L.  The optional text message UNKNOWN COUNTY
+CODE in the link is designed to help programmers and support personnel while
+reviewing message logs.<br>
+<tt>MSH|^~\&amp;|LAB|767543|ADT|767543|199003141304-0500</tt><br>
+<tt>	||ACK^|XX3657|P|2.1&lt;CR&gt;</tt><br>
+<tt>MSA|AR|ZZ9380|UNKNOWN COUNTY CODE&lt;CR&gt;</tt><br>
+<tt>ERR|PIC^1^16^X3L&lt;CR&gt;</tt></p>
+
+<h3>
+<A NAME="Heading65">2.6.3 Sequence Number:  Initial Message</A></h3>
+
+<p><br>
+The sender initiates the link with a message that has no functional content.
+The sequence number is 0. The message type and event code are not used.<br>
+<tt>MSH|^~\&amp;|ADT|767543|LAB|767543|199003141304-0500</tt><br>
+<tt>	||^|XX3657|P|2.1|0&lt;CR&gt;</tt><br>
+The responder uses a general acknowledgement.  The expected sequence number is
+1.<br>
+<tt>MSH|^~\&amp;|LAB|767543|ADT|767543|199003141304-0500</tt><br>
+<tt>	||ACK^|ZZ9380|P|2.1&lt;CR&gt;</tt><br>
+<tt>MSA|AA|XX3657||1&lt;CR&gt;
+</tt></p>
+</body></html>

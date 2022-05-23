@@ -1,0 +1,5866 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.1</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std21/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.1
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.1</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v21datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Data Element-Definition:
+
+</H2>
+<A NAME = "00002">
+<br>
+<h2>00002: ACKNOWLEDGMENT CODE</h2>
+Description: Best&auml;tigungscode<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSA.htm">MSA</A>
+</DD>
+<A NAME = "00003">
+<br>
+<h2>00003: MESSAGE CONTROL ID</h2>
+Description: Nachrichtenkontrollnummer<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSA.htm">MSA</A>
+</DD>
+<A NAME = "00004">
+<br>
+<h2>00004: TEXT MESSAGE</h2>
+Description: Text f&uuml;r Fehlermeldung<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSA.htm">MSA</A>
+</DD>
+<A NAME = "00005">
+<br>
+<h2>00005: FIELD SEPARATOR</h2>
+Description: Feldtrennzeichen<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00006">
+<br>
+<h2>00006: SENDING APPLICATION</h2>
+Description: sendender Bereich<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00008">
+<br>
+<h2>00008: Security</h2>
+Description: Sicherheitsspezifikation<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00009">
+<br>
+<h2>00009: RECEIVING APPLICATION</h2>
+Description: empfangender Bereich<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00010">
+<br>
+<h2>00010: DATE/TIME OF MESSAGE</h2>
+Description: Zeitpunkt Nachrichtenerstellung<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00012">
+<br>
+<h2>00012: MESSAGE TYPE</h2>
+Description: Nachrichtentyp<BR>
+Length: ..7<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00013">
+<br>
+<h2>00013: MESSAGE CONTROL ID</h2>
+Description: Nachrichtenkontrollnummer<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00014">
+<br>
+<h2>00014: PROCESSING ID</h2>
+Description: Verarbeitungsstatus<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00015">
+<br>
+<h2>00015: VERSION ID</h2>
+Description: Versionsnummer von HL7<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00020">
+<br>
+<h2>00020: PATIENT ADDRESS</h2>
+Description: Adresse des Patienten<BR>
+Length: ..106<BR>
+Data Structure: <A HREF = "hl7v21typAD.htm#AD">AD</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00026">
+<br>
+<h2>00026: COUNTY CODE</h2>
+Description: Gemeindekennziffer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00029">
+<br>
+<h2>00029: EVENT TYPE CODE</h2>
+Description: Code des Ereignistyps<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmEVN.htm">EVN</A>
+</DD>
+<A NAME = "00030">
+<br>
+<h2>00030: DATE/TIME OF EVENT</h2>
+Description: Zeitpunkt des Ereignisses<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmEVN.htm">EVN</A>
+</DD>
+<A NAME = "00032">
+<br>
+<h2>00032: DATE/TIME PLANNED EVENT</h2>
+Description: Zeitpunkt des geplanten Ereignisses<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmEVN.htm">EVN</A>
+</DD>
+<A NAME = "00034">
+<br>
+<h2>00034: PATIENT ID INTERNAL (INTERNAL ID)</h2>
+Description: interne (lokale Pat.-ID)<BR>
+Length: ..16<BR>
+Data Structure: <A HREF = "hl7v21typCK.htm#CK">CK</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00035">
+<br>
+<h2>00035: PATIENT ACCOUNT NUMBER</h2>
+Description: Debitorenkontonummer<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typCK.htm#CK">CK</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00038">
+<br>
+<h2>00038: ALTERNATE PATIENT ID</h2>
+Description: Fallnummer<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00041">
+<br>
+<h2>00041: PATIENT NAME</h2>
+Description: Patientenname<BR>
+Length: ..48<BR>
+Data Structure: <A HREF = "hl7v21typPN.htm#PN">PN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00042">
+<br>
+<h2>00042: SEX</h2>
+Description: Geschlecht<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00043">
+<br>
+<h2>00043: DATE OF BIRTH</h2>
+Description: Geburtsdatum<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00044">
+<br>
+<h2>00044: ETHNIC GROUP</h2>
+Description: entf&auml;llt<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00045">
+<br>
+<h2>00045: RELIGION</h2>
+Description: Religion<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00046">
+<br>
+<h2>00046: MARITAL STATUS</h2>
+Description: Familienstand<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00047">
+<br>
+<h2>00047: NEXT OF KIN RELATIONSHIP</h2>
+Description: Beziehung/Verwandschaftsverh&auml;ltnis zum zu Benachrichtigenden<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNK1.htm">NK1</A>
+</DD>
+<A NAME = "00048">
+<br>
+<h2>00048: NEXT OF KIN NAME</h2>
+Description: Name des zu Benachrichtigenden<BR>
+Length: ..48<BR>
+Data Structure: <A HREF = "hl7v21typPN.htm#PN">PN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNK1.htm">NK1</A>
+</DD>
+<A NAME = "00049">
+<br>
+<h2>00049: PHONE NUMBER - HOME</h2>
+Description: private Telefonnummer des Patienten<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typTN.htm#TN">TN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00050">
+<br>
+<h2>00050: PHONE NUMBER - BUSINESS</h2>
+Description: Telefonnummer (dienstlich)<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typTN.htm#TN">TN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00052">
+<br>
+<h2>00052: PATIENT CLASS</h2>
+Description: Patientenstatus<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00053">
+<br>
+<h2>00053: ASSIGNED PATIENT LOCATION</h2>
+Description: zugewiesener Aufenthaltsort<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00056">
+<br>
+<h2>00056: PRIOR PATIENT LOCATION</h2>
+Description: vorheriger Aufenthaltsort (bei Verlegung)<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00057">
+<br>
+<h2>00057: ATTENDING DOCTOR</h2>
+Description: behandelnder Arzt<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00059">
+<br>
+<h2>00059: HOSPITAL SERVICE</h2>
+Description: Art der vorgesehenen Behandlung<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00060">
+<br>
+<h2>00060: TEMPORARY LOCATION</h2>
+Description: vor&uuml;gergeh. Aufenthaltsort d.Pat.im Krh.<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00063">
+<br>
+<h2>00063: ADMIT SOURCE</h2>
+Description: einweisende Einrichtung<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00064">
+<br>
+<h2>00064: AMBULATORY STATUS</h2>
+Description: med. Zustand bzw. Einschr&auml;nkung<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00066">
+<br>
+<h2>00066: WHEN TO CHARGE</h2>
+Description: Abrechnungszeitpunkt<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBLG.htm">BLG</A>
+</DD>
+<A NAME = "00068">
+<br>
+<h2>00068: STOCK LOCATION</h2>
+Description: Lagerort<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORO.htm">ORO</A>
+</DD>
+<A NAME = "00080">
+<br>
+<h2>00080: ERROR CODE AND LOCATION</h2>
+Description: Fehlernummer und -ort<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmERR.htm">ERR</A>
+</DD>
+<A NAME = "00120">
+<br>
+<h2>00120: SUBSTITUTE ALLOWED</h2>
+Description: Substitution erlaubt<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORO.htm">ORO</A>
+</DD>
+<A NAME = "00129">
+<br>
+<h2>00129: ROUTE</h2>
+Description: Applikationsweg<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00130">
+<br>
+<h2>00130: SITE ADMINISTERED</h2>
+Description: Applikationsort<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00131">
+<br>
+<h2>00131: IV SOLUTION RATE</h2>
+Description: IV-Infusionsrate<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typCQ.htm#CQ">CQ</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00133">
+<br>
+<h2>00133: DRUG STRENGTH</h2>
+Description: Arzneimitteldosierung pro Einheit<BR>
+Length: ..14<BR>
+Data Structure: <A HREF = "hl7v21typCQ.htm#CQ">CQ</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00135">
+<br>
+<h2>00135: DRUG DOSE</h2>
+Description: Arzneitmittelgesamtdosis<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00137">
+<br>
+<h2>00137: FINAL CONCENTRATION</h2>
+Description: Endkonzentration in der Infusionsl&ouml;sung<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00138">
+<br>
+<h2>00138: FINAL VOLUME IN ML.</h2>
+Description: Endvolumen in Milliliter<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00139">
+<br>
+<h2>00139: DRUG ROLE</h2>
+Description: Arzneitmittelfunktion<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00153">
+<br>
+<h2>00153: DATA LINE</h2>
+Description: Datenzeile<BR>
+Length: ..300<BR>
+Data Structure: <A HREF = "hl7v21typTX.htm#TX">TX</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDSP.htm">DSP</A>
+</DD>
+<A NAME = "00154">
+<br>
+<h2>00154: LOGICAL BREAK POINT</h2>
+Description: Logische Trennmarke<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDSP.htm">DSP</A>
+</DD>
+<A NAME = "00156">
+<br>
+<h2>00156: QUERY DATE/TIME</h2>
+Description: Abfrage Datum/zeit<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00158">
+<br>
+<h2>00158: QUERY FORMAT CODE</h2>
+Description: Abfrage Format Code<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00159">
+<br>
+<h2>00159: QUERY PRIORITY</h2>
+Description: Abfrage Priorit&auml;t<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00160">
+<br>
+<h2>00160: QUERY ID</h2>
+Description: Abfrage ID<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00161">
+<br>
+<h2>00161: DEFERRED RESPONSE TYPE</h2>
+Description: zeitverz&ouml;gerter Antworttyp<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00162">
+<br>
+<h2>00162: DEFERRED RESPONSE DATE/TIME</h2>
+Description: zeitverz&ouml;gerter Antwortdatum<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00164">
+<br>
+<h2>00164: QUANTITY LIMITED REQUEST</h2>
+Description: maximale L&auml;nge<BR>
+Length: ..5<BR>
+Data Structure: <A HREF = "hl7v21typCQ.htm#CQ">CQ</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00167">
+<br>
+<h2>00167: CONTINUATION POINTER</h2>
+Description: Fortsetzungszeiger<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDSC.htm">DSC</A>
+</DD>
+<A NAME = "00168">
+<br>
+<h2>00168: WHO SUBJECT FILTER</h2>
+Description: Abfrage Objekt<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00169">
+<br>
+<h2>00169: WHAT SUBJECT FILTER</h2>
+Description: Abfrage Inhalt<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00170">
+<br>
+<h2>00170: WHAT DEPARTMENT DATA CODE</h2>
+Description: Abfrage Merkmals-Code<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00171">
+<br>
+<h2>00171: WHAT DATA CODE VALUE QUAL.</h2>
+Description: Merkmalsgrenzen<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00173">
+<br>
+<h2>00173: WHERE SUBJECT FILTER</h2>
+Description: Abfrage Adressat<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRF.htm">QRF</A>
+</DD>
+<A NAME = "00174">
+<br>
+<h2>00174: WHEN DATA START DATE/TIME</h2>
+Description: Anfangszeitpunkt<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRF.htm">QRF</A>
+</DD>
+<A NAME = "00176">
+<br>
+<h2>00176: WHEN DATA END DATE/TIME</h2>
+Description: Endezeitpunkt<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRF.htm">QRF</A>
+</DD>
+<A NAME = "00178">
+<br>
+<h2>00178: WHAT USER QUALIFIER</h2>
+Description: benutzerdefinierte Abfrage Spezifikation<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRF.htm">QRF</A>
+</DD>
+<A NAME = "00179">
+<br>
+<h2>00179: OTHER QRY SUBJECT FILTER</h2>
+Description: weitere Abfrgae-Thema Spezifikation<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRF.htm">QRF</A>
+</DD>
+<A NAME = "00182">
+<br>
+<h2>00182: ACCIDENT DATE/TIME</h2>
+Description: Unfallzeitpunkt<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmACC.htm">ACC</A>
+</DD>
+<A NAME = "00184">
+<br>
+<h2>00184: ACCIDENT CODE</h2>
+Description: Art des Unfalls<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmACC.htm">ACC</A>
+</DD>
+<A NAME = "00185">
+<br>
+<h2>00185: ACCIDENT LOCATION</h2>
+Description: Unfallort<BR>
+Length: ..25<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmACC.htm">ACC</A>
+</DD>
+<A NAME = "00189">
+<br>
+<h2>00189: ADMITTING DOCTOR</h2>
+Description: aufnehmender Arzt<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00191">
+<br>
+<h2>00191: PATIENT TYPE</h2>
+Description: Patiententyp (f&uuml;r evtl. einrichtungsspez. Angaben)<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00193">
+<br>
+<h2>00193: VIP INDICATOR</h2>
+Description: VIP Kennzeichen<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00194">
+<br>
+<h2>00194: VISIT NUMBER</h2>
+Description: eindeutige Nummer eines ambulanten Besuchs<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00195">
+<br>
+<h2>00195: FINANCIAL CLASS</h2>
+Description: Art der Kosten&uuml;bernahme<BR>
+Length: ..11<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00199">
+<br>
+<h2>00199: CHARGE PRICE INDICATOR</h2>
+Description: Unterbringungsart<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00200">
+<br>
+<h2>00200: CREDIT RATING</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00201">
+<br>
+<h2>00201: CONTRACT CODE</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00202">
+<br>
+<h2>00202: CONTRACT EFFECTIVE DATE</h2>
+Description: nicht verwendet<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00203">
+<br>
+<h2>00203: CONTRACT AMOUNT</h2>
+Description: nicht verwendet<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00204">
+<br>
+<h2>00204: CONTRACT PERIOD</h2>
+Description: nicht verwendet<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00205">
+<br>
+<h2>00205: TRANSFER TO BAD DEBT CODE</h2>
+Description: nicht verwendet<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00206">
+<br>
+<h2>00206: BAD DEBT AGENCY CODE</h2>
+Description: nicht verwendet<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00207">
+<br>
+<h2>00207: DELETE ACCOUNT INDICATOR</h2>
+Description: nicht verwendet<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00208">
+<br>
+<h2>00208: DELETE ACCOUNT DATE</h2>
+Description: nicht verwendet<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00218">
+<br>
+<h2>00218: ADMISSION TYPE</h2>
+Description: Aufnahmeart<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00219">
+<br>
+<h2>00219: PRE-ADMIT NUMBER</h2>
+Description: Vor-Aufnahmenummer<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00220">
+<br>
+<h2>00220: PRE-ADMIT TEST INDICATOR</h2>
+Description: Hinweis auf Untersuchungsprog.d, for der Aufn.d.Pat. durchzuf&uuml;hren sind<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00221">
+<br>
+<h2>00221: RE-ADMISSION INDICATOR</h2>
+Description: Kennzeichen, ob eine Wiederaufnahme vorliegt<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00225">
+<br>
+<h2>00225: NEXT OF KIN - ADDRESS</h2>
+Description: Adresse des zu Benachrichtigenden<BR>
+Length: ..106<BR>
+Data Structure: <A HREF = "hl7v21typAD.htm#AD">AD</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNK1.htm">NK1</A>
+</DD>
+<A NAME = "00230">
+<br>
+<h2>00230: NEXT OF KIN - PHONE NUMBER</h2>
+Description: Telefonnummer des zu Benachrichtigenden<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typTN.htm#TN">TN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNK1.htm">NK1</A>
+</DD>
+<A NAME = "00234">
+<br>
+<h2>00234: SET ID - INSURANCE</h2>
+Description: IN1-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00235">
+<br>
+<h2>00235: INSURANCE COMPANY ID</h2>
+Description: Institutionskennzeichen / Nummer des Kostentr&auml;gers<BR>
+Length: ..6<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00236">
+<br>
+<h2>00236: INSURANCE COMPANY NAME</h2>
+Description: Bezeichnung des Kostentr&auml;gers<BR>
+Length: ..45<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00237">
+<br>
+<h2>00237: INSURANCE COMPANY ADDRESS</h2>
+Description: Anschrift des Kostentr&auml;gers<BR>
+Length: ..106<BR>
+Data Structure: <A HREF = "hl7v21typAD.htm#AD">AD</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00242">
+<br>
+<h2>00242: INSURANCE CO. CONTACT PERS</h2>
+Description: Ansprechpartner beim Kostentr&auml;ger<BR>
+Length: ..48<BR>
+Data Structure: <A HREF = "hl7v21typPN.htm#PN">PN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00243">
+<br>
+<h2>00243: INSURANCE CO PHONE NUMBER</h2>
+Description: Telefonnummer des Kostentr&auml;gers<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typTN.htm#TN">TN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00248">
+<br>
+<h2>00248: GROUP NUMBER</h2>
+Description: Krankenkassentypnummer<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00249">
+<br>
+<h2>00249: GROUP NAME</h2>
+Description: Krankenkassentyp (Ersatzkasse, AOK, BKK, etc.)<BR>
+Length: ..35<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00250">
+<br>
+<h2>00250: INSURED'S GROUP EMP. ID</h2>
+Description: nicht verwendet<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00251">
+<br>
+<h2>00251: INSURED'S GROUP EMP. NAME</h2>
+Description: nicht verwendet<BR>
+Length: ..45<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00252">
+<br>
+<h2>00252: PLAN EFFECTIVE DATE</h2>
+Description: Kosten&uuml;bernahme ab<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00253">
+<br>
+<h2>00253: PLAN EXPIRATION DATE</h2>
+Description: Kosten&uuml;bernahme bis<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00254">
+<br>
+<h2>00254: AUTHORIZATION INFORMATION</h2>
+Description: Aktenzeichen der Kosten&uuml;bernahme<BR>
+Length: ..55<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00260">
+<br>
+<h2>00260: PLAN TYPE</h2>
+Description: nciht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00261">
+<br>
+<h2>00261: NAME OF INSURED</h2>
+Description: Name des Versicherungsnehmers<BR>
+Length: ..48<BR>
+Data Structure: <A HREF = "hl7v21typPN.htm#PN">PN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00262">
+<br>
+<h2>00262: INSURED'S RELATIONSHIP TO PATIENT</h2>
+Description: Beziehung des Versicherungsnehmers zum Patienten<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00263">
+<br>
+<h2>00263: ASSIGNMENT OF BENEFITS</h2>
+Description: Kennung, ob Rechnung an Krankenkasse<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00264">
+<br>
+<h2>00264: COORDINATION OF BENEFITS</h2>
+Description: Koordination mit anderen Vers.verh&auml;ltnissen<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00265">
+<br>
+<h2>00265: COORD OF BEN. PRIORITY</h2>
+Description: Rang dieses Versicherungsverh&auml;ltnisses<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00266">
+<br>
+<h2>00266: NOTICE OF ADMISSION CODE</h2>
+Description: Kennung, ob Aufnahmeanzeige an Krankenkasse<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00267">
+<br>
+<h2>00267: NOTICE OF ADMISSION DATE</h2>
+Description: Datum ,wann Aufnahmeanzeige verschickt<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00268">
+<br>
+<h2>00268: RPT OF ELIGIBILITY CODE</h2>
+Description: Kennung, ob schriftl. Kosten&uuml;bernahmeerkl&auml;rung erforderlich<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00269">
+<br>
+<h2>00269: RPT OF ELIGIBILITY DATE</h2>
+Description: Datum der schriftl. Kosten&uuml;bernahmeerkl&auml;rung<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00270">
+<br>
+<h2>00270: RELEASE INFORMATION CODE</h2>
+Description: evtl. f&uuml;r Datenschutzkennzeichen anwendbar<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00271">
+<br>
+<h2>00271: PRE-ADMIT CERT. (PAC)</h2>
+Description: Aktenzeichen Zustimmung zur Aufnahme des Patienten<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00272">
+<br>
+<h2>00272: VERIFICATION DATE</h2>
+Description: Datum der Kostensicherungspr&uuml;fung<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00273">
+<br>
+<h2>00273: VERIFICATION BY</h2>
+Description: &uuml;berpr&uuml;ft durch (Mitarbeiter-ID)<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00277">
+<br>
+<h2>00277: TYPE OF AGREEMENT CODE</h2>
+Description: verwendet f&uuml;r Tarife etc.<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00278">
+<br>
+<h2>00278: BILLING STATUS</h2>
+Description: Status der Rechnungsstellung<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00279">
+<br>
+<h2>00279: BLOOD DEDUCTIBLE</h2>
+Description: nicht verwendet<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00280">
+<br>
+<h2>00280: LIFETIME RESERVE DAYS</h2>
+Description: nicht verwendet<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00281">
+<br>
+<h2>00281: DELAY BEFORE L. R. DAY</h2>
+Description: nicht verwendet<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00282">
+<br>
+<h2>00282: COMPANY PLAN CODE</h2>
+Description: nicht verwendet<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00283">
+<br>
+<h2>00283: POLICY NUMBER</h2>
+Description: Versichertennummer/Vertragsnummer<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00284">
+<br>
+<h2>00284: POLICY DEDUCTIBLE</h2>
+Description: Eigenanteil<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00285">
+<br>
+<h2>00285: POLICY LIMIT - AMOUNT</h2>
+Description: H&ouml;chstbetrag, d.er von der Krankenkasse getragen wird<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00286">
+<br>
+<h2>00286: POLICY LIMIT - DAYS</h2>
+Description: Aufenthalt, der von der Krankenkasse getragen wird<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00287">
+<br>
+<h2>00287: ROOM RATE - SEMI-PRIVATE</h2>
+Description: Betrag garantierte Regelleistung<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00288">
+<br>
+<h2>00288: ROOM RATE - PRIVATE</h2>
+Description: Betrag Wahlleistung<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00293">
+<br>
+<h2>00293: DIAGNOSIS CODE</h2>
+Description: Diagnoseschl&uuml;ssel<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00294">
+<br>
+<h2>00294: DIAGNOSIS DESCRIPTION</h2>
+Description: Diagnosebeschreibung<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00295">
+<br>
+<h2>00295: DIAGNOSIS DATE/TIME</h2>
+Description: Zeitpunkt der Diagnoseerstellung<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00297">
+<br>
+<h2>00297: DIAGNOSIS/DRG TYPE</h2>
+Description: Diagnosetyp<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00298">
+<br>
+<h2>00298: MAJOR DIAGNOSTIC CATEGORY</h2>
+Description: nicht verwendet<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00299">
+<br>
+<h2>00299: DIAGNOSTIC RELATED GROUP</h2>
+Description: nicht verwendet<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00300">
+<br>
+<h2>00300: OUTLIER DAYS</h2>
+Description: nicht verwendet<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00304">
+<br>
+<h2>00304: SET ID - PROCEDURE</h2>
+Description: PR1-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00305">
+<br>
+<h2>00305: PROCEDURE CODE</h2>
+Description: MAﬂnahmen/operationsschl&uuml;ssel<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00306">
+<br>
+<h2>00306: PROCEDURE DESCRIPTION</h2>
+Description: Beschreibung der Maﬂnahme<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00307">
+<br>
+<h2>00307: PROCEDURE DATE/TIME</h2>
+Description: Zeitpunkt der Maﬂnahme<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00309">
+<br>
+<h2>00309: PROCEDURE TYPE</h2>
+Description: weitere Spezifikationen der Maﬂnahme<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00310">
+<br>
+<h2>00310: PROCEDURE MINUTES</h2>
+Description: Dauer der Maﬂnahme in Minuten<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00311">
+<br>
+<h2>00311: ANESTHESIOLOGIST</h2>
+Description: entf&auml;llt (nutze Feld 12)<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00313">
+<br>
+<h2>00313: ANESTHESIA CODE</h2>
+Description: An&auml;sthesieschl&uuml;ssel<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00314">
+<br>
+<h2>00314: ANESTHESIA MINUTES</h2>
+Description: Dauer der An&auml;sthesie in Minuten<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00315">
+<br>
+<h2>00315: SURGEON</h2>
+Description: entf&auml;llt (nutze Feld 12)<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00317">
+<br>
+<h2>00317: CONSENT CODE</h2>
+Description: Zustimmung des Patienten<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00318">
+<br>
+<h2>00318: RESIDENT CODE</h2>
+Description: Maﬂnahme durchgef&uuml;hrt von<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00321">
+<br>
+<h2>00321: SET ID - GUARANTOR</h2>
+Description: GT1-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00322">
+<br>
+<h2>00322: GUARANTOR NUMBER</h2>
+Description: Garantornummer des Patienten<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00323">
+<br>
+<h2>00323: GUARANTOR NAME</h2>
+Description: Garantorname<BR>
+Length: ..48<BR>
+Data Structure: <A HREF = "hl7v21typPN.htm#PN">PN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00324">
+<br>
+<h2>00324: GUARANTOR ADDRESS</h2>
+Description: Anschrift des G.<BR>
+Length: ..106<BR>
+Data Structure: <A HREF = "hl7v21typAD.htm#AD">AD</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00329">
+<br>
+<h2>00329: GUARANTOR PH. NUM.- HOME</h2>
+Description: Telefonnummer des G. privat<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typTN.htm#TN">TN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00330">
+<br>
+<h2>00330: GUARANTOR PH. NUM-BUSINESS</h2>
+Description: Telefunnummer des G. beruflich<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typTN.htm#TN">TN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00331">
+<br>
+<h2>00331: GUARANTOR DATE OF BIRTH</h2>
+Description: Geburtsname des G.<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00332">
+<br>
+<h2>00332: GUARANTOR SEX</h2>
+Description: Geschlecht d. Garantors<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00333">
+<br>
+<h2>00333: GUARANTOR TYPE</h2>
+Description: Garantortyp<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00334">
+<br>
+<h2>00334: GUARANTOR RELATIONSHIP</h2>
+Description: Verh&auml;ltnis zum Patienten<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00335">
+<br>
+<h2>00335: GUARANTOR SSN</h2>
+Description: Sozialversicherungsnummer des G.<BR>
+Length: ..11<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00338">
+<br>
+<h2>00338: GUARANTOR DATE - BEGIN</h2>
+Description: Beginn der Kosten&uuml;bernahme durch d. Versicherten<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00339">
+<br>
+<h2>00339: GUARANTOR DATE - END</h2>
+Description: Ende der Kosten&uuml;bernahme durch d. Versicherten<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00340">
+<br>
+<h2>00340: GUARANTOR PRIORITY</h2>
+Description: Rangfolge d. Garantoren<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00341">
+<br>
+<h2>00341: GUARANTOR EMPLOYER NAME</h2>
+Description: Name des Arbeitgebers<BR>
+Length: ..45<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00342">
+<br>
+<h2>00342: GUARANTOR EMPLOYER ADDRESS</h2>
+Description: Anschrift des Arbeitsgebers<BR>
+Length: ..106<BR>
+Data Structure: <A HREF = "hl7v21typAD.htm#AD">AD</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00347">
+<br>
+<h2>00347: GUARANTOR EMPLOY PHONE #</h2>
+Description: Telefonnummer des Arbeitgebers<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typTN.htm#TN">TN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00351">
+<br>
+<h2>00351: TRANSACTION DATE</h2>
+Description: Beleg/Leistungsdatum<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00352">
+<br>
+<h2>00352: TRANSACTION POSTING DATE</h2>
+Description: Buchungsdatum<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00353">
+<br>
+<h2>00353: TRANSACTION TYPE</h2>
+Description: Buchungscode<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00354">
+<br>
+<h2>00354: TRANSACTION CODE</h2>
+Description: Leistungsziffer (Ger&auml;teziffer) /Satzart<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00355">
+<br>
+<h2>00355: DEPARTMENT CODE</h2>
+Description: Kostenstelle<BR>
+Length: ..16<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00356">
+<br>
+<h2>00356: TRANSACTION DESCRIPTION</h2>
+Description: Buchungstext<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00357">
+<br>
+<h2>00357: TRANSACTION QUANTITY</h2>
+Description: Betrag (Summe)<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00358">
+<br>
+<h2>00358: TRANSACTION AMOUNT - EXTENDED</h2>
+Description: Anzahld er LEistungen/Posnr.<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00359">
+<br>
+<h2>00359: INSURANCE PLAN ID</h2>
+Description: Kostenverteilungsplan / Sachkontonr.<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00360">
+<br>
+<h2>00360: INSURANCE AMOUNT</h2>
+Description: Betrg der den Rechnugnsempf. zuzuordnen ist<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00361">
+<br>
+<h2>00361: PATIENT LOCATION</h2>
+Description: aktueller Aufenthaltsort<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00362">
+<br>
+<h2>00362: FEE SCHEDULE</h2>
+Description: Geb&uuml;hrentabelle f. Leistungsziffer<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00363">
+<br>
+<h2>00363: PATIENT TYPE</h2>
+Description: Abrechnungskennzeichen<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00364">
+<br>
+<h2>00364: DIAGNOSIS CODE</h2>
+Description: Diagnoseschl&uuml;ssel<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00366">
+<br>
+<h2>00366: TRANSACTION ID</h2>
+Description: Buchungsnummer/Beleg-Nr.<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00369">
+<br>
+<h2>00369: EVENT REASON CODE</h2>
+Description: Grund f.das Ausl&ouml;sen des Ereignissses<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmEVN.htm">EVN</A>
+</DD>
+<A NAME = "00373">
+<br>
+<h2>00373: DRG APPROVAL INDICATOR</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00374">
+<br>
+<h2>00374: DRG GROUPER REVIEW CODE</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00375">
+<br>
+<h2>00375: OUTLIER TYPE</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00376">
+<br>
+<h2>00376: OUTLIER COST</h2>
+Description: nicht verwendet<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00377">
+<br>
+<h2>00377: PERFORMED BY CODE</h2>
+Description: erbringende Kostenstelle<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00378">
+<br>
+<h2>00378: INSURANCE PLAN ID</h2>
+Description: Kosten&uuml;bernahmeplan<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00386">
+<br>
+<h2>00386: COURTESY CODE</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00387">
+<br>
+<h2>00387: INTEREST CODE</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00388">
+<br>
+<h2>00388: TRANSFER TO BAD DEBT DATE</h2>
+Description: nicht verwendet<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00389">
+<br>
+<h2>00389: BAD DEBT TRANSFER AMOUNT</h2>
+Description: nicht verwendet<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00390">
+<br>
+<h2>00390: BAD DEBT RECOVERY AMOUNT</h2>
+Description: nicht verwendet<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00391">
+<br>
+<h2>00391: GUARANTOR EMPLOYEE ID NUM</h2>
+Description: ID des Arbeitgebers<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00392">
+<br>
+<h2>00392: GUARANTOR EMPLOYMENT STATUS</h2>
+Description: Status<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00393">
+<br>
+<h2>00393: PROCEDURE CODING METHOD.</h2>
+Description: Schl&uuml;sselsystem f&uuml;r diagnostische und therapeutische Maﬂnahmen<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPR1.htm">PR1</A>
+</DD>
+<A NAME = "00394">
+<br>
+<h2>00394: DIAGNOSIS CODING METHOD</h2>
+Description: Diagnoseschl&uuml;sselsystem<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00396">
+<br>
+<h2>00396: BLOOD FURN.-PINTS OF (40)</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00397">
+<br>
+<h2>00397: BLOOD REPLACED-PINTS (41)</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00398">
+<br>
+<h2>00398: BLOOD NOT RPLCD-PINTS(42)</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00399">
+<br>
+<h2>00399: CO-INSURANCE DAYS (25)</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00400">
+<br>
+<h2>00400: CONDITION CODE</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00405">
+<br>
+<h2>00405: COVERED DAYS - (23)</h2>
+Description: nicht verwendet<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00406">
+<br>
+<h2>00406: NON COVERED DAYS - (24)</h2>
+Description: nicht verwendet<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00407">
+<br>
+<h2>00407: VALUE AMOUNT & CODE</h2>
+Description: nicht verwendet<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00424">
+<br>
+<h2>00424: NUMBER OF GRACE DAYS (90)</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00425">
+<br>
+<h2>00425: SPEC. PROG. INDICATOR(44)</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00426">
+<br>
+<h2>00426: PSRO/UR APPROVAL IND. (87)</h2>
+Description: nicht verwendet<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00427">
+<br>
+<h2>00427: PSRO/UR APRVD STAY-FM(88)</h2>
+Description: nicht verwendet<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00428">
+<br>
+<h2>00428: PSRO/UR APRVD STAY-TO(89)</h2>
+Description: nicht verwendet<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00429">
+<br>
+<h2>00429: OCCURRENCE (28-32)</h2>
+Description: nicht verwendet<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00435">
+<br>
+<h2>00435: OCCURRENCE SPAN (33)</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00446">
+<br>
+<h2>00446: OCCURRENCE SPAN START DATE(33)</h2>
+Description: nicht verwendet<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00447">
+<br>
+<h2>00447: OCCUR. SPAN END DATE (33)</h2>
+Description: nicht verwendet<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00448">
+<br>
+<h2>00448: UB-82 LOCATOR 2</h2>
+Description: nicht verwendet<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00449">
+<br>
+<h2>00449: UB-82 LOCATOR 9</h2>
+Description: nicht verwendet<BR>
+Length: ..7<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00450">
+<br>
+<h2>00450: UB-82 LOCATOR 27</h2>
+Description: nicht verwendet<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00451">
+<br>
+<h2>00451: UB-82 LOCATOR 45</h2>
+Description: nicht verwendet<BR>
+Length: ..17<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00453">
+<br>
+<h2>00453: DRIVER'S LIC NUM - PATIENT</h2>
+Description: entf&auml;llt<BR>
+Length: ..25<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00457">
+<br>
+<h2>00457: SSN NUMBER - PATIENT</h2>
+Description: Sozialvesicherungsnummer<BR>
+Length: ..16<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00458">
+<br>
+<h2>00458: SET ID - PATIENT VISIT</h2>
+Description: PV1-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00459">
+<br>
+<h2>00459: SET ID - UB82</h2>
+Description: Bluttransfusions-Seement in Deutschland nicht ben&ouml;tigt<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmUB1.htm">UB1</A>
+</DD>
+<A NAME = "00464">
+<br>
+<h2>00464: LANGUAGE - PATIENT</h2>
+Description: Muttersprache des Patienten<BR>
+Length: ..25<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00469">
+<br>
+<h2>00469: PRESCRIPTION SEQUENCE #</h2>
+Description: laufende Verordnungsnummer<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00470">
+<br>
+<h2>00470: QUANTITY DISPENSED</h2>
+Description: dispensierte Menge<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typCQ.htm#CQ">CQ</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00473">
+<br>
+<h2>00473: DRUG ID</h2>
+Description: Arzneimittelcode (Pharmazentralnummer)<BR>
+Length: ..5<BR>
+Data Structure: <A HREF = "hl7v21typCE.htm#CE_0057">CE_0057</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00474">
+<br>
+<h2>00474: COMPONENT DRUG IDS</h2>
+Description: Arzneitmittelcode der Komponenten<BR>
+Length: ..5<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00479">
+<br>
+<h2>00479: PRESCRIPTION TYPE</h2>
+Description: Verordnungstyp<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00480">
+<br>
+<h2>00480: SUBSTITUTION STATUS</h2>
+Description: Substitution durch Generikum erlaubt<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00481">
+<br>
+<h2>00481: NUMBER OF REFILLS</h2>
+Description: erlaubte wiederholbte Angabe<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00482">
+<br>
+<h2>00482: REFILLS REMAINING</h2>
+Description: ausstehende wiederholte Abgabe des Medikaments<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00483">
+<br>
+<h2>00483: LAST REFILL DATE/TIME</h2>
+Description: Datum und Zeit der letzten Medikamentenabgabe<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00484">
+<br>
+<h2>00484: PHARMACY INSTRUCTIONS</h2>
+Description: Arzneitmittelinstruktionen<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typTX.htm#TX">TX</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00489">
+<br>
+<h2>00489: PATIENT INSTRUCTIONS</h2>
+Description: Patienteninstruktionen<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typTX.htm#TX">TX</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00503">
+<br>
+<h2>00503: TRANSACTION BATCH ID</h2>
+Description: Stapel/Buchungskreisnummer<BR>
+Length: ..5<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00506">
+<br>
+<h2>00506: SET ID - DIAGNOSIS</h2>
+Description: DG1-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00507">
+<br>
+<h2>00507: SET ID - FINANCIAL TRANSACTION</h2>
+Description: FT1-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00509">
+<br>
+<h2>00509: ENCODING CHARACTERS</h2>
+Description: weitere Trenzeichen<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00512">
+<br>
+<h2>00512: SENDING FACILITY</h2>
+Description: sendende Einrichtung innerhalb Bereich<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00513">
+<br>
+<h2>00513: RECEIVING FACILITY</h2>
+Description: empfangende Einrichtung innerhalb Bereich<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00520">
+<br>
+<h2>00520: SET ID - OBSERVATION REQUEST</h2>
+Description: OBR-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00523">
+<br>
+<h2>00523: UNIVERSAL SERVICE IDENT.</h2>
+Description: Leistungsidentifikation<BR>
+Length: ..200<BR>
+Data Structure: <A HREF = "hl7v21typCE.htm#CE">CE</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00524">
+<br>
+<h2>00524: PRIORITY</h2>
+Description: nicht mehr benutzt<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00529">
+<br>
+<h2>00529: REQUESTED DATE-TIME</h2>
+Description: nicht mehr benutzt<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00530">
+<br>
+<h2>00530: OBSERVATION DATE/TIME</h2>
+Description: Datum/Zeit der Entnahme/Beobachtung<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00531">
+<br>
+<h2>00531: OBSERVATION END DATE/TIME</h2>
+Description: Datum/Zeit des Endes der Untersuchungsperiode<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00532">
+<br>
+<h2>00532: COLLECTION VOLUME</h2>
+Description: Probenmenge<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typCQ.htm#CQ">CQ</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00533">
+<br>
+<h2>00533: COLLECTOR IDENTIFIER</h2>
+Description: Ident des Entnehmenden<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00534">
+<br>
+<h2>00534: SPECIMEN ACTION CODE</h2>
+Description: notwendige Aktionen<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00535">
+<br>
+<h2>00535: DANGER CODE</h2>
+Description: Warnhinweise bei ansteckenden Materialien<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00536">
+<br>
+<h2>00536: RELEVANT CLINICAL INFO.</h2>
+Description: wichtige klinische Information<BR>
+Length: ..300<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00537">
+<br>
+<h2>00537: SPECIMEN RECEIVED DATE/TIME</h2>
+Description: Eingang im Labor Datum/Zeit<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00538">
+<br>
+<h2>00538: SPECIMEN SOURCE</h2>
+Description: Art des Materials/Entnahmeart (Zweikomponentenfeld)<BR>
+Length: ..300<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00539">
+<br>
+<h2>00539: ORDERING PROVIDER</h2>
+Description: Identifikation des Leistungsanforderers<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00540">
+<br>
+<h2>00540: ORDER CALL-BACK PHONE NUM</h2>
+Description: Telefonnummer Einsender<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typTN.htm#TN">TN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00541">
+<br>
+<h2>00541: PLACERS FIELD #1</h2>
+Description: Freitext 1 f. Leistungsanforderer<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00542">
+<br>
+<h2>00542: PLACERS FIELD #2</h2>
+Description: Freitext 2 f. Leistungsanforderer<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00543">
+<br>
+<h2>00543: FILLERS FIELD #1</h2>
+Description: Freitext 1 f. Leistungserbringer<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00544">
+<br>
+<h2>00544: FILLERS FIELD #2</h2>
+Description: Freitext 2 f. Leistungserbringer<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00546">
+<br>
+<h2>00546: RESULTS RPT/STATUS CHNG - DATE/T</h2>
+Description: Datum/Zeit eines Berichts bzw. einer &Auml;nderung<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00547">
+<br>
+<h2>00547: CHARGE TO PRACTICE</h2>
+Description: Leistungsbetrag^Leistungsziffer<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00548">
+<br>
+<h2>00548: DIAGNOSTIC SERV SECT ID</h2>
+Description: Detailspezifikation der erbringenden Stelle<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00550">
+<br>
+<h2>00550: LINKED RESULTS</h2>
+Description: Identifikation d. vorang. Ergebnisse (Bassisbefunde)<BR>
+Length: ..200<BR>
+Data Structure: <A HREF = "hl7v21typCE.htm#CE">CE</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00551">
+<br>
+<h2>00551: RESULT COPIES TO</h2>
+Description: Ergebnisberichte an<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00559">
+<br>
+<h2>00559: SET ID - OBSERVATION SIMPLE</h2>
+Description: OBX-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00560">
+<br>
+<h2>00560: OBSERVATION IDENTIFIER</h2>
+Description: Methodenbezeichnung<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typCE.htm#CE">CE</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00561">
+<br>
+<h2>00561: OBSERVATION RESULTS</h2>
+Description: Ergebnisse der Untersuchung<BR>
+Length: ..65<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00562">
+<br>
+<h2>00562: UNITS</h2>
+Description: Maﬂeinheiten<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00563">
+<br>
+<h2>00563: REFERENCES RANGE</h2>
+Description: Referenzbreich/Zuverl&auml;ssigkeit der Ergebnisse<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00564">
+<br>
+<h2>00564: ABNORMAL FLAGS</h2>
+Description: Klassifikation der Ergebnisse<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00565">
+<br>
+<h2>00565: NATURE OF ABNORMAL TEST</h2>
+Description: Art des Referenzbereiches<BR>
+Length: ..5<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00566">
+<br>
+<h2>00566: OBSERV RESULT STATUS</h2>
+Description: Ergebnisstatus<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00567">
+<br>
+<h2>00567: DATE LAST OBS NORMAL VALUES</h2>
+Description: Datum der letzten Referenbereichsfestlegung<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00570">
+<br>
+<h2>00570: SET ID - DISPLAY DATA</h2>
+Description: DSP-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDSP.htm">DSP</A>
+</DD>
+<A NAME = "00571">
+<br>
+<h2>00571: DISPLAY LEVEL</h2>
+Description: Blocknummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDSP.htm">DSP</A>
+</DD>
+<A NAME = "00572">
+<br>
+<h2>00572: SET ID - PATIENT ID</h2>
+Description: PID-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00573">
+<br>
+<h2>00573: SET ID - NOTES AND COMMENTS</h2>
+Description: NTE-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNTE.htm">NTE</A>
+</DD>
+<A NAME = "00574">
+<br>
+<h2>00574: SOURCE OF COMMENT</h2>
+Description: Herkunft des Kommentares<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNTE.htm">NTE</A>
+</DD>
+<A NAME = "00575">
+<br>
+<h2>00575: COMMENT</h2>
+Description: Kommentar<BR>
+Length: ..120<BR>
+Data Structure: <A HREF = "hl7v21typTX.htm#TX">TX</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNTE.htm">NTE</A>
+</DD>
+<A NAME = "00576">
+<br>
+<h2>00576: PRIOR PATIENT ID - INTERNAL</h2>
+Description: bisherige Patienten-ID<BR>
+Length: ..16<BR>
+Data Structure: <A HREF = "hl7v21typCK.htm#CK">CK</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMRG.htm">MRG</A>
+</DD>
+<A NAME = "00577">
+<br>
+<h2>00577: PRIOR ALTERNATE PATIENT ID</h2>
+Description: bisherige Fallnummer<BR>
+Length: ..16<BR>
+Data Structure: <A HREF = "hl7v21typCK.htm#CK">CK</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMRG.htm">MRG</A>
+</DD>
+<A NAME = "00578">
+<br>
+<h2>00578: PRIOR PATIENT ACCOUNT NUMBER</h2>
+Description: bisherige Debitorenkontonummer<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typCK.htm#CK">CK</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMRG.htm">MRG</A>
+</DD>
+<A NAME = "00579">
+<br>
+<h2>00579: REFERRING DOCTOR</h2>
+Description: einweisender Arzt<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00580">
+<br>
+<h2>00580: CONSULTING DOCTOR</h2>
+Description: mitbehandelnde &Auml;rzte<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00581">
+<br>
+<h2>00581: PATIENT ID EXTERNAL (EXTERNAL ID)</h2>
+Description: externe Patientenidentifikationsnummer<BR>
+Length: ..16<BR>
+Data Structure: <A HREF = "hl7v21typCK.htm#CK">CK</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00582">
+<br>
+<h2>00582: MOTHER'S MAIDEN NAME</h2>
+Description: Geburtsname<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00586">
+<br>
+<h2>00586: RESULTS COPIES TO</h2>
+Description: Ergebnisberichte an<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORO.htm">ORO</A>
+</DD>
+<A NAME = "00588">
+<br>
+<h2>00588: RX ORDER STATUS</h2>
+Description: Arzneimittelverordnungsstatus<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00596">
+<br>
+<h2>00596: RX NUMBER</h2>
+Description: nicht ben&ouml;tigt<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00597">
+<br>
+<h2>00597: PATIENT ALIAS</h2>
+Description: Aliasname<BR>
+Length: ..48<BR>
+Data Structure: <A HREF = "hl7v21typPN.htm#PN">PN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPID.htm">PID</A>
+</DD>
+<A NAME = "00598">
+<br>
+<h2>00598: EXPECTED SEQUENCE NUMBER</h2>
+Description: erwartete Folgenummer<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSA.htm">MSA</A>
+</DD>
+<A NAME = "00599">
+<br>
+<h2>00599: RESULT ID</h2>
+Description: Abschnittskennzeichen (im Zusammenhang mit DSP-4)<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typTX.htm#TX">TX</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDSP.htm">DSP</A>
+</DD>
+<A NAME = "00600">
+<br>
+<h2>00600: R/U DATE/TIME</h2>
+Description: R/U Datum Zeit<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURD.htm">URD</A>
+</DD>
+<A NAME = "00601">
+<br>
+<h2>00601: REPORT PRIORITY</h2>
+Description: Berichtspriorit&auml;t<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURD.htm">URD</A>
+</DD>
+<A NAME = "00602">
+<br>
+<h2>00602: R/U WHO SUBJECT DEFINITION</h2>
+Description: R/U Objekt<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURD.htm">URD</A>
+</DD>
+<A NAME = "00603">
+<br>
+<h2>00603: R/U WHAT SUBJECT DEFINITION</h2>
+Description: R/U inhalt<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURD.htm">URD</A>
+</DD>
+<A NAME = "00605">
+<br>
+<h2>00605: R/U WHAT DEPARTMENT CODE</h2>
+Description: R/U Merkmalscode<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURD.htm">URD</A>
+</DD>
+<A NAME = "00607">
+<br>
+<h2>00607: R/U DISPLAY/PRINT LOCATIONS</h2>
+Description: R/U Anzeige/Druck-Ort<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURD.htm">URD</A>
+</DD>
+<A NAME = "00608">
+<br>
+<h2>00608: R/U WHERE SUBJECT DEFINITION</h2>
+Description: R/U Adressat<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURS.htm">URS</A>
+</DD>
+<A NAME = "00609">
+<br>
+<h2>00609: R/U WHEN DATA START DATE/TIME</h2>
+Description: R/U Anfangszeitpunkt<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURS.htm">URS</A>
+</DD>
+<A NAME = "00610">
+<br>
+<h2>00610: R/U WHEN DATA END DATE/TIME</h2>
+Description: R/U Endezeitpunkt<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURS.htm">URS</A>
+</DD>
+<A NAME = "00611">
+<br>
+<h2>00611: R/U WHAT USER QUALIFIER</h2>
+Description: R/U weit. Benutzerspezifikation<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURS.htm">URS</A>
+</DD>
+<A NAME = "00612">
+<br>
+<h2>00612: R/U OTHER RESULTS SUBJECT DEFINI</h2>
+Description: R/U andere-Res.Thema-Def.<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURS.htm">URS</A>
+</DD>
+<A NAME = "00613">
+<br>
+<h2>00613: DISCHARGE DISPOSITION</h2>
+Description: Entlassungsart (Tab 112)<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00614">
+<br>
+<h2>00614: DISCHARGED TO LOCATION</h2>
+Description: Entlassen nach<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00615">
+<br>
+<h2>00615: DIET TYPE</h2>
+Description: Kostform plus Di&auml;t<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00616">
+<br>
+<h2>00616: SERVICING FACILITY</h2>
+Description: Unterteilung nach Leistungsstellen<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00617">
+<br>
+<h2>00617: BED STATUS</h2>
+Description: nicht verwendet<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00618">
+<br>
+<h2>00618: INSTRUCTIONS (SIG)</h2>
+Description: Arztinstruktionen<BR>
+Length: ..500<BR>
+Data Structure: <A HREF = "hl7v21typTX.htm#TX">TX</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00619">
+<br>
+<h2>00619: DEA CLASS</h2>
+Description: Bet&auml;ubungsmittelklasse<BR>
+Length: ..5<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00620">
+<br>
+<h2>00620: ORDERING MD'S DEA NUMBER</h2>
+Description: BTM-Rezeptnummer<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00621">
+<br>
+<h2>00621: PRN STATUS</h2>
+Description: Verabreichungsstatus<BR>
+Length: ..5<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00625">
+<br>
+<h2>00625: TRANSPORTATION MODE</h2>
+Description: Transportmodus (Patient)<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00626">
+<br>
+<h2>00626: REASON FOR STUDY</h2>
+Description: wissenscaftl. oder anderweitige Untersuchung<BR>
+Length: ..300<BR>
+Data Structure: <A HREF = "hl7v21typCE.htm#CE">CE</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00627">
+<br>
+<h2>00627: PRINCIPAL RESULT INTERPRETER</h2>
+Description: verantwortlicher Arzt<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00628">
+<br>
+<h2>00628: ASSISTANT RESULT INTERPRETER</h2>
+Description: weiterer befundender Arzt<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00629">
+<br>
+<h2>00629: TRANSCRIPTIONIST</h2>
+Description: Erfassungs- / Schreibkraft<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00630">
+<br>
+<h2>00630: TECHNICIAN</h2>
+Description: MTA<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00632">
+<br>
+<h2>00632: DELAYED ACKNOWLEDGMENT TYPE</h2>
+Description: Best&auml;tigung mit Zeitversatz<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSA.htm">MSA</A>
+</DD>
+<A NAME = "00633">
+<br>
+<h2>00633: SEQUENCE NUMBER</h2>
+Description: Folgenummer<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00639">
+<br>
+<h2>00639: PROBABILITY</h2>
+Description: Wahrscheinlichkeit / Zuverl&auml;ssigkeit d. Ergebnisse<BR>
+Length: ..5<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00641">
+<br>
+<h2>00641: ADDENDUM CONTINUATION POINTER</h2>
+Description: Fortsetzungszeiger<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmADD.htm">ADD</A>
+</DD>
+<A NAME = "00655">
+<br>
+<h2>00655: BATCH CREATION DATE/TIME</h2>
+Description: Zeitpunkt Batcherstellung<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00656">
+<br>
+<h2>00656: BATCH NAME/ID/TYPE</h2>
+Description: Name/ID/Typ<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00657">
+<br>
+<h2>00657: BATCH COMMENT</h2>
+Description: Kommentar<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00658">
+<br>
+<h2>00658: BATCH CONTROL ID</h2>
+Description: Kontrollnummer<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00659">
+<br>
+<h2>00659: REFERENCE BATCH CONTROL ID</h2>
+Description: Referenznummer<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00660">
+<br>
+<h2>00660: DATE/TIME OF FILE CREATION</h2>
+Description: Zeitpunkt Fileerstellung<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00661">
+<br>
+<h2>00661: FILE NAME/ID</h2>
+Description: Name/ID<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00662">
+<br>
+<h2>00662: FILE HEADER COMMENT</h2>
+Description: Kommentar<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00663">
+<br>
+<h2>00663: FILE CONTROL ID</h2>
+Description: Kontrollnummer<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00664">
+<br>
+<h2>00664: BATCH MESSAGE COUNT</h2>
+Description: Anzahl gesendeter NAchrichten<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBTS.htm">BTS</A>
+</DD>
+<A NAME = "00665">
+<br>
+<h2>00665: BATCH COMMENT</h2>
+Description: Kommentar<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBTS.htm">BTS</A>
+</DD>
+<A NAME = "00666">
+<br>
+<h2>00666: BATCH TOTALS</h2>
+Description: Gesamtzahl<BR>
+Length: ..100<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBTS.htm">BTS</A>
+</DD>
+<A NAME = "00667">
+<br>
+<h2>00667: FILE BATCH COUNT</h2>
+Description: Anzahl gesendeter Stapeldateien<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFTS.htm">FTS</A>
+</DD>
+<A NAME = "00668">
+<br>
+<h2>00668: FILE TRAILER COMMENT</h2>
+Description: Kommentar<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFTS.htm">FTS</A>
+</DD>
+<A NAME = "00671">
+<br>
+<h2>00671: BED STATUS</h2>
+Description: Bettenstatus (entf&auml;llt)<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNPU.htm">NPU</A>
+</DD>
+<A NAME = "00676">
+<br>
+<h2>00676: VALUE TYPE</h2>
+Description: Ergebnisformat<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00685">
+<br>
+<h2>00685: BATCH FIELD SEPARATOR</h2>
+Description: Feldtrennzeichen<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00686">
+<br>
+<h2>00686: BATCH ENCODING CHARACTERS</h2>
+Description: weitere Trennzeichen<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00687">
+<br>
+<h2>00687: BATCH SENDING APPLICATION</h2>
+Description: sendender Bereich<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00688">
+<br>
+<h2>00688: BATCH SENDING FACILITY</h2>
+Description: sendende Einrichtung innerhalb Bereich<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00689">
+<br>
+<h2>00689: BATCH RECEIVING APPLICATION</h2>
+Description: empfangender Bereich<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00690">
+<br>
+<h2>00690: BATCH RECEIVING FACILITY</h2>
+Description: empfangende Einrichtung innerhalb Bereich<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00691">
+<br>
+<h2>00691: BATCH SECURITY</h2>
+Description: Sicherheitsspezifikation<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBHS.htm">BHS</A>
+</DD>
+<A NAME = "00692">
+<br>
+<h2>00692: FILE FIELD SEPARATOR</h2>
+Description: Feldtrennzeichen<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00693">
+<br>
+<h2>00693: FILE ENCODING CHARACTERS</h2>
+Description: weitere Trennzeichen<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00694">
+<br>
+<h2>00694: FILE SENDING APPLICATION</h2>
+Description: sendender Bereich<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00695">
+<br>
+<h2>00695: FILE SENDING FACILITY</h2>
+Description: sendende Einreichtung innerhalb Bereich<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00696">
+<br>
+<h2>00696: FILE RECEIVING APPLICATION</h2>
+Description: empfangender Bereich<BR>
+Length: ..15<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00697">
+<br>
+<h2>00697: FILE RECEIVING FACILITY</h2>
+Description: empfangende Einrichtung innerhalb Bereich<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00698">
+<br>
+<h2>00698: FILE SECURITY</h2>
+Description: Sicherheitsspezifikation<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00699">
+<br>
+<h2>00699: CONTINUATION POINTER</h2>
+Description: Fortsetzungszeiger<BR>
+Length: ..180<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmMSH.htm">MSH</A>
+</DD>
+<A NAME = "00701">
+<br>
+<h2>00701: QUERY RESULTS LEVEL</h2>
+Description: Detaillierungsgrad d. Antwort<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmQRD.htm">QRD</A>
+</DD>
+<A NAME = "00702">
+<br>
+<h2>00702: R/U RESULTS LEVEL</h2>
+Description: R/U Detaillierungsgrad<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmURD.htm">URD</A>
+</DD>
+<A NAME = "00703">
+<br>
+<h2>00703: ACCOUNT STATUS</h2>
+Description: nicht verwendet<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00704">
+<br>
+<h2>00704: PENDING LOCATION</h2>
+Description: geplanter Aufenthalsort des Pat. im Krh.<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00705">
+<br>
+<h2>00705: PRIOR TEMPORARY LOCATION</h2>
+Description: vorhergeh. vor&uuml;bergeh. Aufenthaltsort des Patienten<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00706">
+<br>
+<h2>00706: TRANSACTION DESCRIPTION - ALT</h2>
+Description: Buchungstext (alternativ)<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00707">
+<br>
+<h2>00707: GUARANTOR SPOUSE NAME</h2>
+Description: Ehegatte des Garantors<BR>
+Length: ..48<BR>
+Data Structure: <A HREF = "hl7v21typPN.htm#PN">PN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmGT1.htm">GT1</A>
+</DD>
+<A NAME = "00708">
+<br>
+<h2>00708: INSURED'S DATE OF BIRTH</h2>
+Description: Geburtsdatum des Versicherugnsnehmers<BR>
+Length: ..8<BR>
+Data Structure: <A HREF = "hl7v21typDT.htm#DT">DT</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00709">
+<br>
+<h2>00709: INSURED'S ADDRESS</h2>
+Description: Anschrift des Versicherungsnehmers<BR>
+Length: ..106<BR>
+Data Structure: <A HREF = "hl7v21typAD.htm#AD">AD</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00710">
+<br>
+<h2>00710: INSURED'S EMPLOYMENT STATUS</h2>
+Description: Arbeitsverh&auml;ltnis des Versicherungsnehmers<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00711">
+<br>
+<h2>00711: INSURED'S SEX</h2>
+Description: Geschlecht des Versicherungsnehmers<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00712">
+<br>
+<h2>00712: SET ID - NEXT OF KIN</h2>
+Description: NK1-Segmentnummer<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typSI.htm#SI">SI</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNK1.htm">NK1</A>
+</DD>
+<A NAME = "00713">
+<br>
+<h2>00713: INSURED'S EMPLOYER ADDRESS</h2>
+Description: Anschrift des Arbeitgebers<BR>
+Length: ..106<BR>
+Data Structure: <A HREF = "hl7v21typAD.htm#AD">AD</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmIN1.htm">IN1</A>
+</DD>
+<A NAME = "00714">
+<br>
+<h2>00714: ORDER CONTROL</h2>
+Description: Kontrollstatus des Auftrages<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00715">
+<br>
+<h2>00715: PLACER ORDER #</h2>
+Description: Auftragsnummer des Anforderers/d. anf. Stelle<BR>
+Length: ..75<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00716">
+<br>
+<h2>00716: FILLER ORDER #</h2>
+Description: Bearbeitungsnummer d. erbringenden Stelle/Erbringer<BR>
+Length: ..75<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00717">
+<br>
+<h2>00717: PLACER GROUP #</h2>
+Description: Auftragsgruppennummer<BR>
+Length: ..75<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00718">
+<br>
+<h2>00718: ORDER STATUS</h2>
+Description: Auftragsstatus<BR>
+Length: ..2<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00719">
+<br>
+<h2>00719: RESPONSE FLAG</h2>
+Description: Umfang der gew&uuml;nschten Ergebnisr&uuml;ckmeldung<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00720">
+<br>
+<h2>00720: TIMING/QUANTITY</h2>
+Description: Zeit/Menge/H&auml;ufigkeit/Priorit&auml;t<BR>
+Length: ..200<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00721">
+<br>
+<h2>00721: PARENT</h2>
+Description: Verweis auf Hauptauftrag<BR>
+Length: ..200<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00722">
+<br>
+<h2>00722: DATE/TIME OF TRANSACTION</h2>
+Description: Datum/Zeit der Auftrgserteilung<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00723">
+<br>
+<h2>00723: ENTERED BY</h2>
+Description: eingegeben durch<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00724">
+<br>
+<h2>00724: VERIFIED BY</h2>
+Description: gepr&uuml;ft durch<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00725">
+<br>
+<h2>00725: ORDERING PROVIDER</h2>
+Description: Verantwortlicher<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00726">
+<br>
+<h2>00726: ENTERER'S LOCATION</h2>
+Description: Abteilung des Auftraggebers<BR>
+Length: ..80<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00727">
+<br>
+<h2>00727: CALL BACK PHONE NUMBER</h2>
+Description: Telefonnummer f&uuml;r R&uuml;ckrufe<BR>
+Length: ..40<BR>
+Data Structure: <A HREF = "hl7v21typTN.htm#TN">TN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORC.htm">ORC</A>
+</DD>
+<A NAME = "00729">
+<br>
+<h2>00729: CHARGE TYPE</h2>
+Description: Art der Leistungsabrechnung<BR>
+Length: ..50<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBLG.htm">BLG</A>
+</DD>
+<A NAME = "00730">
+<br>
+<h2>00730: ACCOUNT ID</h2>
+Description: Kontonummer/Kostenstelle<BR>
+Length: ..100<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmBLG.htm">BLG</A>
+</DD>
+<A NAME = "00731">
+<br>
+<h2>00731: ORDER ITEM ID</h2>
+Description: Leistungsbezeichnung<BR>
+Length: ..200<BR>
+Data Structure: <A HREF = "hl7v21typCE.htm#CE">CE</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmORO.htm">ORO</A>
+</DD>
+<A NAME = "00732">
+<br>
+<h2>00732: PLACER ORDER #</h2>
+Description: Auftragsnummer des Anforderers<BR>
+Length: ..75<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00733">
+<br>
+<h2>00733: FILLER ORDER #</h2>
+Description: Bearbeitungsnummer der Leistungsstelle<BR>
+Length: ..75<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00734">
+<br>
+<h2>00734: RESULT STATUS</h2>
+Description: Befundstatus<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00735">
+<br>
+<h2>00735: QUANTITY/TIMING</h2>
+Description: Menge/Zeit<BR>
+Length: ..200<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00736">
+<br>
+<h2>00736: SCHEDULED - DATE/TIME</h2>
+Description: Untersuchungszeitpunkt<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00737">
+<br>
+<h2>00737: PARENT ACCESSION #</h2>
+Description: Hauptauftragsnummer<BR>
+Length: ..150<BR>
+Data Structure: <A HREF = "hl7v21typCM.htm#CM">CM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBR.htm">OBR</A>
+</DD>
+<A NAME = "00742">
+<br>
+<h2>00742: SYSTEM DATE/TIME</h2>
+Description: Systemzeitpunkt<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNCK.htm">NCK</A>
+</DD>
+<A NAME = "00743">
+<br>
+<h2>00743: STATISTICS AVAILABLE</h2>
+Description: Merkmal Statistiken vorhanden<BR>
+Length: ..1<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00744">
+<br>
+<h2>00744: SOURCE IDENTIFIER</h2>
+Description: Identifikation der Verbindung<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00745">
+<br>
+<h2>00745: SOURCE TYPE</h2>
+Description: Verbindungstyp<BR>
+Length: ..3<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00746">
+<br>
+<h2>00746: STATISTICS START</h2>
+Description: Beginn der Datensammlung<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00747">
+<br>
+<h2>00747: STATISTICS END</h2>
+Description: Ende der Datensammlung<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00748">
+<br>
+<h2>00748: RECEIVE CHARACTER COUNT</h2>
+Description: Anzahl der empfangenen Zeichen<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00749">
+<br>
+<h2>00749: SEND CHARACTER COUNT</h2>
+Description: Anzahl der gesendeten Zeichen<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00750">
+<br>
+<h2>00750: MESSAGES RECEIVED</h2>
+Description: Mitteilung erhalten<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00751">
+<br>
+<h2>00751: MESSAGES SENT</h2>
+Description: Mitteilung verschickt<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00752">
+<br>
+<h2>00752: CHECKSUM ERRORS RECEIVED</h2>
+Description: Anzahl der empfangenen Nachrichten mit Checksummenfehlern<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00753">
+<br>
+<h2>00753: LENGTH ERRORS RECEIVED</h2>
+Description: Anzahl der empfangenen Nachrichten mit L&auml;ngenfehlern<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00754">
+<br>
+<h2>00754: OTHER ERRORS RECEIVED</h2>
+Description: Anzahl der empfangenen Nachrichten mit sonstigen Fehlern<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00755">
+<br>
+<h2>00755: CONNECT TIMEOUTS</h2>
+Description: Anzahl der Timeouts bei Connect<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00756">
+<br>
+<h2>00756: RECEIVE TIMEOUTS</h2>
+Description: Anzahl der Timeouts bei Empfang<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00757">
+<br>
+<h2>00757: NETWORK ERRORS</h2>
+Description: Anzahl der Netzwerkfehler<BR>
+Length: ..10<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNST.htm">NST</A>
+</DD>
+<A NAME = "00758">
+<br>
+<h2>00758: NETWORK CHANGE TYPE</h2>
+Description: Kennzeichen f&uuml;r &Auml;nderung des Serverzustandes<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNSC.htm">NSC</A>
+</DD>
+<A NAME = "00759">
+<br>
+<h2>00759: CURRENT CPU</h2>
+Description: Name der momentan benutzten Maschine<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNSC.htm">NSC</A>
+</DD>
+<A NAME = "00760">
+<br>
+<h2>00760: CURRENT FILESERVER</h2>
+Description: Name des momentan benutzten Fileservers<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNSC.htm">NSC</A>
+</DD>
+<A NAME = "00761">
+<br>
+<h2>00761: CURRENT APPLICATION</h2>
+Description: Name des momentan benutzten Programms f&uuml;r Kom.m.Anwendungsbereich<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNSC.htm">NSC</A>
+</DD>
+<A NAME = "00762">
+<br>
+<h2>00762: CURRENT FACILITY</h2>
+Description: Name der momentan benutzten Spezialisierung im Anwendungsbereich<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNSC.htm">NSC</A>
+</DD>
+<A NAME = "00763">
+<br>
+<h2>00763: NEW CPU</h2>
+Description: Name der neuen Maschine<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNSC.htm">NSC</A>
+</DD>
+<A NAME = "00764">
+<br>
+<h2>00764: NEW FILESERVER</h2>
+Description: Name des neuen Fileservers<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNSC.htm">NSC</A>
+</DD>
+<A NAME = "00765">
+<br>
+<h2>00765: NEW APPLICATION</h2>
+Description: Name des neuen Programms f&uuml;r Kom.m.Anwendungsbereich<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNSC.htm">NSC</A>
+</DD>
+<A NAME = "00766">
+<br>
+<h2>00766: NEW FACILITY</h2>
+Description: Name der neuen Spezialisierung im Anwendungsbereich<BR>
+Length: ..30<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNSC.htm">NSC</A>
+</DD>
+<A NAME = "00768">
+<br>
+<h2>00768: REFERENCE FILE CONTROL ID</h2>
+Description: Referenzkontrollnummer<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFHS.htm">FHS</A>
+</DD>
+<A NAME = "00769">
+<br>
+<h2>00769: OBSERVATION SUB-ID</h2>
+Description: Methodenspezifikation<BR>
+Length: ..20<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmOBX.htm">OBX</A>
+</DD>
+<A NAME = "00770">
+<br>
+<h2>00770: UNUSED</h2>
+Description: unused<BR>
+Length: <BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00771">
+<br>
+<h2>00771: UNUSED</h2>
+Description: unused<BR>
+Length: <BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00772">
+<br>
+<h2>00772: UNUSED</h2>
+Description: unbenutzt<BR>
+Length: <BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00773">
+<br>
+<h2>00773: UNUSED</h2>
+Description: unbenutzt<BR>
+Length: <BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00774">
+<br>
+<h2>00774: UNUSED</h2>
+Description: unbenutzt<BR>
+Length: <BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmRX1.htm">RX1</A>
+</DD>
+<A NAME = "00775">
+<br>
+<h2>00775: ADMIT DATE/TIME</h2>
+Description: Aufnahmezeitpunkt<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00776">
+<br>
+<h2>00776: DISCHARGE DATE/TIME</h2>
+Description: Entlassungszeitpunkt<BR>
+Length: ..19<BR>
+Data Structure: <A HREF = "hl7v21typTS.htm#TS">TS</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00777">
+<br>
+<h2>00777: CURRENT PATIENT BALANCE</h2>
+Description: nicht verwendet<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00778">
+<br>
+<h2>00778: TOTAL CHARGES</h2>
+Description: nicht verwendet<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00779">
+<br>
+<h2>00779: TOTAL ADJUSTMENTS</h2>
+Description: nicht verwendet<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00780">
+<br>
+<h2>00780: TOTAL PAYMENTS</h2>
+Description: nicht verwendet<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmPV1.htm">PV1</A>
+</DD>
+<A NAME = "00781">
+<br>
+<h2>00781: GROUPER VERSION AND TYPE</h2>
+Description: nicht verwendet<BR>
+Length: ..4<BR>
+Data Structure: <A HREF = "hl7v21typST.htm#ST">ST</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmDG1.htm">DG1</A>
+</DD>
+<A NAME = "00782">
+<br>
+<h2>00782: TRANSACTION AMOUNT - UNIT</h2>
+Description: Einzelpreis<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00783">
+<br>
+<h2>00783: ORDERED BY CODE</h2>
+Description: anfordernde Kostenstelle<BR>
+Length: ..60<BR>
+Data Structure: <A HREF = "hl7v21typCN.htm#CN">CN</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00784">
+<br>
+<h2>00784: UNIT COST</h2>
+Description: Berechnungsfaktor<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typNM.htm#NM">NM</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmFT1.htm">FT1</A>
+</DD>
+<A NAME = "00785">
+<br>
+<h2>00785: BED LOCATION</h2>
+Description: Bettenstandort<BR>
+Length: ..12<BR>
+Data Structure: <A HREF = "hl7v21typID.htm#ID">ID</A><BR>
+<P>
+<H3>
+Used in Segments:
+</H3>
+<DD>
+<A HREF = "hl7v21segmNPU.htm">NPU</A>
+</DD>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

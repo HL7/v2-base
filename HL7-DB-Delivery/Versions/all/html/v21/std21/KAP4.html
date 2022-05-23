@@ -1,0 +1,3369 @@
+<HTML><HEAD>
+<!-- This document was created from RTF source by rtftohtml version 3.8 -->
+<TITLE>HL7 V2.1 Chapter 4</TITLE></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>
+References to other Chapters
+</H1>
+<A HREF="hl7.html">Index HL7</A><br>
+<A HREF="kap1.html">Chapter 1</A><br>
+<A HREF="kap2.html">Chapter 2</A><br>
+<A HREF="kap3.html">Chapter 3</A><br>
+<A HREF="kap5.html">Chapter 5</A><br>
+<A HREF="kap6.html">Chapter 6</A><br>
+<A HREF="kap7.html">Chapter 7</A><br>
+
+<hr>
+
+<p>
+
+<H1>
+4</H1>
+<UL>
+<LI><A HREF="#Heading1">4 <BR>Chapter 4</A>
+<UL>
+<LI><A HREF="#Heading2">4.1 PURPOSE</A>
+<LI><A HREF="#Heading3">4.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A>
+<LI><A HREF="#Heading4">4.3 MESSAGE DEFINITIONS</A>
+<UL>
+<LI><A HREF="#Heading5">4.3.1 ORM -- Order message--</A>
+<LI><A HREF="#Heading6">4.3.2 ORR -- Response message (response to ORM)--</A>
+</UL>
+<LI><A HREF="#Heading7">4.4 SEGMENT DEFINITIONS</A>
+<UL>
+<LI><A HREF="#Heading8">4.4.1 Segment ID:  ORC - COMMON ORDER/Allg. Anforderung-</A>
+<LI><A HREF="#Heading9">4.4.2 SEGMENT: BLG - BILLING/Abrechnung -</A>
+<LI><A HREF="#Heading10">4.4.3 SEGMENT: RX1 - PHARMACY ORDER /Arzneimittelanforderung</A>
+<LI><A HREF="#Heading11">4.4.4 SEGMENT:  ORO - ORDER OTHER /Andere Anforderung</A>
+</UL>
+<LI><A HREF="#Heading12">4.5 EXAMPLES OF USE</A>
+</UL>
+</UL>
+<hr size=4>
+
+<h1>
+<A NAME="Heading1">4 <BR>Chapter 4</A></h1>
+
+
+<h2>
+<A NAME="Heading2">4.1 PURPOSE</A></h2>
+
+<p><br>
+The Order Entry transaction set provides for the transmission of orders or
+information about orders between systems where they are entered, those where
+they are processed, and other systems as needed.  An order is a request for
+material or services from a department usually for a specific patient.  These
+services include medications from the pharmacy, clinical observations (e.g.,
+vitals, I&amp;Os) from the nursing service, tests in the laboratory, food from
+dietary, films from radiology, linens from housekeeping, supplies from central
+supply, an order to give a medication (as opposed to delivering it to the
+ward), etc. <br>
+ <br>
+Most orders are associated with a particular patient.  However, the Standard
+also allows a department to order from another ancillary department without
+regard to a patient (e.g., floor stock) as well as orders originating in an
+ancillary department (i.e., any system may be the placer of an order or the
+filler of an order). <br>
+ <br>
+This chapter defines the transactions at the seventh level, i.e., the abstract
+messages. Various schemes may be used to generate the actual characters that
+comprise the messages according to the communications environment. The HL7
+Encoding Rules will be used where there is not a complete Presentation Layer.
+This is described in Chapter 1, "Relationship to Other Protocols." The examples
+included in this chapter were constructed using the HL7 Encoding Rules.</p>
+
+<h2>
+<A NAME="Heading3">4.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A></h2>
+
+<p>
+<br>
+The conceptual basis for this specification is that an order is a request of
+one application called the "placer" for a service to be performed by another
+(usually, but not necessarily different) application called the "filler".  An
+order thus defines a task to be done by the filler of the order at the request
+of the placer. Examples of such tasks are the placing of a clinical laboratory
+test request, a request for a radiology exam, a request for a medication to be
+sent to the floor, a request to administer a medication to a patient, a request
+to send a biopsy tray to a ward location, etc.  Most orders are relative to a
+particular patient, but not all.  Each order is associated with a Common Order
+segment (ORC) and multiple orders can be can be grouped together in an order
+group. <br>
+ <br>
+Two message types are defined below.  The ORM message transmits order data.
+The ORR message is always a response to an ORM. Each message type is listed
+below, along with the applicable form of the message exchange. <br>
+ <br>
+The notation used to describe the sequence, optionality, and repeating of
+segments is described in Chapter II, "Format for Defining Abstract Messages."
+<br>
+ <br>
+An order for a patient is a message that usually takes three parts.  First is
+the MSH segment.  Following this is the information about the patient (PID and
+PV1).  If three orders were written for the clinical laboratory and three for
+pharmacy, an ORM would be sent to the clinical laboratory with its three order
+segments for the clinical laboratory.  Another ORM message would go to the
+pharmacy with the three pharmacy order segments. <br>
+ <br>
+The basic ORM message can be embellished in several ways.  For example, one or
+more comment (NTE) segments can follow any of the records in the hierarchy.
+The comment segment applies to the immediately preceding non-comment segment.
+A comment about the patient would immediately follow the patient segment. <br>
+ <br>
+Observations are returned to the requesting system with a similar message
+structure (the ORU) that also includes a 4th message component -- the results
+themselves.  See Chapter VII for the details of result reporting. In the
+previous version of the Standards, clinical information needed to interpret a
+diagnostic study could only be transmitted as free text in the Observation
+Request (OBR) segment (previously called LTS).  It can now also be sent in a
+structured manner.  See example, ORC field notes. <br>
+ <br>
+Thus, an original order may also have accompanying "results". These are not the
+results of the tests ordered. Rather, they are clinical observations needed to
+support an order being entered. <br>
+ <br>
+When an arterial blood gas is ordered, for example, the clinical services could
+indicate the amount of inspired O2 by sending this information as a "result
+record". <br>
+ <br>
+Similarly, when a cervical pap smear is ordered, the Cytology service needs
+information about the date of last menstrual period, the use of birth control
+pills, etc. Such information can also be sent as result segments that
+immediately follow the order segment to which it applies. When results are
+reported in an order message, they will be immediately preceded by their own
+ORC and order segment.  The details of how to do this are presented below in
+the ORC field notes. <br>
+ <br>
+In this version, the earlier Patient Order Data (POD) segment (that contained a
+few items of patient-specific clinical data) has been eliminated.  All such
+data can be transmitted with an order by including observation segments as
+described below. <br>
+ <br>
+The name of the order detail segment has been changed to Order Other to clarify
+its role.  Thus, the Order Other segment (ORO) is for non-pharmacy, and
+non-observation producing services, e.g.,  dietary.  It may also be used for
+non-patient orders.<br>
+ <br>
+In this version of the Standard, the Radiology Order segment has been
+eliminated.  The appropriate fields (e.g., methods of transport) were added to
+the Observation Request segment OBR needed to satisfy informational needs of
+radiology ordering and reporting. (The OBR record is documented in detail in
+Chapter VII.) <br>
+<u>Glossary</u><br>
+Order	An order is a request for a service from one application to a second
+application. The second application may in some cases be the same, i.e., an
+application is allowed to place orders with itself. <br>
+ <br>
+Placer	The application (system or individual) originating a request for
+services (order). <br>
+ <br>
+Filler	The application (system or individual) receiving and responding to a
+request for services (order). <br>
+ <br>
+Order Group	A list of associated orders coming from a single location regarding
+a single patient. <br>
+Order Segment	One of several segments that can carry order information.  For
+example, OBR, ORO, and RX1. Future ancillary-specific segments may be defined
+in subsequent releases of the Specification  if they become necessary. <br>
+ <br>
+Observation Segment	An OBX segment defined in Chapter VII.<br>
+ <br>
+Default ORC	If the first component of FILLER ORDER # and PLACER ORDER # of the
+first ORC of an ORM or an ORR message is null, then that ORC is called a
+"Default ORC".  (See the Use Notes under the ORC segment definition for
+details.) </p>
+
+<h2>
+<A NAME="Heading4">4.3 MESSAGE DEFINITIONS</A></h2>
+
+<p></p>
+
+<h3>
+<A NAME="Heading5">4.3.1 ORM -- Order message--</A></h3>
+
+<p><br>
+The function of this message is to initiate the transmission of information
+about an order.  This includes placing new orders, cancellation of existing
+orders, discontinuation, holding, etc. ORM messages can originate also with a
+placer, filler or an interested third party. <br>
+The trigger event for this message is any change to an order. These include
+submission of new orders, cancellations, updates, patient and non-patient
+specific orders, etc. <br>
+<u>Definition</u><br>
+<tt><u>ORM	ORDER MESSAGE	    Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>[ { NTE} ]	Notes and Comments	II</tt><br>
+<tt>[ PID	Patient Identification	III</tt><br>
+<tt>   [{NTE}]	Notes and Comments	II</tt><br>
+<tt>   [ PV1 ]	Patient Visit	III</tt><br>
+<tt>{</tt><br>
+<tt>   ORC	Common Order	IV </tt><br>
+<tt>   [ </tt><br>
+<tt>   Any Order Segment	E.g., ORO, OBR, RX1	IV</tt><br>
+<tt>   [ { NTE } ]</tt><br>
+<tt>       [ { OBX }	Results Segment	VII</tt><br>
+<tt>           [ { NTE} ]]	Notes and Comments	II</tt><br>
+<tt>       [ BLG ]	Billing segment	IV </tt><br>
+<tt>}</tt><br>
+<u>Notes</u><br>
+ <br>
+-	The segment named "Any Order Segment" represents whichever of these detail
+order segments is appropriate to the message, currently ORO, OBR, RX1. <br>
+ <br>
+-	The NTE Segment(s) can be included in a message after the MSH. In this case
+it pertains to the entire order.  It can also be present after an order detail
+segment.  It then applies to that detail item in the order. <br>
+ <br>
+-	The PID segment is required if and only if new orders are being entered and
+they are related to a particular patient.  However, it may sometimes be sent
+for convenience at local discretion, and for non-patient related orders the PID
+segment is never included. <br>
+ <br>
+-	The optional PV1 segment is present mainly to permit transmission of patient
+visit information such as current location with an order. <br>
+-	ORC segments are always required in ORM and ORR when a detailed order segment
+is present, but otherwise not.  For example, a response ORR might include only
+the MSH, and MSA, but if an RX1 is present, it must be preceded by an ORC. <br>
+ <br>
+The order segments are not required when a simple control message is being
+sent.  For example, a hold message (ORDER  CONTROL = "HD") does not require
+that an order segment  follow it. <br>
+ <br>
+-	The ORDER CONTROL field of the ORC segment is critical to the operation of
+both ORM and ORR messages.  For example, to cancel an order one would transmit
+a "CA" in the ORDER CONTROL field of the appropriate ORC.  (See the definition
+of the ORDER CONTROL field in the ORC segment definition.) <br>
+ <br>
+-	A method to inquire for order status in the display format is provided in
+Chapter V, and in the record format is provided in Chapter VII. <br>
+ </p>
+
+<h3>
+<A NAME="Heading6">4.3.2 ORR -- Response message (response to ORM)--</A></h3>
+
+<p>
+<br>
+The function of this message is to respond to an ORM message.  <br>
+<u>Definition</u><br>
+<tt><u>ORR	ORDER MESSAGE	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgement	II</tt><br>
+<tt>[ { NTE} ]	Notes and Comments	II</tt><br>
+<tt>[</tt><br>
+<tt>   [ PID ]	Patient Identification	III</tt><br>
+<tt>     [ { NTE } ]	Notes and Comments	II</tt><br>
+<tt>   { </tt><br>
+<tt>       ORC	Common Order	IV</tt><br>
+<tt>       [Any order segment]	E.g., ORO, OBR, RX1	IV</tt><br>
+<tt>       [ { NTE} ]	Notes and Comments	II</tt><br>
+<tt>   } </tt><br>
+<tt>] </tt><br>
+<u>Notes</u><br>
+ <br>
+-	An ORR message is always a response to an ORM message. Every ORM requires one
+and only one response ORR.  A minimal response consists of MSH and MSA
+segments. <br>
+ <br>
+-	The function (i.e., "cancel", "new order") of both ORM and ORR messages is
+determined by the ORDER CONTROL field of the ORC segments.  (See the table of
+ORDER CONTROL values under the ORC Field Notes for a complete list.) <br>
+ </p>
+
+<h2>
+<A NAME="Heading7">4.4 SEGMENT DEFINITIONS</A></h2>
+
+<p></p>
+
+<h3>
+<A NAME="Heading8">4.4.1 Segment ID:  ORC - COMMON ORDER/Allg. Anforderung-</A></h3>
+
+<p>
+<br>
+<u>Segment Notes</u>:<br>
+ <br>
+-	The COMMON ORDER segment is a mechanism for transmitting data common to all
+orders, i.e., common to all types of services that might be requested.  When an
+order is placed it is followed by a particular order segment (e.g.,  OBR, ORO,
+or RX1) that gives details necessary for a particular type of order. <br>
+ <br>
+	While this is the stated intention of the ORC, in some cases it is nonetheless
+difficult to decide whether a particular data field should be in the ORC or
+included in the individual order segments. <br>
+ <br>
+-	All order segments in ORR and ORM messages must be preceded by an ORC segment
+(which may be as simple as the string "ORC|OK|&lt;CR&gt;", but ORC segments
+need not always be followed by order segments when the order segment
+information is not needed.  For example, if one were placing a particular order
+on hold, it would be sufficient to transmit an ORC with "HD" in the ORDER
+CONTROL field and the identifier numbers in the two following fields. <br>
+ <br>
+-	There is some overlap between the fields of the individual order segments and
+those of the ORC. This is explained in detail under Use Notes. <br>
+The ORC segment is a mechanism for transmitting data common to all orders,
+i.e., common to all types of services that might be requested. When an order is
+placed, it is followed by a particular order segment(e.g., OBR, ORO, or RX1)
+that gives details necessary for a particular type of order. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>
+2
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0119</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00714</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ORDER
+CONTROL 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kontrollstatus
+des Auftrages
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>75</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00715</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PLACER
+ORDER # 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Auftragsnummer
+des Anforderers/ d. anf. Stelle
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>75</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00716</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FILLER
+ORDER # 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Bearbeitungsnr.
+d. erbringenden Stelle/Erbringer
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>75</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00717</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PLACER
+GROUP # 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Auftragsgruppennummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>
+2
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0038</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00718</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ORDER
+STATUS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Auftragsstatus</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>
+1
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0121</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>
+00719
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RESPONSE
+FLAG 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Umfang
+der gew&uuml;nschten Ergebnismeldung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>200</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00720</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TIMING/QUANTITY
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Zeit/Menge/H&auml;ufigkeit/Priorit&auml;t</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>200</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00721</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PARENT
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Verweis
+auf Hauptauftrag
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TS</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00722</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DATE/TIME
+OF TRANSACTION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Datum/Zeit
+der Auftragserteilung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00723</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ENTERED
+BY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Eingegeben
+durch
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00724</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>VERIFIED
+BY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Gepr&uuml;ft
+durch
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00725</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ORDERING
+PROVIDER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Verantwortlicher</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>13</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00726</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ENTERER'S
+LOCATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Abteilung
+des Auftraggebers
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>14</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y2</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00727</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CALL
+BACK PHONE NUMBER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Telefonnummer
+f&uuml;r R&uuml;ckrufe
+</p>
+<BR></TD></TR></TABLE><p><br>
+FIELD NOTES: ORC COMMON ORDER  1.	00714 ORDER CONTROL.  This is a complicated
+field that determines the function of the order segment. Refer to table 0119
+for valid entries.  <br>
+<center>TABLE 0119  ORDER CONTROL 		Kontrollstatus d. Auftrags</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>TO/FROM</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>FLD
+NOTE
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>NW</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>New
+order
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Neuer
+Auftrag
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>OK</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+accepted &amp; OK
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+akezeptiert
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CA</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Cancel
+order request
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>A</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Anforderung
+Auftrag zu stornieren
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>OC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+canceled
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+storniert
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Canceled
+as requested
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+gem&auml;&szlig; Anforderung storniert
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>UC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unable
+to cancel
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Auftragsstornierung
+nicht m&ouml;glich
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>DC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Discontinue
+order request
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>A
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Anforderung
+Auftrag abzubrechen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>OD</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+discontinued
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+abgebrochen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>DR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Discontinued
+as request
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+gem&auml;&szlig; Anforderung abgebrochen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>UD</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unable
+to Discontinue
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Abbrechen
+nicht m&ouml;glich
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>HD</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Hold
+order request
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Anforderung
+Auftrag zu unterbrechen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>OH</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+held
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>E
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+unterbrochen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>UH</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unable
+to put on hold
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Unterbrechen
+nicht m&ouml;glich
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>HR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>On
+hold as requested
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>E
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+gem&auml;&szlig; Anforderung unterbrochen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RL</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Release
+previous hold
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Unterbrochenen
+Auftrag fortsetzen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>OR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Released
+as requested
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>E
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+gem&auml;&szlig; Anforderung fortgesetzt
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>UR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unable
+to release
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Fortsetzen
+nicht m&ouml;glich
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RP</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+replace request
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>C</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Anforderung
+Auftrag zu ersetzen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RU</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Replacement
+unsolicited
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>C
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unangefordert
+ersetzt
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RQ</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Replaced
+as requested
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+gem&auml;&szlig; Anforderung ersetzt
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>UM</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unable
+to replace
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Ersetzen
+nicht m&ouml;glich
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RO</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Replacement
+order
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Ersatzauftrag</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>PA</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Parent
+order
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>&Uuml;bergeordneter
+Auftrag
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CH</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Child
+order
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>E,F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Untergeordneter
+Auftrag
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>XO</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Change
+order request
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Anforderung
+Auftrag zu &auml;ndern
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>XX</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+changed, unsol.
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Unangeforderte
+Auftrags&auml;nderung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>UX</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unable
+to change
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>&Auml;nderung
+nicht m&ouml;glich
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>XR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Changed
+as requested
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+gem&auml;&szlig; Anforderung ge&auml;ndert
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>NC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>No
+change in orders
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>B,E
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Keine
+&Auml;nderung im Auftrag
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>DE</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Data
+errors
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Datenfehler</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RE</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Observations
+to follow
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>D,E
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Untersuchungsergebnisse
+folgen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Request
+received
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>G</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Anforderung
+erhalten
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>SS</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Send
+order status
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Sende
+Auftragsstatus
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>SC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Status
+Changed
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Status&auml;nderung</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>SN</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Send
+filler number
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>I</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Sende
+Erbringer-ID
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>NA</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Number
+assigned
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>Nummer
+zugewiesen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CN</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Combined
+result
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>J</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Kumulatives
+Ergebnis
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR></TABLE><p><br>
+	Table Columns Legend: <br>
+ <br>
+	CD		The ORDER CONTROL field value. <br>
+	NT		Table notes (listed below). <br>
+	TO/FROM	F = From the FILLER <br>
+			T = To the FILLER <br>
+ <br>
+	Table notes: <br>
+	A.		A cancellation (CA) is a request not to do a previously ordered service.
+For each service there is a point after which a service can no longer be
+stopped.  This is the point at which cancellation is no longer possible.  When
+cancellation is not possible, either because the service is beyond the point of
+no return or because of local rules about cancellation, then a UC (unable to
+cancel) code can be returned depending on the RESPONSE FLAG.  When and if an
+order can be canceled is determined by the filling application. <br>
+ <br>
+The DC (discontinue) code should be used to stop an on going order.  It is
+distinct from a cancellation in that the cancellation implies an attempt to
+stop an order from ever happening, if its point-of-no-return has not been
+passed, whereas a discontinue relates to an ongoing order that should be
+stopped.  The TIMING/QUANTITY field can be used to set the effective time of
+ORDER CONTROL codes. <br>
+ <br>
+	B.		The NC code is a "NO OP", meaning nothing is to be done.  It provides a
+mechanism for overriding a default value established by a Default ORC thereby
+saying "this order is unchanged".  For example, if one were to wish to cancel
+all but one order of an order group, one would make the ORDER CONTROL field of
+the first ORC of the message "CA" and the ORDER CONTROL field "NC" of the ORC
+of the order not to be canceled.<br>
+ <br>
+	C.		The purpose of this control code is to permit an order filler to replace
+one or more new orders with one or more new orders.  A replacement involves the
+substitution of one or more orders for one or more previously existing orders.
+The replaced orders are treated as though they were canceled.  When and whether
+replacement is permitted is a local site specific option.  If it is desired
+that the original order remain in place, then the parent-child codes should be
+used, not the replacement codes.  Replacement mechanism is most often used by
+the filler to make a substitution for a requested service.<br>
+ <br>
+Replacements are accomplished by transmitting a sequence of ORC segments and
+order segments. For each order to be replaced there is an ORC with the value
+"RP" or "RU" in its ORDER CONTROL field.  The "RP" is a request for a
+replacement going to a filler, whereas the "RU" denotes an unsolicited
+replacement going from the filler to some other application to inform it of the
+fact of a replacement.  Optionally, by local agreement, the RP or RU containing
+segment is followed by its order segment.  The "RP" or "RU" containing sequence
+is immediately followed by at least one ORC with ORDER CONTROL field equal to
+"RO".  Each of the "RO" segments may be followed by an order segment. <br>
+ <br>
+For example, suppose that an ancillary system were replacing two OBR orders
+with three different orders. Then the sequence of segments would be as follows:
+<br>
+ <br>
+ORDER <br>
+<u>Segment	CONTROL	Comment</u> <br>
+ORC	RU	1st replaced ORC. <br>
+OBR		1st replaced order. <br>
+ORC	RU	2nd replaced ORC. <br>
+OBR		2nd replaced order. <br>
+ORC	RO	1st replacement ORC. <br>
+OBR		1st replacement order. <br>
+ORC	RO	2nd replacement ORC. <br>
+OBR		2nd replacement order. <br>
+ORC	RO	3rd replacement ORC. <br>
+OBR		3rd replacement order. <br>
+  <br>
+Whether the OBR segments must be present is determined by the RESPONSE FLAG
+(see below). <br>
+ <br>
+The rules for the order numbers in the segments with "RO" ORDER CONTROL are
+determined by whether the replacement is an RP or an RU type.  In the case of
+the RU type (i.e., unsolicited replacement by the filler), the FILLER ORDER #
+is generated as usual by the filler.  The PLACER ORDER # is identical to the
+PLACER ORDER # of the first transmitted RU containing OBC.<br>
+In the case of the RP ORDER CONTROL (a replacement request from another system
+to the filler), the PLACER ORDER # is generated by the placer identically to
+the usual procedure for new orders.  The FILLER ORDER # is generated by the
+filler using a procedure identical to that for new orders.<br>
+ <br>
+Notice that the above described method will handle all possible cases of
+replacement:  one-into-one, many-into-one, one- into-many, and many-into-many.
+<br>
+ <br>
+If a replacement sequence is used in an ORU message (i.e., during results
+reporting), then the OBR segments following the "RO" OBC's can be followed by
+observation result segments. <br>
+ <br>
+	D.		The "RE" code are used to transmit patient specific information with an
+order.  The order segment (e.g., OBR) can be followed by observation segments
+(OBX).  Any observation that can be transmitted in an ORU message can be
+transmitted with this mechanism. <br>
+ <br>
+Here is an example sequence of segments submitting three pharmacy orders to
+illustrate the use of the "RE" code: <br>
+<u>ORDER 	CONTROL	Comment </u><br>
+MSH	<br>
+PID<br>
+ORC	NW	First new order. <br>
+RX1		First order segment. <br>
+ORC	NW	2nd new order. <br>
+RX1		2nd order segment. <br>
+ORC	RE	Patient specific observation. <br>
+OBR		Observation OBR <br>
+OBX		An observation segment. <br>
+OBX		Another observation segment. <br>
+OBX		Another observation segment. <br>
+OBX		Another observation segment. <br>
+ORC	NW	3rd order. <br>
+RX1		3rd order segment. <br>
+  <br>
+Results, when transmitted with an order, should immediately follow the order or
+orders that they are intended to support. <br>
+ <br>
+	E.		Although observations can be transmitted in ORU messages without ORC,
+there are times when it is necessary to transmit information not in the OBR
+segments.  In this case, the ORC may be included in the ORU message. <br>
+ <br>
+Clearly, whenever a code is used in an ORU message, the OBR segments can be
+followed by observation results. Only in the ORM messages is the RE code
+required to indicate that the following OBR will be followed by observation
+results. <br>
+ <br>
+	F.		The "PA" and "CH" ORDER CONTROL codes allow one to spawn "child" orders
+from an original "parent" order without changing the parent.  One or more
+"parent" ORC segments with ORDER CONTROL field equal to "PA" are followed by
+one or more ORC's with ORDER CONTROL field equal to "CH".  Whether the OBR
+segments must be present is determined by the RESPONSE FLAG (see below).  <br>
+For example, suppose that a microbiology culture produced two organisms and
+corresponding sensitivity reports.  Then the sequence of segments would be as
+follows: <br>
+  <br>
+ORDER <br>
+<u>Segment	CONTROL	Comment </u><br>
+ORC	PA	1st parent ORC. <br>
+ORC	CH	1st child ORC. <br>
+OBR		1st child order. <br>
+ORC	CH	2nd child ORC. <br>
+OBR		2nd child order. <br>
+  <br>
+The FILLER ORDER #'s of all children orders are assigned by the filler
+according to its usual procedures and following the usual rules for uniqueness.
+The PLACER ORDER #'s of thechildren are identical to patient's PLACER ORDER #.
+The parent field of all child orders will contain the FILLER ORDER # of the
+parent.  Thereby, the parent-child relationship is communicated whenever
+observations are reported. <br>
+ <br>
+The parent-child mechanism can be used to "expand" a parent order (e.g., an
+order for three EKG's on successive mornings). <br>
+ <br>
+	G.		The RR ORDER CONTROL code means that an order has been received and will
+be processed later.  It has not undergone the processing that would permit a
+more exact response as yet. <br>
+ <br>
+	I.		Ordinarily, the filler is responsible for assigning the FILLER ORDER #.
+The FILLER ORDER # is the permanent unique identifier of an order.  The SN code
+provides a mechanism for the filler to get the FILLER ORDER # from another
+system, such as a central HIS.  This is done as follows. <br>
+ <br>
+For new orders (ORDER CONTROL = NW or ORDER CONTROL = RO following an RP), the
+placer can "suggest" a filler's number by placing that number in the first
+component of the FILLER ORDER # field and its own application identification in
+the second component.  When this happens, the filler can use the first
+component as received as "its" FILLER ORDER #.  In any situation in which the
+filler creates an order (e.g., de novo, parent/child mechanism, or
+replacement), the filler may request a number from the placer or another system
+(e.g., an HIS) using the SN ORDER CONTROL code in an ORC.  At local option, any
+amount of data specific to the order, including order segments, may accompany
+this request for the convenience of the number assigning system.  The number
+assigning system should then return an ORC with the SN ORDER CONTROL code and
+the FILLER ORDER # completed exactly as suggested for the NW case described
+above.  Of prime importance is that the second component of the FILLER ORDER #
+should ultimately be the true filler's APPLICATION ID, not the APPLICATION ID
+of the number assigning system. <br>
+ <br>
+Notice that the above scheme allows for the possibility that the placer is a
+third party such as a bedside nursing system that sends its orders through an
+HIS that assigns the FILLER ORDER #. <br>
+ <br>
+	J.		The purpose of the CN code is to provide a mechanism to transmit results
+that are associated with two orders.  This situation occurs commonly in
+radiology reports when the radiologist dictates a single report for two or more
+exams represented as two or more orders.  For example, knee and hand films for
+a rheumatoid arthritis patient might generate a single dictation on the part of
+the radiologist. <br>
+ <br>
+When such results are reported the CN code replaces the RE code in all but the
+last ORC and the results follow last ORC and its OBR. Example: <br>
+ <br>
+<tt> MSH|... </tt><br>
+<tt> PID|... </tt><br>
+<tt> ORC|CN|... </tt><br>
+<tt> OBR||A4461XA^HIS|81642^RAD|73666^Bilateral Feet|... </tt><br>
+<tt> ORC|CN|... </tt><br>
+<tt> OBR||A4461XA^HIS|81642^RAD|73642^Bilateral Hand PA|...  </tt><br>
+<tt> ORC|RE|... </tt><br>
+<tt> OBR||RA4	461XB^HIS|81643^RAD|73916^Bilateral Knees|... </tt><br>
+<tt> OBX||CE|73916&amp;IMP||Radiologist's Impression|... </tt><br>
+<tt> OBX||CE|73642&amp;IMP||Radiologist's Impression|... </tt><br>
+<tt> OBX||FT|73642&amp;GDT||Description|... </tt><br>
+ <br>
+In this example, a single report follows three ORC's. <br>
+ <br>
+2.	00715 PLACER ORDER #.  This is a composite field. The first component is a
+string of up to 15 characters that identifies a individual order segment(e.g.,
+OBR) it is assigned by the placer(ordering) system. It identifies an order
+uniquely among all orders from a particular ordering application. The second
+component contains the APPLICATION ID of the placing system.  The APPLICATION
+ID is a string of up to six characters that will be uniquely associated with an
+application.  A given institution or group of intercommunicating institutions
+should establish a list of applications that may be potential placers and
+fillers and assign their APPLICATION ID's. The list will be one of the
+institution's master dictionary lists that are documented elsewhere in the 2.1
+specification. Since third parties other than the placer and filler of an order
+can send and receive ORM and ORR messages, the APPLICATION ID in this field may
+not be the same as the sending and receiving systems as identified in the MSH.
+The PLACER ORDER # field is the same as the field #2 of the OBR record.  As
+with other identical fields, for upward and ASTM compatibility, the PLACER
+ORDER # must be present in the OBR if it is not present in the ORC.  This is
+particularly important when results are being transmitted in an ORU message, in
+which case the ORC is not required and the identifying numbers must then be
+present in the OBR segments. The second component of the PLACER ORDER # always
+identifies the actual placer of an order. There are two situations in which the
+true placer is somewhat arbitrary: (1) in "RO" segments following an "RU"
+replacement ORC and (2) in child segments ("CH").  See the Table Notes under
+the Order Control field for the details of how PLACER ORDER #'s are assigned in
+these cases.<br>
+3.	00716 FILLER ORDER # This is a composite field. The first component is a
+string that identifies an individual order segment (e.g., OBR) it is assigned
+by the order filling (receiving) system. It identifies an order uniquely among
+all orders from a particular filling application(e.g., clinical laboratory).
+The  second component is filler APPLICATION ID. Refer to PLACER ORDER # field
+note for definition of APPLICATION ID.It uniquely identifies the placing
+application within an institution or group of inter-communicating institutions.
+This component is up to 6 characters in length. The FILLER ORDER # field is the
+same as the field #3 of the OBR record.  As with other identical fields, for
+upward and ASTM compatibility, the PLACER ORDER # must be present in the OBR if
+it is not present in the ORC.  The FILLER ORDER #is also a unique identifier
+for an order and its associated observations. For example, suppose an
+institution collects observations from several ancillary systems into a common
+data base and this common data base is queried by yet another application for
+observations. In this case, the FILLER ORDER # and PLACER ORDER # transmitted
+by the common data base system would be that of the original filler and placer
+respectively, rather than a new one assigned by the common data base system.
+Similarly, if a "third party" system, not the filler or placer, of an order
+were authorized to modify the status of an order (say cancel it), then the
+third party system would send an ORM messagecontaining a ORC segment with ORDER
+CONTROL field equal to "CA" and the original PLACER ORDER # and FILLER ORDER #,
+rather than assigning either itself. <br>
+ <br>
+4.	00717 PLACER GROUP #.  This is a two component field that allows an order
+placing system to group sets of orders together and subsequently identify them.
+The first component is a string of up to 15 characters that provides a unique
+identifier for all order groups from the given placing application.  It is
+assigned by the placer and may come from the same series as the PLACER ORDER #
+of the ORC, but need not do so. The second component is an APPLICATION ID
+identical to the second component of the PLACER ORDER #.  Order groups and how
+to use them are described in detail below under "Use Notes" and in the
+Examples. <br>
+ <br>
+5.	00718 ORDER STATUS.  This field describes the status of an order. This field
+can only be defined in by the filler.  Refer to table 0038 for valid entries.
+<br>
+ <br>
+<center>TABLE 0038 ORDER STATUS 	Auftragsstatus</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CA</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+was canceled 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+storniert
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+is completed 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+durchgef&uuml;hrt
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>DC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+was discontinued 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+abgebrochen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>ER</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Error,
+order not found 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Fehler,
+Auftrag nicht gefunden
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>HD</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+is on hold 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+unterbrochen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IP</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>In
+process, unspecified 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+in Bearbeitung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RP</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+has been replaced 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+ist ersetzt worden
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>SC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>In
+process, scheduled 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+wird ausgef&uuml;hrt
+</p>
+<BR></TD></TR></TABLE><p><tt>
+</tt><br>
+6.	00719 RESPONSE FLAG.  This field is defined by the sender of an ORM message.
+It determines the amount of information ultimately to be returned from the
+filler.  If the field is null, it is treated the same as D.  This field allows
+the placer system to determine the amount of response it wishes to receive in
+return.  Sometimes the requested level of response may not be possible
+immediately, but when it is possible the filler is obliged to send the
+information.  Refer to table 0121 for valid entries. <br>
+ <br>
+<center>TABLE 0121   RESPONSE FLAG 	Umfang d. gew&uuml;nschten
+Ergebnismeldung</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>D</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Same
+as R, also other associated segments. 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Wie
+R, auch andere zugeordnete Segmente
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>E</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Report
+exceptions only. 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Nur
+Ausnahmen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Same
+as D, plus confirmations explicitly. 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Wie
+D, auch explizite Best&auml;tigungen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>N</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Only
+the MSA segment is returned. 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Nur
+das MSA Segment
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Same
+as E, also Replacement &amp; Parent<tt>-</tt>child 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Wie
+E, auch Ersetzungen u. zugeh&ouml;rige Erg.
+</p>
+<BR></TD></TR></TABLE><p><br>
+7.	00720 TIMING/QUANTITY.  Order segments should be thought of as describing an
+atomic service. This composite field determines the priority, quantity,
+frequency, and timing of such a service. It is a composite field that is
+defined in detail in Chapter VII. For example, if an ORO segment describes a
+unit of blood, this field might request 3 such units be given on successive
+mornings. In this case the TIMING/QUANTITY field would be: "1^XQAM^X3".  The
+TIMING field is the same as the field #27 of the OBR. <br>
+ <br>
+8.	00721 PARENT.  This field relates a child back to its parent when a
+parent-child relationship exists. The parent-child mechanism is described under
+the ORDER CONTROL field notes. PARENT is a twocomponent field. The first
+component contains the PLACER ORDER # of the parent order. It is required when
+the order is a child. The second component the FILLER ORDER # of the parent.
+The components of the PLACER ORDER # and the FILLER ORDER # are transmitted in
+sub-components of the two components of this field. This field is the same as
+field #29 of the OBR. <br>
+ <br>
+9.	00722 DATE/TIME OF TRANSACTION.  The date/time that the transaction was
+entered into the ordering system. For messages creating new orders, this
+meaning is clear: the date/time the order was entered. For other messages, this
+is the date/time the current transaction (e.g., cancellation) was entered into
+the system sending the transaction. This date/time is not a "replacement" time
+for a correction to the original order, rather, it is the date/time of the
+entry of the current transaction. Similarly, the ENTERED BY, VERIFIED BY, and
+ORDER'S LOCATION fields of this segment relate to the current transaction, not
+the original order. <br>
+ <br>
+10.	00723 ENTERED BY.  The identity of the person who actually keyed the order
+into the system. Provides an audit trail in case the order is entered
+incorrectly and the ancillary department needs to clarify the request. The form
+is in(i.e., ID^NAME). By local agreement, either ID or NAME may not be present.
+<br>
+ <br>
+11.	00724 VERIFIED BY.  The identity of the person who verified the accuracy of
+entered orders in case they were entered by a technician and needed to be
+verified by a higher authority, e.g., an RN. The form is CN(i.e., ID^NAME). By
+local agreement, either ID or NAME may not be present. <br>
+ <br>
+12.	00725 ORDERING PROVIDER.  The identity of the person who was responsible
+for creating the order, often the ordering physician. This field is the same as
+field #16 of the OBR. <br>
+ <br>
+13.	00726 ENTERER'S LOCATION.  Composite fields may be used on a site specific
+basis to include some subcategory of department where the order was entered.
+For example, ICU4 might be the designation for a forth floor ICU location. <br>
+ <br>
+14.	00727 CALL BACK PHONE NUMBER.  The telephone number to call for
+clarification of an order or other information regarding the order. This field
+is the same as field #17 of the OBR. <br>
+ <br>
+<u>Use notes</u><br>
+ <br>
+1.	Default ORC. <br>
+The first ORC in an ORM or ORR message can be used to provide default values
+for all subsequent ORC's in that message.  The concept is easier to understand
+and implement than to explain.  The rule is simply this:  if the first ORC of a
+message has null values in both the first component of FILLER ORDER # and the
+first component of PLACER ORDER #, then it is called a "Default ORC".  Any
+other non-null field of a Default ORC is taken as the default for all other ORC
+segments that follow in the same message.  If the Default ORC is in an ORR
+message, then the non-null values of the Default ORC are taken to apply to the
+orders of the previous ORM as well as any ORC's that follow in the current ORR
+message.  So in a sense, the Default ORC of a ORR inherits the "scope" of the
+ORM to which it is a response. <br>
+ <br>
+When a field of the ORC is duplicated in the following order segment, the
+default values established by a Default ORC are valid for the duplicate fields
+of the order segment as well as the ORC. <br>
+ <br>
+2.	Order Groups. <br>
+ <br>
+The Standard supports a mechanism to collect several orders together in groups.
+Most often this will be used to represent an "ordering session" for a single
+patient. <br>
+ <br>
+An order group is a list of orders (ORC's) associated with a GROUP #.  A group
+is established when the placer supplies a GROUP # with the original order.  The
+order group then consists of all the ORC's and order segments that have the
+same GROUP #.  Subsequently, orders can be removed from the group using cancel,
+or added using the replacement or parent-child mechanism.  However, new orders
+cannot otherwise be added to the group. <br>
+ <br>
+Notice that a convenient way to create an order group is to send a Default ORC
+with all the fields (including the GROUP # field) common to the order group
+transmitted in the Default ORC. <br>
+ <br>
+3.	Duplicate fields. <br>
+ <br>
+The ORC is intended to define the fields that are common to all orders (i.e.,
+requested services) and to make their meanings uniform.  Some fields are
+duplicated between the ORC and some order segments. (For example, the PLACER
+ORDER # of the ORC is the same as the PLACER ORDER # of the OBR.) This is done
+for upward compatibility with past versions and ASTM.  The rule for using these
+fields is that the value must appear in the order segment if it does not appear
+in the ORC.  However, it is recommended that the fields be transmitted in both
+places to avoid confusion. <br>
+ <br>
+4.	Whenever, a request to cancel, hold or discontinue is transmitted for a
+parent order, its meaning is applied recursively to all children as well as the
+parent.  For example, suppose an EKG system has received an order for three
+EKG's on successive mornings, and suppose the EKG system had created three
+children orders, one for each requested EKG. Further, suppose that the first
+daily EKG has been done when a request was received to cancel the original
+parent. The parent is beyond the point of cancellation. However, the remaining,
+as yet not performed, children would be canceled as result of this request. </p>
+
+<h3>
+<A NAME="Heading9">4.4.2 SEGMENT: BLG - BILLING/Abrechnung -</A></h3>
+
+<p>
+<br>
+The BLG segment is to provide information to the filling system that may be
+needed for billing for the ordered service. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0100</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00066</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>WHEN
+TO CHARGE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Abrechnungszeitpunkt</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>50</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0122</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00729</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CHARGE
+TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Abrechnungsart</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>100</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00730</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ACCOUNT
+ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kontonummer/Kostenstelle</p>
+<BR></TD></TR></TABLE><p><tt>
+</tt><br>
+FIELD NOTES: BLG BILLING <br>
+ <br>
+1.	00066 WHEN TO CHARGE.  This field determines the time when a charge is to
+take place. The first part of the composite value comes from table 0100. The
+second part is a TS (date/time) type that denotes an exact time when the first
+part is the code "T". <br>
+<tt> </tt><br>
+<center>TABLE 0100   WHEN TO CHARGE	Abrechnungszeitpunkt</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>D</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>On
+discharge 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Bei
+Entlassung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>O</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>On
+receipt of order 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Bei
+Auftragserteilung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>At
+time service is completed 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Am
+Ende der Leistungserbringung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>S</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>At
+time service is started 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Am
+Anfang der Leistungserbringung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>T</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>At
+a designated date/time 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>An
+einem bestimmten Zeitpunkt
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+2.	00729 CHARGE TYPE.  This field is used to direct billing to an entity other
+than the patient. Describes the nature of the entity. It is used in conjunction
+with the following field ACCOUNT ID to identify someone or something other than
+the patient to be billed for this service. <br>
+<tt> </tt><br>
+<center>TABLE 0122   CHARGE TYPE	Abrechnungsart</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CH</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Charge</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Rechnung</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CO</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Contract
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Vertrag</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Credit
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Kredit</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>DP</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Department
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Abteilung</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>GR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Grant
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Zuschu&szlig;</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>NC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>No
+Charge 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Keine
+Rechnung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>PC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Professional
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Berufsgenossenschaft</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RS</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Research
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Forschung</p>
+<BR></TD></TR></TABLE><p>
+<br>
+3.	00730 ACCOUNT ID.  Identifies the account to be billed. See above in notes
+for CHARGE TYPE. The first component of this two component field contains an
+account number(really a sequence of characters). The second component field is
+used to identify the entity which holds the first component as an account
+number, often the paying entity. </p>
+
+<h3>
+<A NAME="Heading10">4.4.3 SEGMENT: RX1 - PHARMACY ORDER /Arzneimittelanforderung</A></h3>
+
+<p><br>
+Notes: <br>
+ <br>
+-	It is known that this segment is inadequate to the complete pharmacy task.
+It is not sufficient for many IV and inpatient orders.  A fully functional
+pharmacy order segment, RX2, will be included in the 3.0 version of the
+Standard. <br>
+ <br>
+-	Several fields that were previously in this segment are now covered by the
+ORC segment those fields have been removed from the current version. <br>
+   <br>
+The RX1 segment is used for pharmacy orders. <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00770</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>UNUSED
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00771</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>UNUSED
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0033</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00129</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ROUTE
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Applikationsweg</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>
+0034
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00130</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SITE
+ADMINISTERED 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Applikationsort</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CQ</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00131</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>IV
+SOLUTION RATE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>IV-Infusionsrate</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>14</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CQ</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00133</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DRUG
+STRENGTH 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Arzneimitteldosierung
+pro Einheit
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00137</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FINAL
+CONCENTRATION
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Endkonzentration
+in der Infusionsl&ouml;sung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00138</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FINAL
+VOLUME IN ML. 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Endvolumen
+in Milliliter
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00135</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DRUG
+DOSE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Arzneimittelgesamtdosis</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00139</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DRUG
+ROLE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Arzneimittelfunktion</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00469</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PRESCRIPTION
+SEQUENCE # 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Laufende
+Verordnungsnummer
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>
+12
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CQ</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00470</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>QUANTITY
+DISPENSED 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Dispensierte
+Menge
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>
+13
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00772</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>UNUSED
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>unbenutzt</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>
+14
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CE</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0057</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00473</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DRUG
+ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Arzneimittelcode
+(Pharmazentralnummer)
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y5</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00474</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>COMPONENT
+DRUG IDS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Arzneimittelcode
+der Komponenten 
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>16</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00479</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PRESCRIPTION
+TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Verordnungstyp</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>17</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00480</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SUBSTITUTION
+STATUS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Substitution
+durch Generikum erlaubt
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>18</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0038</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00588</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RX
+ORDER STATUS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Arzneimittelverordnungsstatus</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00481</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NUMBER
+OF REFILLS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Erlaubte
+wiederholte Abgaben
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00773</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>UNUSED
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+benutzt
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>21</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00482</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>REFILLS
+REMAINING 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ausstehende
+wiederholte Abgabe des Medikaments
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>22</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00619</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DEA
+CLASS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Bet&auml;ubungsmittelklasse</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>23</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00620</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ORDERING
+MD'S DEA NUMBER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BTM-Rezeptnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>24</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00774</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>UNUSED
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+benutzt
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>25</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TS</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00483</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>LAST
+REFILL DATE/TIME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Datum
+und Zeit der letzten Medikamentenabgabe
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>26</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00596</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RX
+NUMBER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+ben&ouml;tigt
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>27</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>
+5
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00621</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PRN
+STATUS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Verabreichungsstatus</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>28</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TX</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Y5</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00484</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PHARMACY
+INSTRUCTIONS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Arzneimittelinstruktionen</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>29</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TX</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y5</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00489</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PATIENT
+INSTRUCTIONS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Patienteninstruktionen</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>30</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>500</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TX</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00618</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSTRUCTIONS
+(SIG) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Arztinstruktionen</p>
+<BR></TD></TR></TABLE><p><br>
+	<br>
+FIELD NOTES: RX1 PHARMACY ORDER <br>
+ <br>
+1.	00770 UNUSED.  Formerly, FREQUENCY OF THE ORDER that has been replaced by
+the QUANTITY/TIMING field of the ORC. <br>
+ <br>
+2.	00771 UNUSED.  Formerly, START DATE/TIME that has been replaced by the
+QUANTITY/TIMING field of the ORC. <br>
+ <br>
+3.	00129 ROUTE.  Route indicates means of administrating the dose.  Refer to
+table 0033 for valid entries. <br>
+<tt> </tt><br>
+<center>TABLE 0033  ROUTE 	Applikationsweg</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>AP</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Apply
+externally 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Externe
+Applikation
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CH</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Chew
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Kautablette</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>DI</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Dissolved
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Aufgel&ouml;st</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>DU</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Dust
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Puder</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>EA</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Ear
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Ohr</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>EY</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Eye
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auge
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IA</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intro<tt>-</tt>arterial
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intraarteriel</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intra<tt>-</tt>cardiac
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intracardial</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intra<tt>-</tt>dermal
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intradermal</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IF</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Infiltrate
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Infiltrieren</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IH</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Inhalation
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Inhalation</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IM</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intra<tt>-</tt>muscular
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intramuskul&auml;r</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IN</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intra<tt>-</tt>nasal
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intranasal</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IR</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Irrigate
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Einlauf</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IS</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Inserted
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Implantat</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IT</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intrathecal
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intrathekal</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IV</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intravenous
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intraven&ouml;s</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>NB</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Nebulized
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Vernebelt</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>NG</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Nathogasic
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Nasogastral</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>PA</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Peri<tt>-</tt>anally
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Peranal</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>PO</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>By
+mouth 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Peroral</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>PT</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Paint
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Aufpinseln</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>PU</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>IV
+push 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Intraven&ouml;ser
+Bolus
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Rectally
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Rektal</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>SC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Subcutaneously
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Subkutan</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>SH</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Shampoo
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Shampoo</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>SL</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Sublingual
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Subligual</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>SO</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Soak
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Durchtr&auml;nken</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>SS</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>IV
+soluset 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>IV-L&ouml;sung</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>TP</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Topically
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Topisch</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>VG</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Vaginally
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Vaginal</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>WA</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Wash
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Waschen</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>WI</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Wipe
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Wischen</p>
+<BR></TD></TR></TABLE><p>4.
+00130 SITE ADMINISTERED.  Site refers to the location on the body where a dose
+is to be administered, e.g., IV, IM, Subcutaneous. <br>
+ <br>
+<center>TABLE 0034  SITE ADMINISTERED 	Applikationsort</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>B</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Buttock
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Ges&auml;&szlig;</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>L</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Left
+arm 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Linker
+Arm
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Right
+arm 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Rechter
+Arm
+</p>
+<BR></TD></TR></TABLE><p><tt>
+</tt><br>
+5.	00131 IV SOLUTION RATE.  The rate will be expressed in a quantity per unit
+of measure. The unit of measure is provided as the second component of the
+field, e.g., 2.0^ML/HR. <br>
+ <br>
+6.	00133 DRUG STRENGTH.  Strength per item ordered. The unit of measure is
+provided in the second component, e.g., 250^MG. <br>
+ <br>
+7.	00137 FINAL CONCENTRATION.  Final concentration as a percent. When solutions
+are mixed, the order is often one, 100%mg IM 500ml. In this case, the final
+concentrate would be .2^mg/ml. <br>
+ <br>
+8.	00138 FINAL VOLUME IN ML..  If there are additives to a solution, the final
+volume may reflect additions to the solution's volume, or the final volume may
+indicate solution must be removed before the additives are added. <br>
+ <br>
+9.	00135 DRUG DOSE.  Dose to be administered. Unit of measure is provided in
+the second component. <br>
+ <br>
+10.	00139 DRUG ROLE.  The drug specified in the "ORD" segment is either: B =
+Base or  A = Additive. E.g., orders for D5W plus 40 Mg of KCL would require 2
+order records - one for D5W and another for the KCL additive. The first would
+contain the full instruction and details about the D5W. The second would
+contain information about the component KCL - and this field would contain an
+"A" for additive. <br>
+ <br>
+11.	00469 PRESCRIPTION SEQUENCE #.  Prescription sequence number. <br>
+ <br>
+12.	00470 QUANTITY DISPENSED.  The quantity of the units dispensed, e.g.,
+200^tabs-3. <br>
+ <br>
+13.	00772 UNUSED.  Formerly, DURATION OF PRESCRIPTION that has been replaced by
+the QUANTITY/TIMING field of the ORC. <br>
+ <br>
+14.	00473 DRUG ID.  Pharmacy-defined code for specifying drugs. The system of
+six part universal identifiers defined in the Chapter II, is used here to
+identify the medications. <br>
+ <br>
+15.	00474 COMPONENT DRUG IDS.  Pharmacy-defined code for specifying drugs.
+Repeats up to 5 times. <br>
+<tt>(Verwendung wird nicht empfohlen. Sollte durch Wiederholung des RX1
+Segmentes gel&ouml;st werden)</tt><br>
+ <br>
+16. 00479 PRESCRIPTION TYPE <br>
+ <br>
+17.	00480 SUBSTITUTION STATUS.  Y = generic substitution allowed. N =
+prescribed exactly as written within the contents of local formulary policy.
+<br>
+ <br>
+18.	00588 RX ORDER STATUS.  An ID code for the current order status that is
+available in Order Confirmation, Query for Order Status, or Results (query and
+unsolicited update.) <br>
+  <br>
+<center>TABLE 0038   ORDER STATUS 	Auftragsstatus</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CA</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+was canceled 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+storniert
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+is completed 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+durchgef&uuml;hrt
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>DC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+was discontinued 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+abgebrochen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>ER</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Error,
+order not found 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Fehler,
+Auftrag nicht gefunden
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>HD</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+is on hold 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+unterbrochen
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>IP</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>In
+process, unspecified 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+in Bearbeitung
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>RP</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Order
+has been replaced 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+ist ersetzt worden
+</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>SC</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>In
+process, scheduled 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Auftrag
+wird ausgef&uuml;hrt
+</p>
+<BR></TD></TR></TABLE><p><tt>
+</tt><br>
+19.	00481 NUMBER OF REFILLS.  Number of refills initially prescribed for
+outpatient drug orders. <br>
+ <br>
+20.	00773 UNUSED.  <br>
+ <br>
+21.	00482 REFILLS REMAINING.  <br>
+ <br>
+22.	00619 DEA CLASS.  Class (I, II, III, IV, or V) of the drug as defined by
+the Drug Enforcement Agency. <br>
+ <br>
+23.	00620 ORDERING MD'S DEA NUMBER.  Unique number assigned by the Federal Drug
+Enforcement Agency for prescribing of controlled substance. Must be recorded on
+prescriptions re: drug ordered in Class II, III, or IV. <br>
+ <br>
+24.	00774 UNUSED.  <br>
+ <br>
+25.	00483 LAST REFILL DATE/TIME.  The date and time stamp for the most recent
+prescription refill. <br>
+ <br>
+26.	00596 RX NUMBER.  Used for take-home prescriptions. <br>
+ <br>
+27.	00621 PRN STATUS.  Indicator to identify drug that are prescribed as
+needed, rather than at a regular rate. Y = PRN; N = Regular Distribution. <br>
+ <br>
+28.	00484 PHARMACY INSTRUCTIONS.  Repeats up to 5 times. <br>
+ <br>
+29.	00489 PATIENT INSTRUCTIONS.  Repeats up to 5 times. <br>
+ <br>
+30.	00618 INSTRUCTIONS (SIG).  Text of prescribing instructions as written by
+physician. The components of these instructions (e.g., frequency, amount) will
+also be carried by succeeding fields, but complex instruction will not be
+represented in the fields that follow. </p>
+
+<h3>
+<A NAME="Heading11">4.4.4 SEGMENT:  ORO - ORDER OTHER /Andere Anforderung</A></h3>
+
+<p><br>
+The ORO segment is the order record used for non-pharmacy, and non-observation
+producing services, e.g., dietary, etc. ORO may also be used for non patient
+ordering.  A fully functional non-patient order segment will be available in
+release 3.0. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>200</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CE</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00731</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ORDER
+ITEM ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Leistungsbezeichnung</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00120</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SUBSTITUTE
+ALLOWED 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Substitution
+erlaubt
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>80</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00586</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RESULTS
+COPIES TO 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Ergebnisberichte
+an
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0012</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00068</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>STOCK
+LOCATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Lagerort</p>
+<BR></TD></TR></TABLE><p><tt>
+</tt><br>
+FIELD NOTES: ORO ORDER OTHER <br>
+ <br>
+1.	00731 ORDER ITEM ID.  This field identifies the item or service being
+ordered. The structure of the field is the same as the UNIVERSAL SERVICE ID of
+the OBR, i.e., it is a coded entity. The structure is defined in the control
+section. Notice that the second component of the coded entry type can be used
+for a free text description, and when unaccompanied by a Standard code this
+will serve as a free text description for a non-Standard order. <br>
+ <br>
+2.	00120 SUBSTITUTE ALLOWED.  Indicates whether the ancillary department may
+substitute an equivalent version of the item(s) ordered. NO TABLE CURRENTLY
+DEFINED. <br>
+ <br>
+3.	00586 RESULTS COPIES TO.  A composite field that identifies the people that
+are to receive copies of the results.  The format is id code^name.  By local
+convention, either component may be not present. May be repeated. <br>
+ <br>
+4.	00068 STOCK LOCATION.  This table entry describes whether an order is to be
+filled from ancillary or floor stock. <br>
+ <br>
+<center>TABLE 0012   STOCK LOCATION	Lagerort</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>AN</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Filled
+from ancillary department stock 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Funktionsbereichslager</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>FL</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Filled
+from floor stock 
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Etagenlager</p>
+<BR></TD></TR></TABLE><p></p>
+
+<h2>
+<A NAME="Heading12">4.5 EXAMPLES OF USE</A></h2>
+
+<p><br>
+The purpose of this section is to show how certain specific situations would be
+handled using the order entry protocol.  The ellipsis represent unfilled in
+details.  The symbol "//" precedes comments for clarification. <br>
+  <br>
+<u>An order replaced by three orders</u><br>
+ <br>
+Suppose that an application called "PC" is sending an order to the EKG system
+for three EKG's to be done on successive days. <br>
+ <br>
+<u>The order might be placed as follows</u><br>
+ <br>
+       ORM message: <br>
+<tt>       MSH|... </tt><br>
+<tt>       PID|... </tt><br>
+<tt>       ORC|NW|^PC||946281^PC||||198801121132| </tt><br>
+<tt>          ^ELLINORE OF AQUITAINE||4EAST&lt;CR&gt; // Default ORC </tt><br>
+<tt>       ORC||A226677||||N|3^QAM&lt;CR&gt;          // EKG ORDER. </tt><br>
+<tt>       OBR||||93000^EKG REPORT||||||||||||P030^SMITH, MARTIN </tt><br>
+<tt>          |||||||||||3^QAM&lt;CR&gt; </tt><br>
+<tt>       BLG|... </tt><br>
+<tt>       ORC||...                             // Another order </tt><br>
+<tt>          ...                                   yet others</tt><br>
+<tt>                                                may follow </tt><br>
+ <br>
+Notes: <br>
+ <br>
+-	There is a GROUP # first component indicating that an order group is being
+created. <br>
+ <br>
+-	The values for several fields of the ORC's are achieved by default from the
+Default ORC.  In particular, that of the ORDER CONTROL field of the subsequent
+ORC's are absent and therefore defaults to "NW" (new order). <br>
+ <br>
+-	The second component of the PLACER ORDER # is absent in the second ORC and
+therefore defaults to the value in the Default ORC ("PC"). <br>
+ <br>
+<u>Responses</u>:  Because the EKG system must turn the single order above into
+three orders for three separate EKG's (services) the results of each of which
+will be reported under its own OBR segment. <br>
+ <br>
+Several response levels are possible depending on the RESPONSE FLAG: <br>
+ <br>
+1.	If the RESPONSE FLAG is N (as it is), then the filler EKG application only
+responds "I got the order." <br>
+ <br>
+<tt>		MSH|... </tt><br>
+<tt>		MSA|... </tt><br>
+ <br>
+Notes: <br>
+ <br>
+-	The only implication of this response is that the order was received.  <br>
+	-		If the RESPONSE FLAG had been E, then the response would have been the
+same, but its implication would have been that the EKG application had
+processed all the orders and they were acceptable. <br>
+2.	If the RESPONSE FLAG were R, then the filler EKG application must
+communicate to the PC the fact of the creation of child orders, but with no
+details: <br>
+ <br>
+<tt>		ORR message:</tt><br>
+<tt> </tt><br>
+<tt>MSH|... </tt><br>
+<tt>MSA|... </tt><br>
+<tt>ORC|OK|^PC&lt;CR&gt;					// Default ORC.</tt><br>
+<tt>ORC|PA|A226677|89-458^EKG&lt;CR&gt; </tt><br>
+<tt>ORC|CH|A226677|89-551^EKG...		// 1ST child ORC.</tt><br>
+<tt>ORC|CH|A226677|89-552^EKG...		// 2ND child ORC.</tt><br>
+<tt>ORC|CH|A226677|89-553^EKG...   	// 3RD child ORC.</tt><br>
+<tt>...							// Other parts of </tt><br>
+response  might 			follow.<br>
+Notes:<br>
+-	What has been said here is:  "Your A226767 has spun out three children named
+89-551, 89-552, and 89-553.  Notice that the FILLER and PLACER #'s are
+identical in the children's ORCs.<br>
+	-		The second component of the PLACER ORDER # field of the ORC's must be given
+explicitly since it was not provided in the Default ORC (like:
+ORC|OK|^PC|^EKG&lt;CR&gt;), which would have been more efficient eliminating 12
+characters.  This emphasizes the fact that the Default ORC is merely a
+notational convenience. <br>
+3.	If the RESPONSE FLAG were D, then the filler EKG application must
+communicate to the PC application the fact of the replacement and also the
+exact replacement order segments: <br>
+ <br>
+<tt>ORR message: </tt><br>
+<tt>MSH|... </tt><br>
+<tt>MSA|... </tt><br>
+<tt>ORH|OK|^PC|^EKG&lt;CR&gt; </tt><br>
+<tt>ORC|PA|A226677|89-458&lt;CR&gt; </tt><br>
+<tt>ORC|CH|A226677|89-551|946282^PC|SC|A226677&amp;PC^89-458&amp;EKG|</tt><br>
+<tt>    ^^^^198901130500^&lt;CR&gt;	// 1ST child ORC. </tt><br>
+<tt>OBR|||89-551^EKG|93000^EKG REPORT|...  // 1ST child OBR. </tt><br>
+<tt>ORC|CH|A226677|89-522|946282^PC|SC|A226677&amp;PC^89-458&amp;EKG|</tt><br>
+<tt>    ^^^^198901140500^&lt;CR&gt;	// 2ND child ORC. </tt><br>
+<tt>OBR|||89-551^EKG|93000^EKG REPORT|... </tt><br>
+<tt>						// 2ND child OBR. </tt><br>
+<tt>ORC|CH|A226677|89-553|946282^PC|SC|A226677&amp;PC^89-458&amp;EKG|</tt><br>
+<tt>     ^^^^198901150500^&lt;CR&gt;	// 3RD child ORC. </tt><br>
+<tt>OBR|||89-551^EKG|93000^EKG REPORT|... 	// 3RD child OBR. </tt><br>
+<tt>// Other parts of response might follow.</tt><br>
+ <br>
+Notes: <br>
+ <br>
+-	Here the actual OBR segments have been added. <br>
+ <br>
+-	The status of the child orders is being reported as SC (scheduled). <br>
+ <br>
+-	The QUANTITY/TIMING fields show that the EKG's are requested after 0500 on
+successive days. <br>
+ <br>
+-	Notice that the FILLER ORDER # is reported in both the ORC and OBR.  This is
+optional. <br>
+ <br>
+<u>Results reporting</u><br>
+ <br>
+1.	The EKG application needs to communicate to anyone the results of 1st EKG:
+<br>
+ <br>
+ORU message: <br>
+<tt>MSH|... </tt><br>
+<tt>PID|... </tt><br>
+<tt>OBR|||89-551^EKG|93000^EKG REPORT|... </tt><br>
+<tt>			// 1ST child OBR. </tt><br>
+<tt>OBX||ST|93000.1^VENTRICULAR RATE (EKG)|... </tt><br>
+<tt>OBX||ST|93000.2^... </tt><br>
+<tt>      ... </tt><br>
+<tt>      ... </tt><br>
+<tt>OBX||FT|93000.14^EKG COMMENT|... </tt><br>
+<tt>OBR|...		// other observation segments to follow </tt><br>
+Notes: <br>
+ <br>
+-	Notice that this report is without reference to the original order. <br>
+ <br>
+-	No ORC is required because the identifying FILLER'S ORDER # (and other ORC
+fields) are carried in the OBR segment. <br>
+ <br>
+2.	The EKG application needs to communicate to anyone the original order
+information, the details of the child orders, the fact of the child spin off,
+and the results of all three EKG's: <br>
+ <br>
+ORU message: <br>
+<tt>MSH|... </tt><br>
+<tt>PID|... </tt><br>
+<tt>ORC|OK|^PC|^EKG&lt;CR&gt; </tt><br>
+<tt>ORC|PA|A226677|89-458|... </tt><br>
+<tt>		// original order's ORC. </tt><br>
+<tt>OBR||||93000^EKG REPORT|... </tt><br>
+<tt>		// original order segment </tt><br>
+<tt>ORC|CH|A226677|89-451&lt;CR&gt; </tt><br>
+<tt>		// 1st child ORC. </tt><br>
+<tt>OBR||||93000^EKG REPORT|... </tt><br>
+<tt>		// 1st EKG child OBR. </tt><br>
+<tt>OBX||ST...		// 1st EKG report </tt><br>
+<tt>OBX||ST... </tt><br>
+<tt>    ... </tt><br>
+<tt>OBX||FT... </tt><br>
+<tt>ORC|CH|A226677|89-452&lt;CR&gt;</tt><br>
+<tt>		// 2nd child ORC. </tt><br>
+<tt>OBR||||93000^EKG REPORT|... </tt><br>
+<tt>		// 2nd EKG child OBR. </tt><br>
+<tt>OBX||ST...		// 2nd EKG report </tt><br>
+<tt>OBX||ST... </tt><br>
+<tt>    ... </tt><br>
+<tt>OBX||FT... </tt><br>
+<tt>ORC|CH|A226677|89-453&lt;CR&gt;</tt><br>
+<tt>		// 3rd child ORC. </tt><br>
+<tt>OBR||||93000^EKG REPORT|... </tt><br>
+<tt>		// 3rd EKG child OBR. </tt><br>
+<tt>OBX||ST...		// 3rd EKG report </tt><br>
+<tt>OBX||ST... </tt><br>
+<tt>    ... </tt><br>
+<tt>OBX||FT... </tt><br>
+<tt>    ...		// Other parts of message might follow. </tt><br>
+Notes: <br>
+ <br>
+-	In this case, we are transmitting the information about the fact of child
+spin off, the original order and the results all at the same time.  Thus, this
+form of the ORU message reports not only the results of an order, but all of
+its associated ordering information including the original OBR for three EKG's
+that was replaced by three separate OBR EKG segments. <br>
+<u>Patient-specific clinical data with an order</u><br>
+ <br>
+Reporting body weight and height with a creatinine clearance. <br>
+ <br>
+<tt>MSH|... </tt><br>
+<tt>PID|... </tt><br>
+<tt>ORC|NW|...			// New order. </tt><br>
+<tt>OBR||P42^PC||98142.1^Creatinine Clearance|... </tt><br>
+<tt>ORC|RE|...			// Result observations. </tt><br>
+<tt>OBR|||PC432899^PC|3000.00^Physical Exam|... </tt><br>
+<tt>OBX||ST1010.1^Body Weight|62|kg&lt;CR&gt; </tt><br>
+<tt>OBX||ST1010.3^Height|190|cm&lt;CR&gt; </tt><br>
+<tt>ORC|NW|...			// Next order. </tt><br>
+<tt>      	... 
+</tt></p>
+</body></html>

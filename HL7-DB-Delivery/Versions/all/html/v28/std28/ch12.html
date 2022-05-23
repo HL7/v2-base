@@ -1,0 +1,7381 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>
+HL7 Version 2.8 Chapter 12
+</TITLE>
+<link rel="stylesheet" href="formate.css" type="Text/css">
+<link rel="shortcut icon" href="../hl7.ico">
+<META name="generator" contents="HL7-v2.x-XML-Extractor">
+<META name="author" contents="FO">
+</HEAD>
+<BODY>
+<Table width="100%" border="0">
+<TR>
+<TD align=right>
+<font size=+5><p>12. Patient Care</font>
+</TD>
+</TR>
+<TR>
+<TD BGCOLOR=black>
+<br>
+</TD>
+</TR>
+</Table><p>
+<H1>Contents</H1>
+<ul>
+<li><a href="hl7.html">Contents</a></li>
+<li><a href="ch01.html">Chapter 01: Introduction</a></li>
+<li><a href="ch02.html">Chapter 02: Control</a></li>
+<li><a href="ch02a.html">Chapter 02a: Control (continued)</a></li>
+<li><a href="ch02b.html">Chapter 02b: Control (continued)</a></li>
+<li><a href="ch02c.html">Chapter 02c: Control (continued)</a></li>
+<li><a href="ch03.html">Chapter 03: Patient Administration</a></li>
+<li><a href="ch04.html">Chapter 04: Order Entry</a></li>
+<li><a href="ch04a.html">Chapter 04a: Order Entry</a></li>
+<li><a href="ch05.html">Chapter 05: Query</a></li>
+<li><a href="ch06.html">Chapter 06: Financial Management</a></li>
+<li><a href="ch07.html">Chapter 07: Observation Reporting</a></li>
+<li><a href="ch08.html">Chapter 08: Master Files</a></li>
+<li><a href="ch09.html">Chapter 09: Medical Records/Information Management  (Document Management)</a></li>
+<li><a href="ch10.html">Chapter 10: Scheduling</a></li>
+<li><a href="ch11.html">Chapter 11: Patient Referral</a></li>
+<li><a href="ch12.html">Chapter 12: Patient Care</a></li>
+<li><a href="ch13.html">Chapter 13: Clinical Laboratory Automation</a></li>
+<li><a href="ch14.html">Chapter 14: Application Management</a></li>
+<li><a href="ch15.html">Chapter 15: Personnel Management</a></li>
+<li><a href="ch16.html">Chapter 16: Claims and Reimbursement</a></li>
+<li><a href="ch17.html">Chapter 17: Materials Management</a></li>
+</ul>
+<hr>
+<UL>
+<li><a href="ch12.html#Heading1">12 . Patient Care</a></li>
+<UL>
+<li><a href="ch12.html#Heading2">12.1 CHAPTER 12 CONTENTS</a></li>
+<li><a href="ch12.html#Heading3">12.2 INTRODUCTION AND OVERVIEW</a></li>
+<UL>
+<li><a href="ch12.html#Heading4">12.2.1 Glossary</a></li>
+<UL>
+<li><a href="ch12.html#Heading5">12.2.1.0 </a></li>
+<li><a href="ch12.html#Heading6">12.2.1.1 Goal:</a></li>
+<li><a href="ch12.html#Heading7">12.2.1.2 Problem:</a></li>
+<li><a href="ch12.html#Heading8">12.2.1.3 Role:</a></li>
+<li><a href="ch12.html#Heading9">12.2.1.4 Clinical pathway: </a></li>
+<li><a href="ch12.html#Heading10">12.2.1.5 Variance: </a></li>
+</UL>
+<li><a href="ch12.html#Heading11">12.2.2 Scenario Descriptions</a></li>
+<UL>
+<li><a href="ch12.html#Heading12">12.2.2.0 </a></li>
+<li><a href="ch12.html#Heading13">12.2.2.1 Patient pre-admission or patient admission</a></li>
+<li><a href="ch12.html#Heading14">12.2.2.2 Consultation</a></li>
+<li><a href="ch12.html#Heading15">12.2.2.3 Loading a clinical repository</a></li>
+<li><a href="ch12.html#Heading16">12.2.2.4 Communicating clinical pathways and multidisciplinary plans of care</a></li>
+</UL>
+<li><a href="ch12.html#Heading17">12.2.3 Trigger Events</a></li>
+<li><a href="ch12.html#Heading18">12.2.4 Use of Action Codes </a></li>
+<UL>
+<li><a href="ch12.html#Heading19">12.2.4.0 </a></li>
+<li><a href="ch12.html#Heading20">12.2.4.1 Examples of action code usage</a></li>
+</UL>
+<li><a href="ch12.html#Heading21">12.2.5 Message Construction Rules</a></li>
+<UL>
+<li><a href="ch12.html#Heading22">12.2.5.0 </a></li>
+<li><a href="ch12.html#Heading23">12.2.5.1 Rule 1</a></li>
+<li><a href="ch12.html#Heading24">12.2.5.2 Rule 2</a></li>
+<li><a href="ch12.html#Heading25">12.2.5.3 Rule 3</a></li>
+<li><a href="ch12.html#Heading26">12.2.5.4 Rule 4</a></li>
+<li><a href="ch12.html#Heading27">12.2.5.5 Rule 5</a></li>
+<li><a href="ch12.html#Heading28">12.2.5.6 Rule 6</a></li>
+</UL>
+</UL>
+<li><a href="ch12.html#Heading29">12.3 MESSAGE DEFINITIONS</a></li>
+<UL>
+<li><a href="ch12.html#Heading30">12.3.1 PGL/ACK - Patient Goal Message (Events PC6, PC7, PC8) </a></li>
+<li><a href="ch12.html#Heading31">12.3.2 PPR/ACK - Patient Problem Message (Events PC1, PC2, PC3) </a></li>
+<li><a href="ch12.html#Heading32">12.3.3 PPP/ACK - Patient Pathway Message (Problem-Oriented) (Events PCB, PCC, PCD) </a></li>
+<li><a href="ch12.html#Heading33">12.3.4 PPG/ACK - Patient Pathway Message (Goal-Oriented) (Events PCG, PCH, PCJ) </a></li>
+<li><a href="ch12.html#Heading34">12.3.5 QRY - Patient Care Problem Query (Event PC4)</a></li>
+<li><a href="ch12.html#Heading35">12.3.6 PRR - Patient Problem Response (Event PC5) </a></li>
+<li><a href="ch12.html#Heading36">12.3.7 QRY - Patient Goal Query (Event PC9)</a></li>
+<li><a href="ch12.html#Heading37">12.3.8 PPV - Patient Goal Response (Event PCA) </a></li>
+<li><a href="ch12.html#Heading38">12.3.9 QRY - Patient Pathway (Problem-Oriented) Query (Event PCE)</a></li>
+<li><a href="ch12.html#Heading39">12.3.10 PTR - Patient Pathway (Problem-Oriented) Response (Event PCF) </a></li>
+<li><a href="ch12.html#Heading40">12.3.11 QRY - Patient Pathway (Goal-Oriented) Query (Event PCK)</a></li>
+<li><a href="ch12.html#Heading41">12.3.12 PPT - Patient Pathway (Goal-Oriented) Response (Event PCL) </a></li>
+</UL>
+<li><a href="ch12.html#Heading42">12.4 MESSAGE SEGMENTS</a></li>
+<UL>
+<li><a href="ch12.html#Heading43">12.4.1 GOL - Goal Detail Segment</a></li>
+<UL>
+<li><a href="ch12.html#Heading44">12.4.1.0 GOL Field Definitions</a></li>
+<li><a href="ch12.html#Heading45">12.4.1.1 GOL-1   Action Code   (ID)   00816</a></li>
+<li><a href="ch12.html#Heading46">12.4.1.2 GOL-2   Action Date/Time   (DTM)   00817</a></li>
+<li><a href="ch12.html#Heading47">12.4.1.3 GOL-3   Goal ID   (CWE)   00818</a></li>
+<li><a href="ch12.html#Heading48">12.4.1.4 GOL-4   Goal Instance ID   (EI)   00819</a></li>
+<li><a href="ch12.html#Heading49">12.4.1.5 GOL-5   Episode of Care   ID   (EI)   00820</a></li>
+<li><a href="ch12.html#Heading50">12.4.1.6 GOL-6   Goal List Priority   (NM)   00821</a></li>
+<li><a href="ch12.html#Heading51">12.4.1.7 GOL-7   Goal Established Date/Time   (DTM)   00822</a></li>
+<li><a href="ch12.html#Heading52">12.4.1.8 GOL-8   Expected Goal Achieve Date/Time   (DTM)   00824</a></li>
+<li><a href="ch12.html#Heading53">12.4.1.9 GOL-9   Goal Classification   (CWE)   00825</a></li>
+<li><a href="ch12.html#Heading54">12.4.1.10 GOL-10   Goal Management Discipline   (CWE)   00826</a></li>
+<li><a href="ch12.html#Heading55">12.4.1.11 GOL-11   Current Goal Review Status   (CWE)   00827</a></li>
+<li><a href="ch12.html#Heading56">12.4.1.12 GOL-12   Current Goal Review Date/Time   (DTM)   00828</a></li>
+<li><a href="ch12.html#Heading57">12.4.1.13 GOL-13   Next Goal Review Date/Time   (DTM)   00829</a></li>
+<li><a href="ch12.html#Heading58">12.4.1.14 GOL-14   Previous Goal Review Date/Time   (DTM)   00830</a></li>
+<li><a href="ch12.html#Heading59">12.4.1.15 GOL-15   Goal Review Interval      00831</a></li>
+<li><a href="ch12.html#Heading60">12.4.1.16 GOL-16   Goal Evaluation   (CWE)   00832</a></li>
+<li><a href="ch12.html#Heading61">12.4.1.17 GOL-17   Goal Evaluation Comment   (ST)   00833</a></li>
+<li><a href="ch12.html#Heading62">12.4.1.18 GOL-18   Goal Life Cycle Status   (CWE)   00834</a></li>
+<li><a href="ch12.html#Heading63">12.4.1.19 GOL-19   Goal Life Cycle Status Date/Time   (DTM)   00835</a></li>
+<li><a href="ch12.html#Heading64">12.4.1.20 GOL-20   Goal Target Type   (CWE)   00836</a></li>
+<li><a href="ch12.html#Heading65">12.4.1.21 GOL-21   Goal Target Name   (XPN)   00837</a></li>
+<li><a href="ch12.html#Heading66">12.4.1.22 GOL-22   Mood Code    (CNE)   02182</a></li>
+</UL>
+<li><a href="ch12.html#Heading67">12.4.2 PRB - Problem Detail Segment</a></li>
+<UL>
+<li><a href="ch12.html#Heading68">12.4.2.0 PRB Field Definitions</a></li>
+<li><a href="ch12.html#Heading69">12.4.2.1 PRB-1   Action Code   (ID)   00816</a></li>
+<li><a href="ch12.html#Heading70">12.4.2.2 PRB-2   Action Date/Time   (DTM)   00817</a></li>
+<li><a href="ch12.html#Heading71">12.4.2.3 PRB-3   Problem ID   (CWE)   00838</a></li>
+<li><a href="ch12.html#Heading72">12.4.2.4 PRB-4   Problem Instance ID   (EI)   00839</a></li>
+<li><a href="ch12.html#Heading73">12.4.2.5 PRB-5   Episode of Care ID   (EI)   00820</a></li>
+<li><a href="ch12.html#Heading74">12.4.2.6 PRB-6   Problem List Priority   (NM)   00841</a></li>
+<li><a href="ch12.html#Heading75">12.4.2.7 PRB-7   Problem Established Date/Time   (DTM)   00842</a></li>
+<li><a href="ch12.html#Heading76">12.4.2.8 PRB-8   Anticipated Problem Resolution Date/Time   (DTM)   00843</a></li>
+<li><a href="ch12.html#Heading77">12.4.2.9 PRB-9   Actual Problem Resolution Date/Time   (DTM)   00844</a></li>
+<li><a href="ch12.html#Heading78">12.4.2.10 PRB-10   Problem Classification   (CWE)   00845</a></li>
+<li><a href="ch12.html#Heading79">12.4.2.11 PRB-11   Problem Management Discipline  (CWE)   00846</a></li>
+<li><a href="ch12.html#Heading80">12.4.2.12 PRB-12   Problem Persistence   (CWE)   00847</a></li>
+<li><a href="ch12.html#Heading81">12.4.2.13 PRB-13   Problem Confirmation Status   (CWE)   00848</a></li>
+<li><a href="ch12.html#Heading82">12.4.2.14 PRB-14   Problem Life Cycle Status   (CWE)   00849</a></li>
+<li><a href="ch12.html#Heading83">12.4.2.15 PRB-15   Problem Life Cycle Status Date/Time   (DTM)   00850</a></li>
+<li><a href="ch12.html#Heading84">12.4.2.16 PRB-16   Problem Date of Onset   (DTM)   00851</a></li>
+<li><a href="ch12.html#Heading85">12.4.2.17 PRB-17   Problem Onset Text   (ST)   00852</a></li>
+<li><a href="ch12.html#Heading86">12.4.2.18 PRB-18   Problem Ranking   (CWE)   00853</a></li>
+<li><a href="ch12.html#Heading87">12.4.2.19 PRB-19   Certainty of Problem   (CWE)   00854</a></li>
+<li><a href="ch12.html#Heading88">12.4.2.20 PRB-20   Probability of Problem  (0-1) (NM)   00855</a></li>
+<li><a href="ch12.html#Heading89">12.4.2.21 PRB-21   Individual Awareness of Problem   (CWE)   00856</a></li>
+<li><a href="ch12.html#Heading90">12.4.2.22 PRB-22   Problem Prognosis   (CWE)   00857</a></li>
+<li><a href="ch12.html#Heading91">12.4.2.23 PRB-23   Individual Awareness of Prognosis   (CWE)   00858</a></li>
+<li><a href="ch12.html#Heading92">12.4.2.24 PRB-24   Family/Significant Other Awareness of Problem/Prognosis   (ST)   00859</a></li>
+<li><a href="ch12.html#Heading93">12.4.2.25 PRB-25   Security/Sensitivity   (CWE)   00823</a></li>
+<li><a href="ch12.html#Heading94">12.4.2.26 PRB-26   Problem Severity   (CWE)   02234</a></li>
+<li><a href="ch12.html#Heading95">12.4.2.27 PRB-27   Problem Perspective   (CWE)   02235</a></li>
+<li><a href="ch12.html#Heading96">12.4.2.28 PRB-28   Mood Code    (CNE)   02237</a></li>
+</UL>
+<li><a href="ch12.html#Heading97">12.4.3 PTH - Pathway Segment</a></li>
+<UL>
+<li><a href="ch12.html#Heading98">12.4.3.0 PTH - Field Definitions</a></li>
+<li><a href="ch12.html#Heading99">12.4.3.1 PTH-1   Action Code   (ID)   00816</a></li>
+<li><a href="ch12.html#Heading100">12.4.3.2 PTH-2   Pathway ID   (CWE)   01207</a></li>
+<li><a href="ch12.html#Heading101">12.4.3.3 PTH-3   Pathway Instance ID   (EI)   01208</a></li>
+<li><a href="ch12.html#Heading102">12.4.3.4 PTH-4   Pathway Established Date/Time   (DTM)   01209</a></li>
+<li><a href="ch12.html#Heading103">12.4.3.5 PTH-5   Pathway Life Cycle Status   (CWE)   01210</a></li>
+<li><a href="ch12.html#Heading104">12.4.3.6 PTH-6   Change Pathway Life Cycle Status Date/Time  (DTM)   01211</a></li>
+<li><a href="ch12.html#Heading105">12.4.3.7 PTH-7   Mood Code    (CNE)   02239</a></li>
+</UL>
+<li><a href="ch12.html#Heading106">12.4.4 VAR - Variance Segment</a></li>
+<UL>
+<li><a href="ch12.html#Heading107">12.4.4.0 VAR - Field Definitions</a></li>
+<li><a href="ch12.html#Heading108">12.4.4.1 VAR-1   Variance Instance ID   (EI)   01212</a></li>
+<li><a href="ch12.html#Heading109">12.4.4.2 VAR-2   Documented Date/Time   (DTM)   01213</a></li>
+<li><a href="ch12.html#Heading110">12.4.4.3 VAR-3   Stated Variance Date/Time   (DTM)   01214</a></li>
+<li><a href="ch12.html#Heading111">12.4.4.4 VAR-4   Variance Originator   (XCN)   01215</a></li>
+<li><a href="ch12.html#Heading112">12.4.4.5 VAR-5   Variance Classification   (CWE)   01216</a></li>
+<li><a href="ch12.html#Heading113">12.4.4.6 VAR-6   Variance Description   (ST)   01217</a></li>
+</UL>
+<li><a href="ch12.html#Heading114">12.4.5 REL - Clinical Relationship Segment</a></li>
+<UL>
+<li><a href="ch12.html#Heading115">12.4.5.0 REL - Field Definitions</a></li>
+<li><a href="ch12.html#Heading116">12.4.5.1 REL-1   Set ID - REL   (SI)   02240</a></li>
+<li><a href="ch12.html#Heading117">12.4.5.2 REL-2   Relationship Type   (CWE)   02241</a></li>
+<li><a href="ch12.html#Heading118">12.4.5.3 REL-3   This Relationship Instance Identifier   (EI)    02242</a></li>
+<li><a href="ch12.html#Heading119">12.4.5.4 REL-4   Source Information Instance Identifier   (EI)   02243</a></li>
+<li><a href="ch12.html#Heading120">12.4.5.5 REL-5   Target Information Instance Identifier   (EI)   02244</a></li>
+<li><a href="ch12.html#Heading121">12.4.5.6 REL-6   Asserting Entity Instance ID   (EI)   02245</a></li>
+<li><a href="ch12.html#Heading122">12.4.5.7 REL-7   Asserting Person   (XCN)   02246</a></li>
+<li><a href="ch12.html#Heading123">12.4.5.8 REL-8   Asserting Organization   (XON)   02247</a></li>
+<li><a href="ch12.html#Heading124">12.4.5.9 REL-9   Assertor Address   (XAD)   02248</a></li>
+<li><a href="ch12.html#Heading125">12.4.5.10 REL-10   Assertor Contact   (XTN)   02249</a></li>
+<li><a href="ch12.html#Heading126">12.4.5.11 REL-11   Assertion Date Range   (DR)   02250</a></li>
+<li><a href="ch12.html#Heading127">12.4.5.12 REL-12   Negation Indicator   (ID)   02251</a></li>
+<li><a href="ch12.html#Heading128">12.4.5.13 REL-13   Certainty of Relationship   (CWE)   02252</a></li>
+<li><a href="ch12.html#Heading129">12.4.5.14 REL-14   Priority No   (NM)   02253</a></li>
+<li><a href="ch12.html#Heading130">12.4.5.15 REL-15   Priority Sequence No    (NM)   02254</a></li>
+<li><a href="ch12.html#Heading131">12.4.5.16 REL-16   Separability Indicator   (ID)   02255</a></li>
+</UL>
+</UL>
+<li><a href="ch12.html#Heading132">12.5 EXAMPLE TRANSACTIONS</a></li>
+<li><a href="ch12.html#Heading133">12.6 IMPLEMENTATION CONSIDERATIONS</a></li>
+<li><a href="ch12.html#Heading134">12.7 OUTSTANDING ISSUES</a></li>
+</UL>
+</UL>
+<p>
+<HR>
+<a id="Heading1">
+<H1 class="css_Überschrift1" >
+12 . Patient Care
+</H1>
+<p>
+</p>
+<p>
+Chapter Chair/Editor:
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+David Rowed Ocean Informatics; HL7 Australia
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Chapter Chair:
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Daniel Russler, M.D. McKesson Information Solutions
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Chapter Chair:
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+William Goossen HL7 Netherlands
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Chapter Editors:
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Klaus Veil HL7 Australia
+</p>
+<p>
+Max Walker HL7 Australia
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Sponsoring Work Group:
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Patient Care
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+List Server:
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+patientcare@lists.hl7.org  
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<a id="Heading2">
+<H2 class="css_Überschrift2" >
+12.1 CHAPTER 12 CONTENTS
+</H2>
+<p>
+</p>
+<a id="Heading3">
+<H2 class="css_Überschrift2" >
+12.2 INTRODUCTION AND OVERVIEW
+</H2>
+<p>
+The Patient Care Work Group has designed the following messages to support the communication of problem-oriented records, including clinical problems, goals, and pathway information between computer systems.  The purpose of this chapter is to describe healthcare messages that need to be communicated between clinical applications for a given individual.  These message transactions can be sent in either batch or online mode.  As described in Chapter 2, multiple communication transactions may be grouped and sent between applications using a file transfer media or direct networked connection.
+</p>
+<p>
+This chapter defines the transactions that occur at the seventh OSI level, that is, abstract messages.  The examples of messages included in this chapter were constructed using the HL7 Encoding Rules.
+</p>
+<p>
+This chapter describes a Clinical Relationship segment which enables the run-time expression of relationships between information elements both inside and, where identifiable, by the application, outside the message.
+</p>
+<a id="Heading4">
+<H3 class="css_Überschrift3" >
+12.2.1 Glossary
+</H3>
+<p>
+The following definitions of key terms are used throughout this chapter:
+</p>
+<a id="Heading5">
+<H4 class="css_Überschrift4" >
+12.2.1.0 
+</H4>
+<a id="Heading6">
+<H4 class="css_Überschrift4" >
+12.2.1.1 Goal:
+</H4>
+<p>
+A goal refers to an objective to be achieved as a consequence of healthcare interventions applied to an individual.  Goals are set in many areas of the healthcare system, and include educational, behavior modification, and clinical goals such as reduced discomfort, improved circulation.  Goals are documented by a variety of healthcare professionals including physicians, nurses, and respiratory and other therapists. Goals are defined during patient visits and they may span one or multiple visits, encounters, or episodes of care.
+</p>
+<a id="Heading7">
+<H4 class="css_Überschrift4" >
+12.2.1.2 Problem:
+</H4>
+<p>
+A problem of a given individual can be described by formal diagnosis coding systems (such as DRGs, NANDA Nursing Diagnosis, ICD9, DSM, etc.) or by other professional descriptions of healthcare issues affecting an individual.  Problems can be short- or long-term in nature, chronic or acute, and have a status.  In a longitudinal record, all problems may be of importance in the overall long-term care of an individual, and may undergo changes in status repeatedly.  Problems are identified during patient visits, and may span multiple visits, encounters, or episodes of care.
+</p>
+<a id="Heading8">
+<H4 class="css_Überschrift4" >
+12.2.1.3 Role:
+</H4>
+<p>
+A role refers to the function or responsibility assumed by a person in the context of a healthcare event.  Role information documents a person's association with an identified healthcare activity.  Examples include primary care provider, transcriptionist, reviewer, and consulting physician.
+</p>
+<a id="Heading9">
+<H4 class="css_Überschrift4" >
+12.2.1.4 Clinical pathway: 
+</H4>
+<p>
+A clinical pathway is a standardized plan of care against which progress towards health is measured.  A clinical pathway is applied based upon the results of a patient assessment.  A clinical pathway shows exact timing of all key patient care activities intended to achieve expected standard outcomes within designated time frames.  A clinical pathway includes documentation of problems, expected outcomes/goals, and clinical interventions/orders.
+</p>
+<a id="Heading10">
+<H4 class="css_Überschrift4" >
+12.2.1.5 Variance: 
+</H4>
+<p>
+Variances are documented deviations, either positive or negative, from a pre-defined standard.  Variances are documented against expected outcomes, orders, or the patient's progress in general.
+</p>
+<a id="Heading11">
+<H3 class="css_Überschrift3" >
+12.2.2 Scenario Descriptions
+</H3>
+<a id="Heading12">
+<H4 class="css_Überschrift4" >
+12.2.2.0 
+</H4>
+<a id="Heading13">
+<H4 class="css_Überschrift4" >
+12.2.2.1 Patient pre-admission or patient admission
+</H4>
+<p>
+A physician's office is scheduling a patient for admission to the hospital.  The admitting diagnosis/problem list and admission information is sent by the physician's electronic information system to the hospital's Patient Administration system and longitudinal medical record.  The trigger event identifies the message as an "add problem" or update patient medical information to the Patient Administration and medical record system.
+</p>
+<a id="Heading14">
+<H4 class="css_Überschrift4" >
+12.2.2.2 Consultation
+</H4>
+<p>
+A consultation is requested for an individual.  The information system generating the consultation triggers an unsolicited message containing the problem/diagnosis list that is transmitted to the consulting organization.  Goals and various kinds of role information are included with the transmission.  The trigger event identifies the message as an unchanged record.
+</p>
+<a id="Heading15">
+<H4 class="css_Überschrift4" >
+12.2.2.3 Loading a clinical repository
+</H4>
+<p>
+Information from point of care, clinical practice management or ancillary systems regarding the creation or update of pathways, problems, diagnoses, or goals are communicated to the clinical repository.  Message triggers from the departmental systems may indicate adding, correcting, deleting, or updating records maintained in the clinical data repository.
+</p>
+<a id="Heading16">
+<H4 class="css_Überschrift4" >
+12.2.2.4 Communicating clinical pathways and multidisciplinary plans of care
+</H4>
+<p>
+The pathway is communicated between Quality Assurance, Point of Care Systems, Research Databases, and Clinical Order Entry Systems.  A point of care information system triggers a linkage between a problem and a set of ordered interventions initiated by the clinical order entry system.
+</p>
+<a id="Heading17">
+<H3 class="css_Überschrift3" >
+12.2.3 Trigger Events
+</H3>
+<p>
+The trigger events originate goal, problem and pathway messages.  Each trigger event is documented below, along with the appropriate form of the message exchange.  These are message-level event triggers, which are augmented by the action code fields contained in the pathway, problem and goal segments described below.  Action codes are required fields in patient care message segments (see Chapter 2 for further information regarding implementation issues).  Implementors need to apply the appropriate logic as part of their message construction (for example, logic would state that an "add" trigger event should not include segments with a "delete" action code).
+</p>
+<p>
+In order to accommodate these high-level events, the following patient care events are included in HL7 Table 0003 - Event Type. The added events are instantiated in MSH-9 Message Type and are used by the pathway, problem, and goal messages.  MSH-9 Message Type contains the message type and trigger event for the message.
+</p>
+<a id="Heading18">
+<H3 class="css_Überschrift3" >
+12.2.4 Use of Action Codes 
+</H3>
+<p>
+Prior to Version 2.3 of the Standard, all repeating segments had to be sent in an update message, because there was no way to indicate which ones changed and which ones did not.  In this snapshot mode, all repeating segments must be sent with every subsequent message in the series of messages.
+</p>
+<p>
+To reduce the number of repeating segments, action codes may be employed.  Action codes (e.g., order control codes and result status codes) may be embedded within repeating segments and used by sophisticated application parsers to reduce the number of repetitions required for a complete record.
+</p>
+<p>
+In either event, for systems implementing Version 2.3 or higher, if a particular repeating segment can be updated by either of these two modes, the parties concerned determine by agreement on a site-specific basis whether an interface uses the snapshot mode or the action code/unique identifier mode.
+</p>
+<p>
+A description of valid action codes used in message segments originating in this chapter is given immediately below:
+</p>
+<ol type=a>
+<li>
+<p>
+AD (ADD) - The object defined within the segment should be added to the set of objects that is linked to the previous object in the hierarchical structure of the message. (i.e., a goal under a problem is implicitly linked to the problem.  If the goals already exist, the segment placement indicates the addition of a new linkage between the goal and that problem.)
+</p>
+</li>
+<li>
+<p>
+CO (CORRECT) - The object attributes contained within the segment have been corrected.  This is not updated information, but information originally sent and later found to be in error.  The previous attributes should be replaced.
+</p>
+</li>
+<li>
+<p>
+UP (UPDATE) - The object attributes contained within the segment are an update of previously sent information.  The previous information was correct for the period of time in which it was sent.
+</p>
+</li>
+<li>
+<p>
+DE (DELETE) - This object should be deleted from the set of objects which are linked to the previous object in the message hierarchy.  An example might be a role deleted from the set of roles contained by the Goal object.  Delete presumes the original linkage was in error.
+</p>
+</li>
+<li>
+<p>
+LI (LINK) - This action code denotes that the object contained in the segment should be linked in a dependency relationship to the previous object in the hierarchy.  It is used to denote relationships and should not contain additional information other than those attributes necessary for specific identification.
+</p>
+</li>
+<li>
+<p>
+UN (UNLINK) - This is a request that the object be removed from the set of linked objects.  An example might be the dissolution of a relationship between a problem and a goal.  Unlink presumes the original linkage was correct, but due to life cycle changes the active linkage is no longer appropriate.
+</p>
+</li>
+<li>
+<p>
+UC (UNCHANGED) - This code signifies that the segment is being included for the purposes of hierarchical set identification.  It does not contain any changed or additional data.  Its purpose is to allow the identification of the collection set to which subsequent segments belong in the message structure.  An example might be the modification of role information requiring the previous goal segment to be appropriately identified.
+</p>
+</li>
+</ol>
+<a id="Heading19">
+<H4 class="css_Überschrift4" >
+12.2.4.0 
+</H4>
+<a id="Heading20">
+<H4 class="css_Überschrift4" >
+12.2.4.1 Examples of action code usage
+</H4>
+<p>
+A problem list and associated goals are generated in a Point of Care system.  This transaction is broadcast through an interface engine that determines which systems in the organization require the event information and then forwards the messages appropriately.  Each segment included in the original message contains the Action Code for ADD to signify an original message instance.
+</p>
+<ol type=a>
+<li>
+<p>
+Upon subsequent review, it is determined that a role segment designates the wrong person as the transcribing clerk for a problem.  After the information is changed in the originating system, a new message is sent to provide synchronization.  The message includes the original PRB segment with the PRB-1 Action Code for UNCHANGED (to identify the problem for which the role is being changed).  This code signifies that the segment is included for the purposes of hierarchical linkage identification and that none of the information contained in it has been changed.  The accompanying role segment sent would include the role transcriber in ROL-3  Role, the correct person in ROL-4 Role Person, and the value for CORRECT in ROL-2 Action Code.
+</p>
+</li>
+<li>
+<p>
+It is later decided that an additional goal must be added to a specific problem, and that an already existing goal that is currently supporting another problem should also be linked with this specific problem.  The message would be constructed with the problem (PRB) segment for identification (the value for PRB-1 Action Code is UNCHANGED).  The goal segment (GOL) for the additional goal would include GOL-1 Action Code for ADD.  The goals already included with the problem list that need to be linked to this problem would have to be included on additional GOL segments with the GOL-1 Action Code for LINK.   Once data regarding a Diagnosis/Problem or a Goal have been communicated to other systems, there are occasions on which the data may have to be amended.
+</p>
+</li>
+<li>
+<p>
+New diagnoses/problems must be added to an individual's list.  The Problem message is sent with the appropriate Problem Instance ID.  All PRB segment(s) included in the message that contain the value for ADD in PRB-1 Action Code are processed as additions to the individual's problem list.
+</p>
+</li>
+<li>
+<p>
+New goals are added to the individual's record.  The Goal message is sent with the GOL segments indicating the value for ADD as GOL-1 Action Code in each segment occurrence.
+</p>
+</li>
+<li>
+<p>
+Changes are made to the attributes of a goal.  Examples include a change in the expected resolution date, a change in the life cycle status to reflect its successful conclusion, etc.  The Goal message is sent with the appropriate GOL-4 Goal Instance ID.  The GOL segments of the Goal message would include the value for UPDATE in GOL-1 Action Code.
+</p>
+</li>
+<li>
+<p>
+A new goal is attached to a problem already in the repository (e.g., the goal of "education on diabetes" for an individual diagnosed with "insulin-dependent diabetes").  A problem message would be sent with the PRB segment including the PRB-4 Problem Instance ID for the diabetes problem, and with the value UNCHANGED in PRB-1 Action Code.  The attached GOL segment for the education goal would accompany the message and contain the value ADD in its GOL-1 Action Code field.
+</p>
+</li>
+<li>
+<p>
+A new diagnosis/problem is attached to a goal (e.g., a Goal is to "discharge an individual with intact skin."  While the initial problem was "skin breakdown related to immobility," a new problem is "potential for skin breakdown related to draining wounds").  A Goal message would be sent with the GOL segment, including the GOL-4 Goal Instance ID for the discharge goal, and contain the value UNCHANGED in GOL-1 Action Code.  The attached PRB segment identifying the new problem, "potential for skin breakdown related to draining wounds," would accompany this message and contain the value for ADD in PRB-1 Action Code.
+</p>
+</li>
+</ol>
+<p>
+Note:  If there is a requirement to modify information contained on a segment and unlink that same problem/goal, two segments must be transmitted (one for the modification and one for the unlink request).
+</p>
+<a id="Heading21">
+<H3 class="css_Überschrift3" >
+12.2.5 Message Construction Rules
+</H3>
+<p>
+The semantic meaning of a message is contained in the message through the use of the trigger events, the implicit hierarchical linkages of the segments, and the segment action codes.  Each of these has a scope within the message.  The message event as included in the MSH-9 Message Type has a scope which is global to the message.  The segment hierarchical linkage has a scope which includes both the segment itself and its relationship to its parent.  The segment action code's scope is to the segment itself.  It may further define link and unlink actions in the hierarchical structure.
+</p>
+<a id="Heading22">
+<H4 class="css_Überschrift4" >
+12.2.5.0 
+</H4>
+<a id="Heading23">
+<H4 class="css_Überschrift4" >
+12.2.5.1 Rule 1
+</H4>
+<p>
+The trigger event defines the action at the first level of the hierarchy, and should not be contradicted by either hierarchical linkages or segment action codes.  Thus, a PC1 (problem add) event should only contain problem, goal, and role segments that have action codes ADD.
+</p>
+<p>
+Figure 12-1.  Table of allowable trigger event types and action codes
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+Trigger Event Types
+</TH><TH>
+Allowable Action Codes
+</TH>
+</TR>
+<TR>
+<TD>
+xxx-Add
+</TD><TD>
+Top level action code must be ADD Dependent segment action code must be ADD (or NW for Order segments)
+</TD>
+</TR>
+<TR>
+<TD>
+xxx-Update
+</TD><TD>
+Top level action code must be CORRECT, UPDATE, or UNCHANGED Dependent segment action codes - Any are allowed at the lower hierarchical levels
+</TD>
+</TR>
+<TR>
+<TD>
+xxx-Delete
+</TD><TD>
+Top level action code must be DELETE Dependent segments' action codes must be DELETE
+</TD>
+</TR>
+</TABLE><p>
+<a id="Heading24">
+<H4 class="css_Überschrift4" >
+12.2.5.2 Rule 2
+</H4>
+<p>
+When using the segment action codes LINK and UNLINK, only those fields which are used to define a unique instance of the object are used.  This action cannot be used to send changes and updates to the other fields of that segment.
+</p>
+<a id="Heading25">
+<H4 class="css_Überschrift4" >
+12.2.5.3 Rule 3
+</H4>
+<p>
+In dependent segments ADD is the action code to use to establish the initial relationship between parent-child objects.  The receiving system must be ready to handle multiple adds of the same object.  An example is a Problem List of three (3) problems which is being sent.  Attached to these problems are three (3) goals.  Problem A has Goals 1 and 2 attached to it.  Problem B has the same Goal 2 and a new Goal 3 attached to it.  All of these will have the ADD action code in the segment, and when Problem B is transmitted with Goals 2 and 3, Goal 2 will have been previously transmitted with Problem A.  The message construct would look like this:
+</p>
+<p>
+MSH...
+</p>
+<p>
+PID...
+</p>
+<p>
+			PRB  (Problem A)
+</p>
+<p>
+				GOL  (Goal 1)
+</p>
+<p>
+				GOL  (Goal 2)
+</p>
+<p>
+			PRB  (Problem B)
+</p>
+<p>
+				GOL  (Goal 2)
+</p>
+<p>
+				GOL  (Goal 3)
+</p>
+<p>
+			PRB  (Problem C)      (No attached goals)
+</p>
+<p>
+When two (or more) instances of the same problem or goal segment are present in a message both such segments must have identical values for all fields.
+</p>
+<a id="Heading26">
+<H4 class="css_Überschrift4" >
+12.2.5.4 Rule 4
+</H4>
+<p>
+Remember that HL7 only provides for error messages at the message level.  Thus, if the receiving system cannot process one segment, the entire message is going to be treated as an error (See Chapter 2).
+</p>
+<a id="Heading27">
+<H4 class="css_Überschrift4" >
+12.2.5.5 Rule 5
+</H4>
+<p>
+The Problem, Goal, and Pathway messages integrate order segments as a method for establishing causal linkages.  Linkages or relationships between orders, problems, goals, and pathways can therefore be presented in the Patient Care messages.
+</p>
+<p>
+Orders referenced in Patient Care messages are used for linkage purposes only.  Initiation and status changes to orders are accomplished by using dedicated messages defined in the Order Entry Chapter.
+</p>
+<a id="Heading28">
+<H4 class="css_Überschrift4" >
+12.2.5.6 Rule 6
+</H4>
+<p>
+Order segments are sent with Problem and Goal segments in order to establish a linkage between them, NOT to communicate new orders or changes to those orders.  For purposes of these messages, an LI (Link) and a UL (Unlink) code have been added to HL7 Table 0119 - Order Control Codes.
+</p>
+<a id="Heading29">
+<H2 class="css_Überschrift2" >
+12.3 MESSAGE DEFINITIONS
+</H2>
+<p>
+Applications can have differing orientations for representing problem and goal hierarchies.  For example, parent/child relationships may map problem(s) to goal(s), or goal(s) to problem(s).  To accommodate these different orientations, the Problem message allows representation of goals that are functionally dependent upon a problem, and the Goal message allows representation of problems that are functionally dependent on a goal.
+</p>
+<p>
+Due to the multiple occurrences of common segments such as Variance (VAR) and Notes (NTE), we have chosen to expand the segment definitions on the message diagrams to explicitly identify the hierarchical relationships.  Examples of this would be "Variance (Goal)" and "Variance (Role)."  This does not imply unique segments, but indicates in the first case that the variance is related to its parent Goal, and in the second case that the variance is related to its parent Role.
+</p>
+<p>
+The notation used to describe the sequence, the optionality, and the repetition of segments is described in Chapter 2, under "Format for defining abstract message."
+</p>
+<p>
+Note: For all message definitions, the "OBR etc." notation represents all possible combinations of pharmacy and other order detail segments, as outlined in Chapter 4 conventions (See section 4.2.2.4, "Order detail segment").
+</p>
+<a id="Heading30">
+<H3 class="css_Überschrift3" >
+12.3.1 PGL/ACK - Patient Goal Message (Events PC6, PC7, PC8) 
+</H3>
+<p>
+This message is used to send goals from one application to another (e.g., a point of care system to a clinical repository).  Many of the segments associated with this event are optional.  This optionality allows systems in need of this information to set up transactions that fulfill their requirements.
+</p>
+<a id="CTD">
+<p>
+PGL^PC6-PC8^PGL_PC6: Patient Goal Message
+</p>
+<tr>
+<td>
+
+</td>
+<td>
+<br>
+</td>
+</tr>
+<TABLE width="100%" border=1>
+<TR>
+<TD>
+<a href="ch02.html#Heading175">MSH</a>
+</TD><TD>
+Message Header
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading221">SFT</a>
+ } 
+ ] 
+</TD><TD>
+Software
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmSFT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch02.html#Heading237">UAC</a>
+ ] 
+</TD><TD>
+User Authentication Credential
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmUAC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch03.html#Heading78">PID</a>
+</TD><TD>
+Patient Identification
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPID.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[
+</TD><TD>
+--- PATIENT_VISIT begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch03.html#Heading120">PV1</a>
+</TD><TD>
+Patient Visit
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPV1.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch03.html#Heading176">PV2</a>
+ ] 
+</TD><TD>
+Patient Visit - Additional Info
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPV2.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+]
+</TD><TD>
+--- PATIENT_VISIT end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+{
+</TD><TD>
+--- GOAL begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading43">GOL</a>
+</TD><TD>
+Detail Goal
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmGOL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments & Comments (Goal Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Goal)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- GOAL_ROLE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch15.html#Heading102">ROL</a>
+</TD><TD>
+Role (Goal)
+</TD><TD>
+<br>
+</TD><TD>
+15
+</TD>
+<td><a href="../hl7v28segmROL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Role)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- GOAL_ROLE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PATHWAY begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading97">PTH</a>
+</TD><TD>
+Detail Pathway
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmPTH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Pathway)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PATHWAY end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Observation/Result Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading67">PRB</a>
+</TD><TD>
+Detail Problem
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmPRB.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Problem Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Problem)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM_ROLE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch15.html#Heading102">ROL</a>
+</TD><TD>
+Role (Problem)
+</TD><TD>
+<br>
+</TD><TD>
+15
+</TD>
+<td><a href="../hl7v28segmROL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Role)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM_ROLE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Observation/Result Comments)
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- ORDER begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading37">ORC</a>
+</TD><TD>
+Common Order
+</TD><TD>
+<br>
+</TD><TD>
+4
+</TD>
+<td><a href="../hl7v28segmORC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[
+</TD><TD>
+--- ORDER_DETAIL begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+ < 
+<a href="ch04.html#Heading45"></a>
+</TD><TD>
+--- CHOICE
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading79">OBR</a>
+</TD><TD>
+Order Detail Segment
+</TD><TD>
+<br>
+</TD><TD>
+4
+</TD>
+<td><a href="../hl7v28segmOBR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading45"></a>
+ | 
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+Hxx
+</TD><TD>
+etc.
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmHxx.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading45"></a>
+ > 
+</TD><TD>
+--- CHOICE
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes (Order Detail Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Order)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- ORDER_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Observation Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Observation/Result)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- ORDER_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+]
+</TD><TD>
+--- ORDER_DETAIL end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- ORDER end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}
+</TD><TD>
+--- GOAL end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+</TABLE><p>
+<a id="CTD">
+<p>
+ACK^PC6-PC8^ACK: General Acknowledgment
+</p>
+<tr>
+<td>
+
+</td>
+<td>
+<br>
+</td>
+</tr>
+<TABLE width="100%" border=1>
+<TR>
+<TD>
+<a href="ch02.html#Heading175">MSH</a>
+</TD><TD>
+Message Header
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading221">SFT</a>
+ } 
+ ] 
+</TD><TD>
+Software
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmSFT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch02.html#Heading237">UAC</a>
+ ] 
+</TD><TD>
+User Authentication Credential
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmUAC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch02.html#Heading165">MSA</a>
+</TD><TD>
+Message Acknowledgment
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSA.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading131">ERR</a>
+ } 
+ ] 
+</TD><TD>
+Error
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmERR.htm">DB</a></td>
+</TR>
+</TABLE><p>
+<p>
+This error segment indicates the fields that caused a transaction to be rejected.
+</p>
+<a id="Heading31">
+<H3 class="css_Überschrift3" >
+12.3.2 PPR/ACK - Patient Problem Message (Events PC1, PC2, PC3) 
+</H3>
+<p>
+The patient problem message is used to send problems from one application to another (e.g., a point of care system to a clinical repository).  Many of the segments associated with this event are optional.  This optionality allows systems in need of this information to set up transactions that fulfill their requirements.
+</p>
+<a id="CTD">
+<p>
+PPR^PC1-PC3^PPR_PC1: Patient Problem Message
+</p>
+<tr>
+<td>
+
+</td>
+<td>
+<br>
+</td>
+</tr>
+<TABLE width="100%" border=1>
+<TR>
+<TD>
+<a href="ch02.html#Heading175">MSH</a>
+</TD><TD>
+Message Header
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading221">SFT</a>
+ } 
+ ] 
+</TD><TD>
+Software
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmSFT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch02.html#Heading237">UAC</a>
+ ] 
+</TD><TD>
+User Authentication Credential
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmUAC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch03.html#Heading78">PID</a>
+</TD><TD>
+Patient Identification
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPID.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[
+</TD><TD>
+--- PATIENT_VISIT begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch03.html#Heading120">PV1</a>
+</TD><TD>
+Patient Visit
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPV1.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch03.html#Heading176">PV2</a>
+ ] 
+</TD><TD>
+Patient Visit
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPV2.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+]
+</TD><TD>
+--- PATIENT_VISIT end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+{
+</TD><TD>
+--- PROBLEM begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading67">PRB</a>
+</TD><TD>
+Detail Problem
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmPRB.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Problem Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Problem)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM_ROLE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch15.html#Heading102">ROL</a>
+</TD><TD>
+Role (Problem)
+</TD><TD>
+<br>
+</TD><TD>
+15
+</TD>
+<td><a href="../hl7v28segmROL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Role)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM_ROLE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PATHWAY begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading97">PTH</a>
+</TD><TD>
+Detail Pathway
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmPTH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Pathway)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PATHWAY end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Observation/Result Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- GOAL begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading43">GOL</a>
+</TD><TD>
+Detail Goal
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmGOL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Goal Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Goal)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- GOAL_ROLE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch15.html#Heading102">ROL</a>
+</TD><TD>
+Role (Goal)
+</TD><TD>
+<br>
+</TD><TD>
+15
+</TD>
+<td><a href="../hl7v28segmROL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Role)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- GOAL_ROLE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- GOAL_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Observation/Result Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- GOAL_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- GOAL end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- ORDER begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading37">ORC</a>
+</TD><TD>
+Common Order
+</TD><TD>
+<br>
+</TD><TD>
+4
+</TD>
+<td><a href="../hl7v28segmORC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[
+</TD><TD>
+--- ORDER_DETAIL begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+ < 
+<a href="ch04.html#Heading45"></a>
+</TD><TD>
+--- CHOICE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading79">OBR</a>
+</TD><TD>
+Order Detail Segment
+</TD><TD>
+<br>
+</TD><TD>
+4
+</TD>
+<td><a href="../hl7v28segmOBR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading45"></a>
+ | 
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+Hxx
+</TD><TD>
+etc.
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmHxx.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading45"></a>
+ > 
+</TD><TD>
+--- CHOICE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Order Detail Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Order)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- ORDER_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Observation Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Observation/Result)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- ORDER_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+]
+</TD><TD>
+--- ORDER_DETAIL end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- ORDER end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}
+</TD><TD>
+--- PROBLEM end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+</TABLE><p>
+<a id="CTD">
+<p>
+ACK^PC1-PC3^ACK: General Acknowledgment
+</p>
+<tr>
+<td>
+
+</td>
+<td>
+<br>
+</td>
+</tr>
+<TABLE width="100%" border=1>
+<TR>
+<TD>
+<a href="ch02.html#Heading175">MSH</a>
+</TD><TD>
+Message Header
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading221">SFT</a>
+ } 
+ ] 
+</TD><TD>
+Software
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmSFT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch02.html#Heading237">UAC</a>
+ ] 
+</TD><TD>
+User Authentication Credential
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmUAC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch02.html#Heading165">MSA</a>
+</TD><TD>
+Message Acknowledgment
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSA.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading131">ERR</a>
+ } 
+ ] 
+</TD><TD>
+Error
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmERR.htm">DB</a></td>
+</TR>
+</TABLE><p>
+<p>
+This error segment indicates the fields that caused a transaction to be rejected.
+</p>
+<a id="Heading32">
+<H3 class="css_Überschrift3" >
+12.3.3 PPP/ACK - Patient Pathway Message (Problem-Oriented) (Events PCB, PCC, PCD) 
+</H3>
+<a id="CTD">
+<p>
+PPP^PCB-PCD^PPP_PCB: Patient Pathway Problem-Oriented Message
+</p>
+<tr>
+<td>
+
+</td>
+<td>
+<br>
+</td>
+</tr>
+<TABLE width="100%" border=1>
+<TR>
+<TD>
+<a href="ch02.html#Heading175">MSH</a>
+</TD><TD>
+Message Header
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading221">SFT</a>
+ } 
+ ] 
+</TD><TD>
+Software
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmSFT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch02.html#Heading237">UAC</a>
+ ] 
+</TD><TD>
+User Authentication Credential
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmUAC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch03.html#Heading78">PID</a>
+</TD><TD>
+Patient Identification
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPID.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[
+</TD><TD>
+--- PATIENT_VISIT begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch03.html#Heading120">PV1</a>
+</TD><TD>
+Patient Visit
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPV1.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch03.html#Heading176">PV2</a>
+ ] 
+</TD><TD>
+Patient Visit
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPV2.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+]
+</TD><TD>
+--- PATIENT_VISIT end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+{
+</TD><TD>
+--- PATHWAY begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading97">PTH</a>
+</TD><TD>
+Pathway Detail
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmPTH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Pathway Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Pathway)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PATHWAY_ROLE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch15.html#Heading102">ROL</a>
+</TD><TD>
+Role (Pathway)
+</TD><TD>
+<br>
+</TD><TD>
+15
+</TD>
+<td><a href="../hl7v28segmROL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Role)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PATHWAY_ROLE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading67">PRB</a>
+</TD><TD>
+Detail Problem
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmPRB.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Problem Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Problem)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM_ROLE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch15.html#Heading102">ROL</a>
+</TD><TD>
+Role (Problem)
+</TD><TD>
+<br>
+</TD><TD>
+15
+</TD>
+<td><a href="../hl7v28segmROL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Role)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM_ROLE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Observation/Result Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- GOAL begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading43">GOL</a>
+</TD><TD>
+Detail Goal
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmGOL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Goal Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Goal)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- GOAL_ROLE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch15.html#Heading102">ROL</a>
+</TD><TD>
+Role (Goal)
+</TD><TD>
+<br>
+</TD><TD>
+15
+</TD>
+<td><a href="../hl7v28segmROL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Role)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- GOAL_ROLE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- GOAL_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Observation/Result Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- GOAL_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- GOAL end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- ORDER begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading37">ORC</a>
+</TD><TD>
+Common Order
+</TD><TD>
+<br>
+</TD><TD>
+4
+</TD>
+<td><a href="../hl7v28segmORC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[
+</TD><TD>
+--- ORDER_DETAIL begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+ < 
+<a href="ch04.html#Heading45"></a>
+</TD><TD>
+--- CHOICE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading79">OBR</a>
+</TD><TD>
+Order Detail Segment
+</TD><TD>
+<br>
+</TD><TD>
+4
+</TD>
+<td><a href="../hl7v28segmOBR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading45"></a>
+ | 
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+Hxx
+</TD><TD>
+etc.
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmHxx.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading45"></a>
+ > 
+</TD><TD>
+--- CHOICE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Order Detail Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Order)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- ORDER_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Observation Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Observation/Result)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- ORDER_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+]
+</TD><TD>
+--- ORDER_DETAIL end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- ORDER end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}
+</TD><TD>
+--- PATHWAY end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+</TABLE><p>
+<a id="CTD">
+<p>
+ACK^PCB-PCD^ACK: General Acknowledgment
+</p>
+<tr>
+<td>
+
+</td>
+<td>
+<br>
+</td>
+</tr>
+<TABLE width="100%" border=1>
+<TR>
+<TD>
+<a href="ch02.html#Heading175">MSH</a>
+</TD><TD>
+Message Header
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading221">SFT</a>
+ } 
+ ] 
+</TD><TD>
+Software
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmSFT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch02.html#Heading237">UAC</a>
+ ] 
+</TD><TD>
+User Authentication Credential
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmUAC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch02.html#Heading165">MSA</a>
+</TD><TD>
+Message Acknowledgment
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSA.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading131">ERR</a>
+ } 
+ ] 
+</TD><TD>
+Error
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmERR.htm">DB</a></td>
+</TR>
+</TABLE><p>
+<a id="Heading33">
+<H3 class="css_Überschrift3" >
+12.3.4 PPG/ACK - Patient Pathway Message (Goal-Oriented) (Events PCG, PCH, PCJ) 
+</H3>
+<a id="CTD">
+<p>
+PPG^PCG,PCH,PCJ^PPG_PCG: Patient Pathway Goal-Oriented Message
+</p>
+<tr>
+<td>
+
+</td>
+<td>
+<br>
+</td>
+</tr>
+<TABLE width="100%" border=1>
+<TR>
+<TD>
+<a href="ch02.html#Heading175">MSH</a>
+</TD><TD>
+Message Header
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading221">SFT</a>
+ } 
+ ] 
+</TD><TD>
+Software
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmSFT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch02.html#Heading237">UAC</a>
+ ] 
+</TD><TD>
+User Authentication Credential
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmUAC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch03.html#Heading78">PID</a>
+</TD><TD>
+Patient Identification
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPID.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[
+</TD><TD>
+--- PATIENT_VISIT begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch03.html#Heading120">PV1</a>
+</TD><TD>
+Patient Visit
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPV1.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch03.html#Heading176">PV2</a>
+ ] 
+</TD><TD>
+Patient Visit
+</TD><TD>
+<br>
+</TD><TD>
+3
+</TD>
+<td><a href="../hl7v28segmPV2.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+]
+</TD><TD>
+--- PATIENT_VISIT end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+{
+</TD><TD>
+--- PATHWAY begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading97">PTH</a>
+</TD><TD>
+Pathway Detail
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmPTH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Pathway Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Pathway)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PATHWAY_ROLE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch15.html#Heading102">ROL</a>
+</TD><TD>
+Role (Pathway)
+</TD><TD>
+<br>
+</TD><TD>
+15
+</TD>
+<td><a href="../hl7v28segmROL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Role)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PATHWAY_ROLE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- GOAL begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading43">GOL</a>
+</TD><TD>
+Detail Goal
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmGOL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Goal Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Goal)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- GOAL_ROLE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch15.html#Heading102">ROL</a>
+</TD><TD>
+Role (Goal)
+</TD><TD>
+<br>
+</TD><TD>
+15
+</TD>
+<td><a href="../hl7v28segmROL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Role)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- GOAL_ROLE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- GOAL_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Observation/Result Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- GOAL_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch12.html#Heading67">PRB</a>
+</TD><TD>
+Detail Problem
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmPRB.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Problem Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Problem)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM_ROLE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch15.html#Heading102">ROL</a>
+</TD><TD>
+Role (Problem)
+</TD><TD>
+<br>
+</TD><TD>
+15
+</TD>
+<td><a href="../hl7v28segmROL.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Role)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM_ROLE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROBLEM_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Observation/Result Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROBLEM end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- ORDER begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading37">ORC</a>
+</TD><TD>
+Common Order
+</TD><TD>
+<br>
+</TD><TD>
+4
+</TD>
+<td><a href="../hl7v28segmORC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[
+</TD><TD>
+--- ORDER_DETAIL begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+ < 
+<a href="ch04.html#Heading45"></a>
+</TD><TD>
+--- CHOICE begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading79">OBR</a>
+</TD><TD>
+Order Detail Segment
+</TD><TD>
+<br>
+</TD><TD>
+4
+</TD>
+<td><a href="../hl7v28segmOBR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading45"></a>
+ | 
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+Hxx
+</TD><TD>
+etc.
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmHxx.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch04.html#Heading45"></a>
+ > 
+</TD><TD>
+--- CHOICE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments (Order Detail Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Order)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- ORDER_OBSERVATION begin
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+<a href="ch07.html#Heading113">OBX</a>
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+7
+</TD>
+<td><a href="../hl7v28segmOBX.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch07.html#Heading177">PRT</a>
+ } 
+ ] 
+</TD><TD>
+Participation
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><a href="../hl7v28segmPRT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading204">NTE</a>
+ } 
+ ] 
+</TD><TD>
+Notes & Comments(Observation Comments)
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmNTE.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch12.html#Heading106">VAR</a>
+ } 
+ ] 
+</TD><TD>
+Variance (Observation/Result)
+</TD><TD>
+<br>
+</TD><TD>
+12
+</TD>
+<td><a href="../hl7v28segmVAR.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- ORDER_OBSERVATION end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+]
+</TD><TD>
+--- ORDER_DETAIL end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- ORDER end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- GOAL end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+<TR>
+<TD>
+}
+</TD><TD>
+--- PATHWAY end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+<td><br></td>
+</TR>
+</TABLE><p>
+<a id="CTD">
+<p>
+ACK^PCG,PCH,PCJ^ACK: General Acknowledgment
+</p>
+<tr>
+<td>
+
+</td>
+<td>
+<br>
+</td>
+</tr>
+<TABLE width="100%" border=1>
+<TR>
+<TD>
+<a href="ch02.html#Heading175">MSH</a>
+</TD><TD>
+Message Header
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSH.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading221">SFT</a>
+ } 
+ ] 
+</TD><TD>
+Software
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmSFT.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+<a href="ch02.html#Heading237">UAC</a>
+ ] 
+</TD><TD>
+User Authentication Credential
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmUAC.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+<a href="ch02.html#Heading165">MSA</a>
+</TD><TD>
+Message Acknowledgment
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmMSA.htm">DB</a></td>
+</TR>
+<TR>
+<TD>
+ [ 
+ { 
+<a href="ch02.html#Heading131">ERR</a>
+ } 
+ ] 
+</TD><TD>
+Error
+</TD><TD>
+<br>
+</TD><TD>
+2
+</TD>
+<td><a href="../hl7v28segmERR.htm">DB</a></td>
+</TR>
+</TABLE><p>
+<a id="Heading34">
+<H3 class="css_Überschrift3" >
+12.3.5 QRY - Patient Care Problem Query (Event PC4)
+</H3>
+<p>
+Retained for backwards compatibility only as of version 2.4 and removed from the standard as of v2.8; refer to Chapter 5, section 5.4.  The original mode query and the QRD/QRF segments have been replaced.
+</p>
+<a id="Heading35">
+<H3 class="css_Überschrift3" >
+12.3.6 PRR - Patient Problem Response (Event PC5) 
+</H3>
+<p>
+Retained for backwards compatibility only as of version 2.4 and removed from the standard as of v2.8; refer to Chapter 5, section 5.4.  The original mode query and the QRD/QRF segments have been replaced.
+</p>
+<a id="Heading36">
+<H3 class="css_Überschrift3" >
+12.3.7 QRY - Patient Goal Query (Event PC9)
+</H3>
+<p>
+Retained for backwards compatibility only as of version 2.4 and removed from the standard as of v2.8; refer to Chapter 5, section 5.4.  The original mode query and the QRD/QRF segments have been replaced.
+</p>
+<a id="Heading37">
+<H3 class="css_Überschrift3" >
+12.3.8 PPV - Patient Goal Response (Event PCA) 
+</H3>
+<p>
+Retained for backwards compatibility only in version 2.4 and removed from the standard as of v2.8; refer to Chapter 5, section 5.4.  The original mode query and the QRD/QRF segments have been replaced.
+</p>
+<a id="Heading38">
+<H3 class="css_Überschrift3" >
+12.3.9 QRY - Patient Pathway (Problem-Oriented) Query (Event PCE)
+</H3>
+<p>
+Retained for backwards compatibility only in version 2.4 and removed from the standard as of v2.8; refer to Chapter 5, section 5.4.  The original mode query and the QRD/QRF segments have been replaced.
+</p>
+<a id="Heading39">
+<H3 class="css_Überschrift3" >
+12.3.10 PTR - Patient Pathway (Problem-Oriented) Response (Event PCF) 
+</H3>
+<p>
+Retained for backwards compatibility only in version 2.4 and removed from the standard as of v2.8; refer to Chapter 5, section 5.4.  The original mode query and the QRD/QRF segments have been replaced.
+</p>
+<a id="Heading40">
+<H3 class="css_Überschrift3" >
+12.3.11 QRY - Patient Pathway (Goal-Oriented) Query (Event PCK)
+</H3>
+<p>
+Retained for backwards compatibility only in version 2.4 and removed from the standard as of v2.8; refer to Chapter 5, section 5.4.  The original mode query and the QRD/QRF segments have been replaced.
+</p>
+<a id="Heading41">
+<H3 class="css_Überschrift3" >
+12.3.12 PPT - Patient Pathway (Goal-Oriented) Response (Event PCL) 
+</H3>
+<p>
+Retained for backwards compatibility only in version 2.4 and removed from the standard as of v2.8; refer to Chapter 5, section 5.4.  The original mode query and the QRD/QRF segments have been replaced.
+</p>
+<a id="Heading42">
+<H2 class="css_Überschrift2" >
+12.4 MESSAGE SEGMENTS
+</H2>
+<a id="Heading43">
+<H3 class="css_Überschrift3" >
+12.4.1 GOL - Goal Detail Segment
+</H3>
+<p>
+The goal detail segment contains the data necessary to add, update, correct, and delete the goals for an individual.
+</p>
+<a id="GOL">
+<p>
+HL7 Attribute Table - GOL - Goal Detail
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+SEQ
+</TH><TH>
+LEN
+</TH><TH>
+C.LEN
+</TH><TH>
+DT
+</TH><TH>
+OPT
+</TH><TH>
+RP/#
+</TH><TH>
+TBL#
+</TH><TH>
+ITEM #
+</TH><TH>
+ELEMENT NAME
+</TH>
+<TH>DB Ref.</TH>
+</TR>
+<TR>
+<TD>
+1
+</TD><TD>
+2..2
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#ID">ID</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading236">0287</a>
+</TD><TD>
+<a href="ch04a.html#Heading261">00816</a>
+</TD><TD>
+Action Code
+</TD>
+<td><a href="../hl7v28datel.htm#00816">DB</a></td>
+</TR>
+<TR>
+<TD>
+2
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading46">00817</a>
+</TD><TD>
+Action Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00817">DB</a></td>
+</TR>
+<TR>
+<TD>
+3
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading47">00818</a>
+</TD><TD>
+Goal ID
+</TD>
+<td><a href="../hl7v28datel.htm#00818">DB</a></td>
+</TR>
+<TR>
+<TD>
+4
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#EI">EI</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading48">00819</a>
+</TD><TD>
+Goal Instance ID
+</TD>
+<td><a href="../hl7v28datel.htm#00819">DB</a></td>
+</TR>
+<TR>
+<TD>
+5
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#EI">EI</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading49">00820</a>
+</TD><TD>
+Episode of Care ID
+</TD>
+<td><a href="../hl7v28datel.htm#00820">DB</a></td>
+</TR>
+<TR>
+<TD>
+6
+</TD><TD>
+<br>
+</TD><TD>
+3=
+</TD><TD>
+<a href="ch02A.html#NM">NM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading50">00821</a>
+</TD><TD>
+Goal List Priority
+</TD>
+<td><a href="../hl7v28datel.htm#00821">DB</a></td>
+</TR>
+<TR>
+<TD>
+7
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading51">00822</a>
+</TD><TD>
+Goal Established Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00822">DB</a></td>
+</TR>
+<TR>
+<TD>
+8
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading52">00824</a>
+</TD><TD>
+Expected Goal Achieve Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00824">DB</a></td>
+</TR>
+<TR>
+<TD>
+9
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading53">00825</a>
+</TD><TD>
+Goal Classification
+</TD>
+<td><a href="../hl7v28datel.htm#00825">DB</a></td>
+</TR>
+<TR>
+<TD>
+10
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading54">00826</a>
+</TD><TD>
+Goal Management Discipline
+</TD>
+<td><a href="../hl7v28datel.htm#00826">DB</a></td>
+</TR>
+<TR>
+<TD>
+11
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading55">00827</a>
+</TD><TD>
+Current Goal Review Status
+</TD>
+<td><a href="../hl7v28datel.htm#00827">DB</a></td>
+</TR>
+<TR>
+<TD>
+12
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading56">00828</a>
+</TD><TD>
+Current Goal Review Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00828">DB</a></td>
+</TR>
+<TR>
+<TD>
+13
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading57">00829</a>
+</TD><TD>
+Next Goal Review Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00829">DB</a></td>
+</TR>
+<TR>
+<TD>
+14
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading58">00830</a>
+</TD><TD>
+Previous Goal Review Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00830">DB</a></td>
+</TR>
+<TR>
+<TD>
+15
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+W
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading59">00831</a>
+</TD><TD>
+Goal Review Interval
+</TD>
+<td><a href="../hl7v28datel.htm#00831">DB</a></td>
+</TR>
+<TR>
+<TD>
+16
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading60">00832</a>
+</TD><TD>
+Goal Evaluation
+</TD>
+<td><a href="../hl7v28datel.htm#00832">DB</a></td>
+</TR>
+<TR>
+<TD>
+17
+</TD><TD>
+<br>
+</TD><TD>
+300=
+</TD><TD>
+<a href="ch02A.html#ST">ST</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading61">00833</a>
+</TD><TD>
+Goal Evaluation Comment
+</TD>
+<td><a href="../hl7v28datel.htm#00833">DB</a></td>
+</TR>
+<TR>
+<TD>
+18
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading62">00834</a>
+</TD><TD>
+Goal Life Cycle Status
+</TD>
+<td><a href="../hl7v28datel.htm#00834">DB</a></td>
+</TR>
+<TR>
+<TD>
+19
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading63">00835</a>
+</TD><TD>
+Goal Life Cycle Status Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00835">DB</a></td>
+</TR>
+<TR>
+<TD>
+20
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading64">00836</a>
+</TD><TD>
+Goal Target Type
+</TD>
+<td><a href="../hl7v28datel.htm#00836">DB</a></td>
+</TR>
+<TR>
+<TD>
+21
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XPN">XPN</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading65">00837</a>
+</TD><TD>
+Goal Target Name
+</TD>
+<td><a href="../hl7v28datel.htm#00837">DB</a></td>
+</TR>
+<TR>
+<TD>
+22
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CNE">CNE</a>
+</TD><TD>
+C
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading512">0725</a>
+</TD><TD>
+<a href="ch07.html#Heading136">02182</a>
+</TD><TD>
+Mood Code
+</TD>
+<td><a href="../hl7v28datel.htm#02182">DB</a></td>
+</TR>
+</TABLE><p>
+<a id="Heading44">
+<H4 class="css_Überschrift4" >
+12.4.1.0 GOL Field Definitions
+</H4>
+<p>
+The business and/or application must assume responsibility for maintaining knowledge about data ownership, versioning, and/or audit trail control (for purposes of data integrity).  It is also their responsibility to represent the appropriate version of that data.
+</p>
+<a id="Heading45">
+<H4 class="css_Überschrift4" >
+12.4.1.1 GOL-1   Action Code   (ID)   00816
+</H4>
+<p>
+Definition:  The action code field gives the intent of the problem or goal.  Refer to HL7 Table 0287 - Problem/Goal Action Code in Chapter 2C, Code Tables, for valid values.
+</p>
+<a id="Heading46">
+<H4 class="css_Überschrift4" >
+12.4.1.2 GOL-2   Action Date/Time   (DTM)   00817
+</H4>
+<p>
+Definition:  This field contains the date/time that the operation represented by the action code was performed.
+</p>
+<a id="Heading47">
+<H4 class="css_Überschrift4" >
+12.4.1.3 GOL-3   Goal ID   (CWE)   00818
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field identifies the goal.  This is the identifier from an institution's master list of goals.
+</p>
+<a id="Heading48">
+<H4 class="css_Überschrift4" >
+12.4.1.4 GOL-4   Goal Instance ID   (EI)   00819
+</H4>
+<i>
+<p>
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the unique identifier assigned by an initiating system to this instance of the goal.
+</p>
+<p>
+Note:  It is required that the value in this field be unique over time.  This instance ID identifies a specific instance for a specific patient and is unique across all patients.  See entity ID data type description in Chapter 2.
+</p>
+<a id="Heading49">
+<H4 class="css_Überschrift4" >
+12.4.1.5 GOL-5   Episode of Care   ID   (EI)   00820
+</H4>
+<i>
+<p>
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition:  This field uniquely identifies the episode of care to which this goal applies.  See note under "Ongoing issues."
+</p>
+<p>
+Note:  Based on application use, this field is required to be unique over time.
+</p>
+<a id="Heading50">
+<H4 class="css_Überschrift4" >
+12.4.1.6 GOL-6   Goal List Priority   (NM)   00821
+</H4>
+<p>
+Definition:  This field prioritizes this goal on a list that is maintained for an individual.
+</p>
+<a id="Heading51">
+<H4 class="css_Überschrift4" >
+12.4.1.7 GOL-7   Goal Established Date/Time   (DTM)   00822
+</H4>
+<p>
+Definition:  This field identifies the date/time when the stated goal was initially created.
+</p>
+<a id="Heading52">
+<H4 class="css_Überschrift4" >
+12.4.1.8 GOL-8   Expected Goal Achieve Date/Time   (DTM)   00824
+</H4>
+<p>
+Definition:  This field contains the projected date/time for achieving the stated goal.
+</p>
+<a id="Heading53">
+<H4 class="css_Überschrift4" >
+12.4.1.9 GOL-9   Goal Classification   (CWE)   00825
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field indicates the kind of goal. This field can be used to categorize goals so that they may be managed and viewed independently within different applications (e.g., admission, final, post-operative, pre-operative, outpatient, discharge, etc.).
+</p>
+<p>
+Note:  This field can be used to differentiate separate goal lists that may be managed independently within applications.
+</p>
+<a id="Heading54">
+<H4 class="css_Überschrift4" >
+12.4.1.10 GOL-10   Goal Management Discipline   (CWE)   00826
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field indicates the category of caregiver with responsibility for managing this specific goal (e.g., care team, nursing, medicine, respiratory therapy, occupational therapy, dietary etc.).  This is a repeating field to allow identification of all disciplines that may have the responsibility for this goal.
+</p>
+<a id="Heading55">
+<H4 class="css_Überschrift4" >
+12.4.1.11 GOL-11   Current Goal Review Status   (CWE)   00827
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the current point in the continuum of a goal review cycle (e.g., due, initiated, reviewed, overdue, verified, etc.).
+</p>
+<a id="Heading56">
+<H4 class="css_Überschrift4" >
+12.4.1.12 GOL-12   Current Goal Review Date/Time   (DTM)   00828
+</H4>
+<p>
+Definition:  This field contains the date/time of the current review of the goal.
+</p>
+<a id="Heading57">
+<H4 class="css_Überschrift4" >
+12.4.1.13 GOL-13   Next Goal Review Date/Time   (DTM)   00829
+</H4>
+<p>
+Definition:  This field contains the date/time of the next scheduled goal review.
+</p>
+<a id="Heading58">
+<H4 class="css_Überschrift4" >
+12.4.1.14 GOL-14   Previous Goal Review Date/Time   (DTM)   00830
+</H4>
+<p>
+Definition:  This field contains the date/time that the goal was reviewed prior to the current review.
+</p>
+<a id="Heading59">
+<H4 class="css_Überschrift4" >
+12.4.1.15 GOL-15   Goal Review Interval      00831
+</H4>
+<p>
+As of Version 2.5, this field was retained for backward compatibility only and withdrawn and removed as of v2.7. Refer to the TQ1 segment described in Chapter 4.
+</p>
+<a id="Heading60">
+<H4 class="css_Überschrift4" >
+12.4.1.16 GOL-16   Goal Evaluation   (CWE)   00832
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field provides an indicator of progress towards achievement of the goal (e.g., achieved, ahead of schedule, delayed, failed to achieve, etc.).
+</p>
+<a id="Heading61">
+<H4 class="css_Überschrift4" >
+12.4.1.17 GOL-17   Goal Evaluation Comment   (ST)   00833
+</H4>
+<p>
+Definition:  This field contains the comments associated with the goal evaluation.  Examples of comments that might be entered in this field include: a reason for delay in achieving goal, or a clinical footnote about progress made towards the goal, etc.
+</p>
+<a id="Heading62">
+<H4 class="css_Überschrift4" >
+12.4.1.18 GOL-18   Goal Life Cycle Status   (CWE)   00834
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains an indication of the state of the goal (e.g., Active, Canceled, Inactive, Suspended, etc.).
+</p>
+<a id="Heading63">
+<H4 class="css_Überschrift4" >
+12.4.1.19 GOL-19   Goal Life Cycle Status Date/Time   (DTM)   00835
+</H4>
+<p>
+Definition:  This field contains the effective date/time of the current goal life cycle status.
+</p>
+<a id="Heading64">
+<H4 class="css_Überschrift4" >
+12.4.1.20 GOL-20   Goal Target Type   (CWE)   00836
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the individual/group for whom the goal has been established (e.g., family group, family member, patient, etc.).
+</p>
+<p>
+Note:  This field is focused on a specific person/group that is directly patient-related.
+</p>
+<a id="Heading65">
+<H4 class="css_Überschrift4" >
+12.4.1.21 GOL-21   Goal Target Name   (XPN)   00837
+</H4>
+<i>
+<p>
+Components:  &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Called By (ST)&gt;
+</p>
+<p>
+Subcomponents for Family Name (FN):  &lt;Surname (ST)&gt; & &lt;Own Surname Prefix (ST)&gt; & &lt;Own Surname (ST)&gt; & &lt;Surname Prefix from Partner/Spouse (ST)&gt; & &lt;Surname from Partner/Spouse (ST)&gt;
+</p>
+<p>
+Subcomponents for Name Context (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the identification of the person(s) on whom the goal is focused.  This is a repeating field which allows for the identification of a group of individuals.
+</p>
+<a id="Heading66">
+<H4 class="css_Überschrift4" >
+12.4.1.22 GOL-22   Mood Code    (CNE)   02182
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field indicates the Mood of the Goal.  It allows expression of the context of the problem.
+</p>
+<p>
+Note: As Mood Code changes the meaning of the segment it must only be used in new messages as of v2.6.
+</p>
+<p>
+Refer to HL7 Table 0725 - Mood Codes  in Chapter 2C, Code Tables, for allowed values.
+</p>
+<a id="Heading67">
+<H3 class="css_Überschrift3" >
+12.4.2 PRB - Problem Detail Segment
+</H3>
+<p>
+The problem detail segment contains the data necessary to add, update, correct, and delete the problems of a given individual.
+</p>
+<a id="PRB">
+<p>
+HL7 Attribute Table - PRB - Problem Details
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+SEQ
+</TH><TH>
+LEN
+</TH><TH>
+C.LEN
+</TH><TH>
+DT
+</TH><TH>
+OPT
+</TH><TH>
+RP/#
+</TH><TH>
+TBL#
+</TH><TH>
+ITEM #
+</TH><TH>
+ELEMENT NAME
+</TH>
+<TH>DB Ref.</TH>
+</TR>
+<TR>
+<TD>
+1
+</TD><TD>
+2..2
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#ID">ID</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading236">0287</a>
+</TD><TD>
+<a href="ch04a.html#Heading261">00816</a>
+</TD><TD>
+Action Code
+</TD>
+<td><a href="../hl7v28datel.htm#00816">DB</a></td>
+</TR>
+<TR>
+<TD>
+2
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading46">00817</a>
+</TD><TD>
+Action Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00817">DB</a></td>
+</TR>
+<TR>
+<TD>
+3
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading71">00838</a>
+</TD><TD>
+Problem ID
+</TD>
+<td><a href="../hl7v28datel.htm#00838">DB</a></td>
+</TR>
+<TR>
+<TD>
+4
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#EI">EI</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading72">00839</a>
+</TD><TD>
+Problem Instance ID
+</TD>
+<td><a href="../hl7v28datel.htm#00839">DB</a></td>
+</TR>
+<TR>
+<TD>
+5
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#EI">EI</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading49">00820</a>
+</TD><TD>
+Episode of Care ID
+</TD>
+<td><a href="../hl7v28datel.htm#00820">DB</a></td>
+</TR>
+<TR>
+<TD>
+6
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#NM">NM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading74">00841</a>
+</TD><TD>
+Problem List Priority
+</TD>
+<td><a href="../hl7v28datel.htm#00841">DB</a></td>
+</TR>
+<TR>
+<TD>
+7
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading75">00842</a>
+</TD><TD>
+Problem Established Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00842">DB</a></td>
+</TR>
+<TR>
+<TD>
+8
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading76">00843</a>
+</TD><TD>
+Anticipated Problem Resolution Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00843">DB</a></td>
+</TR>
+<TR>
+<TD>
+9
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading77">00844</a>
+</TD><TD>
+Actual Problem Resolution Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00844">DB</a></td>
+</TR>
+<TR>
+<TD>
+10
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading78">00845</a>
+</TD><TD>
+Problem Classification
+</TD>
+<td><a href="../hl7v28datel.htm#00845">DB</a></td>
+</TR>
+<TR>
+<TD>
+11
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading79">00846</a>
+</TD><TD>
+Problem Management Discipline
+</TD>
+<td><a href="../hl7v28datel.htm#00846">DB</a></td>
+</TR>
+<TR>
+<TD>
+12
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading80">00847</a>
+</TD><TD>
+Problem Persistence
+</TD>
+<td><a href="../hl7v28datel.htm#00847">DB</a></td>
+</TR>
+<TR>
+<TD>
+13
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading81">00848</a>
+</TD><TD>
+Problem Confirmation Status
+</TD>
+<td><a href="../hl7v28datel.htm#00848">DB</a></td>
+</TR>
+<TR>
+<TD>
+14
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading82">00849</a>
+</TD><TD>
+Problem Life Cycle Status
+</TD>
+<td><a href="../hl7v28datel.htm#00849">DB</a></td>
+</TR>
+<TR>
+<TD>
+15
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading83">00850</a>
+</TD><TD>
+Problem Life Cycle Status Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#00850">DB</a></td>
+</TR>
+<TR>
+<TD>
+16
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading84">00851</a>
+</TD><TD>
+Problem Date of Onset
+</TD>
+<td><a href="../hl7v28datel.htm#00851">DB</a></td>
+</TR>
+<TR>
+<TD>
+17
+</TD><TD>
+<br>
+</TD><TD>
+80=
+</TD><TD>
+<a href="ch02A.html#ST">ST</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading85">00852</a>
+</TD><TD>
+Problem Onset Text
+</TD>
+<td><a href="../hl7v28datel.htm#00852">DB</a></td>
+</TR>
+<TR>
+<TD>
+18
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading86">00853</a>
+</TD><TD>
+Problem Ranking
+</TD>
+<td><a href="../hl7v28datel.htm#00853">DB</a></td>
+</TR>
+<TR>
+<TD>
+19
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading87">00854</a>
+</TD><TD>
+Certainty of Problem
+</TD>
+<td><a href="../hl7v28datel.htm#00854">DB</a></td>
+</TR>
+<TR>
+<TD>
+20
+</TD><TD>
+<br>
+</TD><TD>
+4#
+</TD><TD>
+<a href="ch02A.html#NM">NM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading88">00855</a>
+</TD><TD>
+Probability of Problem (0-1)
+</TD>
+<td><a href="../hl7v28datel.htm#00855">DB</a></td>
+</TR>
+<TR>
+<TD>
+21
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading89">00856</a>
+</TD><TD>
+Individual Awareness of Problem
+</TD>
+<td><a href="../hl7v28datel.htm#00856">DB</a></td>
+</TR>
+<TR>
+<TD>
+22
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading90">00857</a>
+</TD><TD>
+Problem Prognosis
+</TD>
+<td><a href="../hl7v28datel.htm#00857">DB</a></td>
+</TR>
+<TR>
+<TD>
+23
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading91">00858</a>
+</TD><TD>
+Individual Awareness of Prognosis
+</TD>
+<td><a href="../hl7v28datel.htm#00858">DB</a></td>
+</TR>
+<TR>
+<TD>
+24
+</TD><TD>
+<br>
+</TD><TD>
+200=
+</TD><TD>
+<a href="ch02A.html#ST">ST</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading92">00859</a>
+</TD><TD>
+Family/Significant Other Awareness of Problem/Prognosis
+</TD>
+<td><a href="../hl7v28datel.htm#00859">DB</a></td>
+</TR>
+<TR>
+<TD>
+25
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading93">00823</a>
+</TD><TD>
+Security/Sensitivity
+</TD>
+<td><a href="../hl7v28datel.htm#00823">DB</a></td>
+</TR>
+<TR>
+<TD>
+26
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading534">0836</a>
+</TD><TD>
+<a href="ch12.html#Heading94">02234</a>
+</TD><TD>
+Problem Severity
+</TD>
+<td><a href="../hl7v28datel.htm#02234">DB</a></td>
+</TR>
+<TR>
+<TD>
+27
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading535">0838</a>
+</TD><TD>
+<a href="ch12.html#Heading95">02235</a>
+</TD><TD>
+Problem Perspective
+</TD>
+<td><a href="../hl7v28datel.htm#02235">DB</a></td>
+</TR>
+<TR>
+<TD>
+28
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CNE">CNE</a>
+</TD><TD>
+C
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading512">0725</a>
+</TD><TD>
+<a href="ch12.html#Heading96">02237</a>
+</TD><TD>
+Mood Code
+</TD>
+<td><a href="../hl7v28datel.htm#02237">DB</a></td>
+</TR>
+</TABLE><p>
+<p>
+The business and/or application must assume the responsibility for maintaining knowledge about data ownership, versioning, and/or audit trail control (for purposes of data integrity).  It is also their responsibility to represent the appropriate version of that data.
+</p>
+<a id="Heading68">
+<H4 class="css_Überschrift4" >
+12.4.2.0 PRB Field Definitions
+</H4>
+<a id="Heading69">
+<H4 class="css_Überschrift4" >
+12.4.2.1 PRB-1   Action Code   (ID)   00816
+</H4>
+<p>
+Definition:  This field contains the intent of the message.  Refer to HL7 Table 0287 - Problem/Goal Action Code in Chapter 2C, Code Tables, for valid values.
+</p>
+<a id="Heading70">
+<H4 class="css_Überschrift4" >
+12.4.2.2 PRB-2   Action Date/Time   (DTM)   00817
+</H4>
+<p>
+Definition:  This field contains the date/time that the operation represented by the action code was performed.
+</p>
+<a id="Heading71">
+<H4 class="css_Überschrift4" >
+12.4.2.3 PRB-3   Problem ID   (CWE)   00838
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field identifies the problem. This is the identifier from an institution's master list of problems.
+</p>
+<a id="Heading72">
+<H4 class="css_Überschrift4" >
+12.4.2.4 PRB-4   Problem Instance ID   (EI)   00839
+</H4>
+<i>
+<p>
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the identifier assigned by an initiating system to an instance of a problem.
+</p>
+<p>
+Note:  It is required that this value remain unique over time.  This instance ID identifies a specific instance for a specific patient and is unique across all patients.  See entity ID data type description in Chapter 2.
+</p>
+<a id="Heading73">
+<H4 class="css_Überschrift4" >
+12.4.2.5 PRB-5   Episode of Care ID   (EI)   00820
+</H4>
+<i>
+<p>
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition:  This field uniquely identifies the episode of care to which this problem applies.  (See note under "Ongoing issues.")
+</p>
+<p>
+Note:  It is required that this field be unique over time.
+</p>
+<a id="Heading74">
+<H4 class="css_Überschrift4" >
+12.4.2.6 PRB-6   Problem List Priority   (NM)   00841
+</H4>
+<p>
+Definition:  This field prioritizes this problem on a list that is maintained for the individual.
+</p>
+<a id="Heading75">
+<H4 class="css_Überschrift4" >
+12.4.2.7 PRB-7   Problem Established Date/Time   (DTM)   00842
+</H4>
+<p>
+Definition:  This field contains the date/time when the corresponding problem was initially identified by the caregiver.
+</p>
+<a id="Heading76">
+<H4 class="css_Überschrift4" >
+12.4.2.8 PRB-8   Anticipated Problem Resolution Date/Time   (DTM)   00843
+</H4>
+<p>
+Definition:  This field contains the estimated date/time for resolving the stated problem.
+</p>
+<a id="Heading77">
+<H4 class="css_Überschrift4" >
+12.4.2.9 PRB-9   Actual Problem Resolution Date/Time   (DTM)   00844
+</H4>
+<p>
+Definition:  This field contains the date/time that the problem was actually resolved.
+</p>
+<a id="Heading78">
+<H4 class="css_Überschrift4" >
+12.4.2.10 PRB-10   Problem Classification   (CWE)   00845
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field indicates the kind of problem.  This field can be used to categorize problems so that they may be managed and viewed independently within different applications (e.g., admission, final, post-operative, pre-operative, outpatient, discharge, etc.).
+</p>
+<a id="Heading79">
+<H4 class="css_Überschrift4" >
+12.4.2.11 PRB-11   Problem Management Discipline  (CWE)   00846
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field indicates the category of caregiver with responsibility for managing this specific problem (e.g., care team, nursing, medicine, respiratory therapy, occupational therapy, dietary, etc.).  This is a repeating field to allow identification of all disciplines that may have the responsibility for this problem.
+</p>
+<a id="Heading80">
+<H4 class="css_Überschrift4" >
+12.4.2.12 PRB-12   Problem Persistence   (CWE)   00847
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the perseverance of a problem (e.g., acute, chronic, etc.).
+</p>
+<a id="Heading81">
+<H4 class="css_Überschrift4" >
+12.4.2.13 PRB-13   Problem Confirmation Status   (CWE)   00848
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the verification status of a problem (e.g., confirmed, differential, provisional, rule-out, etc.).
+</p>
+<a id="Heading82">
+<H4 class="css_Überschrift4" >
+12.4.2.14 PRB-14   Problem Life Cycle Status   (CWE)   00849
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the current status of the problem at this particular date/time (e.g., active, active-improving, active-stable, active-worsening, inactive, resolved, etc.).
+</p>
+<a id="Heading83">
+<H4 class="css_Überschrift4" >
+12.4.2.15 PRB-15   Problem Life Cycle Status Date/Time   (DTM)   00850
+</H4>
+<p>
+Definition:  This field indicates the effective date/time of the current problem life cycle status.
+</p>
+<a id="Heading84">
+<H4 class="css_Überschrift4" >
+12.4.2.16 PRB-16   Problem Date of Onset   (DTM)   00851
+</H4>
+<p>
+Definition:  This field contains the date/time when the problem began.
+</p>
+<a id="Heading85">
+<H4 class="css_Überschrift4" >
+12.4.2.17 PRB-17   Problem Onset Text   (ST)   00852
+</H4>
+<p>
+Definition:  This field allows for a textual representation of the time when the problem began.
+</p>
+<a id="Heading86">
+<H4 class="css_Überschrift4" >
+12.4.2.18 PRB-18   Problem Ranking   (CWE)   00853
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains a user-defined prioritization of a problem (e.g., numeric ranking, or the use of words such as "primary," "secondary," etc.).
+</p>
+<a id="Heading87">
+<H4 class="css_Überschrift4" >
+12.4.2.19 PRB-19   Certainty of Problem   (CWE)   00854
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains a qualitative representation of the certainty of a problem (e.g., HI - high, LO - low, ME - medium, etc.).
+</p>
+<a id="Heading88">
+<H4 class="css_Überschrift4" >
+12.4.2.20 PRB-20   Probability of Problem  (0-1) (NM)   00855
+</H4>
+<p>
+Definition:  This field contains a quantitative or numeric representation of the certainty that the problem exists for this patient.  This field has a valid range of 0 to 1.  For example, a healthcare provider may be 75% (.75) sure that the problem has been correctly identified.
+</p>
+<p>
+Note:  We have provided for two different representations of the certainty of the problem due to varying representations in applications.
+</p>
+<a id="Heading89">
+<H4 class="css_Überschrift4" >
+12.4.2.21 PRB-21   Individual Awareness of Problem   (CWE)   00856
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the individual's comprehension of the problem (e.g., full, marginal, partial, etc.).
+</p>
+<a id="Heading90">
+<H4 class="css_Überschrift4" >
+12.4.2.22 PRB-22   Problem Prognosis   (CWE)   00857
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the prognosis for the individual's problem (e.g., good, poor, etc.).
+</p>
+<a id="Heading91">
+<H4 class="css_Überschrift4" >
+12.4.2.23 PRB-23   Individual Awareness of Prognosis   (CWE)   00858
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the individual's comprehension of the prognosis for the problem (e.g., full, marginal, partial, etc.).
+</p>
+<a id="Heading92">
+<H4 class="css_Überschrift4" >
+12.4.2.24 PRB-24   Family/Significant Other Awareness of Problem/Prognosis   (ST)   00859
+</H4>
+<p>
+Definition:  This field indicates the individual's family or significant other's comprehension of the actual problem/prognosis.
+</p>
+<a id="Heading93">
+<H4 class="css_Überschrift4" >
+12.4.2.25 PRB-25   Security/Sensitivity   (CWE)   00823
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains information about the level of security and/or sensitivity surrounding the problem (e.g., highly sensitive, not sensitive, sensitive, etc.).
+</p>
+<a id="Heading94">
+<H4 class="css_Überschrift4" >
+12.4.2.26 PRB-26   Problem Severity   (CWE)   02234
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field indicates the severity of the Problem. Refer to User-defined Table 0836- Problem Severity in Chapter 2C, Code Tables, for suggested values.
+</p>
+<a id="Heading95">
+<H4 class="css_Überschrift4" >
+12.4.2.27 PRB-27   Problem Perspective   (CWE)   02235
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field indicates from whose perspective this problem was identified. Refer to User-defined Table 0838 - Problem Perspective in Chapter 2C, Code Tables, for suggested values.
+</p>
+<a id="Heading96">
+<H4 class="css_Überschrift4" >
+12.4.2.28 PRB-28   Mood Code    (CNE)   02237
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field indicates the Mood of the Problem.  It allows expression of the context of the problem.
+</p>
+<p>
+Note:  As Mood Code changes the meaning of the segment it must only be used in new messages as of v2.6.
+</p>
+<p>
+Refer to HL7 Table 0725 - Mood Codes in Chapter 2C, Code Tables, for allowed values.
+</p>
+<a id="Heading97">
+<H3 class="css_Überschrift3" >
+12.4.3 PTH - Pathway Segment
+</H3>
+<p>
+The pathway segment contains the data necessary to add, update, correct, and delete from the record pathways that are utilized to address an individual's health care.
+</p>
+<a id="PTH">
+<p>
+HL7 Attribute Table - PTH - Pathway
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+SEQ
+</TH><TH>
+LEN
+</TH><TH>
+C.LEN
+</TH><TH>
+DT
+</TH><TH>
+OPT
+</TH><TH>
+RP/#
+</TH><TH>
+TBL#
+</TH><TH>
+ITEM #
+</TH><TH>
+ELEMENT NAME
+</TH>
+<TH>DB Ref.</TH>
+</TR>
+<TR>
+<TD>
+1
+</TD><TD>
+2..2
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#ID">ID</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading236">0287</a>
+</TD><TD>
+<a href="ch04a.html#Heading261">00816</a>
+</TD><TD>
+Action Code
+</TD>
+<td><a href="../hl7v28datel.htm#00816">DB</a></td>
+</TR>
+<TR>
+<TD>
+2
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading100">01207</a>
+</TD><TD>
+Pathway ID
+</TD>
+<td><a href="../hl7v28datel.htm#01207">DB</a></td>
+</TR>
+<TR>
+<TD>
+3
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#EI">EI</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading101">01208</a>
+</TD><TD>
+Pathway Instance ID
+</TD>
+<td><a href="../hl7v28datel.htm#01208">DB</a></td>
+</TR>
+<TR>
+<TD>
+4
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading102">01209</a>
+</TD><TD>
+Pathway Established Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#01209">DB</a></td>
+</TR>
+<TR>
+<TD>
+5
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading103">01210</a>
+</TD><TD>
+Pathway Life Cycle Status
+</TD>
+<td><a href="../hl7v28datel.htm#01210">DB</a></td>
+</TR>
+<TR>
+<TD>
+6
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+C
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading104">01211</a>
+</TD><TD>
+Change Pathway Life Cycle Status Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#01211">DB</a></td>
+</TR>
+<TR>
+<TD>
+7
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CNE">CNE</a>
+</TD><TD>
+C
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading512">0725</a>
+</TD><TD>
+<a href="ch12.html#Heading105">02239</a>
+</TD><TD>
+Mood Code
+</TD>
+<td><a href="../hl7v28datel.htm#02239">DB</a></td>
+</TR>
+</TABLE><p>
+<a id="Heading98">
+<H4 class="css_Überschrift4" >
+12.4.3.0 PTH - Field Definitions
+</H4>
+<a id="Heading99">
+<H4 class="css_Überschrift4" >
+12.4.3.1 PTH-1   Action Code   (ID)   00816
+</H4>
+<p>
+Definition:  This field reveals the intent of the message.  Refer to HL7 Table 0287 - Problem/Goal Action Code in Chapter 2C, Code Tables, for valid values.
+</p>
+<a id="Heading100">
+<H4 class="css_Überschrift4" >
+12.4.3.2 PTH-2   Pathway ID   (CWE)   01207
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the pathway master data identifier associated with the referenced problem or goal.  Examples: open heart pathway, new diabetic, total hip replace.
+</p>
+<a id="Heading101">
+<H4 class="css_Überschrift4" >
+12.4.3.3 PTH-3   Pathway Instance ID   (EI)   01208
+</H4>
+<i>
+<p>
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains a value generated by the originating application that represents an associated order placer group number, or other unique identifier assigned to the grouping of pathway directives.
+</p>
+<p>
+Note:  It is required that this value remain unique over time.  This instance ID identifies a specific instance for a specific patient and is unique across all patients.  See entity ID data type description in Chapter 2.
+</p>
+<a id="Heading102">
+<H4 class="css_Überschrift4" >
+12.4.3.4 PTH-4   Pathway Established Date/Time   (DTM)   01209
+</H4>
+<p>
+Definition:  This field contains the identification of the event time for the current pathway record.
+</p>
+<a id="Heading103">
+<H4 class="css_Überschrift4" >
+12.4.3.5 PTH-5   Pathway Life Cycle Status   (CWE)   01210
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains an application-specific set of state identifiers (e.g., Active, Suspended, Complete, Canceled, Delayed, Scheduled).
+</p>
+<a id="Heading104">
+<H4 class="css_Überschrift4" >
+12.4.3.6 PTH-6   Change Pathway Life Cycle Status Date/Time  (DTM)   01211
+</H4>
+<p>
+Definition:  This field contains the date/time when pathway has been modified or deactivated.  (Marked as conditional - must be filled in if trigger event is update or terminate pathway.)
+</p>
+<a id="Heading105">
+<H4 class="css_Überschrift4" >
+12.4.3.7 PTH-7   Mood Code    (CNE)   02239
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field indicates the Mood of the Pathway.  It allows expression of the context of the Pathway.
+</p>
+<p>
+Note:  As Mood Code changes the meaning of the segment it must only be used in new messages as of v2.6.
+</p>
+<p>
+Refer to HL7 Table 0725 - Mood Codes in Chapter 2C, Code Tables, for allowed values.
+</p>
+<a id="Heading106">
+<H3 class="css_Überschrift3" >
+12.4.4 VAR - Variance Segment
+</H3>
+<p>
+The variance segment contains the data necessary to describe differences that may have occurred at the time when a healthcare event was documented.
+</p>
+<a id="VAR">
+<p>
+HL7 Attribute Table - VAR - Variance
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+SEQ
+</TH><TH>
+LEN
+</TH><TH>
+C.LEN
+</TH><TH>
+DT
+</TH><TH>
+OPT
+</TH><TH>
+RP/#
+</TH><TH>
+TBL#
+</TH><TH>
+ITEM #
+</TH><TH>
+ELEMENT NAME
+</TH>
+<TH>DB Ref.</TH>
+</TR>
+<TR>
+<TD>
+1
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#EI">EI</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading108">01212</a>
+</TD><TD>
+Variance Instance ID
+</TD>
+<td><a href="../hl7v28datel.htm#01212">DB</a></td>
+</TR>
+<TR>
+<TD>
+2
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading109">01213</a>
+</TD><TD>
+Documented Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#01213">DB</a></td>
+</TR>
+<TR>
+<TD>
+3
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading110">01214</a>
+</TD><TD>
+Stated Variance Date/Time
+</TD>
+<td><a href="../hl7v28datel.htm#01214">DB</a></td>
+</TR>
+<TR>
+<TD>
+4
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XCN">XCN</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading111">01215</a>
+</TD><TD>
+Variance Originator
+</TD>
+<td><a href="../hl7v28datel.htm#01215">DB</a></td>
+</TR>
+<TR>
+<TD>
+5
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading112">01216</a>
+</TD><TD>
+Variance Classification
+</TD>
+<td><a href="../hl7v28datel.htm#01216">DB</a></td>
+</TR>
+<TR>
+<TD>
+6
+</TD><TD>
+<br>
+</TD><TD>
+512=
+</TD><TD>
+<a href="ch02A.html#ST">ST</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading113">01217</a>
+</TD><TD>
+Variance Description
+</TD>
+<td><a href="../hl7v28datel.htm#01217">DB</a></td>
+</TR>
+</TABLE><p>
+<a id="Heading107">
+<H4 class="css_Überschrift4" >
+12.4.4.0 VAR - Field Definitions
+</H4>
+<a id="Heading108">
+<H4 class="css_Überschrift4" >
+12.4.4.1 VAR-1   Variance Instance ID   (EI)   01212
+</H4>
+<i>
+<p>
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the unique identifier of the specific variance record.
+</p>
+<a id="Heading109">
+<H4 class="css_Überschrift4" >
+12.4.4.2 VAR-2   Documented Date/Time   (DTM)   01213
+</H4>
+<p>
+Definition:  This field contains the time stamp that identifies the timed occurrence of the variance documentation.
+</p>
+<a id="Heading110">
+<H4 class="css_Überschrift4" >
+12.4.4.3 VAR-3   Stated Variance Date/Time   (DTM)   01214
+</H4>
+<p>
+Definition:  This field contains the time stamp that identifies a stated time of the variance which may be different than the time it was documented.
+</p>
+<a id="Heading111">
+<H4 class="css_Überschrift4" >
+12.4.4.4 VAR-4   Variance Originator   (XCN)   01215
+</H4>
+<i>
+<p>
+Components:  &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;DEPRECATED-Source Table (CWE)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check  (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</p>
+<p>
+Subcomponents for Family Name (FN):  &lt;Surname (ST)&gt; & &lt;Own Surname Prefix (ST)&gt; & &lt;Own Surname (ST)&gt; & &lt;Surname Prefix from Partner/Spouse (ST)&gt; & &lt;Surname from Partner/Spouse (ST)&gt;
+</p>
+<p>
+Subcomponents for Source Table (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Assigning Authority (HD):  &lt;Namespace ID (IS)&gt; & &lt;Universal ID (ST)&gt; & &lt;Universal ID Type (ID)&gt;
+</p>
+<p>
+Subcomponents for Assigning Facility (HD):  &lt;Namespace ID (IS)&gt; & &lt;Universal ID (ST)&gt; & &lt;Universal ID Type (ID)&gt;
+</p>
+<p>
+Subcomponents for Name Context (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Assigning Jurisdiction (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Assigning Agency or Department (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field contains the originator (person or system) documenting the variance.
+</p>
+<a id="Heading112">
+<H4 class="css_Überschrift4" >
+12.4.4.5 VAR-5   Variance Classification   (CWE)   01216
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition:  This field identifies a categorical set of variances.  Classification may be used by applications for presentation and processing functions.
+</p>
+<a id="Heading113">
+<H4 class="css_Überschrift4" >
+12.4.4.6 VAR-6   Variance Description   (ST)   01217
+</H4>
+<p>
+Definition:  This field specifies the details of a variance.  The content of the field is a string with optional formatting.
+</p>
+<a id="Heading114">
+<H3 class="css_Überschrift3" >
+12.4.5 REL - Clinical Relationship Segment
+</H3>
+<p>
+The Clinical Relationship segment contains the data necessary to relate two data elements within and/or external to the message at run-time. It also includes information about the relationship.
+</p>
+<p>
+Relationships are constrained to being between explicit segments of messages rather than beween the identities of entities they reference. Segments are available within the message but related persistent information may not be.  Because of the transient nature of messages applications must manage the associations with entities which persist outside or across messages.
+</p>
+<p>
+Examples:
+</p>
+<ul>
+<li>
+<p>
+Problem is a consequence of a diagnosis.
+</p>
+</li>
+<li>
+<p>
+Diagnosis is supported by observation.
+</p>
+</li>
+<li>
+<p>
+Observation is a manifestation of a diagnosis.
+</p>
+</li>
+<li>
+<p>
+Complication is a consequence of a procedure.
+</p>
+</li>
+</ul>
+<a id="REL">
+<p>
+HL7 Attribute Table - REL - Clinical Relationship Segment
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+SEQ
+</TH><TH>
+LEN
+</TH><TH>
+C.LEN
+</TH><TH>
+DT
+</TH><TH>
+OPT
+</TH><TH>
+RP/#
+</TH><TH>
+TBL#
+</TH><TH>
+ITEM #
+</TH><TH>
+ELEMENT NAME
+</TH>
+<TH>DB Ref.</TH>
+</TR>
+<TR>
+<TD>
+1
+</TD><TD>
+1..4
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#SI">SI</a>
+</TD><TD>
+C
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading116">02240</a>
+</TD><TD>
+Set ID -REL
+</TD>
+<td><a href="../hl7v28datel.htm#02240">DB</a></td>
+</TR>
+<TR>
+<TD>
+2
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading117">02241</a>
+</TD><TD>
+Relationship Type
+</TD>
+<td><a href="../hl7v28datel.htm#02241">DB</a></td>
+</TR>
+<TR>
+<TD>
+3
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#EI">EI</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading118">02242</a>
+</TD><TD>
+This Relationship Instance Identifier
+</TD>
+<td><a href="../hl7v28datel.htm#02242">DB</a></td>
+</TR>
+<TR>
+<TD>
+4
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#EI">EI</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading119">02243</a>
+</TD><TD>
+Source Information Instance Identifier
+</TD>
+<td><a href="../hl7v28datel.htm#02243">DB</a></td>
+</TR>
+<TR>
+<TD>
+5
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#EI">EI</a>
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading120">02244</a>
+</TD><TD>
+Target Information Instance Identifier
+</TD>
+<td><a href="../hl7v28datel.htm#02244">DB</a></td>
+</TR>
+<TR>
+<TD>
+6
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#EI">EI</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading121">02245</a>
+</TD><TD>
+Asserting Entity Instance ID
+</TD>
+<td><a href="../hl7v28datel.htm#02245">DB</a></td>
+</TR>
+<TR>
+<TD>
+7
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XCN">XCN</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading122">02246</a>
+</TD><TD>
+Asserting Person
+</TD>
+<td><a href="../hl7v28datel.htm#02246">DB</a></td>
+</TR>
+<TR>
+<TD>
+8
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XON">XON</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading123">02247</a>
+</TD><TD>
+Asserting Organization
+</TD>
+<td><a href="../hl7v28datel.htm#02247">DB</a></td>
+</TR>
+<TR>
+<TD>
+9
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XAD">XAD</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading124">02248</a>
+</TD><TD>
+Assertor Address
+</TD>
+<td><a href="../hl7v28datel.htm#02248">DB</a></td>
+</TR>
+<TR>
+<TD>
+10
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XTN">XTN</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading125">02249</a>
+</TD><TD>
+Assertor Contact
+</TD>
+<td><a href="../hl7v28datel.htm#02249">DB</a></td>
+</TR>
+<TR>
+<TD>
+11
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DR">DR</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading126">02250</a>
+</TD><TD>
+Assertion Date Range
+</TD>
+<td><a href="../hl7v28datel.htm#02250">DB</a></td>
+</TR>
+<TR>
+<TD>
+12
+</TD><TD>
+1..1
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#ID">ID</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading102">0136</a>
+</TD><TD>
+<a href="ch12.html#Heading127">02251</a>
+</TD><TD>
+Negation Indicator
+</TD>
+<td><a href="../hl7v28datel.htm#02251">DB</a></td>
+</TR>
+<TR>
+<TD>
+13
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading128">02252</a>
+</TD><TD>
+Certainty of Relationship
+</TD>
+<td><a href="../hl7v28datel.htm#02252">DB</a></td>
+</TR>
+<TR>
+<TD>
+14
+</TD><TD>
+<br>
+</TD><TD>
+5=
+</TD><TD>
+<a href="ch02A.html#NM">NM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading129">02253</a>
+</TD><TD>
+Priority No
+</TD>
+<td><a href="../hl7v28datel.htm#02253">DB</a></td>
+</TR>
+<TR>
+<TD>
+15
+</TD><TD>
+<br>
+</TD><TD>
+5=
+</TD><TD>
+<a href="ch02A.html#NM">NM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch12.html#Heading130">02254</a>
+</TD><TD>
+Priority  Sequence No (rel preference for consideration)
+</TD>
+<td><a href="../hl7v28datel.htm#02254">DB</a></td>
+</TR>
+<TR>
+<TD>
+16
+</TD><TD>
+1..1
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#ID">ID</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading102">0136</a>
+</TD><TD>
+<a href="ch12.html#Heading131">02255</a>
+</TD><TD>
+Separability Indicator
+</TD>
+<td><a href="../hl7v28datel.htm#02255">DB</a></td>
+</TR>
+</TABLE><p>
+<a id="Heading115">
+<H4 class="css_Überschrift4" >
+12.4.5.0 REL - Field Definitions
+</H4>
+<a id="Heading116">
+<H4 class="css_Überschrift4" >
+12.4.5.1 REL-1   Set ID - REL   (SI)   02240
+</H4>
+<p>
+Definition: This field contains the Set ID of the specific relationship Record.
+</p>
+<a id="Heading117">
+<H4 class="css_Überschrift4" >
+12.4.5.2 REL-2   Relationship Type   (CWE)   02241
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the type of the relationship.
+</p>
+<a id="Heading118">
+<H4 class="css_Überschrift4" >
+12.4.5.3 REL-3   This Relationship Instance Identifier   (EI)    02242
+</H4>
+<i>
+<p>
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the instance identifier of this relationship.
+</p>
+<a id="Heading119">
+<H4 class="css_Überschrift4" >
+12.4.5.4 REL-4   Source Information Instance Identifier   (EI)   02243
+</H4>
+<i>
+<p>
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the Instance ID of the Source Segment.
+</p>
+<a id="Heading120">
+<H4 class="css_Überschrift4" >
+12.4.5.5 REL-5   Target Information Instance Identifier   (EI)   02244
+</H4>
+<i>
+<p>
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the Instance ID of the Target Segment.
+</p>
+<a id="Heading121">
+<H4 class="css_Überschrift4" >
+12.4.5.6 REL-6   Asserting Entity Instance ID   (EI)   02245
+</H4>
+<i>
+<p>
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the Instance ID of the Person or Organization that asserted the relationship.
+</p>
+<a id="Heading122">
+<H4 class="css_Überschrift4" >
+12.4.5.7 REL-7   Asserting Person   (XCN)   02246
+</H4>
+<i>
+<p>
+Components:  &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;DEPRECATED-Source Table (CWE)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check  (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</p>
+<p>
+Subcomponents for Family Name (FN):  &lt;Surname (ST)&gt; & &lt;Own Surname Prefix (ST)&gt; & &lt;Own Surname (ST)&gt; & &lt;Surname Prefix from Partner/Spouse (ST)&gt; & &lt;Surname from Partner/Spouse (ST)&gt;
+</p>
+<p>
+Subcomponents for Source Table (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Assigning Authority (HD):  &lt;Namespace ID (IS)&gt; & &lt;Universal ID (ST)&gt; & &lt;Universal ID Type (ID)&gt;
+</p>
+<p>
+Subcomponents for Assigning Facility (HD):  &lt;Namespace ID (IS)&gt; & &lt;Universal ID (ST)&gt; & &lt;Universal ID Type (ID)&gt;
+</p>
+<p>
+Subcomponents for Name Context (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Assigning Jurisdiction (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Assigning Agency or Department (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the Identifier details of the Person who asserted the relationship.
+</p>
+<a id="Heading123">
+<H4 class="css_Überschrift4" >
+12.4.5.8 REL-8   Asserting Organization   (XON)   02247
+</H4>
+<i>
+<p>
+Components:  &lt;Organization Name (ST)&gt; ^ &lt;Organization Name Type Code (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Organization Identifier (ST)&gt;
+</p>
+<p>
+Subcomponents for Organization Name Type Code (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Assigning Authority (HD):  &lt;Namespace ID (IS)&gt; & &lt;Universal ID (ST)&gt; & &lt;Universal ID Type (ID)&gt;
+</p>
+<p>
+Subcomponents for Assigning Facility (HD):  &lt;Namespace ID (IS)&gt; & &lt;Universal ID (ST)&gt; & &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the Identifier details of the Organization that asserted the relationship.
+</p>
+<a id="Heading124">
+<H4 class="css_Überschrift4" >
+12.4.5.9 REL-9   Assertor Address   (XAD)   02248
+</H4>
+<i>
+<p>
+Components:  &lt;Street Address (SAD)&gt; ^ &lt;Other Designation (ST)&gt; ^ &lt;City (ST)&gt; ^ &lt;State or Province (ST)&gt; ^ &lt;Zip or Postal Code (ST)&gt; ^ &lt;Country (ID)&gt; ^ &lt;Address Type (ID)&gt; ^ &lt;Other Geographic Designation (ST)&gt; ^ &lt;County/Parish Code (CWE)&gt; ^ &lt;Census Tract (CWE)&gt; ^ &lt;Address Representation Code (ID)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Expiration Reason (CWE)&gt; ^ &lt;Temporary Indicator (ID)&gt; ^ &lt;Bad Address Indicator (ID)&gt; ^ &lt;Address Usage (ID)&gt; ^ &lt;Addressee (ST)&gt; ^ &lt;Comment (ST)&gt; ^ &lt;Preference Order (NM)&gt; ^ &lt;Protection Code (CWE)&gt; ^ &lt;Address Identifier (EI)&gt;
+</p>
+<p>
+Subcomponents for Street Address (SAD):  &lt;Street or Mailing Address (ST)&gt; & &lt;Street Name (ST)&gt; & &lt;Dwelling Number (ST)&gt;
+</p>
+<p>
+Subcomponents for County/Parish Code (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Census Tract (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Expiration Reason (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Protection Code (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Address Identifier (EI):  &lt;Entity Identifier (ST)&gt; & &lt;Namespace ID (IS)&gt; & &lt;Universal ID (ST)&gt; & &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the address of the Person or Organization that asserted the relationship.
+</p>
+<a id="Heading125">
+<H4 class="css_Überschrift4" >
+12.4.5.10 REL-10   Assertor Contact   (XTN)   02249
+</H4>
+<i>
+<p>
+Components:  &lt;WITHDRAWN Constituent&gt; ^ &lt;Telecommunication Use Code (ID)&gt; ^ &lt;Telecommunication Equipment Type (ID)&gt; ^ &lt;Communication Address (ST)&gt; ^ &lt;Country Code (SNM)&gt; ^ &lt;Area/City Code (SNM)&gt; ^ &lt;Local Number (SNM)&gt; ^ &lt;Extension (SNM)&gt; ^ &lt;Any Text (ST)&gt; ^ &lt;Extension Prefix (ST)&gt; ^ &lt;Speed Dial Code (ST)&gt; ^ &lt;Unformatted Telephone number  (ST)&gt; ^ &lt;Effective Start Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Expiration Reason (CWE)&gt; ^ &lt;Protection Code (CWE)&gt; ^ &lt;Shared Telecommunication Identifier (EI)&gt; ^ &lt;Preference Order (NM)&gt;
+</p>
+<p>
+Subcomponents for Expiration Reason (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Protection Code (CWE):  &lt;Identifier (ST)&gt; & &lt;Text (ST)&gt; & &lt;Name of Coding System (ID)&gt; & &lt;Alternate Identifier (ST)&gt; & &lt;Alternate Text (ST)&gt; & &lt;Name of Alternate Coding System (ID)&gt; & &lt;Coding System Version ID (ST)&gt; & &lt;Alternate Coding System Version ID (ST)&gt; & &lt;Original Text (ST)&gt; & &lt;Second Alternate Identifier (ST)&gt; & &lt;Second Alternate Text (ST)&gt; & &lt;Name of Second Alternate Coding System (ID)&gt; & &lt;Second Alternate Coding System Version ID (ST)&gt; & &lt;Coding System OID (ST)&gt; & &lt;Value Set OID (ST)&gt; & &lt;Value Set Version ID (DTM)&gt; & &lt;Alternate Coding System OID (ST)&gt; & &lt;Alternate Value Set OID (ST)&gt; & &lt;Alternate Value Set Version ID (DTM)&gt; & &lt;Second Alternate Coding System OID (ST)&gt; & &lt;Second Alternate Value Set OID (ST)&gt; & &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+<p>
+Subcomponents for Shared Telecommunication Identifier (EI):  &lt;Entity Identifier (ST)&gt; & &lt;Namespace ID (IS)&gt; & &lt;Universal ID (ST)&gt; & &lt;Universal ID Type (ID)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the address of the Person or Organization that asserted the relationship.
+</p>
+<a id="Heading126">
+<H4 class="css_Überschrift4" >
+12.4.5.11 REL-11   Assertion Date Range   (DR)   02250
+</H4>
+<i>
+<p>
+Components:  &lt;Range Start Date/Time (DTM)&gt; ^ &lt;Range End Date/Time (DTM)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the date range during which assertion of the relationship took place.
+</p>
+<a id="Heading127">
+<H4 class="css_Überschrift4" >
+12.4.5.12 REL-12   Negation Indicator   (ID)   02251
+</H4>
+<p>
+Definition: This field contains the date range relevant to the assertion of the relationship.  Refer to HL7 Table 0136 - Yes/no Indicator, as defined in Chapter 2C, Code Tables.
+</p>
+<a id="Heading128">
+<H4 class="css_Überschrift4" >
+12.4.5.13 REL-13   Certainty of Relationship   (CWE)   02252
+</H4>
+<i>
+<p>
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</p>
+</i>
+<p>
+Definition: This field contains the certainty of existence of the relationship.
+</p>
+<a id="Heading129">
+<H4 class="css_Überschrift4" >
+12.4.5.14 REL-14   Priority No   (NM)   02253
+</H4>
+<p>
+Definition: This field contains the priority number as used, for example, in relative ordering, plans, and workflows.
+</p>
+<a id="Heading130">
+<H4 class="css_Überschrift4" >
+12.4.5.15 REL-15   Priority Sequence No    (NM)   02254
+</H4>
+<p>
+Definition: This field contains the priority sequence number as used, for example, in relative preference for consideration.
+</p>
+<a id="Heading131">
+<H4 class="css_Überschrift4" >
+12.4.5.16 REL-16   Separability Indicator   (ID)   02255
+</H4>
+<p>
+Definition: This field indicates whether source and target can be interpreted independently.  Refer to HL7 Table 0136 - Yes/no Indicator, as defined in Chapter 2C, Code Tables.
+</p>
+<a id="Heading132">
+<H2 class="css_Überschrift2" >
+12.5 EXAMPLE TRANSACTIONS
+</H2>
+<p>
+The following is an example of a patient goal message.
+</p>
+<p>
+MSH|^~\&|SENDAP|SENDFAC|RECAP|RECFAC|||PGL^PC4| &lt;cr&gt;
+</p>
+<p>
+PID||0123456-1||EVERYMAN^ADAM^A|||||||9821111|&lt;cr&gt;
+</p>
+<p>
+PV1|1|I|2000^2012^01||||004777^ATTEND^AARON^A.|||SUR||||ADM|A0|&lt;cr&gt;
+</p>
+<p>
+GOL|AD|199505011200|00312^Improve Peripheral Circulation^Goal Master List||||199505011200|199505101200|Due^Review Due^Next Review List|||199505021200||QAM|||ACT^Active^Level Seven Healthcare, Inc. Internal|199505011200| P^Patient^Level Seven Healthcare, Inc. Internal||&lt;cr&gt;
+</p>
+<p>
+ROL|12^Primary Nurse^Role Master List|AD|^Admit^Alan^A^^RN| 199505011200||||&lt;cr&gt;
+</p>
+<p>
+ROL|45^Recorder^Role Master List|AD|^Admit^Alan^^^^|199505011201||||&lt;cr&gt;
+</p>
+<p>
+</p>
+<p>
+PRB|AD|199505011200|04411^Restricted Circulation^Nursing Problem List|| ||199505011200|||IP^Inpatient^Problem Classification List| NU^Nursing^Management Discipline List|Acute^Acute^Persistence List| C^Confirmed^Confirmation Status List|A1^Active^Life Cycle Status List| 199505011200|199504250000||2^Secondary^Ranking List|HI^High^Certainty Coding List||1^Fully^Awareness Coding List|2^Good^Prognosis Coding List|||| &lt;cr&gt;
+</p>
+<p>
+ROL|1^Diagnosing Provider^Role Master List|AD|^Admit^Alan^A^^MD|
+</p>
+<p>
+199505011200||||&lt;cr&gt;
+</p>
+<p>
+</p>
+<p>
+OBX|001|TX|^Peripheral Dependent Edema|1|Increasing Edema in lower limbs|&lt;cr&gt;
+</p>
+<p>
+</p>
+<p>
+The following is an example of a patient problem message.
+</p>
+<p>
+MSH|^~\&|SENDAP|SENDFAC|RECAP|RECFAC|||PPR^PC1| &lt;cr&gt;
+</p>
+<p>
+PID||0123456-1||EVERYMAN^ADAM^A|||||||9821111|&lt;cr&gt;
+</p>
+<p>
+PV1|1|I|2000^2012^01||||004777^ATTEND^AARON^A.|||SUR||||ADM|A0|&lt;cr&gt;
+</p>
+<p>
+PRB|AD|199505011200|04411^Restricted Circulation^Nursing Problem List|| ||199505011200|||IP^Inpatient^Problem Classification List| NU^Nursing^Management Discipline List|Acute^Acute^Persistence List| C^Confirmed^Confirmation Status List|A1^Active^Life Cycle Status List| 199505011200|199504250000||2^Secondary^Ranking List|HI^High^Certainty Coding List||1^Fully^Awareness Coding List|2^Good^Prognosis Coding List|||| &lt;cr&gt;
+</p>
+<p>
+ROL|1^Diagnosing Provider^Role Master List|AD|^Admit^Alan^A^^MD| 199505011200||||&lt;cr&gt;
+</p>
+<p>
+ROL|45^Recorder^Role Master List|AD|^Admit^Alan^^^^|199505011201||||&lt;cr&gt;
+</p>
+<p>
+</p>
+<p>
+OBX|001|TX|^Peripheral Dependent Edema|1|Increasing Edema in lower limbs|&lt;cr&gt;
+</p>
+<p>
+GOL|AD|199505011200|00312^Improve Peripheral Circulation^Goal Master List||||199505011200|199505101200|Due^Review Due^Next Review List|| 199505021200||QAM|||ACT^Active^ Level Seven Healthcare, Inc. Internal|199505011200| P^Patient^Level Seven Healthcare, Inc.||&lt;cr&gt;
+</p>
+<p>
+ROL|12^Primary Nurse^Role Master List|AD|^Admit^Alan^A^^RN| 199505011200||||&lt;cr&gt;
+</p>
+<p>
+</p>
+<p>
+The following is an example of a patient pathway problem-oriented message.
+</p>
+<p>
+MSH|^~\&|SENDAP|SENDFAC|RECAP|RECFAC|||PPP^PCB| &lt;cr&gt;
+</p>
+<p>
+PID||0123456-1||EVERYMAN^ADAM^A|||||||9821111|&lt;cr&gt;
+</p>
+<p>
+PV1|1|I|2000^2012^01||||004777^ATTEND^AARON^A.|||SUR||||ADM|A0|&lt;cr&gt;
+</p>
+<p>
+PTH|AD^^HL70287|OH457^Open Heart Pathway^AHCPR|0018329078785^PCIS1|199505011200|A1^Active^Pathway Life Cycle Status List|199505011200|&lt;cr&gt;
+</p>
+<p>
+VAR|84032847876^LOCK|199505011200||^Verify^Virgil^V^^RN|23^Coincident^Variance Class List|Exceeds APACHE III threshold score.|&lt;cr&gt;
+</p>
+<p>
+PRB|AD|199505011200|04411^Restricted Circulation^Nursing Problem List|| ||199505011200|||IP^Inpatient^Problem Classification List| NU^Nursing^Management Discipline List|Acute^Acute^Persistence List| C^Confirmed^Confirmation Status List|A1^Active^Life Cycle Status List| 199505011200|199504250000||2^Secondary^Ranking List|HI^High^Certainty Coding List||1^Fully^Awareness Coding List|2^Good^Prognosis Coding List|||| &lt;cr&gt;
+</p>
+<p>
+ROL|1^Diagnosing Provider^Role Master List|AD|^Admit^Alan^A^^MD| 199505011200||||&lt;cr&gt;
+</p>
+<p>
+ROL|45^Recorder^Role Master List|AD|^Admit^Alan^^^^|199505011201||||&lt;cr&gt;
+</p>
+<p>
+ORC|NW|2045^OE||||E|^C^199505011200^199505011200^^TM30^^^^|&lt;cr&gt;
+</p>
+<p>
+RXO|||3|L|IV|D5W WITH 1/2 NS WITH 20 MEQ KCL EVERY THIRD BOTTLE STARTING WITH
+</p>
+<p>
+	FIRST||W8&825&A^|N||||||||H30&lt;cr&gt;
+</p>
+<p>
+ORC|NW|1000^OE|9999999^RX|||E|^Q6H^D10^^^R|||||||&lt;cr&gt;
+</p>
+<p>
+RXA|1|199505011200|||0047-0402-30^Ampicillin 250 MG TAB^NDC|2|TAB||&lt;cr&gt;
+</p>
+<a id="Heading133">
+<H2 class="css_Überschrift2" >
+12.6 IMPLEMENTATION CONSIDERATIONS
+</H2>
+<p>
+The Patient Care Technical Committee recognizes that this document contains a great deal of information for computer systems that are currently under development.  The participating institutions/vendors will be responsible for defining the necessary tables that have been previously discussed.  As these tables are defined and clarified, they will be included in this document for distribution.
+</p>
+<p>
+Applications can have differing orientations for representing problem and goal hierarchies.  For example, parent:child relationships may map problem(s) to goal(s), or goal(s) to problem(s).  To accommodate these different orientations, the Problem message allows representation of goals that are functionally dependent upon a problem, and the Goal message allows representation of problems that are functionally dependent on a goal.  We recognize that institutions will decide on one or the other of the methodologies based on practice preferences.
+</p>
+<a id="Heading134">
+<H2 class="css_Überschrift2" >
+12.7 OUTSTANDING ISSUES
+</H2>
+<p>
+In both the Problem and Goal segments a field named "Episode of Care" has been included.  This field is intended to accommodate an entity defined by consensus business rules that defines an episode of care.
+</p>
+<p>
+Individual businesses/applications must be cognizant of and able to handle data integrity issues that may arise from the fact that problem lists and goal lists may not have a single owner of record.  This chapter does not address the need for joint data ownership (of problem and goal data) between two or more front-end clinical applications concurrently supporting patient care in real-time.  From a data integrity perspective, problem/goal data must be sourced/originated (and thus owned) by a single application only - for example, a front-end clinical application (source) transmitting to a back-end repository application.  This is not recognized to be within the current scope of the Patient Care Committee; therefore, this concern will be submitted to the Infrastructure & Messaging committee for further debate.
+</p>
+<p>
+The element definition for REL-12 Negation Indicator in section 12.4.5.12, is incorrect: currently it reads "This field contains the date range relevant to the assertion of the relationship."  However, this is incorrect.  The correct definition should read "This field, if populated and set to true, indicates that the given relationship is not true or does not exist."  As this correction would be substantive, a proposal to formally change the definition will be brought forward in Version 2.9.  Until this correction can be made, users of the standard are advised to consider the alternate definition above when using this element.
+</p>
+<p>
+</p>
+</BODY>
+</HTML>

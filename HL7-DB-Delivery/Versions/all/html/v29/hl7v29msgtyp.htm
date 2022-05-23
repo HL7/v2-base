@@ -1,0 +1,962 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2 align=center>
+List of all Message Types
+</H2>
+<TABLE class=info>
+<TR class=info>
+<TH class=info>Msg. Type</TH>
+<TH class=info>Description</TH>
+<TH class=info>Chapter</TH>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypACK.htm">ACK</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch10.html#Heading3831">10.4</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypADT.htm">ADT</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch03.html#Heading941">3.3.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypBAR.htm">BAR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch06.html#Heading2317">6.4.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypBPS.htm">BPS</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1684">4.13.4</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypBRP.htm">BRP</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1685">4.13.5</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypBRT.htm">BRT</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1687">4.13.7</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypBTS.htm">BTS</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1686">4.13.6</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypCCF.htm">CCF</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4051">11.7.2</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypCCI.htm">CCI</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4051">11.7.2</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypCCM.htm">CCM</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4043">11.6.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypCCQ.htm">CCQ</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4050">11.7.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypCCR.htm">CCR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4044">11.6.2</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypCCU.htm">CCU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4048">11.6.6</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypCQU.htm">CQU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4050">11.7.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypCRM.htm">CRM</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch07.html#Heading3023">7.7.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypCSU.htm">CSU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch07.html#Heading3024">7.7.2</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypDBC.htm">DBC</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1766">4.16.4</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypDBU.htm">DBU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1767">4.16.5</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypDEL.htm">DEL</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1775">4.16.13</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypDEO.htm">DEO</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1774">4.16.12</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypDER.htm">DER</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1773">4.16.11</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypDFT.htm">DFT</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch06.html#Heading2319">6.4.3</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypDPR.htm">DPR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1777">4.16.15</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypDRC.htm">DRC</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1776">4.16.14</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypDRG.htm">DRG</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1772">4.16.10</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypEAC.htm">EAC</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4364">13.3.7</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypEAN.htm">EAN</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4366">13.3.9</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypEAR.htm">EAR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4365">13.3.8</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypEHC.htm">EHC</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch16.html#Heading4752">16.3.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypESR.htm">ESR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4359">13.3.2</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypESU.htm">ESU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4358">13.3.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypINR.htm">INR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4371">13.3.14</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypINU.htm">INU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4362">13.3.5</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypLSR.htm">LSR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4370">13.3.13</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypLSU.htm">LSU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4369">13.3.12</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypMDM.htm">MDM</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch09.html#Heading3702">9.6.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypMFK.htm">MFK</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch08.html#Heading3548">8.10.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypMFN.htm">MFN</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch08.html#Heading3548">8.10.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypNMD.htm">NMD</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch14.html#Heading4563">14.3.2</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypNUL.htm">NUL</A></TD>
+<TD class=info>
+No message required (for referential integrity)
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypOMB.htm">OMB</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1681">4.13.2</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypOMD.htm">OMD</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1630">4.7.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypOMG.htm">OMG</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1453">4.4.4</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypOMI.htm">OMI</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1471">4.4.14</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypOML.htm">OML</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1463">4.4.10</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypOMN.htm">OMN</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1652">4.10.3</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypOMP.htm">OMP</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1841">4A.3.3</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypOMQ.htm">OMQ</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1477">4.4.20</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypOMS.htm">OMS</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1650">4.10.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypOPL.htm">OPL</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1473">4.4.16</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypOPR.htm">OPR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1474">4.4.17</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypOPU.htm">OPU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch07.html#Heading2837">7.3.11</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypORA.htm">ORA</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch07.html#Heading2839">7.3.13</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypORB.htm">ORB</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1683">4.13.3</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypORD.htm">ORD</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1631">4.7.2</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypORG.htm">ORG</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1454">4.4.5</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypORI.htm">ORI</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1472">4.4.15</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypORL.htm">ORL</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1465">4.4.11.0</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypORN.htm">ORN</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1653">4.10.4</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypORP.htm">ORP</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1842">4A.3.4</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypORS.htm">ORS</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1651">4.10.2</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypORU.htm">ORU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch07.html#Heading2827">7.3.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypORX.htm">ORX</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1478">4.4.21</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypOSM.htm">OSM</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch07.html#Heading3208">7.16.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypOSU.htm">OSU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1475">4.4.18</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypOUL.htm">OUL</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch07.html#Heading2836">7.3.10</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypPEX.htm">PEX</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch07.html#Heading3088">7.11.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypPGL.htm">PGL</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch12.html#Heading4176">12.3.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypPIN.htm">PIN</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4029">11.3.7</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypPMU.htm">PMU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch15.html#Heading4603">15.3.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypPPG.htm">PPG</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch12.html#Heading4179">12.3.4</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypPPP.htm">PPP</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch12.html#Heading4178">12.3.3</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypPPR.htm">PPR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch12.html#Heading4177">12.3.2</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypQBP.htm">QBP</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch15.html#Heading4609">15.3.7</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypQCN.htm">QCN</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch05.html#Heading2197">5.4.6</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypQSB.htm">QSB</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch05.html#Heading2195">5.4.4</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypQSX.htm">QSX</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch05.html#Heading2198">5.4.7</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypQVR.htm">QVR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch05.html#Heading2196">5.4.5</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypRAS.htm">RAS</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1852">4A.3.14</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRCV.htm">RCV</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1865">4A.3.26</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypRDE.htm">RDE</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1854">4A.3.16</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRDR.htm">RDR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch05.html#Heading2272">5.9.1.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypRDS.htm">RDS</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1846">4A.3.8</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRDY.htm">RDY</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch05.html#Heading2176">5.3.2.5</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypREF.htm">REF</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4037">11.5.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRGV.htm">RGV</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1849">4A.3.11</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypRPA.htm">RPA</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4031">11.4.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRPI.htm">RPI</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4023">11.3.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypRPL.htm">RPL</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4024">11.3.2</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRPR.htm">RPR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4025">11.3.3</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypRQA.htm">RQA</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4031">11.4.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRQI.htm">RQI</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4023">11.3.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypRQP.htm">RQP</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4026">11.3.4</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRRA.htm">RRA</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1853">4A.3.15</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypRRD.htm">RRD</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1847">4A.3.9</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRRE.htm">RRE</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1855">4A.3.17</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypRRG.htm">RRG</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading1850">4A.3.12</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRRI.htm">RRI</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch11.html#Heading4037">11.5.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypRSP.htm">RSP</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch15.html#Heading4609">15.3.7</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypRTB.htm">RTB</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04.html#Heading1626">4.6.2</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypSCN.htm">SCN</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5103">17.6.5</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypSDN.htm">SDN</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5102">17.6.4</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypSDR.htm">SDR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5096">17.5.4</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypSDS.htm">SDS</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5096">17.5.4</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypSIU.htm">SIU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch10.html#Heading3831">10.4</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypSLN.htm">SLN</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5100">17.6.2</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypSLR.htm">SLR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5093">17.5.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypSLS.htm">SLS</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5093">17.5.1</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypSMD.htm">SMD</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5097">17.5.5</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypSMS.htm">SMS</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5097">17.5.5</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypSRM.htm">SRM</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch10.html#Heading3819">10.3</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypSRR.htm">SRR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch10.html#Heading3819">10.3</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypSSR.htm">SSR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4361">13.3.4</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypSSU.htm">SSU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4360">13.3.3</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypSTC.htm">STC</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5099">17.6.1</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypSTI.htm">STI</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5095">17.5.3</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypSTS.htm">STS</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch17.html#Heading5095">17.5.3</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypTCR.htm">TCR</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4368">13.3.11</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypTCU.htm">TCU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch13.html#Heading4367">13.3.10</A></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v29msgtypUDM.htm">UDM</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch05.html#Heading2307">5.10.1.2</A></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v29msgtypVXU.htm">VXU</A></TD>
+<TD class=info>
+</TD>
+<TD class=info> <A HREF = "std29/ch04A.html#Heading2132">4A.7.6</A></TD>
+</TR>
+</TABLE>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

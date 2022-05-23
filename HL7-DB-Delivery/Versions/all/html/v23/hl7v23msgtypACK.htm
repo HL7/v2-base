@@ -1,0 +1,1952 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.3</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std23/hl7.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.3
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23msgtypACK.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.3</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v23msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Message Type: ACK:
+General acknowledgment message
+</H2>
+<TABLE>
+<TR>
+<TD>
+Description: 
+</TD>
+<TD>
+General acknowledgment message
+</TD>
+</TR>
+</TABLE>
+<P>
+</TABLE>
+<H3>Used within the following eventy by receiver</H3><BR>
+<TABLE>
+<TR class=info>
+<TH class=info>
+Event
+</TH>
+<TH class=info>
+Description
+</TH>
+<TH class=info>
+German Interpretation
+</TH>
+<TH class=info>
+Message Structure
+</TH>
+<TH class=info>
+Chapter
+</TH>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA01.htm">A01</A>
+</TD>
+<TD>
+ADT/ACK - Admit/visit notification
+</TD>
+<TD>
+stationäre Aufnahme
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading4">3.2.1</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA02.htm">A02</A>
+</TD>
+<TD>
+ADT/ACK - Transfer a patient
+</TD>
+<TD>
+Verlegung
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading5">3.2.2</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA03.htm">A03</A>
+</TD>
+<TD>
+ADT/ACK -  Discharge a patient
+</TD>
+<TD>
+Entlassung
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading6">3.2.3</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA04.htm">A04</A>
+</TD>
+<TD>
+ADT/ACK -  Register a patient
+</TD>
+<TD>
+ambulanter Besuch
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading7">3.2.4</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA05.htm">A05</A>
+</TD>
+<TD>
+ADT/ACK -  Preadmit a patient
+</TD>
+<TD>
+Voraufnahme eines Patienten (z.B. vorstationär)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading8">3.2.5</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA06.htm">A06</A>
+</TD>
+<TD>
+ADT/ACK -  Transfer an outpatient to inpatient
+</TD>
+<TD>
+Änderung von ambulant in stationär
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading9">3.2.6</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA07.htm">A07</A>
+</TD>
+<TD>
+ADT/ACK -  Transfer an inpatient to outpatient
+</TD>
+<TD>
+Änderung von stationär in ambulant
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading10">3.2.7</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA08.htm">A08</A>
+</TD>
+<TD>
+ADT/ACK -  Update patient information
+</TD>
+<TD>
+Änderung von Patienteninformationen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading11">3.2.8</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA09.htm">A09</A>
+</TD>
+<TD>
+ADT/ACK -  Patient departing
+</TD>
+<TD>
+Patient verläßt Einrichtung
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading12">3.2.9</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA10.htm">A10</A>
+</TD>
+<TD>
+ADT/ACK -  Patient arriving
+</TD>
+<TD>
+Patient erreicht Einrichtung
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading13">3.2.10</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA11.htm">A11</A>
+</TD>
+<TD>
+ADT/ACK -  Cancel admit
+</TD>
+<TD>
+Stornierung für A01 oder A04
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading14">3.2.11</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA12.htm">A12</A>
+</TD>
+<TD>
+ADT/ACK -  Cancel transfer
+</TD>
+<TD>
+Stornierung für A02
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading15">3.2.12</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA13.htm">A13</A>
+</TD>
+<TD>
+ADT/ACK -  Cancel discharge
+</TD>
+<TD>
+Stornierung für A03
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading16">3.2.13</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA14.htm">A14</A>
+</TD>
+<TD>
+ADT/ACK -  Pending admit
+</TD>
+<TD>
+Geplante Aufnahme
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading17">3.2.14</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA15.htm">A15</A>
+</TD>
+<TD>
+ADT/ACK -  Pending transfer
+</TD>
+<TD>
+Geplante Verlegung
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading18">3.2.15</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA16.htm">A16</A>
+</TD>
+<TD>
+ADT/ACK -  Pending discharge
+</TD>
+<TD>
+Geplante Entlassung
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading19">3.2.16</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA17.htm">A17</A>
+</TD>
+<TD>
+ADT/ACK -  Swap patients
+</TD>
+<TD>
+Bettentausch zweier Patienten
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading20">3.2.17</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA18.htm">A18</A>
+</TD>
+<TD>
+ADT/ACK -  Merge patient information
+</TD>
+<TD>
+Patienteninf. zusammenf. (veraltet, neu: A34ff.)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading21">3.2.18</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA20.htm">A20</A>
+</TD>
+<TD>
+ADT/ACK -  Nursing/Census application updates
+</TD>
+<TD>
+Änderung des Bettenstatus
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading24">3.2.20</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA21.htm">A21</A>
+</TD>
+<TD>
+ADT/ACK -  Leave of absence - out (leaving)
+</TD>
+<TD>
+Beginn einer Patientenabwesenheit
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading25">3.2.21</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA22.htm">A22</A>
+</TD>
+<TD>
+ADT/ACK -  Leave of absence - in (returning)
+</TD>
+<TD>
+Ende einer Patientenabwesenheit
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading26">3.2.22</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA23.htm">A23</A>
+</TD>
+<TD>
+ADT/ACK -  Delete a patient record
+</TD>
+<TD>
+Löschen eines Falldatensatzes
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading27">3.2.23</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA24.htm">A24</A>
+</TD>
+<TD>
+ADT/ACK -  Link patient information
+</TD>
+<TD>
+Verknüpfen von Patientendaten
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading28">3.2.24</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA25.htm">A25</A>
+</TD>
+<TD>
+ADT/ACK -  Cancel pending discharge
+</TD>
+<TD>
+Stornierung einer geplanten Entlassung
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading29">3.2.25</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA26.htm">A26</A>
+</TD>
+<TD>
+ADT/ACK -  Cancel pending transfer
+</TD>
+<TD>
+Stornierung einer geplanten Verlegung
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading30">3.2.26</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA27.htm">A27</A>
+</TD>
+<TD>
+ADT/ACK -  Cancel pending admit
+</TD>
+<TD>
+Stornierung einer geplanten Aufnahme
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading31">3.2.27</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA28.htm">A28</A>
+</TD>
+<TD>
+ADT/ACK -  Add person information
+</TD>
+<TD>
+Personendaten hinzufügen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading32">3.2.28</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA29.htm">A29</A>
+</TD>
+<TD>
+ADT/ACK -  Delete person information
+</TD>
+<TD>
+Löschung von personenbezogenen Daten
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading33">3.2.29</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA30.htm">A30</A>
+</TD>
+<TD>
+ADT/ACK -  Merge person information
+</TD>
+<TD>
+Abgleich personenbezogener Daten
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading34">3.2.30</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA31.htm">A31</A>
+</TD>
+<TD>
+ADT/ACK -  Update person information
+</TD>
+<TD>
+Ändern personenbezogener Daten
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading35">3.2.31</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA32.htm">A32</A>
+</TD>
+<TD>
+ADT/ACK -  Cancel patient arriving
+</TD>
+<TD>
+Stornierung zu A10
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading36">3.2.32</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA33.htm">A33</A>
+</TD>
+<TD>
+ADT/ACK -  Cancel patient departing
+</TD>
+<TD>
+Stornierung zu A09
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading37">3.2.33</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA34.htm">A34</A>
+</TD>
+<TD>
+ADT/ACK -  Merge patient information - patient ID only
+</TD>
+<TD>
+Zusammenführung Patienteninformation (nur Patienten-ID)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading38">3.2.34</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA35.htm">A35</A>
+</TD>
+<TD>
+ADT/ACK -  Merge patient information - account number only
+</TD>
+<TD>
+Zusammenführung Patienteninformation (nur Abrechnungsnummer)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading39">3.2.35</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA36.htm">A36</A>
+</TD>
+<TD>
+ADT/ACK -  Merge patient information - patient ID and account number
+</TD>
+<TD>
+Zusammenführung Patienteninformation (Patienten-ID und Abrechnungsnummer)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading40">3.2.36</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA37.htm">A37</A>
+</TD>
+<TD>
+ADT/ACK -  Unlink patient information
+</TD>
+<TD>
+Auflösung einer Verknüpfung von Patientendaten (A24)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading41">3.2.37</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA38.htm">A38</A>
+</TD>
+<TD>
+ADT/ACK - Cancel pre-admit
+</TD>
+<TD>
+Stornierung zu A05
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading42">3.2.38</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA39.htm">A39</A>
+</TD>
+<TD>
+ADT/ACK - Merge person - external ID
+</TD>
+<TD>
+Zusammenführung von Information über externe ID
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading43">3.2.39</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA40.htm">A40</A>
+</TD>
+<TD>
+ADT/ACK - Merge patient - internal ID
+</TD>
+<TD>
+Zusammenführung v. Pat-Information über interne ID
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading44">3.2.40</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA41.htm">A41</A>
+</TD>
+<TD>
+ADT/ACK - Merge account - patient account number
+</TD>
+<TD>
+Zusammenführung von Konten über Kontonummer
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading45">3.2.41</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA42.htm">A42</A>
+</TD>
+<TD>
+ADT/ACK - Merge visit - visit number
+</TD>
+<TD>
+Zusammenführung v.Fall-Information über Fallnummer
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading46">3.2.42</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA43.htm">A43</A>
+</TD>
+<TD>
+ADT/ACK - Move patient information - internal ID
+</TD>
+<TD>
+Korrekt.einer falschen Zuordnung bzgl. interne PID
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading47">3.2.43</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA44.htm">A44</A>
+</TD>
+<TD>
+ADT/ACK - Move account information - internal ID
+</TD>
+<TD>
+Korrekt.einer falschen Zuordnung bzgl.Abrechungsnr
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading48">3.2.44</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA45.htm">A45</A>
+</TD>
+<TD>
+ADT/ACK - Move visit information - visit number
+</TD>
+<TD>
+Korrekt. einer falschen Zuordnung bzgl.Fallnummer
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading49">3.2.45</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA46.htm">A46</A>
+</TD>
+<TD>
+ADT/ACK - Change external ID
+</TD>
+<TD>
+Änderung der externen Pat.ID (PID-2)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading50">3.2.46</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA47.htm">A47</A>
+</TD>
+<TD>
+ADT/ACK - Change internal ID
+</TD>
+<TD>
+Änderung der internen Pat.ID (PID-3)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading51">3.2.47</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA48.htm">A48</A>
+</TD>
+<TD>
+ADT/ACK - Change alternate patient ID
+</TD>
+<TD>
+Änderung der alternativen Pat.ID (PID-4)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading52">3.2.48</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA49.htm">A49</A>
+</TD>
+<TD>
+ADT/ACK - Change patient account number
+</TD>
+<TD>
+Änderung der Abrechungsnummer (PID-18)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading53">3.2.49</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventA50.htm">A50</A>
+</TD>
+<TD>
+ADT/ACK - Change visit number
+</TD>
+<TD>
+Änderung der Fallnummer (PV1-19)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading54">3.2.50</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventA51.htm">A51</A>
+</TD>
+<TD>
+ADT/ACK - Change alternate visit ID
+</TD>
+<TD>
+Änderung der alternativen Fallnummer (PV1-50)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch3.htm#Heading55">3.2.51</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventI07.htm">I07</A>
+</TD>
+<TD>
+PIN/ACK - Unsolicited insurance information
+</TD>
+<TD>
+unaufgeforderte Übermittlung v. Versicherungsdaten
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch11.htm#Heading32">11.2.7</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventP01.htm">P01</A>
+</TD>
+<TD>
+BAR/ACK - Add patient account
+</TD>
+<TD>
+Eröffnung eines Patientenkontos
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch6.htm#Heading5">6.3.1</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventP02.htm">P02</A>
+</TD>
+<TD>
+BAR/ACK - Purge patient account
+</TD>
+<TD>
+Löschen der Abrechnungsdaten eines Patientenkontos
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch6.htm#Heading6">6.3.2</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventP03.htm">P03</A>
+</TD>
+<TD>
+DFT/ACK - Post detail financial transaction
+</TD>
+<TD>
+leistungs- und abrechnungsrelevante Informationen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch6.htm#Heading7">6.3.3</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventP05.htm">P05</A>
+</TD>
+<TD>
+BAR/ACK - Update account
+</TD>
+<TD>
+Änderung eines Patientenkontos
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch6.htm#Heading9">6.3.5</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventP06.htm">P06</A>
+</TD>
+<TD>
+BAR/ACK - End account
+</TD>
+<TD>
+Abschluß eines Patientenkontos
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch6.htm#Heading10">6.3.6</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventP09.htm">P09</A>
+</TD>
+<TD>
+SUR - Summary product experience report
+</TD>
+<TD>
+zusammenfassender Produkterfahrungsbericht
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch7.htm#Heading187">7.10.2</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventPC1.htm">PC1</A>
+</TD>
+<TD>
+PPR - PC/Problem Add
+</TD>
+<TD>
+Pflegeproblem erfassen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading26">12.2.2</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventPC2.htm">PC2</A>
+</TD>
+<TD>
+PPR - PC/Problem Update
+</TD>
+<TD>
+Pflegeproblem ändern
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading26">12.2.2</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventPC3.htm">PC3</A>
+</TD>
+<TD>
+PPR - PC/Problem Delete
+</TD>
+<TD>
+Pflegeproblem löschen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading26">12.2.2</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventPC4.htm">PC4</A>
+</TD>
+<TD>
+PPR - PC/Problem Query
+</TD>
+<TD>
+Pflegeproblem erfragen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading29">12.2.5</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventPC5.htm">PC5</A>
+</TD>
+<TD>
+PPR - PC/Problem Reponse
+</TD>
+<TD>
+Antwort zu PC4
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading30">12.2.6</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventPC6.htm">PC6</A>
+</TD>
+<TD>
+PGL - PC/Goal Add
+</TD>
+<TD>
+Pflegeziel erfassen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading25">12.2.1</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventPC7.htm">PC7</A>
+</TD>
+<TD>
+PGL - PC/Goal Update
+</TD>
+<TD>
+Pflegeziel ändern
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading25">12.2.1</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventPC8.htm">PC8</A>
+</TD>
+<TD>
+PGL - PC/Goal Delete
+</TD>
+<TD>
+Pflegeziel löschen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading25">12.2.1</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventPC9.htm">PC9</A>
+</TD>
+<TD>
+PGL - PC/Goal Query
+</TD>
+<TD>
+Pflegeziel erfragen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading31">12.2.7</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventPCA.htm">PCA</A>
+</TD>
+<TD>
+PGL - PC/Goal Response
+</TD>
+<TD>
+Antwort zu PC9
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading32">12.2.8</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventPCB.htm">PCB</A>
+</TD>
+<TD>
+PPP - PC/Pathway (Problem Oriented) Add
+</TD>
+<TD>
+problemorientierte Pflegemaßnahme erfassen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading27">12.2.3</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventPCC.htm">PCC</A>
+</TD>
+<TD>
+PPP - PC/Pathway (Problem Oriented) Update
+</TD>
+<TD>
+problemorientierte Pflegemaßnahme ändern
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading27">12.2.3</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventPCD.htm">PCD</A>
+</TD>
+<TD>
+PPP - PC/Pathway (Problem Oriented) Delete
+</TD>
+<TD>
+problemorientierte Pflegemaßnahme löschen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading27">12.2.3</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventPCE.htm">PCE</A>
+</TD>
+<TD>
+PPP - PC/Pathway (Problem Oriented) Query
+</TD>
+<TD>
+problemorientierte Pflegemaßnahme erfragen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading33">12.2.9</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventPCF.htm">PCF</A>
+</TD>
+<TD>
+PPP - PC/Pathway (Problem Oriented) Query Response
+</TD>
+<TD>
+Antwort zu PCE
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading34">12.2.10</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventPCG.htm">PCG</A>
+</TD>
+<TD>
+PPP - PC/Pathway (Goal Oriented) Add
+</TD>
+<TD>
+zielorientierte Pflegemaßnahme erfassen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading28">12.2.4</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventPCH.htm">PCH</A>
+</TD>
+<TD>
+PPP - PC/Pathway (Goal Oriented) Update
+</TD>
+<TD>
+zielorientierte Pflegemaßnahme  ändern
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading28">12.2.4</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventPCJ.htm">PCJ</A>
+</TD>
+<TD>
+PPP - PC/Pathway (Goal Oriented) Delete
+</TD>
+<TD>
+zielorientierte Pflegemaßnahme  löschen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading28">12.2.4</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventPCK.htm">PCK</A>
+</TD>
+<TD>
+PPP - PC/Pathway (Goal Oriented) Query
+</TD>
+<TD>
+zielorientierte Pflegemaßnahme erfragen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading35">12.2.11</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventPCL.htm">PCL</A>
+</TD>
+<TD>
+PPP - PC/Pathway (Goal Oriented) Query Response
+</TD>
+<TD>
+Antwort zu PCK
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch12.htm#Heading36">12.2.12</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventQ03.htm">Q03</A>
+</TD>
+<TD>
+DSR/ACK - Deferred response to a query
+</TD>
+<TD>
+Verzögerte Antwort auf Anfrage (Q02)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch2.htm#Heading285">2.18.2</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventQ05.htm">Q05</A>
+</TD>
+<TD>
+UDM/ACK - Unsolicited display update
+</TD>
+<TD>
+Sofortige Bildschirmanzeige (Eilmeldung)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch2.htm#Heading271">2.14.2</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventR01.htm">R01</A>
+</TD>
+<TD>
+ORU/ACK - Unsolicited transmission of an observation
+</TD>
+<TD>
+unangeforderte Übermittlung eines Befundes
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch7.htm#Heading37">7.2.1</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventR03.htm">R03</A>
+</TD>
+<TD>
+Display-oriented results, query/unsol. update (for backward comp.only)
+</TD>
+<TD>
+Anzeigeorientiertes Ergebnis (veraltet)
+</TD>
+<TD>
+</TD>
+<TD>
+<br>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventS12.htm">S12</A>
+</TD>
+<TD>
+SIU/ACK - Notification of new appointment booking
+</TD>
+<TD>
+Benachrichtigung über Terminvergabe
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading49">10.3.1</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventS13.htm">S13</A>
+</TD>
+<TD>
+SIU/ACK - Notification of appointment rescheduling
+</TD>
+<TD>
+Benachrichtigung für Terminverschiebung
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading50">10.6.2</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventS14.htm">S14</A>
+</TD>
+<TD>
+SIU/ACK - Notification of appointment modification
+</TD>
+<TD>
+Benachrichtigung für inhaltliche Terminänderung
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading51">10.3.3</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventS15.htm">S15</A>
+</TD>
+<TD>
+SIU/ACK - Notification of appointment cancellation
+</TD>
+<TD>
+Benachrichtigung über Terminabsage
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading52">10.3.4</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventS16.htm">S16</A>
+</TD>
+<TD>
+SIU/ACK - Notification of appointment discontinuation
+</TD>
+<TD>
+Benachrichtigung über Aussetzung des aktuellen oder weiterer Termine
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading53">10.3.5</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventS17.htm">S17</A>
+</TD>
+<TD>
+SIU/ACK - Notification of appointment deletion
+</TD>
+<TD>
+Benachrichtigung über Löschung eines Termins
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading54">10.3.6</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventS18.htm">S18</A>
+</TD>
+<TD>
+SIU/ACK - Notification of addition of service/resource on appointment
+</TD>
+<TD>
+Benachrichtigung über zusätzliche Leistungen/Resourcen zu einem Termin
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading55">10.3.7</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventS19.htm">S19</A>
+</TD>
+<TD>
+SIU/ACK - Notification of modification of service/resource on appointment
+</TD>
+<TD>
+Änderungsbenachrichtigung für Leistungen/Resourcen zu einem Termin
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading56">10.3.8</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventS20.htm">S20</A>
+</TD>
+<TD>
+SIU/ACK - Notification of cancellation of service/resource on appointment
+</TD>
+<TD>
+Benachrichtigung für Absage Leistungen/Resourcen zu einem Terminabsage
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading57">10.3.9</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventS21.htm">S21</A>
+</TD>
+<TD>
+SIU/ACK - Notification of discontinuation of service/resource on appointment
+</TD>
+<TD>
+Benachrichtigung über Aussetzung für Leistungen/Resourcen
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading58">10.3.10</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventS22.htm">S22</A>
+</TD>
+<TD>
+SIU/ACK - Notification of deletion of service/resource on appointment
+</TD>
+<TD>
+Benachrichtigung Löschung für Leistungen/Resourcen zu einem Termin
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading59">10.3.11</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventS23.htm">S23</A>
+</TD>
+<TD>
+SIU/ACK - Notification of blocked schedule time slot(s)
+</TD>
+<TD>
+Benachrichtigung über nicht verfügbare Zeitbereiche
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading60">10.3.12</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventS24.htm">S24</A>
+</TD>
+<TD>
+SIU/ACK - Notification of open ("unblocked") schedule time slot(s)
+</TD>
+<TD>
+Benachrichtigung über (wieder) verfügbare Zeitbereiche
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading61">10.3.13</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventS26.htm">S26</A>
+</TD>
+<TD>
+notification that patient did not show up for schedule appointment
+</TD>
+<TD>
+Benachrichtigung über Nichterscheinen eines Patienten
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch10.htm#Heading62">10.3.14</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventT01.htm">T01</A>
+</TD>
+<TD>
+MDM/ACK - Original document notification
+</TD>
+<TD>
+Benachrichtigung über die Neuanlage eines Dokuments (Dok. nicht beigefügt)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading24">9.4.1</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventT02.htm">T02</A>
+</TD>
+<TD>
+MDM/ACK - Original document notification and content
+</TD>
+<TD>
+Benachrichtigung über die Neuanlage eines Dokuments (Dok. beigefügt)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading25">9.4.2</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventT03.htm">T03</A>
+</TD>
+<TD>
+MDM/ACK - Document status change notification
+</TD>
+<TD>
+Benachrichtigung über die Statusänderung eines Dokuments (Dok. nicht beigefügt)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading26">9.4.3</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventT04.htm">T04</A>
+</TD>
+<TD>
+MDM/ACK - Document status change notification and content
+</TD>
+<TD>
+Benachrichtigung über die Statusänderung eines Dokuments (Dok. beigefügt)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading27">9.4.4</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventT05.htm">T05</A>
+</TD>
+<TD>
+MDM/ACK - Document addendum notification
+</TD>
+<TD>
+Benachrichtigung über die Ergänzung eines Dokuments (Dok. nicht beigefügt)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading28">9.4.5</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventT06.htm">T06</A>
+</TD>
+<TD>
+MDM/ACK - Document addendum notification and content
+</TD>
+<TD>
+Benachrichtigung über die Ergänzung eines Dokuments (Dok. beigefügt)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading29">9.4.6</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventT07.htm">T07</A>
+</TD>
+<TD>
+MDM/ACK - Document edit notification
+</TD>
+<TD>
+Benachrichtigung über die Änderung eines Dokuments (Dok. nicht beigefügt)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading30">9.4.7</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventT08.htm">T08</A>
+</TD>
+<TD>
+MDM/ACK - Document edit notification and content
+</TD>
+<TD>
+Benachrichtigung über die Änderung eines Dokuments (Dok. beigefügt)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading31">9.4.8</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventT09.htm">T09</A>
+</TD>
+<TD>
+MDM/ACK - Document replace notification
+</TD>
+<TD>
+Benachrichtigung über den Austausch eines Dokuments (Dok. nicht beigefügt)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading32">9.4.9</A>
+</TD>
+</TR>
+<TR class=msgtype-odd>
+<TD>
+<A HREF = "hl7v23eventT10.htm">T10</A>
+</TD>
+<TD>
+MDM/ACK - Document replacement notification and content
+</TD>
+<TD>
+Benachrichtigung über den Austausch eines Dokuments (Dok. beigefügt)
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading33">9.4.10</A>
+</TD>
+</TR>
+<TR class=msgtype-even>
+<TD>
+<A HREF = "hl7v23eventT11.htm">T11</A>
+</TD>
+<TD>
+MDM/ACK - Document cancel notification
+</TD>
+<TD>
+Benachrichtigung über die Löschung eines Dokuments
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF = "std23/ch9.htm#Heading34">9.4.11</A>
+</TD>
+</TR>
+</TABLE>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

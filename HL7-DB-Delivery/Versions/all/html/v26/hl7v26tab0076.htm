@@ -1,0 +1,1187 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.6</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std26/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.6
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26tab0076.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.6</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v26tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Table 0076:
+Message type
+</H2>
+<TABLE class=info>
+<TR>
+<TD class=>Interpretation:</TD>
+<TD class=>Nachrichtenart</TD>
+</TR>
+<TR>
+<TD class=>OID Table:</TD>
+<TD class=>2.16.840.1.113883.12.76</TD>
+</TR>
+<TR>
+<TD class=>Codesystem OID: </TD>
+<TD class=>2.16.840.1.113883.18.30 Version 7</TD>
+</TR>
+<TR>
+<TD class=>Value Set OID:</TD>
+<TD class=>2.16.840.1.113883.21.33</TD>
+</TR>
+<TR>
+<TD class=>Binding:</TD>
+<TD class=>universal</TD>
+</TR>
+<TR>
+<TD class=>Expansion:</TD>
+<TD class=>all codes from codesystem</TD>
+</TR>
+<TR>
+<TD class=>Vocabulary Domain:</TD>
+<TD class=>tbd</TD>
+</TR>
+<TR>
+<TD class=>Table Type:</TD>
+<TD class=>HL7</TD>
+</TR>
+<TR>
+<TD class=>Case insensitive:</TD>
+<TD class=>Falsch</TD>
+</TR>
+<TR>
+<TD class=>Section</TD>
+<TD class=>2.16.1</TD>
+</TR>
+</TABLE>
+<p>
+<TABLE class=info>
+<TR>
+<TH class=table>Value</TH>
+<TH class=table>Description</TH>
+<TH class=table>German Interpretation</TH>
+<TH class=table>Comment</TH>
+<TH class=table>Chapter</TH>
+</TR>
+<TR class=table-odd>
+<TD class=table>ACK</TD>
+<TD class=table>General acknowledgment message</TD>
+<TD class=table>Empfangsbest&auml;tigung</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ADR</TD>
+<TD class=table>ADT response</TD>
+<TD class=table>Antwort auf Anfrage bez&uuml;glich Aufnahme / Verlegung / Entlassung von Patienten</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ADT</TD>
+<TD class=table>ADT message</TD>
+<TD class=table>Aufnahme / Entlassung / Verlegung</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BAR</TD>
+<TD class=table>Add/change billing account</TD>
+<TD class=table>Hinzuf&uuml;gen / &Auml;ndern von Abrechnungsdaten</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BPS</TD>
+<TD class=table>Blood product dispense status message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BRP</TD>
+<TD class=table>Blood product dispense status acknowledgement message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BRT</TD>
+<TD class=table>Blood product transfusion/disposition acknowledgement message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BTS</TD>
+<TD class=table>Blood product transfusion/disposition message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CRM</TD>
+<TD class=table>Clinical study registration message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CSU</TD>
+<TD class=table>Unsolicited study data message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DFT</TD>
+<TD class=table>Detail financial transactions</TD>
+<TD class=table>Einzelbuchung</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DOC</TD>
+<TD class=table>Document response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DSR</TD>
+<TD class=table>Display response</TD>
+<TD class=table>Antwort im Anzeigeformat</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EAC</TD>
+<TD class=table>Automated equipment command message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EAN</TD>
+<TD class=table>Automated equipment notification message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EAR</TD>
+<TD class=table>Automated equipment response message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EHC</TD>
+<TD class=table>Health Care Invoice</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ESR</TD>
+<TD class=table>Automated equipment status update acknowledgment message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ESU</TD>
+<TD class=table>Automated equipment status update message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>INR</TD>
+<TD class=table>Automated equipment inventory request message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>INU</TD>
+<TD class=table>Automated equipment inventory update message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LSR</TD>
+<TD class=table>Automated equipment log/service request message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LSU</TD>
+<TD class=table>Automated equipment log/service update message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MDM</TD>
+<TD class=table>Medical document management</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MFD</TD>
+<TD class=table>Master files delayed application acknowledgment</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MFK</TD>
+<TD class=table>Master files application acknowledgment</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MFN</TD>
+<TD class=table>Master files notification</TD>
+<TD class=table>Stammdatei&auml;nderung</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MFQ</TD>
+<TD class=table>Master files query</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MFR</TD>
+<TD class=table>Master files response</TD>
+<TD class=table>Antwort auf Stammdateianfrage</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NMD</TD>
+<TD class=table>Application management data message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>NMQ</TD>
+<TD class=table>Application management query message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NMR</TD>
+<TD class=table>Application management response message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OMB</TD>
+<TD class=table>Blood product order message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OMD</TD>
+<TD class=table>Dietary order</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OMG</TD>
+<TD class=table>General clinical order message</TD>
+<TD class=table>allgemeiner Auftrag</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OMI</TD>
+<TD class=table>Imaging order</TD>
+<TD class=table>Auftrag f&uuml;r bildgebende Untersuchung</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OML</TD>
+<TD class=table>Laboratory order message</TD>
+<TD class=table>Laborauftrag</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OMN</TD>
+<TD class=table>Non-stock requisition order message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OMP</TD>
+<TD class=table>Pharmacy/treatment order message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OMS</TD>
+<TD class=table>Stock requisition order message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OPL</TD>
+<TD class=table>Population/Location-Based Laboratory Order Message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OPR</TD>
+<TD class=table>Population/Location-Based Laboratory Order Acknowledgment Message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OPU</TD>
+<TD class=table>Unsolicited Population/Location-Based Laboratory Observation Message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ORB</TD>
+<TD class=table>Blood product order acknowledgement message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ORD</TD>
+<TD class=table>Dietary order acknowledgment message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ORF</TD>
+<TD class=table>Query for results of observation</TD>
+<TD class=table>Anfrage nach Untersuchungsergebnissen</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ORG</TD>
+<TD class=table>General clinical order acknowledgment message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ORI</TD>
+<TD class=table>Imaging order acknowledgement message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ORL</TD>
+<TD class=table>Laboratory acknowledgment message (unsolicited)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ORM</TD>
+<TD class=table>Pharmacy/treatment order message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ORN</TD>
+<TD class=table>Non-stock requisition - General order acknowledgment message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ORP</TD>
+<TD class=table>Pharmacy/treatment order acknowledgment message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ORR</TD>
+<TD class=table>General order response message response to any ORM</TD>
+<TD class=table>Empfangsbest&auml;tigung von der Anwendung f&uuml;r einen Auftrag</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ORS</TD>
+<TD class=table>Stock requisition - Order acknowledgment message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ORU</TD>
+<TD class=table>Unsolicited transmission of an observation message</TD>
+<TD class=table>Nicht angeforderte Untersuchungsergebnisse</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OSQ</TD>
+<TD class=table>Query response for order status</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OSR</TD>
+<TD class=table>Query response for order status</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OUL</TD>
+<TD class=table>Unsolicited laboratory observation message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PEX</TD>
+<TD class=table>Product experience message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PGL</TD>
+<TD class=table>Patient goal message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PIN</TD>
+<TD class=table>Patient insurance information</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PMU</TD>
+<TD class=table>Add personnel record</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PPG</TD>
+<TD class=table>Patient pathway message (goal-oriented)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PPP</TD>
+<TD class=table>Patient pathway message (problem-oriented)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PPR</TD>
+<TD class=table>Patient problem message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PPT</TD>
+<TD class=table>Patient pathway goal-oriented response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PPV</TD>
+<TD class=table>Patient goal response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PRR</TD>
+<TD class=table>Patient problem response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PTR</TD>
+<TD class=table>Patient pathway problem-oriented response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>QBP</TD>
+<TD class=table>Query by parameter</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>QCK</TD>
+<TD class=table>Deferred query</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>QCN</TD>
+<TD class=table>Cancel query</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>QRY</TD>
+<TD class=table>Query, original mode</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>QSB</TD>
+<TD class=table>Create subscription</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>QSX</TD>
+<TD class=table>Cancel subscription/acknowledge message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>QVR</TD>
+<TD class=table>Query for previous events</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RAR</TD>
+<TD class=table>Pharmacy/treatment administration information</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RAS</TD>
+<TD class=table>Pharmacy/treatment administration message</TD>
+<TD class=table>Erfolgte Verabreichung von Medikamenten</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RCI</TD>
+<TD class=table>Return clinical information</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RCL</TD>
+<TD class=table>Return clinical list</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RDE</TD>
+<TD class=table>Pharmacy/treatment encoded order message</TD>
+<TD class=table>Medikamentenverordnung (Apotheke)</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RDR</TD>
+<TD class=table>Pharmacy/treatment dispense information</TD>
+<TD class=table>Antwort auf Anfrage bez&uuml;glich Abgabe von Medikamenten</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RDS</TD>
+<TD class=table>Pharmacy/treatment dispense message</TD>
+<TD class=table>Abgabe von Medikamenten</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RDY</TD>
+<TD class=table>Display based response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>REF</TD>
+<TD class=table>Patient referral</TD>
+<TD class=table>&Uuml;berweisung eines Patienten</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RER</TD>
+<TD class=table>Pharmacy/treatment encoded order information</TD>
+<TD class=table>Antwort auf Anfrage bez&uuml;glich Medikamentenverordnung (Apotheke)</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RGR</TD>
+<TD class=table>Pharmacy/treatment dose information</TD>
+<TD class=table>Antwort auf Anfrage bez&uuml;glich Verabreichungsvorschrift f&uuml;r Medikamente</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RGV</TD>
+<TD class=table>Pharmacy/treatment give message</TD>
+<TD class=table>Verabreichungsvorschrift f&uuml;r Medikamente</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ROR</TD>
+<TD class=table>Pharmacy/treatment order response</TD>
+<TD class=table>Antwort auf Anfrage bez&uuml;glich Medikamentenverordnung</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RPA</TD>
+<TD class=table>Return patient authorization</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RPI</TD>
+<TD class=table>Return patient information</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RPL</TD>
+<TD class=table>Return patient display list</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RPR</TD>
+<TD class=table>Return patient list</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RQA</TD>
+<TD class=table>Request patient authorization</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RQC</TD>
+<TD class=table>Request clinical information</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RQI</TD>
+<TD class=table>Request patient information</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RQP</TD>
+<TD class=table>Request patient demographics</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RRA</TD>
+<TD class=table>Pharmacy/treatment administration acknowledgment message</TD>
+<TD class=table>Empfangsbest&auml;tigung f&uuml;r Verabreichungsmeldung</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RRD</TD>
+<TD class=table>Pharmacy/treatment dispense acknowledgment message</TD>
+<TD class=table>Empfangsbest&auml;tigung f&uuml;r Abgabemeldung</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RRE</TD>
+<TD class=table>Pharmacy/treatment encoded order acknowledgment message</TD>
+<TD class=table>Empfangsbest&auml;tigung f&uuml;r Verordnung (Apotheke)</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RRG</TD>
+<TD class=table>Pharmacy/treatment give acknowledgment message</TD>
+<TD class=table>Empfangsbest&auml;tigung f&uuml;r Verabreichungsvorschrift</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RRI</TD>
+<TD class=table>Return referral information</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RSP</TD>
+<TD class=table>Segment pattern response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RTB</TD>
+<TD class=table>Tabular response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SCN</TD>
+<TD class=table>Notification of Anti-Microbial Device Cycle Data</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SDN</TD>
+<TD class=table>Notification of Anti-Microbial Device Data</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SDR</TD>
+<TD class=table>Sterilization anti-microbial device data request</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SIU</TD>
+<TD class=table>Schedule information unsolicited</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SLN</TD>
+<TD class=table>Notification of New Sterilization Lot</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SLR</TD>
+<TD class=table>Sterilization lot request</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SMD</TD>
+<TD class=table>Sterilization anti-microbial device cycle data request</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SQM</TD>
+<TD class=table>Schedule query message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SQR</TD>
+<TD class=table>Schedule query response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SRM</TD>
+<TD class=table>Schedule request message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SRR</TD>
+<TD class=table>Scheduled request response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SSR</TD>
+<TD class=table>Specimen status request message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SSU</TD>
+<TD class=table>Specimen status update message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>STC</TD>
+<TD class=table>Notification of Sterilization Configuration</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>STI</TD>
+<TD class=table>Sterilization item request</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SUR</TD>
+<TD class=table>Summary product experience report</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TBR</TD>
+<TD class=table>Tabular data response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>TCR</TD>
+<TD class=table>Automated equipment test code settings request message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TCU</TD>
+<TD class=table>Automated equipment test code settings update message</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>UDM</TD>
+<TD class=table>Unsolicited display update message</TD>
+<TD class=table>Nicht angeforderte Nachricht im Anzeigeformat</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>VXQ</TD>
+<TD class=table>Query for vaccination record</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>VXR</TD>
+<TD class=table>Vaccination record response</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>VXU</TD>
+<TD class=table>Unsolicited vaccination record update</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>VXX</TD>
+<TD class=table>Response for vaccination query with multiple PID matches</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.16.1</TD>
+</TR>
+</TABLE>
+<H3>Comments made by the German HL7 User Group:</H3>
+<dd>Nachrichtenart</DD>
+<P>
+<P>
+<H3>Used Within the following Data Structures</H3>
+<DD><A HREF = "hl7v26typMSG.htm">MSG</A></DD><BR>
+<P>
+<H3>Used Within the following Components</H3>
+<DD>186 Message Code (Nachrichtentyp) </DD><BR>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,671 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.6</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std26/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.6
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26tab0163.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.6</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v26tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v26qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Table 0163:
+Body site
+</H2>
+<TABLE class=info>
+<TR>
+<TD class=>Interpretation:</TD>
+<TD class=>Applikationsort</TD>
+</TR>
+<TR>
+<TD class=>OID Table:</TD>
+<TD class=>2.16.840.1.113883.12.163</TD>
+</TR>
+<TR>
+<TD class=>Codesystem OID: </TD>
+<TD class=>2.16.840.1.113883.18.81 Version 3</TD>
+</TR>
+<TR>
+<TD class=>Value Set OID:</TD>
+<TD class=>2.16.840.1.113883.21.93</TD>
+</TR>
+<TR>
+<TD class=>Binding:</TD>
+<TD class=>universal</TD>
+</TR>
+<TR>
+<TD class=>Expansion:</TD>
+<TD class=>all codes from codesystem</TD>
+</TR>
+<TR>
+<TD class=>Vocabulary Domain:</TD>
+<TD class=>tbd</TD>
+</TR>
+<TR>
+<TD class=>Table Type:</TD>
+<TD class=>HL7</TD>
+</TR>
+<TR>
+<TD class=>Case insensitive:</TD>
+<TD class=>Falsch</TD>
+</TR>
+<TR>
+<TD class=>Section</TD>
+<TD class=>7.18.1</TD>
+</TR>
+</TABLE>
+<p>
+<TABLE class=info>
+<TR>
+<TH class=table>Value</TH>
+<TH class=table>Description</TH>
+<TH class=table>German Interpretation</TH>
+<TH class=table>Comment</TH>
+<TH class=table>Chapter</TH>
+</TR>
+<TR class=table-even>
+<TD class=table>BE</TD>
+<TD class=table>Bilateral Ears</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OU</TD>
+<TD class=table>Bilateral Eyes</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BN</TD>
+<TD class=table>Bilateral Nares</TD>
+<TD class=table>Beide Nasenl&ouml;cher</TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BU</TD>
+<TD class=table>Buttock</TD>
+<TD class=table>Ges&auml;ﬂ</TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CT</TD>
+<TD class=table>Chest Tube</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LA</TD>
+<TD class=table>Left Arm</TD>
+<TD class=table>linker Arm</TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LAC</TD>
+<TD class=table>Left Anterior Chest</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LACF</TD>
+<TD class=table>Left Antecubital Fossa</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LD</TD>
+<TD class=table>Left Deltoid</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LE</TD>
+<TD class=table>Left Ear</TD>
+<TD class=table>linkes Ohr</TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LEJ</TD>
+<TD class=table>Left External Jugular</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OS</TD>
+<TD class=table>Left Eye</TD>
+<TD class=table>linkes Auge</TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LF</TD>
+<TD class=table>Left Foot</TD>
+<TD class=table>linker Fuﬂ</TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LG</TD>
+<TD class=table>Left Gluteus Medius</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LH</TD>
+<TD class=table>Left Hand</TD>
+<TD class=table>linke Hand</TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LIJ</TD>
+<TD class=table>Left Internal Jugular</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LLAQ</TD>
+<TD class=table>Left Lower Abd Quadrant</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LLFA</TD>
+<TD class=table>Left Lower Forearm</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LMFA</TD>
+<TD class=table>Left Mid Forearm</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LN</TD>
+<TD class=table>Left Naris</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LPC</TD>
+<TD class=table>Left Posterior Chest</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LSC</TD>
+<TD class=table>Left Subclavian</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LT</TD>
+<TD class=table>Left Thigh</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LUA</TD>
+<TD class=table>Left Upper Arm</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LUAQ</TD>
+<TD class=table>Left Upper Abd Quadrant</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LUFA</TD>
+<TD class=table>Left Upper Forearm</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LVG</TD>
+<TD class=table>Left Ventragluteal</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LVL</TD>
+<TD class=table>Left Vastus Lateralis</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NB</TD>
+<TD class=table>Nebulized</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PA</TD>
+<TD class=table>Perianal</TD>
+<TD class=table>Perianal</TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PERIN</TD>
+<TD class=table>Perineal</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RA</TD>
+<TD class=table>Right Arm</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RAC</TD>
+<TD class=table>Right Anterior Chest</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RACF</TD>
+<TD class=table>Right Antecubital Fossa</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RD</TD>
+<TD class=table>Right Deltoid</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RE</TD>
+<TD class=table>Right Ear</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>REJ</TD>
+<TD class=table>Right External Jugular</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OD</TD>
+<TD class=table>Right Eye</TD>
+<TD class=table>rechtes Auge</TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RF</TD>
+<TD class=table>Right Foot</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RG</TD>
+<TD class=table>Right Gluteus Medius</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RH</TD>
+<TD class=table>Right Hand</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RIJ</TD>
+<TD class=table>Right Internal Jugular</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RLAQ</TD>
+<TD class=table>Rt Lower Abd Quadrant</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RLFA</TD>
+<TD class=table>Right Lower Forearm</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RMFA</TD>
+<TD class=table>Right Mid Forearm</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RN</TD>
+<TD class=table>Right Naris</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RPC</TD>
+<TD class=table>Right Posterior Chest</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RSC</TD>
+<TD class=table>Right Subclavian</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RT</TD>
+<TD class=table>Right Thigh</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RUA</TD>
+<TD class=table>Right Upper Arm</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RUAQ</TD>
+<TD class=table>Right Upper Abd Quadrant</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RUFA</TD>
+<TD class=table>Right Upper Forearm</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RVL</TD>
+<TD class=table>Right Vastus Lateralis</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RVG</TD>
+<TD class=table>Right Ventragluteal</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>7.18.1</TD>
+</TR>
+</TABLE>
+<H3>Comments made by the German HL7 User Group:</H3>
+<dd>Applikationsort</DD>
+<P>
+<H3>Used Within the following Data Elements</H3>
+<DD><A HREF = "hl7v26datel.htm#02179">02179</A> Observation Site / Beobachtungsort/Messpunkt (<A HREF = "std26/ch07.html#Heading127">7.4.2.20</A>)</DD>
+<P>
+<H3>Used Within the following Data Structures</H3>
+<DD><A HREF = "hl7v26typSPS.htm">SPS</A></DD><BR>
+<P>
+<H3>Used Within the following Components</H3>
+<DD>331 Body Site () </DD><BR>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

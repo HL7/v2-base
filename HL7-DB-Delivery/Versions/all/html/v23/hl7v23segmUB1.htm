@@ -1,0 +1,556 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.3</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std23/hl7.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.3
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23segmUB1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.3</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v23segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v23typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment UB1:
+UB82  data
+(nicht verwendet)
+</H2>
+<TABLE class=segm>
+<TR class=segm-odd>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm BGCOLOR="#FFB090">Set ID - UB1</TD>
+<TD class=segm>(Segment UB1 wird nicht verwendet)</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00530">00530</A></TD>
+<TD class=segm><A HREF = "hl7v23typSI.htm#SI">SI</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading298">6.4.10.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm BGCOLOR="#FFB090">Blood Deductible  (43)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..1</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v23datel.htm#00531">00531</A></TD>
+<TD class=segm><A HREF = "hl7v23typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading299">6.4.10.2</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>Blood Furnished Pints Of (40)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00532">00532</A></TD>
+<TD class=segm><A HREF = "hl7v23typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading300">6.4.10.3</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>Blood Replaced Pints (41)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00533">00533</A></TD>
+<TD class=segm><A HREF = "hl7v23typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading301">6.4.10.4</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm BGCOLOR="#FFB090">Blood Not Replaced Pints(42)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00534">00534</A></TD>
+<TD class=segm><A HREF = "hl7v23typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading302">6.4.10.5</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm BGCOLOR="#FFB090">Co Insurance Days (25)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00535">00535</A></TD>
+<TD class=segm><A HREF = "hl7v23typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading303">6.4.10.6</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm>Condition Code (35-39)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23tab0043.htm">0043</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y/5</TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00536">00536</A></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v23typIS.htm#IS">IS</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading304">6.4.10.7</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm BGCOLOR="#FFB090">Covered Days   (23)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..3</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00537">00537</A></TD>
+<TD class=segm><A HREF = "hl7v23typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading305">6.4.10.8</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm BGCOLOR="#FFB090">Non Covered Days   (24)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..3</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00538">00538</A></TD>
+<TD class=segm><A HREF = "hl7v23typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading306">6.4.10.9</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm BGCOLOR="#FFB090">Value Amount & Code (46-49)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23tab0153.htm">0153</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y/8</TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00539">00539</A></TD>
+<TD class=segm><A HREF = "hl7v23typCM.htm#CM_UVC">CM_UVC</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading307">6.4.10.10</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>11</TD>
+<TD class=segm>Number Of Grace Days (90)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00540">00540</A></TD>
+<TD class=segm><A HREF = "hl7v23typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading308">6.4.10.11</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>12</TD>
+<TD class=segm BGCOLOR="#FFB090">Spec Program Indicator (44)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm BGCOLOR="#FFB090">..60</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00541">00541</A></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v23typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading309">6.4.10.12</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>13</TD>
+<TD class=segm BGCOLOR="#FFB090">PSRO/UR Approval Indicator (87)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm BGCOLOR="#FFB090">..60</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00542">00542</A></TD>
+<TD class=segm><A HREF = "hl7v23typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading310">6.4.10.13</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>14</TD>
+<TD class=segm BGCOLOR="#FFB090">PSRO/UR Approved Stay Fm (88)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00543">00543</A></TD>
+<TD class=segm><A HREF = "hl7v23typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading311">6.4.10.14</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>15</TD>
+<TD class=segm BGCOLOR="#FFB090">PSRO/UR Approved Stay To (89)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00544">00544</A></TD>
+<TD class=segm><A HREF = "hl7v23typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading312">6.4.10.15</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>16</TD>
+<TD class=segm BGCOLOR="#FFB090">Occurrence (28 32)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..20</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y/5</TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00545">00545</A></TD>
+<TD class=segm><A HREF = "hl7v23typCM.htm#CM_OCD">CM_OCD</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading313">6.4.10.16</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>17</TD>
+<TD class=segm>Occurrence Span (33)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00546">00546</A></TD>
+<TD class=segm><A HREF = "hl7v23typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading314">6.4.10.17</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>18</TD>
+<TD class=segm BGCOLOR="#FFB090">Occur Span Start Date(33)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00547">00547</A></TD>
+<TD class=segm><A HREF = "hl7v23typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading315">6.4.10.18</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>19</TD>
+<TD class=segm BGCOLOR="#FFB090">Occur Span End Date (33)</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00548">00548</A></TD>
+<TD class=segm><A HREF = "hl7v23typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading316">6.4.10.19</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>20</TD>
+<TD class=segm BGCOLOR="#FFB090">UB 82 Locator 2</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..30</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00549">00549</A></TD>
+<TD class=segm><A HREF = "hl7v23typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading317">6.4.10.20</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>21</TD>
+<TD class=segm BGCOLOR="#FFB090">UB 82 Locator 9</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..7</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00550">00550</A></TD>
+<TD class=segm><A HREF = "hl7v23typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading318">6.4.10.21</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>22</TD>
+<TD class=segm BGCOLOR="#FFB090">UB 82 Locator 27</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00551">00551</A></TD>
+<TD class=segm><A HREF = "hl7v23typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading319">6.4.10.22</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>23</TD>
+<TD class=segm BGCOLOR="#FFB090">UB 82 Locator 45</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..17</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v23datel.htm#00552">00552</A></TD>
+<TD class=segm><A HREF = "hl7v23typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std23/ch6.htm#Heading320">6.4.10.23</A></TD>
+</TR>
+</TABLE>
+<P>
+<H3>Used within the following Events:</H3>
+<dd><A HREF = "hl7v23eventA01.htm">A01</A> ADT/ACK - Admit/visit notification (<A HREF = "std23/ch3.htm#Heading4">3.2.1</A>)</dd>
+<dd><A HREF = "hl7v23eventA04.htm">A04</A> ADT/ACK -  Register a patient (<A HREF = "std23/ch3.htm#Heading7">3.2.4</A>)</dd>
+<dd><A HREF = "hl7v23eventA05.htm">A05</A> ADT/ACK -  Preadmit a patient (<A HREF = "std23/ch3.htm#Heading8">3.2.5</A>)</dd>
+<dd><A HREF = "hl7v23eventA06.htm">A06</A> ADT/ACK -  Transfer an outpatient to inpatient (<A HREF = "std23/ch3.htm#Heading9">3.2.6</A>)</dd>
+<dd><A HREF = "hl7v23eventA07.htm">A07</A> ADT/ACK -  Transfer an inpatient to outpatient (<A HREF = "std23/ch3.htm#Heading10">3.2.7</A>)</dd>
+<dd><A HREF = "hl7v23eventA08.htm">A08</A> ADT/ACK -  Update patient information (<A HREF = "std23/ch3.htm#Heading11">3.2.8</A>)</dd>
+<dd><A HREF = "hl7v23eventA13.htm">A13</A> ADT/ACK -  Cancel discharge (<A HREF = "std23/ch3.htm#Heading16">3.2.13</A>)</dd>
+<dd><A HREF = "hl7v23eventA14.htm">A14</A> ADT/ACK -  Pending admit (<A HREF = "std23/ch3.htm#Heading17">3.2.14</A>)</dd>
+<dd><A HREF = "hl7v23eventA19.htm">A19</A> QRY/ACK -  Patient query (<A HREF = "std23/ch3.htm#Heading22">3.2.19</A>)</dd>
+<dd><A HREF = "hl7v23eventA28.htm">A28</A> ADT/ACK -  Add person information (<A HREF = "std23/ch3.htm#Heading32">3.2.28</A>)</dd>
+<dd><A HREF = "hl7v23eventA31.htm">A31</A> ADT/ACK -  Update person information (<A HREF = "std23/ch3.htm#Heading35">3.2.31</A>)</dd>
+<dd><A HREF = "hl7v23eventP01.htm">P01</A> BAR/ACK - Add patient account (<A HREF = "std23/ch6.htm#Heading5">6.3.1</A>)</dd>
+<dd><A HREF = "hl7v23eventP05.htm">P05</A> BAR/ACK - Update account (<A HREF = "std23/ch6.htm#Heading9">6.3.5</A>)</dd>
+<P>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

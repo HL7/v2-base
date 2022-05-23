@@ -1,0 +1,907 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Table 0440:
+Data Types
+</H2>
+<TABLE class=info>
+<TR>
+<TD class=>Interpretation:</TD>
+<TD class=>Datentypen</TD>
+</TR>
+<TR>
+<TD class=>OID Table:</TD>
+<TD class=>2.16.840.1.113883.12.440</TD>
+</TR>
+<TR>
+<TD class=>Codesystem OID: </TD>
+<TD class=>2.16.840.1.113883.18.280 Version 4</TD>
+</TR>
+<TR>
+<TD class=>Value Set OID:</TD>
+<TD class=>2.16.840.1.113883.21.296</TD>
+</TR>
+<TR>
+<TD class=>Binding:</TD>
+<TD class=>universal</TD>
+</TR>
+<TR>
+<TD class=>Expansion:</TD>
+<TD class=>all codes from codesystem</TD>
+</TR>
+<TR>
+<TD class=>Vocabulary Domain:</TD>
+<TD class=>tbd</TD>
+</TR>
+<TR>
+<TD class=>Table Type:</TD>
+<TD class=>HL7</TD>
+</TR>
+<TR>
+<TD class=>Case insensitive:</TD>
+<TD class=>Falsch</TD>
+</TR>
+<TR>
+<TD class=>Steward:</TD>
+<TD class=>InM</TD>
+</TR>
+<TR>
+<TD class=>Section</TD>
+<TD class=>2.C.2.356</TD>
+</TR>
+</TABLE>
+<p>
+<TABLE class=info>
+<TR>
+<TH class=table>Value</TH>
+<TH class=table>Description</TH>
+<TH class=table>German Interpretation</TH>
+<TH class=table>Comment</TH>
+<TH class=table>Chapter</TH>
+</TR>
+<TR class=table-odd>
+<TD class=table>AD</TD>
+<TD class=table>Address</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaced by XAD as of v 2.3</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>AUI</TD>
+<TD class=table>Authorization information</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in sections 6.5.6.14 IN1-14, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CCD</TD>
+<TD class=table>Charge code and date</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in section 4.5.2.1 BLG-1, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CCP</TD>
+<TD class=table>Channel calibration parameters</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 7.14.1.5 OBX-5.3 where OBX-5Observation value (*) is data type CD as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CD</TD>
+<TD class=table>Channel definition</TD>
+<TD class=table><BR></TD>
+<TD class=table>For waveform data only;.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CE</TD>
+<TD class=table>Coded element</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CF</TD>
+<TD class=table>Coded element with formatted values</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CK</TD>
+<TD class=table>Composite ID with check digit</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CM</TD>
+<TD class=table>Composite</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN Replaced by numerous new unambiguous data types in v 2.5</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CN</TD>
+<TD class=table>Composite ID number and name</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN. Replaced by XCN as of v 2.3</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CNE</TD>
+<TD class=table>Coded with no exceptions</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CNN</TD>
+<TD class=table>Composite ID number and name simplified</TD>
+<TD class=table><BR></TD>
+<TD class=table>Restores the original data type CN as was initially implementable in the CM used in sections 4.5.3.32 and 7.4.1.32-(OBR-32), 4.5.3.33 and 7.4.1.33 - (OBR-33) 4.5.3.34 and 7.4.1.34 - (OBR-34) 4.5.3.35 and 7.4.1.35 - (OBR-35). Components 7 and 8, however, have been promoted to data type IS to be consistent with current practice without violating backward compatibility.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CP</TD>
+<TD class=table>Composite price</TD>
+<TD class=table><BR></TD>
+<TD class=table>.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CQ</TD>
+<TD class=table>Composite quantity with units</TD>
+<TD class=table><BR></TD>
+<TD class=table>CQ cannot be legally expressed when embedded within another data type. Its use is constrained to a segment field.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CSU</TD>
+<TD class=table>Channel sensitivity and units</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 7.14.1.5 OBX-5.3 where OBX-5Observation value (*) is data type CD as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CWE</TD>
+<TD class=table>Coded with exceptions</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CX</TD>
+<TD class=table>Extended composite ID with check digit</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DDI</TD>
+<TD class=table>Daily deductible information</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in section 6.5.7.30  IN2-30, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DIN</TD>
+<TD class=table>Date and institution name</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in sections 15.4.6.12 STF-12 and 15.4.6.14 STF-13, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DLD</TD>
+<TD class=table>Discharge to location and date</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in section 8.8.4.9 - OM2-9, as of v 2.5</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DLN</TD>
+<TD class=table>Driver's license number</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DLT</TD>
+<TD class=table>Delta</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DR</TD>
+<TD class=table>Date/time range</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DT</TD>
+<TD class=table>Date</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DTM</TD>
+<TD class=table>Date/time</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DTN</TD>
+<TD class=table>Day type and number</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in section 6.5.8.11  IN3-11, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ED</TD>
+<TD class=table>Encapsulated data</TD>
+<TD class=table><BR></TD>
+<TD class=table>Supports ASCII MIME-encoding of binary data.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EI</TD>
+<TD class=table>Entity identifier</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EIP</TD>
+<TD class=table>Entity identifier pair</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in sections 4.5.1.8 - ORC-8, 4.5.3.29 - OBR-29, 7.3.1.29 - OBR-29, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ELD</TD>
+<TD class=table>Error location and description</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ERL</TD>
+<TD class=table>Error location</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>FC</TD>
+<TD class=table>Financial class</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FN</TD>
+<TD class=table>Family name</TD>
+<TD class=table><BR></TD>
+<TD class=table>Appears ONLY in the PPN, XCN, and XPN.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>FT</TD>
+<TD class=table>Formatted text</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GTS</TD>
+<TD class=table>General timing specification</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HD</TD>
+<TD class=table>Hierarchic designator</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ICD</TD>
+<TD class=table>Insurance certification definition</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in section 6.5.8.20  IN3-20, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ID</TD>
+<TD class=table>Coded values for HL7 tables</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>IS</TD>
+<TD class=table>Coded value for user-defined tables</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JCC</TD>
+<TD class=table>Job code/class</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LA1</TD>
+<TD class=table>Location with address variation 1</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 4.14.1.8 RXO-8 and 4.14.4.8 RXE-8 as of v 2.5. Retained for backward compatibility only as of v 2.5</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LA2</TD>
+<TD class=table>Location with address variation 2</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 4.14.5.13 RXD-13, 4.14.6.11 RXG-11 and 4.14.7.11 RXA-11 as of v 2.5. Retained for backward compatibility only as of v 2.5,</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MA</TD>
+<TD class=table>Multiplexed array</TD>
+<TD class=table><BR></TD>
+<TD class=table>For waveform data only</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MO</TD>
+<TD class=table>Money</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MOC</TD>
+<TD class=table>Money and charge code</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in sections 4.5.3.23 OBR-23 and 7.4.1.23- OBR-23 as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MOP</TD>
+<TD class=table>Money or percentage</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in section 6.5.8.5  IN3-5, as of v 2.5. This data type is restricted to this field.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MSG</TD>
+<TD class=table>Message type</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 2.16.9.9 MSH-9 as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NA</TD>
+<TD class=table>Numeric array</TD>
+<TD class=table><BR></TD>
+<TD class=table>For waveform data only</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>NDL</TD>
+<TD class=table>Name with date and location</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in sections 4.5.3.32 and 7.4.1.32-( OBR-32) , 4.5.3.33 and 7.4.1.33  - ( OBR-33) 4.5.3.34 and 7.4.1.34 - ( OBR-34) 4.5.3.35 and 7.4.1.35 - ( OBR-35) as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NM</TD>
+<TD class=table>Numeric</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>NR</TD>
+<TD class=table>Numeric range</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in sections 8.8.4.6.1- OM2-6.1, 8.8.4.6.3- OM2-6.3and 8.8.4.6.4- OM2-6.4, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OCD</TD>
+<TD class=table>Occurrence code and date</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in sections 6.5.10.10 UB1-16 and 6.5.11.7 UB2-7, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OSD</TD>
+<TD class=table>Order sequence definition</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OSP</TD>
+<TD class=table>Occurrence span code and date</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in section 6.5.11.8 UB2-8, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PIP</TD>
+<TD class=table>Practitioner institutional privileges</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 15.4.5.7 PRA-7 as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PL</TD>
+<TD class=table>Person location</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PLN</TD>
+<TD class=table>Practitioner license or other ID number</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 15.4.5.6 PRA-6, 11.6.3.7 PRD-7 and 11.6.4.7 CTD-7 as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PN</TD>
+<TD class=table>Person name</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PPN</TD>
+<TD class=table>Performing person time stamp</TD>
+<TD class=table><BR></TD>
+<TD class=table>equivalent of an XCN joined with a TS</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PRL</TD>
+<TD class=table>Parent result link</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in sections 4.5.3.26 - OBR-26 and 7.4.1.26 - OBR-26 as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PT</TD>
+<TD class=table>Processing type</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PTA</TD>
+<TD class=table>Policy type and amount</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in section 6.5.7.29  IN2-29, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>QIP</TD>
+<TD class=table>Query input parameter list</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>QSC</TD>
+<TD class=table>Query selection criteria</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RCD</TD>
+<TD class=table>Row column definition</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RFR</TD>
+<TD class=table>Reference range</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in sections 8.8.4.6 - OM2-6, 8.8.4.7 - OM2-7 and8.8.4.8 - OM2-8 as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RI</TD>
+<TD class=table>Repeat interval</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RMC</TD>
+<TD class=table>Room coverage</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in section 6.5.7.28  IN2-28, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RP</TD>
+<TD class=table>Reference pointer</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RPT</TD>
+<TD class=table>Repeat pattern</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SAD</TD>
+<TD class=table>Street Address</TD>
+<TD class=table><BR></TD>
+<TD class=table>Appears ONLY in the XAD data type.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SCV</TD>
+<TD class=table>Scheduling class value pair</TD>
+<TD class=table><BR></TD>
+<TD class=table>For scheduling data only. See Chapter 10</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SI</TD>
+<TD class=table>Sequence ID</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SN</TD>
+<TD class=table>Structured numeric</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SNM</TD>
+<TD class=table>String of telephone number digits</TD>
+<TD class=table><BR></TD>
+<TD class=table>Definition: a string whose characters are limited to "+" and the decimal digits 0 through 9.  As a string, leading zeros are always considered significant.  Maximum length: Not specified for the type. May be specified in the context of use.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SPD</TD>
+<TD class=table>Specialty description</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 15.4.5.5 PRA-5 as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SPS</TD>
+<TD class=table>Specimen source</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SRT</TD>
+<TD class=table>Sort order</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ST</TD>
+<TD class=table>String data</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>TM</TD>
+<TD class=table>Time</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TN</TD>
+<TD class=table>Telephone number</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>TQ</TD>
+<TD class=table>Timing/quantity</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TS</TD>
+<TD class=table>Time stamp</TD>
+<TD class=table><BR></TD>
+<TD class=table>WITHDRAWN</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>TX</TD>
+<TD class=table>Text data</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>UVC</TD>
+<TD class=table>UB value code and amount</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in sections 6.5.10.10 UB1-10 and 6.5.11.6 UB2-6, as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>VH</TD>
+<TD class=table>Visiting hours</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>VID</TD>
+<TD class=table>Version identifier</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>VR</TD>
+<TD class=table>Value range</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 5.10.5.3.11 QRD-11 as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>WVI</TD>
+<TD class=table>Channel Identifier</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 7.14.1.3.1 OBX-5.1 where OBX-5 Observation value (*) is data type CD as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WVS</TD>
+<TD class=table>Waveform source</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces the CM data type used in 7.14.1.4 OBX-5.2 where OBX-5 Observation value (*) is data type CD as of v 2.5.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>XAD</TD>
+<TD class=table>Extended address</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces AD as of v 2.3</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>XCN</TD>
+<TD class=table>Extended composite ID number and name for persons</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces CN as of v 2.3</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>XON</TD>
+<TD class=table>Extended composite name and ID number for organizations</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>XPN</TD>
+<TD class=table>Extended person name</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces PN as of v 2.3.</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>XTN</TD>
+<TD class=table>Extended telecommunications number</TD>
+<TD class=table><BR></TD>
+<TD class=table>Replaces TN as of v 2.3</TD>
+<TD class=table>2.C.2.356</TD>
+</TR>
+</TABLE>
+<H3>Comments made by the German HL7 User Group:</H3>
+<dd>Datentypen</DD>
+<P>
+<H3>Used Within the following Data Elements</H3>
+<DD><A HREF = "hl7v29datel.htm#00702">00702</A> Column Description / Spaltenbeschreibung (<A HREF = "std29/ch05.html#Heading2239">5.5.7.2</A>)</DD>
+<P>
+<H3>Used Within the following Data Structures</H3>
+<DD><A HREF = "hl7v29typRCD.htm">RCD</A></DD><BR>
+<P>
+<H3>Used Within the following Components</H3>
+<DD>305 HL7 Data Type () </DD><BR>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

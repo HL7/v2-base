@@ -1,0 +1,431 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment UAC:
+User Authentication Credential Segment
+(Authentifizierungsinformationen des Benutzers)
+</H2>
+<TABLE class=segm>
+<TR class=segm-even>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>User Authentication Credential Type Code</TD>
+<TD class=segm>Typ des Authentifizierungstokens</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0615.htm">0615</A></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02267">02267</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch02.html#Heading299">2.14.15.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>User Authentication Credential  </TD>
+<TD class=segm>Authentifizierungstoken</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02268">02268</A></TD>
+<TD class=segm><A HREF = "hl7v29typED.htm#ED">ED</A></TD>
+<TD class=segm><A HREF = "std29/ch02.html#Heading300">2.14.15.2</A></TD>
+</TR>
+</TABLE>
+<P>
+<P>
+<H3>Used within following Message Structures:</H3>
+<dd><A HREF = "hl7v29msgstruct.htm#ACK">ACK</A> General Acknowledgment (<A HREF = "std29/ch02.html#Heading150">2.13.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A01">ADT_A01</A> ADT Message (<A HREF = "std29/ch03.html#Heading941">3.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A02">ADT_A02</A> ADT Message (<A HREF = "std29/ch03.html#Heading942">3.3.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A03">ADT_A03</A>  (<A HREF = "std29/ch03.html#Heading943">3.3.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A05">ADT_A05</A>  (<A HREF = "std29/ch03.html#Heading945">3.3.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A06">ADT_A06</A>  (<A HREF = "std29/ch03.html#Heading946">3.3.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A09">ADT_A09</A> Track/Cancel (<A HREF = "std29/ch03.html#Heading949">3.3.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A12">ADT_A12</A> Track/Cancel (2) (<A HREF = "std29/ch03.html#Heading952">3.3.12</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A15">ADT_A15</A>  (<A HREF = "std29/ch03.html#Heading955">3.3.15</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A16">ADT_A16</A> Pending Discharge (<A HREF = "std29/ch03.html#Heading956">3.3.16</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A17">ADT_A17</A> Swap (<A HREF = "std29/ch03.html#Heading957">3.3.17</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A20">ADT_A20</A>  (<A HREF = "std29/ch03.html#Heading960">3.3.20</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A21">ADT_A21</A>  (<A HREF = "std29/ch03.html#Heading961">3.3.21</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A24">ADT_A24</A> Link Patient Information (<A HREF = "std29/ch03.html#Heading964">3.3.24</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A37">ADT_A37</A>  (<A HREF = "std29/ch03.html#Heading977">3.3.37</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A38">ADT_A38</A> Swap (2) (<A HREF = "std29/ch03.html#Heading978">3.3.38</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A39">ADT_A39</A>  (<A HREF = "std29/ch03.html#Heading980">3.3.40</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A43">ADT_A43</A>  (<A HREF = "std29/ch03.html#Heading983">3.3.43</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A44">ADT_A44</A>  (<A HREF = "std29/ch03.html#Heading984">3.3.44</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A45">ADT_A45</A>  (<A HREF = "std29/ch03.html#Heading985">3.3.45</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A50">ADT_A50</A>  (<A HREF = "std29/ch03.html#Heading990">3.3.50</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A52">ADT_A52</A>  (<A HREF = "std29/ch03.html#Heading992">3.3.52</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A54">ADT_A54</A>  (<A HREF = "std29/ch03.html#Heading994">3.3.54</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A60">ADT_A60</A>  (<A HREF = "std29/ch03.html#Heading1000">3.3.60</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ADT_A61">ADT_A61</A>  (<A HREF = "std29/ch03.html#Heading1001">3.3.61</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#BAR_P01">BAR_P01</A>  (<A HREF = "std29/ch06.html#Heading2317">6.4.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#BAR_P02">BAR_P02</A> Purge Billing Account (<A HREF = "std29/ch06.html#Heading2318">6.4.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#BAR_P05">BAR_P05</A> Update Billing Account (<A HREF = "std29/ch06.html#Heading2321">6.4.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#BAR_P06">BAR_P06</A> End Billing Account (<A HREF = "std29/ch06.html#Heading2322">6.4.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#BAR_P10">BAR_P10</A> Transmit Ambulatory Payment Classification (APC) g (<A HREF = "std29/ch06.html#Heading2323">6.4.7</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#BAR_P12">BAR_P12</A> Update Diagnosis/Procedure (<A HREF = "std29/ch06.html#Heading2325">6.4.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#BPS_O29">BPS_O29</A> Blood Product dispense status Message (<A HREF = "std29/ch04.html#Heading1684">4.13.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#BRP_O30">BRP_O30</A>  (<A HREF = "std29/ch04.html#Heading1685">4.13.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#BRT_O32">BRT_O32</A>  (<A HREF = "std29/ch04.html#Heading1687">4.13.7</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#BTS_O31">BTS_O31</A> Blood Product Transfusion/Disposition Message (<A HREF = "std29/ch04.html#Heading1686">4.13.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#CCF_I22">CCF_I22</A> Collaborative Care Fetch (<A HREF = "std29/ch11.html#Heading4051">11.7.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#CCI_I22">CCI_I22</A> Collaborative Care Information (<A HREF = "std29/ch11.html#Heading4051">11.7.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#CCM_I21">CCM_I21</A> Collaborative Care Message (<A HREF = "std29/ch11.html#Heading4043">11.6.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#CCQ_I19">CCQ_I19</A> Collaborative Care Referral (<A HREF = "std29/ch11.html#Heading4050">11.7.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#CCR_I16">CCR_I16</A> Collaborative Care Referral (<A HREF = "std29/ch11.html#Heading4044">11.6.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#CCU_I20">CCU_I20</A> Collaborative Care Referral (<A HREF = "std29/ch11.html#Heading4048">11.6.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#CQU_I19">CQU_I19</A> Collaborative Care Referral (<A HREF = "std29/ch11.html#Heading4050">11.7.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#CRM_C01">CRM_C01</A> Clinical Trial Message (<A HREF = "std29/ch07.html#Heading3023">7.7.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#CSU_C09">CSU_C09</A> Clinical Trial Message (<A HREF = "std29/ch07.html#Heading3024">7.7.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DBC_O41">DBC_O41</A>  (<A HREF = "std29/ch04.html#Heading1766">4.16.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DBC_O42">DBC_O42</A>  (<A HREF = "std29/ch04.html#Heading1767">4.16.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DEL_O46">DEL_O46</A>  (<A HREF = "std29/ch04.html#Heading1775">4.16.13</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DEO_O45">DEO_O45</A>  (<A HREF = "std29/ch04.html#Heading1774">4.16.12</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DER_O44">DER_O44</A>  (<A HREF = "std29/ch04.html#Heading1773">4.16.11</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DFT_P03">DFT_P03</A> Detail Financial Transaction (<A HREF = "std29/ch06.html#Heading2319">6.4.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DFT_P11">DFT_P11</A> Detail Financial Transaction - Expanded (<A HREF = "std29/ch06.html#Heading2324">6.4.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DPR_O48">DPR_O48</A>  (<A HREF = "std29/ch04.html#Heading1777">4.16.15</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DRC_O47">DRC_O47</A>  (<A HREF = "std29/ch04.html#Heading1776">4.16.14</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DRG_O43">DRG_O43</A>  (<A HREF = "std29/ch04.html#Heading1772">4.16.10</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EAC_U07">EAC_U07</A> Equipment Command Message (<A HREF = "std29/ch13.html#Heading4364">13.3.7</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EAN_U09">EAN_U09</A> Equipment Status Message (<A HREF = "std29/ch13.html#Heading4366">13.3.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EAR_U08">EAR_U08</A> Equipment Command Message (<A HREF = "std29/ch13.html#Heading4365">13.3.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EHC_E01">EHC_E01</A> Submit HealthCare Services Invoice (<A HREF = "std29/ch16.html#Heading4752">16.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EHC_E02">EHC_E02</A> Cancel HealthCare Services Invoice (<A HREF = "std29/ch16.html#Heading4753">16.3.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EHC_E04">EHC_E04</A> Re-Assess HealthCare Services Invoice Request (<A HREF = "std29/ch16.html#Heading4756">16.3.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EHC_E10">EHC_E10</A> Edit/Adjudication Results (<A HREF = "std29/ch16.html#Heading4757">16.3.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EHC_E12">EHC_E12</A> Request Additional Information (<A HREF = "std29/ch16.html#Heading4758">16.3.7</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EHC_E13">EHC_E13</A> Additional Information Response (<A HREF = "std29/ch16.html#Heading4759">16.3.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EHC_E15">EHC_E15</A> Payment/Remittance Advice (<A HREF = "std29/ch16.html#Heading4760">16.3.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EHC_E20">EHC_E20</A> Submit Authorization Request (<A HREF = "std29/ch16.html#Heading4761">16.3.10</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EHC_E21">EHC_E21</A> Cancel Authorization Request (<A HREF = "std29/ch16.html#Heading4762">16.3.11</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#EHC_E24">EHC_E24</A> Authorization Response (<A HREF = "std29/ch16.html#Heading4765">16.3.14</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ESR_U02">ESR_U02</A> Equipment Status Message (<A HREF = "std29/ch13.html#Heading4359">13.3.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ESU_U01">ESU_U01</A> Equipment Status Message (<A HREF = "std29/ch13.html#Heading4358">13.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#INR_U06">INR_U06</A> Inventory Request Message (<A HREF = "std29/ch13.html#Heading4363">13.3.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#INR_U14">INR_U14</A>  (<A HREF = "std29/ch13.html#Heading4371">13.3.14</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#INU_U05">INU_U05</A> Inventory Update Message (<A HREF = "std29/ch13.html#Heading4362">13.3.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#LSU_U12">LSU_U12</A> Equipment Log/Service Message (<A HREF = "std29/ch13.html#Heading4369">13.3.12</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MDM_T01">MDM_T01</A>  (<A HREF = "std29/ch09.html#Heading3702">9.6.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MDM_T02">MDM_T02</A>  (<A HREF = "std29/ch09.html#Heading3703">9.6.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFK_M01">MFK_M01</A> Master File Acknowledgment (<A HREF = "std29/ch08.html#Heading3250">8.4.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M02">MFN_M02</A> Master File Notification for Staff/Practitioner (<A HREF = "std29/ch08.html#Heading3296">8.7.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M04">MFN_M04</A> Master File Notification - Charge Description (<A HREF = "std29/ch08.html#Heading3548">8.10.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M05">MFN_M05</A> Master File Notification - Patient Location (<A HREF = "std29/ch08.html#Heading3500">8.9.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M06">MFN_M06</A> Master File Notification - Clinical Study with Pha (<A HREF = "std29/ch08.html#Heading3586">8.11.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M07">MFN_M07</A> Master File Notification - Clinical Study without (<A HREF = "std29/ch08.html#Heading3586">8.11.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M08">MFN_M08</A> Master File Notification - Test/Observation (Numer (<A HREF = "std29/ch08.html#Heading3301">8.8.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M09">MFN_M09</A> Master File Notification - Test/Observation (Categ (<A HREF = "std29/ch08.html#Heading3302">8.8.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M10">MFN_M10</A> Master File Notification - Test/Observation Batter (<A HREF = "std29/ch08.html#Heading3303">8.8.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M11">MFN_M11</A> Master File Notification - Test/Calculated Observa (<A HREF = "std29/ch08.html#Heading3304">8.8.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M12">MFN_M12</A> Master File Notification - Additional Basic Observ (<A HREF = "std29/ch08.html#Heading3305">8.8.7</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M13">MFN_M13</A> Master File Notification - General (<A HREF = "std29/ch08.html#Heading3250">8.4.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M15">MFN_M15</A> Master File Notification - Inventory Item (<A HREF = "std29/ch08.html#Heading3612">8.12.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M16">MFN_M16</A> Master File Notification - Inventory Item Enhanced (<A HREF = "std29/ch08.html#Heading3613">8.12.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M17">MFN_M17</A> Master File Notification - DRG (<A HREF = "std29/ch08.html#Heading3615">8.13.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M18">MFN_M18</A>  (<A HREF = "std29/ch08.html#Heading3306">8.8.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M19">MFN_M19</A>  (<A HREF = "std29/ch08.html#Heading3624">8.14.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_Znn">MFN_Znn</A> Master File Notification - Site Defined (<A HREF = "std29/ch08.html#Heading3253">8.4.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#NMD_N02">NMD_N02</A> Application Management Data (<A HREF = "std29/ch14.html#Heading4563">14.3.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMB_O27">OMB_O27</A> Blood Product Order Message (<A HREF = "std29/ch04.html#Heading1681">4.13.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMD_O03">OMD_O03</A> Dietary Order (<A HREF = "std29/ch04.html#Heading1630">4.7.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMG_O19">OMG_O19</A> General Clinical Order Message (<A HREF = "std29/ch04.html#Heading1453">4.4.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMI_O23">OMI_O23</A> Imaging Order Message (<A HREF = "std29/ch04.html#Heading1471">4.4.14</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O21">OML_O21</A> Laboratory Order Message (<A HREF = "std29/ch04.html#Heading1455">4.4.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O33">OML_O33</A> Laboratory Order - Multiple Order Per Specimen Mes (<A HREF = "std29/ch04.html#Heading1459">4.4.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O35">OML_O35</A> Laboratory Order - Multiple Order Per Container of (<A HREF = "std29/ch04.html#Heading1463">4.4.10</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O39">OML_O39</A> Specimen Shipment Centric Laboratory Order Message (<A HREF = "std29/ch04.html#Heading1467">4.4.12</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O59">OML_O59</A> Non-Stock Supply Order Message (<A HREF = "std29/ch04.html#Heading1479">4.4.22</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMN_O07">OMN_O07</A> Nonstock Requisition Order Message (<A HREF = "std29/ch04.html#Heading1652">4.10.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMP_O09">OMP_O09</A> Pharmacy/treatment Order Message (<A HREF = "std29/ch04A.html#Heading1841">4A.3.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMQ_O57">OMQ_O57</A>  (<A HREF = "std29/ch04.html#Heading1477">4.4.20</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMS_O05">OMS_O05</A> Stock Requisition Order Message (<A HREF = "std29/ch04.html#Heading1650">4.10.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OPL_O37">OPL_O37</A> Population/Location-Based Laboratory Order Message (<A HREF = "std29/ch04.html#Heading1473">4.4.16</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OPR_O38">OPR_O38</A> Population/Location-Based Laboratory Order Acknowl (<A HREF = "std29/ch04.html#Heading1474">4.4.17</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OPU_R25">OPU_R25</A> Observation Message (<A HREF = "std29/ch07.html#Heading2837">7.3.11</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORA_R33">ORA_R33</A> Observation Report Acknowledgement (<A HREF = "std29/ch07.html#Heading2833">7.3.7</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORA_R41">ORA_R41</A>  (<A HREF = "std29/ch07.html#Heading2839">7.3.13</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORB_O28">ORB_O28</A>  (<A HREF = "std29/ch04.html#Heading1683">4.13.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORD_O04">ORD_O04</A> Dietary Order Acknowledgment Message (<A HREF = "std29/ch04.html#Heading1631">4.7.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORG_O20">ORG_O20</A> General Clinical Order Acknowledgment Message (<A HREF = "std29/ch04.html#Heading1454">4.4.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORI_O24">ORI_O24</A> Imaging Order Acknowledgment Message (<A HREF = "std29/ch04.html#Heading1472">4.4.15</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O22">ORL_O22</A> General Laboratory Order Acknowledgment Message (<A HREF = "std29/ch04.html#Heading1457">4.4.7.0</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O34">ORL_O34</A> Laboratory Order Acknowledgment Message  - Multipl (<A HREF = "std29/ch04.html#Heading1461">4.4.9.0</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O36">ORL_O36</A> Laboratory Order Acknowledgment Message  - Multipl (<A HREF = "std29/ch04.html#Heading1465">4.4.11.0</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O40">ORL_O40</A> Specimen Shipment Centric Laboratory Order Acknowl (<A HREF = "std29/ch04.html#Heading1469">4.4.13.0</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O53">ORL_O53</A>  (<A HREF = "std29/ch04.html#Heading1458">4.4.7.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O54">ORL_O54</A>  (<A HREF = "std29/ch04.html#Heading1462">4.4.9.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O55">ORL_O55</A>  (<A HREF = "std29/ch04.html#Heading1466">4.4.11.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORL_O56">ORL_O56</A>  (<A HREF = "std29/ch04.html#Heading1470">4.4.13.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORN_O08">ORN_O08</A> General Order Acknowledgment Message (<A HREF = "std29/ch04.html#Heading1653">4.10.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORP_O10">ORP_O10</A>  (<A HREF = "std29/ch04A.html#Heading1842">4A.3.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORS_O06">ORS_O06</A> Stock Order Acknowledgment Message (<A HREF = "std29/ch04.html#Heading1651">4.10.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORU_R01">ORU_R01</A> Observation Message (<A HREF = "std29/ch07.html#Heading2827">7.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORU_R30">ORU_R30</A> Observation Message (<A HREF = "std29/ch07.html#Heading2830">7.3.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORX_O58">ORX_O58</A>  (<A HREF = "std29/ch04.html#Heading1478">4.4.21</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OSM_R26">OSM_R26</A> Specimen Shipment Message (<A HREF = "std29/ch07.html#Heading3208">7.16.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OSU_O51">OSU_O51</A>  (<A HREF = "std29/ch04.html#Heading1475">4.4.18</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OSU_O52">OSU_O52</A>  (<A HREF = "std29/ch04.html#Heading1476">4.4.19</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OUL_R22">OUL_R22</A> Observation Message (<A HREF = "std29/ch07.html#Heading2834">7.3.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OUL_R23">OUL_R23</A> Observation Message (<A HREF = "std29/ch07.html#Heading2835">7.3.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OUL_R24">OUL_R24</A> Observation Message (<A HREF = "std29/ch07.html#Heading2836">7.3.10</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PEX_P07">PEX_P07</A> Product Experience Message (<A HREF = "std29/ch07.html#Heading3088">7.11.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PGL_PC6">PGL_PC6</A> Patient Goal Message (<A HREF = "std29/ch12.html#Heading4176">12.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B01">PMU_B01</A> Personnel Record Message (<A HREF = "std29/ch15.html#Heading4603">15.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B03">PMU_B03</A> Delete Personnel Record Message (<A HREF = "std29/ch15.html#Heading4605">15.3.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B04">PMU_B04</A> Terminate Practicing Person Message (<A HREF = "std29/ch15.html#Heading4606">15.3.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B07">PMU_B07</A> Grant Certificate Message (<A HREF = "std29/ch15.html#Heading4610">15.3.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B08">PMU_B08</A> Revoke Certificate Message (<A HREF = "std29/ch15.html#Heading4611">15.3.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PPG_PCG">PPG_PCG</A> Patient Pathway Goal-Oriented Message (<A HREF = "std29/ch12.html#Heading4179">12.3.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PPP_PCB">PPP_PCB</A> Patient Pathway Problem-Oriented Message (<A HREF = "std29/ch12.html#Heading4178">12.3.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PPR_PC1">PPR_PC1</A> Patient Problem Message (<A HREF = "std29/ch12.html#Heading4177">12.3.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QBP_E03">QBP_E03</A> Query HealthCare Services Invoice (<A HREF = "std29/ch16.html#Heading4754">16.3.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QBP_E22">QBP_E22</A> Query Authorization Request (<A HREF = "std29/ch16.html#Heading4763">16.3.12</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QBP_O33">QBP_O33</A>  (<A HREF = "std29/ch04.html#Heading1768">4.16.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QBP_O34">QBP_O34</A>  (<A HREF = "std29/ch04.html#Heading1770">4.16.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QBP_Q11">QBP_Q11</A> Query Grammar:  QBS Message (<A HREF = "std29/ch04A.html#Heading1861">4A.3.23</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QBP_Q13">QBP_Q13</A> Query Grammar:  QBP Message (<A HREF = "std29/ch05.html#Heading2169">5.3.1.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QBP_Q15">QBP_Q15</A> Query Grammar:  QBS Message (<A HREF = "std29/ch05.html#Heading2194">5.4.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QBP_Q21">QBP_Q21</A> Query Personnel Information Message (<A HREF = "std29/ch03.html#Heading996">3.3.56</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QBP_Qnn">QBP_Qnn</A>  (<A HREF = "std29/ch05.html#Heading2174">5.3.2.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QBP_Z73">QBP_Z73</A>  (<A HREF = "std29/ch04.html#Heading1626">4.6.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QCN_J01">QCN_J01</A> Cancel Subscription (<A HREF = "std29/ch05.html#Heading2197">5.4.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QSB_Q16">QSB_Q16</A> Query Grammar:  QSB Message (<A HREF = "std29/ch05.html#Heading2195">5.4.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#QVR_Q17">QVR_Q17</A> Query for Previous Events (<A HREF = "std29/ch05.html#Heading2196">5.4.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RAS_O17">RAS_O17</A> Pharmacy/Treatment Administration (<A HREF = "std29/ch04A.html#Heading1852">4A.3.14</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RCV_O59">RCV_O59</A>  (<A HREF = "std29/ch04A.html#Heading1865">4A.3.26</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RDE_O11">RDE_O11</A> Pharmacy/Treatment Refill Authorization Request (<A HREF = "std29/ch04A.html#Heading1844">4A.3.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RDE_O49">RDE_O49</A>  (<A HREF = "std29/ch04A.html#Heading1863">4A.3.24</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RDR_RDR">RDR_RDR</A> Pharmacy/treatment Dispense Information (<A HREF = "std29/ch05.html#Heading2272">5.9.1.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RDS_O13">RDS_O13</A> Pharmacy/Treatment Dispense Message (<A HREF = "std29/ch04A.html#Heading1846">4A.3.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RDY_K15">RDY_K15</A> Response Grammar:  Dispense History (<A HREF = "std29/ch05.html#Heading2176">5.3.2.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RDY_Z80">RDY_Z80</A>  (<A HREF = "std29/ch05.html#Heading2298">5.9.6.0</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#REF_I12">REF_I12</A> Patient Referral (<A HREF = "std29/ch11.html#Heading4037">11.5.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RGV_O15">RGV_O15</A> Pharmacy/Treatment Give (<A HREF = "std29/ch04A.html#Heading1849">4A.3.11</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RPA_I08">RPA_I08</A> Return Patient Authorization (<A HREF = "std29/ch11.html#Heading4031">11.4.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RPI_I01">RPI_I01</A> Return Patient Information (<A HREF = "std29/ch11.html#Heading4023">11.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RPI_I04">RPI_I04</A> Return Patient Information (<A HREF = "std29/ch11.html#Heading4026">11.3.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RPL_I02">RPL_I02</A> Return Patient Display List (<A HREF = "std29/ch11.html#Heading4024">11.3.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RPR_I03">RPR_I03</A> Return Patient List (<A HREF = "std29/ch11.html#Heading4025">11.3.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RQA_I08">RQA_I08</A> Request Patient Authorization (<A HREF = "std29/ch11.html#Heading4031">11.4.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RQI_I01">RQI_I01</A> Patient Insurance Information (<A HREF = "std29/ch11.html#Heading4023">11.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RQP_I04">RQP_I04</A> Request Patient Demographics (<A HREF = "std29/ch11.html#Heading4026">11.3.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RRA_O18">RRA_O18</A> Pharmacy/Treatment Administration Acknowledgment M (<A HREF = "std29/ch04A.html#Heading1853">4A.3.15</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RRD_O14">RRD_O14</A> Pharmacy/Treatment Dispense Acknowledgment Message (<A HREF = "std29/ch04A.html#Heading1847">4A.3.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RRE_O12">RRE_O12</A> Pharmacy/Treatment Refill Authorization Request Ac (<A HREF = "std29/ch04A.html#Heading1845">4A.3.7</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RRE_O50">RRE_O50</A>  (<A HREF = "std29/ch04A.html#Heading1864">4A.3.25</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RRG_O16">RRG_O16</A> Pharmacy/Treatment Give Acknowledgment Message (<A HREF = "std29/ch04A.html#Heading1850">4A.3.12</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RRI_I12">RRI_I12</A> Return Referral Information (<A HREF = "std29/ch11.html#Heading4037">11.5.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_E03">RSP_E03</A> HealthCare Services Invoice Query Response (<A HREF = "std29/ch16.html#Heading4755">16.3.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_E22">RSP_E22</A> Authorization Request Query Response (<A HREF = "std29/ch16.html#Heading4764">16.3.13</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_K11">RSP_K11</A> Response Grammar:  Dispense History (<A HREF = "std29/ch05.html#Heading2192">5.4.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_K21">RSP_K21</A> Segment Pattern Response (<A HREF = "std29/ch03.html#Heading996">3.3.56</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_K22">RSP_K22</A> Segment Pattern Response (<A HREF = "std29/ch03.html#Heading997">3.3.57</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_K23">RSP_K23</A> Segment Pattern Response (<A HREF = "std29/ch03.html#Heading998">3.3.58</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_K25">RSP_K25</A> Personnel Information Response Message (<A HREF = "std29/ch15.html#Heading4609">15.3.7</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_K31">RSP_K31</A> Response Grammar:  Pharmacy Dispense Message (<A HREF = "std29/ch04A.html#Heading1861">4A.3.23</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_O33">RSP_O33</A>  (<A HREF = "std29/ch04.html#Heading1769">4.16.7</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_O34">RSP_O34</A>  (<A HREF = "std29/ch04.html#Heading1771">4.16.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_Z82">RSP_Z82</A> Response Grammar:  Pharmacy Dispense Message (<A HREF = "std29/ch05.html#Heading2273">5.9.1.1.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_Z84">RSP_Z84</A>  (<A HREF = "std29/ch05.html#Heading2169">5.3.1.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_Z86">RSP_Z86</A> Response Grammar:  Pharmacy Information Comprehens (<A HREF = "std29/ch05.html#Heading2275">5.9.1.2.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_Z88">RSP_Z88</A> Response Grammar:  Pharmacy Information Comprehens (<A HREF = "std29/ch05.html#Heading2279">5.9.2.1.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_Z90">RSP_Z90</A> Response Grammar:  Pharmacy Information Comprehens (<A HREF = "std29/ch05.html#Heading2282">5.9.2.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_Znn">RSP_Znn</A>  (<A HREF = "std29/ch05.html#Heading2188">5.3.3.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RTB_K13">RTB_K13</A> Response Grammar: Who Am I (<A HREF = "std29/ch05.html#Heading2187">5.3.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RTB_Knn">RTB_Knn</A> Response Grammar: Widget Dispense Message (<A HREF = "std29/ch05.html#Heading2175">5.3.2.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RTB_Z74">RTB_Z74</A> Personnel Information Message (<A HREF = "std29/ch04.html#Heading1626">4.6.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#SDR_S31">SDR_S31</A> Anti-Microbial Device Data Notification (<A HREF = "std29/ch17.html#Heading5096">17.5.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#SDR_S32">SDR_S32</A> Anti-Microbial Device Cycle Data Notification (<A HREF = "std29/ch17.html#Heading5097">17.5.5</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#SLR_S28">SLR_S28</A> Notification of Sterilization Lot Deletion (<A HREF = "std29/ch17.html#Heading5093">17.5.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#SSR_U04">SSR_U04</A> Specimen Status Message (<A HREF = "std29/ch13.html#Heading4361">13.3.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#SSU_U03">SSU_U03</A> Specimen Status Message (<A HREF = "std29/ch13.html#Heading4360">13.3.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#STC_S33">STC_S33</A> Sterilization Configuration Notification (<A HREF = "std29/ch17.html#Heading5099">17.6.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#TCU_U10">TCU_U10</A> Test Code Settings Request (<A HREF = "std29/ch13.html#Heading4367">13.3.10</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#UDM_Q05">UDM_Q05</A> Unsolicited Display Message (<A HREF = "std29/ch05.html#Heading2307">5.10.1.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#VXU_V04">VXU_V04</A> Unsolicited Vaccination Update (<A HREF = "std29/ch04A.html#Heading2132">4A.7.6</A>)</dd>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

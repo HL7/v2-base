@@ -1,0 +1,649 @@
+<html>
+
+<head>
+<title>V.2.3 Ballot 2</title>
+<link rel=stylesheet type="text/css" href="../formate.css">
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="20%" align="right" rowspan="3" width="15%">
+<img src="../images/title_links.gif" width="60" height="70" border="0" />
+</td>
+<td width="60%">
+<br/>
+</td>
+<td width="20%">
+<br/>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#000000" align="center">
+<font face="Arial" size="6,5" color="#FFCC00">
+<strong>
+HL7 - Version 2.3 Ballot #2
+</strong>
+</font>
+</td>
+<td>
+<br/>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+</td>
+<td>
+<br/>
+</td>
+</tr>
+</table>
+<p/>
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top" width="1%" align="right">
+
+<p>
+<a href="hl7archive.htm">
+HL7 (Back)
+<img src="../images/link_unten.gif" width="135" height="20" border="0" />
+</a>
+</p>
+</td>
+<td valign="top" width="24"></td>
+<td valign="top">
+
+
+
+<h1>HL7 - Version 2.3 - Ballot #2 </h1>
+
+<h2>Anmerkungen und Fragen </h2>
+
+<p align="center"><img src="../images/separator.gif" width="300" height="10"></p>
+
+<h2>Allgemeine Anmerkungen zur Datenbank </h2>
+
+<p>Dieser Ballot ist in Form einer Datenbank herausgegeben worden.</p>
+
+<p>Auf fast keiner Tabelle ist ein Primärschlüssel definiert. Die Ausnahme ist
+HL7_Segments, und selbst da hätte der Schlüssel auf der Segmentbezeichnung liegen
+müssen. </p>
+
+<p>Die Längen der einzelnen Felder sind nicht an die Inhalte angepaßt: Länge ist auf 50
+eingestellt. </p>
+
+<p>Wo numerische Werte eingegeben werden müssen - bspw. Data-Item, Tabelle, lfd.Nr. im
+Segment, Länge, usw. - ist der Feldtyp auf Text eingestellt. Besser wäre der Typ
+&quot;Zahl&quot;. </p>
+
+<p>Die Datenbank befindet sich nicht in Boyce-Codd-Normal-Form. </p>
+
+<h2>Datentypen </h2>
+
+<p>Datentyp IS ist neu. </p>
+
+<h2>Tabellen </h2>
+
+<h3>Relation HL7_CTables </h3>
+
+<p>Diese Relation ist identisch mit der Relation &quot;HL7_Tables&quot;. Vermutlich sollte
+die Relation HL7_CTables nur die Komponenten und die Relation HL7_Tables nur die
+Haupteinträge enthalten.<br>
+Das Feld &quot;used&quot; ist überflüssig, da keine Werte enthalten sind. </p>
+
+<p>Die Tabellen 0295 und 0296 sowie 0309 bis 0332 sind nicht definiert.<br>
+Die Tabellen 0295 und 0310 sind identisch. </p>
+
+<h3>Relation HL7_Fields </h3>
+
+<p>Die Einträge mit den Item-Nummer 1172 bis 1277 sind neu. </p>
+
+<p>Die Einträge zu den Fields sind mehrfach enthalten. Dabei stimmen die Attribute nicht
+überein. </p>
+
+<p>Die Einträge mit den IDs 823 bis 859 sind zyklisch um eine Stelle permutiert (823 <- 824 <- .... <- 859 <- 823). <P>
+Data-Item 00931 fehlt. </p>
+
+<p>Bezeichnung von 435 und 436 sind vertauscht.<br>
+Item-Nummer 00288 und 00289 sind vertauscht.<br>
+Item-Nummer 00123: Bezeichnung muß lauten &quot;Driver´s License Number&quot;.<br>
+Item-Nummer 00299: Bezeichnung muß lauten &quot;Deliver/Dispense to Location2.<br>
+Item-Nummer 00333 (Dispense Sub ID): muß lauten Item-Nummer 00334 (Dispense Sub ID
+Counter).<br>
+Item-Nummer 00839: statt dessen muß 00820 verwendet werden.<br>
+Item-Nummer 00569: Bezeichnung muß lauten &quot;Set ID - OBX&quot;<br>
+Item-Nummer 01159 (Provider Telephone): Bezeichnung muß lauten &quot;Provider
+Communication Information&quot; mit Datentyp XTN.<br>
+Item-Nummer 01168: Bezeichnung muß lauten &quot;Contact Communication Information&quot;
+mit Datentyp XTN.<br>
+Item-Nummer 00914 (Set ID-Document): Bezeichnung muß lauten &quot;Set ID - TXA&quot;.<br>
+Item-Nummer 00915 (Report Type): Bezeichnung muß lauten &quot;Document Type&quot;.<br>
+</p>
+
+<h4>überflüssige Datenelemente </h4>
+
+<p>Nachfolgende Datenelemente sind überflüssig, da sie unter einer anderen Nummer
+bereits eingetragen sind: </p>
+
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">00094 -&gt; 00090<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">00997 -&gt; 00967<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">01022 -&gt; 01051<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">01197 -&gt; 01155<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">01224 -&gt; 00816<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">01262 -&gt; 00995<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">01268 -&gt; 01166<br>
+
+<h4>Fehlende Datenelemente </h4>
+
+<p>Das Datenelement 01249 &quot;Brand Name&quot; (PDC-3) fehlt. </p>
+
+<h4>Überflüssige (nicht verwendete) Datenelemente </h4>
+
+<p>Folgende Datenelemente werden nicht verwendet:<br>
+</p>
+
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">00641<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">00766<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">00946<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">00950<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">00952<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">00954 bis 00962<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">00972 bis 00975<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">00977<br>
+
+<h4>Falsche Längen- bzw. Typangabe </h4>
+
+<p>Hier sind die Längen bzw. Datentypen falsch angegeben. Zum Teil ergibt sich die
+Falschangabe aber erst aus dem Vergleich mit dem Ballot #3. </p>
+<div align="center"><center>
+
+<table border="4" bordercolordark="#CC9900" bordercolorlight="#CC9900">
+  <tr>
+    <th>Seite</th>
+    <th>Datenelement</th>
+    <th>Typ</th>
+    <th>Länge</th>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>00435</td>
+    <td><br>
+    </td>
+    <td>130 -&gt; 12</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>00436</td>
+    <td><br>
+    </td>
+    <td>12 -&gt; 130</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>00440</td>
+    <td>ID -&gt; IS</td>
+    <td>2 -&gt; 3</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>00473</td>
+    <td>NM -&gt; ST</td>
+    <td>9 -&gt; 11</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>00482</td>
+    <td>ID -&gt; CE</td>
+    <td>1 -&gt; 80</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>00541</td>
+    <td><br>
+    </td>
+    <td>2 -&gt; 60</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>00542</td>
+    <td><br>
+    </td>
+    <td>1 -&gt; 60</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>00573</td>
+    <td><br>
+    </td>
+    <td>60 -&gt; 65536</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>00579</td>
+    <td><br>
+    </td>
+    <td>26 -&gt; 1</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>00580</td>
+    <td><br>
+    </td>
+    <td>20 -&gt; 26</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>00581</td>
+    <td><br>
+    </td>
+    <td>26 -&gt; 20</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>00582</td>
+    <td><br>
+    </td>
+    <td>200 -&gt; 26</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>00642</td>
+    <td><br>
+    </td>
+    <td>60 -&gt; 1</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>00653</td>
+    <td><br>
+    </td>
+    <td>60 -&gt; 1</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>00659</td>
+    <td>ID -&gt; HD</td>
+    <td>6 -&gt; 180</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>00299</td>
+    <td><br>
+    </td>
+    <td>12 -&gt; 200</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>00226 (OBR-16)</td>
+    <td><br>
+    </td>
+    <td>80 -&gt; 120</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>00316</td>
+    <td><br>
+    </td>
+    <td>20 -&gt; 60</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>00119 (NK1-14)</td>
+    <td><br>
+    </td>
+    <td>2 -&gt; 1</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>00125</td>
+    <td><br>
+    </td>
+    <td>3 -&gt; 1</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>00342</td>
+    <td><br>
+    </td>
+    <td>1 -&gt; 4</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>00364</td>
+    <td><br>
+    </td>
+    <td>4 -&gt; 6</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>00382 (DRG-1)</td>
+    <td><br>
+    </td>
+    <td>60 -&gt; 4</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>00746</td>
+    <td><br>
+    </td>
+    <td>30 -&gt; 48</td>
+  </tr>
+</table>
+</center></div>
+
+<h4>nicht definierte Segmente </h4>
+
+<p>Folgende Segmente sind nicht definiert:</p>
+
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">NSC<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">NST<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">NCK<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">FAC<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">PSH<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">STF 17 bis 26<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">LCH<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RF1 9 bis 11<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RXO 21 bis 22<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">ROL<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">PDC<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">VAR<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RXA 20 bis 22<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RGS<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">PV1 51 bis 52<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">EVN 6 <br>
+
+<h4>Falsche Zuordnung zu Segmenten </h4>
+<div align="center"><center>
+
+<table border="4" bordercolordark="#CC9900" bordercolorlight="#CC9900">
+  <tr>
+    <th>Seite </th>
+    <th>Segment </th>
+    <th>Korrektur </th>
+  </tr>
+  <tr>
+    <td>6-11</td>
+    <td>DG1</td>
+    <td>lfd.Nr. 17 + 18 löschen </td>
+  </tr>
+  <tr>
+    <td>6-5</td>
+    <td>FT1</td>
+    <td>lfd.Nr. 24 - 26 überprüfen<br>
+    24: 01195<br>
+    25: 00393<br>
+    26: löschen </td>
+  </tr>
+  <tr>
+    <td>6-</td>
+    <td>IN1</td>
+    <td>lfd.Nr. 47 - 49 überprüfen<br>
+    47: 01277<br>
+    48: 01183<br>
+    49: 01230 </td>
+  </tr>
+  <tr>
+    <td>6-</td>
+    <td>RQD</td>
+    <td>lfd.Nr. 2 + 3 Zuordnung tauschen </td>
+  </tr>
+  <tr>
+    <td>6-</td>
+    <td>RXE</td>
+    <td>lfd.Nr.<br>
+    28: 01221<br>
+    29: 01222 </td>
+  </tr>
+  <tr>
+    <td>6-</td>
+    <td>RXD</td>
+    <td>lfd.Nr.<br>
+    11: 00322<br>
+    12: 00329 </td>
+  </tr>
+  <tr>
+    <td>6-</td>
+    <td>RXG</td>
+    <td>lfd.Nr.<br>
+    2: 00334<br>
+    13: 00343 </td>
+  </tr>
+  <tr>
+    <td><br>    </td>
+    <td>PD1</td>
+    <td>lfd.Nr. überprüfen<br>
+    01: 01185 (Living Dependency)<br>
+    02: 01172 (Living Arrangement)<br>
+    05: 01175 (Student Indicator)<br>
+    06: 01183 (Handicap)<br>
+    07: 01189 (Living Will)<br>
+    11: 00743<br>
+    12: 01283<br>
+    </td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>IN2</td>
+    <td>lfd.Nr. 31 + 32 für Vers.2.3 streichen; alle weiteren Felder rücken auf </td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>AIL/AIG/AIP</td>
+    <td>02: 00763 einfügen<br>
+    07: 01202 einfügen </td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>AIS</td>
+    <td>02: 00763 einfügen<br>
+    04: 01202 einfügen </td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>GT1</td>
+    <td>ist komplett zu überprüfen </td>
+  </tr>
+  <tr>
+    <td>8C</td>
+    <td>LOC</td>
+    <td>lfd.Nr. 4, 8, 10, 12-20 löschen </td>
+  </tr>
+  <tr>
+    <td>8C-37</td>
+    <td>LDP</td>
+    <td>lfd.Nr. 10-13 und 15 löschen </td>
+  </tr>
+  <tr>
+    <td>11-27</td>
+    <td>CTD</td>
+    <td>lfd.Nr. 6 löschen </td>
+  </tr>
+  <tr>
+    <td>11-25</td>
+    <td>PRD</td>
+    <td>lfd.Nr. 6 löschen </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>PID</td>
+    <td>lfd.Nr. 30: 00741 </td>
+  </tr>
+  <tr>
+    <td>8B</td>
+    <td>OM3</td>
+    <td>07: 00570 </td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>BTS</td>
+    <td>02: 00090 statt 00094 </td>
+  </tr>
+</table>
+</center></div>
+
+<h3>Relation HL7_Components </h3>
+
+<p>Die referenzierte Tabelle 4000 existiert nicht.<br>
+Das Feld Quantity hat immer den Wert &quot;0&quot; oder ist leer. Es kann daher gelöscht
+werden.<br>
+Das Feld Repitition hat immer den Wert &quot;nein&quot; und kann daher gelöscht werden.<br>
+Das Feld Optional hat immer den Wert &quot;0&quot; und kann daher gelöscht werden.<br>
+735 Datensätze enthalten keine vernünftigen Werte und können deshalb gelöscht werden.<br>
+4 Komponenten haben den Datentyp CE.<br>
+Der 1. Teil der SequenceNumber entspricht der Position im Segment. Diese Information ist
+an dieser Stelle unnötig und muß daher gelöscht werden. Von Interesse ist lediglich der
+2. Teil hinter dem Punkt. </p>
+
+<p>Diese Relation enthält die Komponenten zu den Datenelementen.<br>
+Das Feld &quot;Status&quot; ist leer und kann gestrichen werden.<br>
+Das Feld &quot;Description&quot; ist leer und kann gestrichen werden.<br>
+Das Feld &quot;Sed#&quot; ist zusammengesetzt aus laufenden Nummer im Segment sowie der
+laufenden Nummer innerhalb der Komponenten. Dieses Feld muß demtentsprechend mindestens
+in zwei Einzelfelder aufgeteilt werden. Da hierdurch immer noch keine Mehrfachverwendung
+möglich ist, ist eine Referenzierung wie in unserer Datenbank zu empfehlen. </p>
+
+<h3>Relation HL7_Messages </h3>
+
+<p>Die zugeordneten Segmente sind hintereinander in einem Textfeld untergebracht.
+Hierdurch ist eine Strukturierung sowie eine Referenzierung (referentielle Integrität)
+nicht möglich. Bei Speicherung in einer 1:n-Beziehung (vgl. unsere Datenbank) ist jedoch
+umgekehrt eine Zusammensetzung in ein Textfeld möglich. </p>
+
+<p>Das Feld &quot;Comments&quot; ist leer und kann gestrichen werden. </p>
+
+<h2>Abfragen </h2>
+
+<p>&quot;Appendix A - Segment sort&quot;<br>
+Diese Abfrage sollte die Ausgabe auch noch nach &quot;Seq#&quot; sortieren. </p>
+
+<h2>Fehlertabelle </h2>
+
+<p>Die nachfolgende Tabelle enthält eine detaillierte Liste aller Inkompatibilitäten zur
+Version 2.2. </p>
+
+<h3>HL7_Segments </h3>
+
+<p>Nachfolgend eine Liste von Segmenten, die gegenüber Ballot #1 neu sind: </p>
+
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">PSH<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">PDC<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">FAC<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">LCH<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">LRL<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RGS<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RFI<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">ROL<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">PTH<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">VAR<br>
+
+<p>Folgende Segment-Codes sind nicht mehr angegeben: </p>
+
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RF1<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RXA<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RXC<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RXD<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RXE<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RXG<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RXO<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">RXR<br>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11">TXA<br>
+
+<h3>HL7_Messages </h3>
+
+<p>Fehlerliste: </p>
+<div align="center"><center>
+
+<table border="4" align="top" bordercolordark="#CC9900" bordercolorlight="#CC9900">
+  <tr>
+    <th>Event</th>
+    <th>Message</th>
+    <th>Beschreibung</th>
+  </tr>
+  <tr>
+    <td>R03</td>
+    <td><br>
+    </td>
+    <td>ist keinem Messagetyp zugeordnet</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>EDR</td>
+    <td>ist keinem Event zugeordnet</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>EQL</td>
+    <td>ist keinem Event zugeordnet</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>ERP</td>
+    <td>ist keinem Event zugeordnet</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>ERQ</td>
+    <td>ist keinem Event zugeordnet</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>SPR</td>
+    <td>ist keinem Event zugeordnet</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>TBR</td>
+    <td>ist keinem Event zugeordnet</td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td>VTQ</td>
+    <td>ist keinem Event zugeordnet</td>
+  </tr>
+  <tr>
+    <td>O01</td>
+    <td>ORM</td>
+    <td>erscheint mehrfach</td>
+  </tr>
+  <tr>
+    <td>O02</td>
+    <td>ORM</td>
+    <td>erscheint mehrfach</td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center"><img src="../images/separator.gif" width="300" height="10"></p>
+
+<p><big><font color="#0000FF">Last Update: January 17, 2000</font></big>
+</td>
+</tr>
+</table>
+</body>
+</html>

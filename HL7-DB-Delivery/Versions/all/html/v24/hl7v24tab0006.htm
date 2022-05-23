@@ -1,0 +1,872 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.4</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std24/hl7.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.4
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24tab0006.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.4</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v24tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Table 0006:
+Religion
+</H2>
+<TABLE class=info>
+<TR>
+<TD class=>Interpretation:</TD>
+<TD class=>Religion</TD>
+</TR>
+<TR>
+<TD class=>OID Table:</TD>
+<TD class=>2.16.840.1.113883.12.6</TD>
+</TR>
+<TR>
+<TD class=>Codesystem OID: </TD>
+<TD class=>2.16.840.1.113883.18.8 Version 1</TD>
+</TR>
+<TR>
+<TD class=>Value Set OID:</TD>
+<TD class=>2.16.840.1.113883.21.9</TD>
+</TR>
+<TR>
+<TD class=>Binding:</TD>
+<TD class=>representative</TD>
+</TR>
+<TR>
+<TD class=>Expansion:</TD>
+<TD class=>all codes from codesystem</TD>
+</TR>
+<TR>
+<TD class=>Vocabulary Domain:</TD>
+<TD class=>tbd</TD>
+</TR>
+<TR>
+<TD class=>Table Type:</TD>
+<TD class=>User</TD>
+</TR>
+<TR>
+<TD class=>Case insensitive:</TD>
+<TD class=>Falsch</TD>
+</TR>
+<TR>
+<TD class=>Section</TD>
+<TD class=>3</TD>
+</TR>
+</TABLE>
+<p>
+<TABLE class=info>
+<TR>
+<TH class=table>Value</TH>
+<TH class=table>Description</TH>
+<TH class=table>German Interpretation</TH>
+<TH class=table>Comment</TH>
+<TH class=table>Chapter</TH>
+</TR>
+<TR class=table-odd>
+<TD class=table>AGN</TD>
+<TD class=table>Agnostic</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ATH</TD>
+<TD class=table>Atheist</TD>
+<TD class=table>Atheist</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BAH</TD>
+<TD class=table>Baha'i</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BUD</TD>
+<TD class=table>Buddhist</TD>
+<TD class=table>Buddhist</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BMA</TD>
+<TD class=table>Buddhist: Mahayana</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BTH</TD>
+<TD class=table>Buddhist: Theravada</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BTA</TD>
+<TD class=table>Buddhist: Tantrayana</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BOT</TD>
+<TD class=table>Buddhist: Other</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CFR</TD>
+<TD class=table>Chinese Folk Religionist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CHR</TD>
+<TD class=table>Christian</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ABC</TD>
+<TD class=table>Christian: American Baptist Church</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>AMT</TD>
+<TD class=table>Christian: African Methodist Episcopal</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>AME</TD>
+<TD class=table>Christian: African Methodist Episcopal Zion</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ANG</TD>
+<TD class=table>Christian: Anglican</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>AOG</TD>
+<TD class=table>Christian: Assembly of God</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BAP</TD>
+<TD class=table>Christian: Baptist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CAT</TD>
+<TD class=table>Christian: Roman Catholic</TD>
+<TD class=table>r&ouml;misch-katholisch</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CRR</TD>
+<TD class=table>Christian: Christian Reformed</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CHS</TD>
+<TD class=table>Christian: Christian Science</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CMA</TD>
+<TD class=table>Christian: Christian Missionary Alliance</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>COC</TD>
+<TD class=table>Christian: Church of Christ</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>COG</TD>
+<TD class=table>Christian: Church of God</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>COI</TD>
+<TD class=table>Christian: Church of God in Christ</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>COM</TD>
+<TD class=table>Christian: Community</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>COL</TD>
+<TD class=table>Christian: Congregational</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EOT</TD>
+<TD class=table>Christian: Eastern Orthodox</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EVC</TD>
+<TD class=table>Christian: Evangelical Church</TD>
+<TD class=table>evangelisch</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EPI</TD>
+<TD class=table>Christian: Episcopalian</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FWB</TD>
+<TD class=table>Christian: Free Will Baptist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>FRQ</TD>
+<TD class=table>Christian: Friends</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GRE</TD>
+<TD class=table>Christian: Greek Orthodox</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JWN</TD>
+<TD class=table>Christian: Jehovah's Witness</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LUT</TD>
+<TD class=table>Christian: Lutheran</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LMS</TD>
+<TD class=table>Christian: Lutheran Missouri Synod</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MEN</TD>
+<TD class=table>Christian: Mennonite</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MET</TD>
+<TD class=table>Christian: Methodist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MOM</TD>
+<TD class=table>Christian: Latter-day Saints</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NAZ</TD>
+<TD class=table>Christian: Church of the Nazarene</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ORT</TD>
+<TD class=table>Christian: Orthodox</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>COT</TD>
+<TD class=table>Christian: Other</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PRC</TD>
+<TD class=table>Christian: Other Protestant</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PEN</TD>
+<TD class=table>Christian: Pentecostal</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>COP</TD>
+<TD class=table>Christian: Other Pentecostal</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PRE</TD>
+<TD class=table>Christian: Presbyterian</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PRO</TD>
+<TD class=table>Christian: Protestant</TD>
+<TD class=table>Protestant</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>QUA</TD>
+<TD class=table>Christian: Friends</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>REC</TD>
+<TD class=table>Christian: Reformed Church</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>REO</TD>
+<TD class=table>Christian: Reorganized Church of Jesus Christ-LDS</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SAA</TD>
+<TD class=table>Christian: Salvation Army</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SEV</TD>
+<TD class=table>Christian: Seventh Day Adventist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SOU</TD>
+<TD class=table>Christian: Southern Baptist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>UCC</TD>
+<TD class=table>Christian: United Church of Christ</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>UMD</TD>
+<TD class=table>Christian: United Methodist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>UNI</TD>
+<TD class=table>Christian: Unitarian</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>UNU</TD>
+<TD class=table>Christian: Unitarian Universalist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WES</TD>
+<TD class=table>Christian: Wesleyan</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>WMC</TD>
+<TD class=table>Christian: Wesleyan Methodist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CNF</TD>
+<TD class=table>Confucian</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ERL</TD>
+<TD class=table>Ethnic Religionist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HIN</TD>
+<TD class=table>Hindu</TD>
+<TD class=table>Hindu</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HVA</TD>
+<TD class=table>Hindu: Vaishnavites</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HSH</TD>
+<TD class=table>Hindu: Shaivites</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HOT</TD>
+<TD class=table>Hindu: Other</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JAI</TD>
+<TD class=table>Jain</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>JEW</TD>
+<TD class=table>Jewish</TD>
+<TD class=table>j&uuml;disch</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JCO</TD>
+<TD class=table>Jewish: Conservative</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>JOR</TD>
+<TD class=table>Jewish: Orthodox</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JOT</TD>
+<TD class=table>Jewish: Other</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>JRC</TD>
+<TD class=table>Jewish: Reconstructionist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JRF</TD>
+<TD class=table>Jewish: Reform</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>JRN</TD>
+<TD class=table>Jewish: Renewal</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MOS</TD>
+<TD class=table>Muslim</TD>
+<TD class=table>Muslim</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MSU</TD>
+<TD class=table>Muslim: Sunni</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MSH</TD>
+<TD class=table>Muslim: Shiite</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MOT</TD>
+<TD class=table>Muslim: Other</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NAM</TD>
+<TD class=table>Native American</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>NRL</TD>
+<TD class=table>New Religionist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NOE</TD>
+<TD class=table>Nonreligious</TD>
+<TD class=table>nicht-religi&ouml;s</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OTH</TD>
+<TD class=table>Other</TD>
+<TD class=table>andere</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SHN</TD>
+<TD class=table>Shintoist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SIK</TD>
+<TD class=table>Sikh</TD>
+<TD class=table>Sikh</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SPI</TD>
+<TD class=table>Spiritist</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>VAR</TD>
+<TD class=table>Unknown</TD>
+<TD class=table>unbekannt</TD>
+<TD class=table><BR></TD>
+<TD class=table>3</TD>
+</TR>
+</TABLE>
+<H3>Comments made by the German HL7 User Group:</H3>
+<dd>Religion</DD>
+<P>
+<H3>Used Within the following Data Elements</H3>
+<DD><A HREF = "hl7v24datel.htm#00120">00120</A> Religion / Religion (<A HREF = "std24/ch06.htm#Heading244">6.5.7.39</A>)</DD>
+<P>
+<H3>Used Within the following Data Structures</H3>
+<DD><A HREF = "hl7v24typCE.htm">CE_0006</A></DD><BR>
+<P>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

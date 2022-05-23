@@ -1,0 +1,3745 @@
+<HTML><HEAD>
+<!-- This document was created from RTF source by rtftohtml version 3.8 -->
+<TITLE>HL7 V2.1 Chapter 6</TITLE></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>
+References to other Chapters
+</H1>
+<A HREF="hl7.html">Index HL7</A><br>
+<A HREF="kap1.html">Chapter 1</A><br>
+<A HREF="kap2.html">Chapter 2</A><br>
+<A HREF="kap3.html">Chapter 3</A><br>
+<A HREF="kap4.html">Chapter 4</A><br>
+<A HREF="kap5.html">Chapter 5</A><br>
+<A HREF="kap7.html">Chapter 7</A><br>
+
+<hr>
+
+<p>
+
+<H1>
+6</H1>
+<UL>
+<LI><A HREF="#Heading1">6 <BR>Chapter 6</A>
+<UL>
+<LI><A HREF="#Heading2">6.1 PURPOSE</A>
+<LI><A HREF="#Heading3">6.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A>
+<UL>
+<LI><A HREF="#Heading4">6.2.1 Add and Update Patient Accounts (Event Code P01)</A>
+<LI><A HREF="#Heading5">6.2.2 Purge Patient Accounts (Event Code P02)</A>
+<LI><A HREF="#Heading6">6.2.3 Post Detail Financial Transactions (Event Code P03)</A>
+<LI><A HREF="#Heading7">6.2.4 Generate Bills and Accounts Receivable Statements (Event Code P04)</A>
+</UL>
+<LI><A HREF="#Heading8">6.3 MESSAGE SEGMENTS</A>
+<UL>
+<LI><A HREF="#Heading9">6.3.1 SEGMENT: ACC - ACCIDENT-</A>
+<LI><A HREF="#Heading10">6.3.2  DG1 - DIAGNOSIS-</A>
+<LI><A HREF="#Heading11">6.3.3 FT1 - FINANCIAL TRANSACTION-</A>
+<LI><A HREF="#Heading12">6.3.4 GT1 - GUARANTOR-</A>
+<LI><A HREF="#Heading13">6.3.5 IN1 - INSURANCE-</A>
+<LI><A HREF="#Heading14">6.3.6 NK1 - NEXT OF KIN-</A>
+<LI><A HREF="#Heading15">6.3.7 PR1 - PROCEDURES-</A>
+<LI><A HREF="#Heading16">6.3.8 UB1 - UB82 DATA-</A>
+</UL>
+<LI><A HREF="#Heading17">6.4 EXAMPLE TRANSACTIONS </A>
+<UL>
+<LI><A HREF="#Heading18">6.4.1 Create a Patient Billing/Accounts Receivable Record</A>
+<LI><A HREF="#Heading19">6.4.2 UB82 Information Updated from Utilization Review Department</A>
+<LI><A HREF="#Heading20">6.4.3 Diagnosis and DRG Assignment</A>
+</UL>
+<LI><A HREF="#Heading21">6.5 IMPLEMENTATION CONSIDERATIONS</A>
+<LI><A HREF="#Heading22">6.6 OUTSTANDING ISSUES</A>
+</UL>
+</UL>
+<hr size=4>
+
+<h1>
+<A NAME="Heading1">6 <BR>Chapter 6</A></h1>
+
+
+<h2>
+<A NAME="Heading2">6.1 PURPOSE</A></h2>
+
+<p><br>
+The Patient Accounting Message set provides for the entry and manipulation of:
+charge, payment, adjustment, demographic, insurance, and other related patient
+billing and accounts receivable information.  <br>
+NOTE:	This section of the HL7 specification deals with patient accounting
+interfaces.  Future HL7 releases will include other systems in the Financial
+arena such as: payroll/personnel, general ledger, accounts payable, cost
+accounting, budgeting, etc.  These systems will be presented in a separate
+finance section when appropriate.<br>
+The specification includes all data defined in the National Uniform Billing
+Data Element Specifications (as adapted by the National Uniform Billing
+Commission, May 21, 1982 and revised November 8, 1984).  We have excluded
+state-specific coding and suggest that, where required, it be implemented in
+site-specific 'Z' segments. State-specific fields may be included in the
+specification at a later time.  In addition, no attempt has been made to define
+data traditionally required for the proration of charges.  The requirement for
+this is unique to a billing system and not a part of an interface.<br>
+It is recognized that a wide variety of billing and accounts receivable systems
+exist today.  Therefore, in an effort to accommodate the needs of the most
+comprehensive systems, an extensive set of transaction segments has been
+defined.<br>
+Financial transactions can be sent between systems either in batches or
+on-line.  As defined in Chapter II, multiple transactions may be grouped and
+sent through all file transfer media or programs when using the HL7 Encoding
+Rules.<br>
+This chapter defines the transactions at the seventh level, i.e., the abstract
+messages.  Various schemes may be used to generate the actual characters that
+comprise the messages according to the communications environment. The HL7
+Encoding Rules will be used where there is not a complete Presentation Layer.
+This is described in Chapter 1, "Relationship to Other Protocols."  The
+examples included in this chapter were constructed using the HL7 Encoding Rules.</p>
+
+<h2>
+<A NAME="Heading3">6.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A></h2>
+
+<p><br>
+The triggering events that follow are served by the Detail Financial
+Transaction (DFT), Add/Change Billing Account (BAR) and General Acknowledgement
+(ACK) messages.  <br>
+Each triggering event is listed below, along with the applicable form of the
+message exchange.  The notation used to describe the sequence, optionality, and
+repetition of segments is described in Chapter II, "Format for Defining
+Abstract Messages."</p>
+
+<h3>
+<A NAME="Heading4">6.2.1 Add and Update Patient Accounts (Event Code P01)</A></h3>
+
+<p><br>
+Data is sent from some application (usually a Registration or an ADT system) to
+the patient accounting system to establish an account for a patient's
+billing/accounts receivable record.  Many of the segments associated with this
+event are optional. This optionality allows those systems needing these fields
+to set up transactions which fulfill their requirements yet satisfy the HL7
+requirements.  Sample event codes are in table 3.<br>
+<tt><u>BAR	Add/Change Billing Account	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>EVN	Event Type	III</tt><br>
+<tt>PID	Patient ID Information	III</tt><br>
+<tt>{[ PV1 ]	Patient Visit	III</tt><br>
+<tt>  [{ DG1 }]	Patient Diagnosis	VI</tt><br>
+<tt>  [{ PR1 }]	Procedures	VI</tt><br>
+<tt>  [{ GT1 }]	Guarantor	VI</tt><br>
+<tt>  [{ NK1 }]	Next of Kin	VI</tt><br>
+<tt>  [{ IN1 }]	Insurance	VI</tt><br>
+<tt>  [ACC]	Accident Information	VI</tt><br>
+<tt>  [UB1]	Universal Bill Information	VI</tt><br>
+<tt>}</tt><br>
+<tt><u>ACK	General Acknowledgement	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgement	II</tt><br>
+<tt>[ ERR ]	Error	II</tt><br>
+The error segment will indicate the fields that caused a transaction to be
+rejected.<br>
+The Set ID field in the IN1 records is used, in later updates, to link the new
+update to the original transaction.<br>
+The Set ID field in the insurance, diagnosis, and procedures segments will be
+set the first time these segments are sent and can be used in subsequent
+transactions to update them.<br>
+<tt><u>ACK	General Acknowledgement	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgement	II</tt><br>
+<tt>[ ERR ]	Error	II</tt><br>
+The error segment will indicate the fields that caused a transaction to be
+rejected.</p>
+
+<h3>
+<A NAME="Heading5">6.2.2 Purge Patient Accounts (Event Code P02)</A></h3>
+
+<p><br>
+Generally, the elimination of all billing/accounts receivable records will be
+an internal function controlled by the financial system. However, on occasion,
+there is a need to correct an account, or series of accounts, which may require
+a notice of account deletion to be sent from another sub-system and processed
+by the financial system.<br>
+<tt><u>BAR	Add/Change Billing Account	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>EVN	Event Type	III</tt><br>
+<tt>{ PID	Patient ID Information	III</tt><br>
+<tt> [ PV1 ]	Patient Visit	III</tt><br>
+<tt>}</tt><br>
+The Set ID field in the insurance, diagnosis, and procedures segments will be
+used to identify the items to be deleted.<br>
+<tt><u>ACK	General Acknowledgement	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgement	II</tt><br>
+<tt>[ ERR ]	Error	II</tt><br>
+The error segment will indicate the fields that caused a transaction to be
+rejected.</p>
+
+<h3>
+<A NAME="Heading6">6.2.3 Post Detail Financial Transactions (Event Code P03)</A></h3>
+
+<p><br>
+The Detail Financial Transaction is used to describe a financial transaction
+transmitted between systems, ie., to HIS for ancillary charges, ADT to HIS for
+patient deposits, etc.<br>
+<tt><u>DFT	Detail Financial Transaction   	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>EVN	Event Type	III</tt><br>
+<tt>PID	Patient ID Information	III</tt><br>
+<tt>[ PV1 ]	Patient Visit	III</tt><br>
+<tt>{[ FT1 ]}	Financial Transaction	VI</tt><br>
+Special codes in the Event Type record are used for updating.<br>
+<tt><u>ACK	General Acknowledgement	Chapter</u></tt><br>
+<tt>MSH	Message Header	II</tt><br>
+<tt>MSA	Message Acknowledgement	II</tt><br>
+<tt>[ ERR ]	Error	II</tt><br>
+The error segment will indicate the fields that caused a transaction to be
+rejected.</p>
+
+<h3>
+<A NAME="Heading7">6.2.4 Generate Bills and Accounts Receivable Statements (Event Code P04)</A></h3>
+
+<p><br>
+For patient accounting systems that support demand billing, the QRY/DSP
+transaction defined in Chapter V will provide the mechanism to request a copy
+of the bill for printing or viewing by the requesting system.  (Note that this
+is a display-oriented response.  That is why the associated messages are
+defined in Chapter V.)</p>
+
+<h2>
+<A NAME="Heading8">6.3 MESSAGE SEGMENTS</A></h2>
+
+<p></p>
+
+<h3>
+<A NAME="Heading9">6.3.1 SEGMENT: ACC - ACCIDENT-</A></h3>
+
+<p>
+<br>
+The ACC segment contains patient information relative to an accident the
+patient has been involved in. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TS</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00182</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ACCIDENT
+DATE/TIME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0050</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00184</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ACCIDENT
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>25</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00185</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ACCIDENT
+LOCATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: ACC ACCIDENT <br>
+ <br>
+1.	00182 ACCIDENT DATE/TIME.  Date/time of the accident. <br>
+ <br>
+2.	00184 ACCIDENT CODE.  This code describes the type of accident patient was
+involved in. Refer to user defined table 0050 for valid entries. <br>
+ <br>
+3.	00185 ACCIDENT LOCATION.  Location of accident. <br>
+ </p>
+
+<h3>
+<A NAME="Heading10">6.3.2  DG1 - DIAGNOSIS-</A></h3>
+
+<p>
+<br>
+The DG1 segment contains patient diagnosis information of various types. For
+example: Admitting, Current, Primary, final, etc. Coding methodologies are also
+defined. <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SI</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00506</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SET
+ID <tt>-</tt> DIAGNOSIS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Transaktionsnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0053</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00394</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DIAGNOSIS
+CODING METHOD 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Diagnoseschl&uuml;sselsystem</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0051</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00293</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DIAGNOSIS
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Diagnoseschl&uuml;ssel</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00294</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DIAGNOSIS
+DESCRIPTION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Diagnosebschreibung</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TS</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00295</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DIAGNOSIS
+DATE/TIME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Zeitpunkt
+der Diagnosestellung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0052</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00297</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DIAGNOSIS/DRG
+TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Diagnosetyp</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0118</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00298</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>MAJOR
+DIAGNOSTIC CATEGORY
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0055</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00299</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DIAGNOSTIC
+RELATED GROUP 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00373</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DRG
+APPROVAL INDICATOR 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0056</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00374</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DRG
+GROUPER REVIEW CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0083</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00375</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>OUTLIER
+TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00300</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>OUTLIER
+DAYS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>13</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00376</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>OUTLIER
+COST 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>14</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00781</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GROUPER
+VERSION AND TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: DG1 DIAGNOSIS <br>
+ <br>
+1.	00506 SET ID - DIAGNOSIS.  A number that uniquely identifies the individual
+transaction for adding, deleting, and updating the diagnosis in the patient's
+record. <br>
+ <br>
+2.	00394 DIAGNOSIS CODING METHOD.  ICD9 is the recommended coding methodology.
+Refer to table 0053 for valid entries. <br>
+ <br>
+<center>TABLE 0053   DIAGNOSIS CODING METHOD </center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION</u></b></p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>I9</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>ICD9
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+3.	00293 DIAGNOSIS CODE.  The diagnosis code assigned to this diagnosis. Refer
+to table 0051 for valid codes. <br>
+ <br>
+4.	00294 DIAGNOSIS DESCRIPTION.  The description that best describes the
+diagnosis. <br>
+ <br>
+5.	00295 DIAGNOSIS DATE/TIME.  The date/time the diagnosis was determined. <br>
+ <br>
+6.	00297 DIAGNOSIS/DRG TYPE.  This code identifies the type of diagnosis being
+sent. Valid types could include: Admitting, Final, etc. Refer to user defined
+table 0052 for valid entries. <br>
+ <br>
+7.	00298 MAJOR DIAGNOSTIC CATEGORY.  Refer to user defined table 0118 for valid
+entries. <br>
+ <br>
+8.	00299 DIAGNOSTIC RELATED GROUP.  The DRG for the transaction. Interim DRG's
+could be determined for an encounter. Refer to table 0055 for valid entries.
+<br>
+ <br>
+9.	00373 DRG APPROVAL INDICATOR.  <br>
+ <br>
+10.	00374 DRG GROUPER REVIEW CODE.  Refer to table 0056 for valid entries. <br>
+ <br>
+11.	00375 OUTLIER TYPE.  Refer to table 0083 for valid entries. <br>
+ <br>
+12.	00300 OUTLIER DAYS.  <br>
+ <br>
+13.	00376 OUTLIER COST.  <br>
+ <br>
+14.	00781 GROUPER VERSION AND TYPE.  Grouper version and type. <br>
+ </p>
+
+<h3>
+<A NAME="Heading11">6.3.3 FT1 - FINANCIAL TRANSACTION-</A></h3>
+
+<p>
+<br>
+The FT1 segment contains detail data necessary to post charges, payments,
+adjustments, etc. to patient accounting records. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SI</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00507</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SET
+ID<tt>-</tt>FINANCIAL TRANSACTION
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Transaktionsnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00366</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Buchungsnr./Belegnr.</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00503</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+BATCH ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Stapel/Buchungskreisnr.</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00351</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+DATE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Beleg/Leistungsdatum</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00352</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+POSTING DATE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Buchungsdatum</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0017</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00353</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Buchungscode</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0096</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00354</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Leistungsziffer
+(Ger&auml;teziffer) /Satzart
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00356</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+DESCRIPTION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Buchungstext</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00706</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+DESCRIPTION <tt>-</tt> ALT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Buchungstext
+(alternativ)
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00357</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+QUANTITY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Anzahl
+der Leistungen/Posnr.
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00358</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+AMOUNT <tt>-</tt> EXTENDED 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Betrag
+(Summe)
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00782</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TRANSACTION
+AMOUNT <tt>-</tt> UNIT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Einzelpreis</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>13</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>16</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0049</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00355</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DEPARTMENT
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kostenstelle</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>14</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0072</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00359</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURANCE
+PLAN ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kostenverteilungsplan/Sachkontonr.</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00360</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURANCE
+AMOUNT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Betr.d.
+den Rechnungsempf. zuzuordnen ist 
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>16</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0079</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00361</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PATIENT
+LOCATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Aktueller
+Aufenthaltsort
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>17</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0024</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00362</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>FEE
+SCHEDULE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Geb&uuml;hrentabelle
+f. Leistungsziffer
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>18</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0018</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00363</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PATIENT
+TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Abrechnungskennzeichen</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0051</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00364</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DIAGNOSIS
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Diagnoseschl&uuml;ssel</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0084</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00377</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PERFORMED
+BY CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Erbringende
+Kostenstelle
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>21</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00783</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ORDERED
+BY CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Anfordernde
+Kostenstelle
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>22</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00784</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>UNIT
+COST 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Berechnungsfaktor</p>
+<BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: FT1 FINANCIAL TRANSACTION <br>
+ <br>
+1.	00507 SET ID - FINANCIAL TRANSACTION.  The number that uniquely identifies
+this transaction for the purpose of adding, changing, or deleting the
+transaction. <br>
+ <br>
+2.	00366 TRANSACTION ID.  Number assigned by the sending system for control
+purposes.  Can be returned by the receiving to identify errors. <br>
+ <br>
+3.	00503 TRANSACTION BATCH ID.  A ID that uniquely identifies the batch to
+which this transaction belongs. <br>
+ <br>
+4.	00351 TRANSACTION DATE.  Date of transaction. May be defaulted to today's
+date. <br>
+ <br>
+5.	00352 TRANSACTION POSTING DATE.  The date the transaction was sent to the
+financial system for posting. <br>
+ <br>
+6.	00353 TRANSACTION TYPE.  The code that identifies the type of transaction.
+e.g., charge, credit, payment, etc. Refer to table 0017 for valid entries. <br>
+ <br>
+7.	00354 TRANSACTION CODE.  The code assigned by the institution for the
+purpose of uniquely identifying the transaction. Refer to table 0096 for valid
+entries. <br>
+ <br>
+8.	00356 TRANSACTION DESCRIPTION.  The description of the transaction
+associated with the code entered in Transaction Code (above).  <br>
+ <br>
+9.	00706 TRANSACTION DESCRIPTION - ALT.  This is an alternate financial
+transaction description to be used on a site specific basis. <br>
+ <br>
+10.	00357 TRANSACTION QUANTITY.  The quantity of items associated with this
+transaction. <br>
+ <br>
+11.	00358 TRANSACTION AMOUNT - EXTENDED.  Amount of transaction. Amount field
+may be blank if the transaction is automatically priced. Total price for
+multiple items. <br>
+ <br>
+12.	00782 TRANSACTION AMOUNT - UNIT.  Unit price of transaction. Price of a
+single item. <br>
+ <br>
+13.	00355 DEPARTMENT CODE.  The department code which owns the transaction code
+described above. Refer to user defined table 49 for valid entries. <br>
+ <br>
+14.	00359 INSURANCE PLAN ID.  ID of the primary insurance plan this transaction
+should be associated with. Refer to user defined table 0072 for valid codes.
+<br>
+ <br>
+15.	00360 INSURANCE AMOUNT.  Amount to be posted to the insurance plan
+referenced above.<br>
+ <br>
+16.	00361 PATIENT LOCATION.  Current patient location. For format, see Segment
+"PV1", field New Patient Location. Refer to user defined table 0079 for valid
+entries. <br>
+ <br>
+17.	00362 FEE SCHEDULE.  This code is used to select the appropriate fee
+schedule to be used for this transaction posting. <br>
+ <br>
+18.	00363 PATIENT TYPE.  This code is the type code assigned to the patient for
+this visit. <br>
+ <br>
+19.	00364 DIAGNOSIS CODE.  ICD9-CM is assumed for all diagnosis codes. This
+diagnosis code is the most current diagnosis code assigned to the patient. <br>
+ <br>
+20.	00377 PERFORMED BY CODE.  Composite number/name of the person/group which
+performed the test/procedure/transaction, etc. <br>
+ <br>
+21.	00783 ORDERED BY CODE.  Composite number/name of person/group which
+performed the test/procedure/transaction, etc. <br>
+ <br>
+22.	00784 UNIT COST.  Unit price of transaction. Price of a single item. <br>
+ </p>
+
+<h3>
+<A NAME="Heading12">6.3.4 GT1 - GUARANTOR-</A></h3>
+
+<p>
+<br>
+The GT1 segment contains Guarantor (e.g., person with financial responsibility
+for payment of a patient account) data for patient and insurance billing
+applications. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SI</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00321</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SET
+ID <tt>-</tt> GUARANTOR 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Transaktionserkennung</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00322</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+NUMBER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Garantornummer
+des Patienten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>48</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PN</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00323</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+NAME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Garantorname</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>48</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00707</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+SPOUSE NAME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Ehegatte
+des Garantors
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>106</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>AD</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00324</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+ADDRESS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Anschrift
+des G.
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00329</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+PH. NUM.<tt>-</tt> HOME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Telefonnummer
+des G. privat
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00330</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+PH. NUM<tt>-</tt>BUSINESS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Telefonnummer
+des G. beruflich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00331</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+DATE OF BIRTH 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Geburtsdatum
+des G.
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0001</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00332</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+SEX 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Geschlecht
+des G.
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0068</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00333</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Garantortyp</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0063</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00334</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+RELATIONSHIP 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Verh&auml;ltnis
+zum Patienten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00335</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+SSN 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Sozialvers.
+Nr. des G.
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>13</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00338</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+DATE <tt>-</tt> BEGIN 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Beginn
+Kosten&uuml;bernahme durch d.Versicherten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>14</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00339</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+DATE <tt>-</tt> END 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Ende
+Kosten&uuml;bernahme durch d. Versicherten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00340</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+PRIORITY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Rangfolge
+d. Garantoren
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>16</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>45</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00341</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+EMPLOYER NAME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Name
+des Arbeitgebers
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>17</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>106</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>AD</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00342</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+EMPLOYER ADDRESS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Anschrift
+des Arbeitgebers
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>18</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00347</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+EMPLOY PHONE # 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Telefonnummer
+des Arbeitgebers
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00391</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+EMPLOYEE ID NUM 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID
+des Arbeitgebers
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0066</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00392</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GUARANTOR
+EMPLOYMENT STATUS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Arbeitsverh&auml;ltnis
+(selbst&auml;ndig, Rentner)
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: GT1 GUARANTOR <br>
+ <br>
+1.	00321 SET ID - GUARANTOR.  A number that uniquely identifies the transaction
+for the purpose of adding, changing, or deleting a transaction. <br>
+ <br>
+2.	00322 GUARANTOR NUMBER.  A unique number assigned to the guarantor. <br>
+ <br>
+3.	00323 GUARANTOR NAME.  The name of the guarantor. See Standard name format.
+<br>
+ <br>
+4.	00707 GUARANTOR SPOUSE NAME.  Name of the guarantor's spouse. Refer to
+Chapter II for Person Name format. <br>
+ <br>
+5.	00324 GUARANTOR ADDRESS.  The guarantor's address. <br>
+ <br>
+6.	00329 GUARANTOR PH. NUM.- HOME.  The guarantor's home phone number. <br>
+ <br>
+7.	00330 GUARANTOR PH. NUM-BUSINESS.  The guarantor's business phone number.
+<br>
+ <br>
+8.	00331 GUARANTOR DATE OF BIRTH.  The guarantor's date of birth. <br>
+ <br>
+9.	00332 GUARANTOR SEX.  Refer to SEX table for valid entries. <br>
+ <br>
+<center>TABLE 0001   SEX 	Geschlecht</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Female
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Weiblich</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>M</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Male
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>M&auml;nnlich</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>O</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Other
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Sonstige</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>U</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unknown
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unbekannt</p>
+<BR></TD></TR></TABLE><p><tt>
+</tt> <br>
+10.	00333 GUARANTOR TYPE.  This code identifies the type of guarantor. e.g.,
+Individual, institution, etc. <br>
+ <br>
+11.	00334 GUARANTOR RELATIONSHIP.  This code identifies the relationship of
+guarantor with the patient. e.g., Parent, Child, etc. <br>
+ <br>
+12.	00335 GUARANTOR SSN.  The guarantor's social security number. <br>
+ <br>
+13.	00338 GUARANTOR DATE - BEGIN.  The date that the guarantor becomes
+responsible for the patient's account. <br>
+ <br>
+14.	00339 GUARANTOR DATE - END.  The date that the guarantor stops being
+responsible for the patient's account. <br>
+ <br>
+15.	00340 GUARANTOR PRIORITY.  A code used to determine the order the
+guarantors will be responsible for the patient's account. <br>
+ <br>
+16.	00341 GUARANTOR EMPLOYER NAME.  The name of the guarantor's employer. <br>
+ <br>
+17.	00342 GUARANTOR EMPLOYER ADDRESS.  The guarantor's employer's address. <br>
+ <br>
+18.	00347 GUARANTOR EMPLOY PHONE #.  The guarantor's employer phone number. See
+Standard for format. <br>
+ <br>
+19.	00391 GUARANTOR EMPLOYEE ID NUM.  The guarantor's employee number. <br>
+ <br>
+20.	00392 GUARANTOR EMPLOYMENT STATUS.  A code that indicates the guarantor's
+employment status. e.g., Full Time, Part Time, Self Employed, etc. <br>
+ </p>
+
+<h3>
+<A NAME="Heading13">6.3.5 IN1 - INSURANCE-</A></h3>
+
+<p>
+<br>
+The IN1 segment contains insurance policy coverage information necessary to
+produce properly pro-rated and patient and insurance bills. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SI</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00234</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SET
+ID <tt>-</tt> INSURANCE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Transaktionskennung</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0072</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00378</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURANCE
+PLAN ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kosten&uuml;bernahmeplan</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00235</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURANCE
+COMPANY ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Krankenkassennummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>45</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00236</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURANCE
+COMPANY NAME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Krankenkassenbezeichnung</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>106</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>AD</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00237</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURANCE
+COMPANY ADDRESS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Anschrift
+der Krankenkasse
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>48</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00242</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURANCE
+CO. CONTACT PERS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Ansprechpartner
+bei der Krankenkasse
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00243</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURANCE
+CO PHONE NUMBER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Telefonnummer
+der Krankenkasse
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00248</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GROUP
+NUMBER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Krankenkassentypnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>35</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00249</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>GROUP
+NAME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Krankenkassentyp
+(Ersatzkasse,AOK,BKK etc.)
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00250</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURED'S
+GROUP EMP. ID 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>45</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00251</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURED'S
+GROUP EMP. NAME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00252</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PLAN
+EFFECTIVE DATE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kosten&uuml;bernahme
+ab
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>13</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00253</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PLAN
+EXPIRATION DATE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kosten&uuml;bernahme
+bis
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>14</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>55</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00254</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>AUTHORIZATION
+INFORMATION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Aktenzeichen
+der Kosten&uuml;bernahme
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0086</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00260</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PLAN
+TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>16</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>48</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00261</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NAME
+OF INSURED 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Name
+des Versicherten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>17</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0063</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00262</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURED'S
+RELATIONSHIP TO PAT.
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Verh&auml;ltnis
+des Versicherten zum Patienten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>18</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00708</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURED'S
+DATE OF BIRTH 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Geburtsdatum
+des Versicherten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>106</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>AD</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00709</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURED'S
+ADDRESS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Anschrift
+des Versicherten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00263</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ASSIGNMENT
+OF BENEFITS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kennung,
+ob Rechnung an Krankenkasse
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>21</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00264</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>COORDINATION
+OF BENEFITS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Koord.
+mit anderen Vers.verh&auml;ltnissen
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>22</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00265</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>COORD
+OF BEN. PRIORITY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Rang
+dieses Versicherunsverh&auml;ltnisses
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>23</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0081</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00266</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NOTICE
+OF ADMISSION CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kennung,
+ob Aufnahmeanzeige an Krankenkasse
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>24</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00267</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NOTICE
+OF ADMISSION DATE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Datum,
+wann Aufnahmeanzeige verschickt
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>25</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0094</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00268</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RPT
+OF ELIGIBILITY CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Kennung,
+ob schriftl. Kosten&uuml;bernahmeerkl&auml;rung von Krankenkasse erforderlich
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>26</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00269</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RPT
+OF ELIGIBILITY DATE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Dat.
+der schriftl. Kosten&uuml;bernahmeerkl&auml;rung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>27</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0093</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00270</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RELEASE
+INFORMATION CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>evtl.
+f&uuml;r Datenschutzkennzeichen anwendbar
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>28</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00271</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PRE<tt>-</tt>ADMIT
+CERT. (PAC) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Akt.
+Zeichen Zustimmung zur Aufnahme d. Patienten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>29</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00272</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>VERIFICATION
+DATE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Datum
+der Kostensicherungspr&uuml;fung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>30</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00273</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>VERIFICATION
+BY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>&Uuml;berpr&uuml;ft
+durch (Mitarbeiter-ID)
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>31</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0098</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00277</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TYPE
+OF AGREEMENT CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>verwendet
+f&uuml;r Tarife etc.
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>32</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0022</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00278</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BILLING
+STATUS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Status
+der Rechnungsstellung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>33</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00280</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>LIFETIME
+RESERVE DAYS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>34</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00281</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DELAY
+BEFORE L. R. DAY 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>35</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0042</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00282</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>COMPANY
+PLAN CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>nicht
+verwendet
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>36</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00283</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>POLICY
+NUMBER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Versichertennummer/Vertragsnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>37</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00284</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>POLICY
+DEDUCTIBLE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Eigenanteil</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>38</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00285</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>POLICY
+LIMIT <tt>-</tt> AMOUNT 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>H&ouml;chstbetr.
+d. v. der K-kasse getragen wird
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>39</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00286</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>POLICY
+LIMIT <tt>-</tt> DAYS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Aufenthalt
+der v. der K-kasse getragen wird
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00287</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ROOM
+RATE <tt>-</tt> SEMI<tt>-</tt>PRIVATE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Betrag
+garantierte Regelleistung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>41</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00288</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ROOM
+RATE <tt>-</tt> PRIVATE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Betrag
+Wahlleistung
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>42</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0066</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00710</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURED'S
+EMPLOYMENT STATUS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Arbeitsverh&auml;ltnis
+des Versicherten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>43</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0001</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00711</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURED'S
+SEX 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Geschlecht
+des Versicherten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>44</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>106</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>AD</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00713</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>INSURED'S
+EMPLOYER ADDRESS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Anschrift
+des Versichertenarbeitgebers
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: IN1 INSURANCE <br>
+ <br>
+1.	00234 SET ID - INSURANCE.  The set ID uniquely identifies this transaction
+for the purpose of adding, changing, or deleting the transaction. <br>
+ <br>
+2.	00378 INSURANCE PLAN ID.  This code serves to uniquely identify the
+insurance plan. User defined table. To eliminate a plan, the plan could be sent
+with null values in each subsequent element. If the respective systems can
+support it, a null value can be sent in the plan field. <br>
+ <br>
+3.	00235 INSURANCE COMPANY ID.  The code that serves to uniquely identify the
+insurance company. <br>
+ <br>
+4.	00236 INSURANCE COMPANY NAME.  The name of the insurance company. <br>
+ <br>
+5.	00237 INSURANCE COMPANY ADDRESS.  The address of the insurance company. <br>
+ <br>
+6.	00242 INSURANCE CO. CONTACT PERS.  The name of the person who should be
+contacted at the insurance company. <br>
+ <br>
+7.	00243 INSURANCE CO PHONE NUMBER.  The phone number of the insurance company.
+<br>
+ <br>
+8.	00248 GROUP NUMBER.  The group number of the insured's insurance. <br>
+ <br>
+9.	00249 GROUP NAME.  The group name of the insured's insurance. <br>
+ <br>
+10.	00250 INSURED'S GROUP EMP. ID.  The group employer ID of the insured's
+insurance. <br>
+ <br>
+11.	00251 INSURED'S GROUP EMP. NAME.  The group employer name of the insured's
+insurance. <br>
+ <br>
+12.	00252 PLAN EFFECTIVE DATE.  The date that the insurance goes into effect.
+<br>
+ <br>
+13.	00253 PLAN EXPIRATION DATE.  The last date of service that the insurance
+will cover or be responsible for. <br>
+ <br>
+14.	00254 AUTHORIZATION INFORMATION.  Based on the type of insurance, some
+coverages require that an authorization number or code be obtained prior to all
+non emergency admissions and within  48 hours of an emergency  admission.
+Insurance billing would not be permitted without this number. Date &amp; source
+of authorization are sub-fields.<br>
+ <br>
+15.	00260 PLAN TYPE.  A coding structure that identifies the various plan
+types. <br>
+ <br>
+16.	00261 NAME OF INSURED.  The name of the insured person. <br>
+ <br>
+17.	00262 INSURED'S RELATIONSHIP TO PATIENT.  A code that will identify the
+insured's relationship to the patient. <br>
+ <br>
+18.	00708 INSURED'S DATE OF BIRTH.  <br>
+ <br>
+19.	00709 INSURED'S ADDRESS.  <br>
+ <br>
+20.	00263 ASSIGNMENT OF BENEFITS.  Has the insured agreed to assign the
+insurance benefits to the healthcare provider? If so, the insurance will pay
+the provider directly. Values are Y - Yes, N - No, Modified assignment. <br>
+ <br>
+21.	00264 COORDINATION OF BENEFITS.  Does this insurance work in conjunction
+with other insurance plans or does it provide independent coverage and payment
+of benefits regardless of other insurance that might be available to the
+patient.  Values are CO - coordination, IN - independent. <br>
+ <br>
+22.	00265 COORD OF BEN. PRIORITY.  If the insurance works in conjunction with
+other insurance plans, is it considered a primary payor or secondary payor.
+Values are Y - yes; N - no. <br>
+ <br>
+23.	00266 NOTICE OF ADMISSION CODE.  Does the insurance require a written
+notice of admission from the healthcare provider.  Values are Y - yes; N -
+no.<br>
+ <br>
+24.	00267 NOTICE OF ADMISSION DATE.  If a notice is required, this is the date
+that it was sent.<br>
+ <br>
+25.	00268 RPT OF ELIGIBILITY CODE.  Does this insurance send a report
+indication that the patient is eligible for benefits and identifying what those
+benefits are. Values are Y - yes, N - No. <br>
+ <br>
+26.	00269 RPT OF ELIGIBILITY DATE.  If a report of eligibility (ROE) was
+received, this indicates the date it was received. <br>
+ <br>
+27.	00270 RELEASE INFORMATION CODE.  Can the healthcare provider release
+information about the patient, and what information can be released. Values
+are: Y - Yes, N - no, or user defined codes. <br>
+ <br>
+28.	00271 PRE-ADMIT CERT. (PAC).  Pre-admission certification code. If the
+admission must be certified before the admission, this is the code associated
+with the admission. <br>
+ <br>
+29.	00272 VERIFICATION DATE.  The date that the healthcare provider verified
+that the patient has the indicated benefits. <br>
+ <br>
+30.	00273 VERIFICATION BY.  The person that verified the benefits. <br>
+ <br>
+31.	00277 TYPE OF AGREEMENT CODE.  Used to further identify an insurance plan.
+<br>
+ <br>
+32.	00278 BILLING STATUS.  Has the particular insurance been billed and if so,
+what type of bill. <br>
+ <br>
+33.	00280 LIFETIME RESERVE DAYS.  <br>
+ <br>
+34.	00281 DELAY BEFORE L. R. DAY.  Delay before lifetime reserve days. <br>
+ <br>
+35.	00282 COMPANY PLAN CODE.  A facility defined table of codes used to
+uniquely identify an insurance plan. Optional information to further define
+data in field 3 of the IN1 segment. <br>
+ <br>
+36.	00283 POLICY NUMBER.  The individual policy number of the insured. <br>
+ <br>
+37.	00284 POLICY DEDUCTIBLE.  An amount specified by the insurance plan that is
+the responsibility of the guarantor. <br>
+ <br>
+38.	00285 POLICY LIMIT - AMOUNT.  The maximum amount that the insurance policy
+will pay. In some cases, the limit may be for a single encounter. <br>
+ <br>
+39.	00286 POLICY LIMIT - DAYS.  The maximum number of days that the insurance
+policy will cover. <br>
+ <br>
+40.	00287 ROOM RATE - SEMI-PRIVATE.  The average room rate that the policy will
+cover. <br>
+ <br>
+41.	00288 ROOM RATE - PRIVATE.  The maximum private room rate the policy will
+cover. <br>
+ <br>
+42.	00710 INSURED'S EMPLOYMENT STATUS.  Refer to table 0066 for valid codes.
+<br>
+ <br>
+43.	00711 INSURED'S SEX.  Refer to table 0001 for valid codes. <br>
+ <br>
+<center>TABLE 0001   SEX 	Geschlecht</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u>VALUE</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><b><u>DESCRIPTION
+</u></b></p>
+<BR></TD>
+<TD colspan=1 align="left"><BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>F</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Female
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Weiblich</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>M</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Male
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>M&auml;nnlich</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>O</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Other
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Sonstige</p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>U</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unknown
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Unbekannt</p>
+<BR></TD></TR></TABLE><p><tt>
+</tt><br>
+44.	00713 INSURED'S EMPLOYER ADDRESS.  <br>
+ </p>
+
+<h3>
+<A NAME="Heading14">6.3.6 NK1 - NEXT OF KIN-</A></h3>
+
+<p>The
+NK1 segment contains information about the patient's next of kin. Utilizing the
+SET ID field, multiple NT1 segments can be sent to patient accounts allowing
+for different types of next of <br>
+kin. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SI</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00712</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SET
+ID <tt>-</tt> NEXT OF KIN 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Transaktionsnummer</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>48</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00048</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NEXT
+OF KIN NAME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Name
+des zu Benachrichtigenden
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0063</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00047</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NEXT
+OF KIN RELATIONSHIP 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Beziehung/Verwandtsch.
+zum zu Benachrichtigenden
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>106</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>AD</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00225</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NEXT
+OF KIN <tt>-</tt> ADDRESS 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Adresse
+des zu Benachrichtigenden
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00230</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NEXT
+OF KIN <tt>-</tt> PHONE NUMBER 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Tel.
+Nr. des zu Benachrichtigenden
+</p>
+<BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: NK1 NEXT OF KIN <br>
+ <br>
+1.	00712 SET ID - NEXT OF KIN.  This field is used to uniquely identify the NK1
+records for the purpose of adding, changing, or deleting records. <br>
+ <br>
+2.	00048 NEXT OF KIN NAME.  <br>
+ <br>
+3.	00047 NEXT OF KIN RELATIONSHIP.  This code indicates the next-of-kin
+relationship to the patient. <br>
+ <br>
+4.	00225 NEXT OF KIN - ADDRESS.  <br>
+ <br>
+5.	00230 NEXT OF KIN - PHONE NUMBER.  <br>
+ </p>
+
+<h3>
+<A NAME="Heading15">6.3.7 PR1 - PROCEDURES-</A></h3>
+
+<p>
+<br>
+The PR1 segment contains information relative to various types of procedures
+that can be performed on a patient. For example: Surgical, Nuclear Medicine,
+X-Ray with contrast, etc. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SI</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00304</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SET
+ID <tt>-</tt> PROCEDURE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Satzidentifikation</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>0089</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00393</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PROCEDURE
+CODING METHOD. 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Schl&uuml;sselsystem
+f&uuml;r diagnostische und therapeutische Ma&szlig;nahmen
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>0088</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00305</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PROCEDURE
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Ma&szlig;nahmen/Operationsschl&uuml;ssel</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>40</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00306</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PROCEDURE
+DESCRIPTION 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Beschreibung
+der Ma&szlig;nahme
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>TS</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00307</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PROCEDURE
+DATE/TIME 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Zeitpunkt
+der Ma&szlig;nahme
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0090</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00309</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PROCEDURE
+TYPE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Weitere
+Spezifikation der Ma&szlig;nahme
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00310</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PROCEDURE
+MINUTES 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Dauer
+der Ma&szlig;nahme in Minuten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0010</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00311</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ANESTHESIOLOGIST
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>entf&auml;llt
+(nutze Feld 12)
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0019</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00313</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ANESTHESIA
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>An&auml;sthesieschl&uuml;ssel</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00314</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ANESTHESIA
+MINUTES 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Dauer
+der An&auml;sthesie in Minuten
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0010</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00315</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SURGEON</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>entf&auml;llt
+(nutze Feld 12)
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CN</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0010</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00318</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>RESIDENT
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>13</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>0059</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00317</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CONSENT
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Zustimmung
+des Patienten
+</p>
+<BR></TD></TR></TABLE><p><br>
+FIELD NOTES: PR1 PROCEDURES <br>
+ <br>
+1.	00304 SET ID - PROCEDURE.  A unique number that is used to identify a
+transaction for the purpose of adding, changing or deleting entries. <br>
+ <br>
+2.	00393 PROCEDURE CODING METHOD..  The methodology used to assign a code to
+the procedure. CPT4 for example. <br>
+ <br>
+3.	00305 PROCEDURE CODE.  The unique identifier assigned to the procedure. <br>
+ <br>
+4.	00306 PROCEDURE DESCRIPTION.  The text description that describes the
+procedure. <br>
+ <br>
+5.	00307 PROCEDURE DATE/TIME.  The date/time the procedure was performed. <br>
+ <br>
+6.	00309 PROCEDURE TYPE.  An optional code that further defines the type of
+procedure.<br>
+ <br>
+7.	00310 PROCEDURE MINUTES.  The length of time in whole minutes that the
+procedure took to complete. <br>
+ <br>
+8.	00311 ANESTHESIOLOGIST.  The Anesthesiologist who administered the
+anesthesia. <br>
+ <br>
+9.	00313 ANESTHESIA CODE.  The code that uniquely identifies the anesthesia
+used during the procedure. <br>
+ <br>
+10.	00314 ANESTHESIA MINUTES.  The length of time in minutes that the
+anesthesia was administered. <br>
+ <br>
+11.	00315 SURGEON.  The surgeon who performed the procedure. <br>
+ <br>
+12.	00318 RESIDENT CODE.  The resident who was assigned responsibility for
+care. <br>
+ <br>
+13.	00317 CONSENT CODE.  The code that identifies the type of consent that was
+obtained for permission to treat the patient. <br>
+ </p>
+
+<h3>
+<A NAME="Heading16">6.3.8 UB1 - UB82 DATA-</A></h3>
+
+<p>
+<br>
+The UB1 segment contains data necessary to complete UB82 bills. Only UB82 data
+elements that do not exist in other HL7 defined segments will appear in this
+segment. Patient name and Date of <br>
+Birth are required for UB82 billing, however, they are included in the PID
+segment and therefore do not appear here. <br>
+ <br>
+</p>
+<TABLE BORDER><TR align="center">
+<TD colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DT</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>ELEMENT
+NAME 
+</b></p>
+<BR></TD>
+<TD colspan=1 align="center"><p><b>DEUTSCHE
+BEZEICHNUNG
+</b></p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SI</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00459</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SET
+ID <tt>-</tt> UB82 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Bluttransfusions-Segment
+in Deutschland nicht ben&ouml;tigt
+</p>
+<BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00279</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BLOOD
+DEDUCTIBLE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00396</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BLOOD
+FURN.<tt>-</tt>PINTS OF (40) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>4</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00397</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BLOOD
+REPLACED<tt>-</tt>PINTS (41) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00398</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>BLOOD
+NOT RPLCD<tt>-</tt>PINTS(42) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>6</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00399</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CO<tt>-</tt>INSURANCE
+DAYS (25) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y5</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>0043</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00400</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CONDITION
+CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00405</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>COVERED
+DAYS <tt>-</tt> (23) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>9</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>3</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00406</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NON
+COVERED DAYS <tt>-</tt> (24) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>10</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CM</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y8</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00407</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>VALUE
+AMOUNT &amp; CODE 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>11</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00424</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>NUMBER
+OF GRACE DAYS (90) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>12</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00425</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>SPEC.
+PROG. INDICATOR(44) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>13</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>1</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00426</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PSRO/UR
+APPROVAL IND. (87) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>14</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00427</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PSRO/UR
+APRVD STAY<tt>-</tt>FM(88) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>15</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00428</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PSRO/UR
+APRVD STAY<tt>-</tt>TO(89) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>16</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>Y5</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00429</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>OCCURRENCE
+(28<tt>-</tt>32) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>17</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>2</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00435</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>OCCURRENCE
+SPAN (33) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>18</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00446</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>OCCURRENCE
+SPAN START DATE(33) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>19</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>DT</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00447</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>OCCUR.
+SPAN END DATE (33) 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>20</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>30</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00448</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>UB<tt>-</tt>82
+LOCATOR 2 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>21</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>7</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00449</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>UB<tt>-</tt>82
+LOCATOR 9 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>22</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>8</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00450</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>UB<tt>-</tt>82
+LOCATOR 27 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR><TR align="center">
+<TD colspan=1 align="center"><p>23</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>17</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><BR></TD>
+<TD colspan=1 align="center"><p>00451</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>UB<tt>-</tt>82
+LOCATOR 45 
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><BR></TD></TR></TABLE><p>
+<br>
+FIELD NOTES: UB1 UB82 DATA <br>
+ <br>
+1.	00459 SET ID - UB82.  The number used to uniquely identify the transaction
+for the purpose of adding, changing, or deleting the entry. <br>
+ <br>
+2.	00279 BLOOD DEDUCTIBLE.  <br>
+ <br>
+3.	00396 BLOOD FURN.-PINTS OF (40).  The amount of blood furnished the patient
+for this visit. The (40) indicates the corresponding UB82 Data Element number.
+<br>
+ <br>
+4.	00397 BLOOD REPLACED-PINTS (41).  UB82 Data Element 41. <br>
+ <br>
+5.	00398 BLOOD NOT RPLCD-PINTS(42).  Blood not replaced.  Measured in pints.
+UB82 Data Element 42<br>
+ <br>
+6.	00399 CO-INSURANCE DAYS (25).  UB82 Data Element 25. <br>
+ <br>
+7.	00400 CONDITION CODE.  Repeats 5 times. UB82 Data Elements (35), (36), (37),
+(38),and (39). <br>
+ <br>
+8.	00405 COVERED DAYS - (23).  UB82 Data Element 23. <br>
+ <br>
+9.	00406 NON COVERED DAYS - (24).  UB82 Data Element 24. <br>
+ <br>
+10.	00407 VALUE AMOUNT &amp; CODE.  Value code &lt;component separator&gt;
+value amount.  This pair can repeat up to 8 times. (46A, 47A, 48A, 49A, 46B,
+47B, 48B, and 49B). <br>
+ <br>
+11.	00424 NUMBER OF GRACE DAYS (90).  UB82 Data Element 90. <br>
+ <br>
+12.	00425 SPEC. PROG. INDICATOR(44).  Special program indicator. UB82 Data
+Element 44. <br>
+ <br>
+13.	00426 PSRO/UR APPROVAL IND. (87).  PSRO/UR approval indicator.  UB82 Data
+Element 87. <br>
+ <br>
+14.	00427 PSRO/UR APRVD STAY-FM(88).  PSRO/UR approved stay date (from). UB82
+Data Element 88. <br>
+ <br>
+15.	00428 PSRO/UR APRVD STAY-TO(89).  PSRO/UR approved stay date (to). UB82
+Data Element 89. <br>
+ <br>
+16.	00429 OCCURRENCE (28-32).  Three subfields: Occurrence Code (ID),
+Occurrence To Date (DT) and Occurrence From Date (DT).  This set of values can
+repeat up to 5 times. UB82 Data Elements 28-32. <br>
+ <br>
+17.	00435 OCCURRENCE SPAN (33).  UB82 Data Element 33. <br>
+ <br>
+18.	00446 OCCURRENCE SPAN START DATE(33).  Occurrence span start date. UB82
+Data Element 33. <br>
+ <br>
+19.	00447 OCCUR. SPAN END DATE (33).  Occurrence span end date. UB82 Data
+Element 33. <br>
+ <br>
+20.	00448 UB-82 LOCATOR 2.  <br>
+ <br>
+21.	00449 UB-82 LOCATOR 9.  <br>
+ <br>
+22.	00450 UB-82 LOCATOR 27.  <br>
+ <br>
+23.	00451 UB-82 LOCATOR 45.  </p>
+
+<h2>
+<A NAME="Heading17">6.4 EXAMPLE TRANSACTIONS </A></h2>
+
+<p></p>
+
+<h3>
+<A NAME="Heading18">6.4.1 Create a Patient Billing/Accounts Receivable Record</A></h3>
+
+<p><br>
+<tt>MSH|^~\|PATA||PATB||||BAR|MSG0010|P|2.1&lt;CR&gt;</tt><br>
+<tt>EVN|001|198808220800&lt;CR&gt;</tt><br>
+<tt>PID|||125976|JOHNSON^SAM^J||19471007|M|C|</tt><br>
+<tt>	8339 MORVEN RD^BALTIMORE^MD^21234^""||</tt><br>
+<tt>	(301)555-9876|||||125976011&lt;CR&gt;</tt><br>
+<tt>GT1|001||JOHNSON^SAM^J|8339 MORVEN RD^BALTIMORE^MD^</tt><br>
+<tt>	21234^""||||||193-22-1876&lt;CR&gt;</tt><br>
+<tt>NK1|JOHNSON^WILLIAM|F|522 MAIN ST^CUMBERLAND^MD</tt><br>
+<tt>	^28765^""|(301)555-2134&lt;CR&gt; IN1|001|A|A357|BCMD|||||</tt><br>
+<tt>	132987&lt;CR&gt;</tt><br>
+A patient has been registered by the ADT system (PATA) and notification is sent
+to the Patient Billing system (PATB). The patient's name is Sam J. Johnson, a
+Male Caucasian, born on October 7, 1947. Living at 8339 Morven Rd, Baltimore,
+MD.<br>
+Mr. Johnson's patient number is 125976 and his billing number is 125976011.
+Mr. Johnson has provided his father's name and address as next of kin. Mr.
+Johnson is insured under plan id A357 with an insurance company known to both
+systems as BCMD.	</p>
+
+<h3>
+<A NAME="Heading19">6.4.2 UB82 Information Updated from Utilization Review Department</A></h3>
+
+<p><br>
+<tt>MSH|^~\|UREV||PATB||||BAR|MSG0018|P|VRS1.0&lt;CR&gt;</tt><br>
+<tt>PID|||125976|JOHNSON^SAM^J||||||||||||125976011&lt;CR&gt;</tt><br>
+<tt>UB1|1|5|3|1||1^36|||220|76|1|19880501|19880522&lt;CR&gt;</tt><br>
+Utilization review sends data for Patient Billing to the Patient Accounting
+system.  The patient's insurance program has a 1 pint deductible for blood, the
+patient received 5 pints of blood, and 3 pints were replaced, with 1 pint not
+yet replaced. There is a UB82 Condition code 1.<br>
+The patient has been assigned to a Special Unit because no general care beds
+are available (UB82 condition code 36). Additionally, the patient has been
+scheduled for out-patient pre-admission diagnostic services in preparation for
+a previously scheduled admission, the cost of these services is $220. The
+patient's services are related to a special program, defined by the Insurance
+Plan as plan 76.<br>
+The services provided for the period 05/01/88 through 05/22/88 are fully
+approved (PSRO/UR Approval Code 1), including any day or cost outlier.</p>
+
+<h3>
+<A NAME="Heading20">6.4.3 Diagnosis and DRG Assignment</A></h3>
+
+<p><br>
+<tt>MSH|^~\|UREV||PATB||||BAR|MSG0018|P|VRS1.0&lt;CR&gt;</tt><br>
+<tt>PID|||125976|JOHNSON^SAM^J||||||||||||125976011&lt;CR&gt;</tt><br>
+<tt>DG1|001|I9|1550|MAL NEO LIVER, PRIMARY|19880501|DG&lt;CR&gt;</tt><br>
+<tt>DG1|002||||19880501||DR||203|||DY|5&lt;CR&gt;</tt><br>
+The first Diagnosis segment, contains the information that 	 the patient has
+been diagnosed on May 1, as having a malignancy of the Hepatobiliary System or
+Pancreas (ICD9 code 1550). In the second segment, the patient hasbeen assigned
+a Diagnostic Related Group (DRG) of 203 (corresponding to the ICD9 code of
+1550). Also, the patient has been approved for an additional 5  days (5 day
+outlier). <br>
+ID Codes used:<br>
+	element 3.0 Diagnosis Coding Methodology I9 = ICD9<br>
+	element 8.0 Diagnosis/DRG Type <br>
+			DG = Diagnosis <br>
+			DR = DRG<br>
+	element 13.0 Outlier type<br>
+			DY = Day Outlier</p>
+
+<h2>
+<A NAME="Heading21">6.5 IMPLEMENTATION CONSIDERATIONS</A></h2>
+
+<p><br>
+The SET-ID used to be to identify whether or not a record was to be used for
+deletion, update, or cancellation. This was redundant since the event type
+indicates this fact. Consequently, the SET-ID is now only used to uniquely
+identify a segment.</p>
+
+<h2>
+<A NAME="Heading22">6.6 OUTSTANDING ISSUES</A></h2>
+
+<p><br>
+1)	Future releases of the HL7 specification will include other finance
+systems.<br>
+2)	Implementors may submit state-specific segments for future releases of the
+specification.<br>
+3)	SEND 1 DRG and up to 9 diagnosis codes per segment.
+</p>
+</body></html>

@@ -1,0 +1,9074 @@
+<HTML>
+<HEAD>
+<TITLE>HL7 Version 2.x: Medical Records</TITLE>
+<LINK REL="stylesheet" HREF="formate.css" type="text/css"><LINK REL="SHORTCUT ICON" HREF="hl7.ico"><META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2017" /><META NAME="Generator" CONTENT="HL7 Comprehensive Database: DocxExtractor" /><META NAME="Author" CONTENT="Frank Oemig" /></HEAD>
+<BODY>
+<H1>
+Table of Contents
+</H1>
+<UL>
+<LI><A HREF="ch09.html#Heading3651">9 .Medical Records/Information Management (Document Management)</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3652">9.1 Chapter 9 contents</A></LI>
+<LI><A HREF="ch09.html#Heading3653">9.2 PURPOSE</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3654">9.2.1 Definition of Document Management Terms and Concepts</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3655">9.2.1.0 Addendum:</A></LI>
+<LI><A HREF="ch09.html#Heading3656">9.2.1.1 Archived:</A></LI>
+<LI><A HREF="ch09.html#Heading3657">9.2.1.2 Canceled:</A></LI>
+<LI><A HREF="ch09.html#Heading3658">9.2.1.3 Composite document:</A></LI>
+<LI><A HREF="ch09.html#Heading3659">9.2.1.4 Document completion table:</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3660">9.2.1.4.1 Authenticated:</A></LI>
+<LI><A HREF="ch09.html#Heading3661">9.2.1.4.2 Dictated:</A></LI>
+<LI><A HREF="ch09.html#Heading3662">9.2.1.4.3 Documented:</A></LI>
+<LI><A HREF="ch09.html#Heading3663">9.2.1.4.4 In Progress/Assigned:</A></LI>
+<LI><A HREF="ch09.html#Heading3664">9.2.1.4.5 Incomplete:</A></LI>
+<LI><A HREF="ch09.html#Heading3665">9.2.1.4.6 Legally Authenticated:</A></LI>
+<LI><A HREF="ch09.html#Heading3666">9.2.1.4.7 Pre-Authenticated:</A></LI>
+</UL>
+<LI><A HREF="ch09.html#Heading3667">9.2.1.5 Edited Document:</A></LI>
+<LI><A HREF="ch09.html#Heading3668">9.2.1.6 New or Original Document:</A></LI>
+<LI><A HREF="ch09.html#Heading3669">9.2.1.7 Obsolete:</A></LI>
+<LI><A HREF="ch09.html#Heading3670">9.2.1.8 Purged:</A></LI>
+<LI><A HREF="ch09.html#Heading3671">9.2.1.9 Replacement Document:</A></LI>
+<LI><A HREF="ch09.html#Heading3672">9.2.1.10 Restricted:</A></LI>
+<LI><A HREF="ch09.html#Heading3673">9.2.1.11 Revised document:</A></LI>
+<LI><A HREF="ch09.html#Heading3674">9.2.1.12 Transcription:</A></LI>
+</UL>
+<LI><A HREF="ch09.html#Heading3675">9.2.2 Definition of Consent Terms and Concepts</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3676">9.2.2.0 Background Text: </A></LI>
+<LI><A HREF="ch09.html#Heading3677">9.2.2.1 Consent Bypass Reason: </A></LI>
+<LI><A HREF="ch09.html#Heading3678">9.2.2.2 Consent Decision Date/Time: </A></LI>
+<LI><A HREF="ch09.html#Heading3679">9.2.2.3 Consent Disclosure Level: </A></LI>
+<LI><A HREF="ch09.html#Heading3680">9.2.2.4 Consent Discussion Date/Time: </A></LI>
+<LI><A HREF="ch09.html#Heading3681">9.2.2.5 Consent Effective Date/Time: </A></LI>
+<LI><A HREF="ch09.html#Heading3682">9.2.2.6 Consent End Date/Time: </A></LI>
+<LI><A HREF="ch09.html#Heading3683">9.2.2.7 Consent Form ID: </A></LI>
+<LI><A HREF="ch09.html#Heading3684">9.2.2.8 Consent Mode: </A></LI>
+<LI><A HREF="ch09.html#Heading3685">9.2.2.9 Consent Non-disclosure Reason: </A></LI>
+<LI><A HREF="ch09.html#Heading3686">9.2.2.10 Consent Segment</A></LI>
+<LI><A HREF="ch09.html#Heading3687">9.2.2.11 Consent Status: </A></LI>
+<LI><A HREF="ch09.html#Heading3688">9.2.2.12 Consent Text: </A></LI>
+<LI><A HREF="ch09.html#Heading3689">9.2.2.13 Consent Type:</A></LI>
+<LI><A HREF="ch09.html#Heading3690">9.2.2.14 Informational Material Supplied Indicator: </A></LI>
+<LI><A HREF="ch09.html#Heading3691">9.2.2.15 Subject Competence Indicator: </A></LI>
+<LI><A HREF="ch09.html#Heading3692">9.2.2.16 Subject-imposed Limitations: </A></LI>
+<LI><A HREF="ch09.html#Heading3693">9.2.2.17 Subject-specific Background Text: </A></LI>
+<LI><A HREF="ch09.html#Heading3694">9.2.2.18 Subject-specific Consent Text: </A></LI>
+<LI><A HREF="ch09.html#Heading3695">9.2.2.19 Translation Type: </A></LI>
+<LI><A HREF="ch09.html#Heading3696">9.2.2.20 Translator Assistance Indicator: </A></LI>
+</UL>
+</UL>
+<LI><A HREF="ch09.html#Heading3697">9.3 DOCUMENT MANAGEMENT SECTION</A></LI>
+<LI><A HREF="ch09.html#Heading3698">9.4 Consent information</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3699">9.4.1 Example 1</A></LI>
+</UL>
+<LI><A HREF="ch09.html#Heading3700">9.5 ASSUMPTIONS</A></LI>
+<LI><A HREF="ch09.html#Heading3701">9.6 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3702">9.6.1 MDM/ACK - Original Document Notification (Event T01)</A></LI>
+<LI><A HREF="ch09.html#Heading3703">9.6.2 MDM/ACK - Original Document Notification and Content (Event T02) </A></LI>
+<LI><A HREF="ch09.html#Heading3704">9.6.3 MDM/ACK - Document Status Change Notification (Event T03) </A></LI>
+<LI><A HREF="ch09.html#Heading3705">9.6.4 MDM/ACK - Document Status Change Notification and Content (Event T04)</A></LI>
+<LI><A HREF="ch09.html#Heading3706">9.6.5 MDM/ACK - Document Addendum Notification (Event T05)</A></LI>
+<LI><A HREF="ch09.html#Heading3707">9.6.6 MDM/ACK - Document Addendum Notification and Content (Event T06)</A></LI>
+<LI><A HREF="ch09.html#Heading3708">9.6.7 MDM/ACK - Document Edit Notification (Event T07)</A></LI>
+<LI><A HREF="ch09.html#Heading3709">9.6.8 MDM/ACK - Document Edit Notification and Content (Event T08)</A></LI>
+<LI><A HREF="ch09.html#Heading3710">9.6.9 MDM/ACK - Document Replacement Notification (Event T09)</A></LI>
+<LI><A HREF="ch09.html#Heading3711">9.6.10 MDM/ACK - Document Replacement Notification and Content (Event T10)</A></LI>
+<LI><A HREF="ch09.html#Heading3712">9.6.11 MDM/ACK - Document Cancel Notification (Event T11)</A></LI>
+</UL>
+<LI><A HREF="ch09.html#Heading3713">9.7 MESSAGE SEGMENTS</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3714">9.7.1 CON – Consent Segment</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3715">9.7.1.0 CON Segment Field Definitions</A></LI>
+<LI><A HREF="ch09.html#Heading3716">9.7.1.1 CON-1   Set ID -CON   (SI)   01776</A></LI>
+<LI><A HREF="ch09.html#Heading3717">9.7.1.2 CON-2   Consent Type   (CWE)   01777</A></LI>
+<LI><A HREF="ch09.html#Heading3718">9.7.1.3 CON-3   Consent Form ID and Version   (ST)   01778</A></LI>
+<LI><A HREF="ch09.html#Heading3719">9.7.1.4 CON-4   Consent Form Number   (EI)   01779</A></LI>
+<LI><A HREF="ch09.html#Heading3720">9.7.1.5 CON-5   Consent Text   (FT)   01780</A></LI>
+<LI><A HREF="ch09.html#Heading3721">9.7.1.6 CON-6   Subject-specific Consent Text   (FT)   01781</A></LI>
+<LI><A HREF="ch09.html#Heading3722">9.7.1.7 CON-7   Consent Background Information   (FT)   01782</A></LI>
+<LI><A HREF="ch09.html#Heading3723">9.7.1.8 CON-8   Subject-specific Consent Background Text   (FT)   01783</A></LI>
+<LI><A HREF="ch09.html#Heading3724">9.7.1.9 CON-9   Consenter-imposed Limitations   (FT)   01784</A></LI>
+<LI><A HREF="ch09.html#Heading3725">9.7.1.10 CON-10   Consent Mode   (CNE)   01785</A></LI>
+<LI><A HREF="ch09.html#Heading3726">9.7.1.11 CON-11   Consent Status   (CNE)   01786</A></LI>
+<LI><A HREF="ch09.html#Heading3727">9.7.1.12 CON-12   Consent Discussion Date/Time   (DTM)   01787</A></LI>
+<LI><A HREF="ch09.html#Heading3728">9.7.1.13 CON-13   Consent Decision Date/Time   (DTM)   01788</A></LI>
+<LI><A HREF="ch09.html#Heading3729">9.7.1.14 CON-14   Consent Effective Date/Time   (DTM)   01789</A></LI>
+<LI><A HREF="ch09.html#Heading3730">9.7.1.15 CON-15   Consent End Date/Time   (DTM)   01790</A></LI>
+<LI><A HREF="ch09.html#Heading3731">9.7.1.16 CON-16   Subject Competence Indicator   (ID)   01791</A></LI>
+<LI><A HREF="ch09.html#Heading3732">9.7.1.17 CON-17   Translator Assistance Indicator   (ID)   01792</A></LI>
+<LI><A HREF="ch09.html#Heading3733">9.7.1.18 CON-18   Language Translated To   (CWE)   01793</A></LI>
+<LI><A HREF="ch09.html#Heading3734">9.7.1.19 CON-19   Informational Material Supplied Indicator   (ID)   01794</A></LI>
+<LI><A HREF="ch09.html#Heading3735">9.7.1.20 CON-20   Consent Bypass Reason   (CWE)   01795</A></LI>
+<LI><A HREF="ch09.html#Heading3736">9.7.1.21 CON-21   Consent Disclosure Level   (ID)   01796</A></LI>
+<LI><A HREF="ch09.html#Heading3737">9.7.1.22 CON-22   Consent Non-Disclosure Reason   (CWE)   01797</A></LI>
+<LI><A HREF="ch09.html#Heading3738">9.7.1.23 CON-23   Non-Subject Consenter Reason   (CWE)   01798</A></LI>
+<LI><A HREF="ch09.html#Heading3739">9.7.1.24 CON-24   Consenter ID   (XPN)   01909</A></LI>
+<LI><A HREF="ch09.html#Heading3740">9.7.1.25 CON-25   Relationship to Subject   (CWE)   01898</A></LI>
+</UL>
+<LI><A HREF="ch09.html#Heading3741">9.7.2 OBX - Observation Segment Usage</A></LI>
+<LI><A HREF="ch09.html#Heading3742">9.7.3 TXA - Transcription Document Header Segment</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3743">9.7.3.0 TXA   Field Definitions</A></LI>
+<LI><A HREF="ch09.html#Heading3744">9.7.3.1 TXA-1   Set ID - TXA   (SI)   00914</A></LI>
+<LI><A HREF="ch09.html#Heading3745">9.7.3.2 TXA-2   Document Type   (CWE)   00915</A></LI>
+<LI><A HREF="ch09.html#Heading3746">9.7.3.3 TXA-3   Document Content Presentation   (ID)   00916</A></LI>
+<LI><A HREF="ch09.html#Heading3747">9.7.3.4 TXA-4   Activity Date/Time   (DTM)   00917</A></LI>
+<LI><A HREF="ch09.html#Heading3748">9.7.3.5 TXA-5   Primary Activity Provider Code/Name   (XCN)   00918</A></LI>
+<LI><A HREF="ch09.html#Heading3749">9.7.3.6 TXA-6   Origination Date/Time   (DTM)   00919</A></LI>
+<LI><A HREF="ch09.html#Heading3750">9.7.3.7 TXA-7   Transcription Date/Time   (DTM)   00920</A></LI>
+<LI><A HREF="ch09.html#Heading3751">9.7.3.8 TXA-8   Edit Date/Time   (DTM)   00921</A></LI>
+<LI><A HREF="ch09.html#Heading3752">9.7.3.9 TXA-9   Originator Code/Name   (XCN)   00922</A></LI>
+<LI><A HREF="ch09.html#Heading3753">9.7.3.10 TXA-10   Assigned Document Authenticator   (XCN)   00923</A></LI>
+<LI><A HREF="ch09.html#Heading3754">9.7.3.11 TXA-11   Transcriptionist Code/Name   (XCN)   00924</A></LI>
+<LI><A HREF="ch09.html#Heading3755">9.7.3.12 TXA-12   Unique Document Number   (EI)   00925</A></LI>
+<LI><A HREF="ch09.html#Heading3756">9.7.3.13 TXA-13   Parent Document Number   (EI)   00926</A></LI>
+<LI><A HREF="ch09.html#Heading3757">9.7.3.14 TXA-14   Placer Order Number   (EI)   00216</A></LI>
+<LI><A HREF="ch09.html#Heading3758">9.7.3.15 TXA-15   Filler Order Number   (EI)   00217</A></LI>
+<LI><A HREF="ch09.html#Heading3759">9.7.3.16 TXA-16   Unique Document File Name   (ST)   00927</A></LI>
+<LI><A HREF="ch09.html#Heading3760">9.7.3.17 TXA-17   Document Completion Status   (ID)   00928</A></LI>
+<LI><A HREF="ch09.html#Heading3761">9.7.3.18 TXA-18   Document Confidentiality Status   (ID)   00929</A></LI>
+<LI><A HREF="ch09.html#Heading3762">9.7.3.19 TXA-19   Document Availability Status   (ID)   00930</A></LI>
+<LI><A HREF="ch09.html#Heading3763">9.7.3.20 TXA-20   Document Storage Status   (ID)   00932</A></LI>
+<LI><A HREF="ch09.html#Heading3764">9.7.3.21 TXA-21   Document Change Reason   (ST)   00933</A></LI>
+<LI><A HREF="ch09.html#Heading3765">9.7.3.22 TXA-22   Authentication Person, Time Stamp (set)    (PPN)   00934</A></LI>
+<LI><A HREF="ch09.html#Heading3766">9.7.3.23 TXA-23   Distributed Copies (Code and Name of Recipients(s))    (XCN)   00935</A></LI>
+<LI><A HREF="ch09.html#Heading3767">9.7.3.24 TXA-24 Folder Assignment  (CWE)   02378</A></LI>
+<LI><A HREF="ch09.html#Heading3768">9.7.3.25 TXA-25 Document Title  (ST)   03301</A></LI>
+<LI><A HREF="ch09.html#Heading3769">9.7.3.26 TXA-26   Agreed Due Date/Time   (DTM)  03302</A></LI>
+<LI><A HREF="ch09.html#Heading3770">9.7.3.27 TXA-27 Creating Facility (HD) 02413</A></LI>
+<LI><A HREF="ch09.html#Heading3771">9.7.3.28 TXA-28 Creating Specialty (CWE) 02414</A></LI>
+</UL>
+</UL>
+<LI><A HREF="ch09.html#Heading3772">9.8 EXAMPLE MESSAGES</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3773">9.8.1 History and Physical Exam:</A></LI>
+<LI><A HREF="ch09.html#Heading3774">9.8.2 Document Folder </A></LI>
+</UL>
+<LI><A HREF="ch09.html#Heading3775">9.9 QUERY</A></LI>
+<UL>
+<LI><A HREF="ch09.html#Heading3776">9.9.1 QRY/DOC - Document Query (Event T12)</A></LI>
+</UL>
+<LI><A HREF="ch09.html#Heading3777">9.10 OUTSTANDING ISSUES</A></LI>
+</UL>
+</UL>
+<p>
+ANSI/HL7 V2.9-2019
+</p>
+<p>
+12/9/2019
+</p>
+<A ID="Heading3651" >
+<H1>
+9 .Medical Records/Information Management (Document Management)
+</H1>
+<p>
+9
+</p>
+<TABLE>
+<TR>
+<TD>
+<p>
+Chapter Co-Chair
+</p>
+</TD>
+<TD>
+<p>
+Calvin Beebe Mayo Clinic
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+Chapter Co-Chair
+</p>
+</TD>
+<TD>
+<p>
+Gay Dolin  Intelligent Medical Objects
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+Chapter Co-Chair
+</p>
+</TD>
+<TD>
+<p>
+Benjamin FlessnerRedox
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+Chapter Co-Chair
+</p>
+</TD>
+<TD>
+<p>
+Austin KreislerLeidos, Inc
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+Chapter  Co-Chair
+</p>
+</TD>
+<TD>
+<p>
+Sean McIlvennaLantan Consulting Group
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+Chapter Co-Chair
+</p>
+</TD>
+<TD>
+<p>
+Andrew StatlerCerner Corporation
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+Editor
+</p>
+</TD>
+<TD>
+<p>
+Anthony JulianMayo Clinic
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+Editor Emeritus
+</p>
+</TD>
+<TD>
+<p>
+Peter GilbertMeridian Health Plan
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+Sponsoring Committee
+</p>
+</TD>
+<TD>
+<p>
+Structured Documents
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+List Server
+</p>
+</TD>
+<TD>
+<p>
+strucdoc@lists.hl7.org 
+</p>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3652" >
+<H2>
+9.1 Chapter 9 contents
+</H2>
+<A ID="Heading3653" >
+<H2>
+9.2 PURPOSE
+</H2>
+<p>
+This chapter currently supports document management.  In the future, it is intended also to support the data exchange needs of applications supporting other medical record functions, including chart location and tracking, deficiency analysis, consents, and release of information.  The main purpose of the medical record is to produce an accurate, legal, and legible document that serves as a comprehensive account of healthcare services provided to a patient.
+</p>
+<p>
+Document/reports supported in this chapter will meet the criteria as described in Chapter 7, "Observations" (section 7.2  Purpose).  The appropriate use of MDM messages versus ORU message has been clarified in 7.2.
+</p>
+<A ID="Heading3654" >
+<H3>
+9.2.1 Definition of Document Management Terms and Concepts
+</H3>
+<p>
+This section provides definitions of terms used throughout this chapter.  The intent of this part is to provide clarification on use and interpretation.
+</p>
+<A ID="Heading3655" >
+<H4>
+9.2.1.0 Addendum:
+</H4>
+<p>
+An appendage to an existing document that contains supplemental information.  The parent document remains in place and its content is unaltered.
+</p>
+<A ID="Heading3656" >
+<H4>
+9.2.1.1 Archived:
+</H4>
+<p>
+A storage status in which a document has been stored off-line for long-term access.
+</p>
+<A ID="Heading3657" >
+<H4>
+9.2.1.2 Canceled:
+</H4>
+<p>
+An availability status in which a document has been "removed" from a patient''s record with no replacement.  This is done when a document has been erroneously created or assigned to the incorrect patient.
+</p>
+<A ID="Heading3658" >
+<H4>
+9.2.1.3 Composite document:
+</H4>
+<p>
+A document which consists of an original document and one or more addenda.
+</p>
+<A ID="Heading3659" >
+<H4>
+9.2.1.4 Document completion table:
+</H4>
+<p>
+The following terms are used to describe the workflow progression of a document:
+</p>
+<A ID="Heading3660" >
+9.2.1.4.1 Authenticated:
+<p>
+A completion status in which a document or entry has been signed manually or electronically by one or more individuals who attest to its accuracy.  No explicit determination is made that the assigned individual has performed the authentication.  While the standard allows multiple instances of authentication, it would be typical to have a single instance of authentication, usually by the assigned individual.
+</p>
+<A ID="Heading3661" >
+9.2.1.4.2 Dictated:
+<p>
+A completion status in which information has been orally recorded but not yet transcribed.
+</p>
+<A ID="Heading3662" >
+9.2.1.4.3 Documented:
+<p>
+A completion status in which document content, other than dictation, has been received but has not been translated into the final electronic format.  Examples include paper documents, whether hand-written or typewritten, and intermediate electronic forms, such as voice to text.
+</p>
+<A ID="Heading3663" >
+9.2.1.4.4 In Progress/Assigned:
+<p>
+A workflow status in which the recipient has assigned the material to personnel to perform the task of transcription.  The document remains in this state until the document is transcribed.
+</p>
+<A ID="Heading3664" >
+9.2.1.4.5 Incomplete:
+<p>
+A completion status in which information is known to be missing from a document.
+</p>
+<A ID="Heading3665" >
+9.2.1.4.6 Legally Authenticated:
+<p>
+A completion status in which a document or entry has been signed manually or electronically by the individual who is legally responsible for that document or entry. This is the most mature state in the workflow progression.
+</p>
+<A ID="Heading3666" >
+9.2.1.4.7 Pre-Authenticated:
+<p>
+A completion status in which a document is transcribed but not authenticated.
+</p>
+<A ID="Heading3667" >
+<H4>
+9.2.1.5 Edited Document:
+</H4>
+<p>
+A document that alters an existing document which had not been made available for patient care (see also Section 9.2.1.9, "Replacement Document:").
+</p>
+<A ID="Heading3668" >
+<H4>
+9.2.1.6 New or Original Document:
+</H4>
+<p>
+The first version of a document.  The original may or may not be final or authenticated.  An original document should have a set of associated statuses to define its current condition.
+</p>
+<A ID="Heading3669" >
+<H4>
+9.2.1.7 Obsolete:
+</H4>
+<p>
+An availability status in which a document has been replaced by a document which contains revised content.  
+</p>
+<A ID="Heading3670" >
+<H4>
+9.2.1.8 Purged:
+</H4>
+<p>
+A storage status in which a document is no longer available in this system.  
+</p>
+<A ID="Heading3671" >
+<H4>
+9.2.1.9 Replacement Document:
+</H4>
+<p>
+A document that replaces an existing document. The original document becomes obsolete, but is still retained in the system for historical reference.
+</p>
+<A ID="Heading3672" >
+<H4>
+9.2.1.10 Restricted:
+</H4>
+<p>
+A confidentiality status in which access to a document has institutionally assigned limitations.
+</p>
+<A ID="Heading3673" >
+<H4>
+9.2.1.11 Revised document:
+</H4>
+<p>
+This is not a supported trigger event.   See Sections 9.2.1.5, "Edited Document:", and 9.2.1.9 "Replacement Document:".
+</p>
+<A ID="Heading3674" >
+<H4>
+9.2.1.12 Transcription:
+</H4>
+<p>
+A process of transforming dictated or otherwise documented information into an electronic format. 
+</p>
+<A ID="Heading3675" >
+<H3>
+9.2.2 Definition of Consent Terms and Concepts
+</H3>
+<A ID="Heading3676" >
+<H4>
+9.2.2.0 Background Text: 
+</H4>
+<p>
+In most cases in the health field, consent must be "informed" consent.  This means that the consenting individual must understand and appreciate the implications of what he or she is consenting to.  Most consent processes involve providing background material describing the reasons for the proposed service, expected benefits and potential risks.  It is important to have a record of what information was presented to the subject at the time of consent.
+</p>
+<A ID="Heading3677" >
+<H4>
+9.2.2.1 Consent Bypass Reason: 
+</H4>
+<p>
+There may arise situations in which an action must be performed without patient consent (i.e., retrieving an unconscious patient''s drug history, performing life saving surgery, etc.).  This field indicates the rationale for accessing information without obtaining the required consent.
+</p>
+<A ID="Heading3678" >
+<H4>
+9.2.2.2 Consent Decision Date/Time: 
+</H4>
+<p>
+Related to the above, there also needs to be a record of the time the subject actually made their consent decision.
+</p>
+<A ID="Heading3679" >
+<H4>
+9.2.2.3 Consent Disclosure Level: 
+</H4>
+<p>
+Identifies whether the subject was provided with information on the full background information on the procedure the subject is giving consent to; i.e., has all information needed for ''informed'' consent been provided.
+</p>
+<A ID="Heading3680" >
+<H4>
+9.2.2.4 Consent Discussion Date/Time: 
+</H4>
+<p>
+For informed consent, a knowledgeable person must discuss the ramifications of consent with the subject.  In some instances, this discussion is required to take place prior to the provision of consent.  This ensures that the subject has sufficient time to consider the ramifications of his or her decision.  To ensure that guidelines are followed, it is imperative to record when the consent information was initially discussed with the subject.
+</p>
+<A ID="Heading3681" >
+<H4>
+9.2.2.5 Consent Effective Date/Time: 
+</H4>
+<p>
+Not all consents take effect at the time the consent decision is made.  They may not become effective for some time, or in certain circumstances they may even be retroactive.  Use this field to record the effective time. 
+</p>
+<A ID="Heading3682" >
+<H4>
+9.2.2.6 Consent End Date/Time: 
+</H4>
+<p>
+For most programs requiring voluntary participation, the decision to participate is not final and therefore may be revoked in the future.  Therefore, when a patient makes the decision to revoke his or her consent, the date and time on which the decision was made must be recorded in order to provide a complete history of the consent.  Alternatively, the initial consent may only have been granted for a limited period of time (i.e., 24 hours, 1 week, 1 year).  If Consent End Date/Time is null, this should be interpreted as ''indefinite.''
+</p>
+<A ID="Heading3683" >
+<H4>
+9.2.2.7 Consent Form ID: 
+</H4>
+<p>
+Some institutions may have a set of pre-defined consent forms.  Identifying the specific form identifies the details the subject is consenting to, as well as what information is on the form. 
+</p>
+<A ID="Heading3684" >
+<H4>
+9.2.2.8 Consent Mode: 
+</H4>
+<p>
+The manner in which consent can be given may vary greatly within a specific program, from program to program, or from organization to organization.  Therefore, the standard must allow applications to identify how consent was obtained (i.e., verbally, written, etc.).
+</p>
+<A ID="Heading3685" >
+<H4>
+9.2.2.9 Consent Non-disclosure Reason: 
+</H4>
+<p>
+Identifies why information was withheld from the patient (i.e., telling the patient may cause a worse outcome than performing the procedure).
+</p>
+<A ID="Heading3686" >
+<H4>
+9.2.2.10 Consent Segment
+</H4>
+<p>
+The issue of patient consent has become more important, particularly in the tracking of consent for the release of or exchange of information.  The pieces of information recorded when dealing with a patient consent tend to be similar, regardless of the purpose of the consent.  This segment combines these pieces of information so that they can be used for consents of any type.
+</p>
+<A ID="Heading3687" >
+<H4>
+9.2.2.11 Consent Status: 
+</H4>
+<p>
+Consent can be pending (subject hasn''t been asked yet), given, refused, revoked or even completely bypassed.   Consent Status identifies what the status of a subject''s consent is (or was at a given point in time).
+</p>
+<A ID="Heading3688" >
+<H4>
+9.2.2.12 Consent Text: 
+</H4>
+<p>
+When recording consents electronically it is important to know the specific text that was presented to the consenting person.
+</p>
+<A ID="Heading3689" >
+<H4>
+9.2.2.13 Consent Type:
+</H4>
+<p>
+In concert with giving consent, some programs may allow patients to request varying degrees of participation in a given program.  I.e., if a consent program relates to a patient''s entire medical record being available online they might have the opportunity to only reveal certain portions of that history, such as the drug history only.
+</p>
+<A ID="Heading3690" >
+<H4>
+9.2.2.14 Informational Material Supplied Indicator: 
+</H4>
+<p>
+As part of the informed consent process, additional material in the form of pamphlets, books, brochures, videos, etc., may be provided to the patient.  An indication of whether this has been done is required.  (Details on the materials provided will be sent using a separate segment.)
+</p>
+<A ID="Heading3691" >
+<H4>
+9.2.2.15 Subject Competence Indicator: 
+</H4>
+<p>
+One of the issues involved in informed consent is whether the subject is judged to be competent to provide consent on his or her own behalf.  Factors involve age, mental capacity, and current state of health/awareness.  A professional judgment about whether the subject is deemed competent must be made and recorded.
+</p>
+<A ID="Heading3692" >
+<H4>
+9.2.2.16 Subject-imposed Limitations: 
+</H4>
+<p>
+At the time of consent, the subject may wish to make modifications or add limitations to his or her consent.  These modifications and limitations must be recorded.
+</p>
+<A ID="Heading3693" >
+<H4>
+9.2.2.17 Subject-specific Background Text: 
+</H4>
+<p>
+The reasons, expected benefits and risks may vary from subject to subject.  It may be necessary to inform the subject of background information that only applies to his or her particular circumstance.
+</p>
+<A ID="Heading3694" >
+<H4>
+9.2.2.18 Subject-specific Consent Text: 
+</H4>
+<p>
+Sometimes consent forms have areas where details of the procedure or information distribution that are specific to a given consent instance are recorded, i.e., a variation on a common procedure, or an explicit listing of documents to be released.  As this is part of the consent document, it needs to be recorded.  It is helpful to keep this information separate from the standard ''template'' consent text, as in most circumstances people viewing the consent will want to know "What''s different from usual?"
+</p>
+<A ID="Heading3695" >
+<H4>
+9.2.2.19 Translation Type: 
+</H4>
+<p>
+To obtain informed consent, the patient must understand what he or she is consenting to.  For subjects who do not understand the commonly used language of the institution, or who are unable to hear/read/speak, translation services may be required.  An indication of what type(s) of translation were/will be performed is required.
+</p>
+<A ID="Heading3696" >
+<H4>
+9.2.2.20 Translator Assistance Indicator: 
+</H4>
+<p>
+To obtain informed consent, the patient must understand what he or she is consenting to.  For subjects who do not understand the commonly used language of the institution, or who are unable to hear/read/speak, translation services may be required.
+</p>
+<A ID="Heading3697" >
+<H2>
+9.3 DOCUMENT MANAGEMENT SECTION
+</H2>
+<p>
+This section defines the Medical Document Management (MDM) transaction set.  It supports transmission of new or updated documents or information about their status(es).  The trigger events and messages may be divided into two broad categories. One which describes the status of a document only and the other that describes the status and contains the document content itself.
+</p>
+<p>
+The document management section is concerned primarily with the management of those documents and entries which are created as a result of a transcription process.  Documents may be represented as a CDA document.  See ANSI/HL7 CDA R2.0-2005 Section 3 for the correct method of transmitting CDA documents within an MDM message. These documents are created in two distinct contexts, one of which is related to an order and describes the procedures or activities associated with that order, and another which occurs independently of the order process.  In this version we have added the ORC, OBR and associated NTE segments in order to provide full ordering context when appropriate for document management messages. The scope of this section also includes any document that contains data derived from orders or results but which must be treated as aggregate display data due to system limitations.  This is a transition strategy to support integration of data across the continuum of care.
+</p>
+<p>
+The content of a document can be represented with one or more observation segments (OBX).  Where headings or separations naturally exist within the text, it is preferred that each of these blocks be represented as a separate OBX record.  Where systems are able to decompose the text into separate medical concepts, the most atomic level of granularity of content should be represented, ideally with each medical concept being represented in its own OBX segment.  Many of these concepts can be represented as coded entities.  
+</p>
+<A ID="Heading3698" >
+<H2>
+9.4 Consent information
+</H2>
+<A ID="Heading3699" >
+<H3>
+9.4.1 Example 1
+</H3>
+<p>
+A patient decides to participate in a voluntary electronic drug history program.  The patient records this decision in writing (Consent Mode) on a pre-designed consent form (Consent Form ID and Version) after the patient''s health care service provider has explained the benefits and drawbacks of their participation (Consent Discussion Date/Time).  In providing consent, the patient can also decide on the degree to which he or she will participate in the program (Consent Type).  The consent decision (Consent Status) is recorded under the patient''s name (use ROL segment) and the number of the paper-based form that the patient signed is recorded in the electronic consent gathering function (Consent Number).  The patient''s consent is effective from the day of the decision (Consent Effect Date/Time), but this consent can be terminated at the patient''s discretion at a given date in the future (Consent End Date/Time).  Several months later the patient is rushed into an emergency health care facility with what appears to be a drug reaction.  While checking the patient''s drug history, health care service providers find that the patient''s drug history has controlled access.  The patient is unable to provide access to this information given that patient''s physical state, so the health care service provider circumvents the consent process (Non-consent Access Reason) in the interests of the patient''s immediate well-being.
+</p>
+<p>
+Example 2: A patient is seeking a therapeutic abortion.  Because she is under 18, the practitioner must evaluate her competence to provide consent.  The patient is deemed to be competent (Patient Competence Indicator).  Local legislation mandates that the patient be counseled at least 24 hours prior to receiving the procedure.  The patient is counseled, and the time recorded (Consent Discussion Date/Time).  She is also given a pamphlet to take home and read (Informational Material Supplied Indicator).  She returns the following day and signs the consent form (Consent Decision Date/Time).
+</p>
+<p>
+Example 3: A deaf patient is admitted for labor and delivery.  It becomes apparent the patient will require a cesarean section.  A translator is required (Translator Assistance Indicator) who can translate sign language (Translation Type).  The translator explains the details of the procedure the patient is being asked to consent to (Consent Text), the intention to use epidural anesthetic (Subject-specific Consent Text), the general risks associated with doing the procedure, as well as those with not doing the procedure (Background Text) and benefits associated with the epidural (Subject-specific Background Text).  The patient agrees to the procedure, subject to the condition that she not be given any blood products for religious reasons (Subject-imposed Limitations).
+</p>
+<p>
+Example 4: An employee signs a consent form authorizing (Consent Status) a hospital to request the employee''s driving records from the local Department of Motor Vehicles (Consent Type).
+</p>
+<p>
+Example 5: A patient signs a consent form to have basic diagnostic and billing information sent to that patient''s insurer.  The consent indicates that information may only be given to parties that are bound by HIPPA guidelines (Trust Agreement Restriction Type).
+</p>
+<A ID="Heading3700" >
+<H2>
+9.5 ASSUMPTIONS
+</H2>
+<p>
+Within this section we have created a single message whose contents vary predicated on the trigger event.  The following assumptions are made when the Medical Document Management (MDM) message is used:
+</p>
+<p>
+The application system is responsible for meeting all legal requirements (on the local, state, and federal levels) in the areas of document authentication, confidentiality, and retention.
+</p>
+<p>
+All documents are unique, and document numbers and file names are not reused.
+</p>
+<p>
+Documents may be associated with one or more orders.
+</p>
+<A ID="Heading3701" >
+<H2>
+9.6 TRIGGER EVENTS AND MESSAGE DEFINITIONS
+</H2>
+<p>
+Each triggering event is listed below, along with the applicable form of the message exchange. The notation used to describe the sequence, optionality, and repetition of segments is described in Chapter 2, "Format for Defining Abstract Messages."  There are two classes of events, those which contain notifications only, and those which contain both notifications and content (text contained in OBX segments).  
+</p>
+<p>
+Note:  Note that the event is encapsulated in MSH-9 and the event segment is deprecated for all MDM message cases as of version 2.5.  
+</p>
+<p>
+When -MSH-9 is valued, the value of EVN-1 must be the same.
+</p>
+<p>
+These triggering events are mainly associated with documents or entries that will be or have been transcribed. The types and appearance of the transcribed documents can vary greatly within a healthcare organization and between organizations.  However, the main purpose of the transcription process is to document patient care or diagnostic results in a legible manner; these documents then become part of the legal medical record.  The conceptual purpose of document notification is to facilitate updating the receiving system(s) with information from the source system(s), typically dictation or transcription systems, to indicate that an electronic document has been created or altered. The document notification message can be attached to an entire document (i.e., transcribed document) or can be transmitted stand-alone.  In either case, the document notification is transmitted in the form of an unsolicited update or in response to a record-oriented query.  A document notification message can be created under a variety of circumstances such as when: 1) dictation has been completed; 2) a document has been transcribed; or, 3) the status of a document has been changed, i.e., when a document has been authenticated.
+</p>
+<p>
+Also, the orders represented by the ORC/OBR segments must be wholly and exclusively satisfied by the TXA/OBX content.  "Wholly satisfied" means there are no other orders related to the TXA/OBX content other than those specified by the ORC/OBR segments.  "Exclusively satisfied" means that the actions described by the ORC/OBR segments do not contain actions not addressed by the TXA/OBX content. Thus, the TXA/OBX context must satisfy all instances of ORC/OBR as indicated by ORC-7 Quantity/Timing, OBR-27 Quantity/Timing or the TQ1/ TQ2 segments.
+</p>
+<p>
+The placer order number may exist in the ORC, OBR and TXA.  If valued in the ORC or OBR and the TXA is present, it should not be valued. If TXA is valued it should be ignored.
+</p>
+<p>
+The filler order number may exist in the ORC, OBR and TXA.  If valued in the ORC or OBR and the TXA is present, it should not be valued. If TXA is valued it should be ignored.
+</p>
+<p>
+Generally the OBR-32 Principal interpreter and the TXA 22.1 Authentication person are conceptually the same.  Normally only the TXA-22.1 should be valued. If both are valued, the TXA-22.1 takes precedence.  
+</p>
+<p>
+The OBR-35 Transcriptionist and the TXA 11 Transcriptionist are conceptually the same.  Normally only the TXA-11 should be valued. If both are valued, the TXA-11 takes precedence.  
+</p>
+<A ID="Heading3702" >
+<H3>
+9.6.1 MDM/ACK - Original Document Notification (Event T01)
+</H3>
+<p>
+This is a notification of the creation of a document without the accompanying content.  There are multiple approaches by which systems become aware of documents:
+</p>
+<p>
+Scenario A: A document is dictated and chart tracking system is notified that it has been dictated and is awaiting transcription. 
+</p>
+<p>
+Scenario B: Dictation is transcribed and chart tracking system is notified that the document exists and requires authentication. 
+</p>
+<p>
+Scenario C: A provider orders a series of three X-rays.  The radiologist dictates a single document which covers all three orders.  Multiple placer numbers are used to identify each of these orders.
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type </TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation </TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the observation request (OBR)</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3703" >
+<H3>
+9.6.2 MDM/ACK - Original Document Notification and Content (Event T02) 
+</H3>
+<p>
+This is a notification of the creation of a document with the accompanying content.
+</p>
+<p>
+Scenario A: Dictation is transcribed and the chart tracking system is notified that the document exists and requires authentication.  The content of the document is transmitted along with the notification.  
+</p>
+<p>
+Scenario B: A provider orders a series of three X-rays.  The radiologist''s dictation is transcribed in a single document, which covers all three orders.  Multiple placer numbers are used to identify each of the orders within the single document message.  The notification and document content are transmitted.
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type </TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation Segment</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the observation (OBR)</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>{</PRE></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBX</PRE></TD>
+<TD>
+Observation/Result (one or more required)</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segOBX.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the observation (OBX)</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}</PRE></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<p>
+Acknowledgement Choreography
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+ACK^T02^ACK
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3704" >
+<H3>
+9.6.3 MDM/ACK - Document Status Change Notification (Event T03) 
+</H3>
+<p>
+This is a notification of a change in a status of a document without the accompanying content. 
+</p>
+<p>
+Scenario: A document is authenticated.  Notification is sent to the chart tracking system and is used to update the document status from pre-authenticated to authenticated or legally authenticated.
+</p>
+<p>
+A change in any of the following independent status characteristics would cause a message to be sent:
+</p>
+<p>
+Completion Status 
+</p>
+<p>
+Confidentiality Status
+</p>
+<p>
+Availability Status (the Availability Status of "cancelled" is supported in T11 (document cancel notification) or T03)
+</p>
+<p>
+Storage Status
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type (</TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation </TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBR</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<p>
+Acknowledgement Choreography
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+MDM^T03^MDM_T01
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<p>
+Acknowledgement Choreography
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+ACK^T03^ACK
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3705" >
+<H3>
+9.6.4 MDM/ACK - Document Status Change Notification and Content (Event T04)
+</H3>
+<p>
+This is a notification of a change in a status of a document with the accompanying content. 
+</p>
+<p>
+Scenario: A document is authenticated.  Notification is sent to the chart tracking system and is used to update the document status from pre-authenticated to authenticated or legally authenticated.  The document content is also transmitted.
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type </TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation Segment</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBR</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>{</PRE></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBX</PRE></TD>
+<TD>
+Observation/Result (one or more required)</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segOBX.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments segment for OBX</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}</PRE></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<p>
+Acknowledgement Choreography
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+ACK^T04^ACK
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3706" >
+<H3>
+9.6.5 MDM/ACK - Document Addendum Notification (Event T05)
+</H3>
+<p>
+This is a notification of an addendum to a document without the accompanying content. 
+</p>
+<p>
+Scenario:  Author dictates additional information as an addendum to a previously transcribed document.  A new document is transcribed.  This addendum has its own new unique document ID that is linked to the original document via the parent ID.  Addendum document notification is transmitted.  This creates a composite document.
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type </TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation Segment</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBR</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<p>
+Acknowledgement Choreography
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+MDM^T05^MDM_T01
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<p>
+Acknowledgement Choreography
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+ACK^T05^ACK
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3707" >
+<H3>
+9.6.6 MDM/ACK - Document Addendum Notification and Content (Event T06)
+</H3>
+<p>
+This is a notification of an addendum to a document with the accompanying content. 
+</p>
+<p>
+Scenario:  Author dictates additional information as an addendum to a previously transcribed document.  A new document is transcribed.  This addendum has its own new unique document ID that is linked to the original document via the parent ID.  Addendum document notification is transmitted, along with the document content.  This creates a composite document.
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type </TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation Segment</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBR</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>{</PRE></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBX</PRE></TD>
+<TD>
+Observation/Result (one or more required)</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segOBX.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBX</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}</PRE></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<p>
+Acknowledgement Choreography
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+MDM^T06^MDM_T02
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<p>
+Acknowledgement Choreography
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+ACK^T06^ACK
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3708" >
+<H3>
+9.6.7 MDM/ACK - Document Edit Notification (Event T07)
+</H3>
+<p>
+Note:  The only valid use of this trigger event is for documents whose availability status is "Unavailable," i.e., the document has not been made available for patient care.
+</p>
+<p>
+This is a notification of an edit to a document without the accompanying content. 
+</p>
+<p>
+Scenario:  Errors, which need to be corrected, are discovered in a document.  The original document is edited, and an edit notification is sent.
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type </TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation </TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBR</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<p>
+Acknowledgement Choreography
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+MDM^T07^MDM_T01
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3709" >
+<H3>
+9.6.8 MDM/ACK - Document Edit Notification and Content (Event T08)
+</H3>
+<p>
+Note:  The only valid use of this trigger event is for documents whose availability status is "Unavailable," i.e., the document has not been made available for patient care.
+</p>
+<p>
+This is a notification of an edit to a document with the accompanying content. 
+</p>
+<p>
+Scenario:   Errors, which need to be corrected, are discovered in a document.  The original document is edited, and an edit notification and document content are sent.
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type </TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation Segment</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBR</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>{</PRE></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBX</PRE></TD>
+<TD>
+Observation/Result (one or more required)</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segOBX.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBX</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}</PRE></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3710" >
+<H3>
+9.6.9 MDM/ACK - Document Replacement Notification (Event T09)
+</H3>
+<p>
+Note:  This trigger event is generally used when the original document availability status is "Available."
+</p>
+<p>
+This is a notification of replacement to a document without the accompanying content. 
+</p>
+<p>
+Scenario:  Errors discovered in a document are corrected.  The original document is replaced with the revised document.  The replacement document has its own new unique document ID that is linked to the original document via the parent ID.  The availability status of the original document is changed to "Obsolete" but the original document should be retained in the system for historical reference.  Document replacement notification is sent.
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type </TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation Segment</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBR</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3711" >
+<H3>
+9.6.10 MDM/ACK - Document Replacement Notification and Content (Event T10)
+</H3>
+<p>
+Scenario:   Errors discovered in a document are corrected.  The original document is replaced with the revised document.  The replacement document has its own new unique document ID that is linked to the original document via the parent ID.  The availability status of the original document is changed to "Obsolete" but the original document should be retained in the system for historical reference.  Document replacement notification and document content are sent.
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type </TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation Segment</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ PRT }] </PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBR</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>{</PRE></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBX</PRE></TD>
+<TD>
+Observation/Result (one or more required)</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segOBX.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ PRT }]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBX</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}</PRE></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3712" >
+<H3>
+9.6.11 MDM/ACK - Document Cancel Notification (Event T11)
+</H3>
+<p>
+This is a notification of a cancellation of a document.   This trigger event should be used only for an original document with an availability status of "Unavailable."  When a document has been made available for patient care, the process should be to replace the original document, which then becomes obsolete.  The replacement document describes why the erroneous information exists.
+</p>
+<p>
+Scenario:  When the author dictated a document, the wrong patient identification was given, and the document was transcribed and sent to the wrong patient''s record.  When the error is discovered, a cancellation notice is sent to remove the document from general access in the wrong patient''s record. In these cases, a reason should be supplied in the cancellation message.  To protect patient privacy, the correct patient''s identifying information should not be placed on the erroneous document that is retained in the wrong patient''s record for historical reference.  A new document notification and content will be created using a T02 (original document notification and content) event and sent for association with the correct patient''s record.
+</p>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{SFT}]</PRE></TD>
+<TD>
+Software Segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>EVN</PRE></TD>
+<TD>
+Event Type </TD>
+<TD>
+B, v2.5</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segEVN.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PID</PRE></TD>
+<TD>
+Patient Identification</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPID.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>PV1</PRE></TD>
+<TD>
+Patient Visit</TD>
+<TD>
+</TD>
+<TD>
+3</TD>
+<TD>
+<A HREF="..\HL7v29segPV1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation Segment</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{</PRE></TD>
+<TD>
+--- COMMON_ORDER begin</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   ORC </PRE></TD>
+<TD>
+Common order segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segORC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  [{</PRE></TD>
+<TD>
+--- TIMING begin</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     TQ1</PRE></TD>
+<TD>
+Timing/Quantity</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ1.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{TQ2}]</PRE></TD>
+<TD>
+Timing/Quantity Order Sequence</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segTQ2.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>  }]</PRE></TD>
+<TD>
+--- TIMING end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>   OBR </PRE></TD>
+<TD>
+Observation request segment</TD>
+<TD>
+</TD>
+<TD>
+4</TD>
+<TD>
+<A HREF="..\HL7v29segOBR.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ { PRT } ]</PRE></TD>
+<TD>
+Participation</TD>
+<TD>
+</TD>
+<TD>
+7</TD>
+<TD>
+<A HREF="..\HL7v29segPRT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>     [{ NTE }]</PRE></TD>
+<TD>
+Notes and comments about the OBR</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segNTE.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>}]</PRE></TD>
+<TD>
+--- COMMON_ORDER end</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>TXA</PRE></TD>
+<TD>
+Document Notification</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{CON}]</PRE></TD>
+<TD>
+Consent Segment</TD>
+<TD>
+</TD>
+<TD>
+9</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+<PRE>Segments</PRE></TD>
+<TD>
+Description</TD>
+<TD>
+Status</TD>
+<TD>
+Chapter</TD>
+<TD>
+Link</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSH</PRE></TD>
+<TD>
+Message Header</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSH.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ SFT }]</PRE></TD>
+<TD>
+Software segment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segSFT.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[ UAC ]</PRE></TD>
+<TD>
+User Authentication Credential</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segUAC.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>MSA</PRE></TD>
+<TD>
+Message Acknowledgment</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segMSA.htm">DB</A>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>[{ ERR }]</PRE></TD>
+<TD>
+Error Information</TD>
+<TD>
+</TD>
+<TD>
+2</TD>
+<TD>
+<A HREF="..\HL7v29segERR.htm">DB</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3713" >
+<H2>
+9.7 MESSAGE SEGMENTS
+</H2>
+<A ID="Heading3714" >
+<H3>
+9.7.1 CON  Consent Segment
+</H3>
+<p>
+This segment identifies patient consent information relating to a particular message.  It can be used as part of existing messages to convey information about patient consent to procedures, admissions, information release/exchange or other events discussed by the message.  It may also be used in messages focusing on recording or requesting consent and for   consents related to employees or service providers.
+</p>
+<p>
+The segment will be used in conjunction with various other segments to identify the practitioner (PRA/STF) or patient (PID) the consent is for, the various individuals involved in the consent (ROL) as witnesses, consenting person (not always the patient), translators, consulting providers, etc., and the specific procedures being proposed (PR1).
+</p>
+<TABLE>
+<TR>
+<TD>
+SEQ</TD>
+<TD>
+LEN</TD>
+<TD>
+C.LEN</TD>
+<TD>
+DT</TD>
+<TD>
+OPT</TD>
+<TD>
+RP/#</TD>
+<TD>
+TBL#</TD>
+<TD>
+ITEM#</TD>
+<TD>
+ELEMENT NAME</TD>
+</TR>
+<TR>
+<TD>
+1</TD>
+<TD>
+1..4</TD>
+<TD>
+</TD>
+<TD>
+SI</TD>
+<TD>
+R</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+01776</TD>
+<TD>
+Set ID - CON</TD>
+</TR>
+<TR>
+<TD>
+2</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CWE</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0496</TD>
+<TD>
+01777</TD>
+<TD>
+Consent Type</TD>
+</TR>
+<TR>
+<TD>
+3</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+ST</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+01778</TD>
+<TD>
+Consent Form ID and Version</TD>
+</TR>
+<TR>
+<TD>
+4</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+EI</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+01779</TD>
+<TD>
+Consent Form Number</TD>
+</TR>
+<TR>
+<TD>
+5</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+FT</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+01780</TD>
+<TD>
+Consent Text</TD>
+</TR>
+<TR>
+<TD>
+6</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+FT</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+01781</TD>
+<TD>
+Subject-specific Consent Text</TD>
+</TR>
+<TR>
+<TD>
+7</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+FT</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+01782</TD>
+<TD>
+Consent Background Information</TD>
+</TR>
+<TR>
+<TD>
+8</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+FT</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+01783</TD>
+<TD>
+Subject-specific Consent Background Text</TD>
+</TR>
+<TR>
+<TD>
+9</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+FT</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+01784</TD>
+<TD>
+Consenter-imposed limitations</TD>
+</TR>
+<TR>
+<TD>
+10</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CNE</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0497</TD>
+<TD>
+01785</TD>
+<TD>
+Consent Mode</TD>
+</TR>
+<TR>
+<TD>
+11</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CNE</TD>
+<TD>
+R</TD>
+<TD>
+</TD>
+<TD>
+0498</TD>
+<TD>
+01786</TD>
+<TD>
+Consent Status</TD>
+</TR>
+<TR>
+<TD>
+12</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+DTM</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+01787</TD>
+<TD>
+Consent Discussion Date/Time</TD>
+</TR>
+<TR>
+<TD>
+13</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+DTM</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+01788</TD>
+<TD>
+Consent Decision Date/Time</TD>
+</TR>
+<TR>
+<TD>
+14</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+DTM</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+01789</TD>
+<TD>
+Consent Effective Date/Time</TD>
+</TR>
+<TR>
+<TD>
+15</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+DTM</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+01790</TD>
+<TD>
+Consent End Date/Time</TD>
+</TR>
+<TR>
+<TD>
+16</TD>
+<TD>
+1..1</TD>
+<TD>
+</TD>
+<TD>
+ID</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0136</TD>
+<TD>
+01791</TD>
+<TD>
+Subject Competence Indicator</TD>
+</TR>
+<TR>
+<TD>
+17</TD>
+<TD>
+1..1</TD>
+<TD>
+</TD>
+<TD>
+ID</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0136</TD>
+<TD>
+01792</TD>
+<TD>
+Translator Assistance Indicator</TD>
+</TR>
+<TR>
+<TD>
+18</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CWE</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0296</TD>
+<TD>
+01793</TD>
+<TD>
+Language Translated To</TD>
+</TR>
+<TR>
+<TD>
+19</TD>
+<TD>
+1..1</TD>
+<TD>
+</TD>
+<TD>
+ID</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0136</TD>
+<TD>
+01794</TD>
+<TD>
+Informational Material Supplied Indicator</TD>
+</TR>
+<TR>
+<TD>
+20</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CWE</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0499</TD>
+<TD>
+01795</TD>
+<TD>
+Consent Bypass Reason</TD>
+</TR>
+<TR>
+<TD>
+21</TD>
+<TD>
+1..1</TD>
+<TD>
+</TD>
+<TD>
+ID</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0500</TD>
+<TD>
+01796</TD>
+<TD>
+Consent Disclosure Level</TD>
+</TR>
+<TR>
+<TD>
+22</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CWE</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0501</TD>
+<TD>
+01797</TD>
+<TD>
+Consent Non-disclosure Reason</TD>
+</TR>
+<TR>
+<TD>
+23</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CWE</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0502</TD>
+<TD>
+01798</TD>
+<TD>
+Non-subject Consenter Reason</TD>
+</TR>
+<TR>
+<TD>
+24</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+XPN</TD>
+<TD>
+R</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+01909</TD>
+<TD>
+Consenter ID</TD>
+</TR>
+<TR>
+<TD>
+25</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CWE</TD>
+<TD>
+R</TD>
+<TD>
+Y</TD>
+<TD>
+0548</TD>
+<TD>
+01898</TD>
+<TD>
+Relationship to Subject </TD>
+</TR>
+</TABLE>
+<A ID="Heading3715" >
+<H4>
+9.7.1.0 CON Segment Field Definitions
+</H4>
+<A ID="Heading3716" >
+<H4>
+9.7.1.1 CON-1   Set ID -CON   (SI)   01776
+</H4>
+<p>
+Definition:  This field contains the number that identifies this segment instance within the message.  For the first occurrence of the segment, the sequence number shall be one; for the second occurrence, the sequence number shall be two; etc.
+</p>
+<A ID="Heading3717" >
+<H4>
+9.7.1.2 CON-2   Consent Type   (CWE)   01777
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition: This field describes what the subject is consenting to, i.e., what type of service, surgical procedure, information access/release or other event.  For values see User-Defined Table 0496  Consent Type.
+</p>
+<A ID="Heading3718" >
+<H4>
+9.7.1.3 CON-3   Consent Form ID and Version   (ST)   01778
+</H4>
+<p>
+Definition:  Identifies a specific version of a consent form used to record the consent.  A given version of a consent form implies a particular set of wording that appears on the form. 
+</p>
+<A ID="Heading3719" >
+<H4>
+9.7.1.4 CON-4   Consent Form Number   (EI)   01779
+</H4>
+<div class="component" >
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</div>
+<p>
+Definition:  Uniquely identifies a specific recorded consent.  This may be the number assigned to an electronic consent, or may be the number on a printed consent form.
+</p>
+<A ID="Heading3720" >
+<H4>
+9.7.1.5 CON-5   Consent Text   (FT)   01780
+</H4>
+<p>
+Definition:  Describes the specific procedures/information releases/events the subject is consenting to.
+</p>
+<A ID="Heading3721" >
+<H4>
+9.7.1.6 CON-6   Subject-specific Consent Text   (FT)   01781
+</H4>
+<p>
+Definition:  Describes any additions or variations to the standard procedures/information releases/events from a standard consent that are applicable to the subject whose consent is sought.
+</p>
+<A ID="Heading3722" >
+<H4>
+9.7.1.7 CON-7   Consent Background Information   (FT)   01782
+</H4>
+<p>
+Definition:  Describes any additional information relating to the procedure/information release/event that needs to be understood by the subject for informed consent.  May include the reason for the service, the expected benefit, risks, etc.
+</p>
+<A ID="Heading3723" >
+<H4>
+9.7.1.8 CON-8   Subject-specific Consent Background Text   (FT)   01783
+</H4>
+<p>
+Definition:  Describes any additions or variations to the standard additional information that needs to be understood by the patient for informed consent.  May include a description of benefits and risks that are specific to the subject from whom consent is sought.  May also include an indication that there are no subject-specific risks/benefits.
+</p>
+<A ID="Heading3724" >
+<H4>
+9.7.1.9 CON-9   Consenter-imposed Limitations   (FT)   01784
+</H4>
+<p>
+Definition:  Describes any restrictions or limitations placed on their consent by the subject.
+</p>
+<A ID="Heading3725" >
+<H4>
+9.7.1.10 CON-10   Consent Mode   (CNE)   01785
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  The method in which a subject provides consent. For values see HL7 Table 0497  Consent Mode.
+</p>
+<A ID="Heading3726" >
+<H4>
+9.7.1.11 CON-11   Consent Status   (CNE)   01786
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  Indicates whether consent has been sought and granted. For values see HL7 Table 0498  Consent Status.
+</p>
+<A ID="Heading3727" >
+<H4>
+9.7.1.12 CON-12   Consent Discussion Date/Time   (DTM)   01787
+</H4>
+<p>
+Definition:  Identifies the time when consent was discussed with the subject.  This should only be specified if this differs from the time the consent decision is made.
+</p>
+<A ID="Heading3728" >
+<H4>
+9.7.1.13 CON-13   Consent Decision Date/Time   (DTM)   01788
+</H4>
+<p>
+Definition:  Identifies the time when the decision to grant/refuse consent was made.  In the case of written consent, this is the time the consent form is signed.
+</p>
+<A ID="Heading3729" >
+<H4>
+9.7.1.14 CON-14   Consent Effective Date/Time   (DTM)   01789
+</H4>
+<p>
+Definition:  The time the consent becomes/became effective.  This only needs to be specified if the time differs from the Consent Decision Date/Time
+</p>
+<A ID="Heading3730" >
+<H4>
+9.7.1.15 CON-15   Consent End Date/Time   (DTM)   01790
+</H4>
+<p>
+Definition:  The time the consent becomes ineffective.  If not specified, the consent is assumed to be indefinite.  For consents relating to information release, the end date/time is the date by which the released information must be returned/destroyed.
+</p>
+<A ID="Heading3731" >
+<H4>
+9.7.1.16 CON-16   Subject Competence Indicator   (ID)   01791
+</H4>
+<p>
+Definition:  Identifies whether the subject was deemed competent to provide consent.  Refer to table HL7 Table 0136  Yes/No Indicator.
+</p>
+<A ID="Heading3732" >
+<H4>
+9.7.1.17 CON-17   Translator Assistance Indicator   (ID)   01792
+</H4>
+<p>
+Definition:  Identifies whether translation was (or will be) required to obtain informed consent from the subject.  Refer to table HL7 Table 0136  Yes/No Indicator.
+</p>
+<A ID="Heading3733" >
+<H4>
+9.7.1.18 CON-18   Language Translated To   (CWE)   01793
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  Identifies the language the consent material must be translated to.  Refer to User Defined table 0296  Primary Language which contains no suggested values.  This table may be populated with values similar to those that may be found in ISO table 639  Language Codes.
+</p>
+<A ID="Heading3734" >
+<H4>
+9.7.1.19 CON-19   Informational Material Supplied Indicator   (ID)   01794
+</H4>
+<p>
+Definition:  Identifies whether additional educational or reference material was provided to the subject as part of the consent process.  Refer to table HL7 Table 0136  Yes/No Indicator.
+</p>
+<A ID="Heading3735" >
+<H4>
+9.7.1.20 CON-20   Consent Bypass Reason   (CWE)   01795
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  Identifies why the subject''s consent was not sought.  This field must be populated when CON-11 - Consent Status is B  Bypassed.  Refer to User Defined table 0499  Consent Bypass Reason for suggested values.
+</p>
+<A ID="Heading3736" >
+<H4>
+9.7.1.21 CON-21   Consent Disclosure Level   (ID)   01796
+</H4>
+<p>
+Definition:  Identifies how much information was disclosed to the subject as part of the informed consent process.  Refer to table HL7 Table 0500  Consent Disclosure Level.
+</p>
+<A ID="Heading3737" >
+<H4>
+9.7.1.22 CON-22   Consent Non-Disclosure Reason   (CWE)   01797
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  Identifies why the subject did not receive full disclosure. . Refer to User-Defined Table 0501  Consent Non-Disclosure Reason for suggested values.
+</p>
+<A ID="Heading3738" >
+<H4>
+9.7.1.23 CON-23   Non-Subject Consenter Reason   (CWE)   01798
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  Identifies why consent was granted by a person other than the subject of the consent. Refer to User-defined Table 0502  Non-Subject Consenter Reason for suggested values.
+</p>
+<A ID="Heading3739" >
+<H4>
+9.7.1.24 CON-24   Consenter ID   (XPN)   01909
+</H4>
+<div class="component" >
+Components:  &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Called By (ST)&gt;
+</div>
+<div class="component" >
+Subcomponents for Family Name (FN):  &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;
+</div>
+<div class="component" >
+Subcomponents for Name Context (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition: Identification of the individual(s) who is (are) consenting.
+</p>
+<A ID="Heading3740" >
+<H4>
+9.7.1.25 CON-25   Relationship to Subject   (CWE)   01898
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition: Identification of the relationship of the consenter to the subject.  Receivers are required to inspect the Coding System component of the CWE data type to accurately interpret the meaning of the code. Senders transmitting messages to Receivers on earlier version of the standard may elect to negotiate business rules to ensure that expected data is not lost. HL7 does not assign positional meaning to user-defined codes.  Refer to User-Defined Table 0548  Signatory''s Relationship to Subject for suggested values.
+</p>
+<A ID="Heading3741" >
+<H3>
+9.7.2 OBX - Observation Segment Usage
+</H3>
+<p>
+The OBX segment is documented in its entirety in Chapter 7.  Its usage as it applies to Medical Records/ Information Management is documented here for clarity. 
+</p>
+<p>
+NOTE: The attribute table definition for the OBX Segment has been removed as of 2.8. The reader is directed to the Chapter 7..
+</p>
+<p>
+Specialized usage: Observation Identifier/Observation Sub-ID have been used as optional fields that are not required in unstructured text where the nature of the document has been identified in TXA-2-Document type, which is a required field, but is expressly allowed in the richer structured documentation.  An example includes cases where anatomic reports may have separate OBXs for gross examination, microscopic examination, clinical impression, and final diagnosis.  Another possible use includes imbedding non-textual observations within textual reports. 
+</p>
+<A ID="Heading3742" >
+<H3>
+9.7.3 TXA - Transcription Document Header Segment
+</H3>
+<p>
+The TXA segment contains information specific to a transcribed document but does not include the text of the document.  The message is created as a result of a document status change.  This information updates other healthcare systems and allows them to identify reports that are available in the transcription system. By maintaining the TXA message information in these systems, the information is available when constructing queries to the transcription system requesting the full document text.
+</p>
+<TABLE>
+<TR>
+<TD>
+SEQ</TD>
+<TD>
+LEN</TD>
+<TD>
+C.LEN</TD>
+<TD>
+DT</TD>
+<TD>
+OPT</TD>
+<TD>
+RP/#</TD>
+<TD>
+TBL#</TD>
+<TD>
+ITEM#</TD>
+<TD>
+ELEMENT NAME</TD>
+</TR>
+<TR>
+<TD>
+1</TD>
+<TD>
+1..4</TD>
+<TD>
+</TD>
+<TD>
+SI</TD>
+<TD>
+R</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+00914</TD>
+<TD>
+Set ID- TXA</TD>
+</TR>
+<TR>
+<TD>
+2</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CWE</TD>
+<TD>
+R</TD>
+<TD>
+</TD>
+<TD>
+0270</TD>
+<TD>
+00915</TD>
+<TD>
+Document Type </TD>
+</TR>
+<TR>
+<TD>
+3</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+ID</TD>
+<TD>
+C</TD>
+<TD>
+</TD>
+<TD>
+0191</TD>
+<TD>
+00916</TD>
+<TD>
+Document Content Presentation</TD>
+</TR>
+<TR>
+<TD>
+4</TD>
+<TD>
+ </TD>
+<TD>
+</TD>
+<TD>
+DTM</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+00917</TD>
+<TD>
+Activity Date/Time</TD>
+</TR>
+<TR>
+<TD>
+5</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+XCN</TD>
+<TD>
+C</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+00918</TD>
+<TD>
+Primary Activity Provider Code/Name</TD>
+</TR>
+<TR>
+<TD>
+6</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+DTM</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+00919</TD>
+<TD>
+Origination Date/Time</TD>
+</TR>
+<TR>
+<TD>
+7</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+DTM</TD>
+<TD>
+C</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+00920</TD>
+<TD>
+Transcription Date/Time</TD>
+</TR>
+<TR>
+<TD>
+ 8 </TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+DTM</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+00921</TD>
+<TD>
+Edit Date/Time</TD>
+</TR>
+<TR>
+<TD>
+9</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+XCN</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+00922</TD>
+<TD>
+Originator Code/Name</TD>
+</TR>
+<TR>
+<TD>
+10</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+XCN</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+00923</TD>
+<TD>
+Assigned Document Authenticator</TD>
+</TR>
+<TR>
+<TD>
+11</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+XCN</TD>
+<TD>
+C</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+00924</TD>
+<TD>
+Transcriptionist Code/Name</TD>
+</TR>
+<TR>
+<TD>
+12</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+EI</TD>
+<TD>
+R</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+00925</TD>
+<TD>
+Unique Document Number</TD>
+</TR>
+<TR>
+<TD>
+13</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+EI</TD>
+<TD>
+C</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+00926</TD>
+<TD>
+Parent Document Number</TD>
+</TR>
+<TR>
+<TD>
+14</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+EI</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+00216</TD>
+<TD>
+Placer Order Number</TD>
+</TR>
+<TR>
+<TD>
+15</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+EI</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+00217</TD>
+<TD>
+Filler Order Number</TD>
+</TR>
+<TR>
+<TD>
+16</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+ST</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+00927</TD>
+<TD>
+Unique Document File Name</TD>
+</TR>
+<TR>
+<TD>
+17</TD>
+<TD>
+2..2 </TD>
+<TD>
+</TD>
+<TD>
+ID</TD>
+<TD>
+R</TD>
+<TD>
+</TD>
+<TD>
+0271</TD>
+<TD>
+00928</TD>
+<TD>
+Document Completion Status</TD>
+</TR>
+<TR>
+<TD>
+18</TD>
+<TD>
+1..1</TD>
+<TD>
+</TD>
+<TD>
+ID</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0272</TD>
+<TD>
+00929</TD>
+<TD>
+Document Confidentiality Status</TD>
+</TR>
+<TR>
+<TD>
+19</TD>
+<TD>
+2..2</TD>
+<TD>
+</TD>
+<TD>
+ID</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0273</TD>
+<TD>
+00930</TD>
+<TD>
+Document Availability Status</TD>
+</TR>
+<TR>
+<TD>
+20</TD>
+<TD>
+2..2</TD>
+<TD>
+</TD>
+<TD>
+ID</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0275</TD>
+<TD>
+00932</TD>
+<TD>
+Document Storage Status</TD>
+</TR>
+<TR>
+<TD>
+21</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+ST</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+00933</TD>
+<TD>
+Document Change Reason</TD>
+</TR>
+<TR>
+<TD>
+22</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+PPN</TD>
+<TD>
+C</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+00934</TD>
+<TD>
+Authentication Person, Time Stamp (set) </TD>
+</TR>
+<TR>
+<TD>
+23</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+XCN</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+00935</TD>
+<TD>
+Distributed Copies (Code and Name of Recipient(s) )</TD>
+</TR>
+<TR>
+<TD>
+24</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CWE</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+0791</TD>
+<TD>
+02378</TD>
+<TD>
+Folder Assignment</TD>
+</TR>
+<TR>
+<TD>
+25</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+ST</TD>
+<TD>
+O</TD>
+<TD>
+Y</TD>
+<TD>
+</TD>
+<TD>
+03301</TD>
+<TD>
+Document Title</TD>
+</TR>
+<TR>
+<TD>
+26</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+DTM</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+03302</TD>
+<TD>
+Agreed Due Date/Time   </TD>
+</TR>
+<TR>
+<TD>
+27</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+HD</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+02413</TD>
+<TD>
+Creating Facility</TD>
+</TR>
+<TR>
+<TD>
+28</TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD>
+CWE</TD>
+<TD>
+O</TD>
+<TD>
+</TD>
+<TD>
+0792</TD>
+<TD>
+02414</TD>
+<TD>
+Creating Specialty</TD>
+</TR>
+</TABLE>
+<A ID="Heading3743" >
+<H4>
+9.7.3.0 TXA   Field Definitions
+</H4>
+<A ID="Heading3744" >
+<H4>
+9.7.3.1 TXA-1   Set ID - TXA   (SI)   00914
+</H4>
+<p>
+Definition:  This field contains a number that uniquely identifies this transaction for the purpose of adding, changing, or deleting the transaction.
+</p>
+<A ID="Heading3745" >
+<H4>
+9.7.3.2 TXA-2   Document Type   (CWE)   00915
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  This field identifies the type of document (as defined in the transcription system).  Refer to User-Defined Table 0270 - Document Type for suggested values.  The organization is free to add more entries.  Receivers are required to inspect the Coding System component of the CWE data type to accurately interpret the meaning of the code. Senders transmitting messages to Receivers on earlier version of the standard may elect to negotiate business rules to ensure that expected data is not lost. HL7 does not assign positional meaning to user-defined codes.
+</p>
+<A ID="Heading3746" >
+<H4>
+9.7.3.3 TXA-3   Document Content Presentation   (ID)   00916
+</H4>
+<p>
+Definition:  This is a conditional field which is required whenever the message contains content as presented in one or more OBX segments.  This field identifies the method by which this document was obtained or originated.  Refer to HL7 Table 0191  Type of Referenced Data for valid values.
+</p>
+<A ID="Heading3747" >
+<H4>
+9.7.3.4 TXA-4   Activity Date/Time   (DTM)   00917
+</H4>
+<p>
+Definition:  This field contains the date/time identified in the document as the date a procedure or activity was performed.  This date can identify date of surgery, non-invasive procedure, consultation, examination, etc.
+</p>
+<A ID="Heading3748" >
+<H4>
+9.7.3.5 TXA-5   Primary Activity Provider Code/Name   (XCN)   00918
+</H4>
+<div class="component" >
+Components:  &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;DEPRECATED-Source Table (CWE)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check  (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Family Name (FN):  &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;
+</div>
+<div class="component" >
+Subcomponents for Source Table (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Authority (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Facility (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Name Context (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Jurisdiction (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Agency or Department (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  This field contains the name of the person identified in the document as being responsible for performing the procedure or activity.  This field includes the code and name (if available) of the caregiver. This field is conditional based upon the presence of a value in TXA-4-Activity Date/Time.
+</p>
+<A ID="Heading3749" >
+<H4>
+9.7.3.6 TXA-6   Origination Date/Time   (DTM)   00919
+</H4>
+<p>
+Definition:  This field contains the date and time the document was created (i.e., dictated, recorded, etc.).
+</p>
+<A ID="Heading3750" >
+<H4>
+9.7.3.7 TXA-7   Transcription Date/Time   (DTM)   00920
+</H4>
+<p>
+Definition:  This field contains the date and time the input was actually transcribed.  This field is conditional based upon the presence of a value in TXA-17-Document Completion Status of anything except "dictated."
+</p>
+<A ID="Heading3751" >
+<H4>
+9.7.3.8 TXA-8   Edit Date/Time   (DTM)   00921
+</H4>
+<p>
+Definition:  This field contains the date and time the document was edited.
+</p>
+<A ID="Heading3752" >
+<H4>
+9.7.3.9 TXA-9   Originator Code/Name   (XCN)   00922
+</H4>
+<div class="component" >
+Components:  &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;DEPRECATED-Source Table (CWE)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check  (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Family Name (FN):  &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;
+</div>
+<div class="component" >
+Subcomponents for Source Table (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Authority (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Facility (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Name Context (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Jurisdiction (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Agency or Department (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  This field identifies the person who originated (i.e., dictated) the document.  The document originator may differ from the person responsible for authenticating the document.
+</p>
+<A ID="Heading3753" >
+<H4>
+9.7.3.10 TXA-10   Assigned Document Authenticator   (XCN)   00923
+</H4>
+<div class="component" >
+Components:  &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;DEPRECATED-Source Table (CWE)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check  (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Family Name (FN):  &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;
+</div>
+<div class="component" >
+Subcomponents for Source Table (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Authority (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Facility (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Name Context (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Jurisdiction (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Agency or Department (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  This field identifies the person(s) responsible for authenticating the document, who may differ from the originator.  Multiple persons may be responsible for authentication, especially in teaching facilities.  This field is allowed to repeat an undefined number of times.
+</p>
+<A ID="Heading3754" >
+<H4>
+9.7.3.11 TXA-11   Transcriptionist Code/Name   (XCN)   00924
+</H4>
+<div class="component" >
+Components:  &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;DEPRECATED-Source Table (CWE)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check  (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Family Name (FN):  &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;
+</div>
+<div class="component" >
+Subcomponents for Source Table (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Authority (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Facility (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Name Context (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Jurisdiction (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Agency or Department (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  This field identifies the person transcribing the document. This is a conditional value; it is required on all transcribed documents.
+</p>
+<p>
+TXA-11 - Condition: If TXA-11 is valued and the corresponding OBR segment is present in the message OBR-35 must be blank.  If OBR-35 is valued while TXA-11 is valued,  OBR-35 shall be ignored.  See message definitions including TXA for further guidanceon which ORC/OBR pairs to consider.
+</p>
+<A ID="Heading3755" >
+<H4>
+9.7.3.12 TXA-12   Unique Document Number   (EI)   00925
+</H4>
+<div class="component" >
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</div>
+<p>
+Definition:  This field contains a unique document identification number assigned by the sending system. This document number is used to assist the receiving system in matching future updates to the document, as well as to identify the document in a query.  When the vendor does not provide a unique document ID number, some type of document identifier should be entered here, or the Unique Document File name should be utilized.  See Chapter 2A, section 2.A.89, "XTN - extended telecommunication number."  Where the system does not customarily have a document filler number, this number could serve as that value, as well.
+</p>
+<A ID="Heading3756" >
+<H4>
+9.7.3.13 TXA-13   Parent Document Number   (EI)   00926
+</H4>
+<div class="component" >
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</div>
+<p>
+Definition:  This field contains a document number that identifies the parent document to which this document belongs.  The parent document number can be used to assist the receiving system in matching future updates to this document.  This is a conditional field that is always required on T05 (document addendum notification), T06 (document addendum notification and content), T09 (document replacement notification), and T10 (document replacement notification and content) events.  
+</p>
+<A ID="Heading3757" >
+<H4>
+9.7.3.14 TXA-14   Placer Order Number   (EI)   00216
+</H4>
+<div class="component" >
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</div>
+<p>
+Definition:  This field is the placer application''s order number.
+</p>
+<p>
+This is a composite field.  The first component is a string of characters that identifies an individual order (i.e., OBR).  It is assigned by the placer (ordering application).  It identifies an order uniquely among all orders from a particular ordering application.  The second through fourth components contain the (filler) assigning authority of the placing application.  The (filler) assigning authority is a string of characters that will be uniquely associated with an application.  A given institution or group of intercommunicating institutions should establish a unique list of applications that may be potential placers and fillers and assign unique entity identifiers.  The components are separated by component delimiters.
+</p>
+<p>
+TXA-14 - Condition: If corresponding ORC and/or OBR segments are present in the message and ORC-2 or OBR-2 is valued, this field must be blank.  If TXA-14 is valued while ORC-2 or OBR-2 is valued it shall be ignored.  See message definitions including TXA for further guidance on which ORC/OBR pairs to consider.
+</p>
+<A ID="Heading3758" >
+<H4>
+9.7.3.15 TXA-15   Filler Order Number   (EI)   00217
+</H4>
+<div class="component" >
+Components:  &lt;Entity Identifier (ST)&gt; ^ &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt;
+</div>
+<p>
+Definition:  This field is the order number associated with the filling application.  Where a transcription service or similar organization creates the document and uses an internally unique identifier, that number should be inserted in this field.  Its first component is a string of characters that identifies an order detail segment (i.e., OBR).  This string must uniquely identify the order (as specified in the order detail segment) from other orders in a particular filling application (i.e., transcription service).  This uniqueness must persist over time.  Where a number is reused over time, a date can be affixed to the non-unique number to make it unique.
+</p>
+<p>
+The second through fourth components contains the (filler) assigning authority.  The (filler) assigning authority is a string of characters that uniquely defines the application from other applications on the network.  The second through fourth components of the filler order number always identify the actual filler of an order.
+</p>
+<p>
+TXA-15 - Condition: If corresponding ORC and/or OBR segments are present in the message and ORC-3 or OBR-3 is valued, this field must be blank.  If TXA-14 is valued while ORC-3 or OBR-3 is valued it shall be ignored.  See message definitions including TXA for further guidanceon which ORC/OBR pairs to consider.
+</p>
+<p>
+ For further details, please see the definitions provided in Chapter 4, "Orders".
+</p>
+<A ID="Heading3759" >
+<H4>
+9.7.3.16 TXA-16   Unique Document File Name   (ST)   00927
+</H4>
+<p>
+Definition:  This field contains a unique name assigned to a document by the sending system.  The file name is used to assist the receiving system in matching future updates to the document.
+</p>
+<A ID="Heading3760" >
+<H4>
+9.7.3.17 TXA-17   Document Completion Status   (ID)   00928
+</H4>
+<p>
+Definition:  This field identifies the current completion state of the document.  This is a required, table-driven field.  Refer to HL7 Table 0271 - Document Completion Status for valid values.
+</p>
+<p>
+Figure 9-1. Document completion status state transition table
+</p>
+<TABLE>
+<TR>
+<TD>
+<p>
+Transition (Action)
+</p>
+</TD>
+<TD>
+<p>
+Old State
+</p>
+</TD>
+<TD>
+<p>
+New State
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T01 Original Notification
+</p>
+<p>
+T02 Original Notification and Content
+</p>
+</TD>
+<TD>
+<p>
+NA
+</p>
+</TD>
+<TD>
+<p>
+Dictated
+</p>
+<p>
+In Progress
+</p>
+<p>
+Incomplete
+</p>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T03 Status Change Notification
+</p>
+<p>
+T04 Status Change Notification and Content
+</p>
+</TD>
+<TD>
+<p>
+Dictated
+</p>
+</TD>
+<TD>
+<p>
+In Progress
+</p>
+<p>
+Incomplete
+</p>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+In Progress
+</p>
+</TD>
+<TD>
+<p>
+Incomplete
+</p>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Incomplete
+</p>
+</TD>
+<TD>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Pre-authenticated
+</p>
+</TD>
+<TD>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Authenticated
+</p>
+</TD>
+<TD>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Legally authenticated
+</p>
+</TD>
+<TD>
+<p>
+NA
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Documented
+</p>
+</TD>
+<TD>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T05 Addendum Notification
+</p>
+<p>
+T06 Addendum Notification and Content
+</p>
+</TD>
+<TD>
+<p>
+NA
+</p>
+</TD>
+<TD>
+<p>
+Dictated
+</p>
+<p>
+In Progress
+</p>
+<p>
+Incomplete
+</p>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T07 Edit Notification
+</p>
+<p>
+T08 Edit Notification and Content
+</p>
+</TD>
+<TD>
+<p>
+Dictated
+</p>
+</TD>
+<TD>
+<p>
+In Progress
+</p>
+<p>
+Incomplete
+</p>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+In Progress
+</p>
+</TD>
+<TD>
+<p>
+Incomplete
+</p>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Incomplete
+</p>
+</TD>
+<TD>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Pre-authenticated
+</p>
+</TD>
+<TD>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Authenticated
+</p>
+</TD>
+<TD>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Legally authenticated
+</p>
+</TD>
+<TD>
+<p>
+NA
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Documented
+</p>
+</TD>
+<TD>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T09 Replacement Notification
+</p>
+<p>
+T10 Replacement Notification and Content
+</p>
+</TD>
+<TD>
+<p>
+NA
+</p>
+</TD>
+<TD>
+<p>
+Dictated
+</p>
+<p>
+In Progress
+</p>
+<p>
+Incomplete
+</p>
+<p>
+Pre-authenticated
+</p>
+<p>
+Authenticated
+</p>
+<p>
+Legally authenticated
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T11 Cancel Notification
+</p>
+</TD>
+<TD>
+<p>
+DictatedIn ProgressIncompletePre-authenticatedand Availability status of "Unavailable"
+</p>
+</TD>
+<TD>
+<p>
+Canceled
+</p>
+</TD>
+</TR>
+</TABLE>
+<A ID="Heading3761" >
+<H4>
+9.7.3.18 TXA-18   Document Confidentiality Status   (ID)   00929
+</H4>
+<p>
+Definition:  This is an optional field which identifies the degree to which special confidentiality protection should be applied to this information.  The assignment of data elements to these categories is left to the discretion of the healthcare organization.  Refer to HL7 Table 0272 - Document Confidentiality Status for valid values.
+</p>
+<A ID="Heading3762" >
+<H4>
+9.7.3.19 TXA-19   Document Availability Status   (ID)   00930
+</H4>
+<p>
+Definition:  This is an optional field which identifies a document''s availability for use in patient care.  If an organization''s business rules allow a document to be used for patient care before it is authenticated, the value of this field should be set to "AV."  If a document has been made available for patient care, it cannot be changed or deleted.  If an erroneous document has been made available at any point in time and a replacement is not appropriate, then it may be marked as "Canceled" and removed, as in the case of a document being assigned to the wrong patient.  Additional information must be provided via an addendum, which is separately authenticated and date/time stamped.  If the content of a document whose status is "Available" must be revised, this is done by issuing a replacement, which is separately authenticated and date/time stamped.  Refer to HL7 Table 0273 - Document Availability Status for valid values.
+</p>
+<p>
+Figure 9-2.  Document availability status state transition table
+</p>
+<TABLE>
+<TR>
+<TD>
+<p>
+Transition (Action)
+</p>
+</TD>
+<TD>
+<p>
+Old State
+</p>
+</TD>
+<TD>
+<p>
+New State
+</p>
+</TD>
+<TD>
+<p>
+Notes
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T01 Original Notification
+</p>
+<p>
+T02 Original Notification and Content
+</p>
+</TD>
+<TD>
+<p>
+NA
+</p>
+</TD>
+<TD>
+<p>
+Unavailable
+</p>
+<p>
+Available
+</p>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T03 Status Change Notification
+</p>
+<p>
+T04 Status Change Notification and Content
+</p>
+</TD>
+<TD>
+<p>
+Unavailable
+</p>
+</TD>
+<TD>
+<p>
+Unavailable
+</p>
+<p>
+Available
+</p>
+<p>
+Obsolete
+</p>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Available
+</p>
+</TD>
+<TD>
+<p>
+Available
+</p>
+<p>
+Obsolete
+</p>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+<TD>
+<p>
+Obsolete
+</p>
+</TD>
+<TD>
+<p>
+NA
+</p>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T05 Addendum Notification
+</p>
+<p>
+T06 Addendum Notification and Content
+</p>
+</TD>
+<TD>
+<p>
+NA
+</p>
+</TD>
+<TD>
+<p>
+Unavailable
+</p>
+<p>
+Available
+</p>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T07 Edit Notification
+</p>
+<p>
+T08 Edit Notification and Content
+</p>
+</TD>
+<TD>
+<p>
+Unavailable
+</p>
+</TD>
+<TD>
+<p>
+Unavailable
+</p>
+<p>
+Available
+</p>
+</TD>
+<TD>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T09 Replacement Notification
+</p>
+<p>
+T10 Replacement Notification and Content
+</p>
+</TD>
+<TD>
+<p>
+NA
+</p>
+</TD>
+<TD>
+<p>
+Unavailable
+</p>
+<p>
+Available
+</p>
+</TD>
+<TD>
+<p>
+Set parent document to "obsolete"
+</p>
+</TD>
+</TR>
+<TR>
+<TD>
+<p>
+T11 Cancel
+</p>
+</TD>
+<TD>
+<p>
+Unavailable
+</p>
+</TD>
+<TD>
+<p>
+Delete
+</p>
+</TD>
+<TD>
+</TD>
+</TR>
+</TABLE>
+<p>
+Note:  NA means not applicable.
+</p>
+<A ID="Heading3763" >
+<H4>
+9.7.3.20 TXA-20   Document Storage Status   (ID)   00932
+</H4>
+<p>
+Definition:  This optional field identifies the storage status of the document.  Refer to HL7 Table 0275 - Document Storage Status for valid values.
+</p>
+<A ID="Heading3764" >
+<H4>
+9.7.3.21 TXA-21   Document Change Reason   (ST)   00933
+</H4>
+<p>
+Definition:  This free text field (limited to 30 characters) contains the reason for document status change.
+</p>
+<A ID="Heading3765" >
+<H4>
+9.7.3.22 TXA-22   Authentication Person, Time Stamp (set)    (PPN)   00934
+</H4>
+<div class="component" >
+Components:  &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;DEPRECATED-Source Table (CWE)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme  (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Date/Time Action Performed (DTM)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check  (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Family Name (FN):  &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;
+</div>
+<div class="component" >
+Subcomponents for Source Table (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Authority (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Facility (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Name Context (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Jurisdiction (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Agency or Department (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition:  This field contains a set of components describing by whom and when authentication was performed (either manually or electronically).  The Date/Time Action Performed component describes the date/time of the authentication (Authentication Time Stamp).  The remaining components identify the person performing the authentication (Authentication Person).  If either of the Authenticating Person or the Authentication Time Stamp is valued as non-null, then both must be valued as non-null.
+</p>
+<p>
+TXA-22 - Condition: If TXA-22 is valued and the corresponding OBR segment is present in the message OBR-32 must be blank.  If OBR-32 is valued while TXA-22 is valued,  OBR-32 shall be ignored.  See message definitions including TXA for further guidanceon which ORC/OBR pairs to consider.
+</p>
+<A ID="Heading3766" >
+<H4>
+9.7.3.23 TXA-23   Distributed Copies (Code and Name of Recipients(s))    (XCN)   00935
+</H4>
+<div class="component" >
+Components:  &lt;Person Identifier (ST)&gt; ^ &lt;Family Name (FN)&gt; ^ &lt;Given Name (ST)&gt; ^ &lt;Second and Further Given Names or Initials Thereof (ST)&gt; ^ &lt;Suffix (e.g., JR or III) (ST)&gt; ^ &lt;Prefix (e.g., DR) (ST)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;DEPRECATED-Source Table (CWE)&gt; ^ &lt;Assigning Authority (HD)&gt; ^ &lt;Name Type Code (ID)&gt; ^ &lt;Identifier Check Digit (ST)&gt; ^ &lt;Check Digit Scheme (ID)&gt; ^ &lt;Identifier Type Code (ID)&gt; ^ &lt;Assigning Facility (HD)&gt; ^ &lt;Name Representation Code (ID)&gt; ^ &lt;Name Context (CWE)&gt; ^ &lt;WITHDRAWN Constituent&gt; ^ &lt;Name Assembly Order (ID)&gt; ^ &lt;Effective Date (DTM)&gt; ^ &lt;Expiration Date (DTM)&gt; ^ &lt;Professional Suffix (ST)&gt; ^ &lt;Assigning Jurisdiction (CWE)&gt; ^ &lt;Assigning Agency or Department (CWE)&gt; ^ &lt;Security Check  (ST)&gt; ^ &lt;Security Check Scheme (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Family Name (FN):  &lt;Surname (ST)&gt; &amp; &lt;Own Surname Prefix (ST)&gt; &amp; &lt;Own Surname (ST)&gt; &amp; &lt;Surname Prefix from Partner/Spouse (ST)&gt; &amp; &lt;Surname from Partner/Spouse (ST)&gt;
+</div>
+<div class="component" >
+Subcomponents for Source Table (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Authority (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Facility (HD):  &lt;Namespace ID (IS)&gt; &amp; &lt;Universal ID (ST)&gt; &amp; &lt;Universal ID Type (ID)&gt;
+</div>
+<div class="component" >
+Subcomponents for Name Context (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Jurisdiction (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<div class="component" >
+Subcomponents for Assigning Agency or Department (CWE):  &lt;Identifier (ST)&gt; &amp; &lt;Text (ST)&gt; &amp; &lt;Name of Coding System (ID)&gt; &amp; &lt;Alternate Identifier (ST)&gt; &amp; &lt;Alternate Text (ST)&gt; &amp; &lt;Name of Alternate Coding System (ID)&gt; &amp; &lt;Coding System Version ID (ST)&gt; &amp; &lt;Alternate Coding System Version ID (ST)&gt; &amp; &lt;Original Text (ST)&gt; &amp; &lt;Second Alternate Identifier (ST)&gt; &amp; &lt;Second Alternate Text (ST)&gt; &amp; &lt;Name of Second Alternate Coding System (ID)&gt; &amp; &lt;Second Alternate Coding System Version ID (ST)&gt; &amp; &lt;Coding System OID (ST)&gt; &amp; &lt;Value Set OID (ST)&gt; &amp; &lt;Value Set Version ID (DTM)&gt; &amp; &lt;Alternate Coding System OID (ST)&gt; &amp; &lt;Alternate Value Set OID (ST)&gt; &amp; &lt;Alternate Value Set Version ID (DTM)&gt; &amp; &lt;Second Alternate Coding System OID (ST)&gt; &amp; &lt;Second Alternate Value Set OID (ST)&gt; &amp; &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition: This field identifies the persons who received a copy of this document.  
+</p>
+<A ID="Heading3767" >
+<H4>
+9.7.3.24 TXA-24 Folder Assignment  (CWE)   02378
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition: This field is used to assign documents to folders.  These folders are not nested; a document may either be part of none or several folders. In practice this can be used to separate the documents into domain specific types (e.g., cardiology reports, radiology reports), organizational types (e.g., administrational document, billing document), body region types (e.g., chest CT, leg CT), or something else. Furthermore, this information can be combined. This usually depends on the system involved and therefore it must be up to the user to define it. The systems can use the information to define workflows or manage access to the document.  Receivers are required to inspect the Coding System component of the CWE data type to accurately interpret the meaning of the code. Senders transmitting messages to Receivers on earlier version of the standard may elect to negotiate business rules to ensure that expected data is not lost. HL7 does not assign positional meaning to user-defined codes. Refer to Table 0791 - Folder Assignment in Chapter 2C for valid values.
+</p>
+<A ID="Heading3768" >
+<H4>
+9.7.3.25 TXA-25 Document Title  (ST)   03301
+</H4>
+<p>
+Definition: This field supports the identification of the document title. When communicating the meta information without the document contents you may submit the document title as well.  
+</p>
+<A ID="Heading3769" >
+<H4>
+9.7.3.26 TXA-26   Agreed Due Date/Time   (DTM)  03302
+</H4>
+<p>
+Definition:  This field contains the date and time the document is or will be due back to the original author or dictator from the transcriptionist.
+</p>
+<A ID="Heading3770" >
+<H4>
+9.7.3.27 TXA-27 Creating Facility (HD) 02413
+</H4>
+<div class="component" >
+Components: &lt;Namespace ID (IS)&gt; ^ &lt;Universal ID (ST)&gt; ^ &lt;Universal ID Type (ID)&gt; 
+</div>
+<p>
+Definition: This field identifies the facility in which this document has been created. 
+</p>
+<A ID="Heading3771" >
+<H4>
+9.7.3.28 TXA-28 Creating Specialty (CWE) 02414
+</H4>
+<div class="component" >
+Components:  &lt;Identifier (ST)&gt; ^ &lt;Text (ST)&gt; ^ &lt;Name of Coding System (ID)&gt; ^ &lt;Alternate Identifier (ST)&gt; ^ &lt;Alternate Text (ST)&gt; ^ &lt;Name of Alternate Coding System (ID)&gt; ^ &lt;Coding System Version ID (ST)&gt; ^ &lt;Alternate Coding System Version ID (ST)&gt; ^ &lt;Original Text (ST)&gt; ^ &lt;Second Alternate Identifier (ST)&gt; ^ &lt;Second Alternate Text (ST)&gt; ^ &lt;Name of Second Alternate Coding System (ID)&gt; ^ &lt;Second Alternate Coding System Version ID (ST)&gt; ^ &lt;Coding System OID (ST)&gt; ^ &lt;Value Set OID (ST)&gt; ^ &lt;Value Set Version ID (DTM)&gt; ^ &lt;Alternate Coding System OID (ST)&gt; ^ &lt;Alternate Value Set OID (ST)&gt; ^ &lt;Alternate Value Set Version ID (DTM)&gt; ^ &lt;Second Alternate Coding System OID (ST)&gt; ^ &lt;Second Alternate Value Set OID (ST)&gt; ^ &lt;Second Alternate Value Set Version ID (DTM)&gt;
+</div>
+<p>
+Definition: This field identifies the specialty of the provider which created this document. Refer to Table 0792 - Creating Specialty in Chapter 2C for valid values.
+</p>
+<p>
+Note:  There are on suggested values for speciality. 
+</p>
+<A ID="Heading3772" >
+<H2>
+9.8 EXAMPLE MESSAGES
+</H2>
+<A ID="Heading3773" >
+<H3>
+9.8.1 History and Physical Exam:
+</H3>
+<p>
+The following is an example of an original transmission of a history and physical examination which has been authenticated prior to this message being initiated:
+</p>
+<p>
+MSH|...&lt;cr&gt;
+</p>
+<p>
+EVN|T02|19960215154405||04|097220^Seven^Henry^L^ ^Dr^MD^| &lt;cr&gt;
+</p>
+<p>
+PID|...&lt;cr&gt;
+</p>
+<p>
+PR1|...&lt;cr&gt;
+</p>
+<p>
+TXA|0001|HP^history &amp; physical|TX^text|19960213213000|099919^Everyman^Adam^A^ ^Mr^MS^|19960213153000|19960215134500||099919^Everyman^Adam^A^III^Mr^MS^|097220^Seven^Henry^L^ ^Dr^MD^|01234567^Contact^Carrie^C^Ms|1996021500001^transA|||example.doc|LA|UC|AV||AC|||||097220^Seven^Henry^L^ ^Dr^MD^| &lt;cr&gt;
+</p>
+<p>
+OBX|1|CE|2000.40^CHIEF COMPLAINT|| ... &lt;cr&gt;
+</p>
+<p>
+OBX|2|ST|2000.01^SOURCE||PATIENT &lt;cr&gt;
+</p>
+<p>
+OBX|3|TX|2000.02^PRESENT ILLNESS||SUDDEN ONSET OF CHEST PAIN. 2 DAYS, PTA ASSOCIATED WITH NAUSEA, VOMITING &amp; SOB.  NO RELIEF WITH ANTACIDS OR NTG. NO OTHER SX. NOT PREVIOUSLY ILL.&lt;cr&gt;
+</p>
+<p>
+ .
+</p>
+<p>
+ .
+</p>
+<p>
+and so on.
+</p>
+<A ID="Heading3774" >
+<H3>
+9.8.2 Document Folder 
+</H3>
+<p>
+Hospital A creates a psychiatric report. It sends a notification to hospital B.
+</p>
+<p>
+MSH|^~\&amp;|SENDAPP|SENDFAC|RECAPP|RECFAC|200411261008||MDM^T01^MDM_T01|167865|P|2.9
+</p>
+<p>
+EVN|T01|200811261007|200811261007|60012|10107
+</p>
+<p>
+PID|1|1011684|1011684||Jurgensen^Antoine^^||197710220000|F|||Hubertweg^^Stuttgart^^70173^DE|||||M|CAT||4390271065||||Karlsruhe|N||
+</p>
+<p>
+PV1|1|I|STATION^^^3200^^13372100|A^^301||||||||||||N|||0460005110||K|||||||||||||||||||||||200811160916|||||
+</p>
+<p>
+TXA|1|Psychiatric Disabilities Report|PDF|||||20081126100756 ||||570531^SENDFAC||||1081007_2874942_570531_26100756.PDF|DO|||||||PSY^psychiatric document^^1.2.4481222~WEB^web document^^1.2.4481223 
+</p>
+<p>
+Hospital B receives the document. Hospital A and B have negotiated the folder definitions in the form of a catalog (the exchange is out of scope of this document). Therefore, Hospital B knows the document should only be accessible to psychiatrists and should be available in the patient''s personal web access. This is only an example; document folder interpretation is up to the systems and out of scope of this proposal. 
+</p>
+<A ID="Heading3775" >
+<H2>
+9.9 QUERY
+</H2>
+<p>
+A query may be used to retrieve a list of documents or a specific document.  See Chapter 5, "Queries", for details of queries.
+</p>
+<A ID="Heading3776" >
+<H3>
+9.9.1 QRY/DOC - Document Query (Event T12)
+</H3>
+<p>
+Withdrawn in v2.7 and later; refer to Chapter 5, "Queries", section 5.4 instead.
+</p>
+<A ID="Heading3777" >
+<H2>
+9.10 OUTSTANDING ISSUES
+</H2>
+<p>
+This version of the standard clarifies the use of MDM message as opposed to ORU messages.  Refer to Chapter 7, "Observations".
+</p>
+</BODY>
+</HTML>

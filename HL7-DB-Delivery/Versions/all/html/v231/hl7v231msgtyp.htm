@@ -1,0 +1,797 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.3.1</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v231.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v231idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std231/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.3.1
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="40" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.3.1</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v231event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v231segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v231msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v231msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v231datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v231tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v231typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2 align=center>
+List of all Message Types
+</H2>
+<TABLE class=info>
+<TR class=info>
+<TH class=info>Msg. Type</TH>
+<TH class=info>Description</TH>
+<TH class=info>Chapter</TH>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypACK.htm">ACK</A></TD>
+<TD class=info>
+General acknowledgment message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypADR.htm">ADR</A></TD>
+<TD class=info>
+ADT response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypADT.htm">ADT</A></TD>
+<TD class=info>
+ADT message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypBAR.htm">BAR</A></TD>
+<TD class=info>
+Add/change billing account
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypCRM.htm">CRM</A></TD>
+<TD class=info>
+Clinical study registration message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypCSU.htm">CSU</A></TD>
+<TD class=info>
+Unsolicited study data message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypDFT.htm">DFT</A></TD>
+<TD class=info>
+Detail financial transactions
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypDOC.htm">DOC</A></TD>
+<TD class=info>
+Document response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypDSR.htm">DSR</A></TD>
+<TD class=info>
+Display response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypEDR.htm">EDR</A></TD>
+<TD class=info>
+Enhanced display response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypEQQ.htm">EQQ</A></TD>
+<TD class=info>
+Embedded query language query
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypERP.htm">ERP</A></TD>
+<TD class=info>
+Event replay response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypMCF.htm">MCF</A></TD>
+<TD class=info>
+Delayed Acknowledgment (Retained for backward compatibility only)
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypMDM.htm">MDM</A></TD>
+<TD class=info>
+Medical document management
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypMFD.htm">MFD</A></TD>
+<TD class=info>
+Master files delayed application acknowledgment
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypMFK.htm">MFK</A></TD>
+<TD class=info>
+Master files application acknowledgment
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypMFN.htm">MFN</A></TD>
+<TD class=info>
+Master files notification
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypMFQ.htm">MFQ</A></TD>
+<TD class=info>
+Master files query
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypMFR.htm">MFR</A></TD>
+<TD class=info>
+Master files response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypNMD.htm">NMD</A></TD>
+<TD class=info>
+Application management data message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypNMQ.htm">NMQ</A></TD>
+<TD class=info>
+Application management query message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypNMR.htm">NMR</A></TD>
+<TD class=info>
+Application management response message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypNUL.htm">NUL</A></TD>
+<TD class=info>
+No message required (for referential integrity)
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypORF.htm">ORF</A></TD>
+<TD class=info>
+Query for results of observation
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypORM.htm">ORM</A></TD>
+<TD class=info>
+Pharmacy/treatment order message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypORR.htm">ORR</A></TD>
+<TD class=info>
+General order response message response to any ORM
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypORU.htm">ORU</A></TD>
+<TD class=info>
+Unsolicited transmission of an observation message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypOSQ.htm">OSQ</A></TD>
+<TD class=info>
+Query response for order status
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypOSR.htm">OSR</A></TD>
+<TD class=info>
+Query response for order status
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypPEX.htm">PEX</A></TD>
+<TD class=info>
+Product experience message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypPGL.htm">PGL</A></TD>
+<TD class=info>
+Patient goal message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypPIN.htm">PIN</A></TD>
+<TD class=info>
+Patient insurance information
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypPPG.htm">PPG</A></TD>
+<TD class=info>
+Patient pathway message (goal-oriented)
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypPPP.htm">PPP</A></TD>
+<TD class=info>
+Patient pathway message (problem-oriented)
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypPPR.htm">PPR</A></TD>
+<TD class=info>
+Patient problem message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypPPT.htm">PPT</A></TD>
+<TD class=info>
+Patient pathway goal-oriented response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypPPV.htm">PPV</A></TD>
+<TD class=info>
+Patient goal response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypPRR.htm">PRR</A></TD>
+<TD class=info>
+Patient problem response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypPTR.htm">PTR</A></TD>
+<TD class=info>
+Patient pathway problem-oriented response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypQCK.htm">QCK</A></TD>
+<TD class=info>
+Deferred query
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypQRY.htm">QRY</A></TD>
+<TD class=info>
+Query, original mode
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRAR.htm">RAR</A></TD>
+<TD class=info>
+Pharmacy/treatment administration information
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRAS.htm">RAS</A></TD>
+<TD class=info>
+Pharmacy/treatment administration message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRCI.htm">RCI</A></TD>
+<TD class=info>
+Return clinical information
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRCL.htm">RCL</A></TD>
+<TD class=info>
+Return clinical list
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRDE.htm">RDE</A></TD>
+<TD class=info>
+Pharmacy/treatment encoded order message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRDR.htm">RDR</A></TD>
+<TD class=info>
+Pharmacy/treatment dispense information
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRDS.htm">RDS</A></TD>
+<TD class=info>
+Pharmacy/treatment dispense message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypREF.htm">REF</A></TD>
+<TD class=info>
+Patient referral
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRER.htm">RER</A></TD>
+<TD class=info>
+Pharmacy/treatment encoded order information
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRGR.htm">RGR</A></TD>
+<TD class=info>
+Pharmacy/treatment dose information
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRGV.htm">RGV</A></TD>
+<TD class=info>
+Pharmacy/treatment give message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypROR.htm">ROR</A></TD>
+<TD class=info>
+Pharmacy/treatment order response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRPA.htm">RPA</A></TD>
+<TD class=info>
+Return patient authorization
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRPI.htm">RPI</A></TD>
+<TD class=info>
+Return patient information
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRPL.htm">RPL</A></TD>
+<TD class=info>
+Return patient display list
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRPR.htm">RPR</A></TD>
+<TD class=info>
+Return patient list
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRQA.htm">RQA</A></TD>
+<TD class=info>
+Request patient authorization
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRQC.htm">RQC</A></TD>
+<TD class=info>
+Request clinical information
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRQI.htm">RQI</A></TD>
+<TD class=info>
+Request patient information
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRQP.htm">RQP</A></TD>
+<TD class=info>
+Request patient demographics
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRQQ.htm">RQQ</A></TD>
+<TD class=info>
+Event replay query
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRRA.htm">RRA</A></TD>
+<TD class=info>
+Pharmacy/treatment administration acknowledgment message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRRD.htm">RRD</A></TD>
+<TD class=info>
+Pharmacy/treatment dispense acknowledgment message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRRE.htm">RRE</A></TD>
+<TD class=info>
+Pharmacy/treatment encoded order acknowledgment message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypRRG.htm">RRG</A></TD>
+<TD class=info>
+Pharmacy/treatment give acknowledgment message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypRRI.htm">RRI</A></TD>
+<TD class=info>
+Return referral information
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypSIU.htm">SIU</A></TD>
+<TD class=info>
+Schedule information unsolicited
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypSPQ.htm">SPQ</A></TD>
+<TD class=info>
+Stored procedure request
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypSQM.htm">SQM</A></TD>
+<TD class=info>
+Schedule query message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypSQR.htm">SQR</A></TD>
+<TD class=info>
+Schedule query response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypSRM.htm">SRM</A></TD>
+<TD class=info>
+Schedule request message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypSRR.htm">SRR</A></TD>
+<TD class=info>
+Scheduled request response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypSUR.htm">SUR</A></TD>
+<TD class=info>
+Summary product experience report
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypTBR.htm">TBR</A></TD>
+<TD class=info>
+Tabular data response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypUDM.htm">UDM</A></TD>
+<TD class=info>
+Unsolicited display update message
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypVQQ.htm">VQQ</A></TD>
+<TD class=info>
+Virtual table query
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypVXQ.htm">VXQ</A></TD>
+<TD class=info>
+Query for vaccination record
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypVXR.htm">VXR</A></TD>
+<TD class=info>
+Vaccination record response
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-even>
+<TD class=info><A HREF = "hl7v231msgtypVXU.htm">VXU</A></TD>
+<TD class=info>
+Unsolicited vaccination record update
+</TD>
+<TD class=info></TD>
+</TR>
+<TR class=msgtype-odd>
+<TD class=info><A HREF = "hl7v231msgtypVXX.htm">VXX</A></TD>
+<TD class=info>
+Response for vaccination query with multiple PID matches
+</TD>
+<TD class=info></TD>
+</TR>
+</TABLE>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>
