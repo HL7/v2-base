@@ -1,0 +1,356 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment PRA:
+Practitioner Detail
+(Arztinformationen)
+</H2>
+<TABLE class=segm>
+<TR class=segm-odd>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>Primary Key Value - PRA</TD>
+<TD class=segm>Prim&auml;rschl&uuml;ssel</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0681.htm">0681</A></TD>
+<TD class=segm>C</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00685">00685</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4687">15.4.6.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>Practitioner Group</TD>
+<TD class=segm>Gruppenzugeh&ouml;rigkeit (&Auml;rzte / Pflegepersonal)</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0358.htm">0358</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00686">00686</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4688">15.4.6.2</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>Practitioner Category</TD>
+<TD class=segm>berufliche Qualifikation</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0186.htm">0186</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00687">00687</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4689">15.4.6.3</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>Provider Billing</TD>
+<TD class=segm>Art der Privatliquidation</TD>
+<TD class=segm>1..1</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0187.htm">0187</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00688">00688</A></TD>
+<TD class=segm><A HREF = "hl7v29typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4690">15.4.6.4</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm>Specialty</TD>
+<TD class=segm>Spezialisierung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0337.htm">0337</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00689">00689</A></TD>
+<TD class=segm><A HREF = "hl7v29typSPD.htm#SPD">SPD</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4691">15.4.6.5</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm>Practitioner ID Numbers</TD>
+<TD class=segm>Arztnummer</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0338.htm">0338</A></TD>
+<TD class=segm>B</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00690">00690</A></TD>
+<TD class=segm><A HREF = "hl7v29typPLN.htm#PLN">PLN</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4692">15.4.6.6</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm>Privileges</TD>
+<TD class=segm>Berechtigungen</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00691">00691</A></TD>
+<TD class=segm><A HREF = "hl7v29typPIP.htm#PIP">PIP</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4693">15.4.6.7</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm>Date Entered Practice</TD>
+<TD class=segm>Datum der T&auml;tigkeitsaufnahme</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01296">01296</A></TD>
+<TD class=segm><A HREF = "hl7v29typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4694">15.4.6.8</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm>Institution </TD>
+<TD class=segm>Institution</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0537.htm">0537</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01613">01613</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4695">15.4.6.9</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm>Date Left Practice</TD>
+<TD class=segm>Datum der Beendigung der Tatigkeit</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01348">01348</A></TD>
+<TD class=segm><A HREF = "hl7v29typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4696">15.4.6.10</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>11</TD>
+<TD class=segm>Government Reimbursement Billing Eligibility</TD>
+<TD class=segm>Erm&auml;chtigende/zulassende Institution</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0401.htm">0401</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01388">01388</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4697">15.4.6.11</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>12</TD>
+<TD class=segm>Set ID - PRA</TD>
+<TD class=segm>PRA-Segmentnummer</TD>
+<TD class=segm>1..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>C</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01616">01616</A></TD>
+<TD class=segm><A HREF = "hl7v29typSI.htm#SI">SI</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4698">15.4.6.12</A></TD>
+</TR>
+</TABLE>
+<P>
+<P>
+<H3>Used within following Message Structures:</H3>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M02">MFN_M02</A> Master File Notification for Staff/Practitioner (<A HREF = "std29/ch08.html#Heading3296">8.7.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B01">PMU_B01</A> Personnel Record Message (<A HREF = "std29/ch15.html#Heading4603">15.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B04">PMU_B04</A> Terminate Practicing Person Message (<A HREF = "std29/ch15.html#Heading4606">15.3.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B07">PMU_B07</A> Grant Certificate Message (<A HREF = "std29/ch15.html#Heading4610">15.3.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B08">PMU_B08</A> Revoke Certificate Message (<A HREF = "std29/ch15.html#Heading4611">15.3.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_K25">RSP_K25</A> Personnel Information Response Message (<A HREF = "std29/ch15.html#Heading4609">15.3.7</A>)</dd>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

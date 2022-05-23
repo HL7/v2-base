@@ -1,0 +1,3188 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.7.1</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: 9 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std271/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.7.1
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="40" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v271/hl7v271event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.7.1</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v271event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2 align=center>
+List of all Event-Definitions
+</H2>
+<TABLE class=info>
+<TR>
+<TH class=info>Event</TH>
+<TH class=info>Description</TH>
+<TH class=info>German Interpretation</TH>
+<TH class=info>Chapter</TH>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA01.htm">A01</A></TD>
+<TD>
+ADT/ACK - Admit/visit notification
+</TD>
+<TD>
+station&auml;re Aufnahme
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading5">3.3.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA02.htm">A02</A></TD>
+<TD>
+ADT/ACK - Transfer a patient
+</TD>
+<TD>
+Verlegung
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading6">3.3.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA03.htm">A03</A></TD>
+<TD>
+ADT/ACK -  Discharge/end visit
+</TD>
+<TD>
+Entlassung
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading7">3.3.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA04.htm">A04</A></TD>
+<TD>
+ADT/ACK -  Register a patient
+</TD>
+<TD>
+Besuchsmeldung (nicht-station&auml;r)
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading8">3.3.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA05.htm">A05</A></TD>
+<TD>
+ADT/ACK -  Pre-admit a patient
+</TD>
+<TD>
+Voraufnahme eines Patienten (z.B. vorstation&auml;r)
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading9">3.3.5</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA06.htm">A06</A></TD>
+<TD>
+ADT/ACK -  Change an outpatient to an inpatient
+</TD>
+<TD>
+&Auml;nderung von ambulant in station&auml;r
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading10">3.3.6</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA07.htm">A07</A></TD>
+<TD>
+ADT/ACK -  Change an inpatient to an outpatient
+</TD>
+<TD>
+&Auml;nderung von station&auml;r in ambulant
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading11">3.3.7</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA08.htm">A08</A></TD>
+<TD>
+ADT/ACK -  Update patient information
+</TD>
+<TD>
+&Auml;nderung von Patienteninformationen
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading12">3.3.8</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA09.htm">A09</A></TD>
+<TD>
+ADT/ACK -  Patient departing - tracking
+</TD>
+<TD>
+Patient verl&auml;ﬂt Einrichtung
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading13">3.3.9</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA10.htm">A10</A></TD>
+<TD>
+ADT/ACK -  Patient arriving - tracking
+</TD>
+<TD>
+Patient erreicht Einrichtung
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading14">3.3.10</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA11.htm">A11</A></TD>
+<TD>
+ADT/ACK -  Cancel admit/visit notification
+</TD>
+<TD>
+Stornierung f&uuml;r A01 und A04
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading15">3.3.11</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA12.htm">A12</A></TD>
+<TD>
+ADT/ACK -  Cancel transfer
+</TD>
+<TD>
+Stornierung f&uuml;r A02
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading16">3.3.12</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA13.htm">A13</A></TD>
+<TD>
+ADT/ACK -  Cancel discharge/end visit
+</TD>
+<TD>
+Stornierung f&uuml;r A03
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading17">3.3.13</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA14.htm">A14</A></TD>
+<TD>
+ADT/ACK -  Pending admit
+</TD>
+<TD>
+Geplante Aufnahme
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading18">3.3.14</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA15.htm">A15</A></TD>
+<TD>
+ADT/ACK -  Pending transfer
+</TD>
+<TD>
+Geplante Verlegung
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading19">3.3.15</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA16.htm">A16</A></TD>
+<TD>
+ADT/ACK -  Pending discharge
+</TD>
+<TD>
+Geplante Entlassung
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading20">3.3.16</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA17.htm">A17</A></TD>
+<TD>
+ADT/ACK -  Swap patients
+</TD>
+<TD>
+Bettentausch zweier Patienten
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading21">3.3.17</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA20.htm">A20</A></TD>
+<TD>
+ADT/ACK -  Bed status update
+</TD>
+<TD>
+&Auml;nderung des Bettenstatus
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading24">3.3.20</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA21.htm">A21</A></TD>
+<TD>
+ADT/ACK -  Patient goes on a "leave of absence"
+</TD>
+<TD>
+Beginn einer Patientenabwesenheit
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading25">3.3.21</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA22.htm">A22</A></TD>
+<TD>
+ADT/ACK -  Patient returns from a "leave of absence"
+</TD>
+<TD>
+Ende einer Patientenabwesenheit
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading26">3.3.22</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA23.htm">A23</A></TD>
+<TD>
+ADT/ACK -  Delete a patient record
+</TD>
+<TD>
+L&ouml;schen eines Falldatensatzes
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading27">3.3.23</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA24.htm">A24</A></TD>
+<TD>
+ADT/ACK -  Link patient information
+</TD>
+<TD>
+Verkn&uuml;pfen von Patientendaten
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading28">3.3.24</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA25.htm">A25</A></TD>
+<TD>
+ADT/ACK -  Cancel pending discharge
+</TD>
+<TD>
+Stornierung einer eingeleiteten Entlassung
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading29">3.3.25</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA26.htm">A26</A></TD>
+<TD>
+ADT/ACK -  Cancel pending transfer
+</TD>
+<TD>
+Stornierung einer eingeleiteten Verlegung
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading30">3.3.26</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA27.htm">A27</A></TD>
+<TD>
+ADT/ACK -  Cancel pending admit
+</TD>
+<TD>
+Stornierung einer eingeleiteten Aufnahme
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading31">3.3.27</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA28.htm">A28</A></TD>
+<TD>
+ADT/ACK -  Add person information
+</TD>
+<TD>
+Personendaten hinzuf&uuml;gen
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading32">3.3.28</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA29.htm">A29</A></TD>
+<TD>
+ADT/ACK -  Delete person information
+</TD>
+<TD>
+L&ouml;schung von personenbezogenen Daten
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading33">3.3.29</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA31.htm">A31</A></TD>
+<TD>
+ADT/ACK -  Update person information
+</TD>
+<TD>
+&Auml;ndern personenbezogener Daten
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading35">3.3.31</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA32.htm">A32</A></TD>
+<TD>
+ADT/ACK -  Cancel patient arriving - tracking
+</TD>
+<TD>
+Stornierung zu A10
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading36">3.3.32</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA33.htm">A33</A></TD>
+<TD>
+ADT/ACK -  Cancel patient departing - tracking
+</TD>
+<TD>
+Stornierung zu A09
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading37">3.3.33</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA37.htm">A37</A></TD>
+<TD>
+ADT/ACK -  Unlink patient information
+</TD>
+<TD>
+Aufl&ouml;sung einer Verkn&uuml;pfung von Patientendaten
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading41">3.3.37</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA38.htm">A38</A></TD>
+<TD>
+ADT/ACK - Cancel pre-admit
+</TD>
+<TD>
+Stornierung zu A05
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading42">3.3.38</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA40.htm">A40</A></TD>
+<TD>
+ADT/ACK - Merge patient - patient identifier list
+</TD>
+<TD>
+Zusammenf&uuml;hrung v. Pat-Information &uuml;ber patient ID-Liste
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading44">3.3.40</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA41.htm">A41</A></TD>
+<TD>
+ADT/ACK - Merge account - patient account number
+</TD>
+<TD>
+Zusammenf&uuml;hrung von Konten &uuml;ber Kontonummer
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading45">3.3.41</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA42.htm">A42</A></TD>
+<TD>
+ADT/ACK - Merge visit - visit number
+</TD>
+<TD>
+Zusammenf&uuml;hrung v.Fall-Information &uuml;ber Fallnummer
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading46">3.3.42</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA43.htm">A43</A></TD>
+<TD>
+ADT/ACK - Move patient information - patient identifier list
+</TD>
+<TD>
+Korrekt.einer falschen Zuordnung bzgl. PID-Liste
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading47">3.3.43</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA44.htm">A44</A></TD>
+<TD>
+ADT/ACK - Move account information - patient account number
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading48">3.3.44</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA45.htm">A45</A></TD>
+<TD>
+ADT/ACK - Move visit information - visit number
+</TD>
+<TD>
+Korrekt. einer falschen Zuordnung bzgl.Fallnummer
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading49">3.3.45</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA47.htm">A47</A></TD>
+<TD>
+ADT/ACK - Change patient identifier list
+</TD>
+<TD>
+&Auml;nderung der Pat.ID-Liste (PID-3)
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading51">3.3.47</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA49.htm">A49</A></TD>
+<TD>
+ADT/ACK - Change patient account number
+</TD>
+<TD>
+&Auml;nderung der Abrechungsnummer (PID-18)
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading53">3.3.49</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA50.htm">A50</A></TD>
+<TD>
+ADT/ACK - Change visit number
+</TD>
+<TD>
+&Auml;nderung der Fallnummer (PV1-19)
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading54">3.3.50</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA51.htm">A51</A></TD>
+<TD>
+ADT/ACK - Change alternate visit ID
+</TD>
+<TD>
+&Auml;nderung der alternativen Fallnummer (PV1-50)
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading55">3.3.51</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA52.htm">A52</A></TD>
+<TD>
+ADT/ACK - Cancel leave of absence for a patient
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading56">3.3.52</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA53.htm">A53</A></TD>
+<TD>
+ADT/ACK - Cancel patient returns from a leave of absence
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading57">3.3.53</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA54.htm">A54</A></TD>
+<TD>
+ADT/ACK - Change attending doctor
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading58">3.3.54</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA55.htm">A55</A></TD>
+<TD>
+ADT/ACK - Cancel change attending doctor
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading59">3.3.55</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA60.htm">A60</A></TD>
+<TD>
+ADT/ACK - Update allergy information
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading64">3.3.60</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventA61.htm">A61</A></TD>
+<TD>
+ADT/ACK - Change consulting doctor
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading65">3.3.61</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventA62.htm">A62</A></TD>
+<TD>
+ADT/ACK - Cancel change consulting doctor
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading66">3.3.62</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventB01.htm">B01</A></TD>
+<TD>
+PMU/ACK - Add personnel record
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch15.html#Heading6">15.3.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventB02.htm">B02</A></TD>
+<TD>
+PMU/ACK - Update personnel record
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch15.html#Heading7">15.3.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventB03.htm">B03</A></TD>
+<TD>
+PMU/ACK - Delete personnel re cord
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch15.html#Heading8">15.3.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventB04.htm">B04</A></TD>
+<TD>
+PMU/ACK - Active practicing person
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch15.html#Heading9">15.3.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventB05.htm">B05</A></TD>
+<TD>
+PMU/ACK - Deactivate practicing person
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch15.html#Heading10">15.3.5</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventB06.htm">B06</A></TD>
+<TD>
+PMU/ACK - Terminate practicing person
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch15.html#Heading11">15.3.6</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventB07.htm">B07</A></TD>
+<TD>
+PMU/ACK - Grant Certificate/Permission
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch15.html#Heading13">15.3.8</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventB08.htm">B08</A></TD>
+<TD>
+PMU/ACK - Revoke Certificate/Permission
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch15.html#Heading14">15.3.9</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventC01.htm">C01</A></TD>
+<TD>
+CRM - Register a patient on a clinical trial
+</TD>
+<TD>
+Registrierung eines Patienten f.eine klin.Studie
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading209">7.7.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventC02.htm">C02</A></TD>
+<TD>
+CRM - Cancel a patient registration on clinical trial (for clerical mistakes onl
+</TD>
+<TD>
+Stornierung der Registrierung
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading209">7.7.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventC03.htm">C03</A></TD>
+<TD>
+CRM - Correct/update registration information
+</TD>
+<TD>
+Korrektur/&Auml;nderung der Registrierung
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading209">7.7.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventC04.htm">C04</A></TD>
+<TD>
+CRM - Patient has gone off a clinical trial
+</TD>
+<TD>
+Patient ist aus der Studie ausgeschieden
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading209">7.7.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventC05.htm">C05</A></TD>
+<TD>
+CRM - Patient enters phase of clinical trial
+</TD>
+<TD>
+Patient tritt in Studienphase ein
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading209">7.7.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventC06.htm">C06</A></TD>
+<TD>
+CRM - Cancel patient entering a phase (clerical mistake)
+</TD>
+<TD>
+Stornierung des Eintritts in eine Studienphase
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading209">7.7.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventC07.htm">C07</A></TD>
+<TD>
+CRM - Correct/update phase information
+</TD>
+<TD>
+Korrektur/&Auml;nderung der Angaben zur Studienphase
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading209">7.7.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventC08.htm">C08</A></TD>
+<TD>
+CRM - Patient has gone off phase of clinical trial
+</TD>
+<TD>
+Patient ist aus Studienphase ausgeschieden
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading209">7.7.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventC09.htm">C09</A></TD>
+<TD>
+CSU - Automated time intervals for reporting, like monthly
+</TD>
+<TD>
+Festlegung des Zeitintervalls f&uuml;r autom. Berichte
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading210">7.7.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventC10.htm">C10</A></TD>
+<TD>
+CSU - Patient completes the clinical trial
+</TD>
+<TD>
+Patient beendet Studie
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading210">7.7.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventC11.htm">C11</A></TD>
+<TD>
+CSU - Patient completes a phase of the clinical trial
+</TD>
+<TD>
+Patient beendet eine Studienphase
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading210">7.7.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventC12.htm">C12</A></TD>
+<TD>
+CSU - Update/correction of patient order/result information
+</TD>
+<TD>
+Korrektur/&Auml;nderung von Anforderungen/Ergebnissen
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading210">7.7.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventE01.htm">E01</A></TD>
+<TD>
+Submit HealthCare Services Invoice
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading6">16.3.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventE02.htm">E02</A></TD>
+<TD>
+Cancel HealthCare Services Invoice
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading7">16.3.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventE03.htm">E03</A></TD>
+<TD>
+HealthCare Services Invoice Status
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading8">16.3.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventE04.htm">E04</A></TD>
+<TD>
+Re-Assess HealthCare Services Invoice Request
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading10">16.3.5</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventE10.htm">E10</A></TD>
+<TD>
+Edit/Adjudication Results
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading11">16.3.6</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventE12.htm">E12</A></TD>
+<TD>
+Request Additional Information
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading12">16.3.7</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventE13.htm">E13</A></TD>
+<TD>
+Additional Information Response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading13">16.3.8</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventE15.htm">E15</A></TD>
+<TD>
+Payment/Remittance Advice
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading14">16.3.9</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventE20.htm">E20</A></TD>
+<TD>
+Submit Authorization Request
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading15">16.3.10</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventE21.htm">E21</A></TD>
+<TD>
+Cancel Authorization Request
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading16">16.3.11</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventE22.htm">E22</A></TD>
+<TD>
+Authorization Request Status
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading17">16.3.12</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventE24.htm">E24</A></TD>
+<TD>
+Authorization Response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch16.html#Heading19">16.3.14</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI01.htm">I01</A></TD>
+<TD>
+RQI/RPI - Request for insurance information
+</TD>
+<TD>
+Anforderung von Versicherungsdaten
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading31">11.2.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI02.htm">I02</A></TD>
+<TD>
+RQI/RPL - Request/receipt of patient selection display list
+</TD>
+<TD>
+Anforderg.einer Patientenauswahlliste (zur Anzeige
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading32">11.2.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI03.htm">I03</A></TD>
+<TD>
+RQI/RPR - Request/receipt of patient selection list
+</TD>
+<TD>
+Anforderg.einer strukt. Patientenauswahlliste
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading33">11.2.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI04.htm">I04</A></TD>
+<TD>
+RQD/RPI - Request for patient demographic data
+</TD>
+<TD>
+Anforderung demographischer Informationen
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading34">11.2.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI05.htm">I05</A></TD>
+<TD>
+RQC/RCI - Request for patient clinical information
+</TD>
+<TD>
+Anforderung klinischer Informationen
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading35">11.2.5</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI06.htm">I06</A></TD>
+<TD>
+RQC/RCL - Request/receipt of clinical data listing
+</TD>
+<TD>
+Anforderung strukt. klinischer Informationen
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading36">11.2.6</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI07.htm">I07</A></TD>
+<TD>
+PIN/ACK - Unsolicited insurance information
+</TD>
+<TD>
+unaufgeforderte &Uuml;bermittlung v. Versicherungsdaten
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading37">11.2.7</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI08.htm">I08</A></TD>
+<TD>
+RQA/RPA - Request for treatment authorization information
+</TD>
+<TD>
+Anforderung Kosten&uuml;bernahmeerkl&auml;rung
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading39">11.3.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI09.htm">I09</A></TD>
+<TD>
+RQA/RPA - Request for modification to an authorization
+</TD>
+<TD>
+Anforderg bzgl. &Auml;nderung Kosten&uuml;bernahmeerkl&auml;rung
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading39">11.3.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI10.htm">I10</A></TD>
+<TD>
+RQA/RPA - Request for resubmission of an authorization
+</TD>
+<TD>
+erneute Anforderung Kosten&uuml;bernahmeerkl&auml;rung
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading39">11.3.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI11.htm">I11</A></TD>
+<TD>
+RQA/RPA - Request for cancellation of an authorization
+</TD>
+<TD>
+Anfordrg Stornierg einer Kosten&uuml;bernahmeerkl&auml;rung
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading39">11.3.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI12.htm">I12</A></TD>
+<TD>
+REF/RRI - Patient referral
+</TD>
+<TD>
+&Uuml;berweisung eines Patienten
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading45">11.4.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI13.htm">I13</A></TD>
+<TD>
+REF/RRI - Modify patient referral
+</TD>
+<TD>
+&Auml;nderung einer Patienten&uuml;berweisung
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading45">11.4.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI14.htm">I14</A></TD>
+<TD>
+REF/RRI - Cancel patient referral
+</TD>
+<TD>
+Stornierung einer Patienten&uuml;berweisung
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading45">11.4.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI15.htm">I15</A></TD>
+<TD>
+REF/RRI - Request patient referral status
+</TD>
+<TD>
+Statusabfrage bzgl. Patienten&uuml;berweisung
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading45">11.4.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI16.htm">I16</A></TD>
+<TD>
+Collaborative Care Referral
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading52">11.5.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI17.htm">I17</A></TD>
+<TD>
+Modify Collaborative Care Referral
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading52">11.5.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI18.htm">I18</A></TD>
+<TD>
+Cancel Collaborative Care Referral
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading52">11.5.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI19.htm">I19</A></TD>
+<TD>
+Collaborative Care Query/Collaborative Care Query Update
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading58">11.6.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI20.htm">I20</A></TD>
+<TD>
+Asynchronous Collaborative Care Update
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading56">11.5.6</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventI21.htm">I21</A></TD>
+<TD>
+Collaborative Care Message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading51">11.5.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventI22.htm">I22</A></TD>
+<TD>
+Collaborative Care Fetch / Collaborative Care Information
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch11.html#Heading59">11.6.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventJ01.htm">J01</A></TD>
+<TD>
+QCN/ACK - Cancel query/acknowledge message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading47">5.4.6</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventJ02.htm">J02</A></TD>
+<TD>
+QSX/ACK - Cancel subscription/acknowledge message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading48">5.4.7</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventK11.htm">K11</A></TD>
+<TD>
+RSP - Segment pattern response in response to QBP^Q11
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading42">5.4.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventK13.htm">K13</A></TD>
+<TD>
+RTB - Tabular response in response to QBP^Q13
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading43">5.4.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventK15.htm">K15</A></TD>
+<TD>
+RDY - Display response in response to QBP^Q15
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading44">5.4.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventK21.htm">K21</A></TD>
+<TD>
+RSP - Get person demographics response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading60">3.3.56</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventK22.htm">K22</A></TD>
+<TD>
+RSP - Find candidates response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading61">3.3.57</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventK23.htm">K23</A></TD>
+<TD>
+RSP - Get corresponding identifiers response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading62">3.3.58</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventK24.htm">K24</A></TD>
+<TD>
+RSP - Allocate identifiers response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading63">3.3.59</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventK25.htm">K25</A></TD>
+<TD>
+RSP - Personnel Information by Segment Response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch15.html#Heading12">15.3.7</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventK31.htm">K31</A></TD>
+<TD>
+RSP - Dispense History Response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading24">4.A.20</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventK32.htm">K32</A></TD>
+<TD>
+Find Candidates including Visit Information Response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading67">3.3.63</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventM02.htm">M02</A></TD>
+<TD>
+MFN/MFK - Master file - staff practitioner
+</TD>
+<TD>
+Stammdaten&auml;nderung - &Auml;rzte
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading45">8.7.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventM04.htm">M04</A></TD>
+<TD>
+MFN/MFK - Master files charge description
+</TD>
+<TD>
+Stammdaten&auml;nderung - Leistungs-/Geb&uuml;hrentabellen
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading214">8.10.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventM05.htm">M05</A></TD>
+<TD>
+MFN/MFK - Patient location master file
+</TD>
+<TD>
+Stammdaten&auml;nderung - Aufenthaltsorte
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading170">8.9.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventM06.htm">M06</A></TD>
+<TD>
+MFN/MFK - Clinical study with phases and schedules master file
+</TD>
+<TD>
+Stammdaten&auml;nderung - klinische Studien mit Phasen
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading250">8.11.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventM07.htm">M07</A></TD>
+<TD>
+MFN/MFK - Clinical study without phases but with schedules master file
+</TD>
+<TD>
+Stammdaten&auml;nderung - klinische Studien ohne Phasen
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading250">8.11.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventM08.htm">M08</A></TD>
+<TD>
+MFN/MFK - Test/observation (numeric) master file
+</TD>
+<TD>
+Stammdaten&auml;nderung - Tests/Untersuchung mit numerischen Ergebnissen
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading50">8.8.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventM09.htm">M09</A></TD>
+<TD>
+MFN/MFK - Test/observation (categorical) master file
+</TD>
+<TD>
+Stammdaten&auml;nderung - Tests mit nicht numerischen Ergebnissen
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading51">8.8.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventM10.htm">M10</A></TD>
+<TD>
+MFN/MFK - Test /observation batteries master file
+</TD>
+<TD>
+Stammdaten&auml;nderung - Testprofile
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading52">8.8.5</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventM11.htm">M11</A></TD>
+<TD>
+MFN/MFK - Test/calculated observations master file
+</TD>
+<TD>
+Stammdaten&auml;nderung - berechnete Ergebnisse
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading53">8.8.6</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventM12.htm">M12</A></TD>
+<TD>
+MFN/MFK - Master file notification message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading54">8.8.7</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventM13.htm">M13</A></TD>
+<TD>
+MFN/MFK - Master file notification - general
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading7">8.4.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventM14.htm">M14</A></TD>
+<TD>
+MFN/MFK - Master file notification - site defined
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading9">8.4.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventM15.htm">M15</A></TD>
+<TD>
+MFN/MFK - Inventory item master file notification
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading273">8.12.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventM16.htm">M16</A></TD>
+<TD>
+MFN/MFK - Master File Notification Inventory Item Enhanced
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading274">8.12.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventM17.htm">M17</A></TD>
+<TD>
+DRG Master File Message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch08.html#Heading276">8.13.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventN02.htm">N02</A></TD>
+<TD>
+NMD/ACK - Application management data message (unsolicited)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch14.html#Heading6">14.3.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO03.htm">O03</A></TD>
+<TD>
+OMD - Diet order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading168">4.6.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO04.htm">O04</A></TD>
+<TD>
+ORD - Diet order acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading169">4.6.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO05.htm">O05</A></TD>
+<TD>
+OMS - Stock requisition order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading186">4.9.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO06.htm">O06</A></TD>
+<TD>
+ORS - Stock requisition acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading187">4.9.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO07.htm">O07</A></TD>
+<TD>
+OMN - Non-stock requisition order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading188">4.9.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO08.htm">O08</A></TD>
+<TD>
+ORN - Non-stock requisition acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading189">4.9.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO09.htm">O09</A></TD>
+<TD>
+OMP - Pharmacy/treatment order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading7">4.A.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO10.htm">O10</A></TD>
+<TD>
+ORP - Pharmacy/treatment order acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading8">4.A.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO11.htm">O11</A></TD>
+<TD>
+RDE - Pharmacy/treatment encoded order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading9">4.A.5</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO12.htm">O12</A></TD>
+<TD>
+RRE - Pharmacy/treatment encoded order acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading10">4.A.6</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO13.htm">O13</A></TD>
+<TD>
+RDS - Pharmacy/treatment dispense
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading11">4.A.7</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO14.htm">O14</A></TD>
+<TD>
+RRD - Pharmacy/treatment dispense acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading12">4.A.8</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO15.htm">O15</A></TD>
+<TD>
+RGV - Pharmacy/treatment give
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading13">4.A.9</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO16.htm">O16</A></TD>
+<TD>
+RRG - Pharmacy/treatment give acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading14">4.A.10</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO17.htm">O17</A></TD>
+<TD>
+RAS - Pharmacy/treatment administration
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading15">4.A.11</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO18.htm">O18</A></TD>
+<TD>
+RRA - Pharmacy/treatment administration acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading16">4.A.12</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO19.htm">O19</A></TD>
+<TD>
+OMG - General clinical order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading17">4.3.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO20.htm">O20</A></TD>
+<TD>
+ORG/ORL - General clinical order response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading18">4.3.5</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO21.htm">O21</A></TD>
+<TD>
+OML - Laboratory order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading19">4.3.6</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO22.htm">O22</A></TD>
+<TD>
+ORL - General laboratory order response message to any OML
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading20">4.3.7</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO23.htm">O23</A></TD>
+<TD>
+OMI - Imaging order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading27">4.3.14</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO24.htm">O24</A></TD>
+<TD>
+ORI - Imaging order response message to any OMI
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading28">4.3.15</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO25.htm">O25</A></TD>
+<TD>
+RDE - Pharmacy/treatment refill authorization request
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading17">4.A.13</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO26.htm">O26</A></TD>
+<TD>
+RRE - Pharmacy/Treatment Refill Authorization Acknowledgement
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading18">4.A.14</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO27.htm">O27</A></TD>
+<TD>
+OMB - Blood product order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading214">4.12.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO28.htm">O28</A></TD>
+<TD>
+ORB - Blood product order acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading216">4.12.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO29.htm">O29</A></TD>
+<TD>
+BPS - Blood product dispense status
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading217">4.12.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO30.htm">O30</A></TD>
+<TD>
+BRP - Blood product dispense status acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading218">4.12.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO31.htm">O31</A></TD>
+<TD>
+BTS - Blood product transfusion/disposition
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading219">4.12.5</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO32.htm">O32</A></TD>
+<TD>
+BRT - Blood product transfusion/disposition acknowledgment
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading220">4.12.6</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO33.htm">O33</A></TD>
+<TD>
+OML - Laboratory order for multiple orders related to a single specimen
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading21">4.3.8</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO34.htm">O34</A></TD>
+<TD>
+ORL - Laboratory order response message to a multiple order related to single sp
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading22">4.3.9</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO35.htm">O35</A></TD>
+<TD>
+OML - Laboratory order for multiple orders related to a single container of a sp
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading23">4.3.10</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO36.htm">O36</A></TD>
+<TD>
+ORL - Laboratory order response message to a single container of a specimen OML
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading24">4.3.11</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO37.htm">O37</A></TD>
+<TD>
+OPL - Population/Location-Based Laboratory Order Message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading29">4.3.16</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO38.htm">O38</A></TD>
+<TD>
+OPR - Population/Location-Based Laboratory Order Acknowledgment Message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading30">4.3.17</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventO39.htm">O39</A></TD>
+<TD>
+Specimen shipment centric laboratory order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading25">4.3.12</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventO40.htm">O40</A></TD>
+<TD>
+Specimen Shipment Centric Laboratory Order Acknowledgment Message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading26">4.3.13</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventP01.htm">P01</A></TD>
+<TD>
+BAR/ACK - Add patient accounts
+</TD>
+<TD>
+Er&ouml;ffnung eines Patientenkontos
+</TD>
+<TD> <A HREF = "std271/ch06.html#Heading6">6.4.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventP02.htm">P02</A></TD>
+<TD>
+BAR/ACK - Purge patient accounts
+</TD>
+<TD>
+L&ouml;schen der Abrechnungsdaten eines Patientenkontos
+</TD>
+<TD> <A HREF = "std271/ch06.html#Heading7">6.4.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventP03.htm">P03</A></TD>
+<TD>
+DFT/ACK - Post detail financial transaction
+</TD>
+<TD>
+Leistungs- und Abrechnungsinformationen
+</TD>
+<TD> <A HREF = "std271/ch06.html#Heading8">6.4.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventP05.htm">P05</A></TD>
+<TD>
+BAR/ACK - Update account
+</TD>
+<TD>
+&Auml;nderung eines Patientenkontos
+</TD>
+<TD> <A HREF = "std271/ch06.html#Heading10">6.4.5</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventP06.htm">P06</A></TD>
+<TD>
+BAR/ACK - End account
+</TD>
+<TD>
+Abschluﬂ eines Patientenkontos
+</TD>
+<TD> <A HREF = "std271/ch06.html#Heading11">6.4.6</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventP07.htm">P07</A></TD>
+<TD>
+PEX - Unsolicited initial individual product experience report
+</TD>
+<TD>
+unaufgeforderte individueller Produktersterfahrungsbericht
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading267">7.11.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventP08.htm">P08</A></TD>
+<TD>
+PEX - Unsolicited update individual product experience report
+</TD>
+<TD>
+&Auml;nderung individueller Produktersterfahrungsbericht
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading267">7.11.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventP10.htm">P10</A></TD>
+<TD>
+BAR/ACK -Transmit Ambulatory Payment  Classification(APC)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch06.html#Heading12">6.4.7</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventP11.htm">P11</A></TD>
+<TD>
+DFT/ACK - Post Detail Financial Transactions - New
+</TD>
+<TD>
+Leistungs- und Abrechnungsinformationen
+</TD>
+<TD> <A HREF = "std271/ch06.html#Heading13">6.4.8</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventP12.htm">P12</A></TD>
+<TD>
+BAR/ACK - Update Diagnosis/Procedure
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch06.html#Heading14">6.4.9</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventPC1.htm">PC1</A></TD>
+<TD>
+PPR - PC/ problem add
+</TD>
+<TD>
+Pflegeproblem erfassen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading27">12.3.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventPC2.htm">PC2</A></TD>
+<TD>
+PPR - PC/ problem update
+</TD>
+<TD>
+Pflegeproblem &auml;ndern
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading27">12.3.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventPC3.htm">PC3</A></TD>
+<TD>
+PPR - PC/ problem delete
+</TD>
+<TD>
+Pflegeproblem l&ouml;schen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading27">12.3.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventPC4.htm">PC4</A></TD>
+<TD>
+QRY - PC/ problem query
+</TD>
+<TD>
+Pflegeproblem erfragen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading30">12.3.5</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventPC5.htm">PC5</A></TD>
+<TD>
+PRR - PC/ problem response
+</TD>
+<TD>
+Antwort zu PC4
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading31">12.3.6</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventPC6.htm">PC6</A></TD>
+<TD>
+PGL - PC/ goal add
+</TD>
+<TD>
+Pflegeziel erfassen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading26">12.3.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventPC7.htm">PC7</A></TD>
+<TD>
+PGL - PC/ goal update
+</TD>
+<TD>
+Pflegeziel &auml;ndern
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading26">12.3.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventPC8.htm">PC8</A></TD>
+<TD>
+PGL - PC/ goal delete
+</TD>
+<TD>
+Pflegeziel l&ouml;schen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading26">12.3.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventPC9.htm">PC9</A></TD>
+<TD>
+QRY - PC/ goal query
+</TD>
+<TD>
+Pflegeziel erfragen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading32">12.3.7</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventPCA.htm">PCA</A></TD>
+<TD>
+PPV - PC/ goal response
+</TD>
+<TD>
+Antwort zu PC9
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading33">12.3.8</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventPCB.htm">PCB</A></TD>
+<TD>
+PPP - PC/ pathway (problem-oriented) add
+</TD>
+<TD>
+problemorientierte Pflegemaﬂnahme erfassen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading28">12.3.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventPCC.htm">PCC</A></TD>
+<TD>
+PPP - PC/ pathway (problem-oriented) update
+</TD>
+<TD>
+problemorientierte Pflegemaﬂnahme &auml;ndern
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading28">12.3.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventPCD.htm">PCD</A></TD>
+<TD>
+PPP - PC/ pathway (problem-oriented) delete
+</TD>
+<TD>
+problemorientierte Pflegemaﬂnahme l&ouml;schen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading28">12.3.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventPCE.htm">PCE</A></TD>
+<TD>
+QRY - PC/ pathway (problem-oriented) query
+</TD>
+<TD>
+problemorientierte Pflegemaﬂnahme erfragen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading34">12.3.9</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventPCF.htm">PCF</A></TD>
+<TD>
+PTR - PC/ pathway (problem-oriented) query response
+</TD>
+<TD>
+Antwort zu PCE
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading35">12.3.10</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventPCG.htm">PCG</A></TD>
+<TD>
+PPG - PC/ pathway (goal-oriented) add
+</TD>
+<TD>
+zielorientierte Pflegemaﬂnahme erfassen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading29">12.3.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventPCH.htm">PCH</A></TD>
+<TD>
+PPG - PC/ pathway (goal-oriented) update
+</TD>
+<TD>
+zielorientierte Pflegemaﬂnahme  &auml;ndern
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading29">12.3.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventPCJ.htm">PCJ</A></TD>
+<TD>
+PPG - PC/ pathway (goal-oriented) delete
+</TD>
+<TD>
+zielorientierte Pflegemaﬂnahme  l&ouml;schen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading29">12.3.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventPCK.htm">PCK</A></TD>
+<TD>
+QRY - PC/ pathway (goal-oriented) query
+</TD>
+<TD>
+zielorientierte Pflegemaﬂnahme erfragen
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading36">12.3.11</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventPCL.htm">PCL</A></TD>
+<TD>
+PPT - PC/ pathway (goal-oriented) query response
+</TD>
+<TD>
+Antwort zu PCK
+</TD>
+<TD> <A HREF = "std271/ch12.html#Heading37">12.3.12</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventQ05.htm">Q05</A></TD>
+<TD>
+UDM/ACK - Unsolicited display update message
+</TD>
+<TD>
+Sofortige Bildschirmanzeige (Eilmeldung)
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading139">5.10.1.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventQ11.htm">Q11</A></TD>
+<TD>
+QBP - Query by parameter requesting an RSP segment pattern response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading42">5.4.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventQ13.htm">Q13</A></TD>
+<TD>
+QBP - Query by parameter requesting an  RTB - tabular response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading43">5.4.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventQ15.htm">Q15</A></TD>
+<TD>
+QBP - Query by parameter requesting an RDY display response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading44">5.4.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventQ16.htm">Q16</A></TD>
+<TD>
+QSB - Create subscription
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading45">5.4.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventQ17.htm">Q17</A></TD>
+<TD>
+QVR - Query for previous events
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading46">5.4.5</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventQ21.htm">Q21</A></TD>
+<TD>
+QBP - Get person demographics
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading60">3.3.56</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventQ22.htm">Q22</A></TD>
+<TD>
+QBP - Find candidates
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading61">3.3.57</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventQ23.htm">Q23</A></TD>
+<TD>
+QBP - Get corresponding identifiers
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading62">3.3.58</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventQ24.htm">Q24</A></TD>
+<TD>
+QBP - Allocate identifiers
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading63">3.3.59</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventQ25.htm">Q25</A></TD>
+<TD>
+QBP - Personnel Information by Segment Query
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch15.html#Heading12">15.3.7</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventQ31.htm">Q31</A></TD>
+<TD>
+QBP Query Dispense history
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading24">4.A.20</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventQ32.htm">Q32</A></TD>
+<TD>
+Find Candidates including Visit Information
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch03.html#Heading67">3.3.63</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventR01.htm">R01</A></TD>
+<TD>
+ORU/ACK - Unsolicited transmission of an observation message
+</TD>
+<TD>
+unangeforderte &Uuml;bermittlung eines Befundes
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading104">5.7.3.0</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventR22.htm">R22</A></TD>
+<TD>
+OUL - Unsolicited Specimen Oriented Observation Message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading48">7.3.8</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventR23.htm">R23</A></TD>
+<TD>
+OUL - Unsolicited Specimen Container Oriented Observation Message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading49">7.3.9</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventR24.htm">R24</A></TD>
+<TD>
+OUL - Unsolicited Order Oriented Observation Message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading50">7.3.10</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventR25.htm">R25</A></TD>
+<TD>
+OPU - Unsolicited Population/Location-Based Laboratory Observation Message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading51">7.3.11</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventR26.htm">R26</A></TD>
+<TD>
+OSM - Unsolicited Specimen Shipment Manifest Message
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading401">7.18.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventR30.htm">R30</A></TD>
+<TD>
+ORU - Unsolicited Point-Of-Care Observation Message Without Existing Order - Pla
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading44">7.3.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventR31.htm">R31</A></TD>
+<TD>
+ORU - Unsolicited New Point-Of-Care Observation Message - Search For An Order
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading45">7.3.5</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventR32.htm">R32</A></TD>
+<TD>
+ORU - Unsolicited Pre-Ordered Point-Of-Care Observation
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading46">7.3.6</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventR33.htm">R33</A></TD>
+<TD>
+ORA - Observation Report Acknowledgement
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch07.html#Heading47">7.3.7</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventRDR.htm">RDR</A></TD>
+<TD>
+Pharmacy/treatment Dispense Information
+</TD>
+<TD>
+Antwort bzgl. des zu verabreichenden Medikamentes bzw. der Behandlung
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading110">5.9.1.0</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS01.htm">S01</A></TD>
+<TD>
+SRM/SRR - Request new appointment booking
+</TD>
+<TD>
+Terminanforderung
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS02.htm">S02</A></TD>
+<TD>
+SRM/SRR - Request appointment rescheduling
+</TD>
+<TD>
+Anforderung f&uuml;r Terminverschiebung
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS03.htm">S03</A></TD>
+<TD>
+SRM/SRR - Request appointment modification
+</TD>
+<TD>
+Anforderung f&uuml;r inhaltliche Termin&auml;nderung
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS04.htm">S04</A></TD>
+<TD>
+SRM/SRR - Request appointment cancellation
+</TD>
+<TD>
+Absage eines Termins
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS05.htm">S05</A></TD>
+<TD>
+SRM/SRR - Request appointment discontinuation
+</TD>
+<TD>
+Aussetzung des aktuellen oder weiterer Termine
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS06.htm">S06</A></TD>
+<TD>
+SRM/SRR - Request appointment deletion
+</TD>
+<TD>
+Stornierung eines Termins
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS07.htm">S07</A></TD>
+<TD>
+SRM/SRR - Request addition of service/resource on appointment
+</TD>
+<TD>
+Anforderung zus&auml;tzlicher Leistungen/Voraussetzungen zu einem Termin
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS08.htm">S08</A></TD>
+<TD>
+SRM/SRR - Request modification of service/resource on appointment
+</TD>
+<TD>
+&Auml;nderungsanforderung f&uuml;r zus&auml;tzliche Leistungen/Voraussetzungen zu einem Termin
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS09.htm">S09</A></TD>
+<TD>
+SRM/SRR - Request cancellation of service/resource on appointment
+</TD>
+<TD>
+Absage f&uuml;r Leistungen/Resourcen zu einem Termin
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS10.htm">S10</A></TD>
+<TD>
+SRM/SRR - Request discontinuation of service/resource on appointment
+</TD>
+<TD>
+Aussetzung f&uuml;r Leistungen/Resourcen zu einem Termin
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS11.htm">S11</A></TD>
+<TD>
+SRM/SRR - Request deletion of service/resource on appointment
+</TD>
+<TD>
+L&ouml;schung f&uuml;r Leistungen/Resourcen zu einem Termin
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading37">10.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS12.htm">S12</A></TD>
+<TD>
+SIU/ACK - Notification of new appointment booking
+</TD>
+<TD>
+Benachrichtigung &uuml;ber Terminvergabe
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS13.htm">S13</A></TD>
+<TD>
+SIU/ACK - Notification of appointment rescheduling
+</TD>
+<TD>
+Benachrichtigung f&uuml;r Terminverschiebung
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS14.htm">S14</A></TD>
+<TD>
+SIU/ACK - Notification of appointment modification
+</TD>
+<TD>
+Benachrichtigung f&uuml;r inhaltliche Termin&auml;nderung
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS15.htm">S15</A></TD>
+<TD>
+SIU/ACK - Notification of appointment cancellation
+</TD>
+<TD>
+Benachrichtigung &uuml;ber Terminabsage
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS16.htm">S16</A></TD>
+<TD>
+SIU/ACK - Notification of appointment discontinuation
+</TD>
+<TD>
+Benachrichtigung &uuml;ber Aussetzung des aktuellen oder weiterer Termine
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS17.htm">S17</A></TD>
+<TD>
+SIU/ACK - Notification of appointment deletion
+</TD>
+<TD>
+Benachrichtigung &uuml;ber Stornierung eines Termins
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS18.htm">S18</A></TD>
+<TD>
+SIU/ACK - Notification of addition of service/resource on appointment
+</TD>
+<TD>
+Benachrichtigung &uuml;ber  zus&auml;tzlicher Leistungen/Voraussetzungen zu einem Termin
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS19.htm">S19</A></TD>
+<TD>
+SIU/ACK - Notification of modification of service/resource on appointment
+</TD>
+<TD>
+&Auml;nderungsbenachrichtigung f.zus&auml;tzl. Leistungen/Voraussetzungen zu einem Termin
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS20.htm">S20</A></TD>
+<TD>
+SIU/ACK - Notification of cancellation of service/resource on appointment
+</TD>
+<TD>
+Benachrichtigung f. zus&auml;tzliche Leistungen/Voraussetzungen zu einem Terminabsage
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS21.htm">S21</A></TD>
+<TD>
+SIU/ACK - Notification of discontinuation of service/resource on appointment
+</TD>
+<TD>
+Benachrichtigung &uuml;ber Aussetzung f&uuml;r zus&auml;tzliche Leistungen/Voraussetzungen
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS22.htm">S22</A></TD>
+<TD>
+SIU/ACK - Notification of deletion of service/resource on appointment
+</TD>
+<TD>
+Benachrichtigung Stornierg.f.zus&auml;tzl.Leistungen/Voraussetzungen zu einem Termin
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS23.htm">S23</A></TD>
+<TD>
+SIU/ACK - Notification of blocked schedule time slot(s)
+</TD>
+<TD>
+Benachrichtigung &uuml;ber nicht verf&uuml;gbare Zeitbereiche
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS24.htm">S24</A></TD>
+<TD>
+SIU/ACK - Notification of opened ("unblocked") schedule time slot(s)
+</TD>
+<TD>
+Benachrichtigung &uuml;ber (wieder) verf&uuml;gbare Zeitbereiche
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS26.htm">S26</A></TD>
+<TD>
+SIU/ACK Notification that patient did not show up for schedule appointment
+</TD>
+<TD>
+Benachrichtigung &uuml;ber Nichterscheinen eines Patienten
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS27.htm">S27</A></TD>
+<TD>
+SIU/ACK - Broadcast Notification of Scheduled Appointments
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch10.html#Heading49">10.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS28.htm">S28</A></TD>
+<TD>
+SLR/SLS - Request new sterilization lot
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch17.html#Heading143">17.5.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS29.htm">S29</A></TD>
+<TD>
+SLR/SLS - Request Sterilization lot deletion
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch17.html#Heading144">17.5.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS30.htm">S30</A></TD>
+<TD>
+STI/STS - Request item
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch17.html#Heading145">17.5.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS31.htm">S31</A></TD>
+<TD>
+SDR/SDS - Request anti-microbial device data
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch17.html#Heading146">17.5.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS32.htm">S32</A></TD>
+<TD>
+SMD/SMS - Request anti-microbial device cycle data
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch17.html#Heading147">17.5.5</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS33.htm">S33</A></TD>
+<TD>
+STC/ACK - Notification of sterilization configuration
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch17.html#Heading149">17.6.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS34.htm">S34</A></TD>
+<TD>
+SLN/ACK - Notification of sterilization lot
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch17.html#Heading150">17.6.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS35.htm">S35</A></TD>
+<TD>
+SLN/ACK - Notification of sterilization lot deletion
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch17.html#Heading151">17.6.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventS36.htm">S36</A></TD>
+<TD>
+SDN/ACK - Notification of anti-microbial device data
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch17.html#Heading152">17.6.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventS37.htm">S37</A></TD>
+<TD>
+SCN/ACK - Notification of anti-microbial device cycle data
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch17.html#Heading153">17.6.5</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventT01.htm">T01</A></TD>
+<TD>
+MDM/ACK - Original document notification
+</TD>
+<TD>
+Benachrichtigung &uuml;ber die Neuanlage eines Dokuments ohne Inhalt
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading52">9.6.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventT02.htm">T02</A></TD>
+<TD>
+MDM/ACK - Original document notification and content
+</TD>
+<TD>
+Benachrichtigung &uuml;ber die Neuanlage eines Dokuments mit Inhalts&uuml;bermittlung
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading53">9.6.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventT03.htm">T03</A></TD>
+<TD>
+MDM/ACK - Document status change notification
+</TD>
+<TD>
+Benachrichtigung &uuml;ber die Status&auml;nderung eines Dokuments (ohne Inhalt)
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading54">9.6.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventT04.htm">T04</A></TD>
+<TD>
+MDM/ACK - Document status change notification and content
+</TD>
+<TD>
+Benachrichtigung &uuml;ber die Status&auml;nderung eines Dokuments (mit Inhalt)
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading55">9.6.4</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventT05.htm">T05</A></TD>
+<TD>
+MDM/ACK - Document addendum notification
+</TD>
+<TD>
+Benachrichtigung &uuml;ber die Erg&auml;nzung eines Dokuments (ohne Inhalt)
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading56">9.6.5</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventT06.htm">T06</A></TD>
+<TD>
+MDM/ACK - Document addendum notification and content
+</TD>
+<TD>
+Benachrichtigung &uuml;ber die Erg&auml;nzung eines Dokuments (mit Inhalt)
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading57">9.6.6</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventT07.htm">T07</A></TD>
+<TD>
+MDM/ACK - Document edit notification
+</TD>
+<TD>
+Benachrichtigung &uuml;ber die &Auml;nderung eines Dokuments (Dok. nicht beigef&uuml;gt)
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading58">9.6.7</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventT08.htm">T08</A></TD>
+<TD>
+MDM/ACK - Document edit notification and content
+</TD>
+<TD>
+Benachrichtigung &uuml;ber die &Auml;nderung eines Dokuments (Dok. beigef&uuml;gt)
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading59">9.6.8</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventT09.htm">T09</A></TD>
+<TD>
+MDM/ACK - Document replacement notification
+</TD>
+<TD>
+Benachrichtigung &uuml;ber den Austausch eines Dokuments (Dok. nicht beigef&uuml;gt)
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading60">9.6.9</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventT10.htm">T10</A></TD>
+<TD>
+MDM/ACK - Document replacement notification and content
+</TD>
+<TD>
+Benachrichtigung &uuml;ber den Austausch eines Dokuments (mit Inhalt)
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading61">9.6.10</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventT11.htm">T11</A></TD>
+<TD>
+MDM/ACK - Document cancel notification
+</TD>
+<TD>
+Benachrichtigung &uuml;ber die L&ouml;schung eines Dokuments
+</TD>
+<TD> <A HREF = "std271/ch09.html#Heading62">9.6.11</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventU01.htm">U01</A></TD>
+<TD>
+ESU/ACK - Automated equipment status update
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading75">13.3.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventU02.htm">U02</A></TD>
+<TD>
+ESR/ACK - Automated equipment status request
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading76">13.3.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventU03.htm">U03</A></TD>
+<TD>
+SSU/ACK - Specimen status update
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading77">13.3.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventU04.htm">U04</A></TD>
+<TD>
+SSR/ACK - specimen status request
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading78">13.3.4</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventU05.htm">U05</A></TD>
+<TD>
+INU/ACK  - Automated equipment inventory update
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading79">13.3.5</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventU06.htm">U06</A></TD>
+<TD>
+INR/ACK - Automated equipment inventory request
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading80">13.3.6</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventU07.htm">U07</A></TD>
+<TD>
+EAC/ACK - Automated equipment command
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading81">13.3.7</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventU08.htm">U08</A></TD>
+<TD>
+EAR/ACK - Automated equipment response
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading82">13.3.8</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventU09.htm">U09</A></TD>
+<TD>
+EAN/ACK - Automated equipment notification
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading83">13.3.9</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventU10.htm">U10</A></TD>
+<TD>
+TCU/ACK - Automated equipment test code settings update
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading84">13.3.10</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventU11.htm">U11</A></TD>
+<TD>
+TCR/ACK - Automated equipment test code settings request
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading85">13.3.11</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventU12.htm">U12</A></TD>
+<TD>
+LSU/ACK - Automated equipment log/service update
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading86">13.3.12</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventU13.htm">U13</A></TD>
+<TD>
+LSR/ACK - Automated equipment log/service request
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch13.html#Heading87">13.3.13</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventV04.htm">V04</A></TD>
+<TD>
+VXU - Unsolicited vaccination record update
+</TD>
+<TD>
+unaufgeforderte &Auml;nderung zu dem Impfstatus eines Patienten
+</TD>
+<TD> <A HREF = "std271/ch04a.html#Heading246">4.A.6</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ73.htm">Z73</A></TD>
+<TD>
+Information about Phone Calls
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading165">4.5.2</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ74.htm">Z74</A></TD>
+<TD>
+Information about Phone Calls (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch04.html#Heading165">4.5.2</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ75.htm">Z75</A></TD>
+<TD>
+Tabular Patient List
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading135">5.9.7.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ76.htm">Z76</A></TD>
+<TD>
+Tabular Patient List (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading135">5.9.7.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ77.htm">Z77</A></TD>
+<TD>
+Tabular Patient List
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading134">5.9.7.0</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ78.htm">Z78</A></TD>
+<TD>
+Tabular Patient List (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading134">5.9.7.0</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ79.htm">Z79</A></TD>
+<TD>
+Dispense Information
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading132">5.9.6.0</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ80.htm">Z80</A></TD>
+<TD>
+Dispense Information (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading132">5.9.6.0</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ81.htm">Z81</A></TD>
+<TD>
+Dispense History
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading111">5.9.1.0.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ82.htm">Z82</A></TD>
+<TD>
+Dispense History (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading111">5.9.1.0.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ83.htm">Z83</A></TD>
+<TD>
+ORU Subscription
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading104">5.7.3.0</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ84.htm">Z84</A></TD>
+<TD>
+Who Am I (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading21">5.3.1.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ85.htm">Z85</A></TD>
+<TD>
+Pharmacy Information Comprehensive
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading113">5.9.1.1.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ86.htm">Z86</A></TD>
+<TD>
+Pharmacy Information Comprehensive (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading113">5.9.1.1.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ87.htm">Z87</A></TD>
+<TD>
+Dispense Information
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading116">5.9.2.0.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ88.htm">Z88</A></TD>
+<TD>
+Dispense Information (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading116">5.9.2.0.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ89.htm">Z89</A></TD>
+<TD>
+Lab Results History
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading119">5.9.2.3</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ90.htm">Z90</A></TD>
+<TD>
+Lab Results History (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading119">5.9.2.3</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ91.htm">Z91</A></TD>
+<TD>
+Who Am I
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading123">5.9.3.0.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ92.htm">Z92</A></TD>
+<TD>
+Who Am I (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading123">5.9.3.0.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ93.htm">Z93</A></TD>
+<TD>
+Tabular Dispense History
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading125">5.9.3.1.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ94.htm">Z94</A></TD>
+<TD>
+Tabular Dispense History (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading125">5.9.3.1.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ95.htm">Z95</A></TD>
+<TD>
+Tabular Dispense History
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading128">5.9.4.0.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ96.htm">Z96</A></TD>
+<TD>
+Tabular Dispense History (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading128">5.9.4.0.1</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ97.htm">Z97</A></TD>
+<TD>
+Dispense History
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading130">5.9.5.0</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZ98.htm">Z98</A></TD>
+<TD>
+Dispense History (Response)
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading130">5.9.5.0</A></TD>
+</TR>
+<TR class="info-odd" >
+<TD><A HREF = "hl7v271eventZ99.htm">Z99</A></TD>
+<TD>
+Who Am I
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading21">5.3.1.1</A></TD>
+</TR>
+<TR class="info-even" >
+<TD><A HREF = "hl7v271eventZnn.htm">Znn</A></TD>
+<TD>
+</TD>
+<TD>
+</TD>
+<TD> <A HREF = "std271/ch05.html#Heading25">5.3.2.2</A></TD>
+</TR>
+</TABLE>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

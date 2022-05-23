@@ -1,0 +1,340 @@
+<HTML><HEAD>
+<!-- This document was created from RTF source by rtftohtml version 3.8 -->
+<TITLE>HL7 V.2.1</TITLE></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>
+References to other Chapters
+</H1>
+<A HREF="hl7.html">Index HL7</A><br>
+<A HREF="kap1.html">Chapter 2</A><br>
+<A HREF="kap2.html">Chapter 2</A><br>
+<A HREF="kap3.html">Chapter 3</A><br>
+<A HREF="kap4.html">Chapter 4</A><br>
+<A HREF="kap5.html">Chapter 5</A><br>
+<A HREF="kap6.html">Chapter 6</A><br>
+<A HREF="kap7.html">Chapter 7</A><br>
+
+<hr>
+
+<p>
+
+<H1>
+1</H1>
+<UL>
+<LI><A HREF="kap1.html#Heading1">1 <BR>Chapter 1</A>
+<UL>
+<LI><A HREF="kap1.html#Heading2">1.1 INTRODUCTION</A>
+<LI><A HREF="kap1.html#Heading3">1.2 BACKGROUND</A>
+<LI><A HREF="kap1.html#Heading4">1.3 NEED FOR A STANDARD</A>
+<LI><A HREF="kap1.html#Heading5">1.4 GOALS OF THE STANDARD</A>
+<LI><A HREF="kap1.html#Heading6">1.5 HISTORY OF HL7 DEVELOPMENT</A>
+<LI><A HREF="kap1.html#Heading7">1.6 OVERVIEW</A>
+<UL>
+<LI><A HREF="kap1.html#Heading8">1.6.1 Conceptual Approach</A>
+<LI><A HREF="kap1.html#Heading9">1.6.2 Multi-Level Specification</A>
+<UL>
+<LI><A HREF="kap1.html#Heading10">1.6.2.1 HL7 Encoding Rules.  </A>
+<LI><A HREF="kap1.html#Heading11">1.6.2.2 HL7 Lower Level Protocols.  </A>
+</UL>
+<LI><A HREF="kap1.html#Heading12">1.6.3 Local Variations</A>
+<LI><A HREF="kap1.html#Heading13">1.6.4 Evolutionary Changes to the Standard</A>
+<LI><A HREF="kap1.html#Heading14">1.6.5 Applicability to File Transfers (Batch Processing)</A>
+<LI><A HREF="kap1.html#Heading15">1.6.6 Relationship to Other Protocols</A>
+<UL>
+<LI><A HREF="kap1.html#Heading16">1.6.6.1 Lower Layer Protocols.   </A>
+<LI><A HREF="kap1.html#Heading17">1.6.6.2 Other Applications Protocols.  </A>
+</UL>
+</UL>
+<LI><A HREF="kap1.html#Heading18">1.7 SUGGESTIONS AND COMMENTS</A>
+</UL>
+</UL>
+
+<H1>
+2</H1>
+<UL>
+<LI><A HREF="kap2.html#Heading1">2. <BR>Chapter 2</A>
+<UL>
+<LI><A HREF="kap2.html#Heading2">2.1 INTRODUCTION </A>
+<LI><A HREF="kap2.html#Heading3">2.2 ABSTRACT MESSAGE DEFINITION </A>
+<UL>
+<LI><A HREF="kap2.html#Heading4">2.2.1 Definitions</A>
+<UL>
+<LI><A HREF="kap2.html#Heading5">2.2.1.1 Message.  </A>
+<LI><A HREF="kap2.html#Heading6">2.2.1.2 Segments.  </A>
+<LI><A HREF="kap2.html#Heading7">2.2.1.3 Data Fields.  </A>
+</UL>
+<LI><A HREF="kap2.html#Heading8">2.2.2 Characteristics of Data Fields</A>
+<LI><A HREF="kap2.html#Heading9">2.2.3 The Null Value.</A>
+<LI><A HREF="kap2.html#Heading10">2.2.4 Format for Defining Abstract Messages</A>
+<LI><A HREF="kap2.html#Heading11">2.2.5 Application (Level 7) Processing Rules, Immediate Processing</A>
+<UL>
+<LI><A HREF="kap2.html#Heading12">2.2.5.1 Initiation. </A>
+<LI><A HREF="kap2.html#Heading13">2.2.5.2 Response.  </A>
+</UL>
+<LI><A HREF="kap2.html#Heading14">2.2.6 Application (Level 7) Processing Rules, Deferred Processing</A>
+<UL>
+<LI><A HREF="kap2.html#Heading15">2.2.6.1 Initiation.  </A>
+<LI><A HREF="kap2.html#Heading16">2.2.6.2 Response:  </A>
+</UL>
+</UL>
+<LI><A HREF="kap2.html#Heading17">2.3 MESSAGE ENCODING RULES </A>
+<UL>
+<LI><A HREF="kap2.html#Heading18">2.3.1 Definitions</A>
+<LI><A HREF="kap2.html#Heading19">2.3.2 Segment Terminator.  </A>
+<UL>
+<LI><A HREF="kap2.html#Heading20">2.3.2.1 Field Separator. </A>
+<LI><A HREF="kap2.html#Heading21">2.3.2.2 Component Separator. </A>
+<LI><A HREF="kap2.html#Heading22">2.3.2.3 Sub-Component Separator.  </A>
+<LI><A HREF="kap2.html#Heading23">2.3.2.4 Repetition Separator.  </A>
+<LI><A HREF="kap2.html#Heading24">2.3.2.5 Escape Character.  </A>
+</UL>
+<LI><A HREF="kap2.html#Heading25">2.3.3 Encoding HL7 Data Types</A>
+<UL>
+<LI><A HREF="kap2.html#Heading26">2.3.3.1 ST  String data.  </A>
+<LI><A HREF="kap2.html#Heading27">2.3.3.2 NM  Numeric.  </A>
+<LI><A HREF="kap2.html#Heading28">2.3.3.3 DT  Date.  </A>
+<LI><A HREF="kap2.html#Heading29">2.3.3.4 TM  Time.  </A>
+<LI><A HREF="kap2.html#Heading30">2.3.3.5 TS  Time stamp.  </A>
+<LI><A HREF="kap2.html#Heading31">2.3.3.6 PN  Person Name.  </A>
+<LI><A HREF="kap2.html#Heading32">2.3.3.7 TN  Telephone Number. </A>
+<LI><A HREF="kap2.html#Heading33">2.3.3.8 AD  Address.  </A>
+<LI><A HREF="kap2.html#Heading34">2.3.3.9 ID  Coded Value.  </A>
+</UL>
+<LI><A HREF="kap2.html#Heading35">2.3.4 Use of Escape Sequences in Text Fields</A>
+<UL>
+<LI><A HREF="kap2.html#Heading36">2.3.4.1 Formatting Codes.  </A>
+<LI><A HREF="kap2.html#Heading37">2.3.4.2 Highlighting.  </A>
+<LI><A HREF="kap2.html#Heading38">2.3.4.3 Special Character.  </A>
+<LI><A HREF="kap2.html#Heading39">2.3.4.4 Hexadecimal.  </A>
+<LI><A HREF="kap2.html#Heading40">2.3.4.5 Formatted Text.  </A>
+<LI><A HREF="kap2.html#Heading41">2.3.4.6 Local.  </A>
+</UL>
+<LI><A HREF="kap2.html#Heading42">2.3.5 HL7 Protocol Variants</A>
+<UL>
+<LI><A HREF="kap2.html#Heading43">2.3.5.1 Sequence Number Protocol.  </A>
+<LI><A HREF="kap2.html#Heading44">2.3.5.2 Continuation messages and segments.  </A>
+</UL>
+<LI><A HREF="kap2.html#Heading45">2.3.6 HL7 Batch Protocol</A>
+<UL>
+<LI><A HREF="kap2.html#Heading46">2.3.6.1 Structure of an HL7 batch file.</A>
+<LI><A HREF="kap2.html#Heading47">2.3.6.2 Related Segments and Data Usage.  </A>
+<LI><A HREF="kap2.html#Heading48">2.3.6.3 Acknowledging Batches.  </A>
+</UL>
+</UL>
+<LI><A HREF="kap2.html#Heading49">2.4 CONTROL MESSAGES</A>
+<UL>
+<LI><A HREF="kap2.html#Heading50">2.4.1 ACK: General Acknowledgement</A>
+<LI><A HREF="kap2.html#Heading51">2.4.2 MCF: Delayed acknowledgement</A>
+</UL>
+<LI><A HREF="kap2.html#Heading52">2.5 MESSAGE CONTROL SEGMENTS</A>
+<UL>
+<LI><A HREF="kap2.html#Heading53">2.5.1 ADD - ADDENDUM</A>
+<LI><A HREF="kap2.html#Heading54">2.5.2 BHS - BATCH HEADER -    Stapeldatei - Kopfsegment</A>
+<LI><A HREF="kap2.html#Heading55">2.5.3 BTS - BATCH TRAILER - Stapeldatei Folgesegment</A>
+<LI><A HREF="kap2.html#Heading56">2.5.4 ERR - ERROR -Fehler</A>
+<LI><A HREF="kap2.html#Heading57">2.5.5 FHS - FILE HEADER -File-Kopfsegment</A>
+<LI><A HREF="kap2.html#Heading58">2.5.6 FTS - FILE TRAILER -File-Folgesegment</A>
+<LI><A HREF="kap2.html#Heading59">2.5.7 MSA - MESSAGE ACKNOWLEDGMENT -Best&auml;tigung einer Nachricht</A>
+<LI><A HREF="kap2.html#Heading60">2.5.8 MSH - MESSAGE HEADER- Nachrichtenkopf</A>
+<LI><A HREF="kap2.html#Heading61">2.5.9 NTE - NOTES AND COMMENTS -Bemerkungen und Kommentare</A>
+</UL>
+<LI><A HREF="kap2.html#Heading62">2.6 SAMPLE CONTROL MESSAGES</A>
+<UL>
+<LI><A HREF="kap2.html#Heading63">2.6.1 Simple Acknowledgement</A>
+<LI><A HREF="kap2.html#Heading64">2.6.2 Error Return</A>
+<LI><A HREF="kap2.html#Heading65">2.6.3 Sequence Number:  Initial Message</A>
+</UL>
+</UL>
+</UL>
+
+<H1>
+3</H1>
+<UL>
+<LI><A HREF="kap3.html#Heading1">3 <BR>Chapter 3</A>
+<UL>
+<LI><A HREF="kap3.html#Heading2">3.1 PURPOSE</A>
+<LI><A HREF="kap3.html#Heading3">3.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A>
+<UL>
+<LI><A HREF="kap3.html#Heading4">3.2.1 Admit a Patient (Event Code A01)</A>
+<LI><A HREF="kap3.html#Heading5">3.2.2 Transfer (Event Code A02)</A>
+<LI><A HREF="kap3.html#Heading6">3.2.3 Discharge (Event Code A03)</A>
+<LI><A HREF="kap3.html#Heading7">3.2.4 Register a Patient (Event Code A04)</A>
+<LI><A HREF="kap3.html#Heading8">3.2.5 Pre-admit a Patient (Event Code A05)</A>
+<LI><A HREF="kap3.html#Heading9">3.2.6 Transfer an Outpatient to Inpatient (Event Code A06)</A>
+<LI><A HREF="kap3.html#Heading10">3.2.7 Transfer an Inpatient to Outpatient (Event Code A07)</A>
+<LI><A HREF="kap3.html#Heading11">3.2.8 Update Patient Information (Event Code A08)</A>
+<LI><A HREF="kap3.html#Heading12">3.2.9 Patient Departing (Event Code A09)</A>
+<LI><A HREF="kap3.html#Heading13">3.2.10 Patient Arriving (Event Code A10)</A>
+<LI><A HREF="kap3.html#Heading14">3.2.11 Cancel Admit (Event Code A11)</A>
+<LI><A HREF="kap3.html#Heading15">3.2.12 Cancel Transfer (Event Code A12)</A>
+<LI><A HREF="kap3.html#Heading16">3.2.13 Cancel Discharge (Event Code A13)</A>
+<LI><A HREF="kap3.html#Heading17">3.2.14 Pending Admit (Event Code A14)</A>
+<LI><A HREF="kap3.html#Heading18">3.2.15 Pending Transfer (Event Code A15)</A>
+<LI><A HREF="kap3.html#Heading19">3.2.16 Pending Discharge (Event Code A16)</A>
+<LI><A HREF="kap3.html#Heading20">3.2.17 Swap Patients (Event Code A17)</A>
+<LI><A HREF="kap3.html#Heading21">3.2.18 Merge Patient Information (Event Code A18)</A>
+<LI><A HREF="kap3.html#Heading22">3.2.19 Patient Query (Event Code A19)</A>
+<LI><A HREF="kap3.html#Heading23">3.2.20 3.2.20.  Nursing/Census Application Updates (Event Code A20)</A>
+<LI><A HREF="kap3.html#Heading24">3.2.21 Patient Goes On A "Leave Of Absence" (Event Code A21)</A>
+<LI><A HREF="kap3.html#Heading25">3.2.22 A Patient Returns From A "Leave Of Absence" (Event Code A22)</A>
+<LI><A HREF="kap3.html#Heading26">3.2.23 Delete a Patient Record (Event Code A23)</A>
+<LI><A HREF="kap3.html#Heading27">3.2.24 Create a Patient Link Transaction (Event Code A24)</A>
+</UL>
+<LI><A HREF="kap3.html#Heading28">3.3 MESSAGE SEGMENTS </A>
+<UL>
+<LI><A HREF="kap3.html#Heading29">3.3.1 EVN - EVENT TYPE-(Ereignistyp)</A>
+<LI><A HREF="kap3.html#Heading30">3.3.2 MRG-MERGE PATIENT INFORMATION/Patienteninf. zusammenf&uuml;hren</A>
+<LI><A HREF="kap3.html#Heading31">3.3.3 PID - PATIENT IDENTIFICATION-</A>
+<LI><A HREF="kap3.html#Heading32">3.3.4 PV1 - PATIENT VISIT-/Fall</A>
+<LI><A HREF="kap3.html#Heading33">3.3.5 NPU - NON-PATIENT UPDATE/Bettenstatus--</A>
+<LI><A HREF="kap3.html#Heading34">3.3.6 NK1 - NEXT OF KIN/Zu benachrichtigende Person -</A>
+</UL>
+<LI><A HREF="kap3.html#Heading35">3.4 EXAMPLE TRANSACTIONS</A>
+<UL>
+<LI><A HREF="kap3.html#Heading36">3.4.1 Admit a Patient - Trigger Event 01-</A>
+<LI><A HREF="kap3.html#Heading37">3.4.2 Merge Patient Information - Trigger Event 18-</A>
+</UL>
+<LI><A HREF="kap3.html#Heading38">3.5 IMPLEMENTATION CONSIDERATIONS</A>
+<LI><A HREF="kap3.html#Heading39">3.6 OUTSTANDING ISSUES</A>
+</UL>
+</UL>
+
+
+<H1>
+4</H1>
+<UL>
+<LI><A HREF="kap4.html#Heading1">4 <BR>Chapter 4</A>
+<UL>
+<LI><A HREF="kap4.html#Heading2">4.1 PURPOSE</A>
+<LI><A HREF="kap4.html#Heading3">4.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A>
+<LI><A HREF="kap4.html#Heading4">4.3 MESSAGE DEFINITIONS</A>
+<UL>
+<LI><A HREF="kap4.html#Heading5">4.3.1 ORM -- Order message--</A>
+<LI><A HREF="kap4.html#Heading6">4.3.2 ORR -- Response message (response to ORM)--</A>
+</UL>
+<LI><A HREF="kap4.html#Heading7">4.4 SEGMENT DEFINITIONS</A>
+<UL>
+<LI><A HREF="kap4.html#Heading8">4.4.1 Segment ID:  ORC - COMMON ORDER/Allg. Anforderung-</A>
+<LI><A HREF="kap4.html#Heading9">4.4.2 SEGMENT: BLG - BILLING/Abrechnung -</A>
+<LI><A HREF="kap4.html#Heading10">4.4.3 SEGMENT: RX1 - PHARMACY ORDER /Arzneimittelanforderung</A>
+<LI><A HREF="kap4.html#Heading11">4.4.4 SEGMENT:  ORO - ORDER OTHER /Andere Anforderung</A>
+</UL>
+<LI><A HREF="kap4.html#Heading12">4.5 EXAMPLES OF USE</A>
+</UL>
+</UL>
+
+<H1>
+5</H1>
+<UL>
+<LI><A HREF="kap5.html#Heading1">5 <BR>Chapter 5</A>
+<UL>
+<LI><A HREF="kap5.html#Heading2">5.1 PURPOSE</A>
+<UL>
+<LI><A HREF="kap5.html#Heading3">5.1.1 Display vs. Record-Oriented Response</A>
+<LI><A HREF="kap5.html#Heading4">5.1.2 Immediate vs. Deferred Response</A>
+<LI><A HREF="kap5.html#Heading5">5.1.3 Continuation Queries</A>
+<LI><A HREF="kap5.html#Heading6">5.1.4 Logical Data Groups</A>
+</UL>
+<LI><A HREF="kap5.html#Heading7">5.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A>
+<UL>
+<LI><A HREF="kap5.html#Heading8">5.2.1 A Query is Made for Immediate Response (Trigger Event Q01)</A>
+<LI><A HREF="kap5.html#Heading9">5.2.2 Deferred Access</A>
+<UL>
+<LI><A HREF="kap5.html#Heading10">5.2.2.1 A Query is Sent for Deferred Response (Trigger Event Q03)</A>
+<LI><A HREF="kap5.html#Heading11">5.2.2.2 A Query is Sent for Deferred Response (Trigger Event Q03).  Later, perhaps more than once.</A>
+</UL>
+<LI><A HREF="kap5.html#Heading12">5.2.3 Unsolicited Updates, ODM Message, Trigger Event Q05.</A>
+<LI><A HREF="kap5.html#Heading13">5.2.4 Batch Query</A>
+</UL>
+<LI><A HREF="kap5.html#Heading14">5.3 5.3. MESSAGE SEGMENTS </A>
+<UL>
+<LI><A HREF="kap5.html#Heading15">5.3.1 DSC - CONTINUATION POINTER-</A>
+<LI><A HREF="kap5.html#Heading16">5.3.2 DSP - DISPLAY DATA-</A>
+<LI><A HREF="kap5.html#Heading17">5.3.3 QRD - QUERY DEFINITION-</A>
+<LI><A HREF="kap5.html#Heading18">5.3.4 QRF - QUERY FILTER-</A>
+<LI><A HREF="kap5.html#Heading19">5.3.5 URD - RESULTS/UPDATE DEFINITION-</A>
+<LI><A HREF="kap5.html#Heading20">5.3.6 URS - UNSOLICITED SELECTION-</A>
+</UL>
+<LI><A HREF="kap5.html#Heading21">5.4 EXAMPLE TRANSACTIONS </A>
+<UL>
+<LI><A HREF="kap5.html#Heading22">5.4.1 Query with Display-Oriented Response</A>
+</UL>
+<LI><A HREF="kap5.html#Heading23">5.5 IMPLEMENTATION CONSIDERATIONS</A>
+<LI><A HREF="kap5.html#Heading24">5.6 OUTSTANDING ISSUES</A>
+</UL>
+</UL>
+
+<H1>
+6</H1>
+<UL>
+<LI><A HREF="kap6.html#Heading1">6 <BR>Chapter 6</A>
+<UL>
+<LI><A HREF="kap6.html#Heading2">6.1 PURPOSE</A>
+<LI><A HREF="kap6.html#Heading3">6.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A>
+<UL>
+<LI><A HREF="kap6.html#Heading4">6.2.1 Add and Update Patient Accounts (Event Code P01)</A>
+<LI><A HREF="kap6.html#Heading5">6.2.2 Purge Patient Accounts (Event Code P02)</A>
+<LI><A HREF="kap6.html#Heading6">6.2.3 Post Detail Financial Transactions (Event Code P03)</A>
+<LI><A HREF="kap6.html#Heading7">6.2.4 Generate Bills and Accounts Receivable Statements (Event Code P04)</A>
+</UL>
+<LI><A HREF="kap6.html#Heading8">6.3 MESSAGE SEGMENTS</A>
+<UL>
+<LI><A HREF="kap6.html#Heading9">6.3.1 SEGMENT: ACC - ACCIDENT-</A>
+<LI><A HREF="kap6.html#Heading10">6.3.2  DG1 - DIAGNOSIS-</A>
+<LI><A HREF="kap6.html#Heading11">6.3.3 FT1 - FINANCIAL TRANSACTION-</A>
+<LI><A HREF="kap6.html#Heading12">6.3.4 GT1 - GUARANTOR-</A>
+<LI><A HREF="kap6.html#Heading13">6.3.5 IN1 - INSURANCE-</A>
+<LI><A HREF="kap6.html#Heading14">6.3.6 NK1 - NEXT OF KIN-</A>
+<LI><A HREF="kap6.html#Heading15">6.3.7 PR1 - PROCEDURES-</A>
+<LI><A HREF="kap6.html#Heading16">6.3.8 UB1 - UB82 DATA-</A>
+</UL>
+<LI><A HREF="kap6.html#Heading17">6.4 EXAMPLE TRANSACTIONS </A>
+<UL>
+<LI><A HREF="kap6.html#Heading18">6.4.1 Create a Patient Billing/Accounts Receivable Record</A>
+<LI><A HREF="kap6.html#Heading19">6.4.2 UB82 Information Updated from Utilization Review Department</A>
+<LI><A HREF="kap6.html#Heading20">6.4.3 Diagnosis and DRG Assignment</A>
+</UL>
+<LI><A HREF="kap6.html#Heading21">6.5 IMPLEMENTATION CONSIDERATIONS</A>
+<LI><A HREF="kap6.html#Heading22">6.6 OUTSTANDING ISSUES</A>
+</UL>
+</UL>
+
+
+<H1>
+7</H1>
+<UL>
+<LI><A HREF="kap7.html#Heading1">7 <BR>Chapter 7</A>
+<UL>
+<LI><A HREF="kap7.html#Heading2">7.1 PURPOSE</A>
+<UL>
+<LI><A HREF="kap7.html#Heading3">7.1.1 Purpose and Scope</A>
+<LI><A HREF="kap7.html#Heading4">7.1.2 New Record Type</A>
+</UL>
+<LI><A HREF="kap7.html#Heading5">7.2 TRIGGER EVENTS AND MESSAGE DEFINITIONS</A>
+<UL>
+<LI><A HREF="kap7.html#Heading6">7.2.1 ORU Unsolicited Transmission of an Observation</A>
+<LI><A HREF="kap7.html#Heading7">7.2.2 Query for results of observation   </A>
+</UL>
+<LI><A HREF="kap7.html#Heading8">7.3 MESSAGE SEGMENTS</A>
+<UL>
+<LI><A HREF="kap7.html#Heading9">7.3.1 OBX - RESULT-/Ergebnis</A>
+</UL>
+<LI><A HREF="kap7.html#Heading10">7.4 A Proposed Coding Scheme for CPT extensions.</A>
+<LI><A HREF="kap7.html#Heading11">7.5 EXAMPLE TRANSACTIONS</A>
+<UL>
+<LI><A HREF="kap7.html#Heading12">7.5.1 Query/Response</A>
+<UL>
+<LI><A HREF="kap7.html#Heading13">7.5.1.1 Query   </A>
+<LI><A HREF="kap7.html#Heading14">7.5.1.2 Response</A>
+</UL>
+<LI><A HREF="kap7.html#Heading15">7.5.2 Continuation Query</A>
+<LI><A HREF="kap7.html#Heading16">7.5.3 Unsolicited</A>
+</UL>
+<LI><A HREF="kap7.html#Heading17">7.6 OUTSTANDING ISSUES</A>
+</UL>
+</UL>
+
+
+</body>
+</html>

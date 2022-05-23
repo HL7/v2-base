@@ -1,0 +1,602 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment CER:
+Certificate Detail
+(Zertifikat)
+</H2>
+<TABLE class=segm>
+<TR class=segm-even>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>Set ID - CER</TD>
+<TD class=segm>CER-Segmentnummer</TD>
+<TD class=segm>1..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01856">01856</A></TD>
+<TD class=segm><A HREF = "hl7v29typSI.htm#SI">SI</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4622">15.4.2.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>Serial Number</TD>
+<TD class=segm>Seriennummer</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>80=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01857">01857</A></TD>
+<TD class=segm><A HREF = "hl7v29typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4623">15.4.2.2</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>Version</TD>
+<TD class=segm>Version</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>80=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01858">01858</A></TD>
+<TD class=segm><A HREF = "hl7v29typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4624">15.4.2.3</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>Granting Authority</TD>
+<TD class=segm>Erteilende Einrichtung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01859">01859</A></TD>
+<TD class=segm><A HREF = "hl7v29typXON.htm#XON">XON</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4625">15.4.2.4</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm>Issuing Authority</TD>
+<TD class=segm>Ausgebende Einrichtung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01860">01860</A></TD>
+<TD class=segm><A HREF = "hl7v29typXCN.htm#XCN">XCN</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4626">15.4.2.5</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm>Signature </TD>
+<TD class=segm>Signatur der ausgebenden Einrichtung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01861">01861</A></TD>
+<TD class=segm><A HREF = "hl7v29typED.htm#ED">ED</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4627">15.4.2.6</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm>Granting Country</TD>
+<TD class=segm>Land der Zertifikatserteilung</TD>
+<TD class=segm>3..3</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0399.htm">0399</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01862">01862</A></TD>
+<TD class=segm><A HREF = "hl7v29typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4628">15.4.2.7</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm>Granting State/Province</TD>
+<TD class=segm>Bundesland der Zertifikatserteilung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0347.htm">0347</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01863">01863</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4629">15.4.2.8</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm>Granting County/Parish</TD>
+<TD class=segm>Bezirk der Zertifikatserteilung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0289.htm">0289</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01864">01864</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4630">15.4.2.9</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm>Certificate Type</TD>
+<TD class=segm>Art des Zertifikats</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01865">01865</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4631">15.4.2.10</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>11</TD>
+<TD class=segm>Certificate Domain</TD>
+<TD class=segm>Inhaltlicher G&uuml;ltigkeitsbereich des Zertifikats</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01866">01866</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4632">15.4.2.11</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>12</TD>
+<TD class=segm>Subject ID</TD>
+<TD class=segm>ID des Zertifikatsinhabers</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>C</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01867">01867</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4633">15.4.2.12</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>13</TD>
+<TD class=segm>Subject Name</TD>
+<TD class=segm>Name des Zertifikatinhabers</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>250=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01907">01907</A></TD>
+<TD class=segm><A HREF = "hl7v29typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4634">15.4.2.13</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>14</TD>
+<TD class=segm>Subject Directory Attribute Extension</TD>
+<TD class=segm>Zusatzattribute f. Zertifikatinhaber</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01868">01868</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4635">15.4.2.14</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>15</TD>
+<TD class=segm>Subject Public Key Info</TD>
+<TD class=segm>PublicKey Info Zertifikatsinhaber</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01869">01869</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4636">15.4.2.15</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>16</TD>
+<TD class=segm>Authority Key Identifier</TD>
+<TD class=segm>ID f&uuml;r Authority Key</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01870">01870</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4637">15.4.2.16</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>17</TD>
+<TD class=segm>Basic Constraint</TD>
+<TD class=segm>Merkmal Certificate Authority</TD>
+<TD class=segm>1..1</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0136.htm">0136</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01871">01871</A></TD>
+<TD class=segm><A HREF = "hl7v29typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4638">15.4.2.17</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>18</TD>
+<TD class=segm>CRL Distribution Point</TD>
+<TD class=segm>CRL Verteilungspunkt</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01872">01872</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4639">15.4.2.18</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>19</TD>
+<TD class=segm>Jurisdiction Country</TD>
+<TD class=segm>Land der Zertifikatsg&uuml;ltigkeit</TD>
+<TD class=segm>3..3</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0399.htm">0399</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01875">01875</A></TD>
+<TD class=segm><A HREF = "hl7v29typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4640">15.4.2.19</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>20</TD>
+<TD class=segm>Jurisdiction State/Province</TD>
+<TD class=segm>Bundesland der Zertifikatsg&uuml;ltigkeit</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0347.htm">0347</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01873">01873</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4641">15.4.2.20</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>21</TD>
+<TD class=segm>Jurisdiction County/Parish</TD>
+<TD class=segm>Bezirk der Zertifikatsg&uuml;ltigkeit</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0289.htm">0289</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01874">01874</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4642">15.4.2.21</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>22</TD>
+<TD class=segm>Jurisdiction Breadth</TD>
+<TD class=segm>Geographischer G&uuml;ltigkeitsbereich des Zertifikats</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0547.htm">0547</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01895">01895</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4643">15.4.2.22</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>23</TD>
+<TD class=segm>Granting Date</TD>
+<TD class=segm>Datum der Zertifikatserteilung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01876">01876</A></TD>
+<TD class=segm><A HREF = "hl7v29typDTM.htm#DTM">DTM</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4644">15.4.2.23</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>24</TD>
+<TD class=segm>Issuing Date</TD>
+<TD class=segm>Ausstellungsdatum</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01877">01877</A></TD>
+<TD class=segm><A HREF = "hl7v29typDTM.htm#DTM">DTM</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4645">15.4.2.24</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>25</TD>
+<TD class=segm>Activation Date</TD>
+<TD class=segm>Zeitpunkt der Aktivierung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01878">01878</A></TD>
+<TD class=segm><A HREF = "hl7v29typDTM.htm#DTM">DTM</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4646">15.4.2.25</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>26</TD>
+<TD class=segm>Inactivation Date</TD>
+<TD class=segm>Zeitpunkt der Deaktivierung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01879">01879</A></TD>
+<TD class=segm><A HREF = "hl7v29typDTM.htm#DTM">DTM</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4647">15.4.2.26</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>27</TD>
+<TD class=segm>Expiration Date</TD>
+<TD class=segm>g&uuml;ltig bis</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01880">01880</A></TD>
+<TD class=segm><A HREF = "hl7v29typDTM.htm#DTM">DTM</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4648">15.4.2.27</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>28</TD>
+<TD class=segm>Renewal Date</TD>
+<TD class=segm>Zeitpunkt der Erneuerung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01881">01881</A></TD>
+<TD class=segm><A HREF = "hl7v29typDTM.htm#DTM">DTM</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4649">15.4.2.28</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>29</TD>
+<TD class=segm>Revocation Date</TD>
+<TD class=segm>Zeitpunkt des Widerrufs</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01882">01882</A></TD>
+<TD class=segm><A HREF = "hl7v29typDTM.htm#DTM">DTM</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4650">15.4.2.29</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>30</TD>
+<TD class=segm>Revocation Reason Code</TD>
+<TD class=segm>Grund f&uuml;r den Widerruf</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01883">01883</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4651">15.4.2.30</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>31</TD>
+<TD class=segm>Certificate Status Code</TD>
+<TD class=segm>Zertifikatsstatus</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0536.htm">0536</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01884">01884</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch15.html#Heading4652">15.4.2.31</A></TD>
+</TR>
+</TABLE>
+<P>
+<P>
+<H3>Used within following Message Structures:</H3>
+<dd><A HREF = "hl7v29msgstruct.htm#MFN_M02">MFN_M02</A> Master File Notification for Staff/Practitioner (<A HREF = "std29/ch08.html#Heading3296">8.7.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B01">PMU_B01</A> Personnel Record Message (<A HREF = "std29/ch15.html#Heading4603">15.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B07">PMU_B07</A> Grant Certificate Message (<A HREF = "std29/ch15.html#Heading4610">15.3.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#PMU_B08">PMU_B08</A> Revoke Certificate Message (<A HREF = "std29/ch15.html#Heading4611">15.3.9</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RSP_K25">RSP_K25</A> Personnel Information Response Message (<A HREF = "std29/ch15.html#Heading4609">15.3.7</A>)</dd>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,742 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.8</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std28/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.8
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.8</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v281/hl7v281segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8.1</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v282/hl7v282segmSCD.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8.2</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v28segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment SCD:
+Anti-Microbial Cycle Data
+(Vorgaben zu einer Sterilisierung/Dekontamination)
+</H2>
+<TABLE class=segm>
+<TR class=segm-even>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>Cycle Start Time</TD>
+<TD class=segm>Startzeit des Zyklus</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02104">02104</A></TD>
+<TD class=segm><A HREF = "hl7v28typTM.htm#TM">TM</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading196">17.7.4.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>Cycle Count</TD>
+<TD class=segm>Anzahl von Zyklen</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>16=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02105">02105</A></TD>
+<TD class=segm><A HREF = "hl7v28typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading197">17.7.4.2</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>Temp Max</TD>
+<TD class=segm>H&ouml;chsttemperatur</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02106">02106</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading198">17.7.4.3</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>Temp Min</TD>
+<TD class=segm>Tiefsttemperatur</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02107">02107</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading199">17.7.4.4</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm>Load Number</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>16=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02108">02108</A></TD>
+<TD class=segm><A HREF = "hl7v28typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading200">17.7.4.5</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm>Condition Time</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02109">02109</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading201">17.7.4.6</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm>Sterilize Time</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02110">02110</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading202">17.7.4.7</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm>Exhaust Time</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02111">02111</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading203">17.7.4.8</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm>Total Cycle Time</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02112">02112</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading204">17.7.4.9</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm>Device Status</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0682.htm">0682</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02113">02113</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading205">17.7.4.10</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>11</TD>
+<TD class=segm>Cycle Start Date/Time</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02114">02114</A></TD>
+<TD class=segm><A HREF = "hl7v28typDTM.htm#DTM">DTM</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading206">17.7.4.11</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>12</TD>
+<TD class=segm>Dry Time</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02115">02115</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading207">17.7.4.12</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>13</TD>
+<TD class=segm>Leak Rate</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02116">02116</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading208">17.7.4.13</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>14</TD>
+<TD class=segm>Control Temperature</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02117">02117</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading209">17.7.4.14</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>15</TD>
+<TD class=segm>Sterilizer Temperature</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02118">02118</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading210">17.7.4.15</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>16</TD>
+<TD class=segm>Cycle Complete Time</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02119">02119</A></TD>
+<TD class=segm><A HREF = "hl7v28typTM.htm#TM">TM</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading211">17.7.4.16</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>17</TD>
+<TD class=segm>Under Temperature</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02120">02120</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading212">17.7.4.17</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>18</TD>
+<TD class=segm>Over Temperature</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02121">02121</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading213">17.7.4.18</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>19</TD>
+<TD class=segm>Abort Cycle</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02122">02122</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading214">17.7.4.19</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>20</TD>
+<TD class=segm>Alarm</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02123">02123</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading215">17.7.4.20</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>21</TD>
+<TD class=segm>Long in Charge Phase</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02124">02124</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading216">17.7.4.21</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>22</TD>
+<TD class=segm>Long in Exhaust Phase</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02125">02125</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading217">17.7.4.22</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>23</TD>
+<TD class=segm>Long in Fast Exhaust Phase</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02126">02126</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading218">17.7.4.23</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>24</TD>
+<TD class=segm>Reset</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02127">02127</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading219">17.7.4.24</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>25</TD>
+<TD class=segm>Operator - Unload</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02128">02128</A></TD>
+<TD class=segm><A HREF = "hl7v28typXCN.htm#XCN">XCN</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading220">17.7.4.25</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>26</TD>
+<TD class=segm>Door Open</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02129">02129</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading221">17.7.4.26</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>27</TD>
+<TD class=segm>Reading Failure</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02130">02130</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading222">17.7.4.27</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>28</TD>
+<TD class=segm>Cycle Type</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0702.htm">0702</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02131">02131</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading223">17.7.4.28</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>29</TD>
+<TD class=segm>Thermal Rinse Time</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02132">02132</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading224">17.7.4.29</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>30</TD>
+<TD class=segm>Wash Time</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02133">02133</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading225">17.7.4.30</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>31</TD>
+<TD class=segm>Injection Rate</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02134">02134</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading226">17.7.4.31</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>32</TD>
+<TD class=segm>Procedure Code</TD>
+<TD class=segm>Maﬂnahmen- / Operationsschl&uuml;ssel</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0088.htm">0088</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#00393">00393</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading227">17.7.4.32</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>33</TD>
+<TD class=segm>Patient Identifier List</TD>
+<TD class=segm>Patienten-ID-Liste</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#00106">00106</A></TD>
+<TD class=segm><A HREF = "hl7v28typCX.htm#CX">CX</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading228">17.7.4.33</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>34</TD>
+<TD class=segm>Attending Doctor</TD>
+<TD class=segm>Behandelnder Arzt</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0010.htm">0010</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#00137">00137</A></TD>
+<TD class=segm><A HREF = "hl7v28typXCN.htm#XCN">XCN</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading229">17.7.4.34</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>35</TD>
+<TD class=segm>Dilution Factor</TD>
+<TD class=segm>Verd&uuml;nnungsfaktor</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#01356">01356</A></TD>
+<TD class=segm><A HREF = "hl7v28typSN.htm#SN">SN</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading230">17.7.4.35</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>36</TD>
+<TD class=segm>Fill Time</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02139">02139</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading231">17.7.4.36</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>37</TD>
+<TD class=segm>Inlet Temperature</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02140">02140</A></TD>
+<TD class=segm><A HREF = "hl7v28typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading232">17.7.4.37</A></TD>
+</TR>
+</TABLE>
+<P>
+<P>
+<H3>Used within following Message Structures:</H3>
+<dd><A HREF = "hl7v28msgstruct.htm#SDR_S31">SDR_S31</A> Anti-Microbial Device Data Notification (<A HREF = "std28/ch17.html#Heading159">17.5.4</A>)</dd>
+<dd><A HREF = "hl7v28msgstruct.htm#SDR_S32">SDR_S32</A> Anti-Microbial Device Cycle Data Notification (<A HREF = "std28/ch17.html#Heading160">17.5.5</A>)</dd>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

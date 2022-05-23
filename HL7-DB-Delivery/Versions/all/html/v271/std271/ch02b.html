@@ -1,0 +1,3190 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>
+HL7 Version 2.7.1 Chapter 2
+</TITLE>
+<link rel="stylesheet" href="formate.css" type="Text/css">
+<link rel="shortcut icon" href="../hl7.ico">
+<META name="generator" contents="HL7-v2.x-XML-Extractor">
+<META name="author" contents="FO">
+</HEAD>
+<BODY>
+<Table width="100%" border="0">
+<TR>
+<TD align=right>
+<font size=+5><p>2. Control (continued)</font>
+</TD>
+</TR>
+<TR>
+<TD BGCOLOR=black>
+<br>
+</TD>
+</TR>
+</Table><p>
+<H1>Contents</H1>
+<ul>
+<li><a href="hl7.html">Contents</a></li>
+<li><a href="ch01.html">Chapter 01: Introduction</a></li>
+<li><a href="ch02.html">Chapter 02: Control</a></li>
+<li><a href="ch02a.html">Chapter 02a: Control (continued)</a></li>
+<li><a href="ch02b.html">Chapter 02b: Control (continued)</a></li>
+<li><a href="ch02c.html">Chapter 02c: Control (continued)</a></li>
+<li><a href="ch03.html">Chapter 03: Patient Administration</a></li>
+<li><a href="ch04.html">Chapter 04: Order Entry</a></li>
+<li><a href="ch04a.html">Chapter 04a: Order Entry</a></li>
+<li><a href="ch05.html">Chapter 05: Query</a></li>
+<li><a href="ch06.html">Chapter 06: Financial Management</a></li>
+<li><a href="ch07.html">Chapter 07: Observation Reporting</a></li>
+<li><a href="ch08.html">Chapter 08: Master Files</a></li>
+<li><a href="ch09.html">Chapter 09: Medical Records/Information Management  (Document Management)</a></li>
+<li><a href="ch10.html">Chapter 10: Scheduling</a></li>
+<li><a href="ch11.html">Chapter 11: Patient Referral</a></li>
+<li><a href="ch12.html">Chapter 12: Patient Care</a></li>
+<li><a href="ch13.html">Chapter 13: Clinical Laboratory Automation</a></li>
+<li><a href="ch14.html">Chapter 14: Application Management</a></li>
+<li><a href="ch15.html">Chapter 15: Personnel Management</a></li>
+<li><a href="ch16.html">Chapter 16: Claims and Reimbursement</a></li>
+<li><a href="ch17.html">Chapter 17: Materials Management</a></li>
+</ul>
+<hr>
+<UL>
+<li><a href="ch02b.html#Heading1">2 .B Control (continued) </a></li>
+<UL>
+<li><a href="ch02b.html#Heading2">2.B CONFORMANCE USING MESSAGE PROFILES  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading3">2.B.1 Message profile  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading4">2.B.1.0 Message profile identifier</a></li>
+<li><a href="ch02b.html#Heading5">2.B.1.1 Message profile publish/subscribe topics</a></li>
+</UL>
+<li><a href="ch02b.html#Heading6">2.B.2 Use case model  </a></li>
+<li><a href="ch02b.html#Heading7">2.B.3 Dynamic definition  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading8">2.B.3.0 Interaction model  </a></li>
+<li><a href="ch02b.html#Heading9">2.B.3.1 Acknowledgements  </a></li>
+</UL>
+<li><a href="ch02b.html#Heading10">2.B.4 Static definition  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading11">2.B.4.0 Static definition identifier</a></li>
+<li><a href="ch02b.html#Heading12">2.B.4.1 Static definition publish/subscribe topics</a></li>
+</UL>
+<li><a href="ch02b.html#Heading13">2.B.5 Table definition  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading14">2.B.5.0 Statements of table conformance</a></li>
+<li><a href="ch02b.html#Heading15">2.B.5.1 Table values</a></li>
+</UL>
+<li><a href="ch02b.html#Heading16">2.B.6 Profile type  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading17">2.B.6.0 Vendor constrainable profiles   </a></li>
+<li><a href="ch02b.html#Heading18">2.B.6.1 Realm constrainable profiles   </a></li>
+<li><a href="ch02b.html#Heading19">2.B.6.2 Implementation profiles   </a></li>
+</UL>
+<li><a href="ch02b.html#Heading20">2.B.7 Static definition concepts  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading21">2.B.7.0 This section discusses concepts common to each level of the static definition (message, segment and field). It uses the generic term 'element' to refer to segment groups, segments, fields, components and sub-components.</a></li>
+<li><a href="ch02b.html#Heading22">2.B.7.1 Length </a></li>
+<li><a href="ch02b.html#Heading23">2.B.7.2 Conformance Length </a></li>
+<li><a href="ch02b.html#Heading24">2.B.7.3 Truncation Flag </a></li>
+<li><a href="ch02b.html#Heading25">2.B.7.4 Cardinality  </a></li>
+<li><a href="ch02b.html#Heading26">2.B.7.5 Usage  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading27">2.B.7.5.1 Definition of Conditional Usage</a></li>
+</UL>
+<li><a href="ch02b.html#Heading28">2.B.7.6 Relationship between HL7 optionality and conformance usage</a></li>
+<li><a href="ch02b.html#Heading29">2.B.7.7 Relationship between usage and cardinality</a></li>
+<li><a href="ch02b.html#Heading30">2.B.7.8 Usage within hierarchical elements</a></li>
+<li><a href="ch02b.html#Heading31">2.B.7.9 Condition predicate</a></li>
+<li><a href="ch02b.html#Heading32">2.B.7.10 Annotation</a></li>
+</UL>
+<li><a href="ch02b.html#Heading33">2.B.8 Static definition - message level  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading34">2.B.8.0 Segment definitions</a></li>
+<li><a href="ch02b.html#Heading35">2.B.8.1 Segment usage </a></li>
+<li><a href="ch02b.html#Heading36">2.B.8.2 Segment cardinality</a></li>
+<li><a href="ch02b.html#Heading37">2.B.8.3 Field definitions</a></li>
+<li><a href="ch02b.html#Heading38">2.B.8.4 Field cardinality</a></li>
+<li><a href="ch02b.html#Heading39">2.B.8.5 Field usage </a></li>
+<li><a href="ch02b.html#Heading40">2.B.8.6 Data type</a></li>
+<li><a href="ch02b.html#Heading41">2.B.8.7 Length</a></li>
+<li><a href="ch02b.html#Heading42">2.B.8.8 Conformance Length</a></li>
+<li><a href="ch02b.html#Heading43">2.B.8.9 Table reference</a></li>
+</UL>
+<li><a href="ch02b.html#Heading44">2.B.9 Static definition - field level  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading45">2.B.9.0 Field Definitions</a></li>
+<li><a href="ch02b.html#Heading46">2.B.9.1 User-defined and suggested field values</a></li>
+<li><a href="ch02b.html#Heading47">2.B.9.2 Constant values</a></li>
+<li><a href="ch02b.html#Heading48">2.B.9.3 Data values</a></li>
+<li><a href="ch02b.html#Heading49">2.B.9.4 Pattern Matching</a></li>
+<li><a href="ch02b.html#Heading50">2.B.9.5 Element Relationships</a></li>
+<li><a href="ch02b.html#Heading51">2.B.9.6 Components and subcomponents</a></li>
+</UL>
+<li><a href="ch02b.html#Heading52">2.B.10 Message profile document  </a></li>
+<UL>
+<li><a href="ch02b.html#Heading53">2.B.10.0 Message profile document format</a></li>
+<li><a href="ch02b.html#Heading54">2.B.10.1 Message profile document definition</a></li>
+</UL>
+<li><a href="ch02b.html#Heading55">2.B.11 Tools  </a></li>
+<li><a href="ch02b.html#Heading56">2.B.12 Message profile document definition </a></li>
+<UL>
+<li><a href="ch02b.html#Heading57">2.B.12.0 Message profile schema  </a></li>
+</UL>
+<li><a href="ch02b.html#Heading58">2.B.13 Outstanding Issues</a></li>
+</UL>
+</UL>
+</UL>
+<p>
+<HR>
+<a id="Heading1">
+<H1 class="css_Überschrift1" >
+2 .B Control (continued) 
+</H1>
+<p>
+</p>
+<p>
+Chapter Chair
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Frank Oemig Agfa HealthCare GmbH
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Chapter Chair
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Robert Snelick
+</p>
+<p>
+National Institute of Standards and Technology (NIST)
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Chapter Chair
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Wendy HuangCanada Health Infoway
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Chapter Chair
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Ioana SingureanuEversolve, LLC
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Sponsoring Work Group:
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+Conformance and Guidance for Implementation/Testing
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+List Server:
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+cgit@lists.hl7.org
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<TABLECELL>
+</TABLECELL>
+<p>
+</p>
+<a id="Heading2">
+<H2 class="css_Überschrift2" >
+2.B CONFORMANCE USING MESSAGE PROFILES  
+</H2>
+<p>
+Previous sections in this chapter define the rules and conventions for constructing and communicating a message including the parts of a message structure. Messages that adhere to those rules of a specific version of a standard are compliant to that version of the standard.
+</p>
+<p>
+Compliance to the HL7 Standard has historically been impossible to define and measure in a meaningful way. To compensate for this shortcoming, vendors and sites have used various methods of specifying boundary conditions such as optionality and cardinality. Frequently, specifications have given little guidance beyond the often-indefinite constraints provided in the HL7 Standard.
+</p>
+<p>
+This section presents the methodology for producing a precise and unambiguous specification called a message profile. Messages that adhere to the constraints of a message profile are said to be conformant to the profile. For conformance to be measurable, the message profile must specify the following types of information:
+</p>
+<ul>
+<li>
+<p>
+What data will be passed in a message.
+</p>
+</li>
+<li>
+<p>
+The format in which the data will be passed.
+</p>
+</li>
+<li>
+<p>
+The acknowledgement responsibilities of the sender and receiver.
+</p>
+</li>
+</ul>
+<p>
+A conformance statement is a claim that the behavior of an application or application module agrees with the constraints stated in one or more message profiles. This section defines the message profile; however, the conformance statement will not be discussed further in this document.
+</p>
+<p>
+Definition:  An HL7 message profile is an unambiguous specification of one or more standard HL7 messages that have been analyzed for a particular use case. It prescribes a set of precise constraints upon one or more standard HL7 messages.
+</p>
+<p>
+An HL7 message profile is compliant, in all aspects, with the HL7 defined message(s) used in the profile. It may specify constraints on the standard HL7 message definition.
+</p>
+<p>
+A message profile fully describes a conversation between two or more systems through the combination of the following:
+</p>
+<ol type=a>
+<li>
+<p>
+one use case analysis,
+</p>
+</li>
+<li>
+<p>
+one or more dynamic definitions,
+</p>
+</li>
+<li>
+<p>
+one or more static definitions, and
+</p>
+</li>
+<li>
+<p>
+one table (vocabulary) definition.
+</p>
+</li>
+</ol>
+<p>
+The use case analysis may be documented as a use case diagram (supported with text) or just a textual description (See section 2.B.2, "Use case model".)
+</p>
+<p>
+The dynamic definition is an interaction specification for a conversation between 2 or more systems (See Section.2.B.3, "Dynamic definition".)
+</p>
+<p>
+The static definition is an exhaustive specification for a single message structure (see Section 2.B.4, "Static definition"). Normatively expressed as an XML document validated against the normative message profile Schema, it may be registered on the HL7 web site (see Section 2.B.10, "Message profile document").
+</p>
+<p>
+The table (vocabulary)definition is an exhaustive specification for a single message structure (see Section 2.B.5, "Table definition"). Normatively expressed as an XML document validated against the normative message profile Schema, it may be registered on the HL7 web site (see Section 2.B.10, "Message profile document").
+</p>
+<p>
+For detailed background information regarding message profiles, the reader is referred to the Implementation/Conformance Work Group balloted informative document, "Message Profiling Specification, Version 2.2", published November 30, 2000, upon which this section is based. This document is available from the HL7 Resources Web site (http://www.hl7.org).
+</p>
+<p>
+A sample message profile is shown on the next page to assist in illustrating the constituents of a message profile and how they work together.
+</p>
+<p>
+</p>
+<p>
+Message Profile Example
+</p>
+<p>
+<img src="ch02b_01.gif" >
+</p>
+<a id="Heading3">
+<H3 class="css_Überschrift3" >
+2.B.1 Message profile  
+</H3>
+<p>
+Definition: An HL7 message profile is an unambiguous specification of one or more standard HL7 messages that have been analyzed for a particular use case. Each message profile may have a unique identifier as well as publish/subscribe topics.
+</p>
+<a id="Heading4">
+<H4 class="css_Überschrift4" >
+2.B.1.0 Message profile identifier
+</H4>
+<p>
+Each message profile may have a unique identifier to facilitate reference.
+</p>
+<a id="Heading5">
+<H4 class="css_Überschrift4" >
+2.B.1.1 Message profile publish/subscribe topics
+</H4>
+<p>
+The message profile publish/subscribe topics is not required to be unique but might be used by publish/subscribe systems to convey aspects of the message profile (see MSH-21 Message Profile Identifier in the opening section of chapter 2).
+</p>
+<p>
+The topics are not a normative constituent of the message profile but, if provided as part of the metadata, should be in the format described below. The topic elements will be separated by the dash (-).  Any element that does not have a value should use null. As this information may be used in a message instance; it should not contain any HL7 message delimiters.
+</p>
+<p>
+Message Profile Publish/Subscribe Topics Elements
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+Seq
+</TH><TH>
+Topic Element Name
+</TH><TH>
+Value
+</TH>
+</TR>
+<TR>
+<TD>
+1
+</TD><TD>
+Implementation/Conformance Work Group ID
+</TD><TD>
+confsig
+</TD>
+</TR>
+<TR>
+<TD>
+2
+</TD><TD>
+An organization identifier
+</TD><TD>
+Abbreviated version of the organization name
+</TD>
+</TR>
+<TR>
+<TD>
+3
+</TD><TD>
+The HL7 version
+</TD><TD>
+Refer to HL7 Table 0104 - Version ID for valid values
+</TD>
+</TR>
+<TR>
+<TD>
+4
+</TD><TD>
+Topic Type
+</TD><TD>
+profile
+</TD>
+</TR>
+<TR>
+<TD>
+5
+</TD><TD>
+Accept Acknowledgement
+</TD><TD>
+The accept acknowledgement responsibilities.(refer to HL7 Table 0155 - Accept/application Acknowledgment Conditions for valid values)
+</TD>
+</TR>
+<TR>
+<TD>
+6
+</TD><TD>
+Application Acknowledgement
+</TD><TD>
+The application acknowledgement responsibilities (refer to HL7 Table 0155 - Accept/application Acknowledgment Conditions for valid values)
+</TD>
+</TR>
+<TR>
+<TD>
+7
+</TD><TD>
+Acknowledgement Mode
+</TD><TD>
+Deferred or Immediate
+</TD>
+</TR>
+</TABLE><p>
+<p>
+An example of message profile publish/subscribe topics:
+</p>
+<p>
+confSig-MyOrganization-2.4-profile-AL-NE-Immediate
+</p>
+<a id="Heading6">
+<H3 class="css_Überschrift3" >
+2.B.2 Use case model  
+</H3>
+<p>
+Definition: A use case model documents the scope and requirements for an HL7 message profile or set of message profiles.
+</p>
+<p>
+The use case model must:
+</p>
+<ol type=a>
+<li>
+<p>
+Provide a name that clearly and concisely defines the exchange
+</p>
+</li>
+<li>
+<p>
+Document the purpose for each message exchange
+</p>
+</li>
+<li>
+<p>
+Define the actors, including the sending and receiving applications
+</p>
+</li>
+<li>
+<p>
+Define the flow of events between these actors including, where appropriate, derived events
+</p>
+</li>
+<li>
+<p>
+Document the situations in which the exchange of a particular HL7 message profile is required
+</p>
+</li>
+</ol>
+<p>
+Refer to the HL7 V3.0 Message Development Framework (MDF 99) for further information on use case models and their uses within HL7.
+</p>
+<a id="Heading7">
+<H3 class="css_Überschrift3" >
+2.B.3 Dynamic definition  
+</H3>
+<p>
+Definition: The dynamic definition is an interaction specification for a conversation between 2 or more systems. It may reference one to many static definitions. The dynamic definition may include an interaction model in addition to the acknowledgement responsibilities.
+</p>
+<a id="Heading8">
+<H4 class="css_Überschrift4" >
+2.B.3.0 Interaction model  
+</H4>
+<p>
+Definition: The Interaction Model illustrates the sequence of trigger events and resulting message flows between 2 or more systems. It may be in literal or graphical form. Graphical form should be a UML activity diagram. Example activity diagrams are shown here for the original and enhanced acknowledgement modes.
+</p>
+<p>
+Interaction Model Example - ADT^A01/ACK^A01 (Original Acknowledgement Mode)
+</p>
+<p>
+<img src="ch02b_02.gif" >
+</p>
+<p>
+Interaction Model Example - ADT^A01/ACK^A01 (Enhanced Acknowledgement Mode)
+</p>
+<p>
+<img src="ch02b_03.gif" >
+</p>
+<a id="Heading9">
+<H4 class="css_Überschrift4" >
+2.B.3.1 Acknowledgements  
+</H4>
+<p>
+The specific HL7 acknowledgements required and/or allowed for use with the specified static definition of the HL7 message profile shall be defined. Specifically, the dynamic definition shall identify whether an accept and/or application level acknowledgement is allowed or required.
+</p>
+<p>
+For any one static definition there may be one or more dynamic definition.
+</p>
+<p>
+The dynamic definition shall define the conditions under which an accept and/or application level acknowledgement is expected.
+</p>
+<p>
+Allowed conditions include:
+</p>
+<ol type=a>
+<li>
+<p>
+Always
+</p>
+</li>
+<li>
+<p>
+Never
+</p>
+</li>
+<li>
+<p>
+Only on success
+</p>
+</li>
+<li>
+<p>
+Only on error.
+</p>
+</li>
+</ol>
+<a id="Heading10">
+<H3 class="css_Überschrift3" >
+2.B.4 Static definition  
+</H3>
+<p>
+Definition: The static definition is an exhaustive specification for a single message. Normatively expressed in XML, it may be registered on the HL7 web site (See Section 2.B.10, "Message profile document"). The static definition is based on a message structure defined in the HL7 Standard. The message code, trigger event, event description, role (Sender or Receiver) and, if applicable, the order control code will be provided. A complete static definition shall be defined at the message, segment, and field levels. A static definition is compliant in all aspects with the HL7-defined message it profiles. However, the static definition may define additional constraints on the standard HL7 message.
+</p>
+<p>
+A static definition identifies only those specific elements of a standard HL7 message that are used in the exchange.
+</p>
+<p>
+A static definition explicitly defines:
+</p>
+<ol type=a>
+<li>
+<p>
+Segments, segment groups, fields and components usage rules
+</p>
+</li>
+<li>
+<p>
+Cardinalities
+</p>
+</li>
+<li>
+<p>
+Length information
+</p>
+</li>
+<li>
+<p>
+Value sets and coding systems.
+</p>
+</li>
+</ol>
+<p>
+The following figure depicts, in a graphical way, the concept that the static definition is an overlay of the HL7 message structure further constraining it. For example, where the HL7 message structure shows unlimited number of NK1 Segments, the static definition allows for only three repetitions. Additionally, fields that are optional in the HL7 message structure may be required within the HL7 static definitions.
+</p>
+<p>
+Static Definition Illustration
+</p>
+<p>
+<img src="ch02b_04.gif" >
+</p>
+<a id="Heading11">
+<H4 class="css_Überschrift4" >
+2.B.4.0 Static definition identifier
+</H4>
+<p>
+Each static definition must have a unique identifier when registered (See section 2.B.10, "Message profile document"). An authority other than the registry may define this identifier. If, at the time of registration, the static profile does not have an identifier assigned by the submitter's authority, the registry authority will assign one. The static definition identifier would be the identifier used if a system asserts a strict conformance claim (see MSH-21 Message Profile Identifier in the first section of chapter 2).
+</p>
+<a id="Heading12">
+<H4 class="css_Überschrift4" >
+2.B.4.1 Static definition publish/subscribe topics
+</H4>
+<p>
+Static definition publish/subscribe topics convey the static definition aspects of the message profile. These topics may be used by publish/subscribe systems (see MSH-21 Message Profile Identifier in the first section of chapter 2).
+</p>
+<p>
+The topics are not a normative constituent of the message profile but, if provided as part of the metadata (see section 2.B.10, "Message profile document"), should be in the format described below. The topic elements will be separated by the dash (-). Any element that does not have a value should be null (nothing between the dashes). As this information may be used in a message instance, it should not contain any HL7 message delimiters.
+</p>
+<p>
+Static Definition Publish/Subscribe Topics Components
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+Seq
+</TH><TH>
+Topic element name
+</TH><TH>
+Value(s)
+</TH>
+</TR>
+<TR>
+<TD>
+1
+</TD><TD>
+Implementation/Conformance Work Group ID
+</TD><TD>
+confsig
+</TD>
+</TR>
+<TR>
+<TD>
+2
+</TD><TD>
+An organization identifier
+</TD><TD>
+Abbreviated version of the organization name
+</TD>
+</TR>
+<TR>
+<TD>
+3
+</TD><TD>
+The HL7 version
+</TD><TD>
+Refer to HL7 Table 0104 - Version ID for valid values
+</TD>
+</TR>
+<TR>
+<TD>
+4
+</TD><TD>
+Topic Type
+</TD><TD>
+static
+</TD>
+</TR>
+<TR>
+<TD>
+5
+</TD><TD>
+Message Type Code
+</TD><TD>
+Refer to HL7 Table 0076 - Message type for valid values
+</TD>
+</TR>
+<TR>
+<TD>
+6
+</TD><TD>
+Event Type
+</TD><TD>
+Refer to HL7 Table 0003 - Event Type for valid values (this table may be extended by locally defined Z trigger events)
+</TD>
+</TR>
+<TR>
+<TD>
+7
+</TD><TD>
+Order Control Code
+</TD><TD>
+Refer to HL7 Table 0119 - Order Control Codes for valid values
+</TD>
+</TR>
+<TR>
+<TD>
+8
+</TD><TD>
+Structure Type
+</TD><TD>
+Refer to HL7 Table 0354 - Message Structure for valid values (this table may extended by locally defined message structures)
+</TD>
+</TR>
+<TR>
+<TD>
+9
+</TD><TD>
+Specification Version
+</TD><TD>
+Version number of the application, interface, or specification
+</TD>
+</TR>
+<TR>
+<TD>
+10
+</TD><TD>
+Specification Status
+</TD><TD>
+Status of the application, interface, or specification
+</TD>
+</TR>
+<TR>
+<TD>
+11
+</TD><TD>
+Role
+</TD><TD>
+Sender or Receiver
+</TD>
+</TR>
+</TABLE><p>
+<p>
+An example of static definition publish/subscribe topics:
+</p>
+<p>
+confsig-MyOrganization-2.4-static-ADT-A04--ADT_A01-v2-draft-Sender
+</p>
+<a id="Heading13">
+<H3 class="css_Überschrift3" >
+2.B.5 Table definition  
+</H3>
+<p>
+Table definitions will include statements of table conformance and, if available, the actual table elements supported.
+</p>
+<a id="Heading14">
+<H4 class="css_Überschrift4" >
+2.B.5.0 Statements of table conformance
+</H4>
+<p>
+Statements of table conformance will consist of the definition of the table and its constituent elements. To the maximum extent practical it should be possible to objectively validate the content of a given message instance against the table definition in the profile.
+</p>
+<a id="Heading15">
+<H4 class="css_Überschrift4" >
+2.B.5.1 Table values
+</H4>
+<p>
+The table definition can specify tables supported and the usage of values in those tables.  The source of the tables will be HL7, User, Local, External, or Imported.  For each table, the identifier, description and code system will be supplied.  The table identifier and version may also be supplied.
+</p>
+<p>
+For each element identified in the table, the code, display name, source, and usage (Refer to 2.B.7.5, "Usage") will be supplied.  The source of the individual element will be HL7, User, Redefined, or SDO.
+</p>
+<a id="Heading16">
+<H3 class="css_Überschrift3" >
+2.B.6 Profile type  
+</H3>
+<p>
+There are three basic profile types used in documenting standard conformance:
+</p>
+<ol type=a>
+<li>
+<p>
+HL7 Standard profile (represents a specific HL7 published standard, creation and publication limited to HL7 use),
+</p>
+</li>
+<li>
+<p>
+constrainable profile (with "Optional" elements which must be further constrained in order to create implementation profiles), and
+</p>
+</li>
+<li>
+<p>
+implementation profile (no "Optional" parts, fully implementable).
+</p>
+</li>
+</ol>
+<p>
+This model allows vendors or providers to publish generic profiles from which fully constrained implementation profiles can be created.
+</p>
+<p>
+In comparison with the HL7 standard, separate constrainable and implementation profiles may exist for the receiving and the sending role.
+</p>
+<p>
+Both constrainable profiles and implementation profiles focus primarily on the expectations of the sending application, with minimal constraints on the application behavior of the receiver.
+</p>
+<p>
+Due to the HL7 principle of not specifying application behavior, this message profile section will not address use cases where explicit constraints on the expected behavior of the receiver application (e.g., whether the receiver must process information, ignore it or generate an error) are required.
+</p>
+<a id="Heading17">
+<H4 class="css_Überschrift4" >
+2.B.6.0 Vendor constrainable profiles   
+</H4>
+<p>
+A vendor might develop a message profile to which all their software products must comply but, in itself, is not an implementation profile. The different products serve potentially different domains and might be implemented with products from other vendors. The vendor profile constrains the HL7 Standard by defining agreed-to vocabularies, conditionality rules, supported items, and local extensions that are shared across all products. The profile is not necessarily fully constrained. For example, the vendor profile might allow the usage code of optional as, across different products, an element may be required in some use cases, be optional or conditional in others, and not be supported at all in still others. Furthermore, at this level, providing exact length definition is optional as well.
+</p>
+<p>
+The vendor's individual software products might themselves have profiles that would build on, and further constrain, their vendor profile. The product profile would specifically define the information model and the elements contained within. The product profile might still be a constrainable profile as elements might result in different HL7 messages based on configuration settings and customizations. Only once all configuration settings and customizations have been taken into account can you have a fully-constrained 'Implementation' profile.
+</p>
+<p>
+Constrainable profiles can be useful for interface engine applications which must be flexible enough to allow for receipt of messages based on a variety of message profiles.  The desire of the application would be to validate message instances against one constrainable profile.
+</p>
+<a id="Heading18">
+<H4 class="css_Überschrift4" >
+2.B.6.1 Realm constrainable profiles   
+</H4>
+<p>
+Realms, national and regional, profiles represent localization and restrictions placed on the appropriate standard, while providing enough optionality for basing the more specific implementation profiles. Some examples of realm constrainable profiles are:
+</p>
+<ol type=a>
+<li>
+<p>
+AS4700.1-2001 Implementation of HL7 v2.3.1 Part 1:Patient Administration (constrainable profile for Australian Standards, constrains HL7 2.3.1, Chapter 3).
+</p>
+</li>
+<li>
+<p>
+AS/NZS 4700.3-1999 Implementation of HL7 v2.3 Part 3: Electronic messages for exchange of information on Drug Prescription (constrainable profile for Australian Standards, constrains HL7 2.3, various Chapters).
+</p>
+</li>
+</ol>
+<a id="Heading19">
+<H4 class="css_Überschrift4" >
+2.B.6.2 Implementation profiles   
+</H4>
+<p>
+Implementation profiles represent the lowest level of specification required for unambiguous implementation. Examples of some implementation profiles are:
+</p>
+<ol type=a>
+<li>
+<p>
+Adverse Drug Reaction Implementers Specification, 2001, TGA (implementation profile, constrains Australian Standards and HL7 v2.3.1 constrainable profiles for Therapeutic Goods Administration ADRAC Messaging Implementation Project),
+</p>
+</li>
+<li>
+<p>
+Diabetes Reporting Implementers Specification, 2001, UNSW (implementation profile, constrains Australian Standards and HL7 v2.3.1 constrainable profiles for University of NSW Diabetes Messaging Implementation Project),
+</p>
+</li>
+<li>
+<p>
+Specific version of a product, as implemented, at a specific provider.
+</p>
+</li>
+<li>
+<p>
+Within an implementation profile the exact length definition must be provided.
+</p>
+</li>
+</ol>
+<a id="Heading20">
+<H3 class="css_Überschrift3" >
+2.B.7 Static definition concepts  
+</H3>
+<a id="Heading21">
+<H4 class="css_Überschrift4" >
+2.B.7.0 This section discusses concepts common to each level of the static definition (message, segment and field). It uses the generic term 'element' to refer to segment groups, segments, fields, components and sub-components.
+</H4>
+<a id="Heading22">
+<H4 class="css_Überschrift4" >
+2.B.7.1 Length 
+</H4>
+<p>
+An unambiguous definition of length requires a clear understanding of what it applies to and how it is measured.  Length is defined to be a constraint on the number of characters that may be present in one occurrence of a message field or element. This definition satisfies both requirements; it applies (strictly) to an element's data value-i.e., the set of characters present in the message representing a value of the element's predefined data type-and it is measured in characters as defined by the rules in chapter 2.  The definition is system independent.  For example, a system that encodes characters using one byte and a system that uses two-byte encoding would use the same value for length to impose the same length constraint. Length does not count the HL7 characters used to represent the value, only the number of characters in the value itself are counted.  If the null character is represented by transmitting "", length conforms to any minimum and maximum length specification.
+</p>
+<p>
+Length shall be interpreted as a restriction on an element's data value, not on the presence or absence of the element.  A length value of zero is appropriate when the null character is transmitted, but this does not imply the element is not present; clearly two characters will be present if null is transmitted.  Restricting the applicability of length to data values present in the message is necessary.  Not only does it keep the concept simple and eliminate the need to address special cases, it also allows for the transmission of null values for required elements.  A required element can have a null value, since this still clearly means there is a data value encoded for the element in the message.  If an element is empty or not present in the message, i.e., there is no data value encoded for the element in the message, then length restrictions do not apply since there is nothing to restrict and no length constraint that can be violated.
+</p>
+<p>
+Length shall be specified using the following syntax: "m..n", where m and n are non-negative integers designating the minimum and maximum number of characters the element may have, respectively, where n ( m. When an upper bound for length cannot be determined in advance, the use of the asterisk character, "*", may be used as a place holder for the maximum value, so that, in addition, to the above syntax, where m and n are integer values, a constraint of the form "m..*" may be used to indicate the maximum length constraint is unknown.
+</p>
+<p>
+Example length constraints are shown in the Minimum and Maximum Length Examples table.
+</p>
+<p>
+Minimum and Maximum Length Examples
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+Value
+</TH><TH>
+Description
+</TH><TH>
+Comment
+</TH>
+</TR>
+<TR>
+<TD>
+<br>
+</TD><TD>
+For constrainable profile: no length defined, i.e. no requirements on the length are given.
+<p>
+Leaving this information empty is not allowed for implementable profiles.
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+0..0
+</TD><TD>
+For withdrawn elements:  minimum and maximum set to 0.
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+1..1
+</TD><TD>
+Element must have exactly one character
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+1..n
+</TD><TD>
+Element may have up to n characters
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+n..n
+</TD><TD>
+Element must have exactly "n" characters
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+1..*
+</TD><TD>
+Element may have any length.
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+n..*
+</TD><TD>
+Element may have any length which is greater than or equal to "n", where "n" is greater than or equal to 1.
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+m..n
+</TD><TD>
+Element must have a minimum length of "m" and a maximum length of "n" where "m" is less than or equal to "n" and "m" is greater than or equal to 1.
+</TD><TD>
+<br>
+</TD>
+</TR>
+</TABLE><p>
+<p>
+Note: Whether or not an element is populated is controlled by cardinality. But if the element is populated with a non null value, the minimum and maximum length definition must hold. The null information representation (two double quotes) is not considered to be a value with applicable length information.
+</p>
+<p>
+Length should not be specified for composite elements. In these cases, the actual min and max lengths can be very difficult to determine due to the interdependencies on the component content, and the specification of actual lengths is not useful either. For example, if an overall length of 4..20 is assigned to a data element with a type CWE, what does this mean in practice? However if a length is specified, the vertical bar representation of the data must conform to the stated length, allowing for an additional character for each HL7 separator character.
+</p>
+<a id="Heading23">
+<H4 class="css_Überschrift4" >
+2.B.7.2 Conformance Length 
+</H4>
+<p>
+Constrainable specifications may also specify a conformance length. This is the number of characters that any conformant application must be able to correctly handle.For example, a constrainable profile may declare that the min and max lengths of a specific field are 3 and 2500. An implementation profile may further constrain this length to specify what is actually supported by an application. However an application could declare a length of 3..4, which may not be useful within the context of the constrainable profile. A constrainable profile may specify conformance lengths to establish a minimum expectation. In the example case, if the constrainable profile specifies a conformance length of 200, no other profile may assert conformance to the constrainable profile unless its maximum length is 200 or greater.
+</p>
+<p>
+Conformance length is a redundant concept in implementation profiles that will not be further constrained, and should not be specified.
+</p>
+<a id="Heading24">
+<H4 class="css_Überschrift4" >
+2.B.7.3 Truncation Flag 
+</H4>
+<p>
+As of 2.7, a truncation pattern is defined which can be used to assist applications to manage the existence of data that exceeds the maximum number of characters that can be properly handled. The truncation pattern is described in Chapter 2, section 2.5.5.2, "Truncation Pattern". Note that the actual truncation behavior of the pattern is data type dependent. Applications shall not use truncation if the profile prohibits it. Applications may support truncation if the profile permits it.  Message Profiles may specify the truncation behaviour.
+</p>
+<p>
+The truncation flag is a simple boolean. In a constrainable profile, the value may be true or false. False signifies that the element may not be truncated, while true means that the value may be truncated. If a profile fixes truncation to false, no other further constraining profile may mark this value as true. If the value is fixed to true, other further constraining profiles may mark it as true or false.
+</p>
+<p>
+In an implementation profile, a value of true for the truncation flag signifies that the application supports the defined truncation behaviour for the appropriate type. A value of false indicates that the application does not support data truncation for this element.
+</p>
+<p>
+Although the truncation pattern was only defined in v2.7, the bahaviour may be adopted for previous versions of HL7, and the truncation flag may be used with previous version. Note that in these cases, the truncation character cannot be specified in the message, and some other arrangement must exist.
+</p>
+<a id="Heading25">
+<H4 class="css_Überschrift4" >
+2.B.7.4 Cardinality  
+</H4>
+<p>
+In order to separate message content requirements from application behavior requirements, cardinality is used to control message content, and usage is used to define application requirements. Cardinality controls the number of occurrences of an element appearing in a message. Some elements shall always be present (e.g., cardinality [1..1], [1..n]). Others shall never be present (i.e., cardinality [0..0]). Others may be optional with zero or more occurrences (e.g., cardinality [0..n]). Cardinality identifies the minimum and maximum number of occurrences that a message element must have in a conformant message. Cardinalities are expressed as a minimum-maximum pair of non-negative integers. A conformant message must always contain at least the minimum number of occurrences, and shall not contain more than the maximum number of occurrences.
+</p>
+<p>
+An explicit cardinality range is required for segment group, segment, and field elements.  Component and sub-component elements do not explicitly include a cardinality range, but a cardinality range is implicitly associated with each component and sub-component element.  The associated cardinality depends on the element's usage code.  For components and sub-components with a usage code of R, the associated cardinality range is [1..1]; for all elements with a usage code of RE, or O, the associated cardinality is [0..1]; for all elements with a usage code of C(a/b), the associated cardinality is determined by the resultant usage based on the evaluation of the condition predicate, and for all elements with an X usage code, the associated cardinality is [0..0].
+</p>
+<p>
+There are two special values for cardinality. If the minimum number of occurrences is 0, the element may be omitted from a message. In certain circumstances, the maximum number of occurrences may have no specified limit. In this case, it is identified with "*" (e.g., [n..*]).
+</p>
+<p>
+Valid cardinality values are shown in the Cardinality table; combinations not designated in the table are invalid. In particular usage code RE is not allowed with cardinalities [1..1], [1..n], and [1..*].  Cardinality [m..n], where m is greater than 1, is allowed with usage codes R and RE.  If an element with this cardinality range has a usage code RE, the element may be omitted from the message but if present, it must have at least m occurrences and may not have more than n occurrences.
+</p>
+<p>
+Cardinality
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+Value
+</TH><TH>
+Description
+</TH><TH>
+Valid Usage Codes
+</TH><TH>
+Comment
+</TH>
+</TR>
+<TR>
+<TD>
+[0..0]
+</TD><TD>
+Element never present
+</TD><TD>
+X
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[0..1]
+</TD><TD>
+Element may be omitted and it can have at most one occurrence
+</TD><TD>
+RE, O, C(a/b),
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[1..1]
+</TD><TD>
+Element must have exactly one occurrence
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[0..n]
+</TD><TD>
+Element may be omitted or may have up to n occurrences
+</TD><TD>
+RE, O, C(a/b)
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[1..n]
+</TD><TD>
+Element must appear at least once, and may have up to n occurrences
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[0..*]
+</TD><TD>
+Element may be omitted or may have an unlimited number of occurrences
+</TD><TD>
+RE, O, C(a/b)
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[1..*]
+</TD><TD>
+Element must appear at least once, and may have an unlimited number of occurrences
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[m..n]
+</TD><TD>
+Element must have at least "m" occurrences and may have at most "n" occurrences. Except that in the case where the usage code is RE, the element may also be omitted or have zero occurrences
+</TD><TD>
+R and RE
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[m..*]3
+</TD><TD>
+Element must have at least "m" occurrences and may have an unlimited number of occurrences.  Except that in the case where the usage code is RE, the element may also be omitted or have zero occurrences.
+</TD><TD>
+R and RE
+</TD><TD>
+<br>
+</TD>
+</TR>
+</TABLE><p>
+<a id="Heading26">
+<H4 class="css_Überschrift4" >
+2.B.7.5 Usage  
+</H4>
+<p>
+Message content is governed by the cardinality specification associated (explicitly or implicitly) with each element of an HL7 message. Usage rules govern the expected behavior of the sending application and receiving application with respect to the element. The usage codes expand/clarify the optionality codes defined in the HL7 standard. Usage codes are employed in a message profile to constrain the use of elements defined in the standard. The usage code definitions are given from a sender and receiver perspective and specify  implementation and operational requirements.
+</p>
+<p>
+The standard allows broad flexibility for the message structures that HL7 applications must be able to receive without failing. But while the standard allows that messages may be missing data elements or may contain extra data elements, it should not be inferred from this requirement that such messages are conformant. In fact, the usage codes specified in a message profile place strict conformance requirements on the behavior of the application.
+</p>
+<p>
+</p>
+<a id="Heading27">
+<H5 class="css_Überschrift5" >
+2.B.7.5.1 Definition of Conditional Usage
+</H5>
+<p>
+The conditional usage is defined as follows:
+</p>
+<p>
+</p>
+<p>
+C(a/b) - "a" and "b" in the expression are placeholders for usage codes representing the true ("a") predicate outcome and the false ("b") predicate outcome of the condition. The condition is expressed by a conditional predicate associated with the element ("See section 2.B.7.9, "Condition predicate"). "a" and "b" shall be one of "R", "RE", "O" and/or "X". The values of "a" and "b" can be the same.
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TD>
+The example C(R/RE) is interpreted as follows. If the condition predicate associated with the element is true then the usage for the element is R-Required. If the condition predicate associated with the element is false then the usage for the element is RE-Required but may be empty.
+<p>
+There are cases where it is appropriate to value "a" and "b" the same. For example, the base standard defines the usage of an element as "C" and the condition predicate is dependent on the presence or non-presence of another element. The profile may constrain the element that the condition is dependent on to X; in such a case the condition should always evaluate to false. Therefore, the condition is profiled to C(X/X) since the desired effect is for the element to be not supported. Note it is not appropriate to profile the element to X since this breaks the rules of allowable usage profiling (see table HL7 Optionality and Conformance Usage).
+</TD>
+</TR>
+</TABLE><p>
+<p>
+Usage Rules for a Sending Application
+</p>
+<p>
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+Optionality/Usage Indicator
+</TH><TH>
+Description
+</TH><TH>
+Implementation Requirement
+</TH><TH>
+Operational Requirement
+</TH>
+</TR>
+<TR>
+<TD>
+R
+</TD><TD>
+Required
+</TD><TD>
+The application shall implement "R" elements.
+</TD><TD>
+The application shall populate "R" elements with a non-empty value.
+</TD>
+</TR>
+<TR>
+<TD>
+RE
+</TD><TD>
+Required but may be empty
+</TD><TD>
+The application shall implement "RE" elements.
+</TD><TD>
+The application shall populate "RE" elements with a non-empty value if there is relevant data. The term "relevant" has a confounding interpretation in this definition.
+</TD>
+</TR>
+<TR>
+<TD>
+C(a/b)
+</TD><TD>
+Conditional
+</TD><TD>
+An element with a conditional usage code has an associated condition predicate (See section 2.B.7.9, "Condition predicate") that determines the operational requirements (usage code) of the element.
+<p>
+If the condition predicate associated with the element is true, follow the rules for a which shall be one of "R", "RE", "O" or X":
+<p>
+If the condition predicate associated with the element is false, follow the rules for b which shall be one of "R", "RE", "O" or X".
+<p>
+a and b can be valued the same.
+</TD>
+</TR>
+<TR>
+<TD>
+X
+</TD><TD>
+Not supported
+</TD><TD>
+The application (or as configured) shall not implement "X" elements.
+</TD><TD>
+The application shall not populate "X" elements.
+</TD>
+</TR>
+<TR>
+<TD>
+O
+</TD><TD>
+Optional
+</TD><TD>
+None. The usage indicator for this element has not yet been defined. For an implementation profile all optional elements must be profiled to R, RE, C(a/b),  or X.
+</TD><TD>
+Not Applicable.
+</TD>
+</TR>
+</TABLE><p>
+<p>
+Usage Rules for a Receiving Application
+</p>
+<p>
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+Optionality/Usage  Indicator
+</TH><TH>
+Description
+</TH><TH>
+Implementation Requirement
+</TH><TH>
+Operational Requirement
+</TH>
+</TR>
+<TR>
+<TD>
+R
+</TD><TD>
+Required
+</TD><TD>
+The application shall implement "R" elements.
+</TD><TD>
+The receiving application shall process (save/print/archive/etc.) the information conveyed by a required element.
+<p>
+A receiving application shall raise an exception due to the absence of a required element. A receiving application shall not raise an error due to the presence of a required element,
+</TD>
+</TR>
+<TR>
+<TD>
+RE
+</TD><TD>
+Required but may be empty
+</TD><TD>
+The application shall implement "RE" elements.
+</TD><TD>
+The receiving application shall process (save/print/archive/etc.) the information conveyed by a required but may be empty element. The receiving application shall process the message if the element is omitted (that is, an exception shall not be raised because the element is missing).
+</TD>
+</TR>
+<TR>
+<TD>
+C(a/b)
+</TD><TD>
+Conditional
+</TD><TD>
+The usage code has an associated condition predicate true (See section 2.B.7.9, "Condition predicate").
+<p>
+If the condition predicate associated with the element is true, follow the rules for a which shall one of "R", "RE", "O" or X":
+<p>
+If the condition predicate associated with the element is false, follow the rules for b which shall one of "R", "RE", "O" or X".
+</TD>
+</TR>
+<TR>
+<TD>
+X
+</TD><TD>
+Not supported
+</TD><TD>
+The application (or configured) shall not implement "X" elements.
+</TD><TD>
+None, if the element is not sent.
+<p>
+If the element is sent the receiving application may process the message, shall ignore the element, and may raise an exception. The receiving application shall not process (save/print/archive/etc.) the information conveyed by a not-supported element.
+</TD>
+</TR>
+<TR>
+<TD>
+O
+</TD><TD>
+Optional
+</TD><TD>
+None. The usage indicator for this element has not yet been defined. For an implementation profile all optional elements must be profiled to R, RE, C(a/b),  or X.
+</TD><TD>
+None.
+</TD>
+</TR>
+</TABLE><p>
+<a id="Heading28">
+<H4 class="css_Überschrift4" >
+2.B.7.6 Relationship between HL7 optionality and conformance usage
+</H4>
+<p>
+Conformance usage codes are more specific than HL7 Optionality codes. Because of the requirement that conformance statements must be compliant with the HL7 message definition it is derived from, there are restrictions on what usage codes may be assigned to an element based on the HL7 Optionality. For example, any element designated as required in a standard HL7 message definition shall also be required in all HL7 message profiles of that standard message.
+</p>
+<p>
+HL7 Optionality and Conformance Usage
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+HL7 Optionality
+</TH><TH>
+Allowed Conformance Usage
+</TH><TH>
+Comment
+</TH>
+</TR>
+<TR>
+<TD>
+R - Required
+</TD><TD>
+R
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+RE - Required but may be empty
+</TD><TD>
+RE, R
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+O - Optional
+</TD><TD>
+R, RE, O, C(a/b),  X
+</TD><TD>
+O is only permitted for constrainable profiles
+</TD>
+</TR>
+<TR>
+<TD>
+C - Conditional
+</TD><TD>
+C(a/b),   R
+</TD><TD>
+"a" and "b" shall be one of "R", "RE", "O" or "X". "a" and "b" can be valued the same.
+</TD>
+</TR>
+<TR>
+<TD>
+X - Not Supported
+</TD><TD>
+X
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+B - Backward Compatibility
+</TD><TD>
+R, RE, O, C(a/b), , X
+</TD><TD>
+B is only permitted for constrainable definitions
+</TD>
+</TR>
+<TR>
+<TD>
+W - Withdrawn
+</TD><TD>
+X
+</TD><TD>
+<br>
+</TD>
+</TR>
+</TABLE><p>
+<a id="Heading29">
+<H4 class="css_Überschrift4" >
+2.B.7.7 Relationship between usage and cardinality
+</H4>
+<p>
+Cardinality governs the appearance of a field, and usage governs the expected behavior of applications.  Nevertheless, a relationship exists between them that must be maintained. The valid combinations of the two are defined in the Cardinality table. For purposes of message profiles, selected cardinality and usage combinations are examined here. The constraints on allowed combinations are:
+</p>
+<ol type=a>
+<li>
+<p>
+If the usage of an element is Required (R), the minimum cardinality for the element shall always be greater than or equal to 1.
+</p>
+</li>
+<li>
+<p>
+If the usage of an element is not Required (R) (i.e., any code other than 'R'), the minimum cardinality shall be 0 except in the following condition:
+</p>
+</li>
+<li>
+<p>
+If the profile author wishes to express a circumstance where an element will not always be present, but when present must have a minimum number of occurrences greater than one, this may be indicated by specifying the non-required Usage code with the minimum cardinality representing the minimum number of occurrences when the element is present. This is accomplished, as in UML, with an expression of the form as (m..n), indicating that permitted occurrences are either zero, or the range of n through m.
+</p>
+</li>
+</ol>
+<p>
+Example combinations:
+</p>
+<p>
+Example Usage-Cardinality Combinations
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+Cardinality
+</TH><TH>
+Usage
+</TH><TH>
+Interpretation
+</TH>
+</TR>
+<TR>
+<TD>
+[1..1]
+</TD><TD>
+R
+</TD><TD>
+There will always be exactly 1 occurrence present.
+</TD>
+</TR>
+<TR>
+<TD>
+[1..5]
+</TD><TD>
+R
+</TD><TD>
+There will be between 1 and 5 occurrences present.
+</TD>
+</TR>
+<TR>
+<TD>
+[0..1]
+</TD><TD>
+RE
+</TD><TD>
+The element must be supported, but may not always be present.
+</TD>
+</TR>
+<TR>
+<TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[0..5]
+</TD><TD>
+C(R/X)
+</TD><TD>
+If the condition predicate is true, there will be 1 to 5 occurrences. If the predicate is false there will be 0 occurrences.
+</TD>
+</TR>
+</TABLE><p>
+<a id="Heading30">
+<H4 class="css_Überschrift4" >
+2.B.7.8 Usage within hierarchical elements
+</H4>
+<p>
+As part of the conformance framework, there is an additional rule for determining whether a particular 'element' is present. The rule is as follows: For an element to be considered present, it must have content. This means that simple elements (fields, components or sub-components with simple data types such as NM, ST, ID) must have at least one character. Complex elements (those composed of other elements, e.g., Messages, Segment Groups, Segments, Fields with complex data types such as CNE, XPN, etc.), must contain at least one component that is present. Elements that do not meet these conditions are not considered to be present.
+</p>
+<p>
+For example, if a segment is made up of 10 optional fields, at least one of the fields must be present in order for the segment to be considered present. Thus, if the segment is marked as Required, an instance message would only be conformant if the segment contained at least one field. The reason for this rule is to ensure that the intent of the profile is met. The rule is necessary because the traditional 'vertical bar' encoding allows for a bare segment identifier with no fields (e.g., a line containing just "NTE|" would be considered valid under the standard rules, but would be considered not present as far as testing against a conformance specification). The XML encoding also allows this, as well as fields without their components, components without their sub-components, etc. (e.g., &lt;PID.3/&gt;).
+</p>
+<a id="Heading31">
+<H4 class="css_Überschrift4" >
+2.B.7.9 Condition predicate
+</H4>
+<p>
+If the usage code of an element is C, then a conditionality predicate must be associated with this element that identifies the conditions under which the element must be or is allowed to be present. The predicate must be testable and based on other values within the message. This predicate may be expressed as a mathematical expression or in text and may utilize operators such as equivalence, logical AND, logical OR and NOT. The conforming sending and receiving applications shall both evaluate the predicate. When the Usage is not 'C', the conditionality predicate will not be valued.
+</p>
+<a id="Heading32">
+<H4 class="css_Überschrift4" >
+2.B.7.10 Annotation
+</H4>
+<p>
+Annotations provide further explanations to educate prospective users and/or implementers. These are usually used to enhance the descriptions of the elements of the base specification in order to relate them to a particular Context.
+</p>
+<p>
+Types of annotations supported:
+</p>
+<p>
+Definition: An explanation of the meaning of the element.
+</p>
+<p>
+Description: An explanation of the associated element.  This may contain formatting markup.
+</p>
+<p>
+Design Comment: Internal development note about why particular design decisions were made, outstanding issues and remaining work.  They may contain formatting markup.  Not intended for external publication.
+</p>
+<p>
+Implementation Note: Implementation Notes provide a general description about how the element is intended to be used, as well as hints on using or interpreting the it.
+</p>
+<p>
+Other Annotation: Additional content related to the element.
+</p>
+<p>
+Example: An example instance
+</p>
+<p>
+Added ability to communicate pattern matching and element relationships.  These, as well as condition predicate, will allow for text and formal testable constraints.
+</p>
+<a id="Heading33">
+<H3 class="css_Überschrift3" >
+2.B.8 Static definition - message level  
+</H3>
+<p>
+The message level static definition shall be documented using the HL7 abstract message syntax, with the addition of specifying cardinality and usage for each of the segments contained within the message structure.
+</p>
+<p>
+The usage column shall be updated to reflect the usage of the segment or group within this particular static definition.
+</p>
+<p>
+The cardinality column shall accurately reflect the minimum and maximum number of repetitions of the field allowed for the segment or group within this particular static definition.
+</p>
+<p>
+Sample Static Definition - Message Level
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+ADT^A01^ADT_A01
+</TH><TH>
+ADT Message
+</TH><TH>
+Status
+</TH><TH>
+Usage
+</TH><TH>
+Cardinality
+</TH><TH>
+Chapter
+</TH>
+</TR>
+<TR>
+<TD>
+MSH
+</TD><TD>
+Message Header
+</TD><TD>
+<br>
+</TD><TD>
+R
+</TD><TD>
+[1..1]
+</TD><TD>
+2
+</TD>
+</TR>
+<TR>
+<TD>
+[{ SFT }]
+</TD><TD>
+Software Segment
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+2
+</TD>
+</TR>
+<TR>
+<TD>
+[ UAC ]
+</TD><TD>
+User Authentication Credential
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+2
+</TD>
+</TR>
+<TR>
+<TD>
+EVN
+</TD><TD>
+Event Type
+</TD><TD>
+<br>
+</TD><TD>
+R
+</TD><TD>
+[1..1]
+</TD><TD>
+3
+</TD>
+</TR>
+<TR>
+<TD>
+PID
+</TD><TD>
+Patient Identification
+</TD><TD>
+<br>
+</TD><TD>
+R
+</TD><TD>
+[1..1]
+</TD><TD>
+3
+</TD>
+</TR>
+<TR>
+<TD>
+[  PD1  ]
+</TD><TD>
+Additional Demographics
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+3
+</TD>
+</TR>
+<TR>
+<TD>
+[  ARV  ]
+</TD><TD>
+Access Restrictions
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+3
+</TD>
+</TR>
+<TR>
+<TD>
+[{ ROL }]
+</TD><TD>
+Role
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+15
+</TD>
+</TR>
+<TR>
+<TD>
+[{ NK1 }]
+</TD><TD>
+Next of Kin / Associated Parties
+</TD><TD>
+<br>
+</TD><TD>
+RE
+</TD><TD>
+[0..3]
+</TD><TD>
+3
+</TD>
+</TR>
+<TR>
+<TD>
+PV1
+</TD><TD>
+Patient Visit
+</TD><TD>
+<br>
+</TD><TD>
+C
+</TD><TD>
+[0..1]
+</TD><TD>
+3
+</TD>
+</TR>
+<TR>
+<TD>
+[  ARV  ]
+</TD><TD>
+Access Restrictions
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+3
+</TD>
+</TR>
+<TR>
+<TD>
+[  PV2  ]
+</TD><TD>
+Patient Visit - Additional Info.
+</TD><TD>
+<br>
+</TD><TD>
+RE
+</TD><TD>
+[0..1]
+</TD><TD>
+3
+</TD>
+</TR>
+<TR>
+<TD>
+[{ ROL }]
+</TD><TD>
+Role
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+15
+</TD>
+</TR>
+<TR>
+<TD>
+[{ DB1 }]
+</TD><TD>
+Disability Information
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+3
+</TD>
+</TR>
+<TR>
+<TD>
+[{ OBX }]
+</TD><TD>
+Observation/Result
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+7
+</TD>
+</TR>
+<TR>
+<TD>
+[{ AL1 }]
+</TD><TD>
+Allergy Information
+</TD><TD>
+<br>
+</TD><TD>
+RE
+</TD><TD>
+[0..10]
+</TD><TD>
+3
+</TD>
+</TR>
+<TR>
+<TD>
+[{ DG1 }]
+</TD><TD>
+Diagnosis Information
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+6
+</TD>
+</TR>
+<TR>
+<TD>
+[  DRG  ]
+</TD><TD>
+Diagnosis Related Group
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+6
+</TD>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- PROCEDURE begin
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+PR1
+</TD><TD>
+Procedures
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+6
+</TD>
+</TR>
+<TR>
+<TD>
+[{ ROL }]
+</TD><TD>
+Role
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+15
+</TD>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- PROCEDURE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[{ GT1 }]
+</TD><TD>
+Guarantor
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+6
+</TD>
+</TR>
+<TR>
+<TD>
+[{
+</TD><TD>
+--- INSURANCE begin
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+IN1
+</TD><TD>
+Insurance
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+6
+</TD>
+</TR>
+<TR>
+<TD>
+[  IN2 ]
+</TD><TD>
+Insurance Additional Info.
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+6
+</TD>
+</TR>
+<TR>
+<TD>
+[{ IN3 }]
+</TD><TD>
+Insurance Additional Info - Cert.
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+6
+</TD>
+</TR>
+<TR>
+<TD>
+[{ ROL }]
+</TD><TD>
+Role
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+15
+</TD>
+</TR>
+<TR>
+<TD>
+}]
+</TD><TD>
+--- INSURANCE end
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+[  ACC  ]
+</TD><TD>
+Accident Information
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+6
+</TD>
+</TR>
+<TR>
+<TD>
+[  UB1  ]
+</TD><TD>
+Universal Bill Information
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+6
+</TD>
+</TR>
+<TR>
+<TD>
+[  UB2  ]
+</TD><TD>
+Universal Bill 92 Information
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+6
+</TD>
+</TR>
+<TR>
+<TD>
+[  PDA  ]
+</TD><TD>
+Patient Death and Autopsy
+</TD><TD>
+<br>
+</TD><TD>
+X
+</TD><TD>
+[0..0]
+</TD><TD>
+3
+</TD>
+</TR>
+</TABLE><p>
+<a id="Heading34">
+<H4 class="css_Überschrift4" >
+2.B.8.0 Segment definitions
+</H4>
+<p>
+The set of segments and segment groups included within the message shall be defined. Any segments or segment groups that are required by HL7 shall be included.
+</p>
+<a id="Heading35">
+<H4 class="css_Überschrift4" >
+2.B.8.1 Segment usage 
+</H4>
+<p>
+The usage of the segment or group within a message shall be defined using one of the codes in the previously defined usage table.
+</p>
+<a id="Heading36">
+<H4 class="css_Überschrift4" >
+2.B.8.2 Segment cardinality
+</H4>
+<p>
+Some segments and segment groups within the HL7 message are allowed to repeat. The cardinality of all the segments and groups within the message shall be defined.
+</p>
+<p>
+Static definition - segment level
+</p>
+<p>
+The segment level static definition shall be documented using the HL7 segment attribute table format with the addition of specifying length, usage and cardinality for each of the fields contained within the segment.
+</p>
+<ul>
+<li>
+<p>
+The length column shall be updated to accurately reflect the maximum allowed length for the field within this segment definition.
+</p>
+</li>
+<li>
+<p>
+The usage column shall accurately reflect the usage of the field within this segment definition.
+</p>
+</li>
+<li>
+<p>
+The cardinality column shall accurately reflect the minimum and maximum number of repetitions of the field allowed for this segment definition.
+</p>
+</li>
+</ul>
+<p>
+Sample Segment Level Definition - PID (Patient Identification) Segment
+</p>
+<TABLE width="100%" border=1>
+<TR>
+<TH>
+SEQ
+</TH><TH>
+LEN
+</TH><TH>
+C.LEN
+</TH><TH>
+DT
+</TH><TH>
+OPT
+</TH><TH>
+RP/#
+</TH><TH>
+TBL#
+</TH><TH>
+ITEM#
+</TH><TH>
+ELEMENT NAME
+</TH>
+<TH>DB Ref.</TH>
+</TR>
+<TR>
+<TD>
+1
+</TD><TD>
+1..4
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#SI">SI</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading38">00104</a>
+</TD><TD>
+Set ID - PID
+</TD>
+<td><a href="../hl7v27datel.htm#00104">DB</a></td>
+</TR>
+<TR>
+<TD>
+2
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+W
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading39">00105</a>
+</TD><TD>
+Patient ID
+</TD>
+<td><a href="../hl7v27datel.htm#00105">DB</a></td>
+</TR>
+<TR>
+<TD>
+3
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CX">CX</a>
+</TD><TD>
+R
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading40">00106</a>
+</TD><TD>
+Patient Identifier List
+</TD>
+<td><a href="../hl7v27datel.htm#00106">DB</a></td>
+</TR>
+<TR>
+<TD>
+4
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+W
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading41">00107</a>
+</TD><TD>
+Alternate Patient ID - PID
+</TD>
+<td><a href="../hl7v27datel.htm#00107">DB</a></td>
+</TR>
+<TR>
+<TD>
+5
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XPN">XPN</a>
+</TD><TD>
+R
+</TD><TD>
+Y
+</TD><TD>
+<a href="ch02c.html#Heading82">0200</a>
+</TD><TD>
+<a href="ch02b.html#Heading42">00108</a>
+</TD><TD>
+Patient Name
+</TD>
+<td><a href="../hl7v27datel.htm#00108">DB</a></td>
+</TR>
+<TR>
+<TD>
+6
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XPN">XPN</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading43">00109</a>
+</TD><TD>
+Mother's Maiden Name
+</TD>
+<td><a href="../hl7v27datel.htm#00109">DB</a></td>
+</TR>
+<TR>
+<TD>
+7
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading44">00110</a>
+</TD><TD>
+Date/Time of Birth
+</TD>
+<td><a href="../hl7v27datel.htm#00110">DB</a></td>
+</TR>
+<TR>
+<TD>
+8
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading14">0001</a>
+</TD><TD>
+<a href="ch02b.html#Heading45">00111</a>
+</TD><TD>
+Administrative Sex
+</TD>
+<td><a href="../hl7v27datel.htm#00111">DB</a></td>
+</TR>
+<TR>
+<TD>
+9
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+W
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading46">00112</a>
+</TD><TD>
+Patient Alias
+</TD>
+<td><a href="../hl7v27datel.htm#00112">DB</a></td>
+</TR>
+<TR>
+<TD>
+10
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<a href="ch02c.html#Heading17">0005</a>
+</TD><TD>
+<a href="ch02b.html#Heading47">00113</a>
+</TD><TD>
+Race
+</TD>
+<td><a href="../hl7v27datel.htm#00113">DB</a></td>
+</TR>
+<TR>
+<TD>
+11
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XAD">XAD</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading48">00114</a>
+</TD><TD>
+Patient Address
+</TD>
+<td><a href="../hl7v27datel.htm#00114">DB</a></td>
+</TR>
+<TR>
+<TD>
+12
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+W
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading49">00115</a>
+</TD><TD>
+County Code
+</TD>
+<td><a href="../hl7v27datel.htm#00115">DB</a></td>
+</TR>
+<TR>
+<TD>
+13
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XTN">XTN</a>
+</TD><TD>
+B
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading50">00116</a>
+</TD><TD>
+Phone Number - Home
+</TD>
+<td><a href="../hl7v27datel.htm#00116">DB</a></td>
+</TR>
+<TR>
+<TD>
+14
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XTN">XTN</a>
+</TD><TD>
+B
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading51">00117</a>
+</TD><TD>
+Phone Number - Business
+</TD>
+<td><a href="../hl7v27datel.htm#00117">DB</a></td>
+</TR>
+<TR>
+<TD>
+15
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading152">0296</a>
+</TD><TD>
+<a href="ch02b.html#Heading52">00118</a>
+</TD><TD>
+Primary Language
+</TD>
+<td><a href="../hl7v27datel.htm#00118">DB</a></td>
+</TR>
+<TR>
+<TD>
+16
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading15">0002</a>
+</TD><TD>
+<a href="ch02b.html#Heading53">00119</a>
+</TD><TD>
+Marital Status
+</TD>
+<td><a href="../hl7v27datel.htm#00119">DB</a></td>
+</TR>
+<TR>
+<TD>
+17
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch03.html#Heading94">0006</a>
+</TD><TD>
+<a href="ch02b.html#Heading54">00120</a>
+</TD><TD>
+Religion
+</TD>
+<td><a href="../hl7v27datel.htm#00120">DB</a></td>
+</TR>
+<TR>
+<TD>
+18
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CX">CX</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading55">00121</a>
+</TD><TD>
+Patient Account Number
+</TD>
+<td><a href="../hl7v27datel.htm#00121">DB</a></td>
+</TR>
+<TR>
+<TD>
+19
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+W
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading56">00122</a>
+</TD><TD>
+SSN Number - Patient
+</TD>
+<td><a href="../hl7v27datel.htm#00122">DB</a></td>
+</TR>
+<TR>
+<TD>
+20
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+W
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading57">00123</a>
+</TD><TD>
+Driver's License Number - Patient
+</TD>
+<td><a href="../hl7v27datel.htm#00123">DB</a></td>
+</TR>
+<TR>
+<TD>
+21
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CX">CX</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading58">00124</a>
+</TD><TD>
+Mother's Identifier
+</TD>
+<td><a href="../hl7v27datel.htm#00124">DB</a></td>
+</TR>
+<TR>
+<TD>
+22
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<a href="ch02c.html#Heading78">0189</a>
+</TD><TD>
+<a href="ch02b.html#Heading59">00125</a>
+</TD><TD>
+Ethnic Group
+</TD>
+<td><a href="../hl7v27datel.htm#00125">DB</a></td>
+</TR>
+<TR>
+<TD>
+23
+</TD><TD>
+<br>
+</TD><TD>
+250#
+</TD><TD>
+<a href="ch02A.html#ST">ST</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading60">00126</a>
+</TD><TD>
+Birth Place
+</TD>
+<td><a href="../hl7v27datel.htm#00126">DB</a></td>
+</TR>
+<TR>
+<TD>
+24
+</TD><TD>
+1..1
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#ID">ID</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading49">0136</a>
+</TD><TD>
+<a href="ch02b.html#Heading61">00127</a>
+</TD><TD>
+Multiple Birth Indicator
+</TD>
+<td><a href="../hl7v27datel.htm#00127">DB</a></td>
+</TR>
+<TR>
+<TD>
+25
+</TD><TD>
+<br>
+</TD><TD>
+2=
+</TD><TD>
+<a href="ch02A.html#NM">NM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading62">00128</a>
+</TD><TD>
+Birth Order
+</TD>
+<td><a href="../hl7v27datel.htm#00128">DB</a></td>
+</TR>
+<TR>
+<TD>
+26
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<a href="ch03.html#Heading103">0171</a>
+</TD><TD>
+<a href="ch02b.html#Heading63">00129</a>
+</TD><TD>
+Citizenship
+</TD>
+<td><a href="../hl7v27datel.htm#00129">DB</a></td>
+</TR>
+<TR>
+<TD>
+27
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch03.html#Heading104">0172</a>
+</TD><TD>
+<a href="ch02b.html#Heading64">00130</a>
+</TD><TD>
+Veterans Military Status
+</TD>
+<td><a href="../hl7v27datel.htm#00130">DB</a></td>
+</TR>
+<TR>
+<TD>
+28
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+W
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading65">00739</a>
+</TD><TD>
+Nationality
+</TD>
+<td><a href="../hl7v27datel.htm#00739">DB</a></td>
+</TR>
+<TR>
+<TD>
+29
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading66">00740</a>
+</TD><TD>
+Patient Death Date and Time
+</TD>
+<td><a href="../hl7v27datel.htm#00740">DB</a></td>
+</TR>
+<TR>
+<TD>
+30
+</TD><TD>
+1..1
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#ID">ID</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading49">0136</a>
+</TD><TD>
+<a href="ch02b.html#Heading67">00741</a>
+</TD><TD>
+Patient Death Indicator
+</TD>
+<td><a href="../hl7v27datel.htm#00741">DB</a></td>
+</TR>
+<TR>
+<TD>
+31
+</TD><TD>
+1..1
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#ID">ID</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02c.html#Heading49">0136</a>
+</TD><TD>
+<a href="ch02b.html#Heading68">01535</a>
+</TD><TD>
+Identity Unknown Indicator
+</TD>
+<td><a href="../hl7v27datel.htm#01535">DB</a></td>
+</TR>
+<TR>
+<TD>
+32
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<a href="ch03.html#Heading109">0445</a>
+</TD><TD>
+<a href="ch02b.html#Heading69">01536</a>
+</TD><TD>
+Identity Reliability Code
+</TD>
+<td><a href="../hl7v27datel.htm#01536">DB</a></td>
+</TR>
+<TR>
+<TD>
+33
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#DTM">DTM</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading70">01537</a>
+</TD><TD>
+Last Update Date/Time
+</TD>
+<td><a href="../hl7v27datel.htm#01537">DB</a></td>
+</TR>
+<TR>
+<TD>
+34
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#HD">HD</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading71">01538</a>
+</TD><TD>
+Last Update Facility
+</TD>
+<td><a href="../hl7v27datel.htm#01538">DB</a></td>
+</TR>
+<TR>
+<TD>
+35
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+C
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch03.html#Heading112">0446</a>
+</TD><TD>
+<a href="ch02b.html#Heading72">01539</a>
+</TD><TD>
+Species Code
+</TD>
+<td><a href="../hl7v27datel.htm#01539">DB</a></td>
+</TR>
+<TR>
+<TD>
+36
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+C
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch03.html#Heading113">0447</a>
+</TD><TD>
+<a href="ch02b.html#Heading73">01540</a>
+</TD><TD>
+Breed Code
+</TD>
+<td><a href="../hl7v27datel.htm#01540">DB</a></td>
+</TR>
+<TR>
+<TD>
+37
+</TD><TD>
+<br>
+</TD><TD>
+80=
+</TD><TD>
+<a href="ch02A.html#ST">ST</a>
+</TD><TD>
+O
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading74">01541</a>
+</TD><TD>
+Strain
+</TD>
+<td><a href="../hl7v27datel.htm#01541">DB</a></td>
+</TR>
+<TR>
+<TD>
+38
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+2
+</TD><TD>
+<a href="ch03.html#Heading115">0429</a>
+</TD><TD>
+<a href="ch02b.html#Heading75">01542</a>
+</TD><TD>
+Production Class Code
+</TD>
+<td><a href="../hl7v27datel.htm#01542">DB</a></td>
+</TR>
+<TR>
+<TD>
+39
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#CWE">CWE</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<a href="ch03.html#Heading103">0171</a>
+</TD><TD>
+<a href="ch02b.html#Heading76">01840</a>
+</TD><TD>
+Tribal Citizenship
+</TD>
+<td><a href="../hl7v27datel.htm#01840">DB</a></td>
+</TR>
+<TR>
+<TD>
+40
+</TD><TD>
+<br>
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02A.html#XTN">XTN</a>
+</TD><TD>
+O
+</TD><TD>
+Y
+</TD><TD>
+<br>
+</TD><TD>
+<a href="ch02b.html#Heading77">02289</a>
+</TD><TD>
+Patient Telecommunication Information
+</TD>
+<td><a href="../hl7v27datel.htm#02289">DB</a></td>
+</TR>
+</TABLE><p>
+<a id="Heading37">
+<H4 class="css_Überschrift4" >
+2.B.8.3 Field definitions
+</H4>
+<p>
+The set of fields of each segment within the message level definition shall be specified.
+</p>
+<p>
+If a segment occurs multiple times within a message profile, it may be represented by different segment profiles. This shall be explicitly defined within the message level definition.
+</p>
+<a id="Heading38">
+<H4 class="css_Überschrift4" >
+2.B.8.4 Field cardinality
+</H4>
+<p>
+Some fields within a segment are allowed to repeat. The cardinality of all the fields within the segment shall be defined.
+</p>
+<a id="Heading39">
+<H4 class="css_Überschrift4" >
+2.B.8.5 Field usage 
+</H4>
+<p>
+The usage of the field within a segment shall be defined consistent with the profile type, and using one of codes identified in the previously defined Usage tables.
+</p>
+<a id="Heading40">
+<H4 class="css_Überschrift4" >
+2.B.8.6 Data type
+</H4>
+<p>
+The data type of the field within a segment shall be updated to accurately reflect the data type for the field within this segment definition.
+</p>
+<a id="Heading41">
+<H4 class="css_Überschrift4" >
+2.B.8.7 Length
+</H4>
+<p>
+The length of the field within a segment shall be updated to accurately reflect the correct length for the field within this segment definition. Here two information items shall be provided representing the required minimum length a data constituent must have and the maximum length this constituent must not exceed.
+</p>
+<a id="Heading42">
+<H4 class="css_Überschrift4" >
+2.B.8.8 Conformance Length
+</H4>
+<p>
+This length represents the number of characters that a conformant application must be able to handle. For further information please see Chapter 2, section 2.5.5.3, "Conformance Length".
+</p>
+<a id="Heading43">
+<H4 class="css_Überschrift4" >
+2.B.8.9 Table reference
+</H4>
+<p>
+The name of the table of the field within a segment shall be updated to accurately reflect the table used for the field within this segment definition.
+</p>
+<a id="Heading44">
+<H3 class="css_Überschrift3" >
+2.B.9 Static definition - field level  
+</H3>
+<a id="Heading45">
+<H4 class="css_Überschrift4" >
+2.B.9.0 Field Definitions
+</H4>
+<p>
+Each individual field within a segment shall be completely defined to eliminate any possible ambiguity.
+</p>
+<p>
+In cases where HL7 2.x field descriptions are not sufficient, a precise semantic definition shall be specified.
+</p>
+<a id="Heading46">
+<H4 class="css_Überschrift4" >
+2.B.9.1 User-defined and suggested field values
+</H4>
+<p>
+The allowed code sets (table) for many fields within the HL7 Standard are specified as user-defined (data type IS) or HL7-defined (data type ID) values.
+</p>
+<p>
+In these cases, the exact allowed code set shall be specified. These values shall be defined according to the specified scope of use for the message profile by vendors, provider, or within a realm.
+</p>
+<p>
+Coded Entry (CE, CF, CWE, and CNE) type fields are specified as being populated based on coding systems. For each of these fields, the specific coding system used shall be identified. Compliant applications are required to use the specified coding system, but may also use an alternate coding system as supported by the data type (See the example within each data type definition).
+</p>
+<a id="Heading47">
+<H4 class="css_Überschrift4" >
+2.B.9.2 Constant values
+</H4>
+<p>
+If an element will always have a constant value, this shall be specified. Constant values may only be specified for elements that represent primitive data types, i.e., they have no components or sub-components.
+</p>
+<a id="Heading48">
+<H4 class="css_Überschrift4" >
+2.B.9.3 Data values
+</H4>
+<p>
+A list of example data values for the element may be specified. Data values may only be specified for elements that represent primitive data types i.e. they no components or sub-components.
+</p>
+<a id="Heading49">
+<H4 class="css_Überschrift4" >
+2.B.9.4 Pattern Matching
+</H4>
+<p>
+Constraints for matching patterns within fields may be specified.  In addition to textual description of the constraint, formal expressions may be specified.  These formal expressions can be Object Constraint Language (OCL), regular expressions (RegEx), and XML Path Language (XPath)
+</p>
+<a id="Heading50">
+<H4 class="css_Überschrift4" >
+2.B.9.5 Element Relationships
+</H4>
+<p>
+Element relationships may be may be specified.  In addition to textual description of these constraints, formal expressions may be specified.  These formal expressions can be Object Constraint Language (OCL), regular expressions (RegEx), and XML Path Language (XPath)
+</p>
+<a id="Heading51">
+<H4 class="css_Überschrift4" >
+2.B.9.6 Components and subcomponents
+</H4>
+<p>
+Many fields and components in versions of HL7 prior to 2.5 were defined to be Composite Data (CM) data types. As of 2.5, all field instances will reference a valid data type other than CM. Addenda for versions 2.3.1 and 2.4 are available that define more precise names for the CM data types. These names allow a more precise data type name for each of the fields using the former CM data type to be more easily used for XML encoding of message instances. Although message profiling is not limited to a specific version of HL7, it is strongly encouraged that these new data types be used to increase interoperability between versions.
+</p>
+<p>
+Each component within composite fields shall be profiled. This requires defining the usage, length, data type, and data values of each of the components. Where there are sub-components of a component, each of the sub-components shall also be profiled using the same method. With the exception of cardinality, the rules for these definitions follow those for fields (See section 2.B.9, "Static definition - field level").
+</p>
+<a id="Heading52">
+<H3 class="css_Überschrift3" >
+2.B.10 Message profile document  
+</H3>
+<p>
+HL7 Headquarters will provide a utility, hereafter called registry, on the Members' Only Web site (http://www.hl7.org) where the message profile can be registered.
+</p>
+<p>
+Messages profiles in the registry are all catalogued with a set of metadata. Those entities submitting message profiles into the registry will need to fill out a form that captures the required metadata information. The registry and the metadata will be documented in an informative document and will not be discussed further in this document.
+</p>
+<a id="Heading53">
+<H4 class="css_Überschrift4" >
+2.B.10.0 Message profile document format
+</H4>
+<p>
+The Implementation/Conformance Work Group researched the best approach to standardize the format of a message profile to facilitate comparison and measurement. XML (eXtensible Markup Language XML W3C XML 1.0 2nd Ed) documents appeared to be the best tool for this.
+</p>
+<p>
+This use of XML is not, in any way, related to the HL7 2.xml encoding specification that describes the XML encoding of message instances. The message profile document format provides structure to the documentation of the message profile and does not limit the encoding of an actual message instance.
+</p>
+<a id="Heading54">
+<H4 class="css_Überschrift4" >
+2.B.10.1 Message profile document definition
+</H4>
+<p>
+A message profile document will be a valid HL7 message profiles if it conforms to the constraints expressed in the message profile document definition (See section 2.B.12, "Message profile document definition"), and the additional rules described in this document.
+</p>
+<a id="Heading55">
+<H3 class="css_Überschrift3" >
+2.B.11 Tools  
+</H3>
+<p>
+The tools used for creation, sharing, re-use, reporting, analyzing, and comparing message profiles are outside the scope of the HL7 standard. Refer to the Implementation/Conformance Work Group web site for useful links that are of widespread interest to, and in support of, message profiles and the Implementation/Conformance Work Group.
+</p>
+<a id="Heading56">
+<H3 class="css_Überschrift3" >
+2.B.12 Message profile document definition 
+</H3>
+<p>
+The Implementation/Conformance WG researched the various ways to express the structure of the message profile document. The Document Type Definition (DTD) allows for declaring constraints on the use of markup. XML Schema Language provides a more rigorous and comprehensive framework for automated processing of XML documents.
+</p>
+<p>
+The message profile DTD and schema are both included here. The message profile schema is normative in order to express the rules by which the registry will validate (see section 2.B, "Conformance Using Message Profiles").
+</p>
+<a id="Heading57">
+<H4 class="css_Überschrift4" >
+2.B.12.0 Message profile schema  
+</H4>
+<TABLE width="100%" border=1>
+<TR>
+<TD>
+<?xml version="1.0" encoding="UTF-8"?>
+</TD>
+</TR>
+<TR>
+<TD>
+<br>
+<br>
+</TD>
+</TR>
+</TABLE><p>
+<a id="Heading58">
+<H3 class="css_Überschrift3" >
+2.B.13 Outstanding Issues
+</H3>
+<p>
+The following items are being discussed in the Implementation/Conformance Work Group for addition to future versions of HL7:
+</p>
+<ol>
+<li>
+<p>
+Conformance Based Queries use of the Message Profiles. Current status of this can be found on the Implementation/Conformance Work Group web page on the HL7 web site.  (http://www.hl7.org).
+</p>
+</li>
+</ol>
+</BODY>
+</HTML>

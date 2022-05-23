@@ -1,0 +1,330 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment IPC:
+Imaging Procedure Control Segment
+(Anforderungsdetails bildgebende Verfahren)
+</H2>
+<TABLE class=segm>
+<TR class=segm-even>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>Accession Identifier</TD>
+<TD class=segm>Auftrags-ID des Labors</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01330">01330</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch04.html#Heading1614">4.5.6.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>Requested Procedure ID</TD>
+<TD class=segm>ID der angeforderten Untersuchung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01658">01658</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch04.html#Heading1615">4.5.6.2</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>Study Instance UID</TD>
+<TD class=segm>UID der Fragestellung (Kl&auml;rung notwendig)</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01659">01659</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch04.html#Heading1616">4.5.6.3</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>Scheduled Procedure Step ID</TD>
+<TD class=segm>ID der geplanten Teiluntersuchung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01660">01660</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch04.html#Heading1617">4.5.6.4</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm>Modality </TD>
+<TD class=segm>Modalit&auml;t</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0604.htm">0604</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01661">01661</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch04.html#Heading1618">4.5.6.5</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm>Protocol Code</TD>
+<TD class=segm>Verfahrensvorschriften</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0605.htm">0605</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01662">01662</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch04.html#Heading1619">4.5.6.6</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm>Scheduled Station Name</TD>
+<TD class=segm>Name des geplanten Untersuchungsger&auml;ts</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01663">01663</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch04.html#Heading1620">4.5.6.7</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm>Scheduled Procedure Step Location</TD>
+<TD class=segm>Ort der geplanten Untersuchung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0606.htm">0606</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01664">01664</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch04.html#Heading1621">4.5.6.8</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm>Scheduled Station AE Title</TD>
+<TD class=segm>AE Title des geplanten Untersuchungsger&auml;ts</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>16=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01665">01665</A></TD>
+<TD class=segm><A HREF = "hl7v29typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std29/ch04.html#Heading1622">4.5.6.9</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm>Action Code</TD>
+<TD class=segm>Aktionscode</TD>
+<TD class=segm>2..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00816">00816</A></TD>
+<TD class=segm><A HREF = "hl7v29typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std29/ch04.html#Heading1623">4.5.6.10</A></TD>
+</TR>
+</TABLE>
+<P>
+<P>
+<H3>Used within following Message Structures:</H3>
+<dd><A HREF = "hl7v29msgstruct.htm#OMI_O23">OMI_O23</A> Imaging Order Message (<A HREF = "std29/ch04.html#Heading1471">4.4.14</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O21">OML_O21</A> Laboratory Order Message (<A HREF = "std29/ch04.html#Heading1455">4.4.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O33">OML_O33</A> Laboratory Order - Multiple Order Per Specimen Mes (<A HREF = "std29/ch04.html#Heading1459">4.4.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O35">OML_O35</A> Laboratory Order - Multiple Order Per Container of (<A HREF = "std29/ch04.html#Heading1463">4.4.10</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O59">OML_O59</A> Non-Stock Supply Order Message (<A HREF = "std29/ch04.html#Heading1479">4.4.22</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORI_O24">ORI_O24</A> Imaging Order Acknowledgment Message (<A HREF = "std29/ch04.html#Heading1472">4.4.15</A>)</dd>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

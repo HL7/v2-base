@@ -1,0 +1,939 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment FT1:
+Financial Transaction
+(Buchungsinformationen)
+</H2>
+<TABLE class=segm>
+<TR class=segm-odd>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>Set ID - FT1</TD>
+<TD class=segm>FT1-Segmentnummer</TD>
+<TD class=segm>1..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00355">00355</A></TD>
+<TD class=segm><A HREF = "hl7v29typSI.htm#SI">SI</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2329">6.5.1.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>Transaction ID </TD>
+<TD class=segm>Leistungs-ID</TD>
+<TD class=segm>1..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00356">00356</A></TD>
+<TD class=segm><A HREF = "hl7v29typCX.htm#CX">CX</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2330">6.5.1.2</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>Transaction Batch ID </TD>
+<TD class=segm>Stapel- / Buchungskreisnummer</TD>
+<TD class=segm>1..10</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00357">00357</A></TD>
+<TD class=segm><A HREF = "hl7v29typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2331">6.5.1.3</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>Transaction Date </TD>
+<TD class=segm>Beleg- / Leistungs- / Rechnungsdatum</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00358">00358</A></TD>
+<TD class=segm><A HREF = "hl7v29typDR.htm#DR">DR</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2332">6.5.1.4</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm>Transaction Posting Date </TD>
+<TD class=segm>Buchungsdatum</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00359">00359</A></TD>
+<TD class=segm><A HREF = "hl7v29typDTM.htm#DTM">DTM</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2333">6.5.1.5</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm>Transaction Type </TD>
+<TD class=segm>Buchungsart / Rechnungsart (GSG)</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0017.htm">0017</A></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00360">00360</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2334">6.5.1.6</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm>Transaction Code </TD>
+<TD class=segm>Leistungsziffer / Buchungstext / Entgeltart EBM (GSG)</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0132.htm">0132</A></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00361">00361</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE  .htm#CWE  ">CWE  </A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2335">6.5.1.7</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm>Transaction Description </TD>
+<TD class=segm>nicht verwendet (veraltet; zweite Komponente von FT1-7 benutzen)</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>W</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00362">00362</A></TD>
+<TD class=segm><A HREF = "hl7v29typ-.htm#-">-</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2336">6.5.1.8</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm>Transaction Description - Alt </TD>
+<TD class=segm>Buchungstext (alternativ)</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>W</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00363">00363</A></TD>
+<TD class=segm><A HREF = "hl7v29typ-.htm#-">-</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2337">6.5.1.9</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm>Transaction Quantity </TD>
+<TD class=segm>Anzahl der Leistungen / Punktzahl</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>6=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00364">00364</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2338">6.5.1.10</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>11</TD>
+<TD class=segm>Transaction Amount - Extended </TD>
+<TD class=segm>Betrag (Summe)</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00365">00365</A></TD>
+<TD class=segm><A HREF = "hl7v29typCP.htm#CP">CP</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2339">6.5.1.11</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>12</TD>
+<TD class=segm>Transaction Amount - Unit</TD>
+<TD class=segm>Einzelpreis / Punktwert</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00366">00366</A></TD>
+<TD class=segm><A HREF = "hl7v29typCP.htm#CP">CP</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2340">6.5.1.12</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>13</TD>
+<TD class=segm>Department Code </TD>
+<TD class=segm>Kostenstelle</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0049.htm">0049</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00367">00367</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2341">6.5.1.13</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>14</TD>
+<TD class=segm>Health Plan ID </TD>
+<TD class=segm>Tarifbezeichnung des Kostentr&auml;gers</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0072.htm">0072</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00368">00368</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2342">6.5.1.14</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>15</TD>
+<TD class=segm>Insurance Amount </TD>
+<TD class=segm>Entgeldbetrag</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00369">00369</A></TD>
+<TD class=segm><A HREF = "hl7v29typCP.htm#CP">CP</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2343">6.5.1.15</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>16</TD>
+<TD class=segm>Assigned Patient Location</TD>
+<TD class=segm>Zugewiesener Aufenthaltsort des Patienten</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00133">00133</A></TD>
+<TD class=segm><A HREF = "hl7v29typPL.htm#PL">PL</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2344">6.5.1.16</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>17</TD>
+<TD class=segm>Fee Schedule </TD>
+<TD class=segm>Leistungserbringungsart</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0024.htm">0024</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00370">00370</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2345">6.5.1.17</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>18</TD>
+<TD class=segm>Patient Type</TD>
+<TD class=segm>Patientenart (PPR)</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0018.htm">0018</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00148">00148</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2346">6.5.1.18</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>19</TD>
+<TD class=segm>Diagnosis Code - FT1 </TD>
+<TD class=segm>Diagnoseschl&uuml;ssel</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0051.htm">0051</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00371">00371</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2347">6.5.1.19</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>20</TD>
+<TD class=segm>Performed By Code </TD>
+<TD class=segm>Erbringende Stelle oder Person</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0084.htm">0084</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00372">00372</A></TD>
+<TD class=segm><A HREF = "hl7v29typXCN.htm#XCN">XCN</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2348">6.5.1.20</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>21</TD>
+<TD class=segm>Ordered By Code </TD>
+<TD class=segm>Verordnende / anfordernde Stelle oder Person</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00373">00373</A></TD>
+<TD class=segm><A HREF = "hl7v29typXCN.htm#XCN">XCN</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2349">6.5.1.21</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>22</TD>
+<TD class=segm>Unit Cost </TD>
+<TD class=segm>Berechnungsfaktor</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00374">00374</A></TD>
+<TD class=segm><A HREF = "hl7v29typCP.htm#CP">CP</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2350">6.5.1.22</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>23</TD>
+<TD class=segm>Filler Order Number</TD>
+<TD class=segm>Bearbeitungsnummer der Leistungsstelle</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00217">00217</A></TD>
+<TD class=segm><A HREF = "hl7v29typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2351">6.5.1.23</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>24</TD>
+<TD class=segm>Entered By Code</TD>
+<TD class=segm>Erfasser</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00765">00765</A></TD>
+<TD class=segm><A HREF = "hl7v29typXCN.htm#XCN">XCN</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2352">6.5.1.24</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>25</TD>
+<TD class=segm>Procedure Code</TD>
+<TD class=segm>Maﬂnahmen- / Operationsschl&uuml;ssel</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0088.htm">0088</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00393">00393</A></TD>
+<TD class=segm><A HREF = "hl7v29typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2353">6.5.1.25</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>26</TD>
+<TD class=segm>Procedure Code Modifier</TD>
+<TD class=segm>Modifikator zum Prozedurcode</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0340.htm">0340</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01316">01316</A></TD>
+<TD class=segm><A HREF = "hl7v29typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2354">6.5.1.26</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>27</TD>
+<TD class=segm>Advanced Beneficiary Notice Code</TD>
+<TD class=segm>Hinweis zur Zuzahlung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0339.htm">0339</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01310">01310</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2355">6.5.1.27</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>28</TD>
+<TD class=segm>Medically Necessary Duplicate Procedure Reason</TD>
+<TD class=segm>Begr&uuml;ndung f&uuml;r mehrfache Durchf&uuml;hrung einer Maﬂnahme</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0476.htm">0476</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01646">01646</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2356">6.5.1.28</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>29</TD>
+<TD class=segm>NDC Code</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0549.htm">0549</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01845">01845</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2357">6.5.1.29</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>30</TD>
+<TD class=segm>Payment Reference ID</TD>
+<TD class=segm>Referenznummer zu FT1-7</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01846">01846</A></TD>
+<TD class=segm><A HREF = "hl7v29typCX.htm#CX">CX</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2358">6.5.1.30</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>31</TD>
+<TD class=segm>Transaction Reference Key</TD>
+<TD class=segm>Referenzschl&uuml;ssel der Transaktion</TD>
+<TD class=segm>1..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01847">01847</A></TD>
+<TD class=segm><A HREF = "hl7v29typSI.htm#SI">SI</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2359">6.5.1.31</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>32</TD>
+<TD class=segm>Performing Facility</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02361">02361</A></TD>
+<TD class=segm><A HREF = "hl7v29typXON.htm#XON">XON</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2360">6.5.1.32</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>33</TD>
+<TD class=segm>Ordering Facility</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02362">02362</A></TD>
+<TD class=segm><A HREF = "hl7v29typXON.htm#XON">XON</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2361">6.5.1.33</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>34</TD>
+<TD class=segm>Item Number</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02363">02363</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2362">6.5.1.34</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>35</TD>
+<TD class=segm>Model Number</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>20=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02364">02364</A></TD>
+<TD class=segm><A HREF = "hl7v29typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2363">6.5.1.35</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>36</TD>
+<TD class=segm>Special Processing Code</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02365">02365</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2364">6.5.1.36</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>37</TD>
+<TD class=segm>Clinic Code</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02366">02366</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2365">6.5.1.37</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>38</TD>
+<TD class=segm>Referral Number</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02367">02367</A></TD>
+<TD class=segm><A HREF = "hl7v29typCX.htm#CX">CX</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2366">6.5.1.38</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>39</TD>
+<TD class=segm>Authorization Number</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02368">02368</A></TD>
+<TD class=segm><A HREF = "hl7v29typCX.htm#CX">CX</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2367">6.5.1.39</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>40</TD>
+<TD class=segm>Service Provider Taxonomy Code</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02369">02369</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2368">6.5.1.40</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>41</TD>
+<TD class=segm>Revenue Code</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0456.htm">0456</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#01600">01600</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2369">6.5.1.41</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>42</TD>
+<TD class=segm>Prescription Number</TD>
+<TD class=segm>Rezeptnummer</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>20=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#00325">00325</A></TD>
+<TD class=segm><A HREF = "hl7v29typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2370">6.5.1.42</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>43</TD>
+<TD class=segm>NDC Qty and UOM</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#02370">02370</A></TD>
+<TD class=segm><A HREF = "hl7v29typCQ.htm#CQ">CQ</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2371">6.5.1.43</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>44</TD>
+<TD class=segm>DME Certificate of Medical Necessity Transmission Code</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03496">03496</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2372">6.5.1.44</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>45</TD>
+<TD class=segm>DME Certification Type Code</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03497">03497</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2373">6.5.1.45</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>46</TD>
+<TD class=segm>DME Duration Value</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03498">03498</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2374">6.5.1.46</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>47</TD>
+<TD class=segm>DME Certification Revision Date</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03499">03499</A></TD>
+<TD class=segm><A HREF = "hl7v29typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2375">6.5.1.47</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>48</TD>
+<TD class=segm>DME Initial Certification Date</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03500">03500</A></TD>
+<TD class=segm><A HREF = "hl7v29typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2376">6.5.1.48</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>49</TD>
+<TD class=segm>DME Last Certification Date</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03501">03501</A></TD>
+<TD class=segm><A HREF = "hl7v29typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2377">6.5.1.49</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>50</TD>
+<TD class=segm>DME Length of Medical Necessity Days</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03502">03502</A></TD>
+<TD class=segm><A HREF = "hl7v29typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2378">6.5.1.50</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>51</TD>
+<TD class=segm>DME Rental Price</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03503">03503</A></TD>
+<TD class=segm><A HREF = "hl7v29typMO.htm#MO">MO</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2379">6.5.1.51</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>52</TD>
+<TD class=segm>DME Purchase Price</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03504">03504</A></TD>
+<TD class=segm><A HREF = "hl7v29typMO.htm#MO">MO</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2380">6.5.1.52</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>53</TD>
+<TD class=segm>DME Frequency Code</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03505">03505</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2381">6.5.1.53</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>54</TD>
+<TD class=segm>DME Certification Condition Indicator</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03506">03506</A></TD>
+<TD class=segm><A HREF = "hl7v29typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2382">6.5.1.54</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>55</TD>
+<TD class=segm>DME Condition Indicator Code</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y/2</TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03507">03507</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2383">6.5.1.55</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>56</TD>
+<TD class=segm>Service Reason Code</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29tab0964.htm">0964</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v29datel.htm#03508">03508</A></TD>
+<TD class=segm><A HREF = "hl7v29typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std29/ch06.html#Heading2384">6.5.1.56</A></TD>
+</TR>
+</TABLE>
+<P>
+<P>
+<H3>Used within following Message Structures:</H3>
+<dd><A HREF = "hl7v29msgstruct.htm#DFT_P03">DFT_P03</A> Detail Financial Transaction (<A HREF = "std29/ch06.html#Heading2319">6.4.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#DFT_P11">DFT_P11</A> Detail Financial Transaction - Expanded (<A HREF = "std29/ch06.html#Heading2324">6.4.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMB_O27">OMB_O27</A> Blood Product Order Message (<A HREF = "std29/ch04.html#Heading1681">4.13.2</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMG_O19">OMG_O19</A> General Clinical Order Message (<A HREF = "std29/ch04.html#Heading1453">4.4.4</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O21">OML_O21</A> Laboratory Order Message (<A HREF = "std29/ch04.html#Heading1455">4.4.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O33">OML_O33</A> Laboratory Order - Multiple Order Per Specimen Mes (<A HREF = "std29/ch04.html#Heading1459">4.4.8</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O35">OML_O35</A> Laboratory Order - Multiple Order Per Container of (<A HREF = "std29/ch04.html#Heading1463">4.4.10</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O39">OML_O39</A> Specimen Shipment Centric Laboratory Order Message (<A HREF = "std29/ch04.html#Heading1467">4.4.12</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OML_O59">OML_O59</A> Non-Stock Supply Order Message (<A HREF = "std29/ch04.html#Heading1479">4.4.22</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMP_O09">OMP_O09</A> Pharmacy/treatment Order Message (<A HREF = "std29/ch04A.html#Heading1841">4A.3.3</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OMQ_O57">OMQ_O57</A>  (<A HREF = "std29/ch04.html#Heading1477">4.4.20</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#OPL_O37">OPL_O37</A> Population/Location-Based Laboratory Order Message (<A HREF = "std29/ch04.html#Heading1473">4.4.16</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#ORU_R01">ORU_R01</A> Observation Message (<A HREF = "std29/ch07.html#Heading2827">7.3.1</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RCV_O59">RCV_O59</A>  (<A HREF = "std29/ch04A.html#Heading1865">4A.3.26</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RDE_O11">RDE_O11</A> Pharmacy/Treatment Refill Authorization Request (<A HREF = "std29/ch04A.html#Heading1844">4A.3.6</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RDE_O49">RDE_O49</A>  (<A HREF = "std29/ch04A.html#Heading1863">4A.3.24</A>)</dd>
+<dd><A HREF = "hl7v29msgstruct.htm#RDS_O13">RDS_O13</A> Pharmacy/Treatment Dispense Message (<A HREF = "std29/ch04A.html#Heading1846">4A.3.8</A>)</dd>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

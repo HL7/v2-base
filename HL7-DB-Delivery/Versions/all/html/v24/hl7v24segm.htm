@@ -1,0 +1,1082 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.4</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std24/hl7.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.4
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.4</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v24segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v24qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2 align=center>
+List of all Segment-Definitions
+</H2>
+<TABLE class=info>
+<TR>
+<TH class=info>Seg.</TH>
+<TH class=info>Description</TH>
+<TH class=info>German Interpretation</TH>
+<TH class=info>Chapter</TH>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmABS.htm">ABS</A></TD>
+<TD class=>Abstract</TD>
+<TD class=>Abstraktes Segment</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading361">6.5.12</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmACC.htm">ACC</A></TD>
+<TD class=>Accident</TD>
+<TD class=>Unfallinformationen</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading305">6.5.9</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmADD.htm">ADD</A></TD>
+<TD class=>Addendum</TD>
+<TD class=>Informationen &uuml;ber zugeh&ouml;rige Fortsetzungsnachrich</TD>
+<TD class=><A HREF = "std24/ch02.htm#Heading388">2.16.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmAFF.htm">AFF</A></TD>
+<TD class=>Professional Affiliation</TD>
+<TD class=>Zugeh&ouml;rigkeit zu Berufsverb&auml;nden</TD>
+<TD class=><A HREF = "std24/ch15.htm#Heading14">15.4.1</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmAIG.htm">AIG</A></TD>
+<TD class=>Appointment Information - General Resource</TD>
+<TD class=>Terminvereinbarungen - allgemeine Ressourcen</TD>
+<TD class=><A HREF = "std24/ch10.htm#Heading150">10.6.5</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmAIL.htm">AIL</A></TD>
+<TD class=>Appointment Information - Location Resource</TD>
+<TD class=>Terminvereinbarungen - r&auml;umliche Ressourcen</TD>
+<TD class=><A HREF = "std24/ch10.htm#Heading166">10.6.6</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmAIP.htm">AIP</A></TD>
+<TD class=>Appointment Information - Personnel Resource</TD>
+<TD class=>Terminbereinbarungen - Personalressourcen</TD>
+<TD class=><A HREF = "std24/ch10.htm#Heading180">10.6.7</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmAIS.htm">AIS</A></TD>
+<TD class=>Appointment Information - Service</TD>
+<TD class=>Terminvereinbarungen - Service Informationen</TD>
+<TD class=><A HREF = "std24/ch10.htm#Heading136">10.6.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmAL1.htm">AL1</A></TD>
+<TD class=>Patient allergy information</TD>
+<TD class=>Allergieinformationen zum Patienten</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading261">3.4.6</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmAPR.htm">APR</A></TD>
+<TD class=>Appointment Preferences</TD>
+<TD class=>Terminvorschlag - bervorzugte Auswahlkriteriien</TD>
+<TD class=><A HREF = "std24/ch10.htm#Heading194">10.6.8</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmARQ.htm">ARQ</A></TD>
+<TD class=>Appointment Request</TD>
+<TD class=>Terminanforderung</TD>
+<TD class=><A HREF = "std24/ch10.htm#Heading75">10.6.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmAUT.htm">AUT</A></TD>
+<TD class=>Authorization Information</TD>
+<TD class=>Authorisierungsinformationen</TD>
+<TD class=><A HREF = "std24/ch11.htm#Heading67">11.6.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmBHS.htm">BHS</A></TD>
+<TD class=>Batch Header</TD>
+<TD class=>Stapelverarbeitung - Startinformationen</TD>
+<TD class=><A HREF = "std24/ch02.htm#Heading391">2.16.2</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmBLC.htm">BLC</A></TD>
+<TD class=>Blood Code</TD>
+<TD class=>Blutkonservenidentifikation</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading377">6.5.13</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmBLG.htm">BLG</A></TD>
+<TD class=>Billing</TD>
+<TD class=>Rechnungsinformationen</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading77">4.5.2</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmBTS.htm">BTS</A></TD>
+<TD class=>Batch Trailer</TD>
+<TD class=>Stapelverarbeitung - Endeinformationen</TD>
+<TD class=><A HREF = "std24/ch02.htm#Heading405">2.16.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmCDM.htm">CDM</A></TD>
+<TD class=>Charge Description Master</TD>
+<TD class=>Stammdaten - Abrechnungskatalog</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading235">8.10.2</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmCM0.htm">CM0</A></TD>
+<TD class=>Clinical Study Master</TD>
+<TD class=>Stammdaten - Klinische Studien</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading273">8.11.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmCM1.htm">CM1</A></TD>
+<TD class=>Clinical Study Phase Master</TD>
+<TD class=>Stammdaten - Phase der klinischen Studie</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading286">8.11.3</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmCM2.htm">CM2</A></TD>
+<TD class=>Clinical Study Schedule Master</TD>
+<TD class=>Stammdaten - Abl&auml;ufe der klinischen Studie</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading291">8.11.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmCNS.htm">CNS</A></TD>
+<TD class=>Clear Notification</TD>
+<TD class=>Benachrichtigungen l&ouml;schen</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading186">13.4.8</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmCSP.htm">CSP</A></TD>
+<TD class=>Clinical Study Phase</TD>
+<TD class=>Informationen zur Phase einer  klinischen Studie</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading170">7.8.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmCSR.htm">CSR</A></TD>
+<TD class=>Clinical Study Registration</TD>
+<TD class=>Informationen &uuml;ber Teilnahme an einer klinischen Studie</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading152">7.8.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmCSS.htm">CSS</A></TD>
+<TD class=>Clinical Study Data Schedule Segment</TD>
+<TD class=>Ablaufinformationen zur klinischen Studie</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading176">7.8.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmCTD.htm">CTD</A></TD>
+<TD class=>Contact Data</TD>
+<TD class=>Kontaktinformationen</TD>
+<TD class=><A HREF = "std24/ch11.htm#Heading90">11.6.4</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmCTI.htm">CTI</A></TD>
+<TD class=>Clinical Trial Identification</TD>
+<TD class=>Studienidentifizierung</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading181">7.8.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmDB1.htm">DB1</A></TD>
+<TD class=>Disability</TD>
+<TD class=>Informationen &uuml;ber Behinderungen</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading327">3.4.11</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmDG1.htm">DG1</A></TD>
+<TD class=>Diagnosis</TD>
+<TD class=>Diagnoseninformation</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading42">6.5.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmDRG.htm">DRG</A></TD>
+<TD class=>Diagnosis Related Group</TD>
+<TD class=>Informationen zu DRG's</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading63">6.5.3</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmDSC.htm">DSC</A></TD>
+<TD class=>Continuation Pointer</TD>
+<TD class=>Informationen &uuml;ber zugeh&ouml;rige Vorg&auml;ngernachricht</TD>
+<TD class=><A HREF = "std24/ch02.htm#Heading410">2.16.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmDSP.htm">DSP</A></TD>
+<TD class=>Display Data</TD>
+<TD class=>Anzeigedaten</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading55">5.5.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmECD.htm">ECD</A></TD>
+<TD class=>Equipment Command</TD>
+<TD class=>Ger&auml;testeuerung</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading168">13.4.5</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmECR.htm">ECR</A></TD>
+<TD class=>Equipment Command Response</TD>
+<TD class=>Antwort auf Ger&auml;testeuerung</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading175">13.4.6</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmEDU.htm">EDU</A></TD>
+<TD class=>Educational Detail</TD>
+<TD class=>Ausbildungsinformationen</TD>
+<TD class=><A HREF = "std24/ch15.htm#Heading21">15.4.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmEQL.htm">EQL</A></TD>
+<TD class=>Embedded Query Language</TD>
+<TD class=>Embedded Query Language Abfrage</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading180">5.10.5.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmEQP.htm">EQP</A></TD>
+<TD class=>Equipment/log Service</TD>
+<TD class=>Ger&auml;teprotokollinformationen</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading226">13.4.12</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmEQU.htm">EQU</A></TD>
+<TD class=>Equipment Detail</TD>
+<TD class=>Ger&auml;teinformationen</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading90">13.4.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmERQ.htm">ERQ</A></TD>
+<TD class=>Event Replay Query</TD>
+<TD class=>Anfrage zur nochmaligen &Uuml;bersendung</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading186">5.10.5.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmERR.htm">ERR</A></TD>
+<TD class=>Error</TD>
+<TD class=>Fehlerinformationen</TD>
+<TD class=><A HREF = "std24/ch02.htm#Heading414">2.16.5</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmEVN.htm">EVN</A></TD>
+<TD class=>Event Type</TD>
+<TD class=>Ereignissinformationen</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading70">3.4.1</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmFAC.htm">FAC</A></TD>
+<TD class=>Facility</TD>
+<TD class=>Einrichtungsinformationen</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading315">7.12.6</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmFHS.htm">FHS</A></TD>
+<TD class=>File Header</TD>
+<TD class=>Stapeldateien - Startinformationen</TD>
+<TD class=><A HREF = "std24/ch02.htm#Heading417">2.16.6</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmFT1.htm">FT1</A></TD>
+<TD class=>Financial Transaction</TD>
+<TD class=>Buchungsinformationen</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading14">6.5.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmFTS.htm">FTS</A></TD>
+<TD class=>File Trailer</TD>
+<TD class=>Stapeldateien - Endeinformationen</TD>
+<TD class=><A HREF = "std24/ch02.htm#Heading431">2.16.7</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmGOL.htm">GOL</A></TD>
+<TD class=>Goal Detail</TD>
+<TD class=>Informationen zur Zielbeschreibung</TD>
+<TD class=><A HREF = "std24/ch12.htm#Heading43">12.4.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmGP1.htm">GP1</A></TD>
+<TD class=>Grouping/Reimbursement - Visit</TD>
+<TD class=>Momentan nicht verwendet</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading386">6.5.15</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmGP2.htm">GP2</A></TD>
+<TD class=>Grouping/Reimbursement - Procedure Line Item</TD>
+<TD class=>Momentan nicht verwendet</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading393">6.5.16</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmGT1.htm">GT1</A></TD>
+<TD class=>Guarantor</TD>
+<TD class=>Informationen zum Zahlungspflichtigen</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading96">6.5.5</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmHxx.htm">Hxx</A></TD>
+<TD class=>any HL7 segment</TD>
+<TD class=>beliebiges HL7-Segment</TD>
+<TD class=><A HREF = "std24/ch08.htm">8.4</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmIAM.htm">IAM</A></TD>
+<TD class=>Patient Adverse Reaction Information</TD>
+<TD class=>Informationen zu allergischen Reaktionen/Tests</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading269">3.4.7</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmIN1.htm">IN1</A></TD>
+<TD class=>Insurance</TD>
+<TD class=>Versicherungsinformationen</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading153">6.5.6</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmIN2.htm">IN2</A></TD>
+<TD class=>Insurance Additional Information</TD>
+<TD class=>Zus&auml;tzliche Versicherungsinformationen</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading204">6.5.7</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmIN3.htm">IN3</A></TD>
+<TD class=>Insurance Additional Information, Certification</TD>
+<TD class=>Versicherungsinformationen - Kosten&uuml;bernahme</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading278">6.5.8</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmINV.htm">INV</A></TD>
+<TD class=>Inventory Detail</TD>
+<TD class=>Bestandsinformationen</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading148">13.4.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmISD.htm">ISD</A></TD>
+<TD class=>Interaction Status Detail</TD>
+<TD class=>Ger&auml;teinteraktion</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading97">13.4.2</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmLAN.htm">LAN</A></TD>
+<TD class=>Language Detail</TD>
+<TD class=>Informationen &uuml;ber Sprachkenntnisse</TD>
+<TD class=><A HREF = "std24/ch15.htm#Heading31">15.4.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmLCC.htm">LCC</A></TD>
+<TD class=>Location Charge Code</TD>
+<TD class=>Stammdaten - Abrechnungsinformationen zu R&auml;umlichkeiten</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading226">8.9.6</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmLCH.htm">LCH</A></TD>
+<TD class=>Location Characteristic</TD>
+<TD class=>Stammdaten - Eigenschaften der R&auml;umlichkeiten</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading197">8.9.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmLDP.htm">LDP</A></TD>
+<TD class=>Location Department</TD>
+<TD class=>Stammdaten - Abteilungsinformationen zu R&auml;umlichkeiten</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading212">8.9.5</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmLOC.htm">LOC</A></TD>
+<TD class=>Location Identification</TD>
+<TD class=>Stammdaten - R&auml;umlichkeiten</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading186">8.9.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmLRL.htm">LRL</A></TD>
+<TD class=>Location Relationship</TD>
+<TD class=>Stammdaten - Beziehungen zwischen R&auml;umlichkeiten</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading204">8.9.4</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmMFA.htm">MFA</A></TD>
+<TD class=>Master File Acknowledgment</TD>
+<TD class=>Best&auml;tigung zu Stammdatennachrichten</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading27">8.5.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmMFE.htm">MFE</A></TD>
+<TD class=>Master File Entry</TD>
+<TD class=>Informationen zum Stammdatenelement</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading20">8.5.2</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmMFI.htm">MFI</A></TD>
+<TD class=>Master File Identification</TD>
+<TD class=>Identifikation der Stammdatentabelle</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading12">8.5.1</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmMRG.htm">MRG</A></TD>
+<TD class=>Merge patient information</TD>
+<TD class=>Informationen zur Zusammenf&uuml;hrung von Patientendaten</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading295">3.4.9</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmMSA.htm">MSA</A></TD>
+<TD class=>Message Acknowledgment</TD>
+<TD class=>Nachrichtenbest&auml;tigung</TD>
+<TD class=><A HREF = "std24/ch02.htm#Heading435">2.16.8</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmMSH.htm">MSH</A></TD>
+<TD class=>Message Header</TD>
+<TD class=>Nachrichtenkopfinformationen</TD>
+<TD class=><A HREF = "std24/ch02.htm#Heading443">2.16.9</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmNCK.htm">NCK</A></TD>
+<TD class=>System clock</TD>
+<TD class=>Systemzeit</TD>
+<TD class=><A HREF = "std24/ch14.htm#Heading9">14.4.1</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmNDS.htm">NDS</A></TD>
+<TD class=>Notification Detail</TD>
+<TD class=>Benachrichtigungsinformationen</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading180">13.4.7</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmNK1.htm">NK1</A></TD>
+<TD class=>Next of Kin / Associated Parties</TD>
+<TD class=>Informationen zu Bezugspersonen</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading222">3.4.5</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmNPU.htm">NPU</A></TD>
+<TD class=>Bed status update</TD>
+<TD class=>Bettenstatus</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading291">3.4.8</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmNSC.htm">NSC</A></TD>
+<TD class=>Application status change</TD>
+<TD class=>Zuordnung von Applikationen zu Servern</TD>
+<TD class=><A HREF = "std24/ch14.htm#Heading13">14.4.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmNST.htm">NST</A></TD>
+<TD class=>Application control level statistics</TD>
+<TD class=>Statistikinformationen zu Applikationen</TD>
+<TD class=><A HREF = "std24/ch14.htm#Heading25">14.4.3</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmNTE.htm">NTE</A></TD>
+<TD class=>Notes and Comments</TD>
+<TD class=>Anmerkungen und Kommentare</TD>
+<TD class=><A HREF = "std24/ch02.htm#Heading466">2.16.10</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmOBR.htm">OBR</A></TD>
+<TD class=>Observation Request</TD>
+<TD class=>Anforderung einer Untersuchung</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading51">7.4.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmOBX.htm">OBX</A></TD>
+<TD class=>Observation/Result</TD>
+<TD class=>Ergebnis/Befund</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading100">7.4.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmODS.htm">ODS</A></TD>
+<TD class=>Dietary Orders, Supplements, and Preferences</TD>
+<TD class=>Speisenanforderung</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading140">4.8.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmODT.htm">ODT</A></TD>
+<TD class=>Diet Tray Instructions</TD>
+<TD class=>Speisengabe</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading146">4.8.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmOM1.htm">OM1</A></TD>
+<TD class=>General Segment</TD>
+<TD class=>Stammdaten - Untersuchungen allgemein</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading55">8.8.3</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmOM2.htm">OM2</A></TD>
+<TD class=>Numeric Observation</TD>
+<TD class=>Stammdaten zu Untersuchungen mit numerischen Ergebnisse</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading104">8.8.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmOM3.htm">OM3</A></TD>
+<TD class=>Categorical Service/Test/Observation</TD>
+<TD class=>Stammdaten zu Untersuchungen mit Ergebnisschl&uuml;ssel</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading124">8.8.5</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmOM4.htm">OM4</A></TD>
+<TD class=>Observations that Require Specimens</TD>
+<TD class=>Stammdaten zu Probenmaterialien f&uuml;r Untersuchungen</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading133">8.8.6</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmOM5.htm">OM5</A></TD>
+<TD class=>Observation Batteries (Sets)</TD>
+<TD class=>Stammdaten zu Anforderungsprofilen</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading149">8.8.7</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmOM6.htm">OM6</A></TD>
+<TD class=>Observations that are Calculated from Other Observations</TD>
+<TD class=>Stammdaten zu berechneten Ergebnissen</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading154">8.8.8</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmOM7.htm">OM7</A></TD>
+<TD class=>Additional Basic Attributes</TD>
+<TD class=>Stammdaten - Zusatzinformationen zu Untersuchungen</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading158">8.8.9</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmORC.htm">ORC</A></TD>
+<TD class=>Common Order</TD>
+<TD class=>Allgemeine Auftragsinformationen</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading49">4.5.1</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmORG.htm">ORG</A></TD>
+<TD class=>Practitioner Organization Unit</TD>
+<TD class=>Zuordnung von &Auml;rzten zu Einrichtungen</TD>
+<TD class=><A HREF = "std24/ch15.htm#Heading37">15.4.4</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmPCR.htm">PCR</A></TD>
+<TD class=>Possible Causal Relationship</TD>
+<TD class=>M&ouml;gliche Wirkungszusammenh&auml;nge</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading257">7.12.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmPD1.htm">PD1</A></TD>
+<TD class=>Patient Additional Demographic</TD>
+<TD class=>Zus&auml;tzliche demographische Informationen zum Patienten</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading304">3.4.10</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmPDA.htm">PDA</A></TD>
+<TD class=>Patient death and autopsy</TD>
+<TD class=>Totenschein</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading337">3.4.12</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmPDC.htm">PDC</A></TD>
+<TD class=>Product Detail Country</TD>
+<TD class=>L&auml;nderspezifische Produktinformationen</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading298">7.12.5</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmPEO.htm">PEO</A></TD>
+<TD class=>Product Experience Observation</TD>
+<TD class=>Ergebnisse zu Produkterfahrungen</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading230">7.12.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmPES.htm">PES</A></TD>
+<TD class=>Product Experience Sender</TD>
+<TD class=>Absender der Produkterfahrungen</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading215">7.12.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmPID.htm">PID</A></TD>
+<TD class=>Patient identification</TD>
+<TD class=>Patienteninformationen</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading79">3.4.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmPR1.htm">PR1</A></TD>
+<TD class=>Procedures</TD>
+<TD class=>Prozeduren</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading76">6.5.4</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmPRA.htm">PRA</A></TD>
+<TD class=>Practitioner Detail</TD>
+<TD class=>Arztinformationen</TD>
+<TD class=><A HREF = "std24/ch15.htm#Heading51">15.4.5</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmPRB.htm">PRB</A></TD>
+<TD class=>Problem Details</TD>
+<TD class=>Probleminformationen</TD>
+<TD class=><A HREF = "std24/ch12.htm#Heading66">12.4.2</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmPRC.htm">PRC</A></TD>
+<TD class=>Pricing</TD>
+<TD class=>Stammdaten - Preise</TD>
+<TD class=><A HREF = "std24/ch08.htm#Heading250">8.10.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmPRD.htm">PRD</A></TD>
+<TD class=>Provider Data</TD>
+<TD class=>Externer Leistungserbringer</TD>
+<TD class=><A HREF = "std24/ch11.htm#Heading79">11.6.3</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmPSH.htm">PSH</A></TD>
+<TD class=>Product Summary Header</TD>
+<TD class=>Produktbericht - Kopfinformationen</TD>
+<TD class=><A HREF = "std24/ch07.htm#Heading282">7.12.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmPTH.htm">PTH</A></TD>
+<TD class=>Pathway</TD>
+<TD class=>Massnahme im Behandlungsplan</TD>
+<TD class=><A HREF = "std24/ch12.htm#Heading107">12.4.4</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmPV1.htm">PV1</A></TD>
+<TD class=>Patient visit</TD>
+<TD class=>Fall-/Besuchsinformationen</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading119">3.4.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmPV2.htm">PV2</A></TD>
+<TD class=>Patient visit - additional information</TD>
+<TD class=>Erg&auml;nzende Fall- / Besuchsinformationen</TD>
+<TD class=><A HREF = "std24/ch03.htm#Heading173">3.4.4</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmQAK.htm">QAK</A></TD>
+<TD class=>Query Acknowledgment</TD>
+<TD class=>Quittung zu Abfragen</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading63">5.5.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmQID.htm">QID</A></TD>
+<TD class=>Query Identification</TD>
+<TD class=>Identifikation von Abfragen</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading71">5.5.3</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmQPD.htm">QPD</A></TD>
+<TD class=>Query Parameter Definition</TD>
+<TD class=>Definition von Abfrageparametern</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading74">5.5.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmQRD.htm">QRD</A></TD>
+<TD class=>Original-Style Query Definition</TD>
+<TD class=>Definition einer Abfrage im pre V2.4 Format</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading191">5.10.5.3</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmQRF.htm">QRF</A></TD>
+<TD class=>Original Style Query Filter</TD>
+<TD class=>Definition eines Abfragefilters im pre V2.4 Format</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading205">5.10.5.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmQRI.htm">QRI</A></TD>
+<TD class=>Query Response Instance</TD>
+<TD class=>Antwortgewichtung bei Abfragen</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading79">5.5.5</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmRCP.htm">RCP</A></TD>
+<TD class=>Response Control Parameter</TD>
+<TD class=>Parameter zur Einschr&auml;nkung von Abfragen</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading84">5.5.6</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmRDF.htm">RDF</A></TD>
+<TD class=>Table Row Definition</TD>
+<TD class=>Zeilenbeschreibung bei tabellarischen Abfragen</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading93">5.5.7</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmRDT.htm">RDT</A></TD>
+<TD class=>Table Row Data</TD>
+<TD class=>Tabellenzeile bei Antworten zu tabellarischen Abfragen</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading97">5.5.8</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmRF1.htm">RF1</A></TD>
+<TD class=>Referral Information</TD>
+<TD class=>&Uuml;berweisung (eines Patienten)</TD>
+<TD class=><A HREF = "std24/ch11.htm#Heading54">11.6.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmRGS.htm">RGS</A></TD>
+<TD class=>Resource Group</TD>
+<TD class=>Gruppierung von Ressourcen</TD>
+<TD class=><A HREF = "std24/ch10.htm#Heading131">10.6.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmRMI.htm">RMI</A></TD>
+<TD class=>Risk Management Incident</TD>
+<TD class=>Risikomanagement von Zwischenf&auml;llen</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading381">6.5.14</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmROL.htm">ROL</A></TD>
+<TD class=>Role</TD>
+<TD class=>Rollenbeschreibung</TD>
+<TD class=><A HREF = "std24/ch12.htm#Heading93">12.4.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmRQ1.htm">RQ1</A></TD>
+<TD class=>Requisition Detail-1</TD>
+<TD class=>Details zu externen Bestellungen</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading174">4.11.2</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmRQD.htm">RQD</A></TD>
+<TD class=>Requisition Detail</TD>
+<TD class=>Allgemeine Bestellinformationen</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading162">4.11.1</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmRXA.htm">RXA</A></TD>
+<TD class=>Pharmacy/Treatment Administration</TD>
+<TD class=>Informationen zur Medikation</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading333">4.14.7</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmRXC.htm">RXC</A></TD>
+<TD class=>Pharmacy/Treatment Component Order</TD>
+<TD class=>Informationen zu Medikamentenbestandteilen</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading238">4.14.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmRXD.htm">RXD</A></TD>
+<TD class=>Pharmacy/Treatment Dispense</TD>
+<TD class=>Informationen zur Medikamentengabe</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading280">4.14.5</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmRXE.htm">RXE</A></TD>
+<TD class=>Pharmacy/Treatment Encoded Order</TD>
+<TD class=>Informationen zum Medikament</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading247">4.14.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmRXG.htm">RXG</A></TD>
+<TD class=>Pharmacy/Treatment Give</TD>
+<TD class=>Verordnung - Verabreichungsinformationen</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading309">4.14.6</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmRXO.htm">RXO</A></TD>
+<TD class=>Pharmacy/Treatment Order</TD>
+<TD class=>Verordnung</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading205">4.14.1</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmRXR.htm">RXR</A></TD>
+<TD class=>Pharmacy/Treatment Route</TD>
+<TD class=>Verordnung - Applikationsart/-ort</TD>
+<TD class=><A HREF = "std24/ch04.htm#Heading231">4.14.2</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmSAC.htm">SAC</A></TD>
+<TD class=>Specimen and container detail</TD>
+<TD class=>Probengef&auml;ss</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading102">13.4.3</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmSCH.htm">SCH</A></TD>
+<TD class=>Scheduling Activity Information</TD>
+<TD class=>Termininformationen</TD>
+<TD class=><A HREF = "std24/ch10.htm#Heading102">10.6.2</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmSID.htm">SID</A></TD>
+<TD class=>Substance Identifier</TD>
+<TD class=>Substanzinformationen</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading220">13.4.11</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmSPR.htm">SPR</A></TD>
+<TD class=>Stored Procedure Request Definition</TD>
+<TD class=>Abfrage mittels Stored Procedure</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading217">5.10.5.5</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmSTF.htm">STF</A></TD>
+<TD class=>Staff Identification</TD>
+<TD class=>Mitarbeiterinformationen</TD>
+<TD class=><A HREF = "std24/ch15.htm#Heading65">15.4.6</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmTCC.htm">TCC</A></TD>
+<TD class=>Test Code Configuration</TD>
+<TD class=>Konfiguration automatischer Untersuchungsmethoden</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading194">13.4.9</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmTCD.htm">TCD</A></TD>
+<TD class=>Test Code Detail</TD>
+<TD class=>Details zu automatischen Untersuchungsmethoden</TD>
+<TD class=><A HREF = "std24/ch13.htm#Heading210">13.4.10</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmTXA.htm">TXA</A></TD>
+<TD class=>Transcription Document Header</TD>
+<TD class=>Information zur Niederschrift von Dokumenten</TD>
+<TD class=><A HREF = "std24/ch09.htm#Heading41">9.6.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmUB1.htm">UB1</A></TD>
+<TD class=>UB82</TD>
+<TD class=>nicht verwendet</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading317">6.5.10</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmUB2.htm">UB2</A></TD>
+<TD class=>UB92 Data</TD>
+<TD class=>nicht verwendet</TD>
+<TD class=><A HREF = "std24/ch06.htm#Heading342">6.5.11</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmURD.htm">URD</A></TD>
+<TD class=>Results/update Definition</TD>
+<TD class=>Berichtsinformationen</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading223">5.10.5.6</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmURS.htm">URS</A></TD>
+<TD class=>Unsolicited Selection</TD>
+<TD class=>Kriterien zur unaufgeforderten Berichts&uuml;bermittlun</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading232">5.10.5.7</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmVAR.htm">VAR</A></TD>
+<TD class=>Variance</TD>
+<TD class=>Informationen zu Abweichungen</TD>
+<TD class=><A HREF = "std24/ch12.htm#Heading115">12.4.5</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmVTQ.htm">VTQ</A></TD>
+<TD class=>Virtual Table Query Request</TD>
+<TD class=>Abfrage aus virtuellen Tabellen</TD>
+<TD class=><A HREF = "std24/ch05.htm#Heading244">5.10.5.8</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=><A HREF = "hl7v24segmZL7.htm">ZL7</A></TD>
+<TD class=>diverses</TD>
+<TD class=>diverses</TD>
+<TD class=>8</TD>
+</TR>
+<TR class=info-odd>
+<TD class=><A HREF = "hl7v24segmZxx.htm">Zxx</A></TD>
+<TD class=>any Z segment</TD>
+<TD class=>bel. Z-Segment</TD>
+<TD class=><A HREF = "std24/ch8.html">8.4.1</A></TD>
+</TR>
+</TABLE>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

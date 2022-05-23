@@ -1,0 +1,644 @@
+<html>
+
+<head>
+<title>V.2.3 Impl.Guide</title>
+<link rel=stylesheet type="text/css" href="../formate.css">
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="10%" align="right" rowspan="3" width="15%">
+<img src="../images/title_links.gif" width="60" height="70" border="0" />
+</td>
+<td width="80%">
+<br/>
+</td>
+<td width="10%">
+<br/>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#000000" align="center">
+<font face="Arial" size="6,5" color="#FFCC00">
+<strong>
+HL7 - Version 2.3 Implementation Guide
+</strong>
+</font>
+</td>
+<td>
+<br/>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+</td>
+<td>
+<br/>
+</td>
+</tr>
+</table>
+<p/>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top" width="1%" align="right">
+<p>
+<a href="hl7archive.htm" >
+Back
+<img src="../images/link_unten.gif" width="140" border="0">
+</a>
+</p>
+</td>
+<td valign="top" width="24"></td>
+<td valign="top">
+
+
+<h2>Introduction </h2>
+
+<p>This page contains my annotations to the implementation guide for version 2.3. </p>
+
+<p>The use of MS-WinWord to provide the information gets better. Even there is some room
+left for improvements (The use of DOT-files and frames.).<br>
+Furthermore the repetition of (inconsistent) information could be eliminated by the use of
+a special <a HREF="hl7amia96.htm">comprehensive HL7 database</a>. </p>
+
+<h3>Chapter 1 to 4 </h3>
+
+<p>Not yet checked. </p>
+
+<h3>Chapter 5 </h3>
+
+<p>Not yet checked so far but I believe some more differences should be listed. Please
+compare with my previous consistency hints for this version:</p>
+
+<blockquote>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11"><a HREF="hl7v23b1.htm">Ballot #1</a><br/>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11"><a HREF="hl7v23b2.htm">Ballot #2</a><br/>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11"><a HREF="hl7v23b3.htm">Ballot #3</a><br/>
+<img src="../images/bullet.gif" width="20" height="20" hspace="11"><a HREF="hl7v23fs.htm">Final Standard</a><br/>
+</blockquote>
+
+<h3>Appendix A </h3>
+
+<p>Not yet checked. </p>
+
+<h3>Appendix B </h3>
+
+<p>Segments completely left out:<br>
+</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <p>GOL, chapter 12.3.1<br>
+  NCK, chapter C.2.1<br>
+  NST, chapter C.2.2<br>
+  NSC, chapter C.2.3<br>
+  PRB, chapter 12.3.2<br>
+  PTH, chapter 12.3.4<br>
+  RGS, chapter 10.5.3<br>
+  ROL, chapter 12.3.3<br>
+  URS, chapter 2.24.7, sequence no 6-9<br>
+  VAR, chapter 12.3.5<br>
+  </p>
+</table>
+
+<p>Wrong Item number used: </p>
+<div align="center"><center>
+
+<table border="1" bordercolordark="#CC9900" bordercolorlight="#CC9900">
+  <tr>
+    <th>Segment</th>
+    <th>Version</th>
+    <th>Chapter</th>
+    <th>D-Item</th>
+    <th>Item#</th>
+  </tr>
+  <tr>
+    <td>AIP</td>
+    <td>2.3</td>
+    <td>10.5.7.7</td>
+    <td>00891</td>
+    <td>893</td>
+  </tr>
+  <tr>
+    <td>AIP</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00892</td>
+    <td>894</td>
+  </tr>
+  <tr>
+    <td>AIP</td>
+    <td>2.3</td>
+    <td>10.5.7.9</td>
+    <td>00893</td>
+    <td>895</td>
+  </tr>
+  <tr>
+    <td>AIP</td>
+    <td>2.3</td>
+    <td>10.5.7.10</td>
+    <td>00894</td>
+    <td>889</td>
+  </tr>
+  <tr>
+    <td>AIS</td>
+    <td>2.3</td>
+    <td>10.5.4.5</td>
+    <td>00891</td>
+    <td>893</td>
+  </tr>
+  <tr>
+    <td>AIS</td>
+    <td>2.3</td>
+    <td>10.5.4.6</td>
+    <td>00892</td>
+    <td>894</td>
+  </tr>
+  <tr>
+    <td>AIS</td>
+    <td>2.3</td>
+    <td>10.5.4.7</td>
+    <td>00893</td>
+    <td>895</td>
+  </tr>
+  <tr>
+    <td>AIS</td>
+    <td>2.3</td>
+    <td>10.5.4.8</td>
+    <td>00894</td>
+    <td>889</td>
+  </tr>
+  <tr>
+    <td>ARQ</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00863</td>
+    <td>218</td>
+  </tr>
+  <tr>
+    <td>BTS</td>
+    <td>2.3</td>
+    <td>2.24.14.2</td>
+    <td>00090</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>CDM</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00982</td>
+    <td>1306</td>
+  </tr>
+  <tr>
+    <td>CM1</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01051</td>
+    <td>1022</td>
+  </tr>
+  <tr>
+    <td>CSR</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01011</td>
+    <td>1035</td>
+  </tr>
+  <tr>
+    <td>CTD</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00196</td>
+    <td>1155</td>
+  </tr>
+  <tr>
+    <td>CTD</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01268</td>
+    <td>1166</td>
+  </tr>
+  <tr>
+    <td>CTD</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00684</td>
+    <td>1170</td>
+  </tr>
+  <tr>
+    <td>CTI</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01011</td>
+    <td>1058</td>
+  </tr>
+  <tr>
+    <td>IN1</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01277</td>
+    <td>1227</td>
+  </tr>
+  <tr>
+    <td>IN2</td>
+    <td>2.3</td>
+    <td>6.4.7.69</td>
+    <td>00809</td>
+    <td>810</td>
+  </tr>
+  <tr>
+    <td>LCH</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00943</td>
+    <td>1305</td>
+  </tr>
+  <tr>
+    <td>LCH</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01294</td>
+    <td>1237</td>
+  </tr>
+  <tr>
+    <td>LDP</td>
+    <td>2.3</td>
+    <td>8.8.5.5</td>
+    <td>00967</td>
+    <td>1237</td>
+  </tr>
+  <tr>
+    <td>LOC</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00943</td>
+    <td>1307</td>
+  </tr>
+  <tr>
+    <td>LRL</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01227</td>
+    <td>1230</td>
+  </tr>
+  <tr>
+    <td>LRL</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01227</td>
+    <td>1301</td>
+  </tr>
+  <tr>
+    <td>LRL</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01293</td>
+    <td>1292</td>
+  </tr>
+  <tr>
+    <td>MFA</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00667</td>
+    <td>670</td>
+  </tr>
+  <tr>
+    <td>NTE</td>
+    <td>2.3</td>
+    <td>2.24.15.1</td>
+    <td>00096</td>
+    <td>573</td>
+  </tr>
+  <tr>
+    <td>NTE</td>
+    <td>2.3</td>
+    <td>2.24.15.2</td>
+    <td>00097</td>
+    <td>574</td>
+  </tr>
+  <tr>
+    <td>NTE</td>
+    <td>2.3</td>
+    <td>2.24.15.3</td>
+    <td>00098</td>
+    <td>575</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00569</td>
+    <td>559</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00570</td>
+    <td>676</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00571</td>
+    <td>560</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00572</td>
+    <td>769</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00573</td>
+    <td>561</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00574</td>
+    <td>562</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00575</td>
+    <td>563</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00576</td>
+    <td>564</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00577</td>
+    <td>639</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00578</td>
+    <td>565</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00579</td>
+    <td>566</td>
+  </tr>
+  <tr>
+    <td>OBX</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00580</td>
+    <td>567</td>
+  </tr>
+  <tr>
+    <td>OM1</td>
+    <td>2.3</td>
+    <td>8.7.3.28</td>
+    <td>00613</td>
+    <td>63</td>
+  </tr>
+  <tr>
+    <td>PD1</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00744</td>
+    <td>1283</td>
+  </tr>
+  <tr>
+    <td>PRC</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01262</td>
+    <td>995</td>
+  </tr>
+  <tr>
+    <td>PRC</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00967</td>
+    <td>997</td>
+  </tr>
+  <tr>
+    <td>PRD</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00684</td>
+    <td>1161</td>
+  </tr>
+  <tr>
+    <td>PSH</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01234</td>
+    <td>1297</td>
+  </tr>
+  <tr>
+    <td>PSH</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01237</td>
+    <td>1294</td>
+  </tr>
+  <tr>
+    <td>PV1</td>
+    <td>2.3</td>
+    <td>3.3.3.52</td>
+    <td>01274</td>
+    <td>1224</td>
+  </tr>
+  <tr>
+    <td>RXA</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00816</td>
+    <td>1224</td>
+  </tr>
+  <tr>
+    <td>RXD</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00299</td>
+    <td>1303</td>
+  </tr>
+  <tr>
+    <td>RXG</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00299</td>
+    <td>1303</td>
+  </tr>
+  <tr>
+    <td>RXO</td>
+    <td>2.3</td>
+    <td>4.8.2.3</td>
+    <td>00294</td>
+    <td>293</td>
+  </tr>
+  <tr>
+    <td>SCH</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00869</td>
+    <td>1304</td>
+  </tr>
+  <tr>
+    <td>STF</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>00123</td>
+    <td>1302</td>
+  </tr>
+  <tr>
+    <td>STF</td>
+    <td>2.3</td>
+    <td><br>
+    </td>
+    <td>01282</td>
+    <td>1234</td>
+  </tr>
+  <tr>
+    <td>URS</td>
+    <td>2.3</td>
+    <td>2.24.7.1</td>
+    <td>00052</td>
+    <td>608</td>
+  </tr>
+  <tr>
+    <td>URS</td>
+    <td>2.3</td>
+    <td>2.24.7.2</td>
+    <td>00053</td>
+    <td>609</td>
+  </tr>
+  <tr>
+    <td>URS</td>
+    <td>2.3</td>
+    <td>2.24.7.3</td>
+    <td>00054</td>
+    <td>610</td>
+  </tr>
+  <tr>
+    <td>URS</td>
+    <td>2.3</td>
+    <td>2.24.7.4</td>
+    <td>00055</td>
+    <td>611</td>
+  </tr>
+  <tr>
+    <td>URS</td>
+    <td>2.3</td>
+    <td>2.24.7.5</td>
+    <td>00056</td>
+    <td>612</td>
+  </tr>
+</table>
+</center></div>
+
+<p>Inconsistent usage of descriptions (not counting abbreviations) compared by the
+position within a segment: </p>
+<div align="center"><center>
+
+<table border="1" bordercolordark="#CC9900" bordercolorlight="#CC9900">
+  <tr>
+    <th>Segment</th>
+    <th>chapter</th>
+    <th>Data-Item</th>
+    <th>original description</th>
+    <th>description of implementation guide</th>
+  </tr>
+  <tr>
+    <td>PR1</td>
+    <td>6.4.4.12</td>
+    <td>00402</td>
+    <td>Procedure Practitioner</td>
+    <td>Resident Code</td>
+  </tr>
+  <tr>
+    <td>LDP</td>
+    <td>8.8.5.5</td>
+    <td>00967</td>
+    <td>Valid Patient Classes</td>
+    <td>Location Characteristic Value</td>
+  </tr>
+</table>
+</center></div>
+
+<p>Further inconsistencies: I found 41 occurences where the definition of
+required/optional doesn´t fit, 100 occurences for unequal length definition, 34
+occurences of different repetition definition. </p>
+
+<h3>Appendix C to H </h3>
+
+<p>Not yet checked. </p>
+
+<p align="center"><img src="../images/separator.gif" width="300" height="10"></p>
+
+<p><big><font color="#0000FF">Last Update: January 17, 2000</font></big></p>
+&nbsp;</td>
+</tr>
+</table>
+</body>
+</html>

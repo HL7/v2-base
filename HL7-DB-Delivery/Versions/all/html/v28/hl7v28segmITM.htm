@@ -1,0 +1,689 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.8</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std28/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.8
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.8</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v281/hl7v281segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8.1</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v282/hl7v282segmITM.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8.2</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v28segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v28qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment ITM:
+Material Item
+(Materialinformationen)
+</H2>
+<TABLE class=segm>
+<TR class=segm-odd>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>Item Identifier</TD>
+<TD class=segm>ID des Artikels</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02186">02186</A></TD>
+<TD class=segm><A HREF = "hl7v28typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading53">17.4.2.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>Item Description</TD>
+<TD class=segm>Artikelbeschreibung</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>999#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02274">02274</A></TD>
+<TD class=segm><A HREF = "hl7v28typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading54">17.4.2.2</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>Item Status</TD>
+<TD class=segm>Verf&uuml;gbarkeit des Artikels</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0776.htm">0776</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02187">02187</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading55">17.4.2.3</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>Item Type</TD>
+<TD class=segm>Typ des Artikels</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0778.htm">0778</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02188">02188</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading56">17.4.2.4</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm>Item Category</TD>
+<TD class=segm>Kategorie des Artikels</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02189">02189</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading57">17.4.2.5</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm>Subject to Expiration Indicator</TD>
+<TD class=segm>Kennzeichen Verfallsdatum vorhanden</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02190">02190</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading58">17.4.2.6</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm>Manufacturer Identifier</TD>
+<TD class=segm>ID des Herstellers</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02191">02191</A></TD>
+<TD class=segm><A HREF = "hl7v28typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading59">17.4.2.7</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm>Manufacturer Name</TD>
+<TD class=segm>Herstellername</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>999=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02275">02275</A></TD>
+<TD class=segm><A HREF = "hl7v28typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading60">17.4.2.8</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm>Manufacturer Catalog Number</TD>
+<TD class=segm>Katalogbezeichnung des Herstellers</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>20=</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02192">02192</A></TD>
+<TD class=segm><A HREF = "hl7v28typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading61">17.4.2.9</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm>Manufacturer Labeler Identification Code</TD>
+<TD class=segm>Hersteller-ID auf dem Label</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02193">02193</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading62">17.4.2.10</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>11</TD>
+<TD class=segm>Patient Chargeable Indicator</TD>
+<TD class=segm>Kennzeichen Artikel darf Patient berechnet werden</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02070">02070</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading63">17.4.2.11</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>12</TD>
+<TD class=segm>Transaction Code</TD>
+<TD class=segm>Leistungsziffer / Buchungstext / Entgeltart EBM (GSG)</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0132.htm">0132</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#00361">00361</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading64">17.4.2.12</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>13</TD>
+<TD class=segm>Transaction amount - unit</TD>
+<TD class=segm>Einzelpreis / Punktwert</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#00366">00366</A></TD>
+<TD class=segm><A HREF = "hl7v28typCP.htm#CP">CP</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading65">17.4.2.13</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>14</TD>
+<TD class=segm>Stocked Item Indicator</TD>
+<TD class=segm>Kennzeichen Artikel im Lagerbestand</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02197">02197</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading66">17.4.2.14</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>15</TD>
+<TD class=segm>Supply Risk Codes</TD>
+<TD class=segm>Gefahrenhinweise f&uuml;r Material</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0871.htm">0871</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02266">02266</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading67">17.4.2.15</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>16</TD>
+<TD class=segm>Approving Regulatory Agency</TD>
+<TD class=segm>Zulassungsbeh&ouml;rde</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0790.htm">0790</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02199">02199</A></TD>
+<TD class=segm><A HREF = "hl7v28typXON.htm#XON">XON</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading68">17.4.2.16</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>17</TD>
+<TD class=segm>Latex Indicator</TD>
+<TD class=segm>Kennzeichen Artikel enth&auml;lt Latex</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02200">02200</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading69">17.4.2.17</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>18</TD>
+<TD class=segm>Ruling Act</TD>
+<TD class=segm>Vorschrift die die Dokumentationpflicht begr&uuml;ndet </TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0793.htm">0793</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02201">02201</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading70">17.4.2.18</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>19</TD>
+<TD class=segm>Item Natural Account Code</TD>
+<TD class=segm>Verrechnungsnummer des Artikels</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0320.htm">0320</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#00282">00282</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading71">17.4.2.19</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>20</TD>
+<TD class=segm>Approved To Buy Quantity</TD>
+<TD class=segm>Mengenbudget Artikel</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>6#</TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02203">02203</A></TD>
+<TD class=segm><A HREF = "hl7v28typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading72">17.4.2.20</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>21</TD>
+<TD class=segm>Approved To Buy Price</TD>
+<TD class=segm>Preisbudget Artikel</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02204">02204</A></TD>
+<TD class=segm><A HREF = "hl7v28typMO.htm#MO">MO</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading73">17.4.2.21</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>22</TD>
+<TD class=segm>Taxable Item Indicator</TD>
+<TD class=segm>Kennzeichen steuerpflichtiger Artikel </TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02205">02205</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading74">17.4.2.22</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>23</TD>
+<TD class=segm>Freight Charge Indicator</TD>
+<TD class=segm>Frachtkosten berechenbar</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02206">02206</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading75">17.4.2.23</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>24</TD>
+<TD class=segm>Item Set Indicator</TD>
+<TD class=segm>Kennzeichen Artikel ist ein Set</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02207">02207</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading76">17.4.2.24</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>25</TD>
+<TD class=segm>Item Set Identifier</TD>
+<TD class=segm>ID des Artikelsets</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02208">02208</A></TD>
+<TD class=segm><A HREF = "hl7v28typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading77">17.4.2.25</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>26</TD>
+<TD class=segm>Track Department Usage Indicator</TD>
+<TD class=segm>Kennzeichen abteilungsspezifische Verwendungsstatistik</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#02209">02209</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading78">17.4.2.26</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>27</TD>
+<TD class=segm>Procedure Code</TD>
+<TD class=segm>Maﬂnahmen- / Operationsschl&uuml;ssel</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0088.htm">0088</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#00393">00393</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading79">17.4.2.27</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>28</TD>
+<TD class=segm>Procedure Code Modifier</TD>
+<TD class=segm>Modifikator zum Prozedurcode</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0340.htm">0340</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#01316">01316</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading80">17.4.2.28</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>29</TD>
+<TD class=segm>Special Handling Code</TD>
+<TD class=segm>Hinweise zur Vorbehandlung der Probe</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0376.htm">0376</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#01370">01370</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading81">17.4.2.29</A></TD>
+</TR>
+<TR BGCOLOR="#FFB090">
+<TD class=segm>30</TD>
+<TD class=segm>Hazardous Indicator</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#03388">03388</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading82">17.4.2.30</A></TD>
+</TR>
+<TR BGCOLOR="#FFB090">
+<TD class=segm>31</TD>
+<TD class=segm>Sterile Indicator</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0532.htm">0532</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#03304">03304</A></TD>
+<TD class=segm><A HREF = "hl7v28typCNE.htm#CNE">CNE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading83">17.4.2.31</A></TD>
+</TR>
+<TR BGCOLOR="#FFB090">
+<TD class=segm>32</TD>
+<TD class=segm>Material Data Safety Sheet Number</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#03305">03305</A></TD>
+<TD class=segm><A HREF = "hl7v28typEI.htm#EI">EI</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading84">17.4.2.32</A></TD>
+</TR>
+<TR BGCOLOR="#FFB090">
+<TD class=segm>33</TD>
+<TD class=segm>United Nations Standard Products and Services Code (UNSPSC)</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28tab0396.htm">0396</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v28datel.htm#03306">03306</A></TD>
+<TD class=segm><A HREF = "hl7v28typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std28/ch17.html#Heading85">17.4.2.33</A></TD>
+</TR>
+</TABLE>
+<P>
+<P>
+<H3>Used within following Message Structures:</H3>
+<dd><A HREF = "hl7v28msgstruct.htm#MFN_M16">MFN_M16</A> Master File Notification - Inventory Item Enhanced (<A HREF = "std28/ch08.html#Heading307">8.12.2</A>)</dd>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

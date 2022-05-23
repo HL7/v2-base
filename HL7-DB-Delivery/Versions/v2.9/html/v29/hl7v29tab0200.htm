@@ -1,0 +1,406 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Table 0200:
+Name Type
+</H2>
+<TABLE class=info>
+<TR>
+<TD class=>Interpretation:</TD>
+<TD class=>Namensart</TD>
+</TR>
+<TR>
+<TD class=>OID Table:</TD>
+<TD class=>2.16.840.1.113883.12.200</TD>
+</TR>
+<TR>
+<TD class=>Codesystem OID: </TD>
+<TD class=>2.16.840.1.113883.18.105 Version 2</TD>
+</TR>
+<TR>
+<TD class=>Value Set OID:</TD>
+<TD class=>2.16.840.1.113883.21.117</TD>
+</TR>
+<TR>
+<TD class=>Binding:</TD>
+<TD class=>universal</TD>
+</TR>
+<TR>
+<TD class=>Expansion:</TD>
+<TD class=>all codes from codesystem</TD>
+</TR>
+<TR>
+<TD class=>Vocabulary Domain:</TD>
+<TD class=>tbd</TD>
+</TR>
+<TR>
+<TD class=>Table Type:</TD>
+<TD class=>HL7</TD>
+</TR>
+<TR>
+<TD class=>Case insensitive:</TD>
+<TD class=>Falsch</TD>
+</TR>
+<TR>
+<TD class=>Steward:</TD>
+<TD class=>InM</TD>
+</TR>
+<TR>
+<TD class=>Section</TD>
+<TD class=>2.C.2.137</TD>
+</TR>
+</TABLE>
+<p>
+<TABLE class=info>
+<TR>
+<TH class=table>Value</TH>
+<TH class=table>Description</TH>
+<TH class=table>German Interpretation</TH>
+<TH class=table>Comment</TH>
+<TH class=table>Chapter</TH>
+</TR>
+<TR class=table-odd>
+<TD class=table>A</TD>
+<TD class=table>Assigned</TD>
+<TD class=table><BR></TD>
+<TD class=table>A name assigned to a person. Reasons some organizations assign alternate names may include not knowing the person's name, or to maintain anonymity. Some, but not necessarily all, of the name types that people call "alias" may fit into this category.</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>B</TD>
+<TD class=table>Birth name</TD>
+<TD class=table>Geburtsname</TD>
+<TD class=table>A name that a person had shortly after being born. Usually for family names but may be used to mark given names at birth that may have changed later.<p>This is not for temporary names assigned at birth while a newborn is not yet named</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BAD</TD>
+<TD class=table>Bad Name</TD>
+<TD class=table>ung&uuml;ltiger Name</TD>
+<TD class=table>A name that was wrongly used in the past and is now maintained only for the purposes of searching</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>C</TD>
+<TD class=table>Adopted Name</TD>
+<TD class=table>angenommener Name</TD>
+<TD class=table>A name acquired by adoption</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>D</TD>
+<TD class=table>Customary Name</TD>
+<TD class=table><BR></TD>
+<TD class=table>Known as/conventional/the one you use.  May also be known asa preferred name.</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>F</TD>
+<TD class=table>Fathers Name</TD>
+<TD class=table>Name des Vaters</TD>
+<TD class=table>Fathers Name ( Patronymic Name)</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>I</TD>
+<TD class=table>Licensing Name</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>K</TD>
+<TD class=table>Business name</TD>
+<TD class=table>Gesch&auml;ftsname</TD>
+<TD class=table>A name used in a Professional or Business context. Also includes writer’s pseudonym, artist’s name, stage name, street name, etc.
+
+An example of use is where a person with multiple proper names (i.e. married) uses one of the particular names in a professional</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>L</TD>
+<TD class=table>Official Registry Name</TD>
+<TD class=table>gesetzlicher Name</TD>
+<TD class=table>The formal name as registered in an official (government) registry, but which name might not be commonly used. May correspond to legal name<p>For many people, customary name is also their official name</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>M</TD>
+<TD class=table>Maiden Name</TD>
+<TD class=table>Name als ledige Person (Ledigenname)</TD>
+<TD class=table>A name you had just before you got married</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MSK</TD>
+<TD class=table>Masked</TD>
+<TD class=table>Name ist maskiert</TD>
+<TD class=table>There is information on this item available but it has not been provided by the sender due to security, privacy or other reasons. There may be an alternate mechanism for gaining access to this information.
+
+Note: using this null flavor does provide information that may be a breach of confidentiality, even though no detail data is provided. Its primary purpose is for those circumstances where it is necessary to inform the receiver that the information does exist without providing any detail.</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>N</TD>
+<TD class=table>Nickname</TD>
+<TD class=table>Spitzname</TD>
+<TD class=table>Nickname /"Call me" Name/Street Name</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>NAV</TD>
+<TD class=table>Temporarily Unavailable</TD>
+<TD class=table>Name zeitweise nicht verf&uuml;gbar</TD>
+<TD class=table>Information is not available at this time but it is expected that it will be available later.<p>Includes John or Jane Doe situations</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NB</TD>
+<TD class=table>Newborn Name</TD>
+<TD class=table>Name zeitweise nicht verf&uuml;gbar</TD>
+<TD class=table>A name assigned on a temporary basis at birth. i.e. "Baby of Smith"</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>NOUSE</TD>
+<TD class=table>No Longer To Be Used</TD>
+<TD class=table>nicht l&auml;nger in Benutzung</TD>
+<TD class=table>Name not to be used anymore for personal reasons</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>P</TD>
+<TD class=table>Name of Partner/Spouse</TD>
+<TD class=table><BR></TD>
+<TD class=table>Retained for backward compatibility only as of v2.7.</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>R</TD>
+<TD class=table>Registered Name</TD>
+<TD class=table>Zuchtname bei Tieren</TD>
+<TD class=table>(animals only)<p>Retained for backwards compatibility only as of v2.7. Use "L" instead - has same meaning</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>REL</TD>
+<TD class=table>Religious</TD>
+<TD class=table><BR></TD>
+<TD class=table>e.g. Sister Mary Francis, Brother John</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>S</TD>
+<TD class=table>Pseudonym</TD>
+<TD class=table>Pseudonym (z.B. f&uuml;r Studien)</TD>
+<TD class=table>Coded Pseudo-Name to ensure anonymity</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>T</TD>
+<TD class=table>Indigenous/Tribal</TD>
+<TD class=table>Stammesname</TD>
+<TD class=table>Indigenous/Tribal/Community Name  e.g. Chief Red Cloud</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TEMP</TD>
+<TD class=table>Temporary Name</TD>
+<TD class=table>tempor&auml;rer Name</TD>
+<TD class=table>A temporary name. Note that a name valid time can provide more detailed information.</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>U</TD>
+<TD class=table>Unknown</TD>
+<TD class=table>Name unbekannt</TD>
+<TD class=table>Unknown</TD>
+<TD class=table>2.C.2.137</TD>
+</TR>
+</TABLE>
+<H3>Comments made by the German HL7 User Group:</H3>
+<dd>Namensart</DD>
+<P>
+<H3>Used Within the following Data Elements</H3>
+<DD><A HREF = "hl7v29datel.htm#00108">00108</A> Patient Name / Patientenname (<A HREF = "std29/ch03.html#Heading1014">3.4.2.5</A>)</DD>
+<DD><A HREF = "hl7v29datel.htm#00191">00191</A> Name / Name der Kontaktperson (<A HREF = "std29/ch03.html#Heading1164">3.4.5.2</A>)</DD>
+<DD><A HREF = "hl7v29datel.htm#01281">01281</A> Prior Patient Name / Fr&uuml;herer Patientenname (<A HREF = "std29/ch03.html#Heading1257">3.4.10.7</A>)</DD>
+<P>
+<H3>Used Within the following Data Structures</H3>
+<DD><A HREF = "hl7v29typPPN.htm">PPN</A></DD><BR>
+<DD><A HREF = "hl7v29typXCN.htm">XCN</A></DD><BR>
+<DD><A HREF = "hl7v29typXPN.htm">XPN</A></DD><BR>
+<P>
+<H3>Used Within the following Components</H3>
+<DD>272 Name Type Code () </DD><BR>
+<DD>404 Name Type Code () </DD><BR>
+<DD>436 Name Type Code () </DD><BR>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

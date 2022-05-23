@@ -1,0 +1,864 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.2</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v22.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v22idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std22/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.2
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.2</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v22event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v22segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v22msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v22msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v22datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v22tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v22typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment IN1:
+INSURANCE
+(Versicherungsinformationen)
+</H2>
+<TABLE class=segm>
+<TR class=segm-odd>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>Set ID - insurance</TD>
+<TD class=segm>IN1-Segmentnummer</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00426">00426</A></TD>
+<TD class=segm><A HREF = "hl7v22typSI.htm#SI">SI</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading89">6.4.5.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>Insurance plan ID</TD>
+<TD class=segm BGCOLOR="#FFB090">Tarifbezeichnung des Kostentr&auml;gers</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22tab0072.htm">0072</A></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00368">00368</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>Insurance company ID</TD>
+<TD class=segm>Institutionskennzeichen / Nummer des Kostentr&auml;gers</TD>
+<TD class=segm BGCOLOR="#FFB090">..9</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00428">00428</A></TD>
+<TD class=segm><A HREF = "hl7v22typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading91">6.4.5.3</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>Insurance company name</TD>
+<TD class=segm>Bezeichnung des Kostentr&auml;gers</TD>
+<TD class=segm>..45</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00429">00429</A></TD>
+<TD class=segm><A HREF = "hl7v22typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading92">6.4.5.4</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm>Insurance company address</TD>
+<TD class=segm>Anschrift des Kostentr&auml;gers</TD>
+<TD class=segm>..106</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00430">00430</A></TD>
+<TD class=segm><A HREF = "hl7v22typAD.htm#AD">AD</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading93">6.4.5.5</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm BGCOLOR="#FFB090">Insurance company contact pers</TD>
+<TD class=segm>Ansprechpartner beim Kostentr&auml;ger</TD>
+<TD class=segm>..48</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00431">00431</A></TD>
+<TD class=segm><A HREF = "hl7v22typPN.htm#PN">PN</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading94">6.4.5.6</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm BGCOLOR="#FFB090">Insurance company phone number</TD>
+<TD class=segm>Telefonnummer des Kostentr&auml;gers</TD>
+<TD class=segm>..40</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090">Y/3</TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00432">00432</A></TD>
+<TD class=segm><A HREF = "hl7v22typTN.htm#TN">TN</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading95">6.4.5.7</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm>Group number</TD>
+<TD class=segm BGCOLOR="#FFB090">Gruppennummer des Kostentr&auml;gers</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00433">00433</A></TD>
+<TD class=segm><A HREF = "hl7v22typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading96">6.4.5.8</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm>Group name</TD>
+<TD class=segm BGCOLOR="#FFB090">Gruppenbezeichnung des Kostentr&auml;gers</TD>
+<TD class=segm>..35</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00434">00434</A></TD>
+<TD class=segm><A HREF = "hl7v22typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading97">6.4.5.9</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm BGCOLOR="#FFB090">Insured's group employer ID</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00435">00435</A></TD>
+<TD class=segm><A HREF = "hl7v22typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading98">6.4.5.10</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>11</TD>
+<TD class=segm BGCOLOR="#FFB090">Insured's group employer name</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..45</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00436">00436</A></TD>
+<TD class=segm><A HREF = "hl7v22typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading99">6.4.5.11</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>12</TD>
+<TD class=segm>Plan effective date</TD>
+<TD class=segm BGCOLOR="#FFB090">G&uuml;ltigkeitsbeginn der Krankenversichertenkarte</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00437">00437</A></TD>
+<TD class=segm><A HREF = "hl7v22typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading100">6.4.5.12</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>13</TD>
+<TD class=segm>Plan expiration date</TD>
+<TD class=segm BGCOLOR="#FFB090">G&uuml;ltigkeitsende der Krankenversichertenkarte</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00438">00438</A></TD>
+<TD class=segm><A HREF = "hl7v22typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading101">6.4.5.13</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>14</TD>
+<TD class=segm>Authorization information</TD>
+<TD class=segm>Aktenzeichen der Kosten&uuml;bernahme</TD>
+<TD class=segm>..55</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00439">00439</A></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22typCM.htm#CM_AUI">CM_AUI</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading102">6.4.5.14</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>15</TD>
+<TD class=segm>Plan type</TD>
+<TD class=segm BGCOLOR="#FFB090">Versichertenstatus (GSG)</TD>
+<TD class=segm BGCOLOR="#FFB090">..5</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22tab0086.htm">0086</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00440">00440</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading103">6.4.5.15</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>16</TD>
+<TD class=segm>Name of insured</TD>
+<TD class=segm>Name des Versicherungsnehmers</TD>
+<TD class=segm>..48</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00441">00441</A></TD>
+<TD class=segm><A HREF = "hl7v22typPN.htm#PN">PN</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading104">6.4.5.16</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>17</TD>
+<TD class=segm>Insured's relationship to patient</TD>
+<TD class=segm>Beziehung des Versicherungsnehmers zum Patienten</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22tab0063.htm">0063</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00442">00442</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading105">6.4.5.17</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>18</TD>
+<TD class=segm>Insured's date of birth</TD>
+<TD class=segm>Geburtsdatum des Versicherugnsnehmers</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00443">00443</A></TD>
+<TD class=segm><A HREF = "hl7v22typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading106">6.4.5.18</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>19</TD>
+<TD class=segm>Insured's address</TD>
+<TD class=segm>Anschrift des Versicherungsnehmers</TD>
+<TD class=segm>..106</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00444">00444</A></TD>
+<TD class=segm><A HREF = "hl7v22typAD.htm#AD">AD</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading107">6.4.5.19</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>20</TD>
+<TD class=segm>Assignment of benefits</TD>
+<TD class=segm BGCOLOR="#FFB090">Merkmal Rechnung an Kostentr&auml;ger</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22tab0135.htm">0135</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00445">00445</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading108">6.4.5.20</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>21</TD>
+<TD class=segm>Coordination of benefits</TD>
+<TD class=segm BGCOLOR="#FFB090">Abstimmung mit anderen Versicherungsverh&auml;ltnissen</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22tab0173.htm">0173</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00446">00446</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading109">6.4.5.21</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>22</TD>
+<TD class=segm BGCOLOR="#FFB090">Coordination of benefits - priority</TD>
+<TD class=segm BGCOLOR="#FFB090">Priorit&auml;t dieses Versicherungsverh&auml;ltnisses</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00447">00447</A></TD>
+<TD class=segm><A HREF = "hl7v22typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading110">6.4.5.22</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>23</TD>
+<TD class=segm>Notice of admission code</TD>
+<TD class=segm BGCOLOR="#FFB090">Merkmal Aufnahmeanzeige an Kostentr&auml;ger verschickt</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22tab0136.htm">0136</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00448">00448</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading111">6.4.5.23</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>24</TD>
+<TD class=segm>Notice of admission date</TD>
+<TD class=segm BGCOLOR="#FFB090">Datum, wann Aufnahmeanzeige verschickt</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00449">00449</A></TD>
+<TD class=segm><A HREF = "hl7v22typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading112">6.4.5.24</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>25</TD>
+<TD class=segm BGCOLOR="#FFB090">Report of eligibility code</TD>
+<TD class=segm BGCOLOR="#FFB090">Merkmal Kosten&uuml;bernahme (GSG)</TD>
+<TD class=segm BGCOLOR="#FFB090">..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00450">00450</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading113">6.4.5.25</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>26</TD>
+<TD class=segm BGCOLOR="#FFB090">Report of eligibility date</TD>
+<TD class=segm BGCOLOR="#FFB090">Datum der Kosten&uuml;bernahmeerkl&auml;rung</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00451">00451</A></TD>
+<TD class=segm><A HREF = "hl7v22typDT.htm#DT">DT</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading114">6.4.5.26</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>27</TD>
+<TD class=segm>Release information code</TD>
+<TD class=segm BGCOLOR="#FFB090">Freigabe von Patienteninformation</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22tab0093.htm">0093</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00452">00452</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading115">6.4.5.27</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>28</TD>
+<TD class=segm BGCOLOR="#FFB090">Pre-admit certification (PAC)</TD>
+<TD class=segm BGCOLOR="#FFB090">Aktenzeichen Zustimmung des Kostentr&auml;gers zur Aufnahme</TD>
+<TD class=segm>..15</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00453">00453</A></TD>
+<TD class=segm><A HREF = "hl7v22typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading116">6.4.5.28</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>29</TD>
+<TD class=segm BGCOLOR="#FFB090">Verification date / time</TD>
+<TD class=segm BGCOLOR="#FFB090">Zeitpunkt des letzten Einlesens der Krankenversichertenkarte</TD>
+<TD class=segm BGCOLOR="#FFB090">..26</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00454">00454</A></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22typTS.htm#TS">TS</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading117">6.4.5.29</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>30</TD>
+<TD class=segm>Verification by</TD>
+<TD class=segm BGCOLOR="#FFB090">eingelesen durch</TD>
+<TD class=segm>..60</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00455">00455</A></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22typCN.htm#CN_PERSON">CN_PERSON</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading118">6.4.5.30</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>31</TD>
+<TD class=segm>Type of agreement code</TD>
+<TD class=segm BGCOLOR="#FFB090">nicht verwendet</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22tab0098.htm">0098</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00456">00456</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading119">6.4.5.31</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>32</TD>
+<TD class=segm>Billing status</TD>
+<TD class=segm>Status der Rechnungsstellung</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22tab0022.htm">0022</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00457">00457</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading120">6.4.5.32</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>33</TD>
+<TD class=segm>Lifetime reserve days</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00458">00458</A></TD>
+<TD class=segm><A HREF = "hl7v22typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading121">6.4.5.33</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>34</TD>
+<TD class=segm BGCOLOR="#FFB090">Delay before lifetime reserve days</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00459">00459</A></TD>
+<TD class=segm><A HREF = "hl7v22typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading122">6.4.5.34</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>35</TD>
+<TD class=segm>Company plan code</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22tab0042.htm">0042</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00460">00460</A></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading123">6.4.5.35</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>36</TD>
+<TD class=segm>Policy number</TD>
+<TD class=segm BGCOLOR="#FFB090">Versicherungspolicennummer / Vertragsnummer</TD>
+<TD class=segm>..15</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00461">00461</A></TD>
+<TD class=segm><A HREF = "hl7v22typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading124">6.4.5.36</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>37</TD>
+<TD class=segm>Policy deductible</TD>
+<TD class=segm BGCOLOR="#FFB090">&Uuml;bernahmeanteil des Zahlungspflichtigen</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00462">00462</A></TD>
+<TD class=segm><A HREF = "hl7v22typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading125">6.4.5.37</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>38</TD>
+<TD class=segm>Policy limit - amount</TD>
+<TD class=segm BGCOLOR="#FFB090">nicht verwendet (IN2-29 benutzen)</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00463">00463</A></TD>
+<TD class=segm><A HREF = "hl7v22typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading126">6.4.5.38</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>39</TD>
+<TD class=segm>Policy limit - days</TD>
+<TD class=segm BGCOLOR="#FFB090">Aufenthaltstage, die vom Kostentr&auml;ger getragen werden</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00464">00464</A></TD>
+<TD class=segm><A HREF = "hl7v22typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading127">6.4.5.39</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>40</TD>
+<TD class=segm>Room rate - semi-private</TD>
+<TD class=segm BGCOLOR="#FFB090">nicht verwendet (veraltet; erste Komponente von IN2-28 benutzen)</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00465">00465</A></TD>
+<TD class=segm><A HREF = "hl7v22typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading128">6.4.5.40</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>41</TD>
+<TD class=segm>Room rate - private</TD>
+<TD class=segm BGCOLOR="#FFB090">nicht verwendet (veraltet; erste Komponente von IN2-28 benutzen)</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00466">00466</A></TD>
+<TD class=segm><A HREF = "hl7v22typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading129">6.4.5.41</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>42</TD>
+<TD class=segm>Insured's employment status</TD>
+<TD class=segm>Arbeitsverh&auml;ltnis des Versicherungsnehmers</TD>
+<TD class=segm BGCOLOR="#FFB090">..60</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22tab0066.htm">0066</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00467">00467</A></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22typCE.htm#CE_0066">CE_0066</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading130">6.4.5.42</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>43</TD>
+<TD class=segm>Insured's sex</TD>
+<TD class=segm>Geschlecht des Versicherungsnehmers</TD>
+<TD class=segm>..1</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22tab0001.htm">0001</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00468">00468</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading131">6.4.5.43</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>44</TD>
+<TD class=segm>Insured's employer address</TD>
+<TD class=segm>Anschrift des Arbeitgebers</TD>
+<TD class=segm>..106</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm BGCOLOR="#FFB090"><A HREF = "hl7v22datel.htm#00469">00469</A></TD>
+<TD class=segm><A HREF = "hl7v22typAD.htm#AD">AD</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading132">6.4.5.44</A></TD>
+</TR>
+<TR BGCOLOR="#FFB090">
+<TD class=segm>45</TD>
+<TD class=segm>Verification status</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22datel.htm#00470">00470</A></TD>
+<TD class=segm><A HREF = "hl7v22typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading133">6.4.5.45</A></TD>
+</TR>
+<TR BGCOLOR="#FFB090">
+<TD class=segm>46</TD>
+<TD class=segm>Prior insurance plan ID</TD>
+<TD class=segm>Bisherige Tarifbezeichnung des Kostentr&auml;gers (bei &Auml;nderungen)</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22tab0072.htm">0072</A></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v22datel.htm#00471">00471</A></TD>
+<TD class=segm><A HREF = "hl7v22typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std22/hl7chp6.html#Heading134">6.4.5.46</A></TD>
+</TR>
+</TABLE>
+<P>
+<H3>Used within the following Events:</H3>
+<dd><A HREF = "hl7v22eventA01.htm">A01</A> Admit a Patient (<A HREF = "std22/hl7chp3.html#Heading4">3.2.1</A>)</dd>
+<dd><A HREF = "hl7v22eventA04.htm">A04</A> Register a Patient (<A HREF = "std22/hl7chp3.html#Heading7">3.2.4</A>)</dd>
+<dd><A HREF = "hl7v22eventA05.htm">A05</A> Pre-admit a Patient (<A HREF = "std22/hl7chp3.html#Heading8">3.2.5</A>)</dd>
+<dd><A HREF = "hl7v22eventA06.htm">A06</A> Transfer an Outpatient to Inpatient (<A HREF = "std22/hl7chp3.html#Heading9">3.2.6</A>)</dd>
+<dd><A HREF = "hl7v22eventA07.htm">A07</A> Transfer an Inpatient to Outpatient (<A HREF = "std22/hl7chp3.html#Heading10">3.2.7</A>)</dd>
+<dd><A HREF = "hl7v22eventA08.htm">A08</A> Update Patient Information (<A HREF = "std22/hl7chp3.html#Heading11">3.2.8</A>)</dd>
+<dd><A HREF = "hl7v22eventA13.htm">A13</A> Cancel Discharge (<A HREF = "std22/hl7chp3.html#Heading16">3.2.13</A>)</dd>
+<dd><A HREF = "hl7v22eventA14.htm">A14</A> Pending Admit (<A HREF = "std22/hl7chp3.html#Heading17">3.2.14</A>)</dd>
+<dd><A HREF = "hl7v22eventA19.htm">A19</A> Patient Query (<A HREF = "std22/hl7chp3.html#Heading22">3.2.19</A>)</dd>
+<dd><A HREF = "hl7v22eventA28.htm">A28</A> Add person information (<A HREF = "std22/hl7chp3.html#Heading32">3.2.28</A>)</dd>
+<dd><A HREF = "hl7v22eventA31.htm">A31</A> Update person information (<A HREF = "std22/hl7chp3.html#Heading35">3.2.31</A>)</dd>
+<dd><A HREF = "hl7v22eventP01.htm">P01</A> Add and Update Patient Accounts (<A HREF = "std22/hl7chp6.html#Heading5">6.3.1</A>)</dd>
+<P>
+<P>
+<P>
+<FONT SIZE=+2>Comments on this Segment:</FONT><BR>
+Author: BSW<BR>
+Data Element: <A HREF = "hl7v22datel.htm#00442">00442</A><BR>
+Field No: 17<BR>
+compare with  GT1-11, NK1-3<P>
+Author: BSW<BR>
+Data Element: <A HREF = "hl7v22datel.htm#00467">00467</A><BR>
+Field No: 42<BR>
+compare with GT1-20<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

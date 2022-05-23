@@ -1,0 +1,1730 @@
+<HTML><HEAD>
+<!-- This document was created from RTF source by rtftohtml version 3.8 -->
+<TITLE>HL7 V2.2 Chapter 8</TITLE></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>
+References to other Chapters
+</H1>
+<A HREF="hl7.html">Index HL7</A><br>
+<A HREF="hl7chp1.html">Chapter 1</A><br>
+<A HREF="hl7chp2.html">Chapter 2</A><br>
+<A HREF="hl7chp3.html">Chapter 3</A><br>
+<A HREF="hl7chp4.html">Chapter 4</A><br>
+<A HREF="hl7chp5.html">Chapter 5</A><br>
+<A HREF="hl7chp6.html">Chapter 6</A><br>
+<A HREF="hl7chp7.html">Chapter 7</A><br>
+
+<hr>
+
+<p>
+
+<H1>
+8</H1>
+<UL>
+<LI><A HREF="#Heading1">8 <BR>Master Files</A>
+<UL>
+<LI><A HREF="#Heading2">8.1 PURPOSE </A>
+<LI><A HREF="#Heading3">8.2  TRIGGER EVENTS </A>
+<LI><A HREF="#Heading4">8.3 MESSAGES</A>
+<UL>
+<LI><A HREF="#Heading5">8.3.1  MFN - master files notification </A>
+<LI><A HREF="#Heading6">8.3.2  MFD - master files delayed application acknowledgement </A>
+<LI><A HREF="#Heading7">8.3.3  MFQ - master files query </A>
+<UL>
+<LI><A HREF="#Heading8">8.3.3.1 MFQ use notes</A>
+</UL>
+</UL>
+<LI><A HREF="#Heading9">8.4 SEGMENT DEFINITIONS </A>
+<UL>
+<LI><A HREF="#Heading10">8.4.1  MFI - master file identification segment </A>
+<UL>
+<LI><A HREF="#Heading11">8.4.1.1 Master file identifier (CE) 00658</A>
+<LI><A HREF="#Heading12">8.4.1.2 Master files application identifier (ID) 00659</A>
+<LI><A HREF="#Heading13">8.4.1.3 File-level event code (ID) 00660</A>
+<LI><A HREF="#Heading14">8.4.1.4 Entered date/time  (TS) 00661</A>
+<LI><A HREF="#Heading15">8.4.1.5 Effective date/time (TS) 00662</A>
+<LI><A HREF="#Heading16">8.4.1.6 Response level code (ID) 00663</A>
+</UL>
+<LI><A HREF="#Heading17">8.4.2  MFE - master file entry segment  </A>
+<UL>
+<LI><A HREF="#Heading18">8.4.2.1 Record-level event code (ID) 00664</A>
+<LI><A HREF="#Heading19">8.4.2.2 MFN control ID (ST) 00665</A>
+<LI><A HREF="#Heading20">8.4.2.3 Effective date/time (TS) 00662</A>
+<LI><A HREF="#Heading21">8.4.2.4 Primary key value (CE) 00667</A>
+</UL>
+<LI><A HREF="#Heading22">8.4.3  MFA - master file acknowledgement segment </A>
+<UL>
+<LI><A HREF="#Heading23">8.4.3.1 Record-level event code (ID) 00664</A>
+<LI><A HREF="#Heading24">8.4.3.2 MFN control ID (ST) 00665</A>
+<LI><A HREF="#Heading25">8.4.3.3 Completion date/time (TS) 00668</A>
+<LI><A HREF="#Heading26">8.4.3.4 Error return code and/or text  (CE) 00669</A>
+<LI><A HREF="#Heading27">8.4.3.5 Primary key value (CE) 00670</A>
+</UL>
+</UL>
+<LI><A HREF="#Heading28">8.5  EXAMPLES </A>
+<UL>
+<LI><A HREF="#Heading29">8.5.1  ZL7 segment (proposed example only) </A>
+<UL>
+<LI><A HREF="#Heading30">8.5.1.1 HL7 table entry for table xxxx (CE) xxxxx</A>
+<LI><A HREF="#Heading31">8.5.1.2 Display-sort-key (NM) xxxxx</A>
+</UL>
+<LI><A HREF="#Heading32">8.5.2  MFN message with original acknowledgement mode </A>
+<LI><A HREF="#Heading33">8.5.3  Enhanced mode application level acknowledgement to the MFN message </A>
+<UL>
+<LI><A HREF="#Heading34">8.5.3.1 Initial message with accept acknowledgement</A>
+<LI><A HREF="#Heading35">8.5.3.2 Enhanced mode application acknowledgement message</A>
+</UL>
+<LI><A HREF="#Heading36">8.5.4  Delayed application level acknowledgement </A>
+<UL>
+<LI><A HREF="#Heading37">8.5.4.1 Initial message with accept acknowledgement</A>
+<LI><A HREF="#Heading38">8.5.4.2 Deferred application acknowledgement message</A>
+</UL>
+</UL>
+<LI><A HREF="#Heading39">8.6  OUTSTANDING ISSUES </A>
+</UL>
+<LI><A HREF="#Heading40">9 .APPENDIX A:  </A>
+<UL>
+<LI><A HREF="#Heading41">9.1 Staff and practitioner master file segments</A>
+<UL>
+<LI><A HREF="#Heading42">9.1.1  STF - staff identification segment </A>
+<UL>
+<LI><A HREF="#Heading43">9.1.1.1 STF - primary key value (CE) 00671</A>
+<LI><A HREF="#Heading44">9.1.1.2 Staff ID code (CE) 00672</A>
+<LI><A HREF="#Heading45">9.1.1.3 Staff name (PN) 00673</A>
+<LI><A HREF="#Heading46">9.1.1.4 Staff type (ID) 00674</A>
+<LI><A HREF="#Heading47">9.1.1.5 Sex (ID) 00111</A>
+<LI><A HREF="#Heading48">9.1.1.6 Date of birth (TS) 00110</A>
+<LI><A HREF="#Heading49">9.1.1.7 Active/inactive (ID) 00675</A>
+<LI><A HREF="#Heading50">9.1.1.8 Department (CE) 00676</A>
+<LI><A HREF="#Heading51">9.1.1.9 Service (CE) 00677</A>
+<LI><A HREF="#Heading52">9.1.1.10 Phone (TN) 00678</A>
+<LI><A HREF="#Heading53">9.1.1.11 Office/home address (AD) 00679</A>
+<LI><A HREF="#Heading54">9.1.1.12 Activation date (CM) 00680</A>
+<LI><A HREF="#Heading55">9.1.1.13 Inactivation date (CM) 00681</A>
+<LI><A HREF="#Heading56">9.1.1.14 Backup person ID (CE) 00682</A>
+<LI><A HREF="#Heading57">9.1.1.15 E-mail address (ST) 00683</A>
+<LI><A HREF="#Heading58">9.1.1.16 Preferred method of contact (ID) 00684</A>
+</UL>
+<LI><A HREF="#Heading59">9.1.2  PRA - practitioner detail segment </A>
+<UL>
+<LI><A HREF="#Heading60">9.1.2.1 PRA - primary key value (ST) 00685</A>
+<LI><A HREF="#Heading61">9.1.2.2 Practitioner group (CE) 00686</A>
+<LI><A HREF="#Heading62">9.1.2.3 Practitioner category (ID) 00687</A>
+<LI><A HREF="#Heading63">9.1.2.4 Provider billing (ID) 00688</A>
+<LI><A HREF="#Heading64">9.1.2.5 Specialty (CM) 00689</A>
+<LI><A HREF="#Heading65">9.1.2.6 Practitioner ID numbers (CM) 00690</A>
+<LI><A HREF="#Heading66">9.1.2.7 Privileges (CM) 00691</A>
+</UL>
+<LI><A HREF="#Heading67">9.1.3  Example:  Doctor Master File MFN message </A>
+</UL>
+</UL>
+</UL>
+<hr size=4>
+<p><br>
+ </p>
+
+<h1>
+<A NAME="Heading1">8 <BR>Master Files</A></h1>
+
+<p></p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading2">8.1 PURPOSE </A></h2>
+
+<p><br>
+In an open-architecture healthcare environment there often exists a set of
+common reference files used by one or more application systems.  Such files are
+called master files.  Some common examples of master files in the healthcare
+environment include: <br>
+	a)	doctor master file<br>
+	b)	system user (and password) master file<br>
+	c)	location (census and clinic) master file<br>
+	d)	device type and location (e.g., workstations, terminals, printers, etc.)
+<br>
+	e)	lab test definition file<br>
+	f)	exam code (radiology) definition file<br>
+	g)	charge master file<br>
+	h)	patient status master <br>
+	i)	patient type master<br>
+These common reference files need to be synchronized across the various
+applications at a given site.  The Master Files Notification  message provides
+a way of maintaining this synchronization by specifying  a standard for the
+transmission of this data between applications. <br>
+In many implementations, one application system will "own" a particular master
+file such as the doctor master file.  The changes (e.g., adds, deletes,
+updates) to this file are made available to various other applications on a
+routine basis.  The Master Files Notification  message supports this common
+case, but also supports the situation where an application not "owning" a
+particular master file, transmits update information to other systems (usually
+to the "owning" system), for review and possible inclusion. <br>
+The Master Files Notification message supports the distribution of changes to
+various master files between systems in either online or batch modes, and allow
+the use of either original or enhanced acknowledgement modes, as well as
+providing for a delayed application acknowledgement mode.  These  messages use
+the MSH segment to pass the basic event code (master files notification or
+acknowledgement).  The MFI (master file identification) segment identifies the
+master file being updated as well as the initial and requested dates for "file
+level" events (such as "replace file").  For each record being changed, the MFE
+(Master File Entry) segment carries the record-level event code (such as add,
+update, etc.), the initial and requested dates for the event, and the
+record-level key identifying the entry in the master file.  The MFA (master
+file acknowledgement) segment returns record-specific acknowledgement
+information. <br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b>Note:</b>
+The MFE segment is not the master file record, but only specifies its
+identifier, event, and event dates.  The master file record so identified is
+contained in either Z-segments or HL7-defined segments immediately following
+the MFE segment.  This record may be either a flat record contained in a single
+segment, or a complex record needing more than a single segment to carry its
+data and (usually hierarchical) structure.
+</p>
+<BR></TD></TR></TABLE><p><br>
+The master file segments commonly needed by many HL7 applications will be
+defined in balloted appendices to this chapter.  Those needed by other
+application-specific chapters will be defined in balloted appendices to the
+appropriate application-specific chapter.<br>
+A given master files message concerns only a single master file.  However, the
+location of a record-level event code (and requested activation date) on the
+MFE and the MFA segments allows a single message to contain several types of
+changes (events) to that file. <br>
+The Master Files Notification events do not specify whether the receiving
+system must support an automated change of the master file in question, nor do
+they specify whether the receiving system must create a file in the same form
+as that maintained on the sending system.  <br>
+In general, the way in which the receiving system processes the change
+notification message will depend on both the design of the receiving system and
+the requirements negotiated at the site.  Some systems and/or sites may specify
+a manual review of all changes to a particular master file.  Some may specify a
+totally automated process.  Not every system at every site will need all the
+fields contained in the master file segment(s) following the MFE segment for a
+particular master file entry. <br>
+This also means that an application acknowledgement (or a deferred application
+acknowledgement) from a receiving system that it changed a particular record in
+its version of the master file does not imply that the receiving system now has
+an exact copy of the information and state that is on the sending system: it
+means only that whatever subset of that master file's data (and state) that has
+been negotiated at the site is kept on the receiving system in such a manner
+that a new Master Files Notification transaction with the same primary key can
+be applied unambiguously (in the manner negotiated at the site) to that subset
+of information.</p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading3">8.2  TRIGGER EVENTS </A></h2>
+
+<p><br>
+The Master Files Change Notification message can be used for the following
+message-level trigger events:<br>
+	<br>
+	Mnn:		A message containing notifications of changes to a single master
+file.<br>
+		nn defines a particular HL7 master file.  Currently defined values are (see
+Table 0003): M01 - master file not otherwise specified (for backwards
+compatibility only); M02 - staff/practitioneer master file; M03 -
+test/observation master file; M04-M99 - reserved for future HL7-defined master
+files.  Site-specific master files should use a code of the form Znn.<br>
+An MFN message may contain the following "file-level" events, as specified in
+the MFI segment:<br>
+	REP:		Replace current version of this master file with the version contained
+in this message.<br>
+	UPD:		Change file records as defined in the record level event codes for each
+record that follows.<br>
+These are the only file-level events currently defined.  REP means that every
+MFE segment that follows will use the MAD event code. <br>
+The replace option allows the sending system to replace a file without sending
+delete record-level events for each record in that file.  UPD means that the
+events are defined according to the record-level event code contained in each
+MFE segment in that message.<br>
+An MFN message may contain the following "record-level" events, as specified in
+the MFE segments.<br>
+	MAD:		Add record to master file.<br>
+	MDL:		Delete record from master file.<br>
+	MUP:		Update record for master file.<br>
+	MDC:		Deactivate: discontinue using record in master file, but do not delete
+from database.<br>
+	MAC:		Reactivate deactivated record.<br>
+The MFD transaction is used for the following trigger event:<br>
+	MFA:		Master Files Delayed Application Acknowledgement. </p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading4">8.3 MESSAGES</A></h2>
+
+<p><br>
+The following messages are defined for master files transactions:  MFN, master
+files notification; MFK, master files application acknowledgement; MFD, master
+files delayed application acknowledgement; and MFQ, master files query.</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading5">8.3.1  MFN - master files notification </A></h3>
+
+<p><br>
+	The MFN transaction is defined as follows: <br>
+<tt><u>MFN                      Master File Notification
+Chapter</u></tt><br>
+<tt>MSH                      Message Header
+2</tt><br>
+<tt>MFI                      Master File Identification
+8</tt><br>
+<tt> {MFE                    Master File Entry
+8</tt><br>
+<tt>   [Z..] }               One or more HL7 and/or                  (varies)
+</tt><br>
+<tt>                            Z-segments carrying the data </tt><br>
+<tt>                            for the entry identified</tt><br>
+<tt>                            in the MFE segment</tt><br>
+<tt><u>MFK                 Master File Application Acknowledgement
+Chapter</u></tt><br>
+<tt>MSH                      Message Header
+2</tt><br>
+<tt>MSA                      Acknowledgement
+2</tt><br>
+<tt>[ ERR ]                  Error
+2</tt><br>
+<tt>MFI                      Master File Identification
+8</tt><br>
+<tt>  { [MFA] }              Master file ACK segment
+8</tt><br>
+	The master file record identified by the MFE segment is contained in either
+Z-segments and/or HL7-defined segments immediately following the MFE segment,
+and is denoted by "Z..." in the MFN abstract message definition given above.
+This record may be either a flat record contained in a single segment, or a
+complex record needing more than a single segment to carry its data and
+(usually hierarchical) structure.  <br>
+	The master file record "[Z..]" identified by the MFE segment is optional
+(indicated by square brackets) in the single case where the master file is a
+simple one which contains only a key and the text value of that key.  For this
+case only, both values may be carried in the primary key value CE field of the
+MFE segment.<br>
+	
+</p>
+<TABLE><TR align="left">
+<TD colspan=1 align="left"><p><b>Note:</b>
+The MFK message is used for an application acknowledgment in either the
+original or enhanced acknowledgement modes. 
+</p>
+<BR></TD></TR></TABLE><p><br>
+	The MFA segment carries acknowledgement information for the corresponding MFE
+segment (identified by the primary key value).</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading6">8.3.2  MFD - master files delayed application acknowledgement </A></h3>
+
+<p><br>
+	The MFD transaction is the delayed application acknowledgement.  It can be
+used to return  "deferred" application level acknowledgement statuses at the
+MFE level, without reference to the original MFN message.  It is defined as
+follows: <br>
+<tt><u>MFD         Master File Delayed Acknowledgement
+Chapter</u></tt><br>
+<tt>MSH                      Message Header                         2</tt><br>
+<tt>MFI                      Master File Identification             8</tt><br>
+<tt>  { [MFA] }              Master file ACK segment                8</tt><br>
+<tt><u>MSA                      General Acknowledgement
+Chapter</u></tt><br>
+<tt>MSH                      Message Header                         2</tt><br>
+<tt>MSA                      Acknowledgement                        2</tt><br>
+<tt>[ ERR ]                  Error                                  2 </tt></p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading7">8.3.3  MFQ - master files query </A></h3>
+
+<p><br>
+	The MFQ transaction allows a system to query for a particular record or group
+records (defined by the primary key) in a particular master file.<br>
+	The Master files query is defined as follows: <br>
+<tt><u>QRY                 Query for Master File Record
+Chapter</u></tt><br>
+<tt>MSH                     Message Header                        2</tt><br>
+<tt>QRD                     Query Definition                      2</tt><br>
+<tt>[QRF]                   Query Filter                          2</tt><br>
+<tt>[DSC]                   Continuation                          2</tt><br>
+<tt><u>MFR                    Master Files Response
+Chapter</u></tt><br>
+<tt>MSH                     Message Header                        2</tt><br>
+<tt>MSA                     Acknowledgement                       2</tt><br>
+<tt>[ ERR ]                 Error                                 2</tt><br>
+<tt>QRD                     Query Definition                      2</tt><br>
+<tt>[QRF]                   Query Filter                          2</tt><br>
+<tt>MFI                     Master File Name                      8</tt><br>
+<tt> {MFE                   Master File Entry                     8</tt><br>
+<tt>   [Z..] }              One or more HL7 and/or             (varies)</tt><br>
+<tt>                           Z-segments carrying </tt><br>
+<tt>                           the data for the entry </tt><br>
+<tt>                           identified in the MFE segment.</tt><br>
+<tt>[DSC]                   Continuation                          2</tt></p>
+
+<h4>
+<A NAME="Heading8">8.3.3.1 MFQ use notes</A></h4>
+
+<p><br>
+	The value "MFQ" of the "what subject filter" of the QRD segment identifies a
+master files query.  The "what department data code" of the QRD identifies the
+name of the master file in question.  The "what data code value qual" of the
+QRD identifies the primary key (or keys, or range of keys) defining the master
+file MFE segments (and associated master file records, denoted by "Z..") to be
+returned with the response.  The QRF segment may be used to define time ranges,
+particular MFN record-level event codes etc. Unless otherwise specified, the
+response returns only active current record(s).</p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading9">8.4 SEGMENT DEFINITIONS </A></h2>
+
+<p><br>
+The following segments are defined for the master files messages.</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading10">8.4.1  MFI - master file identification segment </A></h3>
+
+<p><br>
+	The fields in the MFI segment are defined as follows:<br>
+	Figure 8-1  MFI attributes<br>
+</p>
+<TABLE BORDER><TR align="center">
+<TH colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>DT</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TH></TR><TR align="center">
+<TD colspan=1 align="center"><p>1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+6
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60<br>
+6<br>
+3<br>
+26<br>
+26<br>
+2
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CE<br>
+ID<br>
+ID<br>
+TS<br>
+TS<br>
+ID
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R<br>
+O<br>
+R<br>
+O<br>
+O<br>
+R
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>N</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>0175<br>
+0176<br>
+0178<br>
+0179
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00658<br>
+00659<br>
+00660<br>
+00661<br>
+00662<br>
+00663
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Master
+file identifier<br>
+Master file application identifier<br>
+File-level event code<br>
+Entered date/time<br>
+Effective date/time<br>
+Response level code
+</p>
+<BR></TD></TR></TABLE><p><br>
+<b>8.4.1.0	MFI field definitions</b></p>
+
+<h4>
+<A NAME="Heading11">8.4.1.1 Master file identifier (CE) 00658</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;identifier&gt; ^ &lt;text&gt; ^ &lt;name of coding
+system&gt; ^ &lt;alternate identifier&gt; ^ &lt;alternate text&gt; ^ &lt;name
+of alternate coding system&gt;</tt><br>
+	Definition:  a CE field that identifies a standard HL7 master file.  This
+table may be extended by local agreement during implementation to cover
+site-specific master files (z-master files).<br>
+<center>Table 0175  Master file identifier code</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u></u></b><u>Value</u></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><u>Description</u></p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>CDM<br>
+STF<br>
+PRA<br>
+ OM1-OM6
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Charge
+description master file (see Chapter 6, Appendix)<br>
+Staff master file  (see Chapter 8, Appendix)<br>
+Practitioner master file (see Chapter 8, Appendix)<br>
+Observation text master file (i.e., Lab) (see Chapter 7, Appendix)
+</p>
+<BR></TD></TR></TABLE><p></p>
+
+<h4>
+<A NAME="Heading12">8.4.1.2 Master files application identifier (ID) 00659</A></h4>
+
+<p><br>
+	Definition:  optional code of up to 6 characters which (if applicable)
+uniquely identifies the application responsible for maintaining this file at a
+particular site.  A group of intercommunicating applications may use more than
+a single instance of a master file of certain type (e.g., charge master or
+physician master).  The particular instance of the file is identified by this
+field.  Refer to user-defined <i>table 0176 - master files application
+identifier</i> for suggested values.</p>
+
+<h4>
+<A NAME="Heading13">8.4.1.3 File-level event code (ID) 00660</A></h4>
+
+<p><br>
+	Definition:  defines file-level event code. <br>
+	<br>
+<center>Table 0178  File level event code</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u></u></b><u>Value</u></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><u>Description</u></p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>REP<br>
+UPD
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Replace
+current version of this master file with the version contained in this
+message<br>
+Change file records as defined in the record level event codes for each record
+that follows
+</p>
+<BR></TD></TR></TABLE><p></p>
+
+<h4>
+<A NAME="Heading14">8.4.1.4 Entered date/time  (TS) 00661</A></h4>
+
+<p><br>
+	Definition:  time stamp for file-level event on originating system.<br>
+ </p>
+
+<h4>
+<A NAME="Heading15">8.4.1.5 Effective date/time (TS) 00662</A></h4>
+
+<p><br>
+	Definition:  an optional effective date/time can be included for file-level
+action specified.  It is the date/time the originating system expects that the
+event is to have been completed on the receiving system.  If this field is not
+present, the action date/time should default to the current date/time (when the
+message is received).</p>
+
+<h4>
+<A NAME="Heading16">8.4.1.6 Response level code (ID) 00663</A></h4>
+
+<p><br>
+	Definition:  these codes specify the application response level defined for a
+given Master File Message at the MFE segment level as defined in <i>table 0179
+- response level</i>.  Required for MFN message.  Specifies additional detail
+(beyond <i>MSH-15-accept acknowledgement type</i> and <i>MSH-16-application
+acknowledgement type</i>) for application level acknowledgement paradigms for
+Master Files transactions.  MSH-15 and MSH-16 operate as defined in Chapter
+2.<br>
+ <br>
+<center>Table 0179  Response level</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u></u></b><u>Value</u></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><u>Description</u></p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>NE<br>
+ER<br>
+AL<br>
+SU
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Never.
+ no application level response needed<br>
+Error/Reject conditions only.  Only MFA segments denoting errors must be
+returned via the application level acknowledgement for this message<br>
+Always.  All MFA segments (whether denoting errors or not) must be returned via
+the application level acknowledgement message<br>
+Success.  Only MFA segments denoting success must be returned via the
+application level acknowledgement for this message
+</p>
+<BR></TD></TR></TABLE><p></p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading17">8.4.2  MFE - master file entry segment  </A></h3>
+
+<p><br>
+<center>Figure 8-2  MFE attributes</center><br>
+</p>
+<TABLE BORDER><TR align="center">
+<TH colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>DT</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TH></TR><TR align="center">
+<TD colspan=1 align="center"><p>1<br>
+2<br>
+3<br>
+4
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>3<br>
+20<br>
+26<br>
+60
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID<br>
+ST<br>
+TS<br>
+CE
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R<br>
+C<br>
+R
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p><br>
+Y
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>0180</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00664<br>
+00665<br>
+00662<br>
+00667
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Record-level
+event code<br>
+MFN control ID<br>
+Effective date/time<br>
+Primary key value
+</p>
+<BR></TD></TR></TABLE><p><br>
+<b>8.4.2.0	MFE field definitions</b></p>
+
+<h4>
+<A NAME="Heading18">8.4.2.1 Record-level event code (ID) 00664</A></h4>
+
+<p><br>
+	Definition:  defines record-level event for the master file record identified
+by the MFI segment and the primary key field in this segment. <br>
+	<br>
+<center>Table 0180  Record-level event code</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u></u></b><u>Value</u></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><u>Description</u></p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>MAD<br>
+MDL<br>
+MUP<br>
+MDC<br>
+MAC
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Add
+record to master file<br>
+Delete record from master file<br>
+Update record for master file<br>
+Deactivate: discontinue using record in master file, but do not delete from
+database<br>
+Reactivate deactivated record
+</p>
+<BR></TD></TR></TABLE><p></p>
+
+<h4>
+<A NAME="Heading19">8.4.2.2 MFN control ID (ST) 00665</A></h4>
+
+<p><br>
+	Definition:  a number or other identifier that uniquely identifies this change
+to this record from the point of view of the originating system.  When returned
+to the originating system via the MFA segment, this field allows the target
+system to precisely identify which change to this record is being acknowledged.
+It is only required if the MFI response level code requires responses at the
+record level (any value other than NE). Note that this segment does not contain
+a Set ID field. The <i>MFE:2-MFN control ID</i> implements a more general
+concept than the Set ID. It takes the place of the SET ID in the MFE segment.
+<br>
+ </p>
+
+<h4>
+<A NAME="Heading20">8.4.2.3 Effective date/time (TS) 00662</A></h4>
+
+<p><br>
+	Definition:  an optional effective date/time can be included for the
+record-level action specified.  It is the date/time the originating system
+expects that the event is to have been completed on the receiving system.  If
+this field is not present, the effective date/time should default to the
+current date/time (when the message is received).</p>
+
+<h4>
+<A NAME="Heading21">8.4.2.4 Primary key value (CE) 00667</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;identifier&gt; ^ &lt;text&gt; ^ &lt;name of coding
+system&gt; ^ &lt;alternate identifier&gt; ^ &lt;alternate text&gt; ^ &lt;name
+of alternate coding system&gt;</tt><br>
+	Definition:  uniquely identifies the record of the master file (identified in
+the  MFI segment) to be changed (as defined by the record-level event code).
+The first component of this CE data field carries an optional subcomponent, the
+application ID, that uniquely identifies the application responsible for
+creating the primary key value.  The application ID subcomponent can be used to
+guarantee uniqueness of the primary key across multiple applications. <br>
+	The repetition of the primary key permits the identification of an individual
+component of a complex record as the object of the record-level event code.
+This feature allows the Master Files protocol to be used for modifications of
+single components of complex records.</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading22">8.4.3  MFA - master file acknowledgement segment </A></h3>
+
+<p><br>
+	The MFA segment contains the following fields:<br>
+<center>Figure 8-3  MFA attributes</center><br>
+</p>
+<TABLE BORDER><TR align="center">
+<TH colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>DT</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>C</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TH></TR><TR align="center">
+<TD colspan=1 align="center"><p>1<br>
+2<br>
+3<br>
+4<br>
+5
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>3<br>
+20<br>
+26<br>
+60<br>
+60
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ID<br>
+ST<br>
+TS<br>
+CE<br>
+CE
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R<br>
+C<br>
+C<br>
+R<br>
+R
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p><br>
+Y
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>0180<br>
+0181
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00664<br>
+00665<br>
+00668<br>
+00669<br>
+00667
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Record-level
+event code<br>
+MFN control ID<br>
+Event completion date/time<br>
+Error return code and/or text<br>
+Primary key value
+</p>
+<BR></TD></TR></TABLE><p><br>
+<b>8.4.3.0	MFA field definitions</b></p>
+
+<h4>
+<A NAME="Heading23">8.4.3.1 Record-level event code (ID) 00664</A></h4>
+
+<p><br>
+	Definition:  defines record-level event for the master file record identified
+by the MFI segment and the primary key in this segment.  Refer to HL7<i> table
+0180 - record level event code</i>.</p>
+
+<h4>
+<A NAME="Heading24">8.4.3.2 MFN control ID (ST) 00665</A></h4>
+
+<p><br>
+	Definition:  a number or other identifier that uniquely identifies this change
+to this record from the point of view of the originating system.  This field
+uniquely identifies the particular record (identified by the MFE segment) being
+acknowledged by this MFA segment.  When returned to the originating system via
+the MFA segment, this field allows the target system to precisely identify
+which change to this record is being acknowledged.  It is only required if the
+MFI response level code requires responses at the record level (any value other
+than NE). </p>
+
+<h4>
+<A NAME="Heading25">8.4.3.3 Completion date/time (TS) 00668</A></h4>
+
+<p><br>
+	Definition:  may be required or optional depending on the site specifications
+for the given master file, master file event, and receiving facility.</p>
+
+<h4>
+<A NAME="Heading26">8.4.3.4 Error return code and/or text  (CE) 00669</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;identifier&gt; ^ &lt;text&gt; ^ &lt;name of coding
+system&gt; ^ &lt;alternate identifier&gt; ^ &lt;alternate text&gt; ^ &lt;name
+of alternate coding system&gt;</tt><br>
+	Definition:  this field reports on the status of the requested update.  Site
+defined-table, specific to each master file being updated via this
+transaction.<br>
+	All such tables will have at least the following two return code values:<br>
+<center>User-defined Table 0181  MFN record-level error return</center><br>
+</p>
+<TABLE><TR align="left">
+<TD colspan=1 align="left"><p><b><u></u></b><u>Value</u></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><u>Description</u></p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>S<br>
+U
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Successful
+posting of the record defined by the MFE segment<br>
+Unsuccessful posting of the record defined by the MFE segment
+</p>
+<BR></TD></TR></TABLE>
+<h4>
+<A NAME="Heading27">8.4.3.5 Primary key value (CE) 00670</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;identifier&gt; ^ &lt;text&gt; ^ &lt;name of coding
+system&gt; ^ &lt;alternate identifier&gt; ^ &lt;alternate text&gt; ^ &lt;name
+of alternate coding system&gt;</tt><br>
+	Definition:  uniquely identifies the record of the master file (identified in
+the MFN segment) to be changed (as defined by the record-level event code).
+The first component of this CE data field carries an optional subcomponent, the
+application ID, that uniquely identifies the application responsible for
+creating the primary key value.  The application ID subcomponent can be used to
+guarantee uniqueness of the primary key across multiple applications.<br>
+	The repetition of the primary key permits the identification of an individual
+component of a complex record as the object of the record-level event code.
+This feature allows the Master Files protocol to be used for modifications of
+single components of complex records.</p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading28">8.5  EXAMPLES </A></h2>
+
+<p><br>
+This is an example of a proposed generic method of updating a standard HL7
+table.  This particular example shows two records being added to the HL7
+religion table.<br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b>Note:</b>
+	A standard HL7 table segment can be constructed by defining two fields: a
+table entry field (as a CE field) and a display-sort-key field (a numeric
+field) as follows.
+</p>
+<BR></TD></TR></TABLE><p></p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading29">8.5.1  ZL7 segment (proposed example only) </A></h3>
+
+<p><br>
+<center>Figure 8-4  ZL7 attributes</center><br>
+</p>
+<TABLE BORDER><TR align="center">
+<TH colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>DT</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TH></TR><TR align="center">
+<TD colspan=1 align="center"><p>1<br>
+2
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60<br>
+3
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CE<br>
+NM
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R<br>
+R
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>xxxx<br>
+xxxx
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>Xxxxx<br>
+xxxxx
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>HL7
+table entry for table xxxx<br>
+Display-sort-key
+</p>
+<BR></TD></TR></TABLE><p><br>
+8.5.1.0	ZL7 field definitions</p>
+
+<h4>
+<A NAME="Heading30">8.5.1.1 HL7 table entry for table xxxx (CE) xxxxx</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;Hl7 code&gt; ^ &lt;text&gt; ^ HL7 &lt;HL7 table
+number&gt;</tt><br>
+	Definition:  HL7 table values for identifier and text encoded as a CE data type.</p>
+
+<h4>
+<A NAME="Heading31">8.5.1.2 Display-sort-key (NM) xxxxx</A></h4>
+
+<p><br>
+	Definition:  used to specify a non-alphabetic ordering for display or print
+versions of a standard HL7 table.</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading32">8.5.2  MFN message with original acknowledgement mode </A></h3>
+
+<p><br>
+<tt>MSH|^~\&amp;|HL7REG|UH|HL7LAB|CH|19910918060544||MFN^M01|MSGID002|P|2.2</tt><br>
+<tt>MFI|0006^RELIGION^HL7|UPD|||AL</tt><br>
+<tt>MFE|MAD|199109051000|199110010000|U^Buddhist^HL7</tt><br>
+<tt>ZL7|U^Buddhist^HL7|3^^Sortkey</tt><br>
+<tt>MFE|MAD|199109051015|199110010000|Z^Zen Buddhist^HL7</tt><br>
+<tt>ZL7|Z^Zen Buddhist^HL7|12^^Sortkey</tt><br>
+	In this case, the primary key contains all the data needed for this simple
+table, so that the HL7 segment could be constructed with ONLY the single field,
+"sort-key", rather than repeating the primary key value as we have done in this
+example.<br>
+	MFK, master file application acknowledgement, as original mode acknowledgement
+of the HL7 message according to MFI Response Level Code of "AL".<br>
+<tt>MSH|^~\&amp;|HL7LAB|CH|HL7ADT|UH|19910918060546||MFK|MSGID99002|P|2.2</tt><br>
+<tt>MSA|AA|MSGID002</tt><br>
+<tt>MFI|0006^RELIGION^HL7|UPD</tt><br>
+<tt>MFA|MAD|199109051000|19910918060545|S|U^Buddhist^HL7</tt><br>
+<tt>MFA|MAD|199109051015|19910918060545|S|Z^Zen Buddhist^HL7</tt></p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading33">8.5.3  Enhanced mode application level acknowledgement to the MFN message </A></h3>
+
+<p></p>
+
+<h4>
+<A NAME="Heading34">8.5.3.1 Initial message with accept acknowledgement</A></h4>
+
+<p><br>
+<tt>MSH|^~\&amp;|HL7REG|UH|HL7LAB|CH|19910918060544||MFN^M01|MSGID002|P|2.2||AL|AL</tt><br>
+<tt>MFI|0006^RELIGION^HL7|UPD|||AL</tt><br>
+<tt>MFE|MAD|199109051000|199110010000|U^Buddhist^HL7</tt><br>
+<tt>ZL7|U^Buddhist^HL7|3^^Sortkey</tt><br>
+<tt>MFE|MAD|199109051015|199110010000|Z^Zen Buddhist^HL7</tt><br>
+<tt>ZL7|Z^Zen Buddhist^HL7|12^^Sortkey</tt><br>
+<tt>MSH|^~\&amp;|HL7LAB|CH|HL7ADT|UH|19910918060545||MSA|MSGID99002|P|2.2</tt><br>
+<tt>MSA|CA|MSGID002</tt></p>
+
+<h4>
+<A NAME="Heading35">8.5.3.2 Enhanced mode application acknowledgement message</A></h4>
+
+<p><br>
+<tt>MSH|^~\&amp;|HL7LAB|CH|HL7ADT|UH|19911001080504||MFK|MSGID99502|P|2.2||AL|</tt><br>
+<tt>MSA|AA|MSGID002</tt><br>
+<tt>MFI|0006^RELIGION^HL7|UPD</tt><br>
+<tt>MFA|MAD|199109051000|19910918010040|S|U^Buddhist^HL7</tt><br>
+<tt>MFA|MAD|199109051015|19910918010040|S|Z^Zen Buddhist^HL7</tt><br>
+<tt>MSH|^~\&amp;|HL7ADT|UH|HL7LAB|CH|19911001080507||ACK|MSGID444|P|2.2</tt><br>
+<tt>MSA|CA|MSGID5002</tt></p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading36">8.5.4  Delayed application level acknowledgement </A></h3>
+
+<p></p>
+
+<h4>
+<A NAME="Heading37">8.5.4.1 Initial message with accept acknowledgement</A></h4>
+
+<p><br>
+<tt>MSH|^~\&amp;|HL7REG|UH|HL7LAB|CH|19910918060544||MFN^M01|MSGID002|P|2.2||AL|NE</tt><br>
+<tt>MFI|0006^RELIGION^HL7|UPD|||AL</tt><br>
+<tt>MFE|MAD|199109051000|199110010000|U^Buddhist^HL7</tt><br>
+<tt>ZL7|U^Buddhist^HL7|3^^Sortkey</tt><br>
+<tt>MFE|MAD|199109051015|199110010000|Z^Zen Buddhist^HL7</tt><br>
+<tt>ZL7|Z^Zen Buddhist^HL7|12^^Sortkey</tt><br>
+<tt>MSH|^~\&amp;|HL7LAB|CH|HL7ADT|UH|19910918060545||MSA|MSGID99002|P|2.2</tt><br>
+<tt>MSA|CA|MSGID002</tt></p>
+
+<h4>
+<A NAME="Heading38">8.5.4.2 Deferred application acknowledgement message</A></h4>
+
+<p><br>
+<tt>MSH|^~\&amp;|HL7LAB|CH|HL7ADT|UH|19910919060545||MFD|MSGID99002|P|2.2|||AL</tt><br>
+<tt>MFI|0006^RELIGION^HL7|UPD</tt><br>
+<tt>MFA|MAD|199109051000|19910919020040|S|U^Buddhist^HL7</tt><br>
+<tt>MFA|MAD|199109051015|19910919020040|S|Z^Zen Buddhist^HL7</tt><br>
+<tt>MSH|^~\&amp;|HL7ADT|UH|HL7LAB|CH|19910919060546||ACK|MSGID444|P|2.2</tt><br>
+<tt>MSA|CA|MSGID500</tt></p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading39">8.6  OUTSTANDING ISSUES </A></h2>
+
+<p><br>
+1.	We are investigating a proposal for an OBX-like segment (name value pair)
+for use by master files transactions.<br>
+2.	We invite proposals for the specification of other HL7-wide master files
+segments.</p>
+<h1>
+</h1>
+
+<h1>
+<A NAME="Heading40">9 .APPENDIX A:  </A></h1>
+
+<p></p>
+
+<h2>
+<A NAME="Heading41">9.1 Staff and practitioner master file segments</A></h2>
+
+<p><br>
+The staff (STF) and practitioner (PRA) segments can be used to transmit master
+files information between systems. The STF segment provides general information
+about personnel; the PRA segment provides detailed information for a staff
+member who is also a health practitioner. Other segments may be defined to
+follow the STF segment to provide additional detail information for a
+particular type of staff member: the PRA segment is the first such segment.
+When the STF and PRA segments are used in an MFN message, the abstract
+definition is as follows:<br>
+<tt><u>MFN                       Master File Notification
+Chapter</u></tt><br>
+<tt>MSH                       Message Header
+2</tt><br>
+<tt>MFI                       Master File Identification                 8
+</tt><br>
+<tt> {MFE                     Master File Entry                          8
+</tt><br>
+<tt>  STF                     Staff Identification                       8
+</tt><br>
+<tt>    [PRA]                 Practitioner Detail                        8
+</tt><br>
+<tt>   }</tt><br>
+<tt><u>MFK                       Master File Acknowledgement
+Chapter</u></tt><br>
+<tt>MSH                       Message Header                         2</tt><br>
+<tt>MSA                       Acknowledgement                        2</tt><br>
+<tt>MFI                       Master File Identification             8 </tt><br>
+<tt>  { [MFA] }               Master file ACK segment                8
+</tt><br>
+When the STF and PRA segments are used in the MFR message, the part of the
+message represented by:<br>
+	     {MFE<br>
+ 		[Z..] }	<br>
+is replaced by:<br>
+	     {MFE<br>
+	      STF<br>
+		 [PRA] <br>
+		 } </p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading42">9.1.1  STF - staff identification segment </A></h3>
+
+<p><br>
+	The STF segment can identify any personnel referenced by information systems.
+These can be providers, staff, system users, and referring agents.  In a
+network environment, this segment can be used to define personnel to other
+applications; for example, order entry clerks, insurance verification clerks,
+admission clerks, as well as provider demographics. <i>MFE-4-primary key
+value</i> is used to link all the segments pertaining to the same master file
+entry.  Therefore, in the MFE segment, <i>MFE-4-primary key value</i> must be
+filled in.  Other segments may follow the STF segment to provide data for a
+particular type of staff member. The PRA segment (practitioner) is one such.
+It may optionally follow the STF segment in order to add practitioner-specific
+data.   Other segments may be defined as needed.<br>
+	The STF segment contains the following fields:<br>
+<center>Figure 8A-5  STF attributes</center><br>
+</p>
+<TABLE BORDER><TR align="center">
+<TH colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>DT</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TH></TR><TR align="center">
+<TD colspan=1 align="center"><p>1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+6<br>
+7<br>
+8<br>
+9<br>
+10<br>
+11<br>
+12<br>
+13<br>
+14<br>
+15<br>
+16
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>60<br>
+60<br>
+48<br>
+2<br>
+1<br>
+26<br>
+1<br>
+200<br>
+200<br>
+40<br>
+106<br>
+26<br>
+26<br>
+60<br>
+40<br>
+1
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>CE<br>
+CE<br>
+PN<br>
+ID<br>
+ID<br>
+TS<br>
+ID<br>
+CE<br>
+CE<br>
+TN<br>
+AD<br>
+CM<br>
+CM<br>
+CE<br>
+ST<br>
+ID
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p><br>
+Y<br>
+Y<br>
+Y<br>
+Y<br>
+Y<br>
+Y/2<br>
+Y<br>
+Y<br>
+Y<br>
+Y
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p><br>
+0182<br>
+0001<br>
+0183<br>
+0184<br>
+0185
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00671<br>
+00672<br>
+00673<br>
+00674<br>
+00111<br>
+00110<br>
+00675<br>
+00676<br>
+00677<br>
+00678<br>
+00679<br>
+00680<br>
+00681<br>
+00682<br>
+00683<br>
+00684
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>STF
+- primary key value<br>
+Staff ID Code<br>
+Staff Name<br>
+Staff Type<br>
+Sex<br>
+Date of Birth<br>
+Active/inactive<br>
+Department<br>
+Service<br>
+Phone<br>
+Office/Home Address<br>
+Activation Date<br>
+Inactivation Date<br>
+Backup Person ID<br>
+E-mail Address<br>
+Preferred Method of Contact
+</p>
+<BR></TD></TR></TABLE><p><br>
+<b>8.A.1.0	STF field definitions</b><br>
+ </p>
+
+<h4>
+<A NAME="Heading43">9.1.1.1 STF - primary key value (CE) 00671</A></h4>
+
+<p><br>
+	Definition:  must match <i>MFE-4-primary key value</i> to identify which entry
+is being referenced.</p>
+
+<h4>
+<A NAME="Heading44">9.1.1.2 Staff ID code (CE) 00672</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;identifier&gt; ^ &lt;text&gt; ^ &lt;name of coding
+system&gt; ^ &lt;alternate identifier&gt; ^ &lt;alternate text&gt; ^ &lt;name
+of alternate coding system&gt;</tt><br>
+	Definition:  personnel identification code or institution user number, used by
+institution to identify this person.  Repeating field allows multiple ID codes
+per person, with the type of ID code indicated in the third component of the
+coded entry data type. </p>
+
+<h4>
+<A NAME="Heading45">9.1.1.3 Staff name (PN) 00673</A></h4>
+
+<p><br>
+	Definition:  staff person's name.</p>
+
+<h4>
+<A NAME="Heading46">9.1.1.4 Staff type (ID) 00674</A></h4>
+
+<p><br>
+	Definition:  code identifying what type of staff.  Refer to user-defined
+<i>table 0182 - staff type</i>.  Values may include codes for staff,
+practitioner (physician, nurse, therapist, etc.), referral agent or agency, etc.</p>
+
+<h4>
+<A NAME="Heading47">9.1.1.5 Sex (ID) 00111</A></h4>
+
+<p><br>
+	Definition:   staff person's sex.  Refer to <i>table 0001 - sex</i> for valid
+codes. </p>
+
+<h4>
+<A NAME="Heading48">9.1.1.6 Date of birth (TS) 00110</A></h4>
+
+<p><br>
+	Defintion:  staff member's date of birth.</p>
+
+<h4>
+<A NAME="Heading49">9.1.1.7 Active/inactive (ID) 00675</A></h4>
+
+<p><br>
+	Defintion:  whether person is currently a valid staff member.<br>
+<center>Table 0183  Active/inactive</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u></u></b><u>Value</u></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><u>Description</u></p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>A<br>
+I
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Active
+staff<br>
+Inactive staff
+</p>
+<BR></TD></TR></TABLE><p></p>
+
+<h4>
+<A NAME="Heading50">9.1.1.8 Department (CE) 00676</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;identifier&gt; ^ &lt;text&gt; ^ &lt;name of coding
+system&gt; ^ &lt;alternate identifier&gt; ^ &lt;alternate text&gt; ^ &lt;name
+of alternate coding system&gt;</tt><br>
+	Definition:  institution department to which this person reports or belongs.
+Refer to user-defined <i>table 0184 - department</i>.</p>
+
+<h4>
+<A NAME="Heading51">9.1.1.9 Service (CE) 00677</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;identifier&gt; ^ &lt;text&gt; ^ &lt;name of coding
+system&gt; ^ &lt;alternate identifier&gt; ^ &lt;alternate text&gt; ^ &lt;name
+of alternate coding system&gt;</tt><br>
+	Definition:  hospital or ancillary service with which this staff person is
+associated.  Depends on intitution use.</p>
+
+<h4>
+<A NAME="Heading52">9.1.1.10 Phone (TN) 00678</A></h4>
+
+<p><br>
+	Definition:  This is a repeating field with a component for indicating which
+phone number is which.  The TN data type includes a last component which can be
+used to indicate whether the preceding phone number is home, beeper, office,
+FAX, or cellular.  This last component can also contain times of day for which
+the numbers are best used.  The STF segment contains a separate field for
+E-mail address (because it's not in TN format).  It is recommended that the
+last part of the TN, [C any text], start with a code from the table associated
+below with <i>STF-16-preferred method of contact</i>, in order to indicate the
+type of each phone number in this repeating field.</p>
+
+<h4>
+<A NAME="Heading53">9.1.1.11 Office/home address (AD) 00679</A></h4>
+
+<p><br>
+	Office address and home address are represented by this  repeating field.
+Note that the last component of the AD data type indicates the address category. </p>
+
+<h4>
+<A NAME="Heading54">9.1.1.12 Activation date (CM) 00680</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;date (TS)&gt; ^ &lt;institution name (CE)&gt;</tt><br>
+	Definition:  date when staff became active for an institution.  Repeats.  Note
+that the CE component of this field uses the subcomponent character for its
+delimiter.</p>
+
+<h4>
+<A NAME="Heading55">9.1.1.13 Inactivation date (CM) 00681</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;date (TS)&gt; ^ &lt;institution name (CE)&gt;</tt><br>
+	Definition:  date when staff became active for an institution.  Repeats.  Note
+that the CE component of this field uses the subcomponent character for its
+delimiter.</p>
+
+<h4>
+<A NAME="Heading56">9.1.1.14 Backup person ID (CE) 00682</A></h4>
+
+<p><br>
+	The  <i>MFE-4-primary key value</i> of the master file entry which corresponds
+to the designated backup person for this staff person.</p>
+
+<h4>
+<A NAME="Heading57">9.1.1.15 E-mail address (ST) 00683</A></h4>
+
+<p><br>
+	This is a separate field for contacting staff because it is not in the TN
+format as the other contact phones are.</p>
+
+<h4>
+<A NAME="Heading58">9.1.1.16 Preferred method of contact (ID) 00684</A></h4>
+
+<p><br>
+	A one letter code that indicates which of multiple phone numbers is the
+preferred method of contact for this person. Note that all values of this code
+refer to this segment's phone field, except for the value "E", which refers to
+the Email address field.  If more than one phone number of the preferred type
+exists in <i>STF-10-phone</i>, this field refers to the first such instance.<br>
+<center>Table 0185  Preferred method of contact</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u></u></b><u>Value</u></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><u>Description</u></p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>H<br>
+O<br>
+F<br>
+C<br>
+B<br>
+E
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Home
+phone number<br>
+Office phone number<br>
+FAX number<br>
+Cellular phone number<br>
+Beeper number<br>
+E-mail address (not in TN format)
+</p>
+<BR></TD></TR></TABLE><p></p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading59">9.1.2  PRA - practitioner detail segment </A></h3>
+
+<p><br>
+	The PRA segment adds detailed medical practitioner information to the
+personnel identified by the STF segment.  A PRA segment may optionally follow
+an STF segment.  A PRA segment must always have been preceded by a
+corresponding STF segment.<br>
+	The PRA segment contains the following fields:<br>
+<center>Figure 8A-6  PRA attributes</center><br>
+</p>
+<TABLE BORDER><TR align="center">
+<TH colspan=1 align="center"><p><b>SEQ</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>LEN</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>DT</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>R/O</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>RP/#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>TBL#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ITEM#</b></p>
+<BR></TH>
+<TH colspan=1 align="center"><p><b>ELEMENT
+NAME
+</b></p>
+<BR></TH></TR><TR align="center">
+<TD colspan=1 align="center"><p>1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+6<br>
+7
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>20<br>
+60<br>
+3<br>
+1<br>
+100<br>
+100<br>
+200
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>ST<br>
+CE<br>
+ID<br>
+ID<br>
+CM<br>
+CM<br>
+CM
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>R<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O<br>
+O
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p><br>
+Y<br>
+Y<br>
+Y<br>
+Y<br>
+Y
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p><br>
+0186<br>
+0187
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>00685<br>
+00686<br>
+00687<br>
+00688<br>
+00689<br>
+00690<br>
+00691
+</p>
+<BR></TD>
+<TD colspan=1 align="center"><p>PRA
+- primary key value<br>
+Practitioner group<br>
+Practitioner Category<br>
+Provider Billing <br>
+Specialty<br>
+Practitioner ID Numbers<br>
+Privileges
+</p>
+<BR></TD></TR></TABLE><p><br>
+<b>8.A.2.0	 PRA field definitions</b><br>
+ </p>
+
+<h4>
+<A NAME="Heading60">9.1.2.1 PRA - primary key value (ST) 00685</A></h4>
+
+<p><br>
+	Defintion:  must match MFE-4-primary key value, to identify which entry is
+being referenced.</p>
+
+<h4>
+<A NAME="Heading61">9.1.2.2 Practitioner group (CE) 00686</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;identifier&gt; ^ &lt;text&gt; ^ &lt;name of coding
+system&gt; ^ &lt;alternate identifier&gt; ^ &lt;alternate text&gt; ^ &lt;name
+of alternate coding system&gt;</tt><br>
+	Definition:  name and/or code of a group of practitioner to which this
+practitioner belongs.</p>
+
+<h4>
+<A NAME="Heading62">9.1.2.3 Practitioner category (ID) 00687</A></h4>
+
+<p><br>
+	Definition:  category of practitioner.  User-defined <i>table 0186 -
+practitioner category</i> whose values may include codes for staff physician,
+courtesy physician, resident, physician assistant, physical therapist,
+psychiatrist, psychologist, pharmacist, registered nurse, licensed practical
+nurse, licensed vocational nurse, nurse practitioner, etc.</p>
+
+<h4>
+<A NAME="Heading63">9.1.2.4 Provider billing (ID) 00688</A></h4>
+
+<p><br>
+	Definition:  how provider services are billed. <br>
+<center>Table 0187  Provider billing</center><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TD colspan=1 align="left"><p><b><u></u></b><u>Value</u></p>
+<BR></TD>
+<TD colspan=1 align="left"><p><u>Description</u></p>
+<BR></TD></TR><TR align="left">
+<TD colspan=1 align="left"><p>P<br>
+I
+</p>
+<BR></TD>
+<TD colspan=1 align="left"><p>Provider
+does own billing<br>
+Institution bills for provider
+</p>
+<BR></TD></TR></TABLE><p></p>
+
+<h4>
+<A NAME="Heading64">9.1.2.5 Specialty (CM) 00689</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;specialty name (ST)&gt; ^ &lt;governing board (ST)&gt; ^
+&lt;eligible or certified (ID)&gt; ^ &lt;date of certification (DT)&gt;</tt><br>
+	Definition:  repeating field made up of multiple components to record the
+practitioner's specialties.  The multiple components of each specialty are: (1)
+specialty name or abbreviation, identifies provider's specialty, (2) name of
+specialty governing board, (3) Eligible/Certified contains "E" or "C", (4)
+certified date contains date of certification, if certified.</p>
+
+<h4>
+<A NAME="Heading65">9.1.2.6 Practitioner ID numbers (CM) 00690</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;ID number (ST)&gt; ^ &lt;type of ID number (ID)&gt; ^
+&lt;state/other qualifying info (ST)&gt;</tt><br>
+	Definition:  repeating field which lists this practitioner's license numbers
+and other ID numbers.  This is a field made up of the following components: (1)
+the ID number, and (2) the type of number, and optionally (3) the state in
+which it is valid, if relevant, or other qualifying information.  It is
+recommended that state qualifications use the two character U.S.P.O.
+abbreviations. The practitioner ID number type (component 2) is a user-defined
+table whose values may include codes for Universal Physician Identification
+Number, Drug Enforcement Agency Number, State License Number, Medicare Number,
+Medicaid Number, Labor and Industries Number, General Ledger Number, QA Number,
+County Number, Training License Number, Tax ID Number, etc.  </p>
+
+<h4>
+<A NAME="Heading66">9.1.2.7 Privileges (CM) 00691</A></h4>
+
+<p><br>
+<tt>	Components:  &lt;privilege (CE)&gt; ^ &lt;privilege class (CE)&gt; ^
+&lt;expiration date (DT)&gt; ^ &lt;activation date (DT)&gt;</tt><br>
+	Definition:  institutional priveleges which this provider may exercise.
+Depends upon insitutional needs.  For example, admit, transfer, discharge,
+place orders, verify orders, review results, etc.  Can also be used for
+privileges other than patient services.  This is a repeating field, with each
+privilege made up of the following components: (1) privilege; (2) privilege
+class; (3) privilege expiration date, if any; and (4) privilege activation
+date, if any.  Note that the privilege and privilege class components are CE
+data types, and thus they are encoded with the subcomponent delimiter (&amp;)
+rather than the component delimiter (^).</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading67">9.1.3  Example:  Doctor Master File MFN message </A></h3>
+
+<p><br>
+<tt>MSH|^~\&amp;|HL7REG|UH|HL7LAB|CH|19910918060544||MFN^M01|MSGID002|P|2.2|||AL|NE</tt><br>
+<tt>MFI|0004^DOCTOR^HL7|UPD|||AL</tt><br>
+<tt>MFE|MAD|U2246|199110011230|PMF98123789182^^PLW</tt><br>
+<tt>STF|PMF98123789182^^PLW|U2246^^PLW~111223333^^SSN|KILDARE^RICHARD^J^JR^DR^M.D.|P|M|</tt><br>
+<tt>	... 19511004|A|^ICU|^MED|(206)689-1999X345CO~ (206)283-3334CH~</tt><br>
+<tt>	... (206)689-1345X789CB|214 JOHNSON ST^SUITE 200^SEATTLE^
+WA^98199^H~</tt><br>
+<tt>	... 3029 24TH AVE W^^SEATTLE, WA^98198^O |19890125^UMC&amp;University
+Medical</tt><br>
+<tt>	... Center&amp;L01||PMF88123453334|74160.2326 @COMPUSERV.COM|B</tt><br>
+<tt>PRA|PMF98123789182^^PLW|^KILDARE FAMILY PRACTICE|ST|I|OB/GYN^STATE BOARD OF
+OBSTETRICS AND</tt><br>
+<tt>	... GYNECOLOGY^C^19790123|1234887609
+^UPIN~1234987^CTY^MECOSTA~223987654^</tt><br>
+<tt>	... TAX~1234987757^DEA~
+12394433879^MDD^CA|ADMIT&amp;&amp;ADT^MED&amp;&amp;L2^19941231~DISCH&amp;&amp;ADT^MED&amp;&amp;L2^19941231|</tt><br>
+Acknowledgement<br>
+	MFD  8-4<br>
+Master Files  8-1<br>
+Message<br>
+	MFN  8-3<br>
+MFA  8-9<br>
+MFD  8-4<br>
+MFE  8-7<br>
+MFI  8-5<br>
+MFN  8-3<br>
+MFQ  8-5<br>
+PRA  8-17<br>
+Practitioner Master File Segments  8-13<br>
+Query<br>
+	MFQ  8-5<br>
+Segments<br>
+	MFA  8-9<br>
+	MFE  8-7<br>
+	MFI  8-5<br>
+	PRA  8-17<br>
+	STF  8-13<br>
+Staff master file segments  8-13<br>
+STF  8-13<br>
+Trigger Event<br>
+	MFN  8-2
+</p>
+</body></html>

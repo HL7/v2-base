@@ -1,0 +1,792 @@
+<HTML><HEAD>
+<!-- This document was created from RTF source by rtftohtml version 3.8 -->
+<TITLE>HL7 V2.2 Chapter 1</TITLE></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>
+References to other Chapters
+</H1>
+<A HREF="hl7.html">Index HL7</A><br>
+<A HREF="hl7chp2.html">Chapter 2</A><br>
+<A HREF="hl7chp3.html">Chapter 3</A><br>
+<A HREF="hl7chp4.html">Chapter 4</A><br>
+<A HREF="hl7chp5.html">Chapter 5</A><br>
+<A HREF="hl7chp6.html">Chapter 6</A><br>
+<A HREF="hl7chp7.html">Chapter 7</A><br>
+<A HREF="hl7chp8.html">Chapter 8</A><br>
+
+<hr>
+
+<p>
+
+<H1>
+</H1>
+<UL>
+<LI><A HREF="#Heading1">1 </A>
+<UL>
+<LI><A HREF="#Heading2">1.1  PURPOSE </A>
+<LI><A HREF="#Heading3">1.2  BACKGROUND </A>
+<LI><A HREF="#Heading4">1.3  NEED FOR A STANDARD </A>
+<LI><A HREF="#Heading5">1.4  GOALS OF THE STANDARD </A>
+<LI><A HREF="#Heading6">1.5 HISTORY OF HL7 DEVELOPMENT</A>
+<LI><A HREF="#Heading7">1.6  OVERVIEW </A>
+<UL>
+<LI><A HREF="#Heading8">1.6.1  HL7 encoding rules  </A>
+<LI><A HREF="#Heading9">1.6.2  Local variations </A>
+<LI><A HREF="#Heading10">1.6.3  Evolutionary changes to the standards </A>
+<LI><A HREF="#Heading11">1.6.4  Applicability to file transfers (batch processing) </A>
+<LI><A HREF="#Heading12">1.6.5  Relationship to other protocols </A>
+<UL>
+<LI><A HREF="#Heading13">1.6.5.1  Lower layer protocols</A>
+<LI><A HREF="#Heading14">1.6.5.2 Other applications protocols</A>
+</UL>
+</UL>
+<LI><A HREF="#Heading15">1.7  REFERENCE DOCUMENTS </A>
+<UL>
+<LI><A HREF="#Heading16">1.7.1   ANSI standards </A>
+<LI><A HREF="#Heading17">1.7.2  ISO standards  </A>
+<LI><A HREF="#Heading18">1.7.3  Codes and terminology sources </A>
+<LI><A HREF="#Heading19">1.7.4  Other Applicable Documents </A>
+</UL>
+<LI><A HREF="#Heading20">1.8  SUGGESTIONS AND COMMENTS </A>
+</UL>
+</UL>
+<hr size=4>
+<p><br>
+ </p>
+
+<h1>
+<A NAME="Heading1">1 </A></h1>
+
+<p><b>Introduction</b></p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading2">1.1  PURPOSE </A></h2>
+
+<p><br>
+This document contains the specifications for version 2.2 of the Health Level
+Seven (HL7) Standard for electronic data exchange in healthcare environments,
+with special emphasis on inpatient acute care facilities (i.e., hospitals).  It
+summarizes the work of a committee of healthcare providers (users), vendors and
+consultants established in March 1987 on the occasion of a conference hosted by
+the Hospital of the University of Pennsylvania.  Its participants, who
+represent users as well as vendors, share a common goal of simplifying the
+implementation of interfaces between computer applications from different, and
+often competing, vendors.  This committee, which subsequently became known as
+the HL7 Working Group, endeavors to standardize the format and protocol for the
+exchange of certain key sets of data among healthcare computer application
+systems.  Meetings are held approximately every four months in scattered
+locations throughout the United States.  HL7 sanctioned national groups also
+exist in many other countries outside of the United States including Australia,
+Germany, Japan, the Netherlands, and New Zealand.<br>
+This document is being presented to interested parties.  It is a status report
+that is published to solicit the involvement of the broadest possible group of
+participants as this protocol is being put into use.  Comments are solicited on
+all aspects of the Standard.<br>
+This effort is expected to yield a voluntary, ad hoc standard that is open to
+<b>all</b> who develop healthcare data processing systems.  As the Standard has
+been put into production, experience has been gained and is reflected in this
+latest revision.<br>
+There have been two parallel efforts over the last three years since the last
+Standard publication (version 2.1).  First, version 2.2 represents an
+evolutionary change over version 2.1 that was published in 1990.  Version 2.2
+is the result of more than three years work, and thousands of hours of effort
+by members of all three communities since the publication of version 2.1 in
+June 1990.   Its primary goals include maintaining backwards compatibility with
+version 2.1, correcting errors discovered after the publication of 2.1, and
+extending the Standard within the format and context of version 2.1.<br>
+Also, within the last three years, HL7 has adopted new formal by-laws and
+voting procedures.  These procedures are modeled on the balloting procedures of
+other relevant healthcare industry computer messaging standards organizations
+(e.g., ASTM) and are designed to conform to the requirements of the American
+National Standards Institute (ANSI).  In June 1994, HL7 became an ANSI
+Accreditied Standards Organization.  HL7 is participating in ANSI's Health
+Information Standards Planning Panel (HISPP) as well.<br>
+HL7 as an organization, has experienced significant growth over the last three
+years.  Currently, HL7 has almost 1300 members in all membership categories and
+regularly attracts 250-300 members and non-members to each of its three yearly
+meetings.  As of mid-1993, HL7 had documented over 170 healthcare provider
+organizations that have implemented computer interfaces based on the HL7
+Standard.  As of December 1994, HL7 estimates that over 1,000 undocumented
+implementations exist in both the United States and in other countries.  It is
+possible for a healthcare provider institution to use HL7 without actually
+being an HL7 member through a member vendor or through outright purchase of the
+Standard without joining HL7.</p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading3">1.2  BACKGROUND </A></h2>
+
+<p><br>
+The term "Level 7" refers to the highest level of the Open System
+Interconnection (OSI) model of the International Standards Organization (ISO).
+This is not to say that HL7 conforms specifically to ISO defined elements of
+the OSI's seventh level.  Also HL7 does not specify a set of ISO approved
+specifications to occupy layers 1 to 6 under HL7's abstract message
+specifications.  HL7 does, however, conform to the conceptual definition of an
+application-to-application interface placed in the seventh layer of the OSI
+model.<br>
+In the OSI conceptual model, the functions of both communications software and
+hardware are separated into seven layers, or levels.  The HL7 Standard is
+primarily focused on the issues that occur within the seventh, or application,
+level.  These are the definitions of the data to be exchanged, the timing of
+the exchanges, and the communication of certain application specific errors
+between the applications.  However, of necessity, protocols that refer to the
+lower layers of the OSI model are sometimes mentioned to help implementors
+understand the context of the Standard.  They are also sometimes specified to
+assist implementors in establishing working HL7-based systems.<br>
+The HL7 Working Group is composed of volunteers who give their time on a
+personal basis or under sponsorship of their employers.  Membership in the HL7
+Working Group has been, and continues to be, open to anyone wishing to
+contribute to the development and refinement of  Level 7 Interface Standard for
+network technology in healthcare.<br>
+The Standard currently addresses the interfaces among various systems that send
+or receive patient admissions/registration, discharge or transfer (ADT) data,
+queries, orders, results, clinical observations, billing, and master file
+update information.  <b>It does not try to assume a particular architecture
+with respect to the placement of data within applications but is designed to
+support a central patient care system as well as more distributed environment
+where data resides in departmental systems.</b><br>
+If we consider the multitude of healthcare information systems applications as
+well as the variety of environments in which healthcare is delivered, it is
+evident that there are many more interfaces which could benefit from
+standardization.  The interfaces chosen were considered to be of high priority
+by the members participating in the standards writing process.  HL7's intent is
+to prepare a complete standard for these interfaces, built on a generic
+framework that is sufficiently robust to support many other interfaces.  This
+Standard has been put into production and is being used as a basis for
+extending the existing interface definitions and also adding other
+definitions.<br>
+It is expected that one result of publishing this specification will be the
+recruitment of more Working Group members with special interest in some newer
+and not yet fully specified areas.  Some of the areas that have already been
+identified are:<br>
+	a)	decision support<br>
+	b)	nursing applications<br>
+	c)	additional specific ancillary departments<br>
+	d)	computerized medical records<br>
+	e)	information needs associated with healthcare delivery systems outside of
+the acute care setting.<br>
+The above notwithstanding, the Working Group members feel that the interfaces
+addressed here are sufficient to provide significant benefit to the healthcare
+community.<br>
+This document is structured as follows.  The balance of this chapter contains a
+rationale for developing the Standard, the goals of the Standard, and issues
+which have been considered by the Working Group pertaining to scope and
+operational approach.  It is hoped that this will help the readers understand
+the basis for decisions that have been made in developing the Standard.
+Subsequent chapters specify, respectively:<br>
+	a)	the overall structure for all interfaces including a generalized query
+interface<br>
+	b)	patient admission, discharge, transfer and registration<br>
+	c)	order entry<br>
+	d)	patient accounting (billing) systems<br>
+	e)	clinical observation data, such as laboratory results, that are sent as
+identifiable data elements (rather than display oriented text)<br>
+	f)	A generalized interface for synchronizing common reference files (master
+files).</p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading4">1.3  NEED FOR A STANDARD </A></h2>
+
+<p><br>
+The organization and delivery of healthcare services is an
+information-intensive effort.  It is generally accepted that the efficacy of
+healthcare operations is greatly affected by the extent of automation of
+information management functions.  Many believe that healthcare delivery
+agencies that have not automated their information systems are not able to
+compete effectively in the healthcare market of the 1990's.<br>
+In the past two decades, healthcare institutions, and hospitals in particular,
+have begun to automate aspects of their information management.  Initially,
+such efforts have been geared towards reducing paper processing, improving cash
+flow, and improving management decision making.  In later years a distinct
+focus on streamlining and improving clinical and ancillary services has
+evolved, including bedside (in hospitals and other inpatient environments) and
+"patient-side" systems (in ambulatory settings).  Within the last few years,
+interest has developed in integrating all information related to the delivery
+of healthcare to a patient over his or her lifetime (i.e., an electronic
+medical record).  It has also been envisioned that all or part of this
+electronic medical record should be able to be communicated electronically
+anywhere as needed.<br>
+It is not uncommon today for the average hospital to have installed computer
+systems for admission, discharge, and transfer; clinical laboratories;
+radiology; billing and accounts receivable, to cite a few.  Often these
+applications have been developed by different vendors or in-house groups, with
+each product having highly specific information formats.  As hospitals have
+gradually expanded information management operations, a concomitant need to
+share critical data among the systems has emerged.  Comprehensive systems that
+aim at performing most, if not all, healthcare information management are in
+production by selected vendors.  These systems may be designed in a centralized
+or a distributed architecture.  Nevertheless, to the extent that such systems
+are truly complete, their use would mitigate the need for an external data
+interchange standard such as HL7.<br>
+There are, however, many pressures on an institution to develop or acquire
+individual departmental applications on a modular basis.  One source of such
+pressure is the special departmental needs that may not be addressed well (or
+perhaps at all) by a comprehensive vendor (i.e., so called "best-of-breed").
+Another is the need to evolve the overall systems environment of a hospital
+through a series of incremental, departmental decisions rather than in a
+single, revolutionary acquisition.  These pressures could be met by an
+environment containing a comprehensive system supplemented by departmental
+systems, or one consisting entirely of separate and discrete systems.<br>
+Network technology has emerged as a viable and cost-effective approach to the
+integration of functionally and technically diverse computer applications in
+healthcare environments.  However, these applications have developed due to
+market structure rather than through a logical systems approach, they are
+therefore often ad-hoc and idiosyncratic.  Extensive site-specific programming
+and program maintenance are often necessary for interfacing these applications
+in a network environment.  This occurs at considerable expense to the
+user/purchaser while often keeping vendor staff from other initiatives such as
+new product development.  The need for extensive site-specific interface work
+could be greatly reduced if a standard for network interfaces for healthcare
+environments were available and accepted by vendors and users alike.<br>
+In summary, it is important that both vendors and users not be faced with the
+problem of supporting incompatible transaction/communications structures.
+Instead, a framework must be developed for minimizing incompatibility and
+maximizing the exchange of information between systems.  It is proposed that
+HL7 can act as a superstructure in this environment to facilitate a common
+specification and specifications methodology.  It is indeed both practical and
+economical to develop, and commit to, standard interfaces for computer
+applications in healthcare institutions. </p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading5">1.4  GOALS OF THE STANDARD </A></h2>
+
+<p><br>
+The specifications of this Standard were developed in accordance with
+<b>apriori</b> specified goals.  Future extensions of the Standard should also
+support these goals.<br>
+HL7's purpose is to facilitate communication in healthcare settings.  The
+<b>primary goal</b> is to provide standards for the exchange of data among
+healthcare computer applications that eliminates or substantially reduces the
+custom interface programming and program maintenance that may otherwise be
+required.  This primary goal can be delineated as a set of goals:<br>
+	a)	the Standard should support exchanges among systems implemented in the
+widest variety of technical environments.  Its implementation should be
+practical in a wide variety of programming languages and operating systems.  It
+should also support communications in a wide variety of communications
+environments, ranging from a full, OSI-compliant, 7-level network "stack" to
+less complete environments including primitive point-to-point RS-232C
+interconnections and transfer of data by batch media such as floppy disk and
+tape.<br>
+	b)	immediate transfer of single transactions should be supported along with
+file transfers of multiple transactions<br>
+	c)	the greatest possible degree of standardization should be achieved,
+consistent with site variations in the usage and format of certain data
+elements.  The Standard should accommodate necessary site-specific variations.
+This will include, at least, site specific tables, code definitions and
+possibly site specific message segments (i.e., HL7 Z segments).<br>
+	d)	the Standard must support evolutionary growth as new requirements are
+recognized.  This includes support of the process of introducing extensions and
+new releases into existing operational environments.<br>
+	e)	the Standard should be built upon the experience of existing production
+protocols and accepted industry-wide standard protocols.  It should not,
+however, favor the proprietary interests of specific companies to the detriment
+of other users of the Standard.  At the same time, HL7 seeks to preserve the
+unique attributes that an individual vendor can bring to the marketplace.<br>
+	f)	while it is both useful and pertinent to focus on information systems
+within hospitals, the long-term goal should be to define formats and protocols
+for computer applications in all healthcare environments.<br>
+	g)	the very nature of the diverse business processes that exist within the
+healthcare delivery system prevents the development of either a universal
+process or data model to support a definition of HL7's target environments.  In
+addition, HL7 does not make a priori assumptions about the architecture of
+healthcare information systems nor does it attempt to resolve architectural
+differences between healthcare information systems. <b> For at least these
+reasons, HL7 cannot be a true "plug and play" interface standard.</b>  These
+differences at HL7 sites will probably require site negotiated agreements.<br>
+	h)	a primary interest of the HL7 Working Group has been to employ the Standard
+as soon as possible.  Having achieved this, HL7 has also developed an
+infrastructure that supports a consensus balloting process and has applied to
+the American National Standards Institute (ANSI) to be recognized as an
+Accredited Standards Organization (ASO).<br>
+	i)	cooperation with other related healthcare standards efforts (e.g., ACR/NEMA
+DICOM, ASC X12, ASTM, IEEE/MEDIX, NCPDP, etc.) has become a priority activity
+of HL7.  HL7 has participated in the ANSI HISPP (Health Information Systems
+Planning Panel) process since its inception in 1992.</p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading6">1.5 HISTORY OF HL7 DEVELOPMENT</A></h2>
+
+<p><br>
+The HL7 Working Group has met approximately every 3-4 months since March 1987
+to develop and review this specification.  The group is structured into
+committees to address each of the functional interfaces under development, with
+additional committees to address the overall control structure and various
+administrative aspects of the group.  These committees have the responsibility
+to author and maintain the chapters in the HL7 Interface Standard.  In
+addition, from time to time various special interest groups are formed within
+HL7 to develop ideas and sponsor particular perspectives that are not covered
+by any single existing committee.  If a special interest group's activities
+warrant and a new chapter is considered necessary, they may petition the HL7
+Technical Committee Chair and the Executive Committee to form a Technical
+Committee.<br>
+In the initial three meetings, a version 1.0 draft Standard was prepared
+covering the overall structure of the interfaces, ADT, order entry, and
+display-oriented queries.  Although the patient accounting system was
+recognized as very important, the time frame did not allow it to be addressed
+in the first draft.  This draft was presented to a Plenary meeting of the
+overall group in Tyson's Corner, VA on October 8, 1987. <br>
+Version 2.0 was prepared subsequent to Plenary I in Tyson's Corner and
+presented at Plenary II in Tucson in September 1988.  Since Plenary II, editing
+and revisions for Version 2.1 and then 2.2 have been ongoing.  Since then the
+Working Group has grown to nearly 300 individuals, far exceeding its original
+size of 12 and the following has been accomplished:<br>
+	a)	specifications for the various functional areas have been refined and
+expanded<br>
+	b)	formal liaison was developed with several other standards efforts: the ANSI
+HISPP (Healthcare Information Standards Planning Panel) for the coordination of
+healthcare standards efforts, the ASC X12N group for external EDI Standards,
+the ASTM E31.11 group for Clinical Data Exchange Standards, the ACR/NEMA DICOM
+group for standards relating to imaging and other aspects of Radiology
+Information Systems, and the IEEE P1157 group for medical data interchange
+("MEDIX").<br>
+	c)	the generic control structure was modified, on the basis of comments, to be
+adaptable to a wider variety of communications environments and to facilitate
+cooperation with other standards groups<br>
+	d)	a chapter on the interface to a patient accounting system has been added<br>
+	e)	a chapter on the reporting of ancillary results has been prepared, based on
+the ASTM 1238-88 Standard and with the direct, active participation of members
+of the ASTM E31.11 committee<br>
+	f)	a computerized data dictionary of all data elements and other message
+components has been created.  Those portions of this document that contain
+detailed listings of data were generated directly from that dictionary.
+Appendix A contains cross references and other information generated from this
+electronic data dictionary.<br>
+	g)	inconsistencies and mistakes where discovered in the version 2.0 and 2.1
+Standard.  These have been addressed and documented in version 2.2.<br>
+	h)	extensive additions have occurred in the Order/Entry and Clinical
+Observations Chapters to include data element oriented results, pharmacy orders
+and administrations interface.<br>
+	i)	message acknowledgments have been extended to include a separate enhanced
+mode that defines the "accept acknowledgment."  While this mode of
+acknowledgment has always been allowed, it is now obvious how HL7 supports any
+environment when intermediaries exist in the network with implicit time delays
+(such as store and forward services, "Interface Engines" that perform fan out
+services, etc.).  Immediate acknowledgments are available to release the
+sending system from the need to resend the message.<br>
+	j)	distinctions have been documented between the HL7 abstract message
+definition which is purely a level 7 (application level) definition vs. the HL7
+encoding rules for converting an abstract message into a string of characters
+that comprise an actual message.  These encoding rules are actually a suggested
+potential alternative where a fully defined level 6 (presentation level)
+definition does not exist (e.g., ISO's ASN.1 Basic Encoding Rules (BER)).</p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading7">1.6  OVERVIEW </A></h2>
+
+<p><br>
+This section contains a description of the conceptual basis of the HL7
+Standard, the approach to accommodating intra-site variations and evolutionary
+changes, and the way it has been structured in order to accommodate varying
+current and future communications environments.</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading8">1.6.1  HL7 encoding rules  </A></h3>
+
+<p><br>
+	Message formats prescribed in the HL7 encoding rules consist of data fields
+that are of variable length and separated by a field separator character.
+Rules describe how the various data types are encoded within a field and when
+an individual field may be repeated.  The data fields are combined into logical
+groupings called segments.  Segments are separated by segment separator
+characters.  Each segment begins with a three-character literal value that
+identifies it within a message.  Segments may be defined as required or
+optional and may be permitted to repeat.  Individual data fields are found in
+the message by their position within their associated segments.<br>
+	All data is represented as displayable ASCII characters (hexadecimal values
+between 20 and 7E, inclusive). All the special separators and other special
+characters are also displayable ASCII characters, except that the segment
+separator is the ASCII Carriage Return character.<br>
+	The encoding rules distinguish between data fields that have the null value
+and those that are not present.  The former are represented by two adjacent
+quotation marks, the latter by no data at all (i.e., two consecutive separator
+characters.)  The distinction between null values and those that are not
+present is important when a record is being updated.  In the former case the
+field in the database should be set to null; in the latter case it should
+retain its prior value.  The encoding rules specify that if a receiving
+application cannot deal with a data field not being present, it should treat
+the data field as present but null.<br>
+	The encoding rules specify that a receiving application should ignore fields
+that are present in the message but were not expected rather than treat such a
+circumstance as an error.</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading9">1.6.2  Local variations </A></h3>
+
+<p><br>
+	The HL7 Standard is intended to standardize data interchanges, not the
+underlying applications systems.  This means that there will be a wide variety
+in the manner in which the Standard are applied in different institutions.<br>
+	The requirement to support diversity within the Standard is addressed in these
+ways:<br>
+	a)	The only data fields that are required in the abstract messages are those
+necessary to support the logic of the relationships among the messages or their
+basic purpose.  Many other fields are specified but made optional.<br>
+	b)	There are provisions within the specifications to add messages or portions
+of messages that are local to an institution. The conventions used for this are
+intended to prevent conflict with future versions of the specification.</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading10">1.6.3  Evolutionary changes to the standards </A></h3>
+
+<p><br>
+	All standards must evolve as the applications they support change and as a
+result of experience using them.  In recognition of this, the Standard includes
+a protocol version ID in all messages.<br>
+	New transactions or data elements will be added to operational HL7
+environments as a result of changes in the Standard or due to changes in the
+local implementation as permitted within the Standard.  It is important that
+these changes be implementable at a site without requiring all communicating
+applications to upgrade simultaneously.  The special provisions in the Encoding
+Rules for dealing with fields that are not present or unexpected are very
+important here.  Because of them, new fields can be added first to the sending
+or source system; the receiving system will ignore the new fields until it has
+been updated to use them.  Often, these rules also facilitate changing the
+receiving system first.  Until the sending system is changed, the receiving
+system will find the new data field 'not present' and deal with this according
+to its rules for data not present.<br>
+	Similarly, the HL7 Encoding Rules support changes in data field sizes.  Fields
+are found within the message by examining separators, rather than by an offset.
+Changing the size of a field does not change the procedure used to detect
+subsequent fields.</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading11">1.6.4  Applicability to file transfers (batch processing) </A></h3>
+
+<p><br>
+	Although the HL7 Standard is defined in terms of the client-server (remote
+operation) model, its standards are equally applicable to file transfers.  One
+or more messages may be encoded according to the Encoding Rules, grouped in a
+file and transferred using external media, FTAM, FTP, Kermit, or any other file
+transfer protocol.  Responses may be grouped in a file and similarly
+transmitted.  Chapter 2 provides the general mechanisms for the batch
+transmittal of HL7 messages.</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading12">1.6.5  Relationship to other protocols </A></h3>
+
+<p><br>
+	A great deal of consideration has been given to the relationship between the
+HL7 Standard protocol and other protocols.  There are three questions:<br>
+	a)	what is the relationship between the HL7 protocol and "lower layer",
+service protocols?  In strict accordance with the ISO OSI model, HL7 should not
+replicate features of these protocols.  This can even be construed to require
+HL7 to avoid replicating certain ISO layer 7 functionality contained in the
+Service Elements.<br>
+		However, it is the goal of the HL7 group to support healthcare communications
+in a wide variety of communications environments, including many that are not
+as complete as ISO will be one day.<br>
+	b)	what is the relationship between the HL7 Standard protocol and other
+applications protocols?  Protocols of interest include the ASC X12 Standards
+for Electronic Document Interchange, the ASTM 1238-88 Standards for laboratory
+data reporting, the ACR/NEMA DICOM Standards for imaging and other aspects of
+Radiology Information Systems, and the IEEE P1157 Standards for medical data
+interchange ("MEDIX").<br>
+	c)	what is the relationship between the HL7 Standard and various proprietary
+healthcare protocols in use today?</p>
+
+<h4>
+<A NAME="Heading13">1.6.5.1  Lower layer protocols</A></h4>
+
+<p><br>
+	The HL7 Encoding Rules are substantially different from the ASN.1 Basic
+Encoding Rules (BER) documented in CCITT X.409 and X.209 and ISO 8825 or those
+employed in LU6.2 or RPC.  This is because:<br>
+	a)	by definition, the HL7 encoding rules will be applied where the environment
+does not include software to do encoding.  Without such software, the burden on
+applications programmers to develop messaging software that conforms to those
+encoding rules is onerous.<br>
+	b)	the encoding rules of these protocols depend on the assumption that lower
+level protocols provide transparency (i.e., all character codes can be
+transmitted without being changed by and of the lower levels).  This assumption
+is often not met in the communications environments that must serve HL7 for the
+interim.  The techniques that might be used to implement transparency in the
+Lower Level Protocol are difficult to implement in some present-day
+applications environments.<br>
+	The notation chosen to document the message formats in the HL7 Standard is not
+the Abstract Syntax Notation1 (ASN.1) Basic Encoding Rules (BER) used by ISO
+and MEDIX.  This is because the ASN.1 language is so rich, and the HL7 message
+format so simple, that when HL7 messages are defined using ASN.1, the result is
+very repetitious and difficult to read. This is distracting and difficult to
+explain to application programmers who are neither schooled in recursive
+languages in general nor ASN.1 in particular.<br>
+	Contrary to other high level communications environments, there is no notion
+of association separate from the sending of the message from client to server
+and the response.  This seems appropriate to the client-server model.<br>
+	Whenever HL7 is applied in a networking environment, addressing will be an
+issue.  This is equally true when it is applied on ISO Standards networks or
+proprietary networks.  Although the Standard does not specify how this
+addressing will occur, they do provide certain data fields that will be of
+value in determining addresses.  The fields, Receiving Application, Receiving
+Facility, and Processing ID, are located in the header of all HL7 messages.
+Receiving Facility is intended for environments where multiple occurrences of
+the same application are being run on the same computer system or on the same
+network on behalf of different institutions or other organizational entities.
+Processing ID is used where various versions of essentially the same
+application may reside on the same computer for different purposes.  The
+recommended values for the field are Production, Training, and Debugging.<br>
+	The HL7 committee does not standardize the values for the Receiving
+Application and Receiving fields, since the code sets chosen for them will be
+tightly coupled to the overall architecture of applications within an
+institution.  For applicability under the ISO Association Control Service
+Element, these values will have to be registered as ISO Service Access Points.</p>
+
+<h4>
+<A NAME="Heading14">1.6.5.2 Other applications protocols</A></h4>
+
+<p><br>
+	The Working Group has given considerable attention to the relationship of the
+HL7 protocol and other protocols.  A considerable liaison effort is underway.
+This is described below:<br>
+	a)	<u>ACR/NEMA DICOM.</u>  The HL7 Working Group maintains an on-going liaison
+with the ACR/NEMA DICOM working group.  HL7 and ACR/NEMA DICOM are both members
+of ANSI's HISPP MSDS.<br>
+	b)	<u>ASC X12 Standards for Electronic Document Interchange.</u>  X12 is a
+family of Standards that provide both general and specific descriptions for
+data interchange within a number of industries.  The HL7 Encoding Rules are
+modeled on the X12 Standards, although there are differences.  The HL7 Standard
+needs to accommodate on-line exchange of individual transactions on LANs.  This
+difference, and certain applications issues, are responsible for the variance
+from X12.  X12 has recently decided to follow the UN/EDIFACT encoding rules for
+all X12 standards produced in 1995 or later.  However, at this time, this
+decision will not require retroactive maintenance activity on all existing X12
+Standards Transaction Sets.<br>
+		X12N transactions that facilitate the transfer of healthcare claims and
+remittance information as well as benefit coordination, enrollment and
+verification are enjoying dramatically increased use.  HL7 has elected to
+assume that all business transactions between institutions regarding the
+interchange of claims, benefits or other financial information are the
+responsibility of ASC X12N, the insurance subcommittee of X12.  HL7 and ASC
+X12N are both members of ANSI's HISPP Messaging Standards Developers
+Subcommittee.<br>
+		In February of 1994, HL7 and X12 signed an agreement to "improve coordination
+efforts and have identified that technical issues must be harmonized.  Both
+groups agree to migrate to the appropriate level of resolution of potentially
+overlapping work by utilizing user and standards communities' and anticipated
+health care reform requirements."<br>
+		Since then, HL7 and X12 have created two bodies to address the goals of
+harmonization: (1) HL7 - X12N Corrdinating Ad Hoc Steering Committee to oversee
+efforts, and (2) HL7 - X12N Joint Coordinating Committee to develop and
+implement specific plans to achieve harmonization.  Both committees have
+convened a meeting in 1994 and will continue their work through 1995.<br>
+	c)	<u>ASTM 1238.88 Laboratory Data Reporting.</u>  An active liaison effort
+between the ASTM committee and the Working group has resulted in minor changes
+in the ASTM specification to enhance compatibility, changes in the HL7 control
+specifications to enhance compatibility, and the development of the entire
+Ancillary Data Reporting chapter, developed jointly by the committees and built
+on the ASTM Standards.  This liaison has now extended to the point where both
+groups now have the permission to freely use the contents of each others
+standards efforts "in whole" within their own published Standards.<br>
+		Some distinctions are more in the terminology chosen than the actual message
+content.  For example, the ASTM "sub-field delimiter" is generally used to
+separate repetitions of homogenous values.  It is called a "repetition
+separator" in HL7.  HL7 and ASTM are both members of ANSI's HISPP MSDS.<br>
+	(d)	<u>IEEE P1157 ("MEDIX").</u>  The MEDIX committee is defining an
+application level protocol similar in scope to HL7 but built strictly on the
+ISO protocol stack up to and including the Remote Operation Service Element
+(ROSE).  HL7 varies from this approach by the decision not to depend on ROSE
+nor use the ASN.1 BER syntax notation.  Despite the difference in approaches,
+the HL7 Working Group has regular liaison with the MEDIX committee.  The
+Working Group has devised a format for the HL7 Standard that is relatively
+independent of the encoding rules chosen and easily translated into the ASN.1
+notation.  The transactions defined in this manner should be directly
+transferable to the MEDIX effort, and transaction messages encoded using the
+HL7 scheme should be translatable to transactions encoded using the BER.  This
+should facilitate the creation of gateways between the HL7 and future
+environments.<br>
+		In addition, HL7 and MEDIX have agreed on a course for convergence.  This
+will occur within the HL7 Abstract Message definitions.  MEDIX has further
+agreed to use the HL7 abstract message definitions as defined in V2.1 as a
+starting point for the MEDIX message definitions. HL7 and MEDIX are both
+members of ANSI's HISPP MSDS.</p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading15">1.7  REFERENCE DOCUMENTS </A></h2>
+
+<p></p>
+<h3>
+1<a name="fnB0" href="#fn0">[1]</a></h3>
+
+<h3>
+<A NAME="Heading16">1.7.1   ANSI standards </A></h3>
+
+<p><br>
+	ANSI X3.30 -	1985 Representation for calendar date and ordinal date<br>
+	ANSI X3.4  -	1986 Coded character sets - American National Standard code for
+information interchange (7-bit ASCII) <br>
+	ANSI X3.43 -	1986 Information systems representation of local time of day for
+information interchange <br>
+	ANSI X3.50 -	1986 Representations for U.S. customary, SI, and other units to
+be used in systems with limited character sets<br>
+	ANSI X3.51 -	1986 Representations of universal time, local time differentials,
+and United States time zone references for information interchange   </p>
+<h3>
+2<a name="fnB1" href="#fn1">[2]</a></h3>
+
+<h3>
+<A NAME="Heading17">1.7.2  ISO standards  </A></h3>
+
+<p><br>
+	ISO 5218   -	1977 Information Interchange-Representation of Human Sexes <br>
+	ISO 1000   -	1981 SI Units and Recommendations for the use of their multiples
+and of certain other units<br>
+	ISO 2955   -	1983 Information processing-Representation of SI and other units
+in systems with limited character sets<br>
+	ISO 8072   -	1986 Network Standards <br>
+	ISO 8601   -	1988 Data elements and interchange formats - information
+interchange (representation of dates and times)  <br>
+	ISO 8859   -	1988 Information Processing- 8-bit single-byte coded graphic
+character sets</p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading18">1.7.3  Codes and terminology sources </A></h3>
+
+<p><br>
+	ACR 		Index for Radiological Diagnosis, Revised 3rd Edition<br>
+	CPT4 		Current Procedural Terminology<a name="fnB2" href="#fn2">[3]</a><br>
+	CAS		USAN 1990 and the USP dictionary of drug names<a name="fnB3"
+href="#fn3">[4]</a> <br>
+	EUCLIDES	European standard for clinical laboratory data exchange<a name="fnB4"
+href="#fn4">[5]</a><br>
+	Home Health	Home Healthcare Classification System (Virginia Saba, EdD, RN,
+Georgetown U. School of Nursing, Washington DC)<br>
+	HIBCC		Standard for electronic business data interchange<br>
+	ICCS		Commission on Professional and Hospital Activities<br>
+	ICD-9		International Classification of Diseases, 9th Revision<br>
+	ICD9-CM	International Classification of Diseases, Clinical Modification Manual
+of Clinical Microbiology<a name="fnB5" href="#fn5">[6]</a><br>
+	NANDA 	(North American Nursing Diagnosis Association, Philadelphia PA)<br>
+	NDC 		National drug codes<a name="fnB6" href="#fn6">[7]</a> <br>
+	NIC		(Nursing Interventions Classification, Iowa Intervention Project.  U. of
+Iowa)<br>
+  	NLM 		Unified Medical Language<a name="fnB7" href="#fn7">[8]</a> <br>
+	Omaha System	(Omaha Visiting Nurse Association, Omaha NE)<br>
+	Read 		Clinical Classification of Medicine<a name="fnB8"
+href="#fn8">[9]</a><br>
+	SNOMED III	Systemized Nomeclature of Medicine<a name="fnB9"
+href="#fn9">[10]</a> <br>
+	WHO 		Drug Codes<a name="fnB10" href="#fn10">[11]</a> <br>
+	UMDNS	Universal Medical Device Nomenclature System<a name="fnB11"
+href="#fn11">[12]</a>  <br>
+	FDA K10 	Device Codes  Device and analyte process codes<a name="fnB12"
+href="#fn12">[13]</a> </p>
+<h3>
+</h3>
+
+<h3>
+<A NAME="Heading19">1.7.4  Other Applicable Documents </A></h3>
+
+<p><br>
+	ASTM E31.12  Draft Dec 1990 - A Standard Specification for Representing
+Clinical <br>
+		Laboratory Test and Analyte Names<i> Draft</i><a name="fnB13"
+href="#fn13">[14]</a>	<br>
+	ASTM E1467-91  Standard Specification for Transferring Digital
+Neurophysiological Data<br>
+		Between Independent Computer Systems<a name="fnB14" href="#fn14">[15]</a><br>
+	ASTM E1394  A Standard Specification for Transferring Information Between
+Clinical<br>
+		Instruments and Computer Systems<sup>15</sup> <br>
+	ASTM E1381  Standard Specification for the Low-level Protocol to Transfer
+Messages between<br>
+		Clinical Instruments and Computer Systems<sup>15</sup> <br>
+	McDonald CJ, Hammond WE: Standard formats for electronic transfer of clinical
+data. Annals of Internal Medicine 1989; 110(5):333-335.</p>
+<h2>
+</h2>
+
+<h2>
+<A NAME="Heading20">1.8  SUGGESTIONS AND COMMENTS </A></h2>
+
+<p><br>
+The HL7 Working Group welcomes comments and suggestions for improving the
+Standard.  The Working Group is also open to new membership.  Both feedback on
+the Standard and interest in membership should be sent to:<br>
+Mark McDougall<br>
+HL7 Executive Director<br>
+Health Level Seven<br>
+3300 Washtenaw Avenue, Suite 227<br>
+Ann Arbor, MI  48104-4250<br>
+Phone: (313) 677-7777<br>
+Fax:  (313) 677-6622<br>
+email: hq@hl7.win.net<br>
+Dave Carlson<br>
+Chair, HL7 Executive Committee<br>
+Enterprise Systems, Inc.<br>
+1400 South Wolf Road<br>
+Wheeling,  IL  60090<br>
+(708) 537-4800<br>
+John Quinn<br>
+Technical Chair, HL7 Working Group<br>
+Ernst and Young<br>
+2000 National City Center<br>
+Cleveland, OH 44114<br>
+(216) 861-5000<br>
+</p>
+<HR><a name="fn0" href="#fnB0">[&#160;]</a><p>&#160;&#160;&#160;<sup>1</sup>
+Available from American National Standards Institute, 1430 Broadway, New York,
+NY 10018<br>
+<a name="fn1" href="#fnB1">[&#160;&#160;&#160;&#160;]</a><sup>2</sup>	Available
+from ISO 1 Rue de Varembe, Case Postale 56, CH 1211, Geneve, Switzerland<br>
+<a name="fn2" href="#fnB2">[&#160;&#160;&#160;&#160;]</a><sup>3</sup>	Available
+from American Medical Association, P O Box 10946, Chicago, IL  60610<br>
+<a name="fn3" href="#fnB3">[&#160;&#160;&#160;&#160;]</a><sup>4</sup>	William
+M. Heller, Ph.D., Executive Editor.   Available from United States
+Pharmacopeial Convention, Inc., 12601 Twinbrook Parkway, Rockville, MD  20852.
+<br>
+<a name="fn4" href="#fnB4">[&#160;&#160;&#160;&#160;]</a><sup>5</sup>	Available
+from G. De Moor, M.D., Dept. of Medical Informatics 5K3, State University
+Hospital Gent, De Pintelaan 185, B 9000 GENT, BELGIUM <br>
+<a name="fn5" href="#fnB5">[&#160;&#160;&#160;&#160;]</a><sup>6</sup>	Available
+from American Society for Microbiology, 1913 Eye St., NW, Washington, D.C.
+20006. <br>
+<a name="fn6" href="#fnB6">[&#160;&#160;&#160;&#160;]</a><sup>7</sup>	Available
+from the National Drug Code Directory, FDA, Rockville, MD, and other sources<br>
+<a name="fn7" href="#fnB7">[&#160;&#160;&#160;&#160;]</a><sup>8</sup>	Available
+from National Library of Medicine, 8600 Rockville Pike, Bethesda, MD  20894<br>
+<a name="fn8" href="#fnB8">[&#160;&#160;&#160;&#160;]</a><sup>9</sup>	Available
+from James D. Read, MB, ChB, DRCOG, MRCGP, General Medical Practitioner, Park
+View Surgery, 26-28 Leicester Rd., Loughborough, Leicestershire LE11 2AG.<br>
+<a name="fn9" href="#fnB9">[&#160;&#160;&#160;&#160;]</a><sup>10</sup>
+Available from American College of Pathology, Skokie, IL <br>
+<a name="fn10" href="#fnB10">[&#160;&#160;&#160;&#160;]</a><sup>11</sup>
+Available from INTDIS, P O Box 26, S-751 03 Uppsele, Sweden<br>
+<a name="fn11" href="#fnB11">[&#160;&#160;&#160;&#160;]</a><sup>12</sup>
+Available from ECRI, 5200 Butler Pike, Plymouth Meeting, PA 19462 <br>
+<a name="fn12" href="#fnB12">[&#160;&#160;&#160;&#160;]</a><sup>13</sup>
+Available from Dept. of Health &amp; Human Services, FDA, Rockville, MD 20857
+<br>
+<a name="fn13" href="#fnB13">[&#160;&#160;&#160;&#160;]</a><sup>14</sup>
+Available from Arden Forrey, Ph.D., 4916 Purdue Ave., NE, Seattle, WA 98105<br>
+<a name="fn14" href="#fnB14">[&#160;&#160;&#160;&#160;]</a><sup>15</sup>
+Available from American Society for Testing and Materials (ASTM) 1916 Race St.,
+Philadelphia, PA 19103-1187.  
+</p>
+
+</body></html>

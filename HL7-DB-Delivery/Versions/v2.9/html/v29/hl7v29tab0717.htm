@@ -1,0 +1,894 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Table 0717:
+Access Restriction Value
+</H2>
+<TABLE class=info>
+<TR>
+<TD class=>Interpretation:</TD>
+<TD class=>Umfang der Zugruffsbeschr&auml;nkung</TD>
+</TR>
+<TR>
+<TD class=>OID Table:</TD>
+<TD class=>2.16.840.1.113883.12.717</TD>
+</TR>
+<TR>
+<TD class=>Codesystem OID: </TD>
+<TD class=>2.16.840.1.113883.18.388 Version 2</TD>
+</TR>
+<TR>
+<TD class=>Value Set OID:</TD>
+<TD class=>2.16.840.1.113883.21.405</TD>
+</TR>
+<TR>
+<TD class=>Binding:</TD>
+<TD class=>example</TD>
+</TR>
+<TR>
+<TD class=>Expansion:</TD>
+<TD class=>all codes from codesystem</TD>
+</TR>
+<TR>
+<TD class=>Vocabulary Domain:</TD>
+<TD class=>tbd</TD>
+</TR>
+<TR>
+<TD class=>Table Type:</TD>
+<TD class=>User</TD>
+</TR>
+<TR>
+<TD class=>Case insensitive:</TD>
+<TD class=>Falsch</TD>
+</TR>
+<TR>
+<TD class=>Steward:</TD>
+<TD class=>PA</TD>
+</TR>
+<TR>
+<TD class=>Section</TD>
+<TD class=>2.C.2.494</TD>
+</TR>
+</TABLE>
+<p>
+<TABLE class=info>
+<TR>
+<TH class=table>Value</TH>
+<TH class=table>Description</TH>
+<TH class=table>German Interpretation</TH>
+<TH class=table>Comment</TH>
+<TH class=table>Chapter</TH>
+</TR>
+<TR class=table-odd>
+<TD class=table>PersDEID</TD>
+<TD class=table>Personal policy on collection, access, use, or disclosure of de-identified information as defined by the information subject or by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ALL</TD>
+<TD class=table>All</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DEM</TD>
+<TD class=table>All demographic data</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LOC</TD>
+<TD class=table>Patient Location</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PID-7</TD>
+<TD class=table>Date of Birth</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PID-17</TD>
+<TD class=table>Religion</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HIV</TD>
+<TD class=table>HIV status and results</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>STD</TD>
+<TD class=table>Sexually transmitted diseases</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PSY</TD>
+<TD class=table>Psychiatric Mental health</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DRG</TD>
+<TD class=table>Drug</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SMD</TD>
+<TD class=table>Sensitive medical data</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NO</TD>
+<TD class=table>None</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OO</TD>
+<TD class=table>Opt out all registries (HIPAA)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OI</TD>
+<TD class=table>Opt in all registries (HIPAA)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.494</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>JurisIP</TD>
+<TD class=table>Jurisdictional policy on collection, access, use, or disclosure of information as defined by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JurisCUI</TD>
+<TD class=table>Jurisdictional policy on collection, access, .use, or disclosure of controlled unclassified information as defined by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>JurisDEID</TD>
+<TD class=table>Jurisdictional policy on collection, access, use, or disclosure of de-identified information as defined by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JurisLDS</TD>
+<TD class=table>Jurisdictional policy on collection, access, use, or disclosure of information in a limited data set as defined by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>JurisNSI</TD>
+<TD class=table>Jurisdictional policy on collection, access, use, or disclosure of information deemed non-sensitive by applicable jurisdiction law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JurisPI</TD>
+<TD class=table>Jurisdictional policy on collection, access, use, or disclosure of information deemed public by applicable jurisdiction law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>JurisSP-CUI</TD>
+<TD class=table>Jurisdictional policy on collection, access, use, or disclosure of specified controlled unclassified information as defined by applicable jurisdictional policy.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JurisUUI</TD>
+<TD class=table>Jurisdictional policy on collection, access, use, or disclosure of uncontrolled unclassified information as defined by applicable jurisdictional policy.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OrgIP </TD>
+<TD class=table>Organizational policy on collection, access, use, or disclosure of information, which does not conflict with jurisdictional law</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OrgCUI</TD>
+<TD class=table>Organizational policy on collection, access, use, or disclosure of basic controlled unclassified information as defined by the organization or by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OrgDEID</TD>
+<TD class=table>Organizational policy on collection, access, use, or disclosure of de-identified information as defined by the organization or by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OrgLDS</TD>
+<TD class=table>Organizational policy on collection, access, use, or disclosure of information in a limited data set as defined by the organization or by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OrgNSI</TD>
+<TD class=table>Organizational policy on collection, access, use, or disclosure of information deemed non-sensitive by the organization by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OrgPI</TD>
+<TD class=table>Organizational policy on collection, access, use, or disclosure of public information as defined by the organization or by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OrgSP-CUI</TD>
+<TD class=table>Organizational policy on collection, access, use, or disclosure of specified controlled unclassified information as defined by the organization or by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OrgUUI</TD>
+<TD class=table>Organizational policy on collection, access, use, or disclosure of uncontrolled unclassified information as defined by the organization or by applicable jurisdictional law.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PersIP</TD>
+<TD class=table>Personal policy on collection, access, use, or disclosure of information.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PersNSI</TD>
+<TD class=table>Personal policy on collection, access, use, or disclosure of information deemed non-sensitive by the information subject.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PersLDS</TD>
+<TD class=table>Personal policy personal policy on collection, access, use, or disclosure of information in a limited data set by the information subject.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PersPI</TD>
+<TD class=table>Personal policy on collection, access, use, or disclosure of information deemed public by the information subject.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GRANTORCHOICE</TD>
+<TD class=table>A grantor's terms of agreement to which a grantee may assent or dissent, and which may include an opportunity for a grantee to request restrictions or extensions.
+
+Comment: A grantor typically is able to stipulate preferred terms of agreement when the grantor has control over the topic of the agreement, which a grantee must accept in full or may be offered an opportunity to extend or restrict certain terms.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>IMPLIED </TD>
+<TD class=table>A grantor's presumed assent to the grantee's terms of agreement is based on the grantor's behavior, which may result from not expressly assenting to the consent directive offered, or from having no right to assent or dissent offered by the grantee.
+
+Comment: Implied or ""implicit"" consent occurs when the behavior of the grantor is understood by a reasonable person to signal agreement to the grantee's terms.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>IMPLIEDD</TD>
+<TD class=table>A grantor's presumed assent to the grantee's terms of agreement, which is based on the grantor's behavior, and includes a right to dissent to certain terms.
+
+Comment: A grantor assenting to the grantee's terms of agreement may or may not exercise a right to dissent to grantor selected terms or to grantee's selected terms to which a grantor may dissent.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NOCONSENT</TD>
+<TD class=table>No notification or opportunity is provided for a grantor to assent or dissent to a grantee's terms of agreement.
+
+Comment: A "No Consent" policy scheme provides no opportunity for accommodation of an individual's preferences, and may not comply with Fair Information Practice Principles [FIPP] by enabling the data subject to object, access collected information, correct errors, or have accounting of disclosures.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OPTIN </TD>
+<TD class=table>A grantor's assent to the terms of an agreement offered by a grantee without an opportunity for to dissent to any terms.
+
+Comment: Acceptance of a grantee's terms pertaining, for example, to permissible activities, purposes of use, handling caveats, expiry date, and revocation policies.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OPTINR</TD>
+<TD class=table>A grantor's assent to the grantee's terms of an agreement with an opportunity for to dissent to certain grantor or grantee selected terms.
+
+Comment: A grantor dissenting to the grantee's terms of agreement may or may not exercise a right to assent to grantor's pre-approved restrictions or to grantee's selected terms to which a grantor may dissent.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OPTOUT</TD>
+<TD class=table>A grantor's dissent to the terms of agreement offered by a grantee without an opportunity for to assent to any terms.
+
+Comment: Rejection of a grantee's terms of agreement pertaining, for example, to permissible activities, purposes of use, handling caveats, expiry date, and revocation policies.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OPTOUTE</TD>
+<TD class=table>A grantor's dissent to the grantee's terms of agreement except for certain grantor or grantee selected terms.
+
+Comment: A rejection of a grantee's terms of agreement while assenting to certain permissions sought by the grantee or requesting approval of additional grantor terms.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EMRGONLY</TD>
+<TD class=table>Privacy consent directive restricting or prohibiting access, use, or disclosure of personal information, including de-identified information, and personal effects, such as biometrics, biospecimen or genetic material, which may be used to identify an individual in a registry or repository for all purposes except for emergency treatment generally, which may include treatment during a disaster, a threat, in an emergency department and for break the glass purposes of use as specified by applicable domain policy.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NOPP</TD>
+<TD class=table>An implied privacy consent directive or notification, which the data subject may or may not acknowledge.  The notification specifies permitted actions, which may include access, use, or disclosure of any and all personal information.   The notification specifies the scope of personal information, which may include de-identified information, and personal effects, such as biometrics, biospecimen or genetic material, that may be used to identify an individual in a registry or repository. The notification specifies the purposes for which personal information may be used such as treatment, payment, operations, research, information exchange, public health, disaster, quality and safety reporting; as required by law including court order, law enforcement, national security, military authorities; and for data analytics, marketing, and profiling.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OOC</TD>
+<TD class=table>An expressed privacy consent directive restricting or prohibiting collection of personal information, including de-identified information, and personal effects, such as biometrics, biospecimen or genetic material, which may be used to identify an individual in a registry or repository for purposes such as treatment, payment, operations, research, information exchange, public health, data analytics, marketing, and profiling.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OOS</TD>
+<TD class=table>An expressed privacy consent directive restricting or prohibiting access, use, or disclosure of personal information, including de-identified information, and personal effects, such as biometrics, biospecimen or genetic material, which may be used to identify an individual in a registry or repository for purposes such as treatment, payment, operations, research, information exchange, public health, data analytics, marketing, and profiling</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>OIC</TD>
+<TD class=table>An expressed privacy consent directive permitting the collection of a some or all personal information, including de-identified information, and personal effects, such as biometrics, biospecimen or genetic material, which may be used to identify an individual in a registry or repository for purposes such as treatment, payment, operations, research, information exchange, public health, data analytics, marketing, and profiling.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OIS</TD>
+<TD class=table>An expressed privacy consent directive permitting access, use, or disclosure of a some or all personal information, including de-identified information, and personal effects, such as biometrics, biospecimen or genetic material, which may be used to identify an individual in a registry or repository for purposes such as treatment, payment, operations, research, information exchange, public health, data analytics, marketing, and profiling</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>42CFRPart2CD</TD>
+<TD class=table>A code representing consent directive that complies with Section 2.31 Consent requirements https://www.gpo.gov/fdsys/pkg/CFR-2017-title42-vol1/pdf/CFR-2017-title42-vol1-sec2-31.pdf, which is a US Federal law stipulating the policy elements content of a written consent to a disclosure under the regulations in Part 2. 
+42 CFR Part 2.31 (a)Required elements for written consent. A written consent to a disclosure under the regulations in this part may be paper or electronic and must include: 
+(1) The name of the patient. 
+(2) The specific name(s) or general designation(s) of the part 2 program(s), entity(ies), or individual(s) permitted to make the disclosure. 
+(3) How much and what kind of information is to be disclosed, including an explicit description of the substance use disorder information that may be disclosed. 
+(4) (i) The name(s) of the individual(s) to whom a disclosure is to be made; or 
+(ii)Entities with a treating provider relationship with the patient. If the recipient entity has a treating provider relationship with the patient whose information is being disclosed, such as a hospital, a health care clinic, or a private practice, the name of that entity; or 
+(iii)Entities without a treating provider relationship with the patient. 
+(A) If the recipient entity does not have a treating provider relationship with the patient whose information is being disclosed and is a third-party payer, the name of the entity; or 
+(B) If the recipient entity does not have a treating provider relationship with the patient whose information is being disclosed and is not covered by paragraph (a)(4)(iii)(A) of this section, such as an entity that facilitates the exchange of health information or a research institution, the name(s) of the entity(-ies); and 
+(1) The name(s) of an individual participant(s); or 
+(2) The name(s) of an entity participant(s) that has a treating provider relationship with the patient whose information is being disclosed; or 
+(3) A general designation of an individual or entity participant(s) or class of participants that must be limited to a participant(s) who has a treating provider relationship with the patient whose information is being disclosed. 
+(i) When using a general designation, a statement must be included on the consent form that the patient (or other individual authorized to sign in lieu of the patient), confirms their understanding that, upon their request and consistent with this part, they must be provided a list of entities to which their information has been disclosed pursuant to the general designation (see Section 2.13(d)). 
+(ii) [Reserved] 
+(5) The purpose of the disclosure. In accordance with Section 2.13(a), the disclosure must be limited to that information which is necessary to carry out the stated purpose. 
+(6) A statement that the consent is subject to revocation at any time except to the extent that the part 2 program or other lawful holder of patient identifying information that is permitted to make the disclosure has already acted in reliance on it. Acting in reliance includes the provision of treatment services in reliance on a valid consent to disclose information to a third-party payer 
+(7) The date, event, or condition upon which the consent will expire if not revoked before. This date, event, or condition must ensure that the consent will last no longer than reasonably necessary to serve the purpose for which it is provided. 
+(8) The signature of the patient and, when required for a patient who is a minor, the signature of an individual authorized to give consent under Section 2.14; or, when required for a patient who is incompetent or deceased, the signature of an individual authorized to sign under Section 2.15. Electronic signatures are permitted to the extent that they are not prohibited by any applicable law. 
+(9) The date on which the consent is signed.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HIPAAAuthCD</TD>
+<TD class=table>A code representing an individual’s consent directive that complies with HIPAA Privacy rule 45 CFR Section 164.508 Uses and disclosures for which an authorization is required https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-508.pdf, which is a US Federal law stipulating the policy elements of a valid authorization under this Section.
+
+An “authorization” is required by the Privacy Rule for uses and disclosures of protected health information not otherwise allowed by the Rule. Where the Privacy Rule requires patient authorization, voluntary consent is not sufficient to permit a use or disclosure of protected health information unless it also satisfies the requirements of a valid authorization. An authorization is a detailed document that gives covered entities permission to use protected health information for specified purposes, which are generally other than treatment, payment, or health care operations, or to disclose protected health information to a third party specified by the individual.
+
+An authorization must specify a number of elements, including a description of the protected health information to be used and disclosed, the person authorized to make the use or disclosure, the person to whom the covered entity may make the disclosure, an expiration date, and, in some cases, the purpose for which the information may be used or disclosed. With limited exceptions, covered entities may not condition treatment or coverage on the individual providing an authorization. https://www.hhs.gov/hipaa/for-professionals/faq/264/what-is-the-difference-between-consent-and-authorization/index.html
+A HIPAA Authorization must comply with 45 CFR Section164.508(c) Implementation specifications: Core elements and requirements – 
+(1) Core elements. A valid authorization under this Section must contain at least the following elements: (i) A description of the information to be used or disclosed that identifies the information in a specific and meaningful fashion. 
+(ii) The name or other specific identification of the person(s), or class of persons, authorized to make the requested use or disclosure. 
+(iii) The name or other specific identification of the person(s), or class of persons, to whom the covered entity may make the requested use or disclosure. 
+(iv) A description of each purpose of the requested use or disclosure. The statement “at the request of the individual” is a sufficient description of the purpose when an individual initiates the authorization and does not, or elects not to, provide a statement of the purpose. 
+(v) An expiration date or an expiration event that relates to the individual or the purpose of the use or disclosure. The statement “end of the research study,” “none,” or similar language is sufficient if the authorization is for a use or disclosure of protected health information for research, including for the creation and maintenance of a research database or research repository. 
+(vi) Signature of the individual and date. If the authorization is signed by a personal representative of the individual, a description of such representative's authority to act for the individual must also be provided. 
+(2)Required statements. In addition to the core elements, the authorization must contain statements adequate to place the individual on notice of all of the following: 
+(i) The individual's right to revoke the authorization in writing, and either: 
+(A) The exceptions to the right to revoke and a description of how the individual may revoke the authorization; or (B) To the extent that the information in paragraph (c)(2)(i)(A) of this section is included in the notice required by Section 164.520, a reference to the covered entity's notice.
+https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-508.pdf</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HIPAAConsentCD</TD>
+<TD class=table>A code representing U.S. Public Law 104-191 Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule 45 CFR Section 164.522 Rights to request privacy protection for protected health information https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-522.pdf, which stipulates the process by which a covered entity seeks agreement from an individual regarding how it will use and disclose the individual's protected health information for treatment, payment, and health care operations is termed a "consent.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HIPAAROACD</TD>
+<TD class=table>A code representing U.S. Public Law 104-191 Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule 45 CFR Section 164.524 Access of individuals to protected health information https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-524.pdf, stipulating the policy elements of an individual’s written and signed right of access directive requesting that a covered entity send the individual’s protected health information (PHI) to a third party. 
+
+See 45 CFR 164.524(c)(3)(ii) If an individual's request for access directs the covered entity to transmit the copy of protected health information directly to another person designated by the individual, the covered entity must provide the copy to the person designated by the individual. The individual's request must be in writing, signed by the individual, and clearly identify the designated person and where to send the copy of protected health information.  https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-524.pdf 
+
+This right applies to PHI in a designated record set, which is defined as “Designated record set means: 
+(1) A group of records maintained by or for a covered entity that is: 
+(i) The medical records and billing records about individuals maintained by or for a covered health care provider; 
+(ii) The enrollment, payment, claims adjudication, and case or medical management record systems maintained by or for a health plan; or 
+(iii) Used, in whole or in part, by or for the covered entity to make decisions about individuals. [https://www.law.cornell.edu/cfr/text/45/164.501].
+Also see HHS Individuals’ Right under HIPAA to Access their Health Information 45 CFR Section 164.524 [https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access/index.html#maximumflatfee].</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HIPAAResearchAuthCD </TD>
+<TD class=table>A code representing an individual’s consent directive that complies with HIPAA Privacy rule 45 CFR Section 164.508 Uses and disclosures for which an authorization is required https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-508.pdf, which is a US Federal law stipulating the policy elements of a valid authorization under this Section specific to disclosures for purposes of research.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CompoundResearchCD</TD>
+<TD class=table>A code representing an individual’s consent directive that complies with HIPAA Privacy rule 45 CFR Section 164.508 Uses and disclosures for which an authorization is required https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-508.pdf, which is a US Federal law stipulating the policy elements of a valid authorization under this Section specific to disclosures for purposes of research when combined with a Common Rule or Federal Drug Administration consent to participate in research also known as a compound authorization.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MDHHS-5515</TD>
+<TD class=table>Michigan’s standard consent form for the sharing of health information specific to behavioral health and substance use treatment in accordance with Public Act 129 of 2014. In Michigan, while providers are not required to use this new standard form (MDHHS-5515), they are required to accept it.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GDPRCD</TD>
+<TD class=table>A consent directive compliant with the European Union General Data Protection Regulation (GDPR) definition: Consent of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her.
+
+Where processing is based on consent, the controller shall be able to demonstrate that the data subject has consented to processing of his or her personal data.
+
+If the data subject’s consent is given in the context of a written declaration which also concerns other matters, the request for consent shall be presented in a manner which is clearly distinguishable from the other matters, in an intelligible and easily accessible form, using clear and plain language.  Any part of such a declaration which constitutes an infringement of this Regulation shall not be binding.
+
+The data subject shall have the right to withdraw his or her consent at any time. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal.  Prior to giving consent, the data subject shall be informed thereof. It shall be as easy to withdraw as to give consent.
+
+When assessing whether consent is freely given, utmost account shall be taken of whether, inter alia, the performance of a contract, including the provision of a service, is conditional on consent to the processing of personal data that is not necessary for the performance of that contract.
+
+Consent should be given by a clear affirmative act establishing a freely given, specific, informed and unambiguous indication of the data subject’s agreement to the processing of personal data relating to him or her, such as by a written statement, including by electronic means, or an oral statement. 
+
+This could include ticking a box when visiting an internet website, choosing technical settings for information society services or another statement or conduct which clearly indicates in this context the data subject’s acceptance of the proposed processing of his or her personal data. 
+
+Silence, pre-ticked boxes or inactivity should not therefore constitute consent. 
+
+Consent should cover all processing activities carried out for the same purpose or purposes. 
+
+When the processing has multiple purposes, consent should be given for all of them. 
+
+If the data subject’s consent is to be given following a request by electronic means, the request must be clear, concise and not unnecessarily disruptive to the use of the service for which it is provided.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GDPRResearchCD</TD>
+<TD class=table>A consent directive that complies with regulatory requirements for a consent directive compliant with the European Union General Data Protection Regulation (GDPR) definition: Consent of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her.
+
+GDPR research consent directive has the additional caveat that it is often not possible to fully identify the purpose of personal data processing for scientific research purposes at the time of data collection. Therefore, data subjects should be allowed to give their consent to certain areas of scientific research when in keeping with recognized ethical standards for scientific research. Data subjects should have the opportunity to give their consent only to certain areas of research or parts of research projects to the extent allowed by the intended purpose.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>42CFRPart2</TD>
+<TD class=table>A code representing 42 CFR Part 2 Confidentiality of Substance Use Disorder Patient Records. 42 CFR Part 2 stipulates the privacy rights of an individual who has applied for or been given diagnosis or treatment for alcohol or drug abuse at a federally assisted program, which includes non-disclosure of health information relating to health care paid for by a federally assisted substance use disorder program without patient consent.  https://www.gpo.gov/fdsys/pkg/CFR-2010-title42-vol1/pdf/CFR-2010-title42-vol1-part2.pdf</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>COMMONRULE</TD>
+<TD class=table>A code representing U.S. Federal laws governing research-related privacy policies known as the “Common Rule”. The Common Rule is the U.S. Federal regulations governing the protection of human subjects in research (codified at Subpart A of 45 CFR part 46), which has been adopted by 15 U.S. Federal departments and agencies in an effort to promote uniformity, understanding, and compliance with human subject protections. Existing regulations governing the protection of human subjects in Food and Drug Administration (FDA)-regulated research (21 CFR parts 50, 56, 312, and 812) are separate from the Common Rule but include similar requirements.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HIPAANOPP </TD>
+<TD class=table>A code representing U.S. Public Law 104-191 Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule (45 CFR Section 164.520), which stipulates an individual’s right to adequate notice of the uses and disclosures of protected health information that may be made by the covered entity, and of the individual's rights and the covered entity's legal duties with respect to protected health information. Relevant HIPAA Privacy  Rule provisions are at  Section 164.520 (a) Standard: Notice of privacy practices. https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-520.pdf</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HIPAAPsyNotes</TD>
+<TD class=table>A code representing U.S. Public Law 104-191 Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule (45 CFR Section 164.508), which stipulates the privacy rights of an individual who is the subject of psychotherapy notes, and requires authorization for certain uses and disclosure of that information.
+
+Definition of Psychotherapy notes 45 CFR  Section 164.501 https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-501.pdf: Psychotherapy notes means notes recorded (in any medium) by a health care provider who is a mental health professional documenting or analyzing the contents of conversation during a private counseling session or a group, joint, or family counseling session and that are separated from the rest of the individual's medical record. Psychotherapy notes excludes medication prescription and monitoring, counseling session start and stop times, the modalities and frequencies of treatment furnished, results of clinical tests, and any summary of the following items: Diagnosis, functional status, the treatment plan, symptoms, prognosis, and progress to date. 
+
+See Section 164.508 Uses and disclosures for which an authorization is required. (2)Authorization required: Psychotherapy notes https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-508.pdf: Notwithstanding any provision of this subpart, other than the transition provisions in  Section 164.532, a covered entity must obtain an authorization for any use or disclosure of psychotherapy notes, except: 
+(i) To carry out the following treatment, payment, or health care operations: 
+(A) Use by the originator of the psychotherapy notes for treatment; 
+(B) Use or disclosure by the covered entity for its own training programs in which students, trainees, or practitioners in mental health learn under supervision to practice or improve their skills in group, joint, family, or individual counseling; or 
+(C) Use or disclosure by the covered entity to defend itself in a legal action or other proceeding brought by the individual; and 
+(ii) A use or disclosure that is required by Section 164.502(a)(2)(ii) or permitted by Section 164.512(a); Section 164.512(d) with respect to the oversight of the originator of the psychotherapy notes;  Section 164.512(g)(1);  Section 164.512(j)(1)(i).</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HIPAASelfPay</TD>
+<TD class=table>A code representing 45 CFR 164.522 Rights to request privacy protection for protected health information, which is a US Federal law stipulating the privacy rights of an individual to restrict disclosure of information related to health care items or services for which the individual pays out of pocket in full to a health plan or payer.
+
+See 45 CFR 164.522 https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-522.pdf. (vi) A covered entity must agree to the request of an individual to restrict disclosure of protected health information about the individual to a health plan if: 
+(A) The disclosure is for the purpose of carrying out payment or health care operations and is not otherwise required by law; and 
+(B) The protected health information pertains solely to a health care item or service for which the individual, or person other than the health plan on behalf of the individual, has paid the covered entity in full.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>Title38Section7332</TD>
+<TD class=table>A code representing Title 38 Section 7332, which is a US Federal law stipulating the privacy rights of veterans diagnosed and treated for substance use disorders, infection with the human immunodeficiency virus, or sickle cell anemia.
+Title 38 Section 7332 - Confidentiality of certain medical records
+https://www.gpo.gov/fdsys/granule/USCODE-2011-title38/USCODE-2011-title38-partV-chap73-subchapIII-sec7332/content-detail.html  
+(1) Records of the identity, diagnosis, prognosis, or treatment of any patient or subject which are maintained in connection with the performance of any program or activity (including education, training, treatment, rehabilitation, or research) relating to drug abuse, alcoholism or alcohol abuse, infection with the human immunodeficiency virus, or sickle cell anemia which is carried out by or for the Department under this title shall, except as provided in subsections (e) and (f), be confidential, and (section 5701 of this title to the contrary notwithstanding) such records may be disclosed only for the purposes and under the circumstances expressly authorized under subsection (b).
+(2) Paragraph (1) prohibits the disclosure to any person or entity other than the patient or subject concerned of the fact that a special written consent is required in order for such records to be disclosed.
+(b) (1) The content of any record referred to in subsection (a) may be disclosed by the Secretary in accordance with the prior written consent of the patient or subject with respect to whom such record is maintained, but only to such extent, under such circumstances, and for such purposes as may be allowed in regulations prescribed by the Secretary.
+(2) Whether or not any patient or subject, with respect to whom any given record referred to in subsection (a) is maintained, gives written consent, the content of such record may be disclosed by the Secretary as follows: 
+(A) To medical personnel to the extent necessary to meet a bona fide medical emergency.
+(B) To qualified personnel for the purpose of conducting scientific research, management audits, financial audits, or program evaluation, but such personnel may not identify, directly or indirectly, any individual patient or subject in any report of such research, audit, or evaluation, or otherwise disclose patient or subject identities in any manner.
+(C) (i) In the case of any record which is maintained in connection with the performance of any program or activity relating to infection with the human immunodeficiency virus, to a Federal, State, or local public-health authority charged under Federal or State law with the protection of the public health, and to which Federal or State law requires disclosure of such record, if a qualified representative of such authority has made a written request that such record be provided as required pursuant to such law for a purpose authorized by such law.
+(ii) A person to whom a record is disclosed under this paragraph may not redisclose or use such record for a purpose other than that for which the disclosure was made.
+(D) If authorized by an appropriate order of a court of competent jurisdiction granted after application showing good cause therefor. In assessing good cause the court shall weigh the public interest and the need for disclosure against the injury to the patient or subject, to the physician-patient relationship, and to the treatment services. Upon the granting of such order, the court, in determining the extent to which any disclosure of all or any part of any record is necessary, shall impose appropriate safeguards against unauthorized disclosure.
+(E) To an entity described in paragraph (1)(B) of section 5701(k) of this title, but only to the extent authorized by such section.
+(F) (i) To a representative of a patient who lacks decision-making capacity, when a practitioner deems the content of the given record necessary for that representative to make an informed decision regarding the patient’s treatment.
+(ii) In this subparagraph, the term “representative” means an individual, organization, or other body authorized under section 7331 of this title and its implementing regulations to give informed consent on behalf of a patient who lacks decision-making capacity.
+(G) To a State controlled substance monitoring program, including a program approved by the Secretary of Health and Human Services under section 399O of the Public Health Service Act (42 U.S.C. 280g–3), to the extent necessary to prevent misuse and diversion of prescription medicines.
+(H) (i) To a non-Department entity (including private entities and other Federal agencies) for purposes of providing health care, including hospital care, medical services, and extended care services, to Veterans or performing other health care-related activities or functions. 
+(ii) An entity to which a record is disclosed under this subparagraph may not disclose or use such record for a purpose other than that for which the disclosure was made or as permitted by law.
+(I) To a third party in order to recover or collect reasonable charges for care furnished to, or paid on behalf of, a Veteran in connection with a non-service connected disability as permitted by section 1729 of this title or for a condition for which recovery is authorized or with respect to which the United States is deemed to be a third party beneficiary under the Act entitled ‘An Act to provide for the recovery from tortiously liable third persons of the cost of hospital and medical care and treatment furnished by the United States’ (Public Law 87–693; 42 U.S.C. 2651 et seq.; commonly known as the ‘Federal Medical Care Recovery Act’).</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HIPAAConsent</TD>
+<TD class=table>A code representing U.S. Public Law 104-191 Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule (45 CFR Section 164.522), which stipulates the process by which a covered entity seeks agreement from an individual regarding how it will use and disclose the individual's protected health information for treatment, payment, and health care operations is termed a "consent."  The Privacy Rule permits, but does not require, a covered entity to voluntarily obtain patient consent for uses and disclosures of protected health information for treatment, payment, and health care operations. Covered entities that do so have complete discretion to design a process that best suits their needs. From https://www.hhs.gov/hipaa/for-professionals/faq/264/what-is-the-difference-between-consent-and-authorization/index.html. The provisions relating to consent are largely contained in  Section 164.522 Rights to request privacy protection for protected health information https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-522.pdf</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HIPAAAuth</TD>
+<TD class=table>A code representing U.S. Public Law 104-191 Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule (45 CFR Section 164.508) Uses and disclosures for which an authorization is required https://www.gpo.gov/fdsys/pkg/CFR-2017-title45-vol1/pdf/CFR-2017-title45-vol1-sec164-508.pdf, which stipulates the process by which a covered entity seeks agreement from an individual to use or disclose protected health information for other purposes, or to authorize another covered entity to disclose protected health information to the requesting covered entity, are termed ""authorizations"".
+
+An “authorization” is required by the Privacy Rule for uses and disclosures of protected health information not otherwise allowed by the Rule. Where the Privacy Rule requires patient authorization, voluntary consent is not sufficient to permit a use or disclosure of protected health information unless it also satisfies the requirements of a valid authorization. An authorization is a detailed document that gives covered entities permission to use protected health information for specified purposes, which are generally other than treatment, payment, or health care operations, or to disclose protected health information to a third party specified by the individual.
+
+An authorization must specify a number of elements, including a description of the protected health information to be used and disclosed, the person authorized to make the use or disclosure, the person to whom the covered entity may make the disclosure, an expiration date, and, in some cases, the purpose for which the information may be used or disclosed. With limited exceptions, covered entities may not condition treatment or coverage on the individual providing an authorization. https://www.hhs.gov/hipaa/for-professionals/faq/264/what-is-the-difference-between-consent-and-authorization/index.html</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HIPAAROA</TD>
+<TD class=table>A code representing U.S. Public Law 104-191 Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule 45 CFR Section 164.524 Access of individuals to protected health information https://www.govinfo.gov/app/details/CFR-2017-title45-vol1/CFR-2017-title45-vol1-sec164-524, which stipulates that an individual has a right of access to inspect and obtain a copy of protected health information about the individual in a designated record set, for as long as the protected health information is maintained in the designated record set with exceptions stipulated in HIPAA Privacy Rule Section 164.524. Exceptions include psychotherapy notes and information compiled in reasonable anticipation of, or for use in, a civil, criminal, or administrative action or proceeding.
+
+If an individual's request for access directs the covered entity to transmit the copy of protected health information directly to another person designated by the individual, the covered entity must provide the copy to the person designated by the individual. The individual's request must be in writing, signed by the individual, and clearly identify the designated person and where to send the copy of protected health information.
+
+For discussion on extent of right, grounds for denial, and documentation requirements see: HHS Individuals’ Right under HIPAA to Access their Health Information 45 CFR Section 164.524 https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access/index.html and HHS FAQ on Right of Access vs. HIPAA Authorization https://www.hhs.gov/hipaa/for-professionals/faq/2041/why-depend-on-the-individuals-right/index.html</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GDPRCONSENT</TD>
+<TD class=table>Processing of personal data, inclusive of the special categories of data, is lawful only if the data subject has given explicit consent to the processing of his or her personal data, inclusive of the special categories of data, for one or more specific purposes, except where Union or Member State law provide that the prohibition to use the data may not be lifted by the data subject; and for personal data which are manifestly made public by the data subject.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GDPRCONTRACT</TD>
+<TD class=table>Processing of personal data, inclusive of the special categories of data, is lawful only if necessary for the performance of a contract to which the data subject is party or in order to take steps at the request of the data subject prior to entering into a contract.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GDPRHLTHSOCSY</TD>
+<TD class=table>Processing of special categories of data is lawful if necessary for archiving purposes the management of health or social care systems and services on the basis of Union or Member State law or pursuant to contract with a health professional.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GDPRLEGALCLAIM</TD>
+<TD class=table>Processing of special categories of data is lawful if necessary for the establishment, exercise or defense of legal claims or whenever courts are acting in their judicial capacity.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GDPRLEGALOBL</TD>
+<TD class=table>Processing of personal data, inclusive of the special categories of data, is lawful if necessary for compliance with a legal obligation to which the controller is subject. 
+
+This includes the processing of the special categories of data that are necessary for the purposes of carrying out the obligations and exercising specific rights of the controller or of the data subject in the field of employment and social security and social protection law in so far as it is authorised by Union or Member State law or a collective agreement pursuant to Member State law providing for appropriate safeguards for the fundamental rights and the interests of the data subject.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GDPRLEGITINTEREST</TD>
+<TD class=table>Processing of personal data, inclusive of the special categories of data, is lawful if necessary for the purposes of the legitimate interests pursued by the controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data, in particular where the data subject is a child. 
+
+This includes the processing of the special categories of data that are carried out in the course of its legitimate activities with appropriate safeguards by a foundation, association or any other not-for-profit body with a political, philosophical, religious or trade union aim and on condition that the processing relates solely to the members or to former members of the body or to persons who have regular contact with it in connection with its purposes and that the personal data are not disclosed outside that body without the consent of the data subjects.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GDPRPUBLICHEALTH</TD>
+<TD class=table>Processing of special categories of data is lawful if necessary for reasons of public interest in the area of public health, such as protecting against serious cross-border threats to health or ensuring high standards of quality and safety of health care and of medicinal products or medical devices, on the basis of Union or Member State law which provides for suitable and specific measures to safeguard the rights and freedoms of the data subject, in particular professional secrecy.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GDPRPUBLICINTEREST </TD>
+<TD class=table>Processing of personal data, inclusive of the special categories of data, is lawful if necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller. This includes the processing of the special categories of data that are necessary for reasons of substantial public interest, on the basis of Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GDPRRESEARCH </TD>
+<TD class=table>Processing of special categories of data is lawful if necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GDPRVITALINTEREST</TD>
+<TD class=table>Processing of personal data, inclusive of the special categories of data, is lawful if necessary to protect the vital interests of the data subject or of another natural person where the data subject is physically or legally incapable of giving consent. This includes the processing of the special categories of data that are necessary for the purposes of preventive or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care systems and services on the basis of Union or Member State law or pursuant to contract with a health professional and subject to the conditions and safeguards when those data are processed by or under the responsibility of a professional subject to the obligation of professional secrecy under Union or Member State law or rules established by national competent bodies or by another person also subject to an obligation of secrecy under Union or Member State law or rules established by national competent bodies.</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+</TR>
+</TABLE>
+<H3>Comments made by the German HL7 User Group:</H3>
+<dd>Umfang der Zugruffsbeschr&auml;nkung</DD>
+<P>
+<H3>Used Within the following Data Elements</H3>
+<DD><A HREF = "hl7v29datel.htm#02145">02145</A> Access Restriction Value / Zugriffsbeschr&auml;nkung auf (<A HREF = "std29/ch03.html#Heading1312">3.4.14.3</A>)</DD>
+<P>
+<P>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

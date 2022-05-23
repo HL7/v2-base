@@ -1,0 +1,817 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.1</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std21/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.1
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21segmIN1.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.1</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v21segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v21typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment IN1:
+INSURANCE
+(Versicherungsinformationen)
+</H2>
+<TABLE class=segm>
+<TR class=segm-even>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>SET ID - INSURANCE</TD>
+<TD class=segm>IN1-Segmentnummer</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00234">00234</A></TD>
+<TD class=segm><A HREF = "hl7v21typSI.htm#SI">SI</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>INSURANCE PLAN ID</TD>
+<TD class=segm>Kosten&uuml;bernahmeplan</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0072.htm">0072</A></TD>
+<TD class=segm>R</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00378">00378</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>INSURANCE COMPANY ID</TD>
+<TD class=segm>Institutionskennzeichen / Nummer des Kostentr&auml;gers</TD>
+<TD class=segm>..6</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00235">00235</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>INSURANCE COMPANY NAME</TD>
+<TD class=segm>Bezeichnung des Kostentr&auml;gers</TD>
+<TD class=segm>..45</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00236">00236</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm>INSURANCE COMPANY ADDRESS</TD>
+<TD class=segm>Anschrift des Kostentr&auml;gers</TD>
+<TD class=segm>..106</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00237">00237</A></TD>
+<TD class=segm><A HREF = "hl7v21typAD.htm#AD">AD</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm>INSURANCE CO. CONTACT PERS</TD>
+<TD class=segm>Ansprechpartner beim Kostentr&auml;ger</TD>
+<TD class=segm>..48</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00242">00242</A></TD>
+<TD class=segm><A HREF = "hl7v21typPN.htm#PN">PN</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm>INSURANCE CO PHONE NUMBER</TD>
+<TD class=segm>Telefonnummer des Kostentr&auml;gers</TD>
+<TD class=segm>..40</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00243">00243</A></TD>
+<TD class=segm><A HREF = "hl7v21typTN.htm#TN">TN</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm>GROUP NUMBER</TD>
+<TD class=segm>Krankenkassentypnummer</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00248">00248</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm>GROUP NAME</TD>
+<TD class=segm>Krankenkassentyp (Ersatzkasse, AOK, BKK, etc.)</TD>
+<TD class=segm>..35</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00249">00249</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm>INSURED'S GROUP EMP. ID</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00250">00250</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>11</TD>
+<TD class=segm>INSURED'S GROUP EMP. NAME</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..45</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00251">00251</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>12</TD>
+<TD class=segm>PLAN EFFECTIVE DATE</TD>
+<TD class=segm>Kosten&uuml;bernahme ab</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00252">00252</A></TD>
+<TD class=segm><A HREF = "hl7v21typDT.htm#DT">DT</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>13</TD>
+<TD class=segm>PLAN EXPIRATION DATE</TD>
+<TD class=segm>Kosten&uuml;bernahme bis</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00253">00253</A></TD>
+<TD class=segm><A HREF = "hl7v21typDT.htm#DT">DT</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>14</TD>
+<TD class=segm>AUTHORIZATION INFORMATION</TD>
+<TD class=segm>Aktenzeichen der Kosten&uuml;bernahme</TD>
+<TD class=segm>..55</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00254">00254</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>15</TD>
+<TD class=segm>PLAN TYPE</TD>
+<TD class=segm>nciht verwendet</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0086.htm">0086</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00260">00260</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>16</TD>
+<TD class=segm>NAME OF INSURED</TD>
+<TD class=segm>Name des Versicherungsnehmers</TD>
+<TD class=segm>..48</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00261">00261</A></TD>
+<TD class=segm><A HREF = "hl7v21typPN.htm#PN">PN</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>17</TD>
+<TD class=segm>INSURED'S RELATIONSHIP TO PATIENT</TD>
+<TD class=segm>Beziehung des Versicherungsnehmers zum Patienten</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0063.htm">0063</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00262">00262</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>18</TD>
+<TD class=segm>INSURED'S DATE OF BIRTH</TD>
+<TD class=segm>Geburtsdatum des Versicherugnsnehmers</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00708">00708</A></TD>
+<TD class=segm><A HREF = "hl7v21typDT.htm#DT">DT</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>19</TD>
+<TD class=segm>INSURED'S ADDRESS</TD>
+<TD class=segm>Anschrift des Versicherungsnehmers</TD>
+<TD class=segm>..106</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00709">00709</A></TD>
+<TD class=segm><A HREF = "hl7v21typAD.htm#AD">AD</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>20</TD>
+<TD class=segm>ASSIGNMENT OF BENEFITS</TD>
+<TD class=segm>Kennung, ob Rechnung an Krankenkasse</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00263">00263</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>21</TD>
+<TD class=segm>COORDINATION OF BENEFITS</TD>
+<TD class=segm>Koordination mit anderen Vers.verh&auml;ltnissen</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00264">00264</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>22</TD>
+<TD class=segm>COORD OF BEN. PRIORITY</TD>
+<TD class=segm>Rang dieses Versicherungsverh&auml;ltnisses</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00265">00265</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>23</TD>
+<TD class=segm>NOTICE OF ADMISSION CODE</TD>
+<TD class=segm>Kennung, ob Aufnahmeanzeige an Krankenkasse</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0081.htm">0081</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00266">00266</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>24</TD>
+<TD class=segm>NOTICE OF ADMISSION DATE</TD>
+<TD class=segm>Datum ,wann Aufnahmeanzeige verschickt</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00267">00267</A></TD>
+<TD class=segm><A HREF = "hl7v21typDT.htm#DT">DT</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>25</TD>
+<TD class=segm>RPT OF ELIGIBILITY CODE</TD>
+<TD class=segm>Kennung, ob schriftl. Kosten&uuml;bernahmeerkl&auml;rung erforderlich</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0094.htm">0094</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00268">00268</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>26</TD>
+<TD class=segm>RPT OF ELIGIBILITY DATE</TD>
+<TD class=segm>Datum der schriftl. Kosten&uuml;bernahmeerkl&auml;rung</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00269">00269</A></TD>
+<TD class=segm><A HREF = "hl7v21typDT.htm#DT">DT</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>27</TD>
+<TD class=segm>RELEASE INFORMATION CODE</TD>
+<TD class=segm>evtl. f&uuml;r Datenschutzkennzeichen anwendbar</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0093.htm">0093</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00270">00270</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>28</TD>
+<TD class=segm>PRE-ADMIT CERT. (PAC)</TD>
+<TD class=segm>Aktenzeichen Zustimmung zur Aufnahme des Patienten</TD>
+<TD class=segm>..15</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00271">00271</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>29</TD>
+<TD class=segm>VERIFICATION DATE</TD>
+<TD class=segm>Datum der Kostensicherungspr&uuml;fung</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00272">00272</A></TD>
+<TD class=segm><A HREF = "hl7v21typDT.htm#DT">DT</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>30</TD>
+<TD class=segm>VERIFICATION BY</TD>
+<TD class=segm>&uuml;berpr&uuml;ft durch (Mitarbeiter-ID)</TD>
+<TD class=segm>..60</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00273">00273</A></TD>
+<TD class=segm><A HREF = "hl7v21typCM.htm#CM">CM</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>31</TD>
+<TD class=segm>TYPE OF AGREEMENT CODE</TD>
+<TD class=segm>verwendet f&uuml;r Tarife etc.</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0098.htm">0098</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00277">00277</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>32</TD>
+<TD class=segm>BILLING STATUS</TD>
+<TD class=segm>Status der Rechnungsstellung</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0022.htm">0022</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00278">00278</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>33</TD>
+<TD class=segm>LIFETIME RESERVE DAYS</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00280">00280</A></TD>
+<TD class=segm><A HREF = "hl7v21typNM.htm#NM">NM</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>34</TD>
+<TD class=segm>DELAY BEFORE L. R. DAY</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00281">00281</A></TD>
+<TD class=segm><A HREF = "hl7v21typNM.htm#NM">NM</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>35</TD>
+<TD class=segm>COMPANY PLAN CODE</TD>
+<TD class=segm>nicht verwendet</TD>
+<TD class=segm>..8</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0042.htm">0042</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00282">00282</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>36</TD>
+<TD class=segm>POLICY NUMBER</TD>
+<TD class=segm>Versichertennummer/Vertragsnummer</TD>
+<TD class=segm>..15</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00283">00283</A></TD>
+<TD class=segm><A HREF = "hl7v21typST.htm#ST">ST</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>37</TD>
+<TD class=segm>POLICY DEDUCTIBLE</TD>
+<TD class=segm>Eigenanteil</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00284">00284</A></TD>
+<TD class=segm><A HREF = "hl7v21typNM.htm#NM">NM</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>38</TD>
+<TD class=segm>POLICY LIMIT - AMOUNT</TD>
+<TD class=segm>H&ouml;chstbetrag, d.er von der Krankenkasse getragen wird</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00285">00285</A></TD>
+<TD class=segm><A HREF = "hl7v21typNM.htm#NM">NM</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>39</TD>
+<TD class=segm>POLICY LIMIT - DAYS</TD>
+<TD class=segm>Aufenthalt, der von der Krankenkasse getragen wird</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00286">00286</A></TD>
+<TD class=segm><A HREF = "hl7v21typNM.htm#NM">NM</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>40</TD>
+<TD class=segm>ROOM RATE - SEMI-PRIVATE</TD>
+<TD class=segm>Betrag garantierte Regelleistung</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00287">00287</A></TD>
+<TD class=segm><A HREF = "hl7v21typNM.htm#NM">NM</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>41</TD>
+<TD class=segm>ROOM RATE - PRIVATE</TD>
+<TD class=segm>Betrag Wahlleistung</TD>
+<TD class=segm>..12</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00288">00288</A></TD>
+<TD class=segm><A HREF = "hl7v21typNM.htm#NM">NM</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>42</TD>
+<TD class=segm>INSURED'S EMPLOYMENT STATUS</TD>
+<TD class=segm>Arbeitsverh&auml;ltnis des Versicherungsnehmers</TD>
+<TD class=segm>..1</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0066.htm">0066</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00710">00710</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>43</TD>
+<TD class=segm>INSURED'S SEX</TD>
+<TD class=segm>Geschlecht des Versicherungsnehmers</TD>
+<TD class=segm>..1</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v21tab0001.htm">0001</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00711">00711</A></TD>
+<TD class=segm><A HREF = "hl7v21typID.htm#ID">ID</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>44</TD>
+<TD class=segm>INSURED'S EMPLOYER ADDRESS</TD>
+<TD class=segm>Anschrift des Arbeitgebers</TD>
+<TD class=segm>..106</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>N</TD>
+<TD class=segm><A HREF = "hl7v21datel.htm#00713">00713</A></TD>
+<TD class=segm><A HREF = "hl7v21typAD.htm#AD">AD</A></TD>
+<TD class=segm><BR></TD>
+</TR>
+</TABLE>
+<P>
+<H3>Used within the following Events:</H3>
+<dd><A HREF = "hl7v21eventP01.htm">P01</A> Add and Update Patient Accounts (<A HREF = "std21/kap6.html#Heading4">6.2.1</A>)</dd>
+<P>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

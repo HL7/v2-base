@@ -1,0 +1,162 @@
+<html>
+
+<head>
+<title>Corrections to HL7 v2.x</title>
+<link rel=stylesheet type="text/css" href="../formate.css">
+<meta NAME="description" CONTENT="Frank Oemig's corrections to his HL7 database.">
+<meta NAME="Author" CONTENT="Frank Oemig">
+<meta NAME="Keywords" CONTENT="HL7, HTML/HL7, Implementation, Database Access">
+</head>
+
+<body>
+
+
+<table width=100%>
+<tr>
+<td class="pn-main-title" align="center">
+<h1>
+HL7 - Version 2.x Final Standard(s)
+</h1>
+<h2>
+Suggested Corrections to the Standard Documents and the Database
+</h2>
+</td>
+</tr>
+
+<tr>
+<td class="deko">
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td width="100%" align="center" valign="middle" background="../images/hor_leiste.gif">
+&nbsp;
+</td>
+</tr>
+
+</table>
+
+
+<p>
+<big><big>W</big></big>hen checking the contents of the tables during the v2 code table project several issues were detected. The corrections in response are listed below:
+</p>
+
+<h1>Corrections</h1>
+
+
+<table border=1>
+<tr>
+<th>Item</th><th>Version</th><th>Issue</th><th>Resolution</th><th>Status</th>
+</tr>
+<tr>
+<td>tables: 0011, 0013, 0014, 0015, 0025, 0026, 0035, 0037, 0039, 0040, 0058, 0120</td><td>v2.1 and v2.2</td><td>these tables are not used somewhere in the standard</td><td>delete</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0009</td><td>v2.1</td><td>"A6" missing </td><td>added</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0012</td><td>v2.1</td><td>"AN" missing </td><td>added</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0016</td><td>v2.1</td><td>missing values</td><td>added</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0033</td><td>v2.3</td><td>is mentioned in DB1-2, but the field description refers to 0334 which is also the case in later versions</td><td>adjust to 0334 and delete 0033</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0041</td><td>v2.1, v2.2 </td><td>unused table </td><td>delete</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0043</td><td>v2.3.1, v2.4 </td><td>values 12..16 </td><td>expanded</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0047</td><td>v2.1 and v2.2</td><td>Table 0047 is mentioned in OBR-12 in v2.1, but is not defined elsewhere. The existence in v2.2 most probably comes from a transfer from v2.1 inside the database. In later versions table number 9999 is used as a placeholder for a table.</td><td>assign as table to OBR-12 in all versions</td><td>tbd</td>
+</tr>
+<tr>
+<td>table 0057</td><td>v2.1 and v2.2</td><td>Table 0047 is mentioned in RX1-14 in v2.1, but is not defined elsewhere. RX1 is only defined for v2.1 and has been replaced by several other segments. We cannot delete the table due to referential integrity.</td><td>delete from v2.2</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0266</td><td>v2.3 </td><td>table does not exist in the standard </td><td>delete</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0270</td><td>v2.3 </td><td>value "CC" is not defined in the standard </td><td>delete</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0271</td><td>v2.3 </td><td>values "PR" and "CA" are not defined in the standard </td><td>delete</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0274</td><td>v2.3 </td><td>defined in appendix with 2 values, but never used </td><td>delete</td><td>applied in db</td>
+</tr>
+<tr>
+<td>tables 0276, 0277, 0278, 0279</td><td>v2.8 + v2.8.1 </td><td>all values missing </td><td>add</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0287</td><td>all </td><td>value "UC" missing </td><td>added</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0290</td><td>v2.3, v2.3.1, v2.4 </td><td>defined with dataytpe ED, butnot really used </td><td>unclear</td><td> </td>
+</tr>
+<tr>
+<td>table 0292</td><td>from v2.3</td><td>original name : "Vaccines administered (code = CVX)(parenteral, unless oral is noted)", no values</td><td>shorten to "Vaccines administered", values imported</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0310</td><td>from v2.3</td><td>replaced by table 0295, wrong use of 0310 in data element 00753</td><td>correct to "N"</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0316</td><td>from v2.3</td><td>wrong code</td><td>correct to "N"</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0350</td><td>v2.3.1, v2.4 </td><td>values 47..99, 70..99 </td><td>expanded</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0440</td><td>v2.5.1, v2.6 </td><td>"LD" =&gt; "ELD" </td><td>correct</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0458</td><td>v2.7, v2.7.1 </td><td>35, 36, 38, 39: dot is a typo </td><td>delete dot</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0458</td><td>v2.4 - v2.7 </td><td>40, 41, 42: dot is a typo </td><td>delete dot</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0476</td><td>v2.5.1</td><td>description wrongly extracted from standard</td><td>shorten name</td><td>applied in db</td>
+</tr>
+<tr>
+<td>tables 0567, 0568</td><td>v2.8, v2.8.1 </td><td>defined without use, 0929 resp. 0930 are identical</td><td>delete</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table 0918</td><td>v2.8 + v2.8.1 </td><td>all values missing </td><td>add</td><td>applied in db</td>
+</tr>
+<tr>
+<td>table nnnn</td><td> </td><td> </td><td>delete</td><td>applied in db</td>
+</tr>
+</table>
+
+<h1>Open Issues = to be discusse</h1>
+
+<p>
+The following items are unclear and requires a more general discussion within the project group:
+</p>
+
+<ul>
+<li>tables on component level should not be assigned on field level?</li>
+<li>0011, 0016, 0020 for v2.1 and v2.2 contain values, but is not used: delete?</li>
+<li>0036: assigned to OBR-9 in v2.1 and v2.2</li>
+<li>0047: assigned to OBR-12 in v2.1</li>
+<il>in v2.1 OBR-12 were assigned to table 0047 danger code. This is missing in higher version! Technical Error?</li>
+</ul>
+
+<div class="separator">
+&nbsp;</div>
+
+<p align="center">
+<big>
+<font color="#0000FF">
+Last Update: January 22nd, 2015
+</font>
+</big>
+</p>
+
+
+</body>
+</html>

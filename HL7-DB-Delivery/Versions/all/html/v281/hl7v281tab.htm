@@ -1,0 +1,4143 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.8.1</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: 11 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v281.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v281idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std281/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.8.1
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="40" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v281/hl7v281tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.8.1</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v281event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v281segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v281msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v281msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v281datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v281tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v281typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v281qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2 align=center>
+List of all Table-Definitions
+</H2>
+<TABLE class=info>
+<TR>
+<TH class=info>Table</TH>
+<TH class=info>Description</TH>
+<TH class=info>Interpretation</TH>
+<TH class=info>Type</TH>
+<TH class=info>Chapter</TH>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0001.htm">0001</A></TD>
+<TD class=table>Administrative Sex</TD>
+<TD class=table>Geschlecht</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading17">2.C.2.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0002.htm">0002</A></TD>
+<TD class=table>Marital Status</TD>
+<TD class=table>Familienstand</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading18">2.C.2.2</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0003.htm">0003</A></TD>
+<TD class=table>Event Type</TD>
+<TD class=table>Ereignistyp</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading19">2.C.2.3</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0004.htm">0004</A></TD>
+<TD class=table>Patient Class</TD>
+<TD class=table>Patientenstatus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading20">2.C.2.4</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0005.htm">0005</A></TD>
+<TD class=table>Race</TD>
+<TD class=table>Rasse</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading21">2.C.2.5</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0006.htm">0006</A></TD>
+<TD class=table>Religion</TD>
+<TD class=table>Religion</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading22">2.C.2.6</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0007.htm">0007</A></TD>
+<TD class=table>Admission Type</TD>
+<TD class=table>Aufnahmeart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading23">2.C.2.7</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0008.htm">0008</A></TD>
+<TD class=table>Acknowledgment Code</TD>
+<TD class=table>Best&auml;tigungscode</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading24">2.C.2.8</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0009.htm">0009</A></TD>
+<TD class=table>Ambulatory Status</TD>
+<TD class=table>Mobilit&auml;tsstatus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading25">2.C.2.9</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0010.htm">0010</A></TD>
+<TD class=table>Physician ID</TD>
+<TD class=table>Arzt-ID</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading26">2.C.2.10</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0017.htm">0017</A></TD>
+<TD class=table>Transaction Type</TD>
+<TD class=table>Buchungsart/Rechnungsart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading27">2.C.2.11</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0018.htm">0018</A></TD>
+<TD class=table>Patient Type</TD>
+<TD class=table>Patientenart (PPR)</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading28">2.C.2.12</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0019.htm">0019</A></TD>
+<TD class=table>Anesthesia Code</TD>
+<TD class=table>An&auml;sthesiecode</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading29">2.C.2.13</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0021.htm">0021</A></TD>
+<TD class=table>Bad Debt Agency Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading30">2.C.2.14</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0022.htm">0022</A></TD>
+<TD class=table>Billing Status</TD>
+<TD class=table>Rechnungsstatus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading31">2.C.2.15</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0023.htm">0023</A></TD>
+<TD class=table>Admit Source</TD>
+<TD class=table>einweisende Einrichtung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading32">2.C.2.16</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0024.htm">0024</A></TD>
+<TD class=table>Fee Schedule</TD>
+<TD class=table>Leistungserbringungsart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading33">2.C.2.17</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0027.htm">0027</A></TD>
+<TD class=table>Priority</TD>
+<TD class=table>Priorit&auml;t</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading34">2.C.2.18</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0032.htm">0032</A></TD>
+<TD class=table>Charge/Price Indicator</TD>
+<TD class=table>Kassenpatient/Selbstzahler</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading35">2.C.2.19</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0038.htm">0038</A></TD>
+<TD class=table>Order status</TD>
+<TD class=table>Auftragsstatus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading36">2.C.2.20</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0042.htm">0042</A></TD>
+<TD class=table>Company Plan Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading37">2.C.2.21</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0043.htm">0043</A></TD>
+<TD class=table>Condition Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading38">2.C.2.22</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0044.htm">0044</A></TD>
+<TD class=table>Contract Code</TD>
+<TD class=table>Abrechnungsart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading39">2.C.2.23</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0045.htm">0045</A></TD>
+<TD class=table>Courtesy Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading40">2.C.2.24</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0046.htm">0046</A></TD>
+<TD class=table>Credit Rating</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading41">2.C.2.25</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0049.htm">0049</A></TD>
+<TD class=table>Department Code</TD>
+<TD class=table>Kostenstelle</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading42">2.C.2.26</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0050.htm">0050</A></TD>
+<TD class=table>Accident Code</TD>
+<TD class=table>Unfallart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading43">2.C.2.27</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0051.htm">0051</A></TD>
+<TD class=table>Diagnosis Code</TD>
+<TD class=table>Diagnoseschl&uuml;ssel</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading44">2.C.2.28</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0052.htm">0052</A></TD>
+<TD class=table>Diagnosis Type</TD>
+<TD class=table>Diagnosetyp</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading45">2.C.2.29</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0055.htm">0055</A></TD>
+<TD class=table>Diagnosis Related Group</TD>
+<TD class=table>DRG</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading46">2.C.2.30</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0056.htm">0056</A></TD>
+<TD class=table>DRG Grouper Review Code</TD>
+<TD class=table>DRG-Gruppierung &uuml;berpr&uuml;ft</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading47">2.C.2.31</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0059.htm">0059</A></TD>
+<TD class=table>Consent Code</TD>
+<TD class=table>Zustimmung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading48">2.C.2.32</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0061.htm">0061</A></TD>
+<TD class=table>Check Digit Scheme</TD>
+<TD class=table>Pr&uuml;fziffernverfahren</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading49">2.C.2.33</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0062.htm">0062</A></TD>
+<TD class=table>Event Reason</TD>
+<TD class=table>Ereignisgrund</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading50">2.C.2.34</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0063.htm">0063</A></TD>
+<TD class=table>Relationship</TD>
+<TD class=table>Beziehung von Personen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading51">2.C.2.35</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0064.htm">0064</A></TD>
+<TD class=table>Financial Class</TD>
+<TD class=table>Entgeltart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading52">2.C.2.36</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0065.htm">0065</A></TD>
+<TD class=table>Specimen Action Code</TD>
+<TD class=table>weitere Angaben zur Probe</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading53">2.C.2.37</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0066.htm">0066</A></TD>
+<TD class=table>Employment Status</TD>
+<TD class=table>Arbeitsverh&auml;ltnis</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading54">2.C.2.38</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0068.htm">0068</A></TD>
+<TD class=table>Guarantor Type</TD>
+<TD class=table>Art des Zahlungspflichtigen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading55">2.C.2.39</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0069.htm">0069</A></TD>
+<TD class=table>Hospital Service</TD>
+<TD class=table>Leistungsspektrum</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading56">2.C.2.40</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0072.htm">0072</A></TD>
+<TD class=table>Insurance Plan ID</TD>
+<TD class=table>Tarifbezeichnung Kostentr&auml;ger</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading58">2.C.2.42</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0073.htm">0073</A></TD>
+<TD class=table>Interest Rate Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading59">2.C.2.43</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0074.htm">0074</A></TD>
+<TD class=table>Diagnostic Service Section ID</TD>
+<TD class=table>Diagnostische Funktionsbereiche</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading60">2.C.2.44</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0076.htm">0076</A></TD>
+<TD class=table>Message Type</TD>
+<TD class=table>Nachrichtenart</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading61">2.C.2.45</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0078.htm">0078</A></TD>
+<TD class=table>Interpretation Codes</TD>
+<TD class=table>Bewertung des Ergebnisses / Meﬂwerts</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading62">2.C.2.46</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0080.htm">0080</A></TD>
+<TD class=table>Nature of Abnormal Testing</TD>
+<TD class=table>Art der Normbereichs</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading63">2.C.2.47</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0083.htm">0083</A></TD>
+<TD class=table>Outlier Type</TD>
+<TD class=table>Ausreiﬂertyp</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading64">2.C.2.48</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0084.htm">0084</A></TD>
+<TD class=table>Performed by</TD>
+<TD class=table>erbringende Stelle oder Person</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading65">2.C.2.49</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0085.htm">0085</A></TD>
+<TD class=table>Observation Result Status Codes Interpretation</TD>
+<TD class=table>Ergebnisstatus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading66">2.C.2.50</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0086.htm">0086</A></TD>
+<TD class=table>Plan ID</TD>
+<TD class=table>Versichertenstatus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading67">2.C.2.51</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0087.htm">0087</A></TD>
+<TD class=table>Pre-Admit Test Indicator</TD>
+<TD class=table>Hinweis auf vorstation&auml;re Untersuchungen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading68">2.C.2.52</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0088.htm">0088</A></TD>
+<TD class=table>Procedure Code</TD>
+<TD class=table>Maﬂnahmen- / Operationsschl&uuml;ssel</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading69">2.C.2.53</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0091.htm">0091</A></TD>
+<TD class=table>Query Priority</TD>
+<TD class=table>Abfragepriorit&auml;t</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading70">2.C.2.54</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0092.htm">0092</A></TD>
+<TD class=table>Re-Admission Indicator</TD>
+<TD class=table>Wiederaufnahmekennzeichen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading71">2.C.2.55</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0093.htm">0093</A></TD>
+<TD class=table>Release Information</TD>
+<TD class=table>Freigabe von Patienteninformationen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading72">2.C.2.56</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0098.htm">0098</A></TD>
+<TD class=table>Type of Agreement</TD>
+<TD class=table>momentan nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading73">2.C.2.57</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0099.htm">0099</A></TD>
+<TD class=table>VIP Indicator</TD>
+<TD class=table>VIP-Kennzeichen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading74">2.C.2.58</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0100.htm">0100</A></TD>
+<TD class=table>Invocation event</TD>
+<TD class=table>Rechnungslegung bei</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading75">2.C.2.59</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0103.htm">0103</A></TD>
+<TD class=table>Processing ID</TD>
+<TD class=table>Verarbeitungskontext</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading76">2.C.2.60</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0104.htm">0104</A></TD>
+<TD class=table>Version ID</TD>
+<TD class=table>HL7-Versionsnummer</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading77">2.C.2.61</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0105.htm">0105</A></TD>
+<TD class=table>Source of Comment</TD>
+<TD class=table>Ursprung des Kommentars</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading78">2.C.2.62</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0110.htm">0110</A></TD>
+<TD class=table>Transfer to Bad Debt Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading79">2.C.2.63</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0111.htm">0111</A></TD>
+<TD class=table>Delete Account Code</TD>
+<TD class=table>L&ouml;schung des Patientenkontos</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading80">2.C.2.64</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0112.htm">0112</A></TD>
+<TD class=table>Discharge Disposition</TD>
+<TD class=table>Entlassungsart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading81">2.C.2.65</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0113.htm">0113</A></TD>
+<TD class=table>Discharged to Location</TD>
+<TD class=table>entlassen nach</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading82">2.C.2.66</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0114.htm">0114</A></TD>
+<TD class=table>Diet Type</TD>
+<TD class=table>Kostform plus Di&auml;t</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading83">2.C.2.67</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0115.htm">0115</A></TD>
+<TD class=table>Servicing Facilities</TD>
+<TD class=table>Fachabteilung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading84">2.C.2.68</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0116.htm">0116</A></TD>
+<TD class=table>Bed Status</TD>
+<TD class=table>Bettenstatus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading85">2.C.2.69</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0117.htm">0117</A></TD>
+<TD class=table>Account Status</TD>
+<TD class=table>Status des Patientenkontos</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading86">2.C.2.70</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0118.htm">0118</A></TD>
+<TD class=table>Major Diagnostic Category</TD>
+<TD class=table>nicht mehr verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading87">2.C.2.71</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0119.htm">0119</A></TD>
+<TD class=table>Order Control Codes</TD>
+<TD class=table>Auftragssteuerung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading88">2.C.2.72</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0121.htm">0121</A></TD>
+<TD class=table>Response Flag</TD>
+<TD class=table>gew&uuml;nschter Umfang der Ergebnismeldung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading89">2.C.2.73</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0122.htm">0122</A></TD>
+<TD class=table>Charge Type</TD>
+<TD class=table>Art der Leistungsabrechnung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading90">2.C.2.74</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0123.htm">0123</A></TD>
+<TD class=table>Result Status</TD>
+<TD class=table>Ergebnisstatus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading91">2.C.2.75</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0124.htm">0124</A></TD>
+<TD class=table>Transportation Mode</TD>
+<TD class=table>Transportart</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading92">2.C.2.76</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0125.htm">0125</A></TD>
+<TD class=table>Value Type</TD>
+<TD class=table>Datentyp</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading93">2.C.2.77</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0126.htm">0126</A></TD>
+<TD class=table>Quantity Limited Request</TD>
+<TD class=table>maximale L&auml;nge der Antwort</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading94">2.C.2.78</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0127.htm">0127</A></TD>
+<TD class=table>Allergen Type</TD>
+<TD class=table>Art der Allergie</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading95">2.C.2.79</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0128.htm">0128</A></TD>
+<TD class=table>Allergy Severity</TD>
+<TD class=table>Schweregrad der Allergie</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading96">2.C.2.80</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0129.htm">0129</A></TD>
+<TD class=table>Accommodation Code</TD>
+<TD class=table>Unterbringungsart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading97">2.C.2.81</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0130.htm">0130</A></TD>
+<TD class=table>Visit User Code</TD>
+<TD class=table>zus&auml;tzliche Fallkategorisierung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading98">2.C.2.82</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0131.htm">0131</A></TD>
+<TD class=table>Contact Role</TD>
+<TD class=table>Art der Beziehung zum Ansprechpartner (Rolle)</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading99">2.C.2.83</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0132.htm">0132</A></TD>
+<TD class=table>Transaction Code</TD>
+<TD class=table>Transaktionsart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading100">2.C.2.84</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0135.htm">0135</A></TD>
+<TD class=table>Assignment of Benefits</TD>
+<TD class=table>Merkmal Rechnung an Kostentr&auml;ger</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading101">2.C.2.85</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0136.htm">0136</A></TD>
+<TD class=table>Yes/no Indicator</TD>
+<TD class=table>Kennzeichen Ja/Nein</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading102">2.C.2.86</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0137.htm">0137</A></TD>
+<TD class=table>Mail Claim Party</TD>
+<TD class=table>Rechnungsempf&auml;nger</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading103">2.C.2.87</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0139.htm">0139</A></TD>
+<TD class=table>Employer Information Data</TD>
+<TD class=table>Arbeitgeberinformation</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading104">2.C.2.88</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0140.htm">0140</A></TD>
+<TD class=table>Military Service</TD>
+<TD class=table>milit&auml;rische Zugeh&ouml;rigkeit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading105">2.C.2.89</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0141.htm">0141</A></TD>
+<TD class=table>Military Rank/Grade</TD>
+<TD class=table>milit&auml;rischer Dienstgrad</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading106">2.C.2.90</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0142.htm">0142</A></TD>
+<TD class=table>Military Status</TD>
+<TD class=table>milit&auml;rischer Dienststatus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading107">2.C.2.91</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0143.htm">0143</A></TD>
+<TD class=table>Non-covered Insurance Code</TD>
+<TD class=table>Grund f&uuml;r Leistungsausschluﬂ</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading108">2.C.2.92</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0144.htm">0144</A></TD>
+<TD class=table>Eligibility Source</TD>
+<TD class=table>Quelle der Kostentr&auml;gerangaben</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading109">2.C.2.93</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0145.htm">0145</A></TD>
+<TD class=table>Room Type</TD>
+<TD class=table>Zimmertyp</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading110">2.C.2.94</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0146.htm">0146</A></TD>
+<TD class=table>Amount Type</TD>
+<TD class=table>Art des Kostenanteils</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading111">2.C.2.95</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0147.htm">0147</A></TD>
+<TD class=table>Policy Type</TD>
+<TD class=table>Art der Police</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading112">2.C.2.96</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0148.htm">0148</A></TD>
+<TD class=table>Money or Percentage Indicator</TD>
+<TD class=table>Kennzeichen absoluter oder relativer Geldbetrag</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading113">2.C.2.97</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0149.htm">0149</A></TD>
+<TD class=table>Day Type</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading114">2.C.2.98</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0150.htm">0150</A></TD>
+<TD class=table>Certification Patient Type</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading115">2.C.2.99</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0151.htm">0151</A></TD>
+<TD class=table>Second Opinion Status</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading116">2.C.2.100</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0152.htm">0152</A></TD>
+<TD class=table>Second Opinion Documentation Received</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading117">2.C.2.101</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0153.htm">0153</A></TD>
+<TD class=table>Value Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>External</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading118">2.C.2.102</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0155.htm">0155</A></TD>
+<TD class=table>Accept/Application Acknowledgment Conditions</TD>
+<TD class=table>Bedingung f&uuml;r Best&auml;tigungen</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading119">2.C.2.103</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0159.htm">0159</A></TD>
+<TD class=table>Diet Code Specification Type</TD>
+<TD class=table>Verpflegungsart</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading120">2.C.2.104</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0160.htm">0160</A></TD>
+<TD class=table>Tray Type</TD>
+<TD class=table>Servieranweisung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading121">2.C.2.105</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0161.htm">0161</A></TD>
+<TD class=table>Allow Substitution</TD>
+<TD class=table>Substitutionsm&ouml;glichkeiten</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading122">2.C.2.106</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0162.htm">0162</A></TD>
+<TD class=table>Route of Administration</TD>
+<TD class=table>Applikationsart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading123">2.C.2.107</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0163.htm">0163</A></TD>
+<TD class=table>Body Site</TD>
+<TD class=table>Applikationsort</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading124">2.C.2.108</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0164.htm">0164</A></TD>
+<TD class=table>Administration Device</TD>
+<TD class=table>Ger&auml;t/Instrument zur Applikation</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading125">2.C.2.109</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0165.htm">0165</A></TD>
+<TD class=table>Administration Method</TD>
+<TD class=table>Applikationsmethode</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading126">2.C.2.110</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0166.htm">0166</A></TD>
+<TD class=table>RX Component Type</TD>
+<TD class=table>Komponententyp</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading127">2.C.2.111</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0167.htm">0167</A></TD>
+<TD class=table>Substitution Status</TD>
+<TD class=table>Substitution</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading128">2.C.2.112</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0168.htm">0168</A></TD>
+<TD class=table>Processing Priority</TD>
+<TD class=table>Prozesspriorit&auml;t</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading129">2.C.2.113</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0169.htm">0169</A></TD>
+<TD class=table>Reporting Priority</TD>
+<TD class=table>Berichtspriorit&auml;t</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading130">2.C.2.114</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0170.htm">0170</A></TD>
+<TD class=table>Derived Specimen</TD>
+<TD class=table>prim&auml;res/sekund&auml;res Probenmaterial</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading131">2.C.2.115</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0171.htm">0171</A></TD>
+<TD class=table>Citizenship</TD>
+<TD class=table>Staatsangeh&ouml;rigkeit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading132">2.C.2.116</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0172.htm">0172</A></TD>
+<TD class=table>Veterans Military Status</TD>
+<TD class=table>Beruf / T&auml;tigkeit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading133">2.C.2.117</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0173.htm">0173</A></TD>
+<TD class=table>Coordination of Benefits</TD>
+<TD class=table>Abstimmung mit anderen Versicherungsverh&auml;ltnissen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading134">2.C.2.118</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0174.htm">0174</A></TD>
+<TD class=table>Nature of Service/Test/Observation</TD>
+<TD class=table>Untersuchungsart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading135">2.C.2.119</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0175.htm">0175</A></TD>
+<TD class=table>Master File Identifier Code</TD>
+<TD class=table>ID des Stammdatenverzeichnisses</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading136">2.C.2.120</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0177.htm">0177</A></TD>
+<TD class=table>Confidentiality Code</TD>
+<TD class=table>Vertraulichkeitscode</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading137">2.C.2.121</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0178.htm">0178</A></TD>
+<TD class=table>File Level Event Code</TD>
+<TD class=table>Umfang der &Auml;nderung (Datei bzw. Datens&auml;tze)</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading138">2.C.2.122</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0179.htm">0179</A></TD>
+<TD class=table>Response Level</TD>
+<TD class=table>R&uuml;ckmeldungsumfang</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading139">2.C.2.123</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0180.htm">0180</A></TD>
+<TD class=table>Record-level Event Code</TD>
+<TD class=table>Art der &Auml;nderung des Stammdatenverzeichnisses</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading140">2.C.2.124</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0181.htm">0181</A></TD>
+<TD class=table>MFN Record-level Error Return</TD>
+<TD class=table>Fehlerschl&uuml;ssel - MFN</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading141">2.C.2.125</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0182.htm">0182</A></TD>
+<TD class=table>Staff type</TD>
+<TD class=table>Mitarbeiterart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading142">2.C.2.126</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0183.htm">0183</A></TD>
+<TD class=table>Active/Inactive</TD>
+<TD class=table>aktiv/inaktiv</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading143">2.C.2.127</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0184.htm">0184</A></TD>
+<TD class=table>Department</TD>
+<TD class=table>Abteilung / Klinik</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading144">2.C.2.128</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0185.htm">0185</A></TD>
+<TD class=table>Preferred Method of Contact</TD>
+<TD class=table>Kontaktart</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading145">2.C.2.129</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0186.htm">0186</A></TD>
+<TD class=table>Practitioner Category</TD>
+<TD class=table>berufliche Qualifikation</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading146">2.C.2.130</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0187.htm">0187</A></TD>
+<TD class=table>Provider Billing</TD>
+<TD class=table>Art der Privatliquidation</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading147">2.C.2.131</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0188.htm">0188</A></TD>
+<TD class=table>Operator ID</TD>
+<TD class=table>Sachbearbeiterkennzeichen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading148">2.C.2.132</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0189.htm">0189</A></TD>
+<TD class=table>Ethnic Group</TD>
+<TD class=table>ethnische Zugeh&ouml;rigkeit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading149">2.C.2.133</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0190.htm">0190</A></TD>
+<TD class=table>Address Type</TD>
+<TD class=table>Adressart</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading150">2.C.2.134</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0191.htm">0191</A></TD>
+<TD class=table>Type of Referenced Data</TD>
+<TD class=table>Typ der referenzierten Daten</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading151">2.C.2.135</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0193.htm">0193</A></TD>
+<TD class=table>Amount Class</TD>
+<TD class=table>Art des Kostenanteils (II)</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading152">2.C.2.136</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0200.htm">0200</A></TD>
+<TD class=table>Name Type</TD>
+<TD class=table>Namensart</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading153">2.C.2.137</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0201.htm">0201</A></TD>
+<TD class=table>Telecommunication Use Code</TD>
+<TD class=table>Typ der Telekommunikationsadresse</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading154">2.C.2.138</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0202.htm">0202</A></TD>
+<TD class=table>Telecommunication Equipment Type</TD>
+<TD class=table>Telekommunikationsmethode</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading155">2.C.2.139</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0203.htm">0203</A></TD>
+<TD class=table>Identifier Type</TD>
+<TD class=table>ID Klassifizierung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading156">2.C.2.140</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0204.htm">0204</A></TD>
+<TD class=table>Organizational Name Type</TD>
+<TD class=table>Namensart (Organisationen)</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading157">2.C.2.141</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0205.htm">0205</A></TD>
+<TD class=table>Price Type</TD>
+<TD class=table>Preisklassifizierung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading158">2.C.2.142</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0206.htm">0206</A></TD>
+<TD class=table>Segment Action Code</TD>
+<TD class=table>auszuf&uuml;hrende Aktion</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading159">2.C.2.143</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0207.htm">0207</A></TD>
+<TD class=table>Processing Mode</TD>
+<TD class=table>Verarbeitungsmodus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading160">2.C.2.144</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0208.htm">0208</A></TD>
+<TD class=table>Query Response Status</TD>
+<TD class=table>Antwortstatus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading161">2.C.2.145</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0209.htm">0209</A></TD>
+<TD class=table>Relational Operator</TD>
+<TD class=table>relationaler Operator</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading162">2.C.2.146</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0210.htm">0210</A></TD>
+<TD class=table>Relational Conjunction</TD>
+<TD class=table>relationale Verkn&uuml;pfung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading163">2.C.2.147</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0211.htm">0211</A></TD>
+<TD class=table>Alternate Character Sets</TD>
+<TD class=table>Zeichensatz</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading164">2.C.2.148</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0212.htm">0212</A></TD>
+<TD class=table>Nationality</TD>
+<TD class=table>Nationalit&auml;t</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading165">2.C.2.149</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0213.htm">0213</A></TD>
+<TD class=table>Purge Status Code</TD>
+<TD class=table>Buchungsabschluﬂcode</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading166">2.C.2.150</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0214.htm">0214</A></TD>
+<TD class=table>Special Program Code</TD>
+<TD class=table>spezielle Gesundheitsprogramme</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading167">2.C.2.151</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0215.htm">0215</A></TD>
+<TD class=table>Publicity Code</TD>
+<TD class=table>Auskunftsbeschr&auml;nkung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading168">2.C.2.152</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0216.htm">0216</A></TD>
+<TD class=table>Patient Status Code</TD>
+<TD class=table>Fallstatus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading169">2.C.2.153</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0217.htm">0217</A></TD>
+<TD class=table>Visit Priority Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading170">2.C.2.154</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0218.htm">0218</A></TD>
+<TD class=table>Patient Charge Adjustment</TD>
+<TD class=table>Sonderkonditionen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading171">2.C.2.155</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0219.htm">0219</A></TD>
+<TD class=table>Recurring Service Code</TD>
+<TD class=table>fortlaufende Behandlung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading172">2.C.2.156</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0220.htm">0220</A></TD>
+<TD class=table>Living Arrangement</TD>
+<TD class=table>besondere Lebensumst&auml;nde</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading173">2.C.2.157</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0222.htm">0222</A></TD>
+<TD class=table>Contact Reason</TD>
+<TD class=table>Grund der Kontaktaufnahme mit Arbeitgeber</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading174">2.C.2.158</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0223.htm">0223</A></TD>
+<TD class=table>Living Dependency</TD>
+<TD class=table>besondere Lebensabh&auml;ngigkeiten</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading175">2.C.2.159</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0224.htm">0224</A></TD>
+<TD class=table>Transport Arranged</TD>
+<TD class=table>Transport arrangiert</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading176">2.C.2.160</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0225.htm">0225</A></TD>
+<TD class=table>Escort Required</TD>
+<TD class=table>Begleitung erforderlich</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading177">2.C.2.161</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0227.htm">0227</A></TD>
+<TD class=table>Manufacturers of Vaccines (code=MVX)</TD>
+<TD class=table>Hersteller des Wirkstoffs</TD>
+<TD class=table>Imported</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading178">2.C.2.162</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0228.htm">0228</A></TD>
+<TD class=table>Diagnosis Classification</TD>
+<TD class=table>Art der Diagnose</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading179">2.C.2.163</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0229.htm">0229</A></TD>
+<TD class=table>DRG Payor</TD>
+<TD class=table>Kostentr&auml;ger</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading180">2.C.2.164</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0230.htm">0230</A></TD>
+<TD class=table>Procedure Functional Type</TD>
+<TD class=table>Klassifizierung der Prozedur</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading181">2.C.2.165</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0231.htm">0231</A></TD>
+<TD class=table>Student Status</TD>
+<TD class=table>Studentenstatus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading182">2.C.2.166</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0232.htm">0232</A></TD>
+<TD class=table>- Insurance Company Contact Reason</TD>
+<TD class=table>Grund der Kontaktaufnahme mit Versicherung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading183">2.C.2.167</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0233.htm">0233</A></TD>
+<TD class=table>Non-Concur Code/Description</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading184">2.C.2.168</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0234.htm">0234</A></TD>
+<TD class=table>Report Timing</TD>
+<TD class=table>Art des Berichts</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading185">2.C.2.169</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0235.htm">0235</A></TD>
+<TD class=table>Report Source</TD>
+<TD class=table>Berichtsquelle</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading186">2.C.2.170</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0236.htm">0236</A></TD>
+<TD class=table>Event Reported To</TD>
+<TD class=table>Berichtsempf&auml;ngertyp</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading187">2.C.2.171</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0237.htm">0237</A></TD>
+<TD class=table>Event Qualification</TD>
+<TD class=table>Ereignistyp/-ursache</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading188">2.C.2.172</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0238.htm">0238</A></TD>
+<TD class=table>Event Seriousness</TD>
+<TD class=table>Schweregrad des Ereignisses</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading189">2.C.2.173</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0239.htm">0239</A></TD>
+<TD class=table>Event Expected</TD>
+<TD class=table>Ereignis erwartet</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading190">2.C.2.174</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0240.htm">0240</A></TD>
+<TD class=table>Event Consequence</TD>
+<TD class=table>Folge des Ereignisses</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading191">2.C.2.175</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0241.htm">0241</A></TD>
+<TD class=table>Patient Outcome</TD>
+<TD class=table>Folge f&uuml;r den Patienten</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading192">2.C.2.176</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0242.htm">0242</A></TD>
+<TD class=table>Primary Observer's Qualification</TD>
+<TD class=table>Qualifikation des Bedieners</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading193">2.C.2.177</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0243.htm">0243</A></TD>
+<TD class=table>Identity May Be Divulged</TD>
+<TD class=table>Identit&auml;t darf weitergeben werden</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading194">2.C.2.178</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0244.htm">0244</A></TD>
+<TD class=table>Single Use Device</TD>
+<TD class=table>Einwegprodukt</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading195">2.C.2.179</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0245.htm">0245</A></TD>
+<TD class=table>Product Problem</TD>
+<TD class=table>Produktproblem</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading196">2.C.2.180</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0246.htm">0246</A></TD>
+<TD class=table>Product Available for Inspection</TD>
+<TD class=table>Produt verf&uuml;gbar f&uuml;r Inspektionen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading197">2.C.2.181</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0247.htm">0247</A></TD>
+<TD class=table>Status of Evaluation</TD>
+<TD class=table>Status der Produktpr&uuml;fung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading198">2.C.2.182</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0248.htm">0248</A></TD>
+<TD class=table>Product Source</TD>
+<TD class=table>Produktherkunft</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading199">2.C.2.183</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0249.htm">0249</A></TD>
+<TD class=table>Generic Product</TD>
+<TD class=table>generisches Produkt</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading200">2.C.2.184</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0250.htm">0250</A></TD>
+<TD class=table>Relatedness Assessment</TD>
+<TD class=table>Einsch&auml;tzung des Zusammenhangs</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading201">2.C.2.185</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0251.htm">0251</A></TD>
+<TD class=table>Action Taken in Response to the Event</TD>
+<TD class=table>ausgel&ouml;ste Reaktion</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading202">2.C.2.186</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0252.htm">0252</A></TD>
+<TD class=table>Causality Observations</TD>
+<TD class=table>Angaben zur Kausalit&auml;t</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading203">2.C.2.187</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0253.htm">0253</A></TD>
+<TD class=table>Indirect Exposure Mechanism</TD>
+<TD class=table>indirekte Exposition</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading204">2.C.2.188</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0254.htm">0254</A></TD>
+<TD class=table>Kind of Quantity</TD>
+<TD class=table>Bestimmungsgr&ouml;ﬂe</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading205">2.C.2.189</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0255.htm">0255</A></TD>
+<TD class=table>Duration Categories</TD>
+<TD class=table>Punkt bzw. Intervall</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading206">2.C.2.190</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0256.htm">0256</A></TD>
+<TD class=table>Time Delay Post Challenge</TD>
+<TD class=table>Verz&ouml;gerung nach Belastung/Anregung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading207">2.C.2.191</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0257.htm">0257</A></TD>
+<TD class=table>Nature of Challenge</TD>
+<TD class=table>Art der Belastung/Anregung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading208">2.C.2.192</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0258.htm">0258</A></TD>
+<TD class=table>Relationship Modifier</TD>
+<TD class=table>Querverweis</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading209">2.C.2.193</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0259.htm">0259</A></TD>
+<TD class=table>Modality</TD>
+<TD class=table>bildgebendes Verfahren</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading210">2.C.2.194</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0260.htm">0260</A></TD>
+<TD class=table>Patient Location Type</TD>
+<TD class=table>Ortskategorie</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading211">2.C.2.195</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0261.htm">0261</A></TD>
+<TD class=table>Location Equipment</TD>
+<TD class=table>Ortsausr&uuml;stung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading212">2.C.2.196</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0262.htm">0262</A></TD>
+<TD class=table>Privacy Level</TD>
+<TD class=table>Level der Vertraulichkeit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading213">2.C.2.197</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0263.htm">0263</A></TD>
+<TD class=table>Level of Care</TD>
+<TD class=table>Pflegeumfang</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading214">2.C.2.198</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0264.htm">0264</A></TD>
+<TD class=table>Location Department</TD>
+<TD class=table>Abteilungszugeh&ouml;rigkeit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading215">2.C.2.199</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0265.htm">0265</A></TD>
+<TD class=table>Specialty Type</TD>
+<TD class=table>Spezialabteilung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading216">2.C.2.200</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0267.htm">0267</A></TD>
+<TD class=table>Days of the Week</TD>
+<TD class=table>Wochentage</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading217">2.C.2.201</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0268.htm">0268</A></TD>
+<TD class=table>Override</TD>
+<TD class=table>&Uuml;berschreibbarkeit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading218">2.C.2.202</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0269.htm">0269</A></TD>
+<TD class=table>Charge On Indicator</TD>
+<TD class=table>Rechnungsstellung bei</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading219">2.C.2.203</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0270.htm">0270</A></TD>
+<TD class=table>Document Type</TD>
+<TD class=table>Dokumenttyp</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading220">2.C.2.204</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0271.htm">0271</A></TD>
+<TD class=table>Document Completion Status</TD>
+<TD class=table>Bearbeitungsstatus des Dokuments</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading221">2.C.2.205</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0272.htm">0272</A></TD>
+<TD class=table>Document Confidentiality Status</TD>
+<TD class=table>Vertraulichkeitsstatus des Dokuments</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading222">2.C.2.206</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0273.htm">0273</A></TD>
+<TD class=table>Document Availability Status</TD>
+<TD class=table>Verf&uuml;gbarkeitsstatus des Dokuments</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading223">2.C.2.207</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0275.htm">0275</A></TD>
+<TD class=table>Document Storage Status</TD>
+<TD class=table>Archivierungsstatus des Dokuments</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading224">2.C.2.208</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0276.htm">0276</A></TD>
+<TD class=table>Appointment reason codes</TD>
+<TD class=table>Grund der Terminanforderung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading225">2.C.2.209</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0277.htm">0277</A></TD>
+<TD class=table>Appointment Type Codes</TD>
+<TD class=table>Typ der Terminanforderung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading226">2.C.2.210</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0278.htm">0278</A></TD>
+<TD class=table>Filler status codes</TD>
+<TD class=table>Statuscode Leistungsstelle</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading227">2.C.2.211</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0279.htm">0279</A></TD>
+<TD class=table>Allow Substitution Codes</TD>
+<TD class=table>Ersetzungserlaubnis</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading228">2.C.2.212</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0280.htm">0280</A></TD>
+<TD class=table>Referral Priority</TD>
+<TD class=table>&Uuml;berweisungspriorit&auml;t</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading229">2.C.2.213</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0281.htm">0281</A></TD>
+<TD class=table>Referral Type</TD>
+<TD class=table>&Uuml;berweisungstyp</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading230">2.C.2.214</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0282.htm">0282</A></TD>
+<TD class=table>Referral Disposition</TD>
+<TD class=table>&Uuml;berweisungsdisposition</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading231">2.C.2.215</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0283.htm">0283</A></TD>
+<TD class=table>Referral Status</TD>
+<TD class=table>&Uuml;berweisungsstatus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading232">2.C.2.216</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0284.htm">0284</A></TD>
+<TD class=table>Referral Category</TD>
+<TD class=table>&Uuml;berweisungskategorie</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading233">2.C.2.217</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0285.htm">0285</A></TD>
+<TD class=table>Insurance Company ID Codes</TD>
+<TD class=table>Institutskennzeichen Kostentr&auml;ger</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading234">2.C.2.218</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0286.htm">0286</A></TD>
+<TD class=table>Provider Role</TD>
+<TD class=table>Art der Beziehung zum Leistungserbringer (Rolle)</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading235">2.C.2.219</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0287.htm">0287</A></TD>
+<TD class=table>Problem/Goal Action Code</TD>
+<TD class=table>Aktionscode</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading236">2.C.2.220</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0288.htm">0288</A></TD>
+<TD class=table>Census Tract</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading237">2.C.2.221</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0289.htm">0289</A></TD>
+<TD class=table>County/Parish</TD>
+<TD class=table>Gemeindekennziffer</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading238">2.C.2.222</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0291.htm">0291</A></TD>
+<TD class=table>Subtype of Referenced Data</TD>
+<TD class=table>Subtyp der referenzierten Daten</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading239">2.C.2.223</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0292.htm">0292</A></TD>
+<TD class=table>Vaccines administered</TD>
+<TD class=table>Verabreichter Impfstoff</TD>
+<TD class=table>Imported</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading240">2.C.2.224</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0293.htm">0293</A></TD>
+<TD class=table>Billing Category</TD>
+<TD class=table>Abrechnungskategorie</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading241">2.C.2.225</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0294.htm">0294</A></TD>
+<TD class=table>Time Selection Criteria Parameter Class Codes</TD>
+<TD class=table>Zeitauswahlkriterium</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading242">2.C.2.226</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0295.htm">0295</A></TD>
+<TD class=table>Handicap</TD>
+<TD class=table>Behinderung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading243">2.C.2.227</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0296.htm">0296</A></TD>
+<TD class=table>Primary Language</TD>
+<TD class=table>Muttersprache</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading244">2.C.2.228</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0297.htm">0297</A></TD>
+<TD class=table>CN ID Source</TD>
+<TD class=table>ID Quelle</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading245">2.C.2.229</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0298.htm">0298</A></TD>
+<TD class=table>CP Range Type</TD>
+<TD class=table>CP Bereichstyp</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading246">2.C.2.230</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0299.htm">0299</A></TD>
+<TD class=table>Encoding</TD>
+<TD class=table>Kodierung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading247">2.C.2.231</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0300.htm">0300</A></TD>
+<TD class=table>Namespace ID</TD>
+<TD class=table>Namespace ID</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading248">2.C.2.232</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0301.htm">0301</A></TD>
+<TD class=table>Universal ID Type</TD>
+<TD class=table>Typ der Universal ID</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading249">2.C.2.233</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0302.htm">0302</A></TD>
+<TD class=table>Point of Care</TD>
+<TD class=table>Station</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading250">2.C.2.234</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0303.htm">0303</A></TD>
+<TD class=table>Room</TD>
+<TD class=table>Zimmer</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading251">2.C.2.235</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0304.htm">0304</A></TD>
+<TD class=table>Bed</TD>
+<TD class=table>Bett</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading252">2.C.2.236</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0305.htm">0305</A></TD>
+<TD class=table>Person Location Type</TD>
+<TD class=table>Typ des Aufenthaltsorts</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading253">2.C.2.237</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0306.htm">0306</A></TD>
+<TD class=table>Location Status</TD>
+<TD class=table>Status des Aufenthaltsorts</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading254">2.C.2.238</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0307.htm">0307</A></TD>
+<TD class=table>Building</TD>
+<TD class=table>Geb&auml;ude</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading255">2.C.2.239</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0308.htm">0308</A></TD>
+<TD class=table>Floor</TD>
+<TD class=table>Etage</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading256">2.C.2.240</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0309.htm">0309</A></TD>
+<TD class=table>Coverage Type</TD>
+<TD class=table>Deckungsart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading257">2.C.2.241</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0311.htm">0311</A></TD>
+<TD class=table>Job Status</TD>
+<TD class=table>Beruflicher Status</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading258">2.C.2.242</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0312.htm">0312</A></TD>
+<TD class=table>Policy Scope</TD>
+<TD class=table>Versicherungsumfang</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading259">2.C.2.243</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0313.htm">0313</A></TD>
+<TD class=table>Policy Source</TD>
+<TD class=table>Informationsquelle Versicherungspolice</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading260">2.C.2.244</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0315.htm">0315</A></TD>
+<TD class=table>Living Will Code</TD>
+<TD class=table>letzter Wille</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading261">2.C.2.245</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0316.htm">0316</A></TD>
+<TD class=table>Organ Donor Code</TD>
+<TD class=table>Einwilligung zur Organspende</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading262">2.C.2.246</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0317.htm">0317</A></TD>
+<TD class=table>Annotations</TD>
+<TD class=table>Anmerkungen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading263">2.C.2.247</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0319.htm">0319</A></TD>
+<TD class=table>Department Cost Center</TD>
+<TD class=table>zu belastende Kostenstelle</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading264">2.C.2.248</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0320.htm">0320</A></TD>
+<TD class=table>Item Natural Account Code</TD>
+<TD class=table>Verrechnungsnummer des Artikels</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading265">2.C.2.249</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0321.htm">0321</A></TD>
+<TD class=table>Dispense Method</TD>
+<TD class=table>Abgabemethode</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading266">2.C.2.250</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0322.htm">0322</A></TD>
+<TD class=table>Completion Status</TD>
+<TD class=table>Status der Medikation</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading267">2.C.2.251</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0324.htm">0324</A></TD>
+<TD class=table>Location Characteristic ID</TD>
+<TD class=table>Eigenschaften des Orts (ID)</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading268">2.C.2.252</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0325.htm">0325</A></TD>
+<TD class=table>Location Relationship ID</TD>
+<TD class=table>Ortsbezug (ID)</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading269">2.C.2.253</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0326.htm">0326</A></TD>
+<TD class=table>Visit Indicator</TD>
+<TD class=table>Kontextindikator der Nachricht</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading270">2.C.2.254</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0327.htm">0327</A></TD>
+<TD class=table>Job Code</TD>
+<TD class=table>Berufsgruppe</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading271">2.C.2.255</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0328.htm">0328</A></TD>
+<TD class=table>Employee Classification</TD>
+<TD class=table>Arbeitnehmerklassifikation</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading272">2.C.2.256</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0329.htm">0329</A></TD>
+<TD class=table>Quantity Method</TD>
+<TD class=table>Methode zur Mengenbestimmung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading273">2.C.2.257</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0330.htm">0330</A></TD>
+<TD class=table>Marketing Basis</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading274">2.C.2.258</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0331.htm">0331</A></TD>
+<TD class=table>Facility Type</TD>
+<TD class=table>Typ der Einrichtung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading275">2.C.2.259</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0332.htm">0332</A></TD>
+<TD class=table>Source Type</TD>
+<TD class=table>Verbindungstyp</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading276">2.C.2.260</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0333.htm">0333</A></TD>
+<TD class=table>Driver's License Issuing Authority</TD>
+<TD class=table>F&uuml;hrerscheinausgabestelle</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading277">2.C.2.261</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0334.htm">0334</A></TD>
+<TD class=table>Disabled Person Code</TD>
+<TD class=table>Behinderte Person</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading278">2.C.2.262</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0335.htm">0335</A></TD>
+<TD class=table>Repeat Pattern</TD>
+<TD class=table>Wiederholungsmuster</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading279">2.C.2.263</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0336.htm">0336</A></TD>
+<TD class=table>Referral Reason</TD>
+<TD class=table>&Uuml;berweisungsgrund</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading280">2.C.2.264</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0337.htm">0337</A></TD>
+<TD class=table>Certification Status</TD>
+<TD class=table>Zertifizierungsstatus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading281">2.C.2.265</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0338.htm">0338</A></TD>
+<TD class=table>Practitioner ID Number Type</TD>
+<TD class=table>Typ der Arztnummer</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading282">2.C.2.266</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0339.htm">0339</A></TD>
+<TD class=table>Advanced Beneficiary Notice Code</TD>
+<TD class=table>Hinweis zur Zuzahlung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading283">2.C.2.267</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0340.htm">0340</A></TD>
+<TD class=table>Procedure Code Modifier</TD>
+<TD class=table>Modifikator zum Prozedurcode</TD>
+<TD class=table>External</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading284">2.C.2.268</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0341.htm">0341</A></TD>
+<TD class=table>Guarantor Credit Rating Code</TD>
+<TD class=table>Kreditw&uuml;rdigkeit des Zahlungspflichtigen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading285">2.C.2.269</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0342.htm">0342</A></TD>
+<TD class=table>Military Recipient</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading286">2.C.2.270</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0343.htm">0343</A></TD>
+<TD class=table>Military Handicapped Program Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading287">2.C.2.271</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0344.htm">0344</A></TD>
+<TD class=table>Patient's Relationship to Insured</TD>
+<TD class=table>Beziehung des Patienten zum Versicherten</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading288">2.C.2.272</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0345.htm">0345</A></TD>
+<TD class=table>Appeal Reason</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading289">2.C.2.273</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0346.htm">0346</A></TD>
+<TD class=table>Certification Agency</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading290">2.C.2.274</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0347.htm">0347</A></TD>
+<TD class=table>State/Province</TD>
+<TD class=table>Bundesland</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading291">2.C.2.275</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0350.htm">0350</A></TD>
+<TD class=table>Occurrence Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading292">2.C.2.276</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0351.htm">0351</A></TD>
+<TD class=table>Occurrence Span</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading293">2.C.2.277</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0353.htm">0353</A></TD>
+<TD class=table>CWE statuses</TD>
+<TD class=table>CWE Status</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02a.html#Heading136">2.A.13.1</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0354.htm">0354</A></TD>
+<TD class=table>Message Structure</TD>
+<TD class=table>Nachrichtenstruktur</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading295">2.C.2.279</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0355.htm">0355</A></TD>
+<TD class=table>Primary Key Value Type</TD>
+<TD class=table>Datentyp des Prim&auml;rschl&uuml;ssels</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading296">2.C.2.280</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0356.htm">0356</A></TD>
+<TD class=table>Alternate Character Set Handling Scheme</TD>
+<TD class=table>Verarbeitungshinweise alternativer Zeichensatz</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading297">2.C.2.281</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0357.htm">0357</A></TD>
+<TD class=table>Message Error Condition Codes</TD>
+<TD class=table>Fehlerbeschreibung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading298">2.C.2.282</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0358.htm">0358</A></TD>
+<TD class=table>Practitioner Group</TD>
+<TD class=table>Gruppenzugeh&ouml;rigkeit (&Auml;rzte / Pflegepersonal)</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading299">2.C.2.283</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0359.htm">0359</A></TD>
+<TD class=table>Diagnosis Priority</TD>
+<TD class=table>Diagnosepriorit&auml;t</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading300">2.C.2.284</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0360.htm">0360</A></TD>
+<TD class=table>Degree/License/Certificate</TD>
+<TD class=table>Qualifizierter Ausbildungsabschluﬂ</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading301">2.C.2.285</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0361.htm">0361</A></TD>
+<TD class=table>Application</TD>
+<TD class=table>Anwendung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading302">2.C.2.286</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0362.htm">0362</A></TD>
+<TD class=table>Facility</TD>
+<TD class=table>Einrichtung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading303">2.C.2.287</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0363.htm">0363</A></TD>
+<TD class=table>Assigning Authority</TD>
+<TD class=table>Zuweisende Autorit&auml;t</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading304">2.C.2.288</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0364.htm">0364</A></TD>
+<TD class=table>Comment Type</TD>
+<TD class=table>Art des Kommentars</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading305">2.C.2.289</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0365.htm">0365</A></TD>
+<TD class=table>Equipment State</TD>
+<TD class=table>Ger&auml;testatus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading306">2.C.2.290</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0366.htm">0366</A></TD>
+<TD class=table>Local/Remote Control State</TD>
+<TD class=table>Status der Ger&auml;testeuerung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading307">2.C.2.291</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0367.htm">0367</A></TD>
+<TD class=table>Alert Level</TD>
+<TD class=table>Alarmzustand</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading308">2.C.2.292</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0368.htm">0368</A></TD>
+<TD class=table>Remote Control Command</TD>
+<TD class=table>Fernsteuerbefehl</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading309">2.C.2.293</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0369.htm">0369</A></TD>
+<TD class=table>Specimen Role</TD>
+<TD class=table>Weitere Klassifikation der Probe</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading310">2.C.2.294</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0370.htm">0370</A></TD>
+<TD class=table>Container Status</TD>
+<TD class=table>Status des Probengef&auml;sses</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading311">2.C.2.295</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0371.htm">0371</A></TD>
+<TD class=table>Additive/Preservative</TD>
+<TD class=table>Zus&auml;tze/Konservierungsmittel</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading312">2.C.2.296</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0372.htm">0372</A></TD>
+<TD class=table>Specimen Component</TD>
+<TD class=table>Probenkomponente</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading313">2.C.2.297</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0373.htm">0373</A></TD>
+<TD class=table>Treatment</TD>
+<TD class=table>Probenvorbehandlung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading314">2.C.2.298</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0374.htm">0374</A></TD>
+<TD class=table>System Induced Contaminants</TD>
+<TD class=table>Systembedingte Probenverunreinigung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading315">2.C.2.299</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0375.htm">0375</A></TD>
+<TD class=table>Artificial Blood</TD>
+<TD class=table>Blutersatz</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading316">2.C.2.300</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0376.htm">0376</A></TD>
+<TD class=table>Special Handling Code</TD>
+<TD class=table>Spezielle Hinweise zum Umgang mit der Probe</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading317">2.C.2.301</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0377.htm">0377</A></TD>
+<TD class=table>Other Environmental Factors</TD>
+<TD class=table>Sonstige Umgebungsbedingungen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading318">2.C.2.302</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0378.htm">0378</A></TD>
+<TD class=table>Carrier Type</TD>
+<TD class=table>Art des Tr&auml;gers</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading319">2.C.2.303</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0379.htm">0379</A></TD>
+<TD class=table>Tray Type</TD>
+<TD class=table>Art des Trays</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading320">2.C.2.304</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0380.htm">0380</A></TD>
+<TD class=table>Separator Type</TD>
+<TD class=table>Art des Separators</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading321">2.C.2.305</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0381.htm">0381</A></TD>
+<TD class=table>Cap Type</TD>
+<TD class=table>Verschlusstyp</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading322">2.C.2.306</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0382.htm">0382</A></TD>
+<TD class=table>Drug Interference</TD>
+<TD class=table>Medikamentenbedingte Einfl&uuml;sse auf die Probe</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading323">2.C.2.307</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0383.htm">0383</A></TD>
+<TD class=table>Substance Status</TD>
+<TD class=table>Status der Substanz</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading324">2.C.2.308</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0384.htm">0384</A></TD>
+<TD class=table>Substance Type</TD>
+<TD class=table>Art des Substanz</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading325">2.C.2.309</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0385.htm">0385</A></TD>
+<TD class=table>Manufacturer Identifier</TD>
+<TD class=table>Herstellernummer und -name</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading326">2.C.2.310</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0386.htm">0386</A></TD>
+<TD class=table>Supplier Identifier</TD>
+<TD class=table>Lieferantennummer und -name</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading327">2.C.2.311</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0387.htm">0387</A></TD>
+<TD class=table>Command Response</TD>
+<TD class=table>Befehlsantwort</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading328">2.C.2.312</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0388.htm">0388</A></TD>
+<TD class=table>Processing Type</TD>
+<TD class=table>Produktionsmodus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading329">2.C.2.313</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0389.htm">0389</A></TD>
+<TD class=table>Analyte Repeat Status</TD>
+<TD class=table>Wiederholungsstatus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading330">2.C.2.314</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0391.htm">0391</A></TD>
+<TD class=table>Segment Group</TD>
+<TD class=table>Segmentgruppe</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading331">2.C.2.315</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0392.htm">0392</A></TD>
+<TD class=table>Match Reason</TD>
+<TD class=table>Grund der &Uuml;bereinstimmung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading332">2.C.2.316</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0393.htm">0393</A></TD>
+<TD class=table>Match Algorithms</TD>
+<TD class=table>Vergleichsalgorithmus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading333">2.C.2.317</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0394.htm">0394</A></TD>
+<TD class=table>Response Modality</TD>
+<TD class=table>Antwortmodus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading334">2.C.2.318</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0395.htm">0395</A></TD>
+<TD class=table>Modify Indicator</TD>
+<TD class=table>Kennzeichen neu/modifiziert</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading335">2.C.2.319</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0396.htm">0396</A></TD>
+<TD class=table>Coding System</TD>
+<TD class=table>Schl&uuml;sselsystem</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading336">2.C.2.320</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0397.htm">0397</A></TD>
+<TD class=table>Sequencing</TD>
+<TD class=table>Sortierreihenfolge</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading337">2.C.2.321</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0398.htm">0398</A></TD>
+<TD class=table>Continuation Style Code</TD>
+<TD class=table>Art des Fortsetzung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading338">2.C.2.322</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0399.htm">0399</A></TD>
+<TD class=table>Country Code</TD>
+<TD class=table>Landerschl&uuml;ssel</TD>
+<TD class=table>External</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading575">2.C.2.559</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0401.htm">0401</A></TD>
+<TD class=table>Government Reimbursement Program</TD>
+<TD class=table>Erm&auml;chtigende/zulassende Institution</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading339">2.C.2.323</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0402.htm">0402</A></TD>
+<TD class=table>School Type</TD>
+<TD class=table>Schultyp</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading340">2.C.2.324</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0403.htm">0403</A></TD>
+<TD class=table>Language Ability</TD>
+<TD class=table>Sprachliche F&auml;higkeit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading341">2.C.2.325</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0404.htm">0404</A></TD>
+<TD class=table>Language Proficiency</TD>
+<TD class=table>Sprachliche Fertigkeit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading342">2.C.2.326</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0405.htm">0405</A></TD>
+<TD class=table>Organization Unit</TD>
+<TD class=table>Organisationseinheit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading343">2.C.2.327</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0406.htm">0406</A></TD>
+<TD class=table>Participant Organization Unit Type</TD>
+<TD class=table>Typ der Organisationseinheit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading344">2.C.2.328</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0409.htm">0409</A></TD>
+<TD class=table>Application Change Type</TD>
+<TD class=table>&Auml;nderung des Serverzustandes</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading345">2.C.2.329</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0411.htm">0411</A></TD>
+<TD class=table>Supplemental Service Information Values</TD>
+<TD class=table>Zusatzinformation Leistungen/Logistik</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading346">2.C.2.330</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0412.htm">0412</A></TD>
+<TD class=table>Category Identifier</TD>
+<TD class=table>Kategorie Leistungsstelle</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading347">2.C.2.331</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0413.htm">0413</A></TD>
+<TD class=table>Consent Identifier</TD>
+<TD class=table>Einwilligung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading348">2.C.2.332</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0414.htm">0414</A></TD>
+<TD class=table>Units of Time</TD>
+<TD class=table>Zeiteinheiten</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading349">2.C.2.333</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0415.htm">0415</A></TD>
+<TD class=table>Transfer Type</TD>
+<TD class=table>DRG-Befreiung bei &Uuml;berweisung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading350">2.C.2.334</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0416.htm">0416</A></TD>
+<TD class=table>Procedure DRG Type</TD>
+<TD class=table>DRG Typ der Prozedur</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading351">2.C.2.335</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0417.htm">0417</A></TD>
+<TD class=table>Tissue Type Code</TD>
+<TD class=table>Gewebetyp</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading352">2.C.2.336</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0418.htm">0418</A></TD>
+<TD class=table>Procedure Priority</TD>
+<TD class=table>Priorit&auml;t der Maﬂnahme</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading353">2.C.2.337</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0421.htm">0421</A></TD>
+<TD class=table>Severity of Illness Code</TD>
+<TD class=table>Schweregrad des Ereignisses</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading354">2.C.2.338</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0422.htm">0422</A></TD>
+<TD class=table>Triage Code</TD>
+<TD class=table>Triage</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading355">2.C.2.339</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0423.htm">0423</A></TD>
+<TD class=table>Case Category Code</TD>
+<TD class=table>Grund f&uuml;r Vorstellung in der Notfallambulanz</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading356">2.C.2.340</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0424.htm">0424</A></TD>
+<TD class=table>Gestation Category Code</TD>
+<TD class=table>Kategorisierung der Schwangerschaftsdauer</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading357">2.C.2.341</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0425.htm">0425</A></TD>
+<TD class=table>Newborn Code</TD>
+<TD class=table>Klassifizierung des Orts der Niederkunft</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading358">2.C.2.342</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0426.htm">0426</A></TD>
+<TD class=table>Blood Product Code</TD>
+<TD class=table>Blutproduktcode</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading359">2.C.2.343</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0427.htm">0427</A></TD>
+<TD class=table>Risk Management Incident Code</TD>
+<TD class=table>Zwischenfall</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading360">2.C.2.344</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0428.htm">0428</A></TD>
+<TD class=table>Incident Type Code</TD>
+<TD class=table>Typ des Zwischenfalls</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading361">2.C.2.345</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0429.htm">0429</A></TD>
+<TD class=table>Production Class Code</TD>
+<TD class=table>Grund der Z&uuml;chtung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading362">2.C.2.346</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0430.htm">0430</A></TD>
+<TD class=table>Mode of Arrival Code</TD>
+<TD class=table>Transportart bei Ankunft</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading363">2.C.2.347</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0431.htm">0431</A></TD>
+<TD class=table>Recreational Drug Use Code</TD>
+<TD class=table>Drogengebrauch</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading364">2.C.2.348</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0432.htm">0432</A></TD>
+<TD class=table>Admission Level of Care Code</TD>
+<TD class=table>Charakterisierung des Krankheitszustandes</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading365">2.C.2.349</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0433.htm">0433</A></TD>
+<TD class=table>Precaution Code</TD>
+<TD class=table>Hinweise f&uuml;r Vorsichtsmaﬂnahmen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading366">2.C.2.350</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0434.htm">0434</A></TD>
+<TD class=table>Patient Condition Code</TD>
+<TD class=table>Zustand des Patienten</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading367">2.C.2.351</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0435.htm">0435</A></TD>
+<TD class=table>Advance Directive Code</TD>
+<TD class=table>Verf&uuml;gung des Patienten</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading368">2.C.2.352</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0436.htm">0436</A></TD>
+<TD class=table>Sensitivity to Causative Agent Code</TD>
+<TD class=table>Empfindlichkeit gegen&uuml;ber verursachenden Agenz</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading369">2.C.2.353</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0437.htm">0437</A></TD>
+<TD class=table>Alert Device Code</TD>
+<TD class=table>Allergiewarnvorrichtung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading370">2.C.2.354</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0438.htm">0438</A></TD>
+<TD class=table>Allergy Clinical Status</TD>
+<TD class=table>&Uuml;berpr&uuml;fungsstatus Allergie</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading371">2.C.2.355</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0440.htm">0440</A></TD>
+<TD class=table>Data Types</TD>
+<TD class=table>Datentypen</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading372">2.C.2.356</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0441.htm">0441</A></TD>
+<TD class=table>Immunization Registry Status</TD>
+<TD class=table>Status im (Immunisierungs-)Register</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading373">2.C.2.357</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0442.htm">0442</A></TD>
+<TD class=table>Location Service Code</TD>
+<TD class=table>Leistungskategorie des Ortes</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading374">2.C.2.358</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0443.htm">0443</A></TD>
+<TD class=table>Provider Role</TD>
+<TD class=table>Art der Beziehung zum Leistungserbringer (Rolle)</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading375">2.C.2.359</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0444.htm">0444</A></TD>
+<TD class=table>Name Assembly Order</TD>
+<TD class=table>Anzeigereihenfolge der Namensbestandteile</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading376">2.C.2.360</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0445.htm">0445</A></TD>
+<TD class=table>Identity Reliability Code</TD>
+<TD class=table>Zuverl&auml;ssigkeit der Identit&auml;t</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading377">2.C.2.361</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0446.htm">0446</A></TD>
+<TD class=table>Species Code</TD>
+<TD class=table>Spezies</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading378">2.C.2.362</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0447.htm">0447</A></TD>
+<TD class=table>Breed Code</TD>
+<TD class=table>Rasse/Zucht</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading379">2.C.2.363</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0448.htm">0448</A></TD>
+<TD class=table>Name Context</TD>
+<TD class=table>Namenskontext</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading380">2.C.2.364</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0450.htm">0450</A></TD>
+<TD class=table>Event Type</TD>
+<TD class=table>Ereignistyp</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading381">2.C.2.365</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0451.htm">0451</A></TD>
+<TD class=table>Substance Identifier</TD>
+<TD class=table>ID der Substanz</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading382">2.C.2.366</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0452.htm">0452</A></TD>
+<TD class=table>Health Care Provider Type Code</TD>
+<TD class=table>Typ des Gesundheitsdienstleisters</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading383">2.C.2.367</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0453.htm">0453</A></TD>
+<TD class=table>Health Care Provider Classification</TD>
+<TD class=table>Klassifizierung des Gesundheitsdienstleisters</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading384">2.C.2.368</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0454.htm">0454</A></TD>
+<TD class=table>Health Care Provider Area of Specialization</TD>
+<TD class=table>Spezialgebiet des Gesundheitsdienstleisters</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading385">2.C.2.369</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0455.htm">0455</A></TD>
+<TD class=table>Type of Bill Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading386">2.C.2.370</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0456.htm">0456</A></TD>
+<TD class=table>Revenue code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading387">2.C.2.371</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0457.htm">0457</A></TD>
+<TD class=table>Overall Claim Disposition Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading388">2.C.2.372</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0458.htm">0458</A></TD>
+<TD class=table>OCE Edit Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading389">2.C.2.373</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0459.htm">0459</A></TD>
+<TD class=table>Reimbursement Action Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading390">2.C.2.374</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0460.htm">0460</A></TD>
+<TD class=table>Denial or Rejection Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading391">2.C.2.375</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0461.htm">0461</A></TD>
+<TD class=table>License Number</TD>
+<TD class=table>Lizenznummer</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading392">2.C.2.376</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0462.htm">0462</A></TD>
+<TD class=table>Location Cost Center</TD>
+<TD class=table>Kostenstelle des Ortes</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading393">2.C.2.377</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0463.htm">0463</A></TD>
+<TD class=table>Inventory Number</TD>
+<TD class=table>Artikel-/Lagernummer</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading394">2.C.2.378</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0464.htm">0464</A></TD>
+<TD class=table>Facility ID</TD>
+<TD class=table>ID der Einrichtung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading395">2.C.2.379</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0465.htm">0465</A></TD>
+<TD class=table>Name/Address Representation</TD>
+<TD class=table>Darstellung Name/Adresse</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading396">2.C.2.380</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0466.htm">0466</A></TD>
+<TD class=table>Ambulatory Payment Classification Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading397">2.C.2.381</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0467.htm">0467</A></TD>
+<TD class=table>Modifier Edit Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading398">2.C.2.382</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0468.htm">0468</A></TD>
+<TD class=table>Payment Adjustment Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading399">2.C.2.383</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0469.htm">0469</A></TD>
+<TD class=table>Packaging Status Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading400">2.C.2.384</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0470.htm">0470</A></TD>
+<TD class=table>Reimbursement Type Code</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading401">2.C.2.385</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0471.htm">0471</A></TD>
+<TD class=table>Query Name</TD>
+<TD class=table>Abfragename</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading402">2.C.2.386</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0472.htm">0472</A></TD>
+<TD class=table>TQ Conjunction ID</TD>
+<TD class=table>TQ Verkn&uuml;pfung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading403">2.C.2.387</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0473.htm">0473</A></TD>
+<TD class=table>Formulary Status</TD>
+<TD class=table>Status im Hauskatalog</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading404">2.C.2.388</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0474.htm">0474</A></TD>
+<TD class=table>Practitioner Organization Unit Type</TD>
+<TD class=table>Typ der Organisationseinheit</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading405">2.C.2.389</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0475.htm">0475</A></TD>
+<TD class=table>Charge Type Reason</TD>
+<TD class=table>Begr&uuml;ndung der Abrechnungsart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading406">2.C.2.390</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0476.htm">0476</A></TD>
+<TD class=table>Medically Necessary Duplicate Procedure Reason</TD>
+<TD class=table>Begr&uuml;ndung f&uuml;r mehrf. Durchf&uuml;hrung einer Maﬂnahme</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading407">2.C.2.391</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0477.htm">0477</A></TD>
+<TD class=table>Controlled Substance Schedule</TD>
+<TD class=table>Klassif. staatl. reglementierter Wirkstoffe (BTM)</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading408">2.C.2.392</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0478.htm">0478</A></TD>
+<TD class=table>Formulary Status</TD>
+<TD class=table>Status in der Hausliste</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading409">2.C.2.393</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0479.htm">0479</A></TD>
+<TD class=table>Pharmaceutical Substances</TD>
+<TD class=table>pharmazeutische Substanzen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading410">2.C.2.394</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0480.htm">0480</A></TD>
+<TD class=table>Pharmacy Order Types</TD>
+<TD class=table>Zusatzinformationen Auftragslogistik</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading411">2.C.2.395</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0482.htm">0482</A></TD>
+<TD class=table>Order Type</TD>
+<TD class=table>Patientenstatus bezogen auf Auftrag</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading412">2.C.2.396</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0483.htm">0483</A></TD>
+<TD class=table>Authorization Mode</TD>
+<TD class=table>Art der Authorisierung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading413">2.C.2.397</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0484.htm">0484</A></TD>
+<TD class=table>Dispense Type</TD>
+<TD class=table>Art der Liefermenge</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading414">2.C.2.398</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0485.htm">0485</A></TD>
+<TD class=table>Extended Priority Codes</TD>
+<TD class=table>Erweiterte Priorit&auml;ten</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading415">2.C.2.399</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0487.htm">0487</A></TD>
+<TD class=table>Specimen Type</TD>
+<TD class=table>Probenmaterial</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading416">2.C.2.400</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0488.htm">0488</A></TD>
+<TD class=table>Specimen Collection Method</TD>
+<TD class=table>Art der Probennahme</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading417">2.C.2.401</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0489.htm">0489</A></TD>
+<TD class=table>Risk Codes</TD>
+<TD class=table>Art der Gef&auml;hrdung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading418">2.C.2.402</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0490.htm">0490</A></TD>
+<TD class=table>Specimen Reject Reason</TD>
+<TD class=table>Grund f&uuml;r Zur&uuml;ckweisung der Probe</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading419">2.C.2.403</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0491.htm">0491</A></TD>
+<TD class=table>Specimen Quality</TD>
+<TD class=table>Probenqualit&auml;t</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading420">2.C.2.404</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0492.htm">0492</A></TD>
+<TD class=table>Specimen Appropriateness</TD>
+<TD class=table>Eignung der Probe</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading421">2.C.2.405</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0493.htm">0493</A></TD>
+<TD class=table>Specimen Condition</TD>
+<TD class=table>Probenzustand</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading422">2.C.2.406</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0494.htm">0494</A></TD>
+<TD class=table>Specimen Child Role</TD>
+<TD class=table>Beziehung zur Prim&auml;rprobe</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading423">2.C.2.407</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0495.htm">0495</A></TD>
+<TD class=table>Body Site Modifier</TD>
+<TD class=table>Zusatzangabe zum K&ouml;rperteil</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading424">2.C.2.408</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0496.htm">0496</A></TD>
+<TD class=table>Consent Type</TD>
+<TD class=table>Art der Einverst&auml;ndniserkl&auml;rung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading425">2.C.2.409</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0497.htm">0497</A></TD>
+<TD class=table>Consent Mode</TD>
+<TD class=table>Form der Einverst&auml;ndniserkl&auml;rung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading426">2.C.2.410</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0498.htm">0498</A></TD>
+<TD class=table>Consent Status</TD>
+<TD class=table>Status der Einverst&auml;ndniserkl&auml;rung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading427">2.C.2.411</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0499.htm">0499</A></TD>
+<TD class=table>Consent Bypass Reason</TD>
+<TD class=table>Grund f&uuml;r Nichteinholung eines Einverst&auml;ndnisses</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading428">2.C.2.412</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0500.htm">0500</A></TD>
+<TD class=table>Consent Disclosure Level</TD>
+<TD class=table>Umfang der Patientenaufkl&auml;rung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading429">2.C.2.413</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0501.htm">0501</A></TD>
+<TD class=table>Consent Non-Disclosure Reason</TD>
+<TD class=table>Grund f&uuml;r eingeschr&auml;nkte Patientenaufkl&auml;rung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading430">2.C.2.414</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0502.htm">0502</A></TD>
+<TD class=table>Non-Subject Consenter Reason</TD>
+<TD class=table>Grund f&uuml;r die Einwilligung durch Dritte</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading431">2.C.2.415</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0503.htm">0503</A></TD>
+<TD class=table>Sequence/Results Flag</TD>
+<TD class=table>zeitliche Abh&auml;ngigkeit</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading432">2.C.2.416</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0504.htm">0504</A></TD>
+<TD class=table>Sequence Condition Code</TD>
+<TD class=table>Festlegung zeitlicher Abh&auml;ngigkeit</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading433">2.C.2.417</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0505.htm">0505</A></TD>
+<TD class=table>Cyclic Entry/Exit Indicator</TD>
+<TD class=table>erster/letzter einer zyklischen Gruppe</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading434">2.C.2.418</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0506.htm">0506</A></TD>
+<TD class=table>Service Request Relationship</TD>
+<TD class=table>Beziehung zu anderen Auftr&auml;gen</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading435">2.C.2.419</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0507.htm">0507</A></TD>
+<TD class=table>Observation Result Handling</TD>
+<TD class=table>Umgang mit Untersuchungsergebnis</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading436">2.C.2.420</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0508.htm">0508</A></TD>
+<TD class=table>Blood Product Processing Requirements</TD>
+<TD class=table>geforderte Vorbehandlung des Blutproduktes</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading437">2.C.2.421</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0509.htm">0509</A></TD>
+<TD class=table>Indication for Use</TD>
+<TD class=table>Bestellgrund</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading438">2.C.2.422</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0510.htm">0510</A></TD>
+<TD class=table>Blood Product Dispense Status</TD>
+<TD class=table>Ausgabestatus des Blutprodukts</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading439">2.C.2.423</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0511.htm">0511</A></TD>
+<TD class=table>BP Observation Status Codes Interpretation</TD>
+<TD class=table>Statuscode in Blutproduktnachrichten</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading440">2.C.2.424</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0512.htm">0512</A></TD>
+<TD class=table>Commercial Product</TD>
+<TD class=table>Art des kommerziellen Blutprodukts</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading441">2.C.2.425</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0513.htm">0513</A></TD>
+<TD class=table>Blood Product Transfusion/Disposition Status</TD>
+<TD class=table>Transfusions-/Auslieferungsstatus des Blutprodukts</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading442">2.C.2.426</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0514.htm">0514</A></TD>
+<TD class=table>Transfusion Adverse Reaction</TD>
+<TD class=table>adverse Reaktion bei Transfusion</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading443">2.C.2.427</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0515.htm">0515</A></TD>
+<TD class=table>Transfusion Interrupted Reason</TD>
+<TD class=table>Grund f&uuml;r Transfusionsunterbrechung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading444">2.C.2.428</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0516.htm">0516</A></TD>
+<TD class=table>Error Severity</TD>
+<TD class=table>Schweregrad des Fehlers</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading445">2.C.2.429</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0517.htm">0517</A></TD>
+<TD class=table>Inform Person Code</TD>
+<TD class=table>Zielgruppe f&uuml;r Fehlermeldung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading446">2.C.2.430</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0518.htm">0518</A></TD>
+<TD class=table>Override Type</TD>
+<TD class=table>Art der &Uuml;bersteuerung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading447">2.C.2.431</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0519.htm">0519</A></TD>
+<TD class=table>Override Reason</TD>
+<TD class=table>Grund der &Uuml;bersteuerung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading448">2.C.2.432</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0520.htm">0520</A></TD>
+<TD class=table>Message Waiting Priority</TD>
+<TD class=table>Priorit&auml;t wartender Nachricht</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading449">2.C.2.433</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0521.htm">0521</A></TD>
+<TD class=table>Override Code</TD>
+<TD class=table>Grund der &Uuml;bersteuerung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading450">2.C.2.434</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0523.htm">0523</A></TD>
+<TD class=table>Computation Type</TD>
+<TD class=table>Berechnungsgrundlage</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading451">2.C.2.435</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0525.htm">0525</A></TD>
+<TD class=table>Privilege</TD>
+<TD class=table>Berechtigungen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading452">2.C.2.436</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0526.htm">0526</A></TD>
+<TD class=table>Privilege Class</TD>
+<TD class=table>Berechtigungsklasse</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading453">2.C.2.437</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0527.htm">0527</A></TD>
+<TD class=table>Calendar Alignment</TD>
+<TD class=table>Kalenderbezug</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading454">2.C.2.438</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0528.htm">0528</A></TD>
+<TD class=table>Event Related Period</TD>
+<TD class=table>Bezug zu t&auml;glichen Ereignissen</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading455">2.C.2.439</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0530.htm">0530</A></TD>
+<TD class=table>Organization, Agency, Department</TD>
+<TD class=table>Organization</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading456">2.C.2.440</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0531.htm">0531</A></TD>
+<TD class=table>Institution</TD>
+<TD class=table>Institution</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading457">2.C.2.441</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0532.htm">0532</A></TD>
+<TD class=table>Expanded Yes/no Indicator</TD>
+<TD class=table>erweitertes Kennzeichen Ja/Nein</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading458">2.C.2.442</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0533.htm">0533</A></TD>
+<TD class=table>Application Error Code</TD>
+<TD class=table>applikationsspezifischer Fehlercode</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading459">2.C.2.443</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0534.htm">0534</A></TD>
+<TD class=table>Notify Clergy Code</TD>
+<TD class=table>Benachrichtigung Geistlicher</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading460">2.C.2.444</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0535.htm">0535</A></TD>
+<TD class=table>Signature Code</TD>
+<TD class=table>Unterschriftenart</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading461">2.C.2.445</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0536.htm">0536</A></TD>
+<TD class=table>Certificate Status</TD>
+<TD class=table>Zertifikatsstatus</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading462">2.C.2.446</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0537.htm">0537</A></TD>
+<TD class=table>Institution</TD>
+<TD class=table>Institution</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading463">2.C.2.447</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0538.htm">0538</A></TD>
+<TD class=table>Institution Relationship Type</TD>
+<TD class=table>Beziehung zur Institution</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading464">2.C.2.448</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0539.htm">0539</A></TD>
+<TD class=table>Cost Center Code</TD>
+<TD class=table>Kostenstellen</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading465">2.C.2.449</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0540.htm">0540</A></TD>
+<TD class=table>Inactive Reason Code</TD>
+<TD class=table>Begr&uuml;ndung f&uuml;r inaktives Arbeitsverh&auml;ltnis</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading466">2.C.2.450</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0541.htm">0541</A></TD>
+<TD class=table>Specimen Type Modifier</TD>
+<TD class=table>zus&auml;tzliche Kategorisierung des Probenmaterials</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading467">2.C.2.451</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0542.htm">0542</A></TD>
+<TD class=table>Specimen Source Type Modifier</TD>
+<TD class=table>Zus&auml;tzliche Kategorisierung zum Ort d. Probennahme</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading468">2.C.2.452</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0543.htm">0543</A></TD>
+<TD class=table>Specimen Collection Site</TD>
+<TD class=table>Zugangsweg bei Probennahme</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading469">2.C.2.453</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0544.htm">0544</A></TD>
+<TD class=table>Container Condition</TD>
+<TD class=table>Zustand des Probengef&auml;ﬂes</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading470">2.C.2.454</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0547.htm">0547</A></TD>
+<TD class=table>Jurisdictional Breadth</TD>
+<TD class=table>legislative Ebene</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading471">2.C.2.455</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0548.htm">0548</A></TD>
+<TD class=table>Signatory's Relationship to Subject</TD>
+<TD class=table>Beziehung des Unterschreibenden zum Subject</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading472">2.C.2.456</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0549.htm">0549</A></TD>
+<TD class=table>NDC Codes</TD>
+<TD class=table>nicht verwendet</TD>
+<TD class=table>External</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading473">2.C.2.457</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0550.htm">0550</A></TD>
+<TD class=table>Body Parts</TD>
+<TD class=table>K&ouml;rperteile</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading474">2.C.2.458</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0552.htm">0552</A></TD>
+<TD class=table>Advanced Beneficiary Notice Override Reason</TD>
+<TD class=table>Grund f&uuml;r Nichtvorliegen der Zuzahlungserkl&auml;rung</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading475">2.C.2.459</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0553.htm">0553</A></TD>
+<TD class=table>Invoice Control Code</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading476">2.C.2.460</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0554.htm">0554</A></TD>
+<TD class=table>Invoice Reason Codes</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading477">2.C.2.461</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0555.htm">0555</A></TD>
+<TD class=table>Invoice Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading478">2.C.2.462</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0556.htm">0556</A></TD>
+<TD class=table>Benefit Group</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading479">2.C.2.463</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0557.htm">0557</A></TD>
+<TD class=table>Payee Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading480">2.C.2.464</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0558.htm">0558</A></TD>
+<TD class=table>Payee Relationship to Invoice</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading481">2.C.2.465</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0559.htm">0559</A></TD>
+<TD class=table>Product/Service Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading482">2.C.2.466</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0560.htm">0560</A></TD>
+<TD class=table>Quantity Units</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading483">2.C.2.467</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0561.htm">0561</A></TD>
+<TD class=table>Product/Services Clarification Codes</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading484">2.C.2.468</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0562.htm">0562</A></TD>
+<TD class=table>Processing Consideration Codes</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading485">2.C.2.469</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0564.htm">0564</A></TD>
+<TD class=table>Adjustment Category Code</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading486">2.C.2.470</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0565.htm">0565</A></TD>
+<TD class=table>Provider Adjustment Reason Code</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading487">2.C.2.471</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0566.htm">0566</A></TD>
+<TD class=table>Blood Unit Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading488">2.C.2.472</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0569.htm">0569</A></TD>
+<TD class=table>Adjustment Action</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading491">2.C.2.475</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0570.htm">0570</A></TD>
+<TD class=table>Payment Method Code</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading492">2.C.2.476</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0571.htm">0571</A></TD>
+<TD class=table>Invoice Processing Results Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading493">2.C.2.477</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0572.htm">0572</A></TD>
+<TD class=table>Tax status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading494">2.C.2.478</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0615.htm">0615</A></TD>
+<TD class=table>User Authentication Credential Type Code</TD>
+<TD class=table>Typ der Authentifizierungstokens</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading495">2.C.2.479</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0616.htm">0616</A></TD>
+<TD class=table>Address Expiration Reason</TD>
+<TD class=table>Grund f&uuml;r das G&uuml;ltigkeitsende einer Adresse</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading496">2.C.2.480</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0617.htm">0617</A></TD>
+<TD class=table>Address Usage</TD>
+<TD class=table>Verwendungszweck der Adresse</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading497">2.C.2.481</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0618.htm">0618</A></TD>
+<TD class=table>Protection Code</TD>
+<TD class=table>Auskunftsbeschr&auml;nkung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading498">2.C.2.482</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0625.htm">0625</A></TD>
+<TD class=table>Item Status Codes</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading499">2.C.2.483</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0634.htm">0634</A></TD>
+<TD class=table>Item Importance Codes</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading500">2.C.2.484</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0642.htm">0642</A></TD>
+<TD class=table>Reorder Theory Codes</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading501">2.C.2.485</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0651.htm">0651</A></TD>
+<TD class=table>Labor Calculation Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading502">2.C.2.486</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0653.htm">0653</A></TD>
+<TD class=table>Date Format</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading503">2.C.2.487</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0657.htm">0657</A></TD>
+<TD class=table>Device Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading504">2.C.2.488</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0659.htm">0659</A></TD>
+<TD class=table>Lot Control</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading505">2.C.2.489</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0667.htm">0667</A></TD>
+<TD class=table>Device Data State</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading506">2.C.2.490</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0669.htm">0669</A></TD>
+<TD class=table>Load Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading507">2.C.2.491</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0682.htm">0682</A></TD>
+<TD class=table>Device Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading508">2.C.2.492</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0702.htm">0702</A></TD>
+<TD class=table>Cycle Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading509">2.C.2.493</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0717.htm">0717</A></TD>
+<TD class=table>Access Restriction Value</TD>
+<TD class=table>Umfang der Zugruffsbeschr&auml;nkung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading510">2.C.2.494</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0719.htm">0719</A></TD>
+<TD class=table>Access Restriction Reason Code</TD>
+<TD class=table>Begr&uuml;ndung f&uuml;r Zugriffsbeschr&auml;nkung</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading511">2.C.2.495</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0725.htm">0725</A></TD>
+<TD class=table>Mood Codes</TD>
+<TD class=table>Modus</TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading512">2.C.2.496</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0728.htm">0728</A></TD>
+<TD class=table>CCL Value</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading513">2.C.2.497</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0731.htm">0731</A></TD>
+<TD class=table>DRG Diagnosis Determination Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading514">2.C.2.498</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0734.htm">0734</A></TD>
+<TD class=table>Grouper Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading515">2.C.2.499</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0739.htm">0739</A></TD>
+<TD class=table>DRG Status Patient</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading516">2.C.2.500</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0742.htm">0742</A></TD>
+<TD class=table>DRG Status Financial Calculation</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading517">2.C.2.501</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0749.htm">0749</A></TD>
+<TD class=table>DRG Grouping Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading518">2.C.2.502</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0755.htm">0755</A></TD>
+<TD class=table>Status Weight At Birth</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading519">2.C.2.503</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0757.htm">0757</A></TD>
+<TD class=table>DRG Status Respiration Minutes</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading520">2.C.2.504</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0759.htm">0759</A></TD>
+<TD class=table>Status Admission</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading521">2.C.2.505</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0761.htm">0761</A></TD>
+<TD class=table>DRG Procedure Determination Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading522">2.C.2.506</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0763.htm">0763</A></TD>
+<TD class=table>DRG Procedure Relevance</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading523">2.C.2.507</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0771.htm">0771</A></TD>
+<TD class=table>Resource Type or Category</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading524">2.C.2.508</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0776.htm">0776</A></TD>
+<TD class=table>Item Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading525">2.C.2.509</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0778.htm">0778</A></TD>
+<TD class=table>Item Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading526">2.C.2.510</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0790.htm">0790</A></TD>
+<TD class=table>Approving Regulatory Agency</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading527">2.C.2.511</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0793.htm">0793</A></TD>
+<TD class=table>Ruling Act</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading528">2.C.2.512</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0806.htm">0806</A></TD>
+<TD class=table>Sterilization Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading529">2.C.2.513</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0809.htm">0809</A></TD>
+<TD class=table>Maintenance Cycle</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading530">2.C.2.514</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0811.htm">0811</A></TD>
+<TD class=table>Maintenance Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading531">2.C.2.515</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0818.htm">0818</A></TD>
+<TD class=table>Package</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading532">2.C.2.516</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0834.htm">0834</A></TD>
+<TD class=table>MIME Types</TD>
+<TD class=table>MIME Type</TD>
+<TD class=table>Imported</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading533">2.C.2.517</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0836.htm">0836</A></TD>
+<TD class=table>Problem Severity</TD>
+<TD class=table>Schweregrad des Problems</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading534">2.C.2.518</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0838.htm">0838</A></TD>
+<TD class=table>Problem Perspective</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading535">2.C.2.519</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0865.htm">0865</A></TD>
+<TD class=table>Referral Documentation Completion Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading536">2.C.2.520</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0868.htm">0868</A></TD>
+<TD class=table>Telecommunication Expiration Reason</TD>
+<TD class=table>Grund f&uuml;r das G&uuml;ltigkeitsende einer Telekom.adr.</TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading537">2.C.2.521</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0871.htm">0871</A></TD>
+<TD class=table>Supply Risk Codes</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading538">2.C.2.522</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0879.htm">0879</A></TD>
+<TD class=table>Product/Service Code</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading539">2.C.2.523</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0880.htm">0880</A></TD>
+<TD class=table>Product/Service Code Modifier</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading540">2.C.2.524</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0881.htm">0881</A></TD>
+<TD class=table>Role Executing Physician</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading541">2.C.2.525</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0882.htm">0882</A></TD>
+<TD class=table>Medical Role Executing Physician</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading542">2.C.2.526</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0894.htm">0894</A></TD>
+<TD class=table>Side of body</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading543">2.C.2.527</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0895.htm">0895</A></TD>
+<TD class=table>Present On Admission (POA) Indicator</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading544">2.C.2.528</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0904.htm">0904</A></TD>
+<TD class=table>Security Check Scheme</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading545">2.C.2.529</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0905.htm">0905</A></TD>
+<TD class=table>Shipment Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading546">2.C.2.530</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0906.htm">0906</A></TD>
+<TD class=table>ActPriority</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading547">2.C.2.531</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0907.htm">0907</A></TD>
+<TD class=table>Confidentiality</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading548">2.C.2.532</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0908.htm">0908</A></TD>
+<TD class=table>Package Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading549">2.C.2.533</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0909.htm">0909</A></TD>
+<TD class=table>Patient Results Release Categorization Scheme</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading550">2.C.2.534</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0910.htm">0910</A></TD>
+<TD class=table>Acquisition Modality</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading551">2.C.2.535</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0912.htm">0912</A></TD>
+<TD class=table>Participation</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading552">2.C.2.536</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0913.htm">0913</A></TD>
+<TD class=table>Monetary Denomination Code</TD>
+<TD class=table><BR></TD>
+<TD class=table>External</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading553">2.C.2.537</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0914.htm">0914</A></TD>
+<TD class=table>Root Cause</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading554">2.C.2.538</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0915.htm">0915</A></TD>
+<TD class=table>Process Control Code</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading555">2.C.2.539</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0916.htm">0916</A></TD>
+<TD class=table>Relevant Clincial Information</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading556">2.C.2.540</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0917.htm">0917</A></TD>
+<TD class=table>Bolus Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading557">2.C.2.541</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0918.htm">0918</A></TD>
+<TD class=table>PCA Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading558">2.C.2.542</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0919.htm">0919</A></TD>
+<TD class=table>Exclusive Test</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading559">2.C.2.543</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0920.htm">0920</A></TD>
+<TD class=table>Preferred Specimen/Attribute Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading560">2.C.2.544</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0921.htm">0921</A></TD>
+<TD class=table>Certification Type Code</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading561">2.C.2.545</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0922.htm">0922</A></TD>
+<TD class=table>Certification Category Code</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading562">2.C.2.546</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0923.htm">0923</A></TD>
+<TD class=table>Process Interruption</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading563">2.C.2.547</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0924.htm">0924</A></TD>
+<TD class=table>Cumulative Dosage Limit UoM</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading564">2.C.2.548</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0925.htm">0925</A></TD>
+<TD class=table>Phlebotomy Issue</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading565">2.C.2.549</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0926.htm">0926</A></TD>
+<TD class=table>Phlebotomy Status</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading566">2.C.2.550</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0927.htm">0927</A></TD>
+<TD class=table>Arm Stick</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading567">2.C.2.551</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0929.htm">0929</A></TD>
+<TD class=table>Weight Units</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading568">2.C.2.552</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0930.htm">0930</A></TD>
+<TD class=table>Volume Units</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading569">2.C.2.553</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0931.htm">0931</A></TD>
+<TD class=table>Temperature Units</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading570">2.C.2.554</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0932.htm">0932</A></TD>
+<TD class=table>Donation Duration Units</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading571">2.C.2.555</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0933.htm">0933</A></TD>
+<TD class=table>Intended Procedure Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading572">2.C.2.556</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0934.htm">0934</A></TD>
+<TD class=table>Order Workflow Profile</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading573">2.C.2.557</A></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab0935.htm">0935</A></TD>
+<TD class=table>Process Interruption Reason</TD>
+<TD class=table><BR></TD>
+<TD class=table>User</TD>
+<TD class=table> <A HREF = "std281/ch02c.html#Heading574">2.C.2.558</A></TD>
+</TR>
+<TR class=info-odd>
+<TD class=table><A HREF = "hl7v281tab0936.htm">0936</A></TD>
+<TD class=table>Observation Type</TD>
+<TD class=table><BR></TD>
+<TD class=table>HL7</TD>
+<TD class=table><BR></TD>
+</TR>
+<TR class=info-even>
+<TD class=table><A HREF = "hl7v281tab9999.htm">9999</A></TD>
+<TD class=table>no table for CE</TD>
+<TD class=table>keine Tabelle f&uuml;r CE definiert</TD>
+<TD class=table>HL7</TD>
+<TD class=table><BR></TD>
+</TR>
+</TABLE>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

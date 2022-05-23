@@ -1,0 +1,401 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.9</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: -1 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std29/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.9
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v29typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v29qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2 align=center>
+XONs
+</H2>
+<P>
+<A NAME = "XON">
+<H2>Data Structure XON</H2>
+<TABLE>
+<TR>
+<TD class=dt>Description:</TD>
+<TD class=dt>Extended Composite Name and Identification Number for Organizations</TD>
+</TR>
+<TR>
+<TD class=dt>Data Type:</TD>
+<TD class=dt>XON</TD>
+</TR>
+<TR>
+<TD class=dt>Chapter:</TD>
+<TD class=dt> <A HREF = "std29/ch02A.html#Heading807">2A.3.89</A></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE class=info>
+<TR class=info>
+<TH class=info>Seq.</TH>
+<TH class=info>Comp. No.</TH>
+<TH class=info>Index</TH>
+<TH class=info>German Interpretation</TH>
+<TH class=info>Sec.</TH>
+<TH class=info>Table (this use)</TH>
+<TH class=info>Table (Comp.)</TH>
+<TH class=info>Opt.</TH>
+<TH class=info>Length</TH>
+<TH class=info>C.LEN</TH>
+<TH class=info>Data Type</TH>
+<TH class=info>Data Structure</TH>
+</TR>
+<TR class=datatype-odd>
+<TD class=datatype>1</TD>
+<TD class=datatype>420</TD>
+<TD class=datatype>Organization Name</TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=req_opt>O</TD>
+<TD class=length><BR></TD>
+<TD class=conf_length><BR></TD>
+<TD class=datatype><A HREF = "hl7v29typST.htm">ST</A></TD>
+<TD class=datatype><A HREF = "hl7v29typST.htm">ST</A></TD>
+</TR>
+<TR class=datatype-even>
+<TD class=datatype>2</TD>
+<TD class=datatype>421</TD>
+<TD class=datatype>Organization Name Type Code</TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><A HREF = "hl7v29tab0204.htm">0204</A></TD>
+<TD class=datatype><A HREF = "hl7v29tab0204.htm">0204</A></TD>
+<TD class=req_opt>O</TD>
+<TD class=length><BR></TD>
+<TD class=conf_length><BR></TD>
+<TD class=datatype><A HREF = "hl7v29typCWE.htm">CWE</A></TD>
+<TD class=datatype><A HREF = "hl7v29typCWE.htm">CWE</A></TD>
+</TR>
+<TR class=datatype-odd>
+<TD class=datatype>3</TD>
+<TD class=datatype>422</TD>
+<TD class=datatype>ID Number</TD>
+<TD class=datatype> </TD>
+<TD class=datatype> </TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=req_opt>W</TD>
+<TD class=length><BR></TD>
+<TD class=conf_length><BR></TD>
+<TD class=datatype><A HREF = "hl7v29typXON.htm">XON</A></TD>
+<TD class=datatype><A HREF = "hl7v29typXON.htm">XON</A></TD>
+</TR>
+<TR class=datatype-even>
+<TD class=datatype>4</TD>
+<TD class=datatype>423</TD>
+<TD class=datatype>Identifier Check Digit</TD>
+<TD class=datatype> </TD>
+<TD class=datatype> </TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=req_opt>W</TD>
+<TD class=length><BR></TD>
+<TD class=conf_length><BR></TD>
+<TD class=datatype><A HREF = "hl7v29typXON.htm">XON</A></TD>
+<TD class=datatype><A HREF = "hl7v29typXON.htm">XON</A></TD>
+</TR>
+<TR class=datatype-odd>
+<TD class=datatype>5</TD>
+<TD class=datatype>424</TD>
+<TD class=datatype>Check Digit Scheme </TD>
+<TD class=datatype> </TD>
+<TD class=datatype> </TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=req_opt>W</TD>
+<TD class=length><BR></TD>
+<TD class=conf_length><BR></TD>
+<TD class=datatype><A HREF = "hl7v29typXON.htm">XON</A></TD>
+<TD class=datatype><A HREF = "hl7v29typXON.htm">XON</A></TD>
+</TR>
+<TR class=datatype-even>
+<TD class=datatype>6</TD>
+<TD class=datatype>425</TD>
+<TD class=datatype>Assigning Authority</TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><A HREF = "hl7v29tab0363.htm">0363</A></TD>
+<TD class=datatype><A HREF = "hl7v29tab0363.htm">0363</A></TD>
+<TD class=req_opt>O</TD>
+<TD class=length><BR></TD>
+<TD class=conf_length><BR></TD>
+<TD class=datatype><A HREF = "hl7v29typHD.htm">HD</A></TD>
+<TD class=datatype><A HREF = "hl7v29typHD.htm">HD</A></TD>
+</TR>
+<TR class=datatype-odd>
+<TD class=datatype>7</TD>
+<TD class=datatype>426</TD>
+<TD class=datatype>Identifier Type Code</TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><A HREF = "hl7v29tab0203.htm">0203</A></TD>
+<TD class=datatype><A HREF = "hl7v29tab0203.htm">0203</A></TD>
+<TD class=req_opt>O</TD>
+<TD class=length><BR></TD>
+<TD class=conf_length><BR></TD>
+<TD class=datatype><A HREF = "hl7v29typID.htm">ID</A></TD>
+<TD class=datatype><A HREF = "hl7v29typID.htm">ID</A></TD>
+</TR>
+<TR class=datatype-even>
+<TD class=datatype>8</TD>
+<TD class=datatype>427</TD>
+<TD class=datatype>Assigning Facility</TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=req_opt>O</TD>
+<TD class=length><BR></TD>
+<TD class=conf_length><BR></TD>
+<TD class=datatype><A HREF = "hl7v29typHD.htm">HD</A></TD>
+<TD class=datatype><A HREF = "hl7v29typHD.htm">HD</A></TD>
+</TR>
+<TR class=datatype-odd>
+<TD class=datatype>9</TD>
+<TD class=datatype>428</TD>
+<TD class=datatype>Name Representation Code</TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><A HREF = "hl7v29tab0465.htm">0465</A></TD>
+<TD class=datatype><A HREF = "hl7v29tab0465.htm">0465</A></TD>
+<TD class=req_opt>O</TD>
+<TD class=length><BR></TD>
+<TD class=conf_length><BR></TD>
+<TD class=datatype><A HREF = "hl7v29typID.htm">ID</A></TD>
+<TD class=datatype><A HREF = "hl7v29typID.htm">ID</A></TD>
+</TR>
+<TR class=datatype-even>
+<TD class=datatype>10</TD>
+<TD class=datatype>429</TD>
+<TD class=datatype>Organization Identifier</TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=datatype><BR></TD>
+<TD class=req_opt>O</TD>
+<TD class=length><BR></TD>
+<TD class=conf_length><BR></TD>
+<TD class=datatype><A HREF = "hl7v29typST.htm">ST</A></TD>
+<TD class=datatype><A HREF = "hl7v29typST.htm">ST</A></TD>
+</TR>
+</TABLE>
+<P>
+<H3>
+Used in Data Elements:
+</H3>
+<DD><A HREF = "hl7v29datel.htm#00202">00202</A>: Organization Name - NK1</DD>
+<DD><A HREF = "hl7v29datel.htm#00425">00425</A>: Guarantor Organization Name</DD>
+<DD><A HREF = "hl7v29datel.htm#00429">00429</A>: Insurance Company Name</DD>
+<DD><A HREF = "hl7v29datel.htm#00434">00434</A>: Group Name</DD>
+<DD><A HREF = "hl7v29datel.htm#00436">00436</A>: Insured's Group Emp Name</DD>
+<DD><A HREF = "hl7v29datel.htm#00724">00724</A>: Clinic Organization Name</DD>
+<DD><A HREF = "hl7v29datel.htm#00756">00756</A>: Patient Primary Facility</DD>
+<DD><A HREF = "hl7v29datel.htm#00809">00809</A>: Insured Organization Name and ID</DD>
+<DD><A HREF = "hl7v29datel.htm#00810">00810</A>: Insured Employer Organization Name and ID</DD>
+<DD><A HREF = "hl7v29datel.htm#00947">00947</A>: Organization Name - LOC</DD>
+<DD><A HREF = "hl7v29datel.htm#00993">00993</A>: Contract Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#01059">01059</A>: Sender Organization Name</DD>
+<DD><A HREF = "hl7v29datel.htm#01247">01247</A>: Manufacturer/Distributor</DD>
+<DD><A HREF = "hl7v29datel.htm#01299">01299</A>: Guarantor Employer's Organization Name</DD>
+<DD><A HREF = "hl7v29datel.htm#01301">01301</A>: Organizational Location Relationship Value</DD>
+<DD><A HREF = "hl7v29datel.htm#01444">01444</A>: Professional Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#01452">01452</A>: School</DD>
+<DD><A HREF = "hl7v29datel.htm#01564">01564</A>: Statused by Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#01567">01567</A>: Place of Worship</DD>
+<DD><A HREF = "hl7v29datel.htm#01722">01722</A>: CP Manufacturer </DD>
+<DD><A HREF = "hl7v29datel.htm#01740">01740</A>: CP Manufacturer </DD>
+<DD><A HREF = "hl7v29datel.htm#01823">01823</A>: Sending Responsible Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#01824">01824</A>: Receiving Responsible Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#01834">01834</A>: Software Vendor Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#01859">01859</A>: Granting Authority</DD>
+<DD><A HREF = "hl7v29datel.htm#01923">01923</A>: Provider Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#01924">01924</A>: Payer Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#01942">01942</A>: Payee Identification List</DD>
+<DD><A HREF = "hl7v29datel.htm#02017">02017</A>: Responsible Organization </DD>
+<DD><A HREF = "hl7v29datel.htm#02025">02025</A>: Payee Bank Identification</DD>
+<DD><A HREF = "hl7v29datel.htm#02028">02028</A>: Payment Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#02199">02199</A>: Approving Regulatory Agency </DD>
+<DD><A HREF = "hl7v29datel.htm#02247">02247</A>: Asserting Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#02256">02256</A>: Provider Organization Name and Identifier</DD>
+<DD><A HREF = "hl7v29datel.htm#02283">02283</A>: Performing Organization Name</DD>
+<DD><A HREF = "hl7v29datel.htm#02361">02361</A>: Performing Facility</DD>
+<DD><A HREF = "hl7v29datel.htm#02362">02362</A>: Ordering Facility</DD>
+<DD><A HREF = "hl7v29datel.htm#02377">02377</A>: Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#02385">02385</A>: Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#02404">02404</A>: Group Purchasing Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#02407">02407</A>: Corporation </DD>
+<DD><A HREF = "hl7v29datel.htm#02408">02408</A>: Parent of Corporation</DD>
+<DD><A HREF = "hl7v29datel.htm#03293">03293</A>: Initially Recorded by Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#03294">03294</A>: Modified by Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#03295">03295</A>: Inactivated by Organization</DD>
+<DD><A HREF = "hl7v29datel.htm#03357">03357</A>: Intended Recipient Facility </DD>
+<DD><A HREF = "hl7v29datel.htm#03382">03382</A>: Container Manufacturer</DD>
+<DD><A HREF = "hl7v29datel.htm#03406">03406</A>: Authorized Provider</DD>
+<DD><A HREF = "hl7v29datel.htm#03423">03423</A>: Authorized Provider</DD>
+<DD><A HREF = "hl7v29datel.htm#03531">03531</A>: Employer Organization </DD>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

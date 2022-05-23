@@ -1,0 +1,2186 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.7.1</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: 9 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std271/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.7.1
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="40" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v271/hl7v271tab0487.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.7.1</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v271tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v271qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Table 0487:
+Specimen Type
+</H2>
+<TABLE class=info>
+<TR>
+<TD class=>Interpretation:</TD>
+<TD class=>Probenmaterial</TD>
+</TR>
+<TR>
+<TD class=>OID Table:</TD>
+<TD class=>2.16.840.1.113883.12.487</TD>
+</TR>
+<TR>
+<TD class=>Codesystem OID: </TD>
+<TD class=>2.16.840.1.113883.18.311 Version 3</TD>
+</TR>
+<TR>
+<TD class=>Value Set OID:</TD>
+<TD class=>2.16.840.1.113883.21.327</TD>
+</TR>
+<TR>
+<TD class=>Binding:</TD>
+<TD class=>universal</TD>
+</TR>
+<TR>
+<TD class=>Expansion:</TD>
+<TD class=>all codes from codesystem</TD>
+</TR>
+<TR>
+<TD class=>Vocabulary Domain:</TD>
+<TD class=>tbd</TD>
+</TR>
+<TR>
+<TD class=>Table Type:</TD>
+<TD class=>HL7</TD>
+</TR>
+<TR>
+<TD class=>Case insensitive:</TD>
+<TD class=>Falsch</TD>
+</TR>
+<TR>
+<TD class=>Section</TD>
+<TD class=>2.C.2.248</TD>
+</TR>
+</TABLE>
+<p>
+<TABLE class=info>
+<TR>
+<TH class=table>Value</TH>
+<TH class=table>Description</TH>
+<TH class=table>German Interpretation</TH>
+<TH class=table>Comment</TH>
+<TH class=table>Chapter</TH>
+</TR>
+<TR class=table-even>
+<TD class=table>ABS</TD>
+<TD class=table>Abscess</TD>
+<TD class=table>Abszeﬂ</TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PELVA</TD>
+<TD class=table>Abscess, Pelvic</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PERIA</TD>
+<TD class=table>Abscess, Perianal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition, Abscess & Body Part</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RECTA</TD>
+<TD class=table>Abscess, Rectal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SCROA</TD>
+<TD class=table>Abscess, Scrotal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SUBMA</TD>
+<TD class=table>Abscess, Submandibular</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SUBMX</TD>
+<TD class=table>Abscess, Submaxillary</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TSTES</TD>
+<TD class=table>Abscess, Testicular</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>AIRS</TD>
+<TD class=table>Air Sample</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ALL</TD>
+<TD class=table>Allograft</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>AMP</TD>
+<TD class=table>Amputation</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GASAN</TD>
+<TD class=table>Antrum, Gastric</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ASP</TD>
+<TD class=table>Aspirate</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ETA</TD>
+<TD class=table>Aspirate,  Endotrach</TD>
+<TD class=table><BR></TD>
+<TD class=table>Aspirate</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GASA</TD>
+<TD class=table>Aspirate, Gastric</TD>
+<TD class=table><BR></TD>
+<TD class=table>Aspirate</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>NGASP</TD>
+<TD class=table>Aspirate, Nasogastric</TD>
+<TD class=table><BR></TD>
+<TD class=table>Aspirate</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>TASP</TD>
+<TD class=table>Aspirate, Tracheal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Aspirate</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TTRA</TD>
+<TD class=table>Aspirate, Transtracheal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Aspirate</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>AUTP</TD>
+<TD class=table>Autopsy</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BX</TD>
+<TD class=table>Biopsy</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GSPEC</TD>
+<TD class=table>Biopsy, Gastric</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SKBP</TD>
+<TD class=table>Biopsy, Skin</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CONE</TD>
+<TD class=table>Biospy, Cone</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BITE</TD>
+<TD class=table>Bite</TD>
+<TD class=table><BR></TD>
+<TD class=table>Conditions</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CBITE</TD>
+<TD class=table>Bite, Cat</TD>
+<TD class=table><BR></TD>
+<TD class=table>Conditions</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DBITE</TD>
+<TD class=table>Bite, Dog</TD>
+<TD class=table><BR></TD>
+<TD class=table>Conditions</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HBITE</TD>
+<TD class=table>Bite, Human</TD>
+<TD class=table><BR></TD>
+<TD class=table>Conditions</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>IBITE</TD>
+<TD class=table>Bite, Insect</TD>
+<TD class=table><BR></TD>
+<TD class=table>Conditions</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RBITE</TD>
+<TD class=table>Bite, Reptile</TD>
+<TD class=table><BR></TD>
+<TD class=table>Conditions</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BLEB</TD>
+<TD class=table>Bleb</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition, Fluid/Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BLIST</TD>
+<TD class=table>Blister</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition, Fluid/Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BBL</TD>
+<TD class=table>Blood bag</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BPU</TD>
+<TD class=table>Blood product unit</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HBLUD</TD>
+<TD class=table>Blood, Autopsy</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CSVR</TD>
+<TD class=table>Blood, Cell Saver</TD>
+<TD class=table><BR></TD>
+<TD class=table>Transfusion</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FBLOOD</TD>
+<TD class=table>Blood, Fetal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MBLD</TD>
+<TD class=table>Blood, Menstrual</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>WB</TD>
+<TD class=table>Blood, Whole</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BOIL</TD>
+<TD class=table>Boil</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BON</TD>
+<TD class=table>Bone</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BOWL</TD>
+<TD class=table>Bowel contents</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BRTH</TD>
+<TD class=table>Breath (use EXHLD)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BRSH</TD>
+<TD class=table>Brush</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product; Brush or brushing (these may be 2 separate entries as in a physical brush or a portion thereof vs the substance obtained after a surface has been brushed)</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EBRUSH</TD>
+<TD class=table>Brush, Esophageal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BRUS</TD>
+<TD class=table>Brushing</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GASBR</TD>
+<TD class=table>Brushing, Gastric</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BUB</TD>
+<TD class=table>Bubo</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BULLA</TD>
+<TD class=table>Bulla/Bullae</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>BRN</TD>
+<TD class=table>Burn</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CALC</TD>
+<TD class=table>Calculus (=Stone)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CARBU</TD>
+<TD class=table>Carbuncle</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CAT</TD>
+<TD class=table>Catheter</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CSITE</TD>
+<TD class=table>Catheter Insertion Site</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CTP</TD>
+<TD class=table>Catheter tip</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ANGI</TD>
+<TD class=table>Catheter Tip, Angio</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ARTC</TD>
+<TD class=table>Catheter Tip, Arterial</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CVPT</TD>
+<TD class=table>Catheter Tip, CVP</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ETTP</TD>
+<TD class=table>Catheter Tip, Endotracheal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>FOLEY</TD>
+<TD class=table>Catheter Tip, Foley</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HEMAQ</TD>
+<TD class=table>Catheter Tip, Hemaquit</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HEMO</TD>
+<TD class=table>Catheter Tip, Hemovac</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>IDC</TD>
+<TD class=table>Catheter Tip, Indwelling</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>INTRD</TD>
+<TD class=table>Catheter Tip, Introducer</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>IVCAT</TD>
+<TD class=table>Catheter Tip, IV</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MAHUR</TD>
+<TD class=table>Catheter Tip, Makurkour</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SCLV</TD>
+<TD class=table>Catheter Tip, Subclavian</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SPRP</TD>
+<TD class=table>Catheter Tip, Suprapubic</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SWGZ</TD>
+<TD class=table>Catheter Tip, Swan Gantz</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>VASTIP</TD>
+<TD class=table>Catheter Tip, Vas</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>VENT</TD>
+<TD class=table>Catheter Tip, Ventricular</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GROSH</TD>
+<TD class=table>Catheter, Groshong</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HIC</TD>
+<TD class=table>Catheter, Hickman</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PORTA</TD>
+<TD class=table>Catheter, Porta</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SPRPB</TD>
+<TD class=table>Cathether Tip, Suprapubic</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>TLC</TD>
+<TD class=table>Cathether Tip, Triple Lumen</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CLIPP</TD>
+<TD class=table>Clippings</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>COL</TD>
+<TD class=table>Colostrum</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CNJT</TD>
+<TD class=table>Conjunctiva</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LENS1</TD>
+<TD class=table>Contact Lens</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LENS2</TD>
+<TD class=table>Contact Lens Case</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CYST</TD>
+<TD class=table>Cyst</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>BCYST</TD>
+<TD class=table>Cyst, Baker's</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ICYST</TD>
+<TD class=table>Cyst, Inclusion</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PILOC</TD>
+<TD class=table>Cyst, Pilonidal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RENALC</TD>
+<TD class=table>Cyst, Renal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DIA</TD>
+<TD class=table>Dialysate</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DISCHG</TD>
+<TD class=table>Discharge</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DIV</TD>
+<TD class=table>Diverticulum</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DRN</TD>
+<TD class=table>Drain</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HEV</TD>
+<TD class=table>Drain, Hemovac</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GTUBE</TD>
+<TD class=table>Drainage Tube, Drainage (Gastrostomy)</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GASD</TD>
+<TD class=table>Drainage, Gastric</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ILEO</TD>
+<TD class=table>Drainage, Ileostomy</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>JP</TD>
+<TD class=table>Drainage, Jackson Pratt</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>JEJU</TD>
+<TD class=table>Drainage, Jejunal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>NASDR</TD>
+<TD class=table>Drainage, Nasal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NGAST</TD>
+<TD class=table>Drainage, Nasogastric</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PND</TD>
+<TD class=table>Drainage, Penile</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DRNGP</TD>
+<TD class=table>Drainage, Penrose</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RECT</TD>
+<TD class=table>Drainage, Rectal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SUMP</TD>
+<TD class=table>Drainage, Sump</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DRNG</TD>
+<TD class=table>Drainage, Tube</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EARW</TD>
+<TD class=table>Ear wax (cerumen)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EFFUS</TD>
+<TD class=table>Effusion</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ELT</TD>
+<TD class=table>Electrode</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ATTE</TD>
+<TD class=table>Environment, Attest</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>AUTOA</TD>
+<TD class=table>Environmental, Autoclave Ampule</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>AUTOC</TD>
+<TD class=table>Environmental, Autoclave Capsule</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EFF</TD>
+<TD class=table>Environmental, Effluent</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EEYE</TD>
+<TD class=table>Environmental, Eye Wash</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EFOD</TD>
+<TD class=table>Environmental, Food</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EISO</TD>
+<TD class=table>Environmental, Isolette</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EOTH</TD>
+<TD class=table>Environmental, Other Substance</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment; (Substance is Known but not in code Table)</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ESOI</TD>
+<TD class=table>Environmental, Soil</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ESOS</TD>
+<TD class=table>Environmental, Solution (Sterile)</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SPS</TD>
+<TD class=table>Environmental, Spore Strip</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>STER</TD>
+<TD class=table>Environmental, Sterrad</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ENVIR</TD>
+<TD class=table>Environmental, Unidentified Substance</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WWA</TD>
+<TD class=table>Environmental, Water</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DEION</TD>
+<TD class=table>Environmental, Water  (Deionized)</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WWT</TD>
+<TD class=table>Environmental, Water  (Tap)</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FAW</TD>
+<TD class=table>Environmental, Water  (Well)</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WWO</TD>
+<TD class=table>Environmental, Water (Ocean)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EWHI</TD>
+<TD class=table>Environmental, Whirlpool</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>EXUDTE</TD>
+<TD class=table>Exudate</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FLT</TD>
+<TD class=table>Filter</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>FIST</TD>
+<TD class=table>Fistula</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FLUID</TD>
+<TD class=table>Fluid</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>FGA</TD>
+<TD class=table>Fluid,  Abdomen</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CSMY</TD>
+<TD class=table>Fluid,  Cystostomy Tube</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ACNFLD</TD>
+<TD class=table>Fluid, Acne</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FLU</TD>
+<TD class=table>Fluid, Body unsp</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CST</TD>
+<TD class=table>Fluid, Cyst</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>HYDC</TD>
+<TD class=table>Fluid, Hydrocele</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>IVFLD</TD>
+<TD class=table>Fluid, IV</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>JNTFLD</TD>
+<TD class=table>Fluid, Joint</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>KIDFLD</TD>
+<TD class=table>Fluid, Kidney</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LSAC</TD>
+<TD class=table>Fluid, Lumbar Sac</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>FLD</TD>
+<TD class=table>Fluid, Other</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PCFL</TD>
+<TD class=table>Fluid, Pericardial</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RENC</TD>
+<TD class=table>Fluid, Renal Cyst</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FRS</TD>
+<TD class=table>Fluid, Respiratory</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SHUNF</TD>
+<TD class=table>Fluid, Shunt</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SNV</TD>
+<TD class=table>Fluid, synovial (Joint fluid)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GAST</TD>
+<TD class=table>Fluid/contents, Gastric</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FUR</TD>
+<TD class=table>Furuncle</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GAS</TD>
+<TD class=table>Gas</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EXG</TD>
+<TD class=table>Gas, exhaled (=breath)</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>IHG</TD>
+<TD class=table>Gas, Inhaled</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GENV</TD>
+<TD class=table>Genital vaginal</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GRAFT</TD>
+<TD class=table>Graft</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>GRAFTS</TD>
+<TD class=table>Graft Site</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>POPGS</TD>
+<TD class=table>Graft Site, Popliteal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>POPLG</TD>
+<TD class=table>Graft, Popliteal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GRANU</TD>
+<TD class=table>Granuloma</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>IMP</TD>
+<TD class=table>Implant</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>INFIL</TD>
+<TD class=table>Infiltrate</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>INS</TD>
+<TD class=table>Insect</TD>
+<TD class=table><BR></TD>
+<TD class=table>Object</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>IUD</TD>
+<TD class=table>Intrauterine Device</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device (Common Usage)</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>IT</TD>
+<TD class=table>Intubation tube</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>KELOI</TD>
+<TD class=table>Lavage</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LAVG</TD>
+<TD class=table>Lavage, Bronhial</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LAVGG</TD>
+<TD class=table>Lavage, Gastric</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LAVGP</TD>
+<TD class=table>Lavage, Peritoneal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LAVPG</TD>
+<TD class=table>Lavage, Pre-Bronch</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LESN</TD>
+<TD class=table>Lesion</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ORL</TD>
+<TD class=table>Lesion, Oral</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition (Common Usage)</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PENIL</TD>
+<TD class=table>Lesion, Penile</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition (Common Usage)</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>LIQO</TD>
+<TD class=table>Liquid, Other</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>LIQ</TD>
+<TD class=table>Liquid, Unspecified</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MASS</TD>
+<TD class=table>Mass</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SMM</TD>
+<TD class=table>Mass, Sub-Mandibular</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>MUCOS</TD>
+<TD class=table>Mucosa</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>MUCUS</TD>
+<TD class=table>Mucus</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NEDL</TD>
+<TD class=table>Needle</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>NODUL</TD>
+<TD class=table>Nodule(s)</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CYN</TD>
+<TD class=table>Nodule, Cystic</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ORH</TD>
+<TD class=table>Other</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PACEM</TD>
+<TD class=table>Pacemaker</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PLAN</TD>
+<TD class=table>Plant Material</TD>
+<TD class=table><BR></TD>
+<TD class=table>Object</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PLAS</TD>
+<TD class=table>Plasma</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PLB</TD>
+<TD class=table>Plasma bag</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PPP</TD>
+<TD class=table>Plasma, Platelet poor</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PRP</TD>
+<TD class=table>Plasma, Platelet rich</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>POL</TD>
+<TD class=table>Polyps</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PROST</TD>
+<TD class=table>Prosthetic Device</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PSC</TD>
+<TD class=table>Pseudocyst</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PUS</TD>
+<TD class=table>Pus</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PUST</TD>
+<TD class=table>Pus</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PUSFR</TD>
+<TD class=table>Pustule</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>QC3</TD>
+<TD class=table>Quality Control</TD>
+<TD class=table><BR></TD>
+<TD class=table>Environment</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>RES</TD>
+<TD class=table>Respiratory</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition (Ambiguous)</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SAL</TD>
+<TD class=table>Saliva</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>FSCLP</TD>
+<TD class=table>Scalp, Fetal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>CSCR</TD>
+<TD class=table>Scratch, Cat</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SECRE</TD>
+<TD class=table>Secretion(s)</TD>
+<TD class=table><BR></TD>
+<TD class=table>Fluid/Secretion</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NSECR</TD>
+<TD class=table>Secretion, Nasal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SER</TD>
+<TD class=table>Serum</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>ASERU</TD>
+<TD class=table>Serum, Acute</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CSERU</TD>
+<TD class=table>Serum, Convalescent</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PLEVS</TD>
+<TD class=table>Serum, Peak Level</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TSERU</TD>
+<TD class=table>Serum, Trough</TD>
+<TD class=table><BR></TD>
+<TD class=table>Blood</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SHUNT</TD>
+<TD class=table>Shunt</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>EXS</TD>
+<TD class=table>Shunt, External</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SITE</TD>
+<TD class=table>Site</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>CVPS</TD>
+<TD class=table>Site, CVP</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>INCI</TD>
+<TD class=table>Site, Incision/Surgical</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>NGS</TD>
+<TD class=table>Site, Naso/Gastric</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>NEPH</TD>
+<TD class=table>Site, Nephrostomy</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PIS</TD>
+<TD class=table>Site, Pacemaker Insetion</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PDSIT</TD>
+<TD class=table>Site, Peritoneal Dialysis</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>PDTS</TD>
+<TD class=table>Site, Peritoneal Dialysis Tunnel</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PINS</TD>
+<TD class=table>Site, Pin</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>POPLV</TD>
+<TD class=table>Site, Popliteal Vein</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SHU</TD>
+<TD class=table>Site, Shunt</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TRAC</TD>
+<TD class=table>Site, Tracheostomy</TD>
+<TD class=table><BR></TD>
+<TD class=table>Site</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SKN</TD>
+<TD class=table>Skin</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TZANC</TD>
+<TD class=table>Smear, Tzanck</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GSOL</TD>
+<TD class=table>Solution, Gastrostomy</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ILLEG</TD>
+<TD class=table>Source of Specimen Is Illegible</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>OTH</TD>
+<TD class=table>Source, Other</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>UDENT</TD>
+<TD class=table>Source, Unidentified</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>USPEC</TD>
+<TD class=table>Source, Unspecified</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SPRM</TD>
+<TD class=table>Spermatozoa</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SPT</TD>
+<TD class=table>Sputum</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SPTC</TD>
+<TD class=table>Sputum - coughed</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SPTT</TD>
+<TD class=table>Sputum - tracheal aspirate</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>DCS</TD>
+<TD class=table>Sputum, Deep Cough</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SPUTIN</TD>
+<TD class=table>Sputum, Inducted</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SPUT1</TD>
+<TD class=table>Sputum, Simulated</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SPUTSP</TD>
+<TD class=table>Sputum, Spontaneous</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>STONE</TD>
+<TD class=table>Stone, Kidney</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>STL</TD>
+<TD class=table>Stool = Fecal</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SUP</TD>
+<TD class=table>Suprapubic Tap</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>SUTUR</TD>
+<TD class=table>Suture</TD>
+<TD class=table><BR></TD>
+<TD class=table>Object</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TISS</TD>
+<TD class=table>Tissue</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>TISU</TD>
+<TD class=table>Tissue ulcer</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ACNE</TD>
+<TD class=table>Tissue, Acne</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>HERNI</TD>
+<TD class=table>Tissue, Herniated</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>SCAR</TD>
+<TD class=table>Tissue, Keloid (Scar)</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>TRANS</TD>
+<TD class=table>Transudate</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>ETTUB</TD>
+<TD class=table>Tube, Endotracheal</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>GT</TD>
+<TD class=table>Tube, Gastric</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TUBES</TD>
+<TD class=table>Tubes</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>IVTIP</TD>
+<TD class=table>Tubing Tip, IV</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>TUMOR</TD>
+<TD class=table>Tumor</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>DEC</TD>
+<TD class=table>Ulcer, Decubitus</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>UR</TD>
+<TD class=table>Urine</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>URT</TD>
+<TD class=table>Urine catheter</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>URC</TD>
+<TD class=table>Urine clean catch</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>URINB</TD>
+<TD class=table>Urine, Bladder Washings</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>URINC</TD>
+<TD class=table>Urine, Catheterized</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>USCOP</TD>
+<TD class=table>Urine, Cystoscopy</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>URINM</TD>
+<TD class=table>Urine, Midstream</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>URINN</TD>
+<TD class=table>Urine, Nephrostomy</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>URINP</TD>
+<TD class=table>Urine, Pedibag</TD>
+<TD class=table><BR></TD>
+<TD class=table>Device</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>RANDU</TD>
+<TD class=table>Urine, Random</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>VITF</TD>
+<TD class=table>Vitreous Fluid</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>VOM</TD>
+<TD class=table>Vomitus</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>WRT</TD>
+<TD class=table>Wart</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WASH</TD>
+<TD class=table>Wash</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>WASI</TD>
+<TD class=table>Washing, e.g. bronchial washing</TD>
+<TD class=table><BR></TD>
+<TD class=table>Product</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WAT</TD>
+<TD class=table>Water</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>WEN</TD>
+<TD class=table>Wen</TD>
+<TD class=table><BR></TD>
+<TD class=table>Tissue</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WICK</TD>
+<TD class=table>Wick</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>WORM</TD>
+<TD class=table>Worm</TD>
+<TD class=table><BR></TD>
+<TD class=table>Object</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WND</TD>
+<TD class=table>Wound</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>WNDA</TD>
+<TD class=table>Wound abscess</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>WNDD</TD>
+<TD class=table>Wound drainage</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-odd>
+<TD class=table>WNDE</TD>
+<TD class=table>Wound exudate</TD>
+<TD class=table><BR></TD>
+<TD class=table><BR></TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+<TR class=table-even>
+<TD class=table>PUNCT</TD>
+<TD class=table>Wound, Puncture</TD>
+<TD class=table><BR></TD>
+<TD class=table>Condition</TD>
+<TD class=table>2.C.2.248</TD>
+</TR>
+</TABLE>
+<H3>Comments made by the German HL7 User Group:</H3>
+<dd>Probenmaterial</DD>
+<P>
+<H3>Used Within the following Data Elements</H3>
+<DD><A HREF = "hl7v271datel.htm#01900">01900</A> Specimen Type / Probenmaterial (<A HREF = "std271/ch07.html#Heading141">7.4.3.4</A>)</DD>
+<P>
+<P>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

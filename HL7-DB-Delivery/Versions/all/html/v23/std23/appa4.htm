@@ -1,0 +1,1967 @@
+<HTML><HEAD>
+<!-- This document was created from RTF source by rtftohtml version 3.8 -->
+<TITLE>A.4 HL7 AND USER-DEFINED TABLES - ALPHABETIC SORT</TITLE></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>
+References to other Chapters
+</H1>
+<A HREF="hl7.htm">Index HL7</A><br>
+<A HREF="ch1.htm">Chapter 1: Introduction</A><br>
+<A HREF="ch2.htm">Chapter 2: Control Query</A><br>
+<A HREF="ch3.htm">Chapter 3: Patient Administration</A><br>
+<A HREF="ch4.htm">Chapter 4: Order Entry</A><br>
+<A HREF="ch5.htm">Chapter 5: Query</A><br>
+<A HREF="ch6.htm">Chapter 6: Financial Management</A><br>
+<A HREF="ch7.htm">Chapter 7: Observation Reporting</A><br>
+<A HREF="ch8.htm">Chapter 8: Master Files</A><br>
+<A HREF="ch9.htm">Chapter 9: Medical Records/Information Management</A><br>
+<A HREF="ch10.htm">Chapter 10: Scheduling</A><br>
+<A HREF="ch11.htm">Chapter 11: Patient Referral</A><br>
+<A HREF="ch12.htm">Chapter 12: Patient Care</A><br>
+<A HREF="appb.htm">Appendix B: Lower Layer Protocols</A><br>
+<A HREF="appc.htm">Appendix C: Network Management</A><br>
+<A HREF="appd.htm">Appendix D: Version 2.2 BNF Message Descriptions</A><br>
+<A HREF="appe.htm">Appendix E: Glossary</A><br>
+
+
+<hr>
+
+
+<H1>
+Data Definition Tables</H1>
+<UL>
+<LI><A HREF="#Heading2">A.1 INTRODUCTION</A>
+<LI><A HREF="#Heading3">A.2 MESSAGE TYPES</A>
+<LI><A HREF="#Heading4">A.3 SEGMENTS</A>
+<LI><A HREF="#Heading5">A.4 HL7 AND USER-DEFINED TABLES - ALPHABETIC SORT</A>
+<LI><A HREF="#Heading6">A.5 HL7 AND USER-DEFINED TABLES - NUMERIC SORT</A>
+<LI><A HREF="#Heading7">A.6 DATA ELEMENT NAMES</A>
+</UL>
+
+<hr>
+
+
+<h2>
+<A NAME="Heading5">A.4 HL7 AND USER-DEFINED TABLES - ALPHABETIC SORT</A></h2>
+
+<p>
+<i>For use notes, see Control section 2.4.3.7.  When a table is used in an HL7 CE data
+type, its third component, "name of coding system" may have been adopted from
+some existing standard (for example, see list of tables in figures 2-2 and
+2-3).  If the table is not part of an existing standard, the third component,
+"name of coding system" constructed by appending the table number to the string
+"HL7".  Thus, field RXR-administrative site, is a CE data type, which refers to
+table xxxx.  Its "name of coding system" component is HL7xxxx.</i><br>
+</p>
+<TABLE BORDER><TR align="left">
+<TH>Type</TH>
+<TH>Table</TH>
+<TH>Name</TH>
+<TH>Used</TH>
+</TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0078</TD>
+<TD>Abnormal Flags</TD>
+<TD>OBX-8</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0155</TD>
+<TD>Accept/Application Acknowledgment Conditions</TD>
+<TD>MSH-15, MSH-16</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0050</TD>
+<TD>Accident Code</TD>
+<TD>ACC-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0129</TD>
+<TD>Accommodation Code</TD>
+<TD>PV2-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0117</TD>
+<TD>Account Status</TD>
+<TD>PV1-41</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0008</TD>
+<TD>Acknowledgment Code</TD>
+<TD>MSA-1</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0323</TD>
+<TD>Action
+Code</TD>
+<TD>RXA-22</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0287</TD>
+<TD>Action
+Code</TD>
+<TD>GOL-1, PRB-1, ROL-2, PTH-1</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0251</TD>
+<TD>Action Taken in Response to the Event</TD>
+<TD>PCR-21</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0183</TD>
+<TD>Active/Inactive</TD>
+<TD>STF-7,
+CDM-8, PRC-16</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0190</TD>
+<TD>Address
+Type</TD>
+<TD>AD
+data type</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0165</TD>
+<TD>Administration
+Method</TD>
+<TD>RXR-4</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0163</TD>
+<TD>Administrative Site</TD>
+<TD>RXR-2</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0164</TD>
+<TD>Administration Device</TD>
+<TD>RXR-3</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0007</TD>
+<TD>Admission
+Type</TD>
+<TD>PV1-4</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0023</TD>
+<TD>Admit
+Source</TD>
+<TD>PV1-14</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0128</TD>
+<TD>Allergy
+Severity</TD>
+<TD>AL1-4</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0127</TD>
+<TD>Allergy
+Type</TD>
+<TD>AL1-2</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0161</TD>
+<TD>Allow
+Substitution</TD>
+<TD>RXO-9</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0279</TD>
+<TD>Allow
+Substitution Codes</TD>
+<TD>AIS-8,
+AIG-12, AIL-10, AIP-10</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0211</TD>
+<TD>Alternate
+Character Sets</TD>
+<TD>MSH-18</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0009</TD>
+<TD>Ambulatory
+Status</TD>
+<TD>PV1-15,
+NK1-18, GT1-34, IN2-34</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0193</TD>
+<TD>Amount
+Class</TD>
+<TD>IN2-29^2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0146</TD>
+<TD>Amount
+Type</TD>
+<TD>IN2-28^2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0019</TD>
+<TD>Anesthesia
+Code</TD>
+<TD>PR1-9</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0317</TD>
+<TD>Annotations</TD>
+<TD>ANO
+waveform</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0276</TD>
+<TD>Appointment
+Reason Codes</TD>
+<TD>ARQ-7,
+SCH-7</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0277</TD>
+<TD>Appointment
+Type Codes</TD>
+<TD>ARQ-8,
+SCH-8</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0135</TD>
+<TD>Assignment
+of Benefits</TD>
+<TD>IN1-20</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0021</TD>
+<TD>Bad Debt Agency Code</TD>
+<TD>PV1-31</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0116</TD>
+<TD>Bed Status</TD>
+<TD>PV1-40,
+NPU-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0293</TD>
+<TD>Billing
+Category</TD>
+<TD>PRC-15</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0022</TD>
+<TD>Billing
+Status</TD>
+<TD>IN1-32</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0252</TD>
+<TD>Causality Observations</TD>
+<TD>PCR-22</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0288</TD>
+<TD>Census
+Tract</TD>
+<TD>XAD
+data type</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0337</TD>
+<TD>Certification
+Status</TD>
+<TD><BR></TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0141</TD>
+<TD>Champus
+Rank/Grade</TD>
+<TD>IN2-15</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0140</TD>
+<TD>Champus
+Service</TD>
+<TD>IN2-14</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0142</TD>
+<TD>Champus Status</TD>
+<TD>IN2-16</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0218</TD>
+<TD>Charge Adjustment</TD>
+<TD>PV2-30, GT1-26</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0269</TD>
+<TD>Charge on Indicator</TD>
+<TD>PRC-18</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0122</TD>
+<TD>Charge
+Type</TD>
+<TD>BLG-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0032</TD>
+<TD>Charge/Price
+Indicator</TD>
+<TD>PV1-21</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0061</TD>
+<TD>Check
+Digit Scheme</TD>
+<TD>CK
+data type</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0171</TD>
+<TD>Citizenship</TD>
+<TD>PID-26, NK1-19, GT1-35, IN2-33</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0042</TD>
+<TD>Company
+Plan Code</TD>
+<TD>IN1-35</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0322</TD>
+<TD>Completion
+Status</TD>
+<TD>RXA-21</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0043</TD>
+<TD>Condition
+Code</TD>
+<TD>UB1-7,
+UB2-3</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0177</TD>
+<TD>Confidentiality code</TD>
+<TD>OM1-30</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0318</TD>
+<TD>Confirmation Provided By</TD>
+<TD>PEO-23</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0059</TD>
+<TD>Consent
+Code</TD>
+<TD>PR1-13</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0222</TD>
+<TD>Contact
+Reason</TD>
+<TD>NK1-29,
+GT1-47, IN2-54, IN2-51</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0131</TD>
+<TD>Contact
+Role</TD>
+<TD>NK1-7,
+CTD-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0044</TD>
+<TD>Contract Code</TD>
+<TD>PV1-24</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0173</TD>
+<TD>Coordination
+of Benefits</TD>
+<TD>IN1-21</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0289</TD>
+<TD>County/parish</TD>
+<TD>XAD
+data type</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0045</TD>
+<TD>Courtesy Code</TD>
+<TD>PV1-22</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0309</TD>
+<TD>Coverage Type</TD>
+<TD>IN1-47</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0046</TD>
+<TD>Credit
+Rating</TD>
+<TD>PV1-23</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0158</TD>
+<TD>Date/Time
+Selection Qualifier</TD>
+<TD>QRF-8,
+URS-8</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0267</TD>
+<TD>Days
+of the Week</TD>
+<TD>LDP-14</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0149</TD>
+<TD>Days Type</TD>
+<TD>IN3-11</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0107</TD>
+<TD>Deferred
+Response Type</TD>
+<TD>QRD-5</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0102</TD>
+<TD>Delayed
+Acknowledgment Type</TD>
+<TD>MSA-5</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0111</TD>
+<TD>Delete
+Account Code</TD>
+<TD>PV1-34</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0184</TD>
+<TD>Department</TD>
+<TD>STF-8</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0049</TD>
+<TD>Department Code</TD>
+<TD>FT1-13</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0319</TD>
+<TD>Department
+Cost Center</TD>
+<TD>RQD-7</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0170</TD>
+<TD>Derived
+Specimen</TD>
+<TD>OM4-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0228</TD>
+<TD>Diagnosis Classification</TD>
+<TD>DG1-19</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0051</TD>
+<TD>Diagnosis Code</TD>
+<TD>FT1-19</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0053</TD>
+<TD>Diagnosis
+Coding Method</TD>
+<TD>DG1-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0052</TD>
+<TD>Diagnosis
+Type</TD>
+<TD>DG1-6</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0074</TD>
+<TD>Diagnostic Service Section ID</TD>
+<TD>OBR-24</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0114</TD>
+<TD>Diet
+Type</TD>
+<TD>PV1-38</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0159</TD>
+<TD>Diet
+Type</TD>
+<TD>ODS-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0334</TD>
+<TD>Disabled
+Person</TD>
+<TD><BR></TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0112</TD>
+<TD>Discharged
+Disposition</TD>
+<TD>PV1-36, PV2-27</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0113</TD>
+<TD>Discharged
+to Location</TD>
+<TD>PV1-37</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0321</TD>
+<TD>Dispense
+Method</TD>
+<TD>RXE-30,
+RXD-24</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0273</TD>
+<TD>Document
+Availability Status</TD>
+<TD>TXA-19</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0314</TD>
+<TD>Document
+Change Reason</TD>
+<TD>TXA-21</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0271</TD>
+<TD>Document Completion Status</TD>
+<TD>TXA-17</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0272</TD>
+<TD>Document Confidentiality Status</TD>
+<TD>TXA-18</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0274</TD>
+<TD>Document
+Modification Status</TD>
+<TD>NO
+LONGER USED </TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0275</TD>
+<TD>Document
+Storage Status</TD>
+<TD>TXA-20</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0270</TD>
+<TD>Document
+Type</TD>
+<TD>TXA-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0055</TD>
+<TD>DRG Code</TD>
+<TD>DG1-8, DRG-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0056</TD>
+<TD>DRG
+Grouper Review Code</TD>
+<TD>DG1-10,
+DRG-4</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0255</TD>
+<TD>Duration
+Categories</TD>
+<TD>OM1-43</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0144</TD>
+<TD>Eligibility
+Source</TD>
+<TD>IN2-27</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0328</TD>
+<TD>Employee Classification</TD>
+<TD>NK1-11</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0139</TD>
+<TD>Employer
+Information Data</TD>
+<TD>IN2-4</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0066</TD>
+<TD>Employment
+Status</TD>
+<TD>GT1-20,
+IN1-42</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0225</TD>
+<TD>Escort
+Required</TD>
+<TD>OBR-42</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0189</TD>
+<TD>Ethnic Group</TD>
+<TD>PID-22, NK1-28, GT1-44, IN2-42</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0240</TD>
+<TD>Event
+Consequence</TD>
+<TD>PEO-11</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0239</TD>
+<TD>Event
+Expected</TD>
+<TD>PEO-10</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0237</TD>
+<TD>Event
+Qualification</TD>
+<TD>PEO-8</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0062</TD>
+<TD>Event
+Reason</TD>
+<TD>EVN-4</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0238</TD>
+<TD>Event Seriousness</TD>
+<TD>PEO-9</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0003</TD>
+<TD>Event
+Type</TD>
+<TD>MSH-9^2</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0331</TD>
+<TD>Facility
+Type</TD>
+<TD>FAC-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0024</TD>
+<TD>Fee
+Schedule</TD>
+<TD>FT1-17</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0178</TD>
+<TD>File Level Event Code</TD>
+<TD>MFI-3</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0278</TD>
+<TD>Filler
+Status Codes</TD>
+<TD>SCH-22,
+AIS-9, AIG-13, AIL-11, AIP-11</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0064</TD>
+<TD>Financial
+Class</TD>
+<TD>PV1-20</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0266</TD>
+<TD>Gender
+Indicator</TD>
+<TD>LDP-13</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0249</TD>
+<TD>Generic
+Product</TD>
+<TD>PCR-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0068</TD>
+<TD>Guarantor
+Type</TD>
+<TD>GT1-10</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0295</TD>
+<TD>Handicap</TD>
+<TD>NK1-36</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0310</TD>
+<TD>Handicap</TD>
+<TD>IN1-48</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0069</TD>
+<TD>Hospital
+Service</TD>
+<TD>PV1-10</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0203</TD>
+<TD>Identifier
+Type</TD>
+<TD>CK
+data type</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0243</TD>
+<TD>Identity
+may be Divulged</TD>
+<TD>PEO-25</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0253</TD>
+<TD>Indirect
+Exposure Mechanism</TD>
+<TD>PCR-23</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0232</TD>
+<TD>Insurance
+Company Contact Reason</TD>
+<TD>IN2-57</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0285</TD>
+<TD>Insurance
+Company ID Codes</TD>
+<TD>AUT-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0072</TD>
+<TD>Insurance
+Plan ID</TD>
+<TD>FT1-14,
+IN1-46, AUT-1, IN1-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0073</TD>
+<TD>Interest
+Rate Code</TD>
+<TD>PV1-28</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0320</TD>
+<TD>Item
+Natural Account Code</TD>
+<TD>RQD-8</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0327</TD>
+<TD>Job
+Class</TD>
+<TD>NK1-11</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0311</TD>
+<TD>Job
+Status</TD>
+<TD>NK1-34,
+GT1-53, IN2-48</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0254</TD>
+<TD>Kind
+of Quantity</TD>
+<TD>OM1-42</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0296</TD>
+<TD>Language</TD>
+<TD>NK1-20</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0263</TD>
+<TD>Level
+of Care</TD>
+<TD>LOC-14</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0220</TD>
+<TD>Living
+Arrangement</TD>
+<TD>NK1-21,
+PD1-2, GT1-37, IN2-35</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0223</TD>
+<TD>Living
+Dependency</TD>
+<TD>NK1-17,
+PD1-1, GT1-33, IN2-33</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0315</TD>
+<TD>Living
+Will</TD>
+<TD>PD1-7</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0079</TD>
+<TD>Location</TD>
+<TD>NPU-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0324</TD>
+<TD>Location
+Characteristic ID</TD>
+<TD>LCH-4</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0264</TD>
+<TD>Location
+Department</TD>
+<TD>LDP-2,
+LCC-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0261</TD>
+<TD>Location
+Equipment</TD>
+<TD>LOC-11</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0325</TD>
+<TD>Location
+Relationship ID</TD>
+<TD>LRL-4</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0137</TD>
+<TD>Mail
+Claim Party</TD>
+<TD>IN2-5</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0191</TD>
+<TD>Main
+Type of Reference Data</TD>
+<TD>TXA-3</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0118</TD>
+<TD>Major
+Diagnostic Category</TD>
+<TD>DG1-7</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0227</TD>
+<TD>Manufacturers
+of vaccines (code = MVX)</TD>
+<TD>RXA-17</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0002</TD>
+<TD>Marital
+Status</TD>
+<TD>PID-16,
+NK1-14, GT1-30, IN2-43</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0330</TD>
+<TD>Marketing
+Basis</TD>
+<TD>PDC-10</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0176</TD>
+<TD>Master
+File Application Identifier</TD>
+<TD>MFI-2</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0175</TD>
+<TD>Master
+File Identifier Code</TD>
+<TD>MFI-1</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0076</TD>
+<TD>Message
+Type</TD>
+<TD>MSH-9^1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0181</TD>
+<TD>MFN
+Record Level Error Return</TD>
+<TD>MFA-4</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0290</TD>
+<TD>MIME
+base64 encoding Characters</TD>
+<TD>ED
+data type</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0259</TD>
+<TD>Modality</TD>
+<TD>OM1-47</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0200</TD>
+<TD>Name
+Type</TD>
+<TD>XPN
+data type</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0212</TD>
+<TD>Nationality</TD>
+<TD>PID-28,
+NK1-27, GT1-43, IN2-41</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0080</TD>
+<TD>Nature
+of Abnormal Testing</TD>
+<TD>OBX-10</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0257</TD>
+<TD>Nature
+of Challenge</TD>
+<TD>OM1-44</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0174</TD>
+<TD>Nature
+of Test/Observation</TD>
+<TD>OM1-18</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0332</TD>
+<TD>Network
+Source Type</TD>
+<TD>NST-3</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0233</TD>
+<TD>Non-concur
+Code/Description</TD>
+<TD>IN3-12</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0143</TD>
+<TD>Non-covered
+Insurance Code</TD>
+<TD>IN2-24</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0085</TD>
+<TD>Observation
+Result Status Codes Interpretation</TD>
+<TD>OBX-11</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0188</TD>
+<TD>Operator
+ID</TD>
+<TD>EVN-5</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0119</TD>
+<TD>Order
+Control Code</TD>
+<TD>ORC-1</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0038</TD>
+<TD>Order
+Status</TD>
+<TD>ORC-5</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0316</TD>
+<TD>Organ
+Donor</TD>
+<TD>PD1-8</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0204</TD>
+<TD>Organizational
+Name Type</TD>
+<TD>XON
+data type</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0083</TD>
+<TD>Outlier
+Type</TD>
+<TD>DG1-11,
+DRG-5</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0229</TD>
+<TD>Outlier
+Type</TD>
+<TD>DG1-11,
+DRG-5</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0268</TD>
+<TD>Override</TD>
+<TD>CDM-5,
+PRC-13</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0004</TD>
+<TD>Patient
+Class</TD>
+<TD>PV1-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0260</TD>
+<TD>Patient
+Location Type</TD>
+<TD>LOC-3</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0241</TD>
+<TD>Patient
+Outcome</TD>
+<TD>PEO-12</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0216</TD>
+<TD>Patient
+Status</TD>
+<TD>PV2-24</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0018</TD>
+<TD>Patient
+Type</TD>
+<TD>PV1-18,
+FT1-18</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0148</TD>
+<TD>Penalty
+Type</TD>
+<TD>IN3-5</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0084</TD>
+<TD>Performed
+By</TD>
+<TD>FT1-20</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0010</TD>
+<TD>Physician
+ID</TD>
+<TD>various
+XCN</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0086</TD>
+<TD>Plan
+ID</TD>
+<TD>IN1-15</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0312</TD>
+<TD>Policy
+Scope</TD>
+<TD>IN2-59</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0313</TD>
+<TD>Policy
+Source</TD>
+<TD>IN2-60</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0147</TD>
+<TD>Policy
+Type</TD>
+<TD>IN2-29^1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0186</TD>
+<TD>Practitioner
+Category</TD>
+<TD>PRA-4</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0338</TD>
+<TD>Practitioner
+ID number type</TD>
+<TD><BR></TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0087</TD>
+<TD>Pre-admit
+Test Indicator</TD>
+<TD>PV1-12</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0150</TD>
+<TD>Pre-certification
+Patient Type</TD>
+<TD>IN3-20</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0185</TD>
+<TD>Preferred
+Method of Contact</TD>
+<TD>STF-16,
+PRD-7</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0205</TD>
+<TD>Price
+Type</TD>
+<TD>CP
+data type</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0242</TD>
+<TD>Primary
+Observer's Qualification</TD>
+<TD>PEO-22,
+PCR-19</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0027</TD>
+<TD>Priority</TD>
+<TD>OM4-13</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0262</TD>
+<TD>Privacy
+Level</TD>
+<TD>LOC-13</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0088</TD>
+<TD>Procedure
+Code</TD>
+<TD>PR1-3</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0089</TD>
+<TD>Procedure
+Coding Method</TD>
+<TD>PR1-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0230</TD>
+<TD>Procedure
+Functional Type</TD>
+<TD>PR1-6</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0133</TD>
+<TD>Procedure
+Practitioner Identifier Code Type</TD>
+<TD>PR1-12</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0103</TD>
+<TD>Processing
+ID</TD>
+<TD>MSH-11^1</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0207</TD>
+<TD>Processing
+Mode</TD>
+<TD>MSH-11^2</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0168</TD>
+<TD>Processing
+Priority</TD>
+<TD>OM1-25</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0246</TD>
+<TD>Product
+Available for Inspection</TD>
+<TD>PCR-13</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0245</TD>
+<TD>Product
+Problem</TD>
+<TD>PCR-11</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0248</TD>
+<TD>Product
+Source</TD>
+<TD>PCR-17</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0187</TD>
+<TD>Provider
+Billing</TD>
+<TD>PRA-4</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0286</TD>
+<TD>Provider
+Role</TD>
+<TD>PRD-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0215</TD>
+<TD>Publicity
+Code</TD>
+<TD>PV2-21,
+NK1-22, GT1-38, IN2-36</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0213</TD>
+<TD>Purge
+Status</TD>
+<TD>PV2-16</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0126</TD>
+<TD>Quantity
+Limited Request</TD>
+<TD>QRD-7</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0329</TD>
+<TD>Quantity
+Method</TD>
+<TD>PSH-8</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0091</TD>
+<TD>Query
+Priority</TD>
+<TD>QRD-3</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0208</TD>
+<TD>Query
+Response Status</TD>
+<TD>QAK-2</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0108</TD>
+<TD>Query
+Results Level</TD>
+<TD>QRD-12,
+URD-7</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0106</TD>
+<TD>Query/Response
+Format Code</TD>
+<TD>QRD-2,
+EQL-2, VTQ-2, SPR-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0005</TD>
+<TD>Race</TD>
+<TD>PID-10,
+NK1-35, GT1-46, IN2-71</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0092</TD>
+<TD>Re-admission
+Indicator</TD>
+<TD>PV1-13</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0180</TD>
+<TD>Record
+Level Event Code</TD>
+<TD>MFE-1,
+MFA-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0219</TD>
+<TD>Recurring
+Service</TD>
+<TD>PV2-31</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0284</TD>
+<TD>Referral
+Category</TD>
+<TD>RF1-5</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0282</TD>
+<TD>Referral Disposition</TD>
+<TD>RF1-4</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0280</TD>
+<TD>Referral Priority</TD>
+<TD>RF1-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0283</TD>
+<TD>Referral Status</TD>
+<TD>RF1-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0281</TD>
+<TD>Referral
+Type</TD>
+<TD>RF1-3</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0250</TD>
+<TD>Relatedness
+Assessment</TD>
+<TD>PCR-20</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0210</TD>
+<TD>Relational
+Conjunction</TD>
+<TD>VTQ-5</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0209</TD>
+<TD>Relational Operator</TD>
+<TD>VTQ-5</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0063</TD>
+<TD>Relationship</TD>
+<TD>NK1-3, NK1-31, GT1-11, IN1-17, IN2-62</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0258</TD>
+<TD>Relationship
+Modifier</TD>
+<TD>OM1-45</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0093</TD>
+<TD>Release
+Information</TD>
+<TD>IN1-27</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0006</TD>
+<TD>Religion</TD>
+<TD>PID-17,
+NK1-25, GT1-41, IN2-39</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0109</TD>
+<TD>Report
+Priority</TD>
+<TD>URD-2</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0235</TD>
+<TD>Report Source</TD>
+<TD>PES-12</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0234</TD>
+<TD>Report
+Timing</TD>
+<TD>PES-11</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0236</TD>
+<TD>Reported
+To</TD>
+<TD>PES-13</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0169</TD>
+<TD>Reporting Priority</TD>
+<TD>OM1-26</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0121</TD>
+<TD>Response Flag</TD>
+<TD>ORC-6</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0179</TD>
+<TD>Response
+Level</TD>
+<TD>MFI-6</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0123</TD>
+<TD>Result
+Status</TD>
+<TD>OBR-25</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0145</TD>
+<TD>Room
+Type</TD>
+<TD>IN2-28^1</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0162</TD>
+<TD>Route of Administration</TD>
+<TD>RXR-1</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0166</TD>
+<TD>RX
+Component Type</TD>
+<TD>RXC-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0152</TD>
+<TD>Second
+Opinion Documentation Received</TD>
+<TD>IN3-24</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0151</TD>
+<TD>Second
+Opinion Status</TD>
+<TD>IN3-23</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0206</TD>
+<TD>Segment Action Code</TD>
+<TD>IN2-31,
+IN3-26</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0115</TD>
+<TD>Servicing
+Facility</TD>
+<TD>PV1-39</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0001</TD>
+<TD>Sex</TD>
+<TD>PID-8,
+NK1-15, GT1-9, IN1-43, STF-5</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0244</TD>
+<TD>Single
+Use Device</TD>
+<TD>PCR-9</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0105</TD>
+<TD>Source of Comment</TD>
+<TD>NTE-2</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0214</TD>
+<TD>Special
+Program Codes</TD>
+<TD>PV2-18</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0265</TD>
+<TD>Specialty
+Type</TD>
+<TD>LDP-4</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0065</TD>
+<TD>Specimen
+Action Code</TD>
+<TD>OBR-11</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0070</TD>
+<TD>Specimen
+Source Codes</TD>
+<TD>OBR-15</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0182</TD>
+<TD>Staff
+Type</TD>
+<TD>STF-4</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0247</TD>
+<TD>Start
+of Evaluation</TD>
+<TD>PCR-15</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0231</TD>
+<TD>Student
+Status</TD>
+<TD>GT1-40,
+IN2-38, NK1-24</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0167</TD>
+<TD>Substitution
+Status</TD>
+<TD>RXE-9,
+RXD-11, RXG-10</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0291</TD>
+<TD>Subtype
+of Referenced Data</TD>
+<TD>RP
+data type</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0202</TD>
+<TD>Telecommunication
+Equipment Type</TD>
+<TD>XTN
+data type</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0201</TD>
+<TD>Telecommunication
+Use Code</TD>
+<TD>XTN
+data type</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0256</TD>
+<TD>Time
+Delay Post Challenge</TD>
+<TD>OM1-44</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0294</TD>
+<TD>Time
+Selection Criteria Parameter Class Codes</TD>
+<TD>APR-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0132</TD>
+<TD>Transaction
+Code</TD>
+<TD>FT1-7,
+CDM-1, PRC-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0017</TD>
+<TD>Transaction
+Type</TD>
+<TD>FT1-6</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0110</TD>
+<TD>Transfer
+to Bad Debt Code</TD>
+<TD>PV1-29</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0224</TD>
+<TD>Transport
+Arranged</TD>
+<TD>OBR-41</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0124</TD>
+<TD>Transportation
+Mode</TD>
+<TD>OBR-30</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0160</TD>
+<TD>Tray Type</TD>
+<TD>ODT-1</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0098</TD>
+<TD>Type of Agreement</TD>
+<TD>IN1-31</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0098</TD>
+<TD>Type
+of agreement</TD>
+<TD>IN1-31</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0292</TD>
+<TD>Vaccines
+Administered</TD>
+<TD>RXA-5</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0153</TD>
+<TD>Value Code</TD>
+<TD>UB1-10, UB2-6</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0125</TD>
+<TD>Value Type</TD>
+<TD>OBX-2, OM1-3</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0104</TD>
+<TD>Version ID</TD>
+<TD>MSH-12</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0172</TD>
+<TD>Veterans
+Military Status</TD>
+<TD>PID-27</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0099</TD>
+<TD>VIP
+Indicator</TD>
+<TD>PV1-16</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0192</TD>
+<TD>Visit
+ID Type</TD>
+<TD>PV1-50</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0326</TD>
+<TD>Visit Indicator</TD>
+<TD>PV1-51</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0217</TD>
+<TD>Visit Priority</TD>
+<TD>PV2-25</TD></TR>
+
+<TR align="left">
+<TD>User</TD>
+<TD>0130</TD>
+<TD>Visit User Code</TD>
+<TD>PV2-7</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0048</TD>
+<TD>What Subject Filter</TD>
+<TD>QRD-9, URD-4</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0100</TD>
+<TD>When to Charge</TD>
+<TD>BLG-1</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0156</TD>
+<TD>Which Date/Time Qualifier</TD>
+<TD>QRF-6, URS-6</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0157</TD>
+<TD>Which Date/Time Status Qualifier</TD>
+<TD>QRF-7, URS-7</TD></TR>
+
+<TR align="left">
+<TD>HL7</TD>
+<TD>0136</TD>
+<TD>Yes/No Indicator</TD>
+<TD><BR></TD></TR>
+</TABLE>
+
+<p>
+<p>
+</body>
+</html>

@@ -1,0 +1,886 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HL7 - Version 2.5.1</TITLE>
+<LINK REL="stylesheet" HREF="../formate.css" type="text/css">
+<LINK REL="SHORTCUT ICON" HREF="../hl7.ico">
+<META NAME="COPYRIGHT" CONTENT="(C) Health Level Seven, Int. 2021" />
+<META NAME="Generator" CONTENT="HL7 Comprehensive Database" />
+<META NAME="Author" CONTENT="Frank Oemig" />
+</HEAD>
+
+<BODY>
+<TABLE class=top cellpadding=4 width=100%>
+<TR class=top>
+<TD class=top>
+<IMG SRC = "../images/hl7-v2-logo.png" border=0 width=200 >
+</TD>
+<TD class=top>
+<!-- base standard: 6 -->
+<table class=nav>
+<tr>
+<td nowrap width="75" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../hl7contents.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+All Versions</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/>
+<br/>
+<table class=nav>
+<tr>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v251.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Contents</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v251idx.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Index</td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'std251/hl7.html'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Standard</td>
+
+</tr>
+</table>
+</TD>
+
+<TD class=top align=center width=70%>
+<H1>
+HL7 - Version 2.5.1
+</H1>
+</TD>
+<TD>
+
+<!-- 1st row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v21/hl7v21segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v22/hl7v22segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.2</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v23/hl7v23segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3</td>
+<td nowrap width="40" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v231/hl7v231segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.3.1</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v24/hl7v24segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.4</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v25/hl7v25segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.5</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v26/hl7v26segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.6</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v27/hl7v27segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.7</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v28/hl7v28segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.8</td>
+<td nowrap width="24" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = '../v29/hl7v29segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+2.9</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 2nd row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="40" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = '../v251/hl7v251segmPID.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+2.5.1</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+<!-- 3rd row -->
+<br/>
+
+<!-- 4th row -->
+<table class=nav>
+<tr>
+<td width="*">&nbsp; </td>
+<td nowrap width="60" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v251event.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Events</td>
+<td nowrap width="62" class="tabobjecttabClickableSelected"
+  OnClick = "javascript:window.location.href = 'hl7v251segm.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickableSelected'" >
+Segments</td>
+<td nowrap width="72" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v251msgtyp.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Types</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v251msgstruct.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Msg. Structs</td>
+<td nowrap width="100" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v251datel.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Elements</td>
+<td nowrap width="50" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v251tab.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Tables</td>
+<td nowrap width="80" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v251typ.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Data Structs</td>
+<td nowrap width="52" class="tabobjecttabClickable"
+  OnClick = "javascript:window.location.href = 'hl7v251qry.htm'"
+  onmouseover="this.className='tabobjecttabHighlight'"
+  onmouseout="this.className='tabobjecttabClickable'" >
+Queries</td>
+
+<td width="10">&nbsp; </td>
+</tr>
+</table>
+
+</TD>
+<TD>
+<IMG SRC = "../images/hl7-logo-header.png" border=0 align=right>
+</TD>
+</TR>
+</TABLE>
+
+<H2>
+Segment PID:
+Patient Identification
+(Patienteninformationen)
+</H2>
+<TABLE class=segm>
+<TR class=segm-odd>
+<TH class=segm>Seq</TH>
+<TH class=segm>Description</TH>
+<TH class=segm>German Interpretation</TH>
+<TH class=segm>Length</TH>
+<TH class=segm>C.LEN</TH>
+<TH class=segm>Table</TH>
+<TH class=segm>r/o/c</TH>
+<TH class=segm>Rep#</TH>
+<TH class=segm>Item</TH>
+<TH class=segm>Data Structure</TH>
+<TH class=segm>Section</TH>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>1</TD>
+<TD class=segm>Set ID - PID</TD>
+<TD class=segm>PID-Segmentnummer</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00104">00104</A></TD>
+<TD class=segm><A HREF = "hl7v251typSI.htm#SI">SI</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading81">3.4.2.1</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>2</TD>
+<TD class=segm>Patient ID</TD>
+<TD class=segm>Patienten-ID</TD>
+<TD class=segm>..20</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>B</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00105">00105</A></TD>
+<TD class=segm><A HREF = "hl7v251typCX.htm#CX">CX</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading82">3.4.2.2</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>3</TD>
+<TD class=segm>Patient Identifier List</TD>
+<TD class=segm>Patienten-ID-Liste</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00106">00106</A></TD>
+<TD class=segm><A HREF = "hl7v251typCX.htm#CX">CX</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading83">3.4.2.3</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>4</TD>
+<TD class=segm>Alternate Patient ID - PID</TD>
+<TD class=segm>Alternative Patienten-ID (z.B. f&uuml;r Notaufnahmen)</TD>
+<TD class=segm>..20</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>B</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00107">00107</A></TD>
+<TD class=segm><A HREF = "hl7v251typCX.htm#CX">CX</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading84">3.4.2.4</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>5</TD>
+<TD class=segm>Patient Name</TD>
+<TD class=segm>Patientenname</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>R</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00108">00108</A></TD>
+<TD class=segm><A HREF = "hl7v251typXPN.htm#XPN">XPN</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading85">3.4.2.5</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>6</TD>
+<TD class=segm>Mother's Maiden Name</TD>
+<TD class=segm>veraltet; korrespondierendes Namensfeld verwenden</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00109">00109</A></TD>
+<TD class=segm><A HREF = "hl7v251typXPN.htm#XPN">XPN</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading86">3.4.2.6</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>7</TD>
+<TD class=segm>Date/Time of Birth</TD>
+<TD class=segm>Geburtszeitpunkt</TD>
+<TD class=segm>..26</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00110">00110</A></TD>
+<TD class=segm><A HREF = "hl7v251typTS.htm#TS">TS</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading87">3.4.2.7</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>8</TD>
+<TD class=segm>Administrative Sex</TD>
+<TD class=segm>Geschlecht</TD>
+<TD class=segm>..1</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0001.htm">0001</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00111">00111</A></TD>
+<TD class=segm><A HREF = "hl7v251typIS.htm#IS">IS</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading88">3.4.2.8</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>9</TD>
+<TD class=segm>Patient Alias</TD>
+<TD class=segm>Aliasname(n) des Patienten</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>B</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00112">00112</A></TD>
+<TD class=segm><A HREF = "hl7v251typXPN.htm#XPN">XPN</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading89">3.4.2.9</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>10</TD>
+<TD class=segm>Race</TD>
+<TD class=segm>Rasse</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0005.htm">0005</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00113">00113</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading90">3.4.2.10</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>11</TD>
+<TD class=segm>Patient Address</TD>
+<TD class=segm>Anschrift des Patienten</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00114">00114</A></TD>
+<TD class=segm><A HREF = "hl7v251typXAD.htm#XAD">XAD</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading91">3.4.2.11</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>12</TD>
+<TD class=segm>County Code</TD>
+<TD class=segm>Gemeindekennziffer</TD>
+<TD class=segm>..4</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0289.htm">0289</A></TD>
+<TD class=segm>B</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00115">00115</A></TD>
+<TD class=segm><A HREF = "hl7v251typIS.htm#IS">IS</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading92">3.4.2.12</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>13</TD>
+<TD class=segm>Phone Number - Home</TD>
+<TD class=segm>Telefonnummer des Patienten (privat)</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00116">00116</A></TD>
+<TD class=segm><A HREF = "hl7v251typXTN.htm#XTN">XTN</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading93">3.4.2.13</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>14</TD>
+<TD class=segm>Phone Number - Business</TD>
+<TD class=segm>Telefonnummer des Patienten (dienstlich)</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00117">00117</A></TD>
+<TD class=segm><A HREF = "hl7v251typXTN.htm#XTN">XTN</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading94">3.4.2.14</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>15</TD>
+<TD class=segm>Primary Language</TD>
+<TD class=segm>Muttersprache</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0296.htm">0296</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00118">00118</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading95">3.4.2.15</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>16</TD>
+<TD class=segm>Marital Status</TD>
+<TD class=segm>Familienstand</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0002.htm">0002</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00119">00119</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading96">3.4.2.16</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>17</TD>
+<TD class=segm>Religion</TD>
+<TD class=segm>Religion</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0006.htm">0006</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00120">00120</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading97">3.4.2.17</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>18</TD>
+<TD class=segm>Patient Account Number</TD>
+<TD class=segm>Abrechnungsnummer / Debitorenkontonummer</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00121">00121</A></TD>
+<TD class=segm><A HREF = "hl7v251typCX.htm#CX">CX</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading98">3.4.2.18</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>19</TD>
+<TD class=segm>SSN Number - Patient</TD>
+<TD class=segm>Sozialversicherungsnummer des Patienten</TD>
+<TD class=segm>..16</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>B</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00122">00122</A></TD>
+<TD class=segm><A HREF = "hl7v251typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading99">3.4.2.19</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>20</TD>
+<TD class=segm>Driver's License Number - Patient</TD>
+<TD class=segm BGCOLOR="#FFB090">F&uuml;hrerscheinnummer Patient</TD>
+<TD class=segm>..25</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>B</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00123">00123</A></TD>
+<TD class=segm><A HREF = "hl7v251typDLN.htm#DLN">DLN</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading100">3.4.2.20</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>21</TD>
+<TD class=segm>Mother's Identifier</TD>
+<TD class=segm>Patientennummer der Mutter des Patienten</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00124">00124</A></TD>
+<TD class=segm><A HREF = "hl7v251typCX.htm#CX">CX</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading101">3.4.2.21</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>22</TD>
+<TD class=segm>Ethnic Group</TD>
+<TD class=segm>Ethnische Zugeh&ouml;rigkeit</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0189.htm">0189</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00125">00125</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading102">3.4.2.22</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>23</TD>
+<TD class=segm>Birth Place</TD>
+<TD class=segm>Geburtsort des Patienten</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00126">00126</A></TD>
+<TD class=segm><A HREF = "hl7v251typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading103">3.4.2.23</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>24</TD>
+<TD class=segm>Multiple Birth Indicator</TD>
+<TD class=segm>Merkmal Mehrlingsgeburt</TD>
+<TD class=segm>..1</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0136.htm">0136</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00127">00127</A></TD>
+<TD class=segm><A HREF = "hl7v251typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading104">3.4.2.24</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>25</TD>
+<TD class=segm>Birth Order</TD>
+<TD class=segm>Reihenfolge bei Mehrlingsgeburt</TD>
+<TD class=segm>..2</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00128">00128</A></TD>
+<TD class=segm><A HREF = "hl7v251typNM.htm#NM">NM</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading105">3.4.2.25</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>26</TD>
+<TD class=segm>Citizenship</TD>
+<TD class=segm>L&auml;nderkennzeichen / Staatsangeh&ouml;rigkeit</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0171.htm">0171</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00129">00129</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading106">3.4.2.26</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>27</TD>
+<TD class=segm>Veterans Military Status</TD>
+<TD class=segm>Beruf / T&auml;tigkeit des Patienten</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0172.htm">0172</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00130">00130</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading107">3.4.2.27</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>28</TD>
+<TD class=segm>Nationality</TD>
+<TD class=segm>Nationalit&auml;t</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0212.htm">0212</A></TD>
+<TD class=segm>B</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00739">00739</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading108">3.4.2.28</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>29</TD>
+<TD class=segm>Patient Death Date and Time</TD>
+<TD class=segm>Zeitpunkt des Todes</TD>
+<TD class=segm>..26</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00740">00740</A></TD>
+<TD class=segm><A HREF = "hl7v251typTS.htm#TS">TS</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading109">3.4.2.29</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>30</TD>
+<TD class=segm>Patient Death Indicator</TD>
+<TD class=segm>Merkmal Todesfall</TD>
+<TD class=segm>..1</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0136.htm">0136</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#00741">00741</A></TD>
+<TD class=segm><A HREF = "hl7v251typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading110">3.4.2.30</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>31</TD>
+<TD class=segm>Identity Unknown Indicator</TD>
+<TD class=segm>Kennzeichen Identit&auml;t unbekannt</TD>
+<TD class=segm>..1</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0136.htm">0136</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#01535">01535</A></TD>
+<TD class=segm><A HREF = "hl7v251typID.htm#ID">ID</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading111">3.4.2.31</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>32</TD>
+<TD class=segm>Identity Reliability Code</TD>
+<TD class=segm>Zuverl&auml;ssigkeit der Identit&auml;t</TD>
+<TD class=segm>..20</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0445.htm">0445</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#01536">01536</A></TD>
+<TD class=segm><A HREF = "hl7v251typIS.htm#IS">IS</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading112">3.4.2.32</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>33</TD>
+<TD class=segm>Last Update Date/Time</TD>
+<TD class=segm>Zeitpunkt der letzten Aktualisierung</TD>
+<TD class=segm>..26</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#01537">01537</A></TD>
+<TD class=segm><A HREF = "hl7v251typTS.htm#TS">TS</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading113">3.4.2.33</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>34</TD>
+<TD class=segm>Last Update Facility</TD>
+<TD class=segm>durchf&uuml;hrende Einrichtung der letzten Aktualisierung</TD>
+<TD class=segm>..241</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#01538">01538</A></TD>
+<TD class=segm><A HREF = "hl7v251typHD.htm#HD">HD</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading114">3.4.2.34</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>35</TD>
+<TD class=segm>Species Code</TD>
+<TD class=segm>Spezies</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0446.htm">0446</A></TD>
+<TD class=segm>C</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#01539">01539</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading115">3.4.2.35</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>36</TD>
+<TD class=segm>Breed Code</TD>
+<TD class=segm>Rasse/Zucht</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0447.htm">0447</A></TD>
+<TD class=segm>C</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#01540">01540</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading116">3.4.2.36</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>37</TD>
+<TD class=segm>Strain</TD>
+<TD class=segm>Z&uuml;chtungsstamm</TD>
+<TD class=segm>..80</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><BR></TD>
+<TD class=segm>O</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#01541">01541</A></TD>
+<TD class=segm><A HREF = "hl7v251typST.htm#ST">ST</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading117">3.4.2.37</A></TD>
+</TR>
+<TR class=segm-even>
+<TD class=segm>38</TD>
+<TD class=segm>Production Class Code</TD>
+<TD class=segm>Grund der Z&uuml;chtung</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0429.htm">0429</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y/2</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#01542">01542</A></TD>
+<TD class=segm><A HREF = "hl7v251typCE.htm#CE">CE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading118">3.4.2.38</A></TD>
+</TR>
+<TR class=segm-odd>
+<TD class=segm>39</TD>
+<TD class=segm>Tribal Citizenship</TD>
+<TD class=segm>Stammeszugeh&ouml;rigkeit</TD>
+<TD class=segm>..250</TD>
+<TD class=segm><BR></TD>
+<TD class=segm><A HREF = "hl7v251tab0171.htm">0171</A></TD>
+<TD class=segm>O</TD>
+<TD class=segm>Y</TD>
+<TD class=segm><A HREF = "hl7v251datel.htm#01840">01840</A></TD>
+<TD class=segm><A HREF = "hl7v251typCWE.htm#CWE">CWE</A></TD>
+<TD class=segm><A HREF = "std251/ch03.html#Heading119">3.4.2.39</A></TD>
+</TR>
+</TABLE>
+<P>
+<H3>Used within the following Events:</H3>
+<dd><A HREF = "hl7v251eventRDR.htm">RDR</A> Pharmacy/treatment Dispense Information (<A HREF = "std251/ch04.html#Heading236">4.13.17</A>)</dd>
+<P>
+<H3>Used within following Message Structures:</H3>
+<dd><A HREF = "hl7v251msgstruct.htm#ADR_A19">ADR_A19</A>  (<A HREF = "std251/ch03.html#Heading23">3.3.19</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A01">ADT_A01</A> General (<A HREF = "std251/ch03.html#Heading5">3.3.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A02">ADT_A02</A> Transfer (<A HREF = "std251/ch03.html#Heading6">3.3.2</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A03">ADT_A03</A> Discharge (<A HREF = "std251/ch03.html#Heading7">3.3.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A05">ADT_A05</A>  (<A HREF = "std251/ch03.html#Heading9">3.3.5</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A06">ADT_A06</A>  (<A HREF = "std251/ch03.html#Heading10">3.3.6</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A09">ADT_A09</A> Track/Cancel (<A HREF = "std251/ch03.html#Heading13">3.3.9</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A12">ADT_A12</A> Track/Cancel (2) (<A HREF = "std251/ch03.html#Heading16">3.3.12</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A15">ADT_A15</A>  (<A HREF = "std251/ch03.html#Heading19">3.3.15</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A16">ADT_A16</A> Pending Discharge (<A HREF = "std251/ch03.html#Heading20">3.3.16</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A17">ADT_A17</A> Swap (<A HREF = "std251/ch03.html#Heading21">3.3.17</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A17">ADT_A17</A> Swap (<A HREF = "std251/ch03.html#Heading21">3.3.17</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A18">ADT_A18</A>  (<A HREF = "std251/ch03.html#Heading22">3.3.18</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A21">ADT_A21</A>  (<A HREF = "std251/ch03.html#Heading27">3.3.21</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A24">ADT_A24</A> Link Patient Information (<A HREF = "std251/ch03.html#Heading30">3.3.24</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A24">ADT_A24</A> Link Patient Information (<A HREF = "std251/ch03.html#Heading30">3.3.24</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A30">ADT_A30</A>  (<A HREF = "std251/ch03.html#Heading36">3.3.30</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A37">ADT_A37</A>  (<A HREF = "std251/ch03.html#Heading43">3.3.37</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A37">ADT_A37</A>  (<A HREF = "std251/ch03.html#Heading43">3.3.37</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A38">ADT_A38</A> Swap (2) (<A HREF = "std251/ch03.html#Heading44">3.3.38</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A39">ADT_A39</A>  (<A HREF = "std251/ch03.html#Heading45">3.3.39</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A43">ADT_A43</A>  (<A HREF = "std251/ch03.html#Heading49">3.3.43</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A45">ADT_A45</A>  (<A HREF = "std251/ch03.html#Heading51">3.3.45</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A50">ADT_A50</A>  (<A HREF = "std251/ch03.html#Heading56">3.3.50</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A52">ADT_A52</A>  (<A HREF = "std251/ch03.html#Heading58">3.3.52</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A54">ADT_A54</A>  (<A HREF = "std251/ch03.html#Heading60">3.3.54</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A60">ADT_A60</A>  (<A HREF = "std251/ch03.html#Heading66">3.3.60</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ADT_A61">ADT_A61</A>  (<A HREF = "std251/ch03.html#Heading67">3.3.61</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#BAR_P01">BAR_P01</A> open account (<A HREF = "std251/ch06.html#Heading6">6.4.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#BAR_P02">BAR_P02</A> Purge Billing Account (<A HREF = "std251/ch06.html#Heading7">6.4.2</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#BAR_P05">BAR_P05</A> Update Billing Account (<A HREF = "std251/ch06.html#Heading10">6.4.5</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#BAR_P06">BAR_P06</A> End Billing Account (<A HREF = "std251/ch06.html#Heading11">6.4.6</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#BAR_P10">BAR_P10</A> Transmit Ambulatory Payment Classification (APC) g (<A HREF = "std251/ch06.html#Heading12">6.4.7</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#BAR_P12">BAR_P12</A> Update Diagnosis/Procedure (<A HREF = "std251/ch06.html#Heading14">6.4.9</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#BPS_O29">BPS_O29</A> Blood Product dispense status Message (<A HREF = "std251/ch04.html#Heading471">4.20.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#BRP_O30">BRP_O30</A>  (<A HREF = "std251/ch04.html#Heading472">4.20.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#BRT_O32">BRT_O32</A>  (<A HREF = "std251/ch04.html#Heading474">4.20.6</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#BTS_O31">BTS_O31</A> Blood Product Transfusion/Disposition Message (<A HREF = "std251/ch04.html#Heading473">4.20.5</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#CRM_C01">CRM_C01</A> Clinical Trial Message (<A HREF = "std251/ch07.html#Heading190">7.7.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#CSU_C09">CSU_C09</A> Clinical Trial Message (<A HREF = "std251/ch07.html#Heading191">7.7.2</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#DFT_P03">DFT_P03</A> Detail Financial Transaction (<A HREF = "std251/ch06.html#Heading8">6.4.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#DFT_P11">DFT_P11</A> Detail Financial Transaction - Expanded (<A HREF = "std251/ch06.html#Heading13">6.4.8</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#DOC_T12">DOC_T12</A>  (<A HREF = "std251/ch09.html#Heading69">9.8.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#MDM_T01">MDM_T01</A>  (<A HREF = "std251/ch09.html#Heading29">9.5.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#MDM_T02">MDM_T02</A>  (<A HREF = "std251/ch09.html#Heading30">9.5.2</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OMB_O27">OMB_O27</A> Blood Product Order Message (<A HREF = "std251/ch04.html#Heading468">4.20.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OMD_O03">OMD_O03</A> Dietary Order (<A HREF = "std251/ch04.html#Heading170">4.7.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OMG_O19">OMG_O19</A> General Clinical Order Message (<A HREF = "std251/ch04.html#Heading22">4.4.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OMG_O19">OMG_O19</A> General Clinical Order Message (<A HREF = "std251/ch04.html#Heading22">4.4.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OMI_O23">OMI_O23</A> Imaging Order Message (<A HREF = "std251/ch04.html#Heading30">4.4.12</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OML_O21">OML_O21</A> Laboratory Order Message (<A HREF = "std251/ch04.html#Heading24">4.4.6</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OML_O21">OML_O21</A> Laboratory Order Message (<A HREF = "std251/ch04.html#Heading24">4.4.6</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OML_O33">OML_O33</A> Laboratory Order - Multiple Order Per Specimen Mes (<A HREF = "std251/ch04.html#Heading26">4.4.8</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OML_O33">OML_O33</A> Laboratory Order - Multiple Order Per Specimen Mes (<A HREF = "std251/ch04.html#Heading26">4.4.8</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OML_O35">OML_O35</A> Laboratory Order - Multiple Order Per Container of (<A HREF = "std251/ch04.html#Heading28">4.4.10</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OML_O35">OML_O35</A> Laboratory Order - Multiple Order Per Container of (<A HREF = "std251/ch04.html#Heading28">4.4.10</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OMN_O07">OMN_O07</A> Nonstock Requisition Order Message (<A HREF = "std251/ch04.html#Heading192">4.10.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OMP_O09">OMP_O09</A> Pharmacy/treatment Order Message (<A HREF = "std251/ch04.html#Heading222">4.13.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OMS_O05">OMS_O05</A> Stock Requisition Order Message (<A HREF = "std251/ch04.html#Heading190">4.10.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORB_O28">ORB_O28</A>  (<A HREF = "std251/ch04.html#Heading470">4.20.2</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORD_O04">ORD_O04</A> Dietary Order Acknowledgment Message (<A HREF = "std251/ch04.html#Heading171">4.7.2</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORF_R04">ORF_R04</A>  (<A HREF = "std251/ch07.html#Heading45">7.3.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORG_O20">ORG_O20</A> General Clinical Order Acknowledgment Message (<A HREF = "std251/ch04.html#Heading23">4.4.5</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORI_O24">ORI_O24</A> Imaging Order Acknowledgment Message (<A HREF = "std251/ch04.html#Heading31">4.4.13</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORL_O22">ORL_O22</A> General Laboratory Order Acknowledgment Message (<A HREF = "std251/ch04.html#Heading25">4.4.7</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORL_O34">ORL_O34</A> Laboratory Order Acknowledgment Message  - Multipl (<A HREF = "std251/ch04.html#Heading27">4.4.9</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORL_O36">ORL_O36</A> Laboratory Order Acknowledgment Message  - Multipl (<A HREF = "std251/ch04.html#Heading29">4.4.11</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORM_O01">ORM_O01</A> General Order Message (<A HREF = "std251/ch04.html#Heading15">4.4.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORN_O08">ORN_O08</A> General Order Acknowledgment Message (<A HREF = "std251/ch04.html#Heading193">4.10.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORP_O10">ORP_O10</A>  (<A HREF = "std251/ch04.html#Heading223">4.13.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORR_O02">ORR_O02</A> General Order Response (<A HREF = "std251/ch04.html#Heading18">4.4.2</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORS_O06">ORS_O06</A> Stock Order Acknowledgment Message (<A HREF = "std251/ch04.html#Heading191">4.10.2</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORU_R01">ORU_R01</A> Observation Message (<A HREF = "std251/ch05.html#Heading120">5.7.3.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ORU_R30">ORU_R30</A> Observation Message (<A HREF = "std251/ch07.html#Heading46">7.3.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OSR_Q06">OSR_Q06</A>  (<A HREF = "std251/ch04.html#Heading19">4.4.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OUL_R21">OUL_R21</A>  (<A HREF = "std251/ch07.html#Heading44">7.3.2</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OUL_R22">OUL_R22</A> Observation Message (<A HREF = "std251/ch07.html#Heading49">7.3.7</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OUL_R23">OUL_R23</A> Observation Message (<A HREF = "std251/ch07.html#Heading50">7.3.8</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#OUL_R24">OUL_R24</A> Observation Message (<A HREF = "std251/ch07.html#Heading51">7.3.9</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#PEX_P07">PEX_P07</A> Product Experience Message (<A HREF = "std251/ch07.html#Heading253">7.11.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#PGL_PC6">PGL_PC6</A> Patient Goal Message (<A HREF = "std251/ch12.html#Heading30">12.3.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#PPG_PCG">PPG_PCG</A> Patient Pathway Goal-Oriented Message (<A HREF = "std251/ch12.html#Heading33">12.3.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#PPP_PCB">PPP_PCB</A> Patient Pathway Problem-Oriented Message (<A HREF = "std251/ch12.html#Heading32">12.3.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#PPR_PC1">PPR_PC1</A> Patient Problem Message (<A HREF = "std251/ch12.html#Heading31">12.3.2</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#PPT_PCL">PPT_PCL</A> Patient Pathway Goal-Oriented Response (<A HREF = "std251/ch12.html#Heading41">12.3.12</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#PPV_PCA">PPV_PCA</A> Goal Query Response (<A HREF = "std251/ch12.html#Heading37">12.3.8</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#PRR_PC5">PRR_PC5</A> Problem Query Response (<A HREF = "std251/ch12.html#Heading35">12.3.6</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#PTR_PCF">PTR_PCF</A> Patient Pathway Problem-Oriented Response (<A HREF = "std251/ch12.html#Heading39">12.3.10</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RAR_RAR">RAR_RAR</A>  (<A HREF = "std251/ch04.html#Heading235">4.13.16</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RAS_O17">RAS_O17</A> Pharmacy/Treatment Administration (<A HREF = "std251/ch04.html#Heading230">4.13.11</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RCI_I05">RCI_I05</A> Return Clinical Information (<A HREF = "std251/ch11.html#Heading38">11.3.5</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RCL_I06">RCL_I06</A> Return Clinical List (<A HREF = "std251/ch11.html#Heading39">11.3.6</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RDE_O11">RDE_O11</A> Pharmacy/Treatment Refill Authorization Request (<A HREF = "std251/ch04.html#Heading224">4.13.5</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RDR_RDR">RDR_RDR</A> Pharmacy/treatment Dispense Information (<A HREF = "std251/ch04.html#Heading236">4.13.17</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RDS_O13">RDS_O13</A> Pharmacy/Treatment Dispense Message (<A HREF = "std251/ch04.html#Heading226">4.13.7</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#REF_I12">REF_I12</A> Patient Referral (<A HREF = "std251/ch11.html#Heading48">11.5.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RER_RER">RER_RER</A>  (<A HREF = "std251/ch04.html#Heading237">4.13.18</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RGR_RGR">RGR_RGR</A>  (<A HREF = "std251/ch04.html#Heading238">4.13.19</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RGV_O15">RGV_O15</A> Pharmacy/Treatment Give (<A HREF = "std251/ch04.html#Heading228">4.13.9</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#ROR_ROR">ROR_ROR</A>  (<A HREF = "std251/ch04.html#Heading234">4.13.15</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RPA_I08">RPA_I08</A> Return Patient Authorization (<A HREF = "std251/ch11.html#Heading42">11.4.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RPI_I01">RPI_I01</A> Return Patient Information (<A HREF = "std251/ch11.html#Heading34">11.3.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RPI_I04">RPI_I04</A> Return Patient Information (<A HREF = "std251/ch11.html#Heading37">11.3.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RPR_I03">RPR_I03</A> Return Patient List (<A HREF = "std251/ch11.html#Heading36">11.3.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RQA_I08">RQA_I08</A> Request Patient Authorization (<A HREF = "std251/ch11.html#Heading42">11.4.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RQC_I05">RQC_I05</A> Request Clinical Information (<A HREF = "std251/ch11.html#Heading38">11.3.5</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RQI_I01">RQI_I01</A> Patient Insurance Information (<A HREF = "std251/ch11.html#Heading34">11.3.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RQP_I04">RQP_I04</A> Request Patient Demographics (<A HREF = "std251/ch11.html#Heading37">11.3.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RRA_O18">RRA_O18</A> Pharmacy/Treatment Administration Acknowledgment M (<A HREF = "std251/ch04.html#Heading231">4.13.12</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RRD_O14">RRD_O14</A> Pharmacy/Treatment Dispense Acknowledgment Message (<A HREF = "std251/ch04.html#Heading227">4.13.8</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RRE_O12">RRE_O12</A> Pharmacy/Treatment Refill Authorization Request Ac (<A HREF = "std251/ch04.html#Heading225">4.13.6</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RRG_O16">RRG_O16</A> Pharmacy/Treatment Give Acknowledgment Message (<A HREF = "std251/ch04.html#Heading229">4.13.10</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RRI_I12">RRI_I12</A> Return Referral Information (<A HREF = "std251/ch11.html#Heading48">11.5.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RSP_K21">RSP_K21</A> Segment Pattern Response (<A HREF = "std251/ch03.html#Heading62">3.3.56</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RSP_K23">RSP_K23</A> Segment Pattern Response (<A HREF = "std251/ch03.html#Heading64">3.3.58</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RSP_K31">RSP_K31</A> Response Grammar:  Pharmacy Dispense Message (<A HREF = "std251/ch04.html#Heading239">4.13.20</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RSP_Z82">RSP_Z82</A> Response Grammar:  Pharmacy Dispense Message (<A HREF = "std251/ch05.html#Heading128">5.9.1.1.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RSP_Z86">RSP_Z86</A> Response Grammar:  Pharmacy Information Comprehens (<A HREF = "std251/ch05.html#Heading130">5.9.1.2.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RSP_Z88">RSP_Z88</A> Response Grammar:  Pharmacy Information Comprehens (<A HREF = "std251/ch05.html#Heading134">5.9.2.1.1</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#RSP_Z90">RSP_Z90</A> Response Grammar:  Pharmacy Information Comprehens (<A HREF = "std251/ch05.html#Heading137">5.9.2.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#SIU_S12">SIU_S12</A> Schedule Information Unsolicited (<A HREF = "std251/ch10.html#Heading54">10.4</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#SQM_S25">SQM_S25</A>  (<A HREF = "std251/ch10.html#Heading72">10.5.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#SQR_S25">SQR_S25</A>  (<A HREF = "std251/ch10.html#Heading72">10.5.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#SRM_S01">SRM_S01</A> Schedule Request Message (<A HREF = "std251/ch10.html#Heading42">10.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#SRR_S01">SRR_S01</A> Scheduled Request Response (<A HREF = "std251/ch10.html#Heading42">10.3</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#VXR_V03">VXR_V03</A> Response Single (<A HREF = "std251/ch04.html#Heading454">4.17.5</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#VXU_V04">VXU_V04</A> Unsolicited Vaccination Update (<A HREF = "std251/ch04.html#Heading455">4.17.6</A>)</dd>
+<dd><A HREF = "hl7v251msgstruct.htm#VXX_V02">VXX_V02</A> Response Multiple (<A HREF = "std251/ch04.html#Heading453">4.17.4</A>)</dd>
+<P>
+<P>
+</P>
+<table width='100%' class=nav>
+<tr class=nav3>
+<td class=nav3 colspan=3 align=left>
+<b>Links to Other/Further HL7 Information</b>
+</td>
+<td class=nav3 width=*>&nbsp;</td>
+<td class=nav3 align=right>
+generated: Jun 29, 2021 (FO)
+</td>
+</tr>
+<tr class=nav2>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.hl7.org">Health Level Seven, Int. (HQ)</A>
+<td class=nav2 valign=top width='120'>
+<A HREF="http://www.hl7.de">HL7 Germany</A><br/>
+<A HREF="http://www.hl7.eu">HL7 Europe</A>
+</td>
+<td class=nav2 valign=top width=250>
+<A HREF="http://www.oemig.de/HL7">Frank Oemig's HL7 Site</A><br/> (Infos about the <A HREF="http://www.oemig.de/HL7/hl7db.htm">database</A>)<br/>
+</td>
+<td class=nav2 valign=top width='*'>
+</td>
+<td class=nav2 valign=top align=Right width=250>
+<A HREF="http://www.hl7experts.com">HL7-Experts Network</A>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,776 @@
+<HTML><HEAD>
+<!-- This document was created from RTF source by rtftohtml version 3.8 -->
+<TITLE>HL7 V.21 Chapter 1</TITLE></HEAD>
+<BODY BACKGROUND="" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>
+References to other Chapters
+</H1>
+<A HREF="hl7.html">Index HL7</A><br>
+<A HREF="kap2.html">Chapter 2</A><br>
+<A HREF="kap3.html">Chapter 3</A><br>
+<A HREF="kap4.html">Chapter 4</A><br>
+<A HREF="kap5.html">Chapter 5</A><br>
+<A HREF="kap6.html">Chapter 6</A><br>
+<A HREF="kap7.html">Chapter 7</A><br>
+
+<hr>
+
+<p>
+
+<H1>
+1</H1>
+<UL>
+<LI><A HREF="#Heading1">1 <BR>Chapter 1</A>
+<UL>
+<LI><A HREF="#Heading2">1.1 INTRODUCTION</A>
+<LI><A HREF="#Heading3">1.2 BACKGROUND</A>
+<LI><A HREF="#Heading4">1.3 NEED FOR A STANDARD</A>
+<LI><A HREF="#Heading5">1.4 GOALS OF THE STANDARD</A>
+<LI><A HREF="#Heading6">1.5 HISTORY OF HL7 DEVELOPMENT</A>
+<LI><A HREF="#Heading7">1.6 OVERVIEW</A>
+<UL>
+<LI><A HREF="#Heading8">1.6.1 Conceptual Approach</A>
+<LI><A HREF="#Heading9">1.6.2 Multi-Level Specification</A>
+<UL>
+<LI><A HREF="#Heading10">1.6.2.1 HL7 Encoding Rules.  </A>
+<LI><A HREF="#Heading11">1.6.2.2 HL7 Lower Level Protocols.  </A>
+</UL>
+<LI><A HREF="#Heading12">1.6.3 Local Variations</A>
+<LI><A HREF="#Heading13">1.6.4 Evolutionary Changes to the Standard</A>
+<LI><A HREF="#Heading14">1.6.5 Applicability to File Transfers (Batch Processing)</A>
+<LI><A HREF="#Heading15">1.6.6 Relationship to Other Protocols</A>
+<UL>
+<LI><A HREF="#Heading16">1.6.6.1 Lower Layer Protocols.   </A>
+<LI><A HREF="#Heading17">1.6.6.2 Other Applications Protocols.  </A>
+</UL>
+</UL>
+<LI><A HREF="#Heading18">1.7 SUGGESTIONS AND COMMENTS</A>
+</UL>
+</UL>
+<hr size=4>
+
+<h1>
+<A NAME="Heading1">1 <BR>Chapter 1</A></h1>
+
+
+<h2>
+<A NAME="Heading2">1.1 INTRODUCTION</A></h2>
+
+<p><br>
+This document contains the specifications for version 2.1 of the Health Level 7
+(HL7) Standard for electronic data exchange in healthcare environments, with
+special emphasis on hospitals.  It summarizes the work of a user/vendor
+committee established in March 1987 on the occasion of a conference hosted by
+the Hospital of the University of Pennsylvania.  Its participants, who
+represent users as well as vendors, share a common goal of simplifying the
+implementation of interfaces between computer applications from different, and
+often competing, vendors.  This committee, which subsequently become known as
+the HL7 Working Group, is endeavoring to standardize the format and protocol
+for exchanges of certain key sets of data among healthcare computer application
+systems.  Meetings are held approximately every 3 months.  This document is the
+result of more than two years work and thousands of hours of effort by members
+of both the vendor and user communities.<br>
+This document is being presented to interested parties.  It is a status report
+that is published to solicit the involvement of the broadest possible group of
+participants as this protocol is being put into use.  Comments are solicited on
+all aspects of the specification.<br>
+The end of this effort is expected to yield a voluntary, ad hoc standard, open
+to <b><u>all</u></b> vendors and others who develop healthcare data processing
+systems, but not subject to the lengthy development cycle of a traditional
+standards organization.  As the Standard is put into production systems, and
+more experience can be reflected in updates to the Standard, the users may seek
+formal accreditation for it.  Alternatively, the efforts of this group may
+become the basis of other, more formal, efforts.  To date, three live
+demonstrations have been executed with success at the HIMSS and AHA
+Conventions.  The development of the protocol can be expected to further
+accelerate as more demonstrations and implementations occur.</p>
+
+<h2>
+<A NAME="Heading3">1.2 BACKGROUND</A></h2>
+
+<p><br>
+The term "Level 7" refers to the highest level of the Open System
+Interconnection (OSI) model of the International Standards Organization (ISO).
+This is not to say that HL7 conforms specifically to ISO defined elements of
+the OSI's seventh level.  Also HL7 does not specify a set of ISO approved
+specifications to occupy layers 1 to 6 under HL7's abstract message
+specifications.  HL7 does, however, conform to the conceptual definition of an
+application to application interface placed in the seventh layer of the OSI
+model.<br>
+In the OSI conceptual model, the functions of both communications software and
+hardware are separated into seven layers, or levels.  The HL7 Standard is
+primarily focused on the issues that occur within the seventh, or application,
+level.  These are the definitions of the data to be exchanged, the timing of
+the exchanges, and the communication of certain application specific errors
+between the applications.  However, of necessity, protocols that refer to the
+lower layers of the OSI model are sometimes specified to assist implementors in
+establishing working HL7 based systems.<br>
+The HL7 Working Group is composed of volunteers who give their time on a
+personal basis or under sponsorship of their employers.  Membership in the HL7
+Working Group has been, and continues to be, open to anyone wishing to
+contribute to the development and refinement of a Level 7 Interface Standard
+for network technology in healthcare.<br>
+The Standard currently addresses the interfaces among various systems that send
+or receive ADT data, queries, orders, results, and billing data.  It does not
+try to assume a particular architecture with respect to the placementof data
+within applications, but is designed to support a central patient care system
+as well as more distributed architectures where data resides in departmental
+systems.<br>
+Considering the multitude of healthcare information systems applications as
+well as the variety of environments in which healthcare is delivered, it is
+evident that there are many more interfaces which could benefit from
+standardization.  The interfaces chosen were considered to be of high priority.
+The intent is to prepare a complete standard for these interfaces, built on a
+generic framework that is sufficiently robust to support many other interfaces.
+The initial Standard will be put into production, and used as a basis for
+adding other interfaces over time.<br>
+It is expected that one result of publishing this specification will be the
+recruitment of Working Group members with special interest in some newer
+not-fully-specified areas.  Some of the areas that have already been identified
+are:<br>
+-	network-wide updating of master files<br>
+-	general financial systems<br>
+-	insurance billing <br>
+-	decision support<br>
+-	additional detail for specific ancillary departments (e.g., cardiology,
+radiology, pharmacy etc.)<br>
+-	nursing applications.<br>
+The above notwithstanding, the Working Group members feel that the interfaces
+addressed here are sufficient to provide significant benefit to the healthcare
+community.<br>
+This document is structured as follows.  The balance of this chapter contains a
+rationale for developing the Standard, the goals of the Standard, and issues
+which have been considered by the Working Group pertaining to scope and
+operational approach.  It is hoped that this will help the readers understand
+the basis for decisions that have been made in developing the Standard.
+Subsequent chapters specify, respectively, the overall structure for all
+interfaces and the interfaces for: <br>
+-	admission, discharge, transfer and registration<br>
+-	order entry<br>
+-	generalized querying and display type queries<br>
+-	patient accounting systems<br>
+-	ancillary data, such as laboratory results, where what is sent is
+identifiable data elements (rather than display oriented text)</p>
+
+<h2>
+<A NAME="Heading4">1.3 NEED FOR A STANDARD</A></h2>
+
+<p><br>
+The organization and delivery of healthcare services is an
+information-intensive effort.  It is generally accepted that the efficacy of
+healthcare operations is greatly affected by the extent of automation of
+information management functions.  Many believe that healthcare delivery
+agencies that do not automate their information systems will not be able to
+compete effectively in the healthcare market of the 1990's.<br>
+In the past two decades, healthcare institutions, and hospitals in particular,
+have begun to automate aspects of their information management.  Initially,
+such efforts have been geared towards reducing paper processing, improving cash
+flow, and improving management decision making.  In later years a distinct
+focus on streamliningand improving clinical and ancillary services has evolved,
+including bedside (in hospitals and other inpatient environments) and
+"patient-side" systems (in ambulatory settings).<br>
+It is not uncommon today for the average hospital to have installed computer
+systems for admission, discharge, and transfer; clinical laboratories;
+radiology; billing and accounts receivable, to cite a few.  Often these
+applications have been developed by different vendors or in-house groups, with
+each product having highly specific information formats.  As hospitals have
+gradually expanded information management operations, a concomitant need to
+share critical data among the systems has emerged.  Comprehensive systems that
+aim at performing most, if not all, healthcare information management are in
+production by selected vendors.  To the extent that such systems are truly
+complete, their use would mitigate the need for data interchange.<br>
+There are, however, many pressures on an institution to develop or acquire
+individual departmental applications on a modular basis. One source of such
+pressure is the special departmental needs that may not be addressed well (or
+perhaps at all) by a comprehensive vendor.  Another is the need to evolve the
+overall systems environment of a hospital through a series of incremental,
+departmental decisions rather than in a single, revolutionary acquisition.
+These pressures could be met by an environment containing a comprehensive
+system supplemented by departmental systems, or one consisting entirely of
+separate and discrete systems.<br>
+Network technology has emerged as a viable and cost-effective approach to the
+integration of functionally and technically diverse computer applications in
+healthcare environments.  However, these applications have developed due to
+market structure rather than through a logical systems approach, they are
+therefore often ad hoc and idiosyncratic.  Extensive site-specific programming
+and program maintenance are often necessary for interfacing these applications
+in a network environment.  This occurs at considerable expense to the
+user/purchaser while often keeping vendor staff from other initiatives such as
+new product development.  The need for extensive site-specific interface work
+could be greatly reduced if a Standard for network interfaces for healthcare
+environments were available and accepted by vendors and users alike.<br>
+In summary, it is important that both vendors and users not be faced with the
+problem of supporting incompatible transaction/communications structures.
+Instead, a framework must be developed for minimizing incompatibility and
+maximizing the exchange of information between systems.  It is proposed that
+HL7 can act as a superstructure in this environment to facilitate a common
+specification and specifications methodology.  It is indeed both practical and
+economical to develop, and commit to, Standard interfaces for computer
+applications in healthcare institutions. </p>
+
+<h2>
+<A NAME="Heading5">1.4 GOALS OF THE STANDARD</A></h2>
+
+<p><br>
+The specifications of this Standard were developed in accordance with <u>a
+priori</u> specified goals.  Future extensions of the Standard should also
+support these goals.<br>
+HL7's purpose is to facilitate communication in healthcare settings.  The
+<u>primary goal</u> is to provide a Standard for the exchange of data among
+healthcare computer applications that eliminates or substantially reduces the
+custom interface programming and program maintenance that is currently
+required.  This primary goal can be delineated as a set of goals:<br>
+(1)	The Standard should support exchanges among systems implemented in the
+widest variety of technical environments.  Its implementation should be
+practical in a wide variety of programming languages andoperating systems.  It
+should also support communications in a wide variety of communications
+environments, ranging from a full, OSI compliant, 7-level network "stack" to
+less complete environments including primitive point-to-point RS-232C
+interconnections and transfer of data by batch media such as floppy disk and
+tape.<br>
+(2)	Immediate transfer of single transactions should be supported along with
+file transfers of multiple transactions.<br>
+(3)	The greatest possible degree of standardization should be achieved,
+consistent with site variations in the usage and format of certain data
+elements.  The Standard should accommodate necessary site-specific
+variations.<br>
+(4)	The Standard must support evolutionary growth as new requirements are
+recognized.  This includes support of the process of introducing extensions and
+new releases into existing operational environments.<br>
+(5)	The Standard should be built upon the experience of existing production
+protocols and accepted industry-wide standard protocols.  It should not,
+however, favor the proprietary interests of specific companies to the detriment
+of other users of the Standard.  At the same time, HL7 seeks to preserve the
+unique attributes that an individual vendor can bring to the marketplace.<br>
+(6)	While it is both useful and pertinent to focus on information systems
+within hospitals, the long-term goal should be to define formats and protocols
+for computer applications in all healthcare environments.<br>
+(7)	A primary interest of the Working Group is to employ the Standard as soon
+as possible.  To facilitate this, there is no short-term goal to seek
+accreditation by a national or international standards organization.  Such
+accreditation may be sought once relative consensus among users and vendors and
+early operational experience is attained.<br>
+(8)	To the extent that protocols of other standards efforts (e.g., ACR/NEMA,
+ASTM, HIBCC, MEDIX etc.) are useful in serving HL7's goals, cooperation with
+these groups and adoption of their protocols is sought.</p>
+
+<h2>
+<A NAME="Heading6">1.5 HISTORY OF HL7 DEVELOPMENT</A></h2>
+
+<p><br>
+The HL7 Working Group has met approximately every 3 months since March, 1987 to
+develop and review this specification.  The group is structured into committees
+to address each of the functional interfaces under development, with additional
+committees to address the overall control structure and various administrative
+aspects of the group.<br>
+In the initial three meetings, a version 1.0 draft Standard was prepared
+covering the overall structure of the interfaces, ADT, order entry, and
+display-oriented queries.  Although the patient accounting system was
+recognized as very important, the time frame did not allow it to be addressed
+in the first draft.  This draft was presented to a Plenary meeting of the
+overall group in Tyson's Corner, VA on October 8, 1987. <br>
+Version 2.0 was prepared subsequent to Plenary I in Tyson's Corner and
+presented at Plenary II in Tucson in September, 1988.  Since Plenary II editing
+and revisions for Version 2.1 have been ongoing.  Since then theWorking Group
+has grown to nearly 75 individuals, far exceeding its original size of 12, and
+the following has been accomplished:<br>
+-	Specifications for various functional areas have been refined.<br>
+-	Formal liaison was developed with several other standards efforts: the ASTM
+E31.1 group for Clinical Data Exchange, the ACR/NEMA group for imaging and
+other aspects of Radiology Information Systems, and the IEEE P1157 group for
+medical data interchange ("MEDIX").<br>
+-	The generic control structure was modified, on the basis of comments, to be
+adaptable to a wider variety of communications environments and to facilitate
+cooperation with other standards groups.<br>
+	In particular, the approach to documenting the Standard has been modified to
+allow it to be employed modularly at three levels as described in the section
+"Multi-Level Specification", below.  This modularity will permit HL7 to be used
+in the widest possible variety of communications environments.<br>
+-	A chapter on the interface to a patient accounting system has been added.<br>
+-	A chapter on the reporting of ancillary results has been prepared, based on
+the ASTM 1238-88 Standard and with the direct, active participation of members
+of the ASTM E31.1 committee.<br>
+-	A computerized data dictionary of all data elements and other message
+components has been created. Those portions of this document that contain
+detailed listings of data were generated directly from that dictionary.
+Appendix A contains cross references and other information generated from this
+electronic data dictionary.<br>
+-	Inconsistencies and mistakes where discovered in the V2.0 Specification
+primarily due to the implementation efforts for the demonstrations at HIMSS and
+AHA.  These have been addressed and documented in V2.1.<br>
+-	Further collaboration has occurred between HL7 and MEDIX so that a formal
+statement of intended convergence was issued in September, 1989.  Since then,
+agreement has been reached so that MEDIX will use much of the HL7 work to
+define its abstract message requirements.  This will be a key step in
+facilitating convergence between the work of the two groups starting with the
+next expected version of this specification (3.0).  In addition, HL7 and MEDIX
+have agreed to coordinate their respective working group meetings so that
+interested members can participate in both groups.</p>
+
+<h2>
+<A NAME="Heading7">1.6 OVERVIEW</A></h2>
+
+<p><br>
+This section contains a description of the conceptual basis of the HL7
+Standard, the approach to accommodating intra-site variations and evolutionary
+changes, and the way it has been structured in order to accommodate varying
+current and future communications environments.</p>
+
+<h3>
+<A NAME="Heading8">1.6.1 Conceptual Approach</A></h3>
+
+<p><br>
+The Standard is written from the assumption that an event in the real world of
+healthcare creates the need for data to flow among systems.  The real-world
+event is called the <u>trigger event</u>.  For example, the trigger event "a
+patient is admitted" may cause the need for data about that patient to be sent
+to a number of other systems. The trigger event, "an item is used from floor
+stock on behalf of a patient" may cause the need for information about the
+patient and the item used to be sent from the patient care system to the
+patient accounting system and materials management system.  When the transfer
+of information is initiated by the application system that deals with the
+triggering event, the transaction is termed an <u>unsolicited update</u>.<br>
+When the unsolicited update is sent from one system to another, the HL7
+Standard specifies that it be acknowledged at the application level.  The
+reasoning is that it is not sufficient to merely know that the underlying
+communications system guaranteed delivery of the message.  It is necessary to
+also know that the receiving application processed the data successfully at a
+logical application level.   <br>
+The acknowledgement may contain data of interest to the system that initiated
+the exchange. For example, if a patient care system has processed the trigger
+event "a lab test is ordered for a patient", it may send an unsolicited update
+to a lab application identifying the patient, the test ordered, and various
+other information about the order.  The ancillary will acknowledge the order
+when it has processed is successfully.  For some pairings of patient care and
+ancillary department systems the acknowledgement may also include the accession
+number that was assigned.  (HL7 does not require Order Entry and Lab
+applications to interface in this manner, but it supports those that do.)<br>
+The HL7 Standard makes no assumptions about the ownership of data.  It also
+make no requirements of its own on the subsequent action of the recipient of
+data.  HL7 does not explicitly support, but can be used with, systems that
+support store and forward and data broadcast facilities.<br>
+The HL7 Standard makes no functional interpretation of the requirement that a
+system commit the data in a message to its database before acknowledging it.
+All that is required is that the receiving system accept responsibility for the
+data, providing the same integrity test that it would apply to data from any
+source.  To continue the prior example, the ancillary system may acknowledge
+the order after placing it in an input queue, expecting to fully process the
+order into its database at a future time.  The only assumption is that the
+input queue is maintained at the same level of integrity as the database.<br>
+A different data exchange occurs when one system sends a query to another.  For
+example, in a cardiac catheterization application, there may be a trigger event
+"a procedure is scheduled for a patient who is not already registered in the
+cardiac catheterization application's database."  The application may send the
+patient's ID number to the ADT system and receive a response containing the
+necessary data to permit processing of the order.  This latter transaction is a
+data-oriented <u>query</u>, as distinguished from the unsolicited update
+discussed above.  The information that flows between the systems is contained
+in the response.  The response itself is not acknowledged with a third
+message.<br>
+In all cases, the HL7 Standard consists of a simple exchange of messages
+between a pair of applications: the unsolicited update and its acknowledgement
+or the query and its response.  The underlying operational model is that of a
+<u>client</u> and a <u>server</u>.  An application interfaces with another
+application giving an opcode that identifies the transaction.  The other
+application responds with a message that includes data or an error indication.
+Theinitiating application may receive a reject status from the other
+application or from lower level software indicating that its message wasn't
+received correctly. </p>
+
+<h3>
+<A NAME="Heading9">1.6.2 Multi-Level Specification</A></h3>
+
+<p><br>
+The HL7 Standard defines the messages as they are exchanged among applications
+entities and the procedures used to exchange them.  As such, it conceptually
+operates at the seventh level of the ISO model for Open System Interconnection.
+It is primarily concerned with the data content and interrelationship of
+messages and with communicating certain application level error conditions.<br>
+The ideal communications environment includes software and protocols to provide
+all the functions necessary to create an application protocol.  ISO and CCITT
+have defined a protocol "stack" in which the support functions for an
+applications protocol are provided by a hierarchy of several protocols
+operating concurrently at layers 1 - 7.  See figure I-1.  The layers
+include:<br>
+-	protocols up to and through the transport layer (1-4) that assure the correct
+arrival of the data bits that make up a message<br>
+-	a session protocol (layer 5) that assures that the application entities are
+properly connected and released without loss of data<br>
+-	a presentation protocol (layer 6) that encodes and decodes the message in a
+way that permits the data to be understood by both parties<br>
+-	support for generic application issues within the 7th layer addressed by
+Application Service Elements (ASE).  (Within the ISO definition of the seventh
+layer, an application protocol, while itself in the seventh layer, receives
+these services and accesses lower layer protocols through these ASE, which are
+"sub-layer" protocols operating in the seventh layer.)  Two Service Elements
+that are relevant are Association Control and Remote Operation (ACSE and
+ROSE).<br>
+The ISO standards required for a "real-world" implementation are, however, at
+various stages of completion. After standardization is achieved, they may well
+follow a process of further refinement through implementor's workshops, and
+finally be implemented in a variety of operating environments.  Eventually,
+this process will have proceeded to the point where interoperable standard
+software is prevalent at all layers on a wide variety of systems.  Until such
+time, the ISO standards will not form a practical basis for building an
+application protocol.<br>
+To provide a workable basis for an applications standard, the ISO protocols
+must be implemented universally, at a uniformly high level.  The HL7 Working
+Group is interested in providing standards that will be useful in the interim.
+It is also recognized that there is now, and will continue to be, interest in
+communicating health data among systems operating in communications
+environments that provide a high level of functionality, but use protocols
+other than those of ISO.<br>
+The universe of environments of interest to HL7 include:<br>
+(a)	Ad hoc environments that do not provide even basic transport reliability.
+Such environments consist of point-to-point RS-232 links, modems, and even
+LANs, if their connection to host computers is made viaRS-232 communications
+links.  Until OSI high level standards become truly prevalent, many healthcare
+interfaces will be implemented over such links.  <br>
+(b)	Environments that support a robust transport level, but do not meet the
+high level requirements.  This includes environments such as TCP/IP, DECNET and
+SNA.<br>
+(c)	ISO and proprietary networks that implement up to presentation and other
+high level services.  IBM's SNA LU6.2 and SUN Computer System's NFS are
+examples of complete proprietary networks.<br>
+(d)	Two or more applications running on the same physical and/or logical
+machine that are not tightly integrated.  In these environment, the Lower Level
+Protocol may be replaced by Operating System provided inter-process
+communications services (e.g., Pipes in a UNIX System).<br>
+To be readily implementable in all these environments, the HL7 Working Group
+has chosen to design its specifications in a hierarchy of three levels.
+According to the extent of services available in the communications
+environment, the appropriate level of HL7 specifications is chosen.  The HL7
+levels are listed below.<br>
+-	The basic level of definition within HL7 is that of the <u>abstract
+message</u> associated with a particular trigger event.  At this level the only
+things that are specified are the data fields that will be sent within a
+message, the valid response messages, and the treatment of application level
+errors or the failure of the underlying communications system.<br>
+	At the level of the abstract message, the following aspects of a data field
+are defined: name, semantic description (meaning), maximum length, type,
+optionality, and whether it can repeat.<br>
+	This level of specification is suitable for using the HL7 Standard in
+environments that provide the maximum protocol functionality as described in
+(c), above.<br>
+	At this level of abstraction, the HL7 Standard is purely a level 7 protocol.
+All messages are defined in the Standard at this level of abstraction in
+Chapters 2-7.<br>
+	This level corresponds to ISO layer 7.<br>
+-	The next level is applicable for environments that do not have a presentation
+layer but do have at least a robust transport layer as described in (b), above.
+At this level the Standard specifies the exact string of bytes that will be
+sent from one application to another, rather than just listing the data fields
+abstractly. To determine the exact representation of an abstract message, one
+applies the HL7 <u>encoding rules</u> defined in Chapter 2 to the abstract
+definition from the relevant transaction definition chapter.  An overview of
+the encoding rules and the reasons for their selection is given in the next
+section.<br>
+	This level corresponds most closely to ISO layers 5 and 6.  In effect, the
+encoding rules support an established session for each message and its
+reply.<br>
+-	The HL7 Encoding Rules do not include procedures for detecting and correcting
+missing or garbled data. If the Standard is going to be applied in the least
+robust environments, as described in (a), above, such functionality is
+necessary.  Appendix B includes several Lower Level Protocols (LLPs) that may
+be appliedin a wide variety of such substandard communications environments to
+fulfill the most basic requirements of lower level protocols.<br>
+	This level corresponds to some of ISO layer 2, and layers 3 and 4.  (ISO layer
+1 corresponds to services that are always provided by the communications
+devices, even in the least robust environment considered by HL7.)<br>
+	Chapter II and Appendix B provide an overview of several Lower Level
+Protocols.<br>
+Each of these three levels represent useful implementations of the HL7
+Standard.  They are defined in a modular fashion.  Applications written to the
+abstract message level will not have to change to operate with different
+encoding rules.  Separate programs can provide the encoding when it is
+required.  Similarly, programs that are written to include the HL7 encoding
+rules can run directly over reliable links or employ the Lower Level Protocol
+to exchange the same messages over unreliable links. </p>
+
+<h4>
+<A NAME="Heading10">1.6.2.1 HL7 Encoding Rules.  </A></h4>
+
+<p>Message
+formats prescribed in the HL7 encoding rules consist of <u>data fields</u> that
+are of variable length and separated by a field separator character.  Rules
+describe how the various data types are encoded within a field and when an
+individual field may be repeated.  The data fields are combined into logical
+groupings called <u>segments</u>.  Segments are separated by segment separator
+characters.  Each segment begins with a three-character literal value that
+identifies it within a message.  Segments may be defined as required or
+optional, and may be permitted to repeat.  Individual data fields are found in
+the message by their position within their associated segments.<br>
+All data is represented as displayable ASCII characters (hexadecimal values
+between 20 and 7E, inclusive). All the special separators and other special
+characters are also displayable ASCII characters, except that the segment
+separator is the ASCII Carriage Return character.<br>
+The encoding rules distinguish between data fields that have the null value and
+those that are not present.  The former are represented by two adjacent
+quotation marks, the latter by no data at all (i.e., two consecutive separator
+characters.)  The distinction between null values and those that are not
+present is important when a record is being updated.  In the former case the
+field in the database should be set to null; in the latter case it should
+retain its prior value.  The encoding rules specify that if a receiving
+application cannot deal with a data field not being present, it should treat
+the data field as present but null.<br>
+The encoding rules specify that a receiving application should ignore fields
+that are present in the message but were not expected rather than treat such a
+circumstance as an error.</p>
+
+<h4>
+<A NAME="Heading11">1.6.2.2 HL7 Lower Level Protocols.  </A></h4>
+
+<p>Messages
+composed using the HL7 encoding rules may consist of thousands of characters.
+The Lower Level Protocols provide a data format and procedures for breaking a
+message into a number of smaller blocks, each of which contains a checksum and
+a character count.  Individual blocks are acknowledged by the lower level
+protocol, and the complete message is normally only provided to the application
+when all blocks have been received.  Provisions are included in the protocol
+for detecting characters that are lost, added, or changed, and for recovering
+from these errors.<br>
+The size of the block is an important tuning issue.  Optimal size will depend
+on characteristics of the communications environment as well as the languages
+chosen to implement the protocol.  Choosing a suboptimalsize can have a
+dramatic, deleterious impact on performance.  The Hybrid and X3.28 LLPs allow
+block sizes to be set appropriately for the communications environment.<br>
+The LLP data consist entirely of displayable ASCII characters plus the
+following ASCII control characters: Carriage Return, Vertical Tab, and Field
+Separator.  One critical parameter in certain healthcare applications
+environments is the number of characters that appear between carriage returns.
+This restriction is not recognized in the HL7 Encoding Rules.  The limitation
+can be met, however, by suitable choices of buffer size in the LLP.<br>
+ </p>
+
+<h3>
+<A NAME="Heading12">1.6.3 Local Variations</A></h3>
+
+<p><br>
+The HL7 Standard is intended to standardize data interchanges, not the
+underlying applications systems.  This means that there will be a wide variety
+in the manner in which the Standard is applied in different institutions.<br>
+  <br>
+The requirement to support diversity within the Standard is addressed in these
+ways:<br>
+-	The only data fields that are required in the abstract messages are those
+necessary to support the logic of the relationships among the messages or their
+basic purpose.  Many other fields are specified but made optional.<br>
+-	There are provisions within the specifications to add messages or portions of
+messages that are local to an institution. The conventions used for this are
+intended to prevent conflict with future versions of the specification.</p>
+
+<h3>
+<A NAME="Heading13">1.6.4 Evolutionary Changes to the Standard</A></h3>
+
+<p><br>
+Standards must evolve as the applications they support change, and as a result
+of experience using them.  In recognition of this, the Standard includes a
+protocol version id in all messages.<br>
+New transactions or data elements will be added to operational HL7 environments
+as a result of changes in the Standard or due to changes in the local
+implementation as permitted within the Standard.  It is important that these
+changes should be implementable at a site without requiring all communicating
+applications to upgrade simultaneously.  The special provisions in the Encoding
+Rules for dealing with fields that are not present or unexpected are very
+important here.  Because of them, new fields can be added first to the sending
+or source system; the receiving system will ignore the new fields until it has
+been updated to use them.  Often, these rules also facilitate changing the
+receiving system first.  Until the sending system is changed, the receiving
+system will find the new data field 'not present' and deal with this according
+to its rules for data not present.<br>
+Similarly, the HL7 Encoding Rules support changes in data field sizes.  Fields
+are found within the message by examining separators, rather than by an offset.
+Changing the size of a field does not change the procedure used to detect
+subsequent fields.</p>
+
+<h3>
+<A NAME="Heading14">1.6.5 Applicability to File Transfers (Batch Processing)</A></h3>
+
+<p><br>
+Although the HL7 Standard is defined in terms of the client-server (remote
+operation) model, its standards are equally applicable to file transfers.  One
+or more messages may be encoded according to the Encoding Rules, grouped in a
+file and transferred using external media, FTAM, Kermit, or any other file
+transfer protocol. Responses may be grouped in a file and similarly
+transmitted.  Chapter 2 provides the general mechanisms for the batch
+transmittal of HL7 messages.</p>
+
+<h3>
+<A NAME="Heading15">1.6.6 Relationship to Other Protocols</A></h3>
+
+<p><br>
+A great deal of consideration has been given to the relationship between the
+HL7 Standard protocol and other protocols.  There are three questions:<br>
+-	What is the relationship between the HL7 protocol and "lower layer", service
+protocols?  In strict accordance with the ISO OSI model, HL7 should not
+replicate features of these protocols.  This can even be construed to require
+HL7 to avoid replicating certain ISO layer 7 functionality contained in the
+Service Elements.<br>
+	However, it is the goal of the HL7 group to support healthcare communications
+in a wide variety of communications environments, including many that are not
+as complete as ISO will be one day.<br>
+-	What is the relationship between the HL7 Standard protocol and other
+applications protocols?  Protocols of interest include the ANSI X.12 Standard
+for Electronic Document Interchange, the ASTM 1238-88 Standard for laboratory
+data reporting, the ACR/NEMA Standard for imaging and other aspects of
+Radiology Information Systems, and the IEEE P1157 Standard for medical data
+interchange ("MEDIX").<br>
+-	What is the relationship between the HL7 Standard and various proprietary
+healthcare protocols in use today?</p>
+
+<h4>
+<A NAME="Heading16">1.6.6.1 Lower Layer Protocols.   </A></h4>
+
+<p>The
+HL7 Encoding Rules are substantially different from the ASN.1 Basic Encoding
+Rules (BER) documented in CCITT X.409 and X.209 and ISO 8825 or those employed
+in LU6.2 or RPC.  This is because:<br>
+(a)	By definition, the HL7 encoding rules will be applied where the environment
+does not include software to do encoding.  Without such software, the burden on
+applications programmers to develop messaging software that conforms to those
+encoding rules is onerous.<br>
+(b)	The encoding rules of these protocols depend on the assumption that lower
+level protocols provide transparency (i.e., all character codes can be
+transmitted without being changed by and of the lower levels).  This assumption
+is often not met in the communications environments that must serve HL7 for the
+interim.  The techniques that might be used to implement transparency in the
+Lower Level Protocol are difficult to implement in some present-day
+applications environments.<br>
+The notation chosen to document the message formats in the HL7 Standard is not
+the Abstract Syntax Notation.1 used by ISO and MEDIX.  This is because the
+ASN.1 language is so rich, and the HL7 message format so simple, that when HL7
+messages are defined using ASN.1, the result is very repetitious and difficult
+to read. This is distracting and difficult to explain to application
+programmers who are not schooled in recursive languages in general, or ASN.1 in
+particular.<br>
+Contrary to other high level communications environments, there is no notion of
+association separate from the sending of the message from client to server and
+the response.  This seems appropriate to the client-server model.<br>
+Whenever HL7 is applied in a networking environment, addressing will be an
+issue.  This is equally true when it is applied on ISO Standard networks or
+proprietary networks.  Although the Standard does not specify how this
+addressing will occur, it does provide certain data fields that will be of
+value in determining addresses.  The fields, Receiving Application, Receiving
+Facility, and Processing ID, are located in the header of all HL7 messages.
+Receiving Facility is intended for environments where multiple occurrences of
+the same application are being run on the same computer system or on the same
+network on behalf of different institutions or other organizational entities.
+Processing ID is used where various versions of essentially the same
+application may reside on the same computer for different purposes.  The
+recommended values for the field are Production, Training, and Debugging.<br>
+The HL7 committee does not standardize the values for the Receiving Application
+and Receiving fields, since the code sets chosen for them will be tightly
+coupled to the overall architecture of applications within an institution.  For
+applicability under the ISO Association Control Service Element, these values
+will have to be registered as ISO Service Access Points.</p>
+
+<h4>
+<A NAME="Heading17">1.6.6.2 Other Applications Protocols.  </A></h4>
+
+<p>The
+Working Group has given considerable attention to the relationship of the HL7
+protocol and other protocols.  A considerable liaison effort is underway.  This
+is described below:<br>
+(a)	<u>IEEE P1157 ("MEDIX")</u>  The MEDIX committee is defining an application
+level protocol similar in scope to HL7 but built strictly on the ISO protocol
+stack up to and including the Remote Operation Service Element (ROSE).  HL7
+varies from this approach by the decision not to depend on ROSE nor use the
+ASN.1 Basic Encoding Rules (BER) and syntax notation.  Despite the difference
+in approaches, the HL7 Working Group has regular liaison with the MEDIX
+committee.  The Working Group has devised a format for the HL7 Standard that is
+relatively independent of the encoding rules chosen and easily translated into
+the ASN.1 notation.  The transactions defined in this manner should be directly
+transferable to the MEDIX effort, and transaction messages encoded using the
+HL7 scheme should be translatable to transactions encoded using the BER.  This
+should facilitate the creation of gateways between the HL7 and future
+environments.<br>
+	In addition, HL7 and MEDIX have agreed on a course for convergence.  This will
+occur within the HL7 Abstract Message definitions.  MEDIX has further agreed to
+use the HL7 abstract message definitions as defined in V2.1 as a starting point
+for the MEDIX message definitions.<br>
+(b)	<u>ASTM 1238.88 Laboratory Data Reporting.</u>  An active liaison effort
+between the ASTM committee and the Working group has resulted in minor changes
+in the ASTM specification to enhance compatibility, changes in the HL7 control
+specifications to enhance compatibility, and the development of the entire
+Ancillary Data Reporting chapter, developed jointly by the committees and built
+on the ASTM Standard.<br>
+	Some distinctions are more in the terminology chosen than the actual message
+content.  For example, the ASTM "subfield delimiter" is generally used to
+separate repetitions of homogenous values.  It is called a "repetition
+separator" in HL7.<br>
+(c)	<u>ANSI X.12 Standards for Electronic Document Interchange.</u>  X.12 is a
+family of Standards that provide both general and specific descriptions for
+data interchange for a number of industries.  The HL7 Encoding Rules are
+modeled on the X.12 Standards, although there are differences.  The HL7
+Standard needs to accommodate on-line exchange of individual transactions on
+LANs.  This difference, and certain applications issues, are responsible for
+the variance from X.12.<br>
+(d)	<u>ACR/NEMA.</u>  The HL7 Working Group maintains an on-going liaison with
+the ACR/NEMA working group.</p>
+
+<h2>
+<A NAME="Heading18">1.7 SUGGESTIONS AND COMMENTS</A></h2>
+
+<p><br>
+The HL7 Working Group welcomes comments and suggestions for improving the
+Standard<sup>*</sup>.  The Working Group is also open to new membership.  Both
+feedback and interest in membership should be sent to:<br>
+John Quinn<br>
+Chair, HL7 Working Group<br>
+Professional Healthcare Systems<br>
+Vice President<br>
+12960 Coral Tree Place<br>
+Los Angeles, CA 90066<br>
+(213) 578-7000<br>
+Sam Schultz II, Ph.D.<br>
+Past-Chair, HL7 Working Group<br>
+University Hospital Consortium<br>
+Vice President<br>
+Director, Clinical Information Network<br>
+One Mid America Plaza, Suite 700<br>
+Oakbrook Terrace, IL 60181<br>
+(708) 954-4707<br>
+William E. (Ed) Hammond Ph.D.<br>
+Chair-Elect, HL7 Working Group<br>
+Duke University Medical Center<br>
+Professor, Community &amp; Family Medicine<br>
+PO Box 2194<br>
+Durham, NC 27710<br>
+(919) 684-6421<br>
+Wes Rishel<br>
+Technical Chair, HL7 Working Group<br>
+Bell Atlantic Healthcare Systems<br>
+Vice President<br>
+Product Development<br>
+100 Drakes Landing Rd., Suite 200<br>
+Greenbrae, CA 94904<br>
+(415) 925-0121<br>
+Mike Glickman<br>
+Administrative Chair, HL7 Working Group<br>
+Computer Network Architects<br>
+President<br>
+13308 Ridge Dr.<br>
+Rockville MD 20850<br>
+(310) 340-7048<br>
+Susan L. Campbell<br>
+Treasurer, HL7 Working Group<br>
+Anderson Consulting <br>
+Partner<br>
+1 Market Plaza<br>
+Spear Street Tower, Suite 3800<br>
+San Francisco, CA 94105<br>
+(415) 546-8513<br>
+L. Philip Caillouet, Ph.D.<br>
+Secretary, HL7 Working Group<br>
+Coopers &amp; Lybrand<br>
+Manager, National Health Care Information Systems<br>
+203 N. LaSalle St.<br>
+Chicago, IL 60601<br>
+(213) 701-6174<br>
+<sup>*</sup>Membership inquiries should be sent to:<br>
+	Health Level 7<br>
+	P.O. Box 66111<br>
+Chicago, IL 60666-9998.
+</p>
+</body></html>
